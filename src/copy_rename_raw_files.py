@@ -6,26 +6,20 @@ import os
 import argparse
 
 
-def copy_rename_raw_files(output_dir):
+def copy_rename_raw_files(input_dir, file_name_description, output_dir):
     '''
     '''
     data_dir = "data"
-    original_data_dir = os.path.join(
-        data_dir,
-        "raw_data",
-        "GF_Microglia_Ageing")
 
     # Extract the correspondance between sample name and current file names
-    file_names = pd.read_csv(os.path.join(
-        data_dir,
-        "file_description.csv"))
+    file_names = pd.read_csv(file_name_description)
 
     if not os.path.exists(output_dir):
         os.makedirs(output_dir)
 
     file_nb = 0
     renamed_sample_files = {}
-    for path, dirs, files in os.walk(original_data_dir):
+    for path, dirs, files in os.walk(input_dir):
         for f in files:
             if not f.endswith("fastq.gz"):
                 continue
@@ -65,7 +59,12 @@ def copy_rename_raw_files(output_dir):
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
+    parser.add_argument('--input_dir', required=True)
+    parser.add_argument('--file_name_description', required=True)
     parser.add_argument('--output_dir', required=True)
     args = parser.parse_args()
-    copy_rename_raw_files(args.output_dir)
+    copy_rename_raw_files(
+        args.input_dir,
+        args.file_name_description,
+        args.output_dir)
     
