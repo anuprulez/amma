@@ -21,3 +21,12 @@ Links
     ```
     $ source activate neuromac
     ```
+
+- Copy and rename the files
+
+    ```
+    $ python src/copy_rename_raw_files.py \
+        --input_dir <path to input directory>\
+        --file_name_description <path to csv file with the correspondance between directory structure and sample name (from the Google drive)> \
+        --output_dir <path to output directory>\
+    ```
