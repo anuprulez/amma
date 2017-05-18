@@ -1,2 +1,6 @@
-galaxy_url: "data"
-api_key: "..."
+galaxy_url: "http://galaxy.uni-freiburg.de/"
+api_key: ""
+hist_name: 
+  raw_data: "NeuroMac RNA seq"
+  fastqc: "NeuroMac FastQC output"
+raw_data_name_prefix: "Raw data for "
