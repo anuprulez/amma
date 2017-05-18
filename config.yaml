@@ -3,4 +3,6 @@ api_key: ""
 hist_name: 
   raw_data: "NeuroMac RNA seq"
   fastqc: "NeuroMac FastQC output"
-raw_data_name_prefix: "Raw data for "
+name_prefix:
+  raw_data: "Raw data for "
+  fastqc: "FastQC for "

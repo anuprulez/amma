@@ -24,6 +24,7 @@ def get_tool_id(tool_name):
     for tool in tools:
         if tool["name"] == tool_name:
             tool_id = tool["id"]
+    return tool_id
 
 
 # Connect to Galaxy and retrieve the history
@@ -83,7 +84,7 @@ rule merge_files:
             gi.histories.update_dataset(
                 hist,
                 info['outputs'][0]['id'],
-                name="%s%s" % (config["raw_data_name_prefix"], dataset))
+                name="%s%s" % (config["name_prefix"]["raw_data"], dataset))
 
 
 rule launch_fastqc:
@@ -101,17 +102,24 @@ rule launch_fastqc:
         # Launch FastQC tool on the raw dataset
         for dataset in gi.histories.show_matching_datasets(hist):
             name = dataset['name']
-            if not name.startswith(config["raw_data_name_prefix"]):
+            if not name.startswith(config["name_prefix"]["raw_data"]):
                 continue
+            # Extract sample name
+            sample_name = name.split(config["name_prefix"]["raw_data"])[-1]
             # Create the input datamap
             datamap = dict()
             datamap["input_file"] = {'src':'hda', 'id': dataset["id"]}
             # Run the tool
             info = gi.tools.run_tool(fastqc_hist, tool_id, datamap)
             # Rename the datasets
-            gi.histories.update_dataset(
-                hist,
-                info['outputs'][0]['id'],
-                name="%s%s" % (config["raw_data_name_prefix"], dataset))
+            for output in info['outputs']:
+                output_type = output["name"].split(": ")[-1]
+                gi.histories.update_dataset(
+                    fastqc_hist,
+                    output['id'],
+                    name="%s%s: %s" % (
+                        config["name_prefix"]["fastqc"],
+                        sample_name,
+                        output_type))
 
 
