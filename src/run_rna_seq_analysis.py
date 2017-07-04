@@ -99,10 +99,12 @@ rule launch_fastqc:
                 config["hist_name"]["fastqc"])["id"]
         # Get the id for FastQC tool
         tool_id = get_tool_id("FastQC")
-        # Launch FastQC tool on the raw dataset
+        # Launch FastQC tool on each raw datasets
         for dataset in gi.histories.show_matching_datasets(hist):
             name = dataset['name']
             if not name.startswith(config["name_prefix"]["raw_data"]):
+                continue
+            if dataset['state'] != "ok" or dataset['deleted']:
                 continue
             # Extract sample name
             sample_name = name.split(config["name_prefix"]["raw_data"])[-1]
