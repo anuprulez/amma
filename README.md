@@ -13,6 +13,7 @@ Links
     ```
     $ conda env create -f environment.yml
     ```
+
 - Add the API key to [http://galaxy.uni-freiburg.de/](http://galaxy.uni-freiburg.de/) in [`config.yaml`](config.yaml)
 
 # Usage
@@ -34,10 +35,10 @@ Links
 
 - Upload the data on [http://galaxy.uni-freiburg.de/](http://galaxy.uni-freiburg.de/) inside an history named "NeuroMac RNA seq" (or change the name of the history in [`config.yaml`](config.yaml))
 
-- Merge the files inside Project_S178 and Project_S225
+- Prepare the files into collections
 
     ```
-    $ snakemake --snakefile src/run_rna_seq_analysis.py merge_files
+    $ snakemake --snakefile src/run_rna_seq_analysis.py prepare_files
     ```
 
 - Launch quality control

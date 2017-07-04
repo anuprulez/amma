@@ -30,7 +30,9 @@ def get_tool_id(tool_name):
 # Connect to Galaxy and retrieve the history
 gi = GalaxyInstance(config["galaxy_url"], config["api_key"])
 histories = gi.histories.get_histories()
-hist = check_hist(config["hist_name"]["raw_data"])
+hist = check_hist(config["hist_name"])
+if hist == '':
+    hist = gi.histories.create_history(config["hist_name"])["id"]
 
 # Extract the sample names
 finename_desc_df = pd.read_csv("data/file_description.csv", index_col = 0)
@@ -42,11 +44,30 @@ tools = gi.tools.get_tools()
 multiqc_id = get_tool_id("multiqc")
 
 
-rule merge_files:
+rule prepare_files:
     '''
-    Merge files sequenced on 2 different lanes (for Project_S178 and Project_S225)
+    Import the files from the data library, merge the files sequenced on 2 
+    different lanes (for Project_S178 and Project_S225) and move the input files
+    into collections
     '''
     run:
+        # Find the data library
+        lib = gi.libraries.get_libraries(name=config["library_name"])
+        if len(lib) == 0:
+            raise ValueError("No library found for Prinz lab")
+        lib_id = lib[0]["id"]
+        # Parse the data library datasets
+        for ds in gi.libraries.show_library(lib_id, contents=True):
+            # Eliminate the folder
+            if ds['type'] != 'file':
+                continue
+            # Eliminate the files from other folders
+            if ds["name"].find(config["folder_name"]) == -1:
+                continue
+            # Add the files to the history
+            gi.histories.upload_dataset_from_library(
+                hist,
+                ds["id"])
         # Retrieve the name of samples to merge
         to_merge = {}
         for sample in sample_names:
@@ -54,7 +75,9 @@ rule merge_files:
             if project_id not in ["Project_S178", "Project_S225"]:
                 continue
             to_merge.setdefault(sample, [])
-        # Parse the dataset in history to extract the ids of dataset to merge
+        # Parse the dataset in history to extract the ids of dataset to merge,
+        # rename the other files and add them to a collection
+        raw_dataset_ids = []
         for dataset in gi.histories.show_matching_datasets(hist):
             name = dataset['name']
             if not name.endswith("fastq"):
@@ -62,15 +85,28 @@ rule merge_files:
             sample_name = os.path.splitext(name)[0][:-1]
             if sample_name in to_merge:
                 to_merge[sample_name].append(dataset["id"])
-            else:
-                # Rename to remove the last letter
+                # Hide the file
                 gi.histories.update_dataset(
                     hist,
                     dataset["id"],
-                    name="%s%s" % (config["raw_data_name_prefix"], sample_name))
+                    visible = False)
+            else:
+                # Rename the file and hide it
+                gi.histories.update_dataset(
+                    hist,
+                    dataset["id"],
+                    name="%s%s" % (config["name_prefix"]["raw_data"], sample_name),
+                    visible = False)
+                # Add the file to the collection
+                raw_dataset_ids.append({
+                    'id': dataset["id"],
+                    'name': sample_name,
+                    'src': 'hda'
+                    })
         # Get concatenate tool
         tool_id = get_tool_id("Concatenate datasets")
         # Merge datasets
+        unmerged_dataset_ids = []
         for dataset in to_merge:
             if len(to_merge[dataset]) != 2:
                 print("Issue with %s" %(dataset))
@@ -82,11 +118,47 @@ rule merge_files:
                 {'src':'hda', 'id': to_merge[dataset][1]}]
             # Run the tool
             info = gi.tools.run_tool(hist, tool_id, datamap)
-            # Rename the datasets
+            # Rename the dataset and hide it
             gi.histories.update_dataset(
                 hist,
                 info['outputs'][0]['id'],
-                name="%s%s" % (config["name_prefix"]["raw_data"], dataset))
+                name="%s%s" % (config["name_prefix"]["raw_data"], dataset),
+                visible = False)
+            # Add the merge file to the collection of raw dataset
+            raw_dataset_ids.append({
+                'id': info['outputs'][0]['id'],
+                'name': dataset,
+                'src': 'hda'
+                })
+            # Add the input files (before merging) to the collection of unmerged
+            # datasets
+            unmerged_dataset_ids.append({
+                'id': to_merge[dataset][0],
+                'name': "%s 0" % dataset,
+                'src': 'hda'
+                })
+            unmerged_dataset_ids.append({
+                'id': to_merge[dataset][1],
+                'name': "%s 1" % dataset,
+                'src': 'hda'
+                })
+        # Prepare and create the collections
+        raw_data_collection = {
+            'collection_type': 'list',
+            'element_identifiers': raw_dataset_ids,
+            'name': config["collection_names"]["raw_data"]
+        }
+        gi.histories.create_dataset_collection(
+            hist,
+            raw_data_collection)
+        unmerged_collection = {
+            'collection_type': 'list',
+            'element_identifiers': unmerged_dataset_ids,
+            'name': "Unmerged files"
+        }
+        gi.histories.create_dataset_collection(
+            hist,
+            unmerged_collection)
 
 
 rule launch_fastqc:

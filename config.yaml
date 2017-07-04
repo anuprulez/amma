@@ -1,9 +1,12 @@
 galaxy_url: "http://galaxy.uni-freiburg.de/"
-api_key: ""
-hist_name: 
-  raw_data: "NeuroMac RNA seq"
-  fastqc: "NeuroMac FastQC output"
-  trimgalore: "NeuroMac Trim Galore! output"
+api_key: "f963e720ce13fab7bf5291cb0b89be03"
+library_name: "Prinz"
+folder_name: "derny/15-05-2017"
+hist_name: "Neuromac GF RNA seq analysis"
+collection_names:
+  raw_data: "Raw data"
+  fastqc: "FastQC"
+  trimgalore: "Trim Galore!"
 name_prefix:
   raw_data: "Raw data for "
   fastqc: "FastQC for "
