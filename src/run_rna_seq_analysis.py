@@ -39,6 +39,17 @@ def get_collection_id(collection_name, hist_id):
             coll_id = ds["id"]
     return coll_id
 
+
+def fill_multiqc_inputs(coll_id,hist):
+    '''
+    Extract the list of element in the collection and format it as input for tool
+    '''
+    inputs = []
+    for el in gi.histories.show_dataset_collection(hist, coll_id)["elements"]:
+        inputs.append({'src':'hda','id': el["object"]["id"]})
+    return inputs
+
+
 # Connect to Galaxy and retrieve the history
 gi = GalaxyInstance(config["galaxy_url"], config["api_key"])
 histories = gi.histories.get_histories()
@@ -177,53 +188,57 @@ rule launch_fastqc:
     Launch FastQC on raw data and MultiQC report on the FastQC outputs
     '''
     run:
-        # Get (or create) the history for FastQC outputs
-        fastqc_hist = check_hist(config["hist_name"]["fastqc"])
-        if fastqc_hist == '':
-            fastqc_hist = gi.histories.create_history(
-                config["hist_name"]["fastqc"])["id"]
         # Get the id for FastQC tool
         tool_id = get_tool_id("FastQC")
-        # Launch FastQC tool on each raw datasets
-        for dataset in gi.histories.show_matching_datasets(hist):
-            name = dataset['name']
-            if not name.startswith(config["name_prefix"]["raw_data"]):
+        assert tool_id != '', "No FastQC tool"
+        # Search for the collection id with the raw data
+        raw_data_coll_id = get_collection_id(
+            config["collection_names"]["raw_data"],
+            hist)
+        assert raw_data_coll_id != '', "No collection for Raw data"
+        # Create the input datamap for FastQC
+        datamap = {"input_file": {
+            'batch': True,
+            'values': [{'src':'hdca', 'id': raw_data_coll_id}]}}
+        # Run FastQC
+        try:
+            info = gi.tools.run_tool(hist, tool_id, datamap)
+        except:
+            print("Issue with FastQC launch")
+        # Retrieve the "RawData" collection
+        fastqc_data_coll_id = ''
+        for ds in gi.histories.show_history(hist, contents=True, visible = True, deleted = False):
+            if ds["history_content_type"] != 'dataset_collection':
                 continue
-            if dataset['state'] != "ok" or dataset['deleted']:
+            if ds["name"].find("FastQC") == -1:
                 continue
-            # Extract sample name
-            sample_name = name.split(config["name_prefix"]["raw_data"])[-1]
-            # Create the input datamap
-            datamap = dict()
-            datamap["input_file"] = {'src':'hda', 'id': dataset["id"]}
-            # Run the tool
-            info = gi.tools.run_tool(fastqc_hist, tool_id, datamap)
-            # Rename the datasets
-            for output in info['outputs']:
-                output_type = output["name"].split(": ")[-1]
-                gi.histories.update_dataset(
-                    fastqc_hist,
-                    output['id'],
-                    name="%s%s: %s" % (
-                        config["name_prefix"]["fastqc"],
-                        sample_name,
-                        output_type))
-        # Create the input datamap for MultiQC
+            if ds["name"].find("RawData") == -1:
+                # Rename the web report collection
+                gi.histories.update_dataset_collection(
+                    hist,
+                    ds["id"],
+                    name="FastQC on Raw data: web report")
+            else:
+                fastqc_data_coll_id = ds["id"]
+                # Rename the raw data report collection
+                gi.histories.update_dataset_collection(
+                    hist,
+                    ds["id"],
+                    name="FastQC on Raw data: raw report")
+        assert fastqc_data_coll_id != '', "No collection for FastQC Raw Data"
+        # Create and fill the input datamap for MultiQC
         datamap = {
             "results_0|software": "fastqc",
-            "results_0|input_file": []}
-        # Conserve the RawData files ids
-        fastqc_raw_data_ids = []
-        for dataset in gi.histories.show_matching_datasets(fastqc_hist):
-            name = dataset['name']
-            if dataset['state'] != "ok" or dataset['deleted']:
-                continue
-            if name.find("RawData") != -1:
-                datamap["results_0|input_file"].append({
-                    'src':'hda',
-                    'id': dataset["id"]})
-        # Run MultiQC tool
-        info = gi.tools.run_tool(fastqc_hist, multiqc_id, datamap)
+            "results_0|input_file": fill_multiqc_inputs(
+                fastqc_data_coll_id,
+                hist),
+            "results_0|saveLog": "False"}
+        # Run MultiQC
+        info = gi.tools.run_tool(hist, multiqc_id, datamap)
+        gi.histories.update_dataset(
+            hist,
+            info['outputs'][0]['id'],
+            name="MultiQC report of FastQC outputs")
 
 
 rule launch_trim_galore:
@@ -232,58 +247,60 @@ rule launch_trim_galore:
     outputs
     '''
     run:
-        # Get (or create) the history for Trim Galore! outputs
-        trim_galore_hist = check_hist(config["hist_name"]["trimgalore"])
-        if trim_galore_hist == '':
-            trim_galore_hist = gi.histories.create_history(
-                config["hist_name"]["trimgalore"])["id"]
         # Get the id for Trim Galore! tool
         tool_id = get_tool_id("Trim Galore!")
-        # Launch FastQC tool on each raw datasets
-        for dataset in gi.histories.show_matching_datasets(hist):
-            name = dataset['name']
-            if not name.startswith(config["name_prefix"]["raw_data"]):
-                continue
-            if dataset['state'] != "ok" or dataset['deleted']:
-                continue
-            # Extract sample name
-            sample_name = name.split(config["name_prefix"]["raw_data"])[-1]
-            # Create the input datamap
-            datamap = {
-                "singlePaired|sPaired": "single",
-                "singlePaired|input_singles" : {'src':'hda', 'id': dataset["id"]},
-                "params|settingsType": "custom",
-                "params|settingsType": "custom",
-                "params|quality": "20",
-                "params|error_rate": "0.1",
-                "params|min_length": "20",
-                "params|report": "true",
-            }
-            # Run the tool
-            info = gi.tools.run_tool(trim_galore_hist, tool_id, datamap)
-            # Rename the datasets
-            for output in info['outputs']:
-                output_type = output["name"].split(": ")[-1]
-                gi.histories.update_dataset(
-                    trim_galore_hist,
-                    output['id'],
-                    name="%s%s: %s" % (
-                        config["name_prefix"]["trimgalore"],
-                        sample_name,
-                        output_type))
-        # Create the input datamap for MultiQC
+        assert tool_id != '', "No Trim Galore! tool"
+        # Search for the collection id with the raw data
+        raw_data_coll_id = get_collection_id(
+            config["collection_names"]["raw_data"],
+            hist)
+        assert raw_data_coll_id != '', "No collection for Raw data"
+        # Create the input datamap for Trim Galore!
         datamap = {
-            "results_0|software": "cutadapt",
-            "results_0|input_file": []}
-        # Conserve the RawData files ids
-        fastqc_raw_data_ids = []
-        for dataset in gi.histories.show_matching_datasets(trim_galore_hist):
-            name = dataset['name']
-            if dataset['state'] != "ok" or dataset['deleted']:
+            "singlePaired|sPaired": "single",
+            "singlePaired|input_singles" : {'batch': True,'values': [
+                {'src':'hdca',
+                'id': raw_data_coll_id}]},
+            "params|settingsType": "custom",
+            "params|settingsType": "custom",
+            "params|quality": "20",
+            "params|error_rate": "0.1",
+            "params|min_length": "20",
+            "params|report": "true",
+        }
+        # Run Trim Galore!
+        info = gi.tools.run_tool(hist, tool_id, datamap)
+        # Retrieve the "RawData" collection
+        trim_galore_data_coll_id = ''
+        for ds in gi.histories.show_history(hist, contents=True, visible = True):
+            if ds["history_content_type"] != 'dataset_collection':
                 continue
-            if name.find("report file") != -1:
-                datamap["results_0|input_file"].append({
-                    'src':'hda',
-                    'id': dataset["id"]})
-        # Run MultiQC tool
-        info = gi.tools.run_tool(trim_galore_hist, tool_id, datamap)
+            if ds["name"].find("Trim Galore!") == -1:
+                continue
+            if ds["name"].find("trimmed reads") != -1:
+                # Rename the collection
+                gi.histories.update_dataset_collection(
+                    hist,
+                    ds["id"],
+                    name="Trim Galore! on Raw data: trimmed reads")
+            else:
+                trim_galore_data_coll_id = ds["id"]
+                # Rename the collection
+                gi.histories.update_dataset_collection(
+                    hist,
+                    ds["id"],
+                    name="Trim Galore! on Raw data: report")
+        assert trim_galore_data_coll_id != '', "No collection for Trim Galore report"
+        # Create and fill the input datamap for MultiQC
+        datamap = {
+            "results_0|software": "fastqc",
+            "results_0|input_file": fill_multiqc_inputs(
+                trim_galore_data_coll_id,
+                hist),
+            "results_0|saveLog": "False"}
+        # Run MultiQC
+        info = gi.tools.run_tool(hist, multiqc_id, datamap)
+        gi.histories.update_dataset(
+            hist,
+            info['outputs'][0]['id'],
+            name="MultiQC report of Trim Galore!")
