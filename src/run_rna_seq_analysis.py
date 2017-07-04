@@ -89,7 +89,7 @@ rule merge_files:
 
 rule launch_fastqc:
     '''
-    Launch FastQC on raw data
+    Launch FastQC on raw data and MultiQC report on the FastQC outputs
     '''
     run:
         # Get (or create) the history for FastQC outputs
@@ -123,5 +123,22 @@ rule launch_fastqc:
                         config["name_prefix"]["fastqc"],
                         sample_name,
                         output_type))
-
+        # Get the id for MultiQC tool
+        tool_id = get_tool_id("multiqc")
+        # Create the input datamap
+        datamap = {
+            "results_0|software": "fastqc",
+            "results_0|input_file": []}
+        # Conserve the RawData files ids
+        fastqc_raw_data_ids = []
+        for dataset in gi.histories.show_matching_datasets(fastqc_hist):
+            name = dataset['name']
+            if dataset['state'] != "ok" or dataset['deleted']:
+                continue
+            if name.find("RawData") != -1:
+                datamap["results_0|input_file"].append({
+                    'src':'hda',
+                    'id': dataset["id"]})
+        # Run MultiQC tool
+        info = gi.tools.run_tool(fastqc_hist, tool_id, datamap)
 
