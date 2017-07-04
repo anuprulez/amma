@@ -3,6 +3,8 @@ api_key: ""
 hist_name: 
   raw_data: "NeuroMac RNA seq"
   fastqc: "NeuroMac FastQC output"
+  trimgalore: "NeuroMac Trim Galore! output"
 name_prefix:
   raw_data: "Raw data for "
   fastqc: "FastQC for "
+  trimgalore: "Trim Galore! for "

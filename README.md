@@ -46,4 +46,5 @@ Links
     # Launch FastQC
     $ snakemake --snakefile src/run_rna_seq_analysis.py launch_fastqc
     # Launch TrimGalore!
+    $ snakemake --snakefile src/run_rna_seq_analysis.py launch_trim_galore
     ```

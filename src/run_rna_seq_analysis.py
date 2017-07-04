@@ -142,3 +142,65 @@ rule launch_fastqc:
         # Run MultiQC tool
         info = gi.tools.run_tool(fastqc_hist, multiqc_id, datamap)
 
+
+rule launch_trim_galore:
+    '''
+    Launch Trim Galore! on raw data and MultiQC report on the Trim Galore! 
+    outputs
+    '''
+    run:
+        # Get (or create) the history for Trim Galore! outputs
+        trim_galore_hist = check_hist(config["hist_name"]["trimgalore"])
+        if trim_galore_hist == '':
+            trim_galore_hist = gi.histories.create_history(
+                config["hist_name"]["trimgalore"])["id"]
+        # Get the id for Trim Galore! tool
+        tool_id = get_tool_id("Trim Galore!")
+        # Launch FastQC tool on each raw datasets
+        for dataset in gi.histories.show_matching_datasets(hist):
+            name = dataset['name']
+            if not name.startswith(config["name_prefix"]["raw_data"]):
+                continue
+            if dataset['state'] != "ok" or dataset['deleted']:
+                continue
+            # Extract sample name
+            sample_name = name.split(config["name_prefix"]["raw_data"])[-1]
+            # Create the input datamap
+            datamap = {
+                "singlePaired|sPaired": "single",
+                "singlePaired|input_singles" : {'src':'hda', 'id': dataset["id"]},
+                "params|settingsType": "custom",
+                "params|settingsType": "custom",
+                "params|quality": "20",
+                "params|error_rate": "0.1",
+                "params|min_length": "20",
+                "params|report": "true",
+            }
+            # Run the tool
+            info = gi.tools.run_tool(trim_galore_hist, tool_id, datamap)
+            # Rename the datasets
+            for output in info['outputs']:
+                output_type = output["name"].split(": ")[-1]
+                gi.histories.update_dataset(
+                    trim_galore_hist,
+                    output['id'],
+                    name="%s%s: %s" % (
+                        config["name_prefix"]["trimgalore"],
+                        sample_name,
+                        output_type))
+        # Create the input datamap for MultiQC
+        datamap = {
+            "results_0|software": "cutadapt",
+            "results_0|input_file": []}
+        # Conserve the RawData files ids
+        fastqc_raw_data_ids = []
+        for dataset in gi.histories.show_matching_datasets(trim_galore_hist):
+            name = dataset['name']
+            if dataset['state'] != "ok" or dataset['deleted']:
+                continue
+            if name.find("report file") != -1:
+                datamap["results_0|input_file"].append({
+                    'src':'hda',
+                    'id': dataset["id"]})
+        # Run MultiQC tool
+        info = gi.tools.run_tool(trim_galore_hist, tool_id, datamap)
