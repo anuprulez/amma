@@ -38,6 +38,8 @@ sample_names = list(finename_desc_df.index)
 
 # Get tools in the Galaxy instance
 tools = gi.tools.get_tools()
+# Get the id for MultiQC tool
+multiqc_id = get_tool_id("multiqc")
 
 
 rule merge_files:
@@ -123,9 +125,7 @@ rule launch_fastqc:
                         config["name_prefix"]["fastqc"],
                         sample_name,
                         output_type))
-        # Get the id for MultiQC tool
-        tool_id = get_tool_id("multiqc")
-        # Create the input datamap
+        # Create the input datamap for MultiQC
         datamap = {
             "results_0|software": "fastqc",
             "results_0|input_file": []}
@@ -140,5 +140,5 @@ rule launch_fastqc:
                     'src':'hda',
                     'id': dataset["id"]})
         # Run MultiQC tool
-        info = gi.tools.run_tool(fastqc_hist, tool_id, datamap)
+        info = gi.tools.run_tool(fastqc_hist, multiqc_id, datamap)
 
