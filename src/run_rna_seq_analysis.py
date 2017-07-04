@@ -27,6 +27,18 @@ def get_tool_id(tool_name):
     return tool_id
 
 
+def get_collection_id(collection_name, hist_id):
+    '''
+    Retrieve the id of a collection
+    '''
+    coll_id = ''
+    for ds in gi.histories.show_history(hist_id, contents=True, visible = True):
+        if ds["history_content_type"] != 'dataset_collection':
+            continue
+        if ds["name"] == collection_name:
+            coll_id = ds["id"]
+    return coll_id
+
 # Connect to Galaxy and retrieve the history
 gi = GalaxyInstance(config["galaxy_url"], config["api_key"])
 histories = gi.histories.get_histories()
@@ -53,8 +65,7 @@ rule prepare_files:
     run:
         # Find the data library
         lib = gi.libraries.get_libraries(name=config["library_name"])
-        if len(lib) == 0:
-            raise ValueError("No library found for Prinz lab")
+        assert len(lib) > 0, "No library found for Prinz lab"
         lib_id = lib[0]["id"]
         # Parse the data library datasets
         for ds in gi.libraries.show_library(lib_id, contents=True):
