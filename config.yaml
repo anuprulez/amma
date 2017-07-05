@@ -11,18 +11,22 @@ annotation_name: "Mus_musculus.GRCm38.87.gtf (mm10)"
 collection_names:
   raw_data: "Raw data"
   fastqc:
-    web_report: "FastQC on Raw data: web report"
-    raw_report: "FastQC on Raw data: raw report"
+    web_report: "QC with FastQC: web report"
+    raw_report: "QC with FastQC: raw report"
   trim_galore:
-    report: "Trim Galore! on Raw data: report"
-    trimmed: "Trim Galore! on Raw data: trimmed reads"
+    report: "Trimming with Trim Galore!: report"
+    trimmed: "Trimming with Trim Galore!: trimmed reads"
   preliminary_mapping:
-    seq_extraction: "Preliminary mapping: Downsampled datasets"
+    seq_extraction: "Preliminary mapping: downsampled reads"
     star:
       mapped: "Preliminary mapping: mapped reads"
       log: "Preliminary mapping: log"
       splice_junctions: "Preliminary mapping: splice junctions"
     infer_experiment: "Preliminary mapping: inferred experiments"
+  star:
+    mapped: "Mapping with STAR: mapped reads"
+    log: "Mapping with STAR: log"
+    splice_junctions: "Mapping with STAR: splice junctions"
 name_prefix:
   raw_data: "Raw data for "
   fastqc: "FastQC for "
