@@ -49,6 +49,15 @@ def get_collection_id(collection_name, hist_id):
     return coll_id
 
 
+def get_working_collection_id(coll_name):
+    '''
+    Retrieve the id of a collection and test if it exists
+    '''
+    coll_id = get_collection_id(coll_name, hist)
+    assert coll_id != '', "No collection for %s" % coll_name
+    return coll_id
+
+
 def fill_multiqc_inputs(coll_id,hist):
     '''
     Extract the list of element in the collection and format it as input for tool
@@ -234,10 +243,8 @@ rule launch_fastqc:
             config["tool_names"]["fastqc"],
             config["tool_versions"]["fastqc"])
         # Search for the collection id with the raw data
-        raw_data_coll_id = get_collection_id(
-            config["collection_names"]["raw_data"],
-            hist)
-        assert raw_data_coll_id != '', "No collection for Raw data"
+        raw_data_coll_id = get_working_collection_id(
+            config["collection_names"]["raw_data"])
         # Create the input datamap for FastQC
         datamap = {"input_file": {
             'batch': True,
@@ -283,10 +290,8 @@ rule launch_trim_galore:
             config["tool_names"]["trim_galore"],
             config["tool_versions"]["trim_galore"])
         # Search for the collection id with the raw data
-        raw_data_coll_id = get_collection_id(
-            config["collection_names"]["raw_data"],
-            hist)
-        assert raw_data_coll_id != '', "No collection for Raw data"
+        raw_data_coll_id = get_working_collection_id(
+            config["collection_names"]["raw_data"])
         # Create the input datamap for Trim Galore!
         datamap = {
             "singlePaired|sPaired": "single",
@@ -339,10 +344,8 @@ rule launch_preliminary_mapping:
             config["tool_names"]["seq_extraction"],
             config["tool_versions"]["seq_extraction"])
         # Search for the collection id with the trimmed data
-        input_data_coll_id = get_collection_id(
-            config["collection_names"]["trim_galore"]["trimmed"],
-            hist)
-        assert input_data_coll_id != '', "No collection for Trim Galore trimmed"
+        input_data_coll_id = get_working_collection_id(
+            config["collection_names"]["trim_galore"]["trimmed"])
         # Create the input datamap
         datamap = {
             "infile" : {'batch': True,'values': [
@@ -477,10 +480,10 @@ rule launch_star:
             config["tool_names"]["star"],
             config["tool_versions"]["star"])
         # Search for the collection id with the trimmed data
-        input_data_coll_id = get_collection_id(
-            config["collection_names"]["trim_galore"]["trimmed"],
-            hist)
-        assert input_data_coll_id != '', "No collection for Trim Galore trimmed"
+        input_data_coll_id = get_working_collection_id(
+            config["collection_names"]["trim_galore"]["trimmed"])
+        # Extract the annotation dataset id
+        annotation_id = get_annotation_id()
         # Create the input datamap
         datamap = {
             "singlePaired|sPaired": "single",
