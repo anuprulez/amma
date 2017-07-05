@@ -96,6 +96,17 @@ def run_multiqc(coll_id, software, software_name):
                 name="MultiQC report of %s" % software_name)
 
 
+def get_annotation_id():
+    '''
+    Extract the dataset id in the history
+    '''
+    annotation_id = ''
+    for ds in gi.histories.show_history(hist, contents=True, visible=True):
+        if ds["name"].find(config["annotation_name"]) != -1:
+            annotation_id = ds["id"]
+    assert annotation_id != '', "No annotation file for %s in history" % config["annotation_name"]
+
+
 # Connect to Galaxy and retrieve the history
 gi = GalaxyInstance(config["galaxy_url"], config["api_key"])
 histories = gi.histories.get_histories()
@@ -374,6 +385,8 @@ rule launch_preliminary_mapping:
         tool_id = get_working_tool_id(
             config["tool_names"]["star"],
             config["tool_versions"]["star"])
+        # Extract the annotation dataset id
+        annotation_id = get_annotation_id()
         # Create the input datamap for STAR
         datamap = {
             "singlePaired|sPaired": "single",
