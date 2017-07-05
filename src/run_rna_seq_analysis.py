@@ -302,7 +302,7 @@ rule launch_trim_galore:
         }
         # Run Trim Galore!
         info = gi.tools.run_tool(hist, tool_id, datamap)
-        # Retrieve the "RawData" collection
+        # Retrieve the trim Galore collections and rename them
         trim_galore_data_coll_id = ''
         for ds in gi.histories.show_history(hist, contents=True, visible = True):
             if ds["history_content_type"] != 'dataset_collection':
