@@ -27,6 +27,9 @@ collection_names:
     mapped: "Mapping with STAR: mapped reads"
     log: "Mapping with STAR: log"
     splice_junctions: "Mapping with STAR: splice junctions"
+  feature_counts:
+    counts: "Counting: count table"
+    summary: "Counting: summary"
 name_prefix:
   raw_data: "Raw data for "
   fastqc: "FastQC for "
@@ -39,6 +42,7 @@ tool_names:
   seq_extraction: "Select first"
   star: "RNA STAR"
   infer_experiment: "Infer Experiment"
+  feature_counts: "featureCounts"
 tool_versions:
   merging: "0.1.0"
   multiqc: "1.0.0.0"
@@ -47,3 +51,4 @@ tool_versions:
   seq_extraction: "1.1.0"
   star: "2.5.2b-0"
   infer_experiment: "2.4galaxy1"
+  feature_counts: "1.4.6.p5"

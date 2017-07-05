@@ -58,3 +58,9 @@ Links
     # Launch STAR mapping
     $ snakemake --snakefile src/run_rna_seq_analysis.py launch_star
     ```
+
+- Launch counting
+    
+    ```
+    $ snakemake --snakefile src/run_rna_seq_analysis.py launch_feature_counts
+    ```

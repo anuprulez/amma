@@ -541,9 +541,70 @@ rule launch_star:
                 gi.histories.update_dataset_collection(
                     hist,
                     ds["id"],
-                    name=config["collection_names"]["star"]["splice_junctions"],
-                    visible=False)
-        assert mapped_reads_coll_id != '', "No collection for %s" % config["collection_names"]["star"]["mapped"]
+                    name=config["collection_names"]["star"]["splice_junctions"])
         assert log_coll_id != '', "No collection for %s" % config["collection_names"]["star"]["log"]
         # Launch MultiQC on the log data
-        run_multiqc(trim_galore_data_coll_id, "rnastar_log", "STAR")
+        run_multiqc(log_coll_id, "rnastar_log",config["tool_names"]["star"])
+
+
+rule launch_feature_counts:
+    '''
+    Launch featureCounts on the mapped reads and MultiQC report on the outputs
+    '''
+    run:
+        # Get the id for the tool to downsample the datasets
+        tool_id = get_working_tool_id(
+            config["tool_names"]["feature_counts"],
+            config["tool_versions"]["feature_counts"])
+        # Search for the collection id with the trimmed data
+        input_data_coll_id = get_working_collection_id(
+            config["collection_names"]["star"]["mapped"])
+        # Extract the dataset id of the annotation in the history
+        annotation_id = get_annotation_id()
+        # Create the input datamap for 
+        datamap = {
+            "alignment" : {'batch': True,'values': [
+                {'src':'hdca',
+                'id': input_data_coll_id}]},
+            "gtf_source|ref_source": "history",
+            "gtf_source|reference_gene_sets": {'src':'hda','id': annotation_id},
+            "format": "tabdel_short",
+            "strand_specificity": "2",
+            "multimapping_enabled|multimapping_counts": "",
+            "mapping_quality": "10",
+            "largest_overlap": "",
+            "min_overlap": "1",
+            "read_extension_5p": "0",
+            "read_extension_3p": "0",
+            "read_reduction": "",
+            "primary": "",
+            "ignore_dup": "",
+            "count_split_alignments_only": ""}
+        # Run featureCounts
+        info = gi.tools.run_tool(hist, tool_id, datamap)
+        # Retrieve the generated collections and rename them
+        summary_coll_id = ''
+        for ds in gi.histories.show_history(hist, contents=True, visible=True):
+            if ds["history_content_type"] != 'dataset_collection':
+                continue
+            if ds["name"].find(config["tool_names"]["feature_counts"]) == -1:
+                continue
+            if ds["name"].endswith("summary"):
+                summary_coll_id = ds["id"]
+                # Rename the collection
+                gi.histories.update_dataset_collection(
+                    hist,
+                    ds["id"],
+                    name=config["collection_names"]["feature_counts"]["summary"])
+            else:
+                # Rename the collection
+                gi.histories.update_dataset_collection(
+                    hist,
+                    ds["id"],
+                    name=config["collection_names"]["feature_counts"]["counts"])
+        assert summary_coll_id != '', "No collection for %s" % config["collection_names"]["feature_counts"]["summary"]
+        # Launch MultiQC on the log data
+        run_multiqc(
+            summary_coll_id,
+            "featurecounts",
+            config["tool_names"]["feature_counts"])
