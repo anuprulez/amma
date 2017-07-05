@@ -249,7 +249,7 @@ rule launch_fastqc:
             print("Issue with FastQC launch:\n%s " % str(e))
         # Retrieve the "RawData" collection and rename it
         fastqc_data_coll_id = ''
-        for ds in gi.histories.show_history(hist, contents=True, visible = True, deleted = False):
+        for ds in gi.histories.show_history(hist, contents=True, visible=True, deleted=False):
             if ds["history_content_type"] != 'dataset_collection':
                 continue
             if ds["name"].find("FastQC") == -1:
@@ -259,14 +259,14 @@ rule launch_fastqc:
                 gi.histories.update_dataset_collection(
                     hist,
                     ds["id"],
-                    name="FastQC on Raw data: web report")
+                    name=config["collection_names"]["fastqc"]["web_report"])
             else:
                 fastqc_data_coll_id = ds["id"]
                 # Rename the raw data report collection
                 gi.histories.update_dataset_collection(
                     hist,
                     ds["id"],
-                    name="FastQC on Raw data: raw report")
+                    name=config["collection_names"]["fastqc"]["raw_report"])
         assert fastqc_data_coll_id != '', "No collection for FastQC Raw Data"
         # Launch MultiQC
         run_multiqc(fastqc_data_coll_id, "fastqc", "FastQC")
@@ -304,7 +304,7 @@ rule launch_trim_galore:
         info = gi.tools.run_tool(hist, tool_id, datamap)
         # Retrieve the trim Galore collections and rename them
         trim_galore_data_coll_id = ''
-        for ds in gi.histories.show_history(hist, contents=True, visible = True):
+        for ds in gi.histories.show_history(hist, contents=True, visible=True):
             if ds["history_content_type"] != 'dataset_collection':
                 continue
             if ds["name"].find("Trim Galore!") == -1:
@@ -314,14 +314,14 @@ rule launch_trim_galore:
                 gi.histories.update_dataset_collection(
                     hist,
                     ds["id"],
-                    name="Trim Galore! on Raw data: trimmed reads")
+                    name=config["collection_names"]["trim_galore"]["trimmed"])
             else:
                 trim_galore_data_coll_id = ds["id"]
                 # Rename the collection
                 gi.histories.update_dataset_collection(
                     hist,
                     ds["id"],
-                    name="Trim Galore! on Raw data: report")
+                    name=config["collection_names"]["trim_galore"]["report"])
         assert trim_galore_data_coll_id != '', "No collection for Trim Galore report"
         # Launch MultiQC
         run_multiqc(trim_galore_data_coll_id, "cutadapt", "Trim Galore!")

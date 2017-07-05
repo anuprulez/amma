@@ -5,8 +5,12 @@ folder_name: "derny/15-05-2017"
 hist_name: "Neuromac GF RNA seq analysis"
 collection_names:
   raw_data: "Raw data"
-  fastqc: "FastQC"
-  trimgalore: "Trim Galore!"
+  fastqc:
+    web_report: "FastQC on Raw data: web report"
+    raw_report: "FastQC on Raw data: raw report"
+  trim_galore:
+    report: "Trim Galore! on Raw data: report"
+    trimmed: "Trim Galore! on Raw data: trimmed reads"
 name_prefix:
   raw_data: "Raw data for "
   fastqc: "FastQC for "
