@@ -569,7 +569,7 @@ rule launch_feature_counts:
             "gtf_source|ref_source": "history",
             "gtf_source|reference_gene_sets": {'src':'hda','id': annotation_id},
             "format": "tabdel_short",
-            "strand_specificity": "2",
+            "strand_specificity": "0",
             "multimapping_enabled|multimapping_counts": "",
             "mapping_quality": "10",
             "largest_overlap": "",
