@@ -420,8 +420,12 @@ rule launch_preliminary_mapping:
                 {'src':'hdca',
                 'id': downsample_coll_id}]},
             "refGenomeSource|geneSource": "indexed",
-            "refGenomeSource|GTFconditional|GTFselect": "with-gtf",
-            "refGenomeSource|GTFconditional|genomeDir": "mm10"
+            "refGenomeSource|GTFconditional|GTFselect": "without-gtf",
+            "refGenomeSource|GTFconditional|genomeDir": "mm10",
+            "refGenomeSource|GTFconditional|sjdbGTFfile": {
+                'src':'hda',
+                'id': annotation_id},
+            "refGenomeSource|GTFconditional|sjdbOverhang": "10"
         }
         # Run STAR
         info = gi.tools.run_tool(hist, tool_id, datamap)
@@ -503,13 +507,16 @@ rule launch_star:
                 {'src':'hdca',
                 'id': input_data_coll_id}]},
             "refGenomeSource|geneSource": "indexed",
-            "refGenomeSource|GTFconditional|GTFselect": "with-gtf",
-            "refGenomeSource|GTFconditional|genomeDir": "mm10"
+            "refGenomeSource|GTFconditional|GTFselect": "without-gtf",
+            "refGenomeSource|GTFconditional|genomeDir": "mm10",
+            "refGenomeSource|GTFconditional|sjdbGTFfile": {
+                'src':'hda',
+                'id': annotation_id},
+            "refGenomeSource|GTFconditional|sjdbOverhang": "10"
         }
         # Run STAR
         info = gi.tools.run_tool(hist, tool_id, datamap)
         # Retrieve the generated collections and rename them
-        mapped_reads_coll_id = ''
         log_coll_id = ''
         for ds in gi.histories.show_history(hist, contents=True, visible=True):
             if ds["history_content_type"] != 'dataset_collection':
