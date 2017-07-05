@@ -11,3 +11,13 @@ name_prefix:
   raw_data: "Raw data for "
   fastqc: "FastQC for "
   trimgalore: "Trim Galore! for "
+tool_names:
+  merging: "Concatenate datasets"
+  multiqc: "multiqc"
+  fastqc: "FastQC"
+  trim_galore: "Trim Galore!"
+tool_versions:
+  merging: "0.1.0"
+  multiqc: "1.0.0.0"
+  fastqc: "0.68"
+  trim_galore: "0.4.3.0"
