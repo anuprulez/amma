@@ -426,7 +426,7 @@ rule launch_preliminary_mapping:
             "refGenomeSource|GTFconditional|sjdbGTFfile": {
                 'src':'hda',
                 'id': annotation_id},
-            "refGenomeSource|GTFconditional|sjdbOverhang": "10"
+            "refGenomeSource|GTFconditional|sjdbOverhang": "100"
         }
         # Run STAR
         info = gi.tools.run_tool(hist, tool_id, datamap)
@@ -463,7 +463,6 @@ rule launch_preliminary_mapping:
         tool_id = get_working_tool_id(
             config["tool_names"]["infer_experiment"],
             config["tool_versions"]["infer_experiment"])
-        
         # Create the input datamap for "Infer experiment"
         datamap = {
             "input" : {'batch': True,'values': [
@@ -513,7 +512,7 @@ rule launch_star:
             "refGenomeSource|GTFconditional|sjdbGTFfile": {
                 'src':'hda',
                 'id': annotation_id},
-            "refGenomeSource|GTFconditional|sjdbOverhang": "10"
+            "refGenomeSource|GTFconditional|sjdbOverhang": "100"
         }
         # Run STAR
         info = gi.tools.run_tool(hist, tool_id, datamap)
