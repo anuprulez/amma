@@ -16,13 +16,13 @@ def check_hist(hist_name):
     return hist
 
 
-def get_tool_id(tool_name):
+def get_tool_id(tool_name, version):
     '''
     Retrieve the id of a tool
     '''
     tool_id = ''
     for tool in tools:
-        if tool["name"] == tool_name:
+        if tool["name"] == tool_name and tool["version"] == version:
             tool_id = tool["id"]
     return tool_id
 
