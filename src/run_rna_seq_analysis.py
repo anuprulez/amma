@@ -465,3 +465,65 @@ rule launch_preliminary_mapping:
                 hist,
                 ds["id"],
                 name=config["collection_names"]["preliminary_mapping"]["infer_experiment"])
+
+
+rule launch_star:
+    '''
+    Launch STAR on the trimmed data and MultiQC report on the STAR logs
+    '''
+    run:
+        # Get the id for the tool to downsample the datasets
+        tool_id = get_working_tool_id(
+            config["tool_names"]["star"],
+            config["tool_versions"]["star"])
+        # Search for the collection id with the trimmed data
+        input_data_coll_id = get_collection_id(
+            config["collection_names"]["trim_galore"]["trimmed"],
+            hist)
+        assert input_data_coll_id != '', "No collection for Trim Galore trimmed"
+        # Create the input datamap
+        datamap = {
+            "singlePaired|sPaired": "single",
+            "singlePaired|input1" : {'batch': True,'values': [
+                {'src':'hdca',
+                'id': input_data_coll_id}]},
+            "refGenomeSource|geneSource": "indexed",
+            "refGenomeSource|GTFconditional|GTFselect": "with-gtf",
+            "refGenomeSource|GTFconditional|genomeDir": "mm10"
+        }
+        # Run STAR
+        info = gi.tools.run_tool(hist, tool_id, datamap)
+        # Retrieve the generated collections and rename them
+        mapped_reads_coll_id = ''
+        log_coll_id = ''
+        for ds in gi.histories.show_history(hist, contents=True, visible=True):
+            if ds["history_content_type"] != 'dataset_collection':
+                continue
+            if ds["name"].find(config["tool_names"]["star"]) == -1:
+                continue
+            if ds["name"].endswith("log"):
+                log_coll_id = ds["id"]
+                # Rename the collection
+                gi.histories.update_dataset_collection(
+                    hist,
+                    ds["id"],
+                    name=config["collection_names"]["star"]["log"],
+                    visible=False)
+            elif ds["name"].endswith("mapped.bam"):
+                mapped_reads_coll_id = ds["id"]
+                # Rename the collection
+                gi.histories.update_dataset_collection(
+                    hist,
+                    ds["id"],
+                    name=config["collection_names"]["star"]["mapped"])
+            elif ds["name"].endswith("splice junctions.bed"):
+                # Rename the collection
+                gi.histories.update_dataset_collection(
+                    hist,
+                    ds["id"],
+                    name=config["collection_names"]["star"]["splice_junctions"],
+                    visible=False)
+        assert mapped_reads_coll_id != '', "No collection for %s" % config["collection_names"]["star"]["mapped"]
+        assert log_coll_id != '', "No collection for %s" % config["collection_names"]["star"]["log"]
+        # Launch MultiQC on the log data
+        run_multiqc(trim_galore_data_coll_id, "rnastar_log", "STAR")
