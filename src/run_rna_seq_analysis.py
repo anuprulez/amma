@@ -59,6 +59,34 @@ def fill_multiqc_inputs(coll_id,hist):
     return inputs
 
 
+def run_multiqc(coll_id, software, software_name):
+    '''
+    Run multiqc tool on the element of a collection given a software
+    '''
+    # Create and fill the input datamap for MultiQC
+    datamap = {
+        "results_0|software": software,
+        "results_0|input_file": fill_multiqc_inputs(
+            coll_id,
+            hist),
+        "results_0|saveLog": "false"}
+    # Run MultiQC
+    info = gi.tools.run_tool(hist, multiqc_id, datamap)
+    # Rename and/or hide the files
+    for output in info['outputs']:
+        if output["name"].endswith("Log"):
+            gi.histories.update_dataset(
+                hist,
+                output['id'],
+                name="MultiQC log of %s" % software_name,
+                visible = False)
+        elif output["name"].endswith("Webpage"):
+            gi.histories.update_dataset(
+                hist,
+                output['id'],
+                name="MultiQC report of %s" % software_name)
+
+
 # Connect to Galaxy and retrieve the history
 gi = GalaxyInstance(config["galaxy_url"], config["api_key"])
 histories = gi.histories.get_histories()
@@ -240,19 +268,8 @@ rule launch_fastqc:
                     ds["id"],
                     name="FastQC on Raw data: raw report")
         assert fastqc_data_coll_id != '', "No collection for FastQC Raw Data"
-        # Create and fill the input datamap for MultiQC
-        datamap = {
-            "results_0|software": "fastqc",
-            "results_0|input_file": fill_multiqc_inputs(
-                fastqc_data_coll_id,
-                hist),
-            "results_0|saveLog": "False"}
-        # Run MultiQC
-        info = gi.tools.run_tool(hist, multiqc_id, datamap)
-        gi.histories.update_dataset(
-            hist,
-            info['outputs'][0]['id'],
-            name="MultiQC report of FastQC outputs")
+        # Launch MultiQC
+        run_multiqc(fastqc_data_coll_id, "fastqc", "FastQC")
 
 
 rule launch_trim_galore:
@@ -306,16 +323,6 @@ rule launch_trim_galore:
                     ds["id"],
                     name="Trim Galore! on Raw data: report")
         assert trim_galore_data_coll_id != '', "No collection for Trim Galore report"
-        # Create and fill the input datamap for MultiQC
-        datamap = {
-            "results_0|software": "fastqc",
-            "results_0|input_file": fill_multiqc_inputs(
-                trim_galore_data_coll_id,
-                hist),
-            "results_0|saveLog": "False"}
-        # Run MultiQC
-        info = gi.tools.run_tool(hist, multiqc_id, datamap)
-        gi.histories.update_dataset(
-            hist,
-            info['outputs'][0]['id'],
-            name="MultiQC report of Trim Galore!")
+        # Launch MultiQC
+        run_multiqc(trim_galore_data_coll_id, "cutadapt", "Trim Galore!")
+
