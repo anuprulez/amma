@@ -242,7 +242,27 @@ rule prepare_files:
         gi.histories.create_dataset_collection(
             hist,
             unmerged_collection)
-
+        # Find the data library with the annotations
+        lib = gi.libraries.get_libraries(name=config["library_names"]["genome_annotations"])
+        assert len(lib) > 0, "No library found for %s lab" % config["library_names"]["genome_annotations"]
+        lib_id = lib[0]["id"]
+        # Add the annotation file to the history
+        for ds in gi.libraries.show_library(lib_id, contents=True):
+            # Eliminate the folder
+            if ds['type'] != 'file':
+                continue
+            # Eliminate the files from other folders
+            if ds["name"].find(config["folder_names"]["annotation"]) == -1:
+                continue
+            # Find only the "Mus_musculus.GRCm38.87.gtf (mm10)"
+            if ds["name"].find(config["annotation_name"]) == -1:
+                continue
+            # Add the files to the history
+            gi.histories.upload_dataset_from_library(
+                hist,
+                ds["id"])
+            annotation_id = ds["id"]
+        assert annotation_id != '', "No annotation file for %s" % config["annotation_name"]
 
 rule launch_fastqc:
     '''
@@ -432,34 +452,7 @@ rule launch_preliminary_mapping:
         tool_id = get_working_tool_id(
             config["tool_names"]["infer_experiment"],
             config["tool_versions"]["infer_experiment"])
-        # Find the data library with the annotations and add it to the history
-        lib = gi.libraries.get_libraries(name=config["library_names"]["genome_annotations"])
-        assert len(lib) > 0, "No library found for %s lab" % config["library_names"]["genome_annotations"]
-        lib_id = lib[0]["id"]
-        # Parse the data library datasets
-        annotation_id = ''
-        for ds in gi.libraries.show_library(lib_id, contents=True):
-            # Eliminate the folder
-            if ds['type'] != 'file':
-                continue
-            # Eliminate the files from other folders
-            if ds["name"].find(config["folder_names"]["annotation"]) == -1:
-                continue
-            # Find only the "Mus_musculus.GRCm38.87.gtf (mm10)"
-            if ds["name"].find(config["annotation_name"]) == -1:
-                continue
-            # Add the files to the history
-            gi.histories.upload_dataset_from_library(
-                hist,
-                ds["id"])
-            annotation_id = ds["id"]
-        assert annotation_id != '', "No annotation file for %s" % config["annotation_name"]
-        # Extract the dataset id in the history
-        annotation_id = ''
-        for ds in gi.histories.show_history(hist, contents=True, visible=True):
-            if ds["name"].find(config["annotation_name"]) != -1:
-                annotation_id = ds["id"]
-        assert annotation_id != '', "No annotation file for %s in history" % config["annotation_name"]
+        
         # Create the input datamap for "Infer experiment"
         datamap = {
             "input" : {'batch': True,'values': [
