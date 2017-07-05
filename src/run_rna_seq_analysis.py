@@ -105,6 +105,7 @@ def get_annotation_id():
         if ds["name"].find(config["annotation_name"]) != -1:
             annotation_id = ds["id"]
     assert annotation_id != '', "No annotation file for %s in history" % config["annotation_name"]
+    return annotation_id
 
 
 # Connect to Galaxy and retrieve the history
