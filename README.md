@@ -41,7 +41,7 @@ Links
     $ snakemake --snakefile src/run_rna_seq_analysis.py prepare_files
     ```
 
-- Launch quality control
+- Launch quality control and trimming
 
     ```
     # Launch FastQC
