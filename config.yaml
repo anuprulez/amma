@@ -1,8 +1,13 @@
 galaxy_url: "http://galaxy.uni-freiburg.de/"
 api_key: "f963e720ce13fab7bf5291cb0b89be03"
-library_name: "Prinz"
-folder_name: "derny/15-05-2017"
-hist_name: "Neuromac GF RNA seq analysis"
+library_names:
+  input_data: "Prinz"
+  genome_annotations: "Genomes + annotations"
+folder_names:
+  input_data: "derny/15-05-2017"
+  annotation: "Annotations"
+hist_name: "RNA seq analysis test"
+annotation_name: "Mus_musculus.GRCm38.87.gtf (mm10)"
 collection_names:
   raw_data: "Raw data"
   fastqc:

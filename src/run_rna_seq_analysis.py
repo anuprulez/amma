@@ -114,7 +114,7 @@ rule prepare_files:
     '''
     run:
         # Find the data library
-        lib = gi.libraries.get_libraries(name=config["library_name"])
+        lib = gi.libraries.get_libraries(name=config["library_names"]["input_data"])
         assert len(lib) > 0, "No library found for Prinz lab"
         lib_id = lib[0]["id"]
         # Parse the data library datasets
@@ -123,7 +123,7 @@ rule prepare_files:
             if ds['type'] != 'file':
                 continue
             # Eliminate the files from other folders
-            if ds["name"].find(config["folder_name"]) == -1:
+            if ds["name"].find(config["folder_names"]["input_data"]) == -1:
                 continue
             # Add the files to the history
             gi.histories.upload_dataset_from_library(
