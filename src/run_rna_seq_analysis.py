@@ -290,7 +290,7 @@ rule launch_fastqc:
         for ds in gi.histories.show_history(hist, contents=True, visible=True, deleted=False):
             if ds["history_content_type"] != 'dataset_collection':
                 continue
-            if ds["name"].find("FastQC") == -1:
+            if ds["name"].find(config["tool_names"]["fastqc"]) == -1:
                 continue
             if ds["name"].find("RawData") == -1:
                 # Rename the web report collection
@@ -305,9 +305,12 @@ rule launch_fastqc:
                     hist,
                     ds["id"],
                     name=config["collection_names"]["fastqc"]["raw_report"])
-        assert fastqc_data_coll_id != '', "No collection for FastQC Raw Data"
+        assert fastqc_data_coll_id != '', "No collection for %s" % config["collection_names"]["fastqc"]["raw_report"]
         # Launch MultiQC
-        run_multiqc(fastqc_data_coll_id, "fastqc", "FastQC")
+        run_multiqc(
+            fastqc_data_coll_id,
+            "fastqc",
+            config["tool_names"]["fastqc"])
 
 
 rule launch_trim_galore:
@@ -343,7 +346,7 @@ rule launch_trim_galore:
         for ds in gi.histories.show_history(hist, contents=True, visible=True):
             if ds["history_content_type"] != 'dataset_collection':
                 continue
-            if ds["name"].find("Trim Galore!") == -1:
+            if ds["name"].find(config["tool_names"]["trim_galore"]) == -1:
                 continue
             if ds["name"].find("trimmed reads") != -1:
                 # Rename the collection
@@ -358,9 +361,12 @@ rule launch_trim_galore:
                     hist,
                     ds["id"],
                     name=config["collection_names"]["trim_galore"]["report"])
-        assert trim_galore_data_coll_id != '', "No collection for Trim Galore report"
+        assert trim_galore_data_coll_id != '', "No collection for %s" % config["collection_names"]["trim_galore"]["report"]
         # Launch MultiQC
-        run_multiqc(trim_galore_data_coll_id, "cutadapt", "Trim Galore!")
+        run_multiqc(
+            trim_galore_data_coll_id,
+            "cutadapt",
+            config["tool_names"]["trim_galore"])
 
 
 rule launch_preliminary_mapping:
