@@ -529,10 +529,8 @@ rule launch_star:
                 gi.histories.update_dataset_collection(
                     hist,
                     ds["id"],
-                    name=config["collection_names"]["star"]["log"],
-                    visible=False)
+                    name=config["collection_names"]["star"]["log"])
             elif ds["name"].endswith("mapped.bam"):
-                mapped_reads_coll_id = ds["id"]
                 # Rename the collection
                 gi.histories.update_dataset_collection(
                     hist,
