@@ -407,7 +407,7 @@ rule launch_preliminary_mapping:
                 hist,
                 ds["id"],
                 name=config["collection_names"]["preliminary_mapping"]["seq_extraction"])
-        assert downsample_coll_id != '', "No collection for the downsampled seq"
+        assert downsample_coll_id != '', "No collection for %s" % config["collection_names"]["preliminary_mapping"]["seq_extraction"]
         # Get the id for STAR
         tool_id = get_working_tool_id(
             config["tool_names"]["star"],
