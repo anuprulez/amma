@@ -5,9 +5,9 @@ library_names:
   genome_annotations: "Genomes + annotations"
 folder_names:
   input_data: "derny/15-05-2017"
-  annotation: "Annotations"
+  annotation: "Annotations/2017"
 hist_name: "RNA seq analysis test"
-annotation_name: "Mus_musculus.GRCm38.87.gtf (mm10)"
+annotation_name: "mm10_UCSC_07_15_genes.gtf"
 collection_names:
   raw_data: "Raw data"
   fastqc:
