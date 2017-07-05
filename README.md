@@ -49,3 +49,12 @@ Links
     # Launch TrimGalore!
     $ snakemake --snakefile src/run_rna_seq_analysis.py launch_trim_galore
     ```
+
+- Launch mapping
+
+    ```
+    # Launch preliminary mapping
+    $ snakemake --snakefile src/run_rna_seq_analysis.py launch_preliminary_mapping
+    # Launch STAR mapping
+    $ snakemake --snakefile src/run_rna_seq_analysis.py launch_star
+    ```

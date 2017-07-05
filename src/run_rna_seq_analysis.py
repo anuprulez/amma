@@ -326,3 +326,142 @@ rule launch_trim_galore:
         # Launch MultiQC
         run_multiqc(trim_galore_data_coll_id, "cutadapt", "Trim Galore!")
 
+
+rule launch_preliminary_mapping:
+    '''
+    Run a preliminary mapping to infer the experiment (library type): extract
+    200,000 sequences (the first 800,000 lines), run STAR and then Infer 
+    Experiment
+    '''
+    run:
+        # Get the id for the tool to downsample the datasets
+        tool_id = get_working_tool_id(
+            config["tool_names"]["seq_extraction"],
+            config["tool_versions"]["seq_extraction"])
+        # Search for the collection id with the trimmed data
+        input_data_coll_id = get_collection_id(
+            config["collection_names"]["trim_galore"]["trimmed"],
+            hist)
+        assert input_data_coll_id != '', "No collection for Trim Galore trimmed"
+        # Create the input datamap
+        datamap = {
+            "infile" : {'batch': True,'values': [
+                {'src':'hdca',
+                'id': input_data_coll_id}]},
+            "complement": "",
+            "count": "800000",
+        }
+        # Run "Select first"
+        info = gi.tools.run_tool(hist, tool_id, datamap)
+        # Retrieve the generated collections and rename it
+        downsample_coll_id = ''
+        for ds in gi.histories.show_history(hist, contents=True, visible=True):
+            if ds["history_content_type"] != 'dataset_collection':
+                continue
+            if ds["name"].find(config["tool_names"]["seq_extraction"]) == -1:
+                continue
+            downsample_coll_id = ds["id"]
+            # Rename the collection
+            gi.histories.update_dataset_collection(
+                hist,
+                ds["id"],
+                name=config["collection_names"]["preliminary_mapping"]["seq_extraction"])
+        assert downsample_coll_id != '', "No collection for the downsampled seq"
+        # Get the id for STAR
+        tool_id = get_working_tool_id(
+            config["tool_names"]["star"],
+            config["tool_versions"]["star"])
+        # Create the input datamap for STAR
+        datamap = {
+            "singlePaired|sPaired": "single",
+            "singlePaired|input1" : {'batch': True,'values': [
+                {'src':'hdca',
+                'id': downsample_coll_id}]},
+            "refGenomeSource|geneSource": "indexed",
+            "refGenomeSource|GTFconditional|GTFselect": "with-gtf",
+            "refGenomeSource|GTFconditional|genomeDir": "mm10"
+        }
+        # Run STAR
+        info = gi.tools.run_tool(hist, tool_id, datamap)
+        # Retrieve the STAR collections and rename (and hide) them
+        star_data_coll_id = ''
+        for ds in gi.histories.show_history(hist, contents=True, visible=True):
+            if ds["history_content_type"] != 'dataset_collection':
+                continue
+            if ds["name"].find(config["tool_names"]["star"]) == -1:
+                continue
+            if ds["name"].endswith("log"):
+                # Rename the collection
+                gi.histories.update_dataset_collection(
+                    hist,
+                    ds["id"],
+                    name=config["collection_names"]["preliminary_mapping"]["star"]["log"],
+                    visible=False)
+            elif ds["name"].endswith("mapped.bam"):
+                # Rename the collection
+                gi.histories.update_dataset_collection(
+                    hist,
+                    ds["id"],
+                    name=config["collection_names"]["preliminary_mapping"]["star"]["mapped"])
+                star_data_coll_id = ds["id"]
+            elif ds["name"].endswith("splice junctions.bed"):
+                # Rename the collection
+                gi.histories.update_dataset_collection(
+                    hist,
+                    ds["id"],
+                    name=config["collection_names"]["preliminary_mapping"]["star"]["splice_junctions"],
+                    visible=False)
+        assert star_data_coll_id != '', "No collection for preliminary mapped reads"
+        # Get the id for "Infer experiment"
+        tool_id = get_working_tool_id(
+            config["tool_names"]["infer_experiment"],
+            config["tool_versions"]["infer_experiment"])
+        # Find the data library with the annotations and add it to the history
+        lib = gi.libraries.get_libraries(name=config["library_names"]["genome_annotations"])
+        assert len(lib) > 0, "No library found for %s lab" % config["library_names"]["genome_annotations"]
+        lib_id = lib[0]["id"]
+        # Parse the data library datasets
+        annotation_id = ''
+        for ds in gi.libraries.show_library(lib_id, contents=True):
+            # Eliminate the folder
+            if ds['type'] != 'file':
+                continue
+            # Eliminate the files from other folders
+            if ds["name"].find(config["folder_names"]["annotation"]) == -1:
+                continue
+            # Find only the "Mus_musculus.GRCm38.87.gtf (mm10)"
+            if ds["name"].find(config["annotation_name"]) == -1:
+                continue
+            # Add the files to the history
+            gi.histories.upload_dataset_from_library(
+                hist,
+                ds["id"])
+            annotation_id = ds["id"]
+        assert annotation_id != '', "No annotation file for %s" % config["annotation_name"]
+        # Extract the dataset id in the history
+        annotation_id = ''
+        for ds in gi.histories.show_history(hist, contents=True, visible=True):
+            if ds["name"].find(config["annotation_name"]) != -1:
+                annotation_id = ds["id"]
+        assert annotation_id != '', "No annotation file for %s in history" % config["annotation_name"]
+        # Create the input datamap for "Infer experiment"
+        datamap = {
+            "input" : {'batch': True,'values': [
+                {'src':'hdca',
+                'id': star_data_coll_id}]},
+            "refgene": {'src':'hda','id': annotation_id},
+            "sample_size": "200000",
+            "mapq": "30"
+        }
+        # Run "Infer experiment"
+        info = gi.tools.run_tool(hist, tool_id, datamap)
+        # Retrieve the generated collection and rename it
+        for ds in gi.histories.show_history(hist, contents=True, visible=True):
+            if ds["history_content_type"] != 'dataset_collection':
+                continue
+            if ds["name"].find(config["tool_names"]["infer_experiment"]) == -1:
+                continue
+            gi.histories.update_dataset_collection(
+                hist,
+                ds["id"],
+                name=config["collection_names"]["preliminary_mapping"]["infer_experiment"])
