@@ -27,6 +27,15 @@ def get_tool_id(tool_name, version):
     return tool_id
 
 
+def get_working_tool_id(tool_name, version):
+    '''
+    Retrieve the id of a tool and test if it exists
+    '''
+    tool_id = get_tool_id(tool_name, version)
+    assert tool_id != '', "No %s tool" % tool_name
+    return tool_id
+
+
 def get_collection_id(collection_name, hist_id):
     '''
     Retrieve the id of a collection
@@ -64,7 +73,9 @@ sample_names = list(finename_desc_df.index)
 # Get tools in the Galaxy instance
 tools = gi.tools.get_tools()
 # Get the id for MultiQC tool
-multiqc_id = get_tool_id("multiqc")
+multiqc_id = get_working_tool_id(
+    config["tool_names"]["multiqc"],
+    config["tool_versions"]["multiqc"])
 
 
 rule prepare_files:
@@ -126,7 +137,9 @@ rule prepare_files:
                     'src': 'hda'
                     })
         # Get concatenate tool
-        tool_id = get_tool_id("Concatenate datasets")
+        tool_id = get_working_tool_id(
+            config["tool_names"]["merging"],
+            config["tool_versions"]["merging"])
         # Merge datasets
         unmerged_dataset_ids = []
         for dataset in to_merge:
@@ -189,8 +202,9 @@ rule launch_fastqc:
     '''
     run:
         # Get the id for FastQC tool
-        tool_id = get_tool_id("FastQC")
-        assert tool_id != '', "No FastQC tool"
+        tool_id = get_working_tool_id(
+            config["tool_names"]["fastqc"],
+            config["tool_versions"]["fastqc"])
         # Search for the collection id with the raw data
         raw_data_coll_id = get_collection_id(
             config["collection_names"]["raw_data"],
@@ -248,8 +262,9 @@ rule launch_trim_galore:
     '''
     run:
         # Get the id for Trim Galore! tool
-        tool_id = get_tool_id("Trim Galore!")
-        assert tool_id != '', "No Trim Galore! tool"
+        tool_id = get_working_tool_id(
+            config["tool_names"]["trim_galore"],
+            config["tool_versions"]["trim_galore"])
         # Search for the collection id with the raw data
         raw_data_coll_id = get_collection_id(
             config["collection_names"]["raw_data"],
