@@ -245,9 +245,9 @@ rule launch_fastqc:
         # Run FastQC
         try:
             info = gi.tools.run_tool(hist, tool_id, datamap)
-        except:
-            print("Issue with FastQC launch")
-        # Retrieve the "RawData" collection
+        except Exception as e:
+            print("Issue with FastQC launch:\n%s " % str(e))
+        # Retrieve the "RawData" collection and rename it
         fastqc_data_coll_id = ''
         for ds in gi.histories.show_history(hist, contents=True, visible = True, deleted = False):
             if ds["history_content_type"] != 'dataset_collection':
