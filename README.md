@@ -16,7 +16,7 @@ Links
 
 - Add the API key to [http://galaxy.uni-freiburg.de/](http://galaxy.uni-freiburg.de/) in [`config.yaml`](config.yaml)
 
-# Usage
+# Usage for the data analyses
 
 - Launch the `conda` environment
 
@@ -64,3 +64,9 @@ Links
     ```
     $ snakemake --snakefile src/run_rna_seq_analysis.py launch_feature_counts
     ```
+
+# Usage for the report generation
+
+```
+$ pandoc doc/report.md --latex-engine=xelatex -o doc/report.pdf
+```
