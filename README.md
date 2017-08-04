@@ -68,5 +68,5 @@ Links
 # Usage for the report generation
 
 ```
-$ pandoc doc/report.md --latex-engine=xelatex -o doc/report.pdf
+$ pandoc doc/report.md --latex-engine=xelatex --filter pandoc-citeproc  --toc -o doc/report.pdf
 ```
