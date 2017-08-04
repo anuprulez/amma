@@ -154,7 +154,7 @@ rule prepare_files:
         to_merge = {}
         for sample in sample_names:
             project_id = finename_desc_df["Project id"][sample]
-            if project_id not in ["Project_S178", "Project_S225"]:
+            if project_id not in ["Project_S178", "Project_S198", "Project_S225"]:
                 continue
             to_merge.setdefault(sample, [])
         # Parse the dataset in history to extract the ids of dataset to merge,
