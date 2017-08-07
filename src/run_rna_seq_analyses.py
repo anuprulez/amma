@@ -1,9 +1,6 @@
 from bioblend.galaxy import GalaxyInstance
 import pandas as pd
-
-
-configfile: "config.yaml"
-
+import prepare_env
 
 def check_hist(hist_name):
     '''
@@ -125,6 +122,12 @@ tools = gi.tools.get_tools()
 multiqc_id = get_working_tool_id(
     config["tool_names"]["multiqc"],
     config["tool_versions"]["multiqc"])
+# Get the id for DESeq tool
+tool_id = get_working_tool_id(
+    config["tool_names"]["deseq"],
+    config["tool_versions"]["deseq"])
+
+
 
 
 rule prepare_files:
@@ -608,3 +611,14 @@ rule launch_feature_counts:
             summary_coll_id,
             "featurecounts",
             config["tool_names"]["feature_counts"])
+
+
+rule run_age_dge:
+    '''
+    Run the 4 differential gene expression analyses based on the the age
+    '''
+    run:
+        # Search for the collection id with the count data
+        input_data_coll_id = get_working_collection_id(
+            config["collection_names"]["feature_counts"])
+        print(gi.histories.show_dataset_collection(hist,input_data_coll_id))
