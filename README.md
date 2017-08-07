@@ -38,31 +38,31 @@ Links
 - Prepare the files into collections
 
     ```
-    $ snakemake --snakefile src/run_rna_seq_analysis.py prepare_files
+    $ snakemake --snakefile src/prepare_rna_seq_analysis.py prepare_files
     ```
 
 - Launch quality control and trimming
 
     ```
     # Launch FastQC
-    $ snakemake --snakefile src/run_rna_seq_analysis.py launch_fastqc
+    $ snakemake --snakefile src/prepare_rna_seq_analysis.py launch_fastqc
     # Launch TrimGalore!
-    $ snakemake --snakefile src/run_rna_seq_analysis.py launch_trim_galore
+    $ snakemake --snakefile src/prepare_rna_seq_analysis.py launch_trim_galore
     ```
 
 - Launch mapping
 
     ```
     # Launch preliminary mapping
-    $ snakemake --snakefile src/run_rna_seq_analysis.py launch_preliminary_mapping
+    $ snakemake --snakefile src/prepare_rna_seq_analysis.py launch_preliminary_mapping
     # Launch STAR mapping
-    $ snakemake --snakefile src/run_rna_seq_analysis.py launch_star
+    $ snakemake --snakefile src/prepare_rna_seq_analysis.py launch_star
     ```
 
 - Launch counting
     
     ```
-    $ snakemake --snakefile src/run_rna_seq_analysis.py launch_feature_counts
+    $ snakemake --snakefile src/prepare_rna_seq_analysis.py launch_feature_counts
     ```
 
 # Usage for the report generation
