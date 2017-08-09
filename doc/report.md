@@ -207,7 +207,7 @@ Questions
 
 Objectives
 
-- To get a better idea of the basal differences between the ages
+- Get a better idea of the basal differences between the ages
 
 Details
 
@@ -219,40 +219,94 @@ Details
     - DESeq2 [@love2014moderated]
     - Factor 1: age
     - Factor 2: lane with sequencing project (*e.g.* `project_s195_7`) if different from the age factors
+
+Results (Figure \ref{age_impact_analysis_venn})
+
+![Comparison of the differential expressed genes between the ages\label{age_impact_analysis_venn}](results/dge/age/venn_diagrams.png){ height=500px }
 	
 #### Understanding the impact of gender: for each age and each type
 
-- Question: How complex are the differences between the gender? Can we have the both gender in a global analysis?
-- Why? To get a better idea of the impact of gender on the gene expression, if it is different between the ages and to know if the impact of the gender if more important than the type of mices (GF/SPF)
+Questions
 
-![Analyses to understand the impact of gender on gene expression](https://framadrive.org/s/Se503gvrZ7apGa8/download)
-    
-- Factor 1: gender
-- Factor 2: lane with sequencing project
+- How complex are the differences between the gender?
+- Can we have the both gender in a global analysis?
+
+Objectives
+
+- Get a better idea of the impact of gender on the gene expression, if it is different between the ages and to know if the impact of the gender if more important than the type of mices (GF/SPF)
+
+Details
+
+- Design (Figure \ref{gender_impact_analysis})
+
+    ![Analyses to understand the impact of gender on gene expression\label{gender_impact_analysis}](doc/images/gender_impact_analysis.png)
+
+- Analyses with
+    - DESeq2 [@love2014moderated]
+    - Factor 1: gender
+    - Factor 2: lane with sequencing project if different from the age factors
+
+Results (Figure \ref{gender_impact_analysis_venn})
+
+![Comparison of the differential expressed genes between the genders\label{gender_impact_analysis_venn}](results/dge/gender/venn_diagrams.png){ width=600px }
 
 #### Understanding the impact of type
 
-- Question: What is the impact of being GF on the expression levels?
+Questions
 
-1. for each gender and age
+- What is the impact of being GF on the expression levels?
 
-	- Question: What are the differentially expressed genes of the microglya cells between GF and SPF mice at different ages?
-    - Why? To have limited cofounding factors (age/gender) and still get an idea of the impact of SPF/GF on the gene expression
-    
-    ![Analyses to understand the impact of GF on gene expression, with limitation of the cofounding factors](https://framadrive.org/s/viE59uhFcH1IRpF/download)
-    
-    - Factor 1: GF or SPF
-    - Factor 2: lane with sequencing project
-2. for each gender
+##### For each gender and age
 
-	- Question: What are the levels of differential expression between GF and SPF between the ages?
-    - Why? To be able to compare the gene expression of GF/SPF between the different ages
-    
-    ![Analyses to understand the impact of GF on gene expression](https://framadrive.org/s/wSMBMJv8WSTRRVu/download)
-    
+Questions
+
+- What are the differentially expressed genes of the microglya cells between GF and SPF mice at different ages?
+
+Objectives
+
+- Have limited cofounding factors (age/gender)
+- Get an idea of the impact of SPF/GF on the gene expression
+
+Details 
+
+- Design (Figure \ref{type_impact_analysis_per_age_gender})
+
+    ![Analyses to understand the impact of GF on gene expression, with limitation of the cofounding factors\label{type_impact_analysis_per_age_gender}](doc/images/type_impact_analysis_per_age_gender.png)
+
+- Analyses with
+    - DESeq2 [@love2014moderated]
+    - Factor 1: gender
+    - Factor 2: lane with sequencing project if different from the age factors
+
+Results (Figure \ref{type_impact_analysis_per_age_gender_venn})
+
+![Comparison of the differential expressed genes between the GT and SPF\label{type_impact_analysis_per_age_gender_venn}](results/dge/type_impact_analysis_per_age_gender/venn_diagrams.png){ width=600px }
+
+##### For each gender
+
+Questions
+
+- What are the levels of differential expression between GF and SPF between the ages?
+
+Objectives
+
+- Be able to compare the gene expression of GF/SPF between the different ages
+
+Details 
+
+- Design (Figure \ref{gender_impact_analysis})
+
+    ![Analyses to understand the impact of GF on gene expression](doc/images/type_impact_analysis_per_gender.png)
+
+- Analyses with
+    - DESeq2 [@love2014moderated]    
 	- Factor 1: GF or SPF
     - Factor 2: age
     - Factor 3: lane with sequencing project
+
+Results (Figure \ref{type_impact_analysis_per_gender_venn})
+
+![Comparison of the differential expressed genes between the GT and SPF\label{type_impact_analysis_per_gender_venn}](results/dge/type_impact_analysis_per_gender/venn_diagrams.png){ width=600px }
             
 ### Post differential expression analyses
 
@@ -260,7 +314,6 @@ To keep in mind
 
 - Comparison of changes between the ages after normalization by the values in 8 weeks
 - Comparison of the levels of differential expression between gender comparison and GF/SPF to check if the first ones are not higher than the latter ones to have a big analysis
-
 
 ## References
 
