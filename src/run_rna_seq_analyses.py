@@ -133,6 +133,60 @@ def prepare_deseq_datamap():
     return datamap
 
 
+def check_col_state(col_id, analysis):
+    '''
+    Check the state of a collection and wait until ok
+    '''
+    populated_state = gi.histories.show_dataset_collection(hist, col_id)['populated_state']
+    print("%s(%s): %s" % (analysis, col_id, populated_state))
+    while populated_state != 'ok' and populated_state != 'error':
+        print("%s(%s): %s" % (analysis, col_id, populated_state))
+        time.sleep(5)
+        populated_state = gi.histories.show_dataset_collection(hist, col_id)['populated_state']
+    if len(gi.histories.show_dataset_collection(hist,col_id)['elements']) < 1:
+        populated_state = 'error'
+    print("%s(%s): %s" % (analysis, col_id, populated_state))
+    return populated_state
+
+
+def get_output_collection_ids(info):
+    '''
+    Retrieve the ids of the generated collections
+    '''
+    ids = set()
+    print(info.keys())
+    for out in info['implicit_collections']:
+        print(out)
+        ids.add(out['id'])
+    assert len(ids) != 0
+    ids = list(ids)
+    if len(ids) == 1:
+        return ids[0]
+    else:
+        return ids
+
+
+def rename_generated_collection(info, new_name, visible):
+    '''
+    Rename a generated collection
+    '''
+    col_id = get_output_collection_ids(info)
+    assert type(col_id) == str
+    gi.histories.update_dataset_collection(hist, col_id, name=new_name, visible=visible)
+    # Rename the generated files too
+    for out in info['outputs']:
+        out_id = out['id']
+        prov = gi.histories.show_dataset_provenance(hist, out_id)
+        print(prov)
+        if not 'input|__identifier__' in prov['parameters']:
+            print("Issue to find a correct name")
+            print(prov)
+            continue
+        new_name = prov['parameters']['input|__identifier__'].replace('"','')
+        gi.histories.update_dataset(hist, out_id, name=new_name)
+    return col_id
+
+
 def launch_deseq_analyses(datamaps, analysis_type):
     '''
     Launch DESeq, change the generated names to have the analysis id in it, and
@@ -170,7 +224,7 @@ def launch_deseq_analyses(datamaps, analysis_type):
         for out in info["outputs"]:
             ds_id = out['id']
             pasted_entries_id = ds_id
-            new_name = "%s: (Non formatted) Venn diagram file header" % (an)
+            new_name = "(Non formatted) Venn diagram file header"
             gi.histories.update_dataset(hist, ds_id, name=new_name, visible=False)
         assert pasted_entries_id != ''
         # Change the ',' by '\t' to get a table
@@ -184,59 +238,75 @@ def launch_deseq_analyses(datamaps, analysis_type):
         for out in info['outputs']:
             ds_id = out['id']
             venn_header_ds = ds_id
-            new_name = "%s: Venn diagram file header" % (an)
-            gi.histories.update_dataset_collection(hist, ds_id, name=new_name)
+            new_name = "Venn diagram file header"
+            gi.histories.update_dataset(hist, ds_id, name=new_name)
         assert venn_header_ds != ''
     # Filter to conserve the differentially expressed genes
     diff_expr_coll_id = {}
     for an in raw_output_coll_id:
-        # Check population state
+        print("filter on %s" % an)
         col_id = raw_output_coll_id[an]
-        populated_state = gi.histories.show_dataset_collection(hist, col_id)['populated_state']
-        if populated_state != 'ok':
-            print("%s: %s" % (col_id, populated_state))
-            time.sleep(5)
+        print("col_id: %s" % (col_id))
+        # Check population state before continuing
+        populated_state = check_col_state(col_id, "filter %s" % an) 
+        if populated_state == 'error':
+            continue
+        # Launch filtering
         datamap = {
             "input": {'batch': True,'values': [
                 {'src':'hdca',
                 'id': col_id}]},
             "cond": "c7<0.05",
             "header_lines": "0"}
+        print(datamap)
         info = gi.tools.run_tool(hist, filter_id, datamap)
-        diff_expr_coll_id = ''
-        for out in info['output_collections']:
-            diff_expr_coll_id[an] = out['id']
-            new_name = "%s: Differentially expressed genes" % (an)
-            gi.histories.update_dataset_collection(hist, out['id'], name=new_name, visible=False)
-        assert an in diff_expr_coll_id
+        new_name = "%s: Differentially expressed genes" % (an)
+        diff_expr_coll_id[an] = rename_generated_collection(info, new_name, False)
+        #diff_expr_coll_id[an] = new_name
+        #rename_generated_collection(info, new_name, True)
+        print("%s %s" % (col_id, diff_expr_coll_id[an]))
     # Cut to conserve only the column with the fold change
     cut_diff_expr_coll_id = {}
     for an in diff_expr_coll_id:
-        datamap = {
-            "txt": {'batch': True,'values': [
-                {'src':'hdca',
-                'id': diff_expr_coll_id[an]}]},
-            "columnList": "c1,c3,c7",
-            "delimiter": "T"}
-        info = gi.tools.run_tool(hist, cut_id, datamap)
-        cut_diff_expr_coll_id = ''
-        for out in info['output_collections']:
-            cut_diff_expr_coll_id[an] = out['id']
-            new_name = "%s: Differentially expressed genes" % (an)
-            gi.histories.update_dataset_collection(hist, out['id'], name=new_name)
-        assert an in cut_diff_expr_coll_id
-    # Filter to conserve the upregulated genes in first level
-    for an in cut_diff_expr_coll_id:
+        print("cut on %s" % an)
+        col_id = diff_expr_coll_id[an]
+        #print(diff_expr_coll_id[an])
+        #col_id = get_working_collection_id(diff_expr_coll_id[an])
+        print("col_id: %s" % (col_id))
+        # Check population state before continuing
+        populated_state = check_col_state(col_id, "cut %s" % an)
+        if populated_state == 'error':
+            continue
         datamap = {
             "input": {'batch': True,'values': [
                 {'src':'hdca',
-                'id': cut_diff_expr_coll_id[an]}]},
+                'id': col_id}]},
+            "complement": "",
+            "delimiter": "",
+            "cut_type_options|cut_element": "-f",
+            "cut_type_options|list": "c1,c3,c7"}
+        print(datamap)
+        info = gi.tools.run_tool(hist, cut_id, datamap)
+        new_name = "%s: Differentially expressed genes" % (an)
+        cut_diff_expr_coll_id[an] = rename_generated_collection(info, new_name, True)
+        print("%s %s" % (col_id, cut_diff_expr_coll_id[an]))
+    # Filter to conserve the upregulated genes in first level
+    for an in cut_diff_expr_coll_id:
+        col_id = cut_diff_expr_coll_id[an]
+        # Check population state before continuing
+        populated_state = check_col_state(col_id, "filter %s" % an) 
+        if populated_state == 'error':
+            continue
+        # Launch filtering
+        datamap = {
+            "input": {'batch': True,'values': [
+                {'src':'hdca',
+                'id': col_id}]},
             "cond": "c2>0",
             "header_lines": "0"}
         info = gi.tools.run_tool(hist, filter_id, datamap)
-        for out in info['output_collections']:
-            new_name = "%s: Up-expressed genes" % (an)
-            gi.histories.update_dataset_collection(hist, out['id'], name=new_name)
+        new_name = "%s: Up-expressed genes" % (an)
+        rename_generated_collection(info, new_name, True)
     # Filter to conserve the upregulated genes in first level
     for an in cut_diff_expr_coll_id:
         datamap = {
@@ -246,87 +316,122 @@ def launch_deseq_analyses(datamaps, analysis_type):
             "cond": "c2<0",
             "header_lines": "0"}
         info = gi.tools.run_tool(hist, filter_id, datamap)
-        for out in info['output_collections']:
-            new_name = "%s: Down-expressed genes" % (an)
-            gi.histories.update_dataset_collection(hist, out['id'], name=new_name)
+        new_name = "%s: Down-expressed genes" % (an)
+        rename_generated_collection(info, new_name, True)
     # Add a column with the name of the file (to prepare Venn diagram)
-    venn_diagram_1 = {}
+    venn_diagram = {}
     for an in cut_diff_expr_coll_id:
+        col_id = cut_diff_expr_coll_id[an]
+        # Check population state before continuing
+        populated_state = check_col_state(col_id, "awk %s" % an) 
+        if populated_state == 'error':
+            continue
+        # Launch script to add input name as a new column
         datamap = {
             "input": {'batch': True,'values': [
                 {'src':'hdca',
-                'id': cut_diff_expr_coll_id[an]}]},
+                'id': col_id}]},
             "header|contains_header": "no"}
         info = gi.tools.run_tool(hist, add_input_name_as_column_id, datamap)
-        for out in info['output_collections']:
-            venn_diagram_1[an] = out['id']
-            new_name = "%s: Differentially expressed genes (Venn diagram preparation - 1)" % (an)
-            gi.histories.update_dataset_collection(hist, out['id'], name=new_name, visible=False)
-        assert an in venn_diagram_1
-    # Cut columns (to format the file)
-    venn_diagram_2 = {}
-    for an in venn_diagram_1:
+        new_name = "%s: Differentially expressed genes (Venn diagram preparation - 1)" % (an)
+        venn_diagram[an] = rename_generated_collection(info, new_name, False)
+    # Add a column with the name of the file (to prepare Venn diagram)
+    for an in venn_diagram:
+        col_id = venn_diagram[an]
+        # Check population state before continuing
+        populated_state = check_col_state(col_id, "awk %s" % an) 
+        if populated_state == 'error':
+            continue
+        # Launch awk script
         datamap = {
-            "txt": {'batch': True,'values': [
+            "infile": {'batch': True,'values': [
                 {'src':'hdca',
-                'id': venn_diagram_1[an]}]},
-            "columnList": "c1,c3,c7",
-            "delimiter": "T"}
-        info = gi.tools.run_tool(hist, add_input_name_as_column_id, datamap)
-        for out in info['output_collections']:
-            venn_diagram_2[an] = out['id']
-            new_name = "%s: Differentially expressed genes (Venn diagram preparation - 2)" % (an)
-            gi.histories.update_dataset_collection(hist, out['id'], name=new_name, visible=False)
-        assert an in venn_diagram_2
+                'id': col_id}]},
+            "code": "{print $4,$1,$1,$1,$2,$3}"}
+        info = gi.tools.run_tool(hist, awk_id, datamap)
+        new_name = "%s: Differentially expressed genes (Venn diagram preparation - 2)" % (an)
+        venn_diagram[an] = rename_generated_collection(info, new_name, False)
     # Replace columns input name by the analysis name (for inter analyses Venn diagrams)
     prepared_collections = {}
-    for an in venn_diagram_1:
+    for an in venn_diagram:
+        col_id = venn_diagram[an]
+        # Check population state before continuing
+        populated_state = check_col_state(col_id, "replace %s" % an) 
+        if populated_state == 'error':
+            continue
+        # Launch column name replacing
         datamap = {
             "tabular": {'batch': True,'values': [
                 {'src':'hdca',
-                'id': venn_diagram_2[an]}]},
+                'id': col_id}]},
             "column": "c1",
             "find_pattern": "(.+)",
             "replace_pattern": "%s_&" % (an)}
-        info = gi.tools.run_tool(hist, add_input_name_as_column_id, datamap)
-        for out in info['output_collections']:
-            prepared_collections[an] = out['id']
-            new_name = "%s: Differentially expressed genes (Venn diagram preparation - 3)" % (an)
-            gi.histories.update_dataset_collection(hist, out['id'], name=new_name, visible=False)
-        assert an in prepared_collections[an]
+        info = gi.tools.run_tool(hist, replace_id, datamap)
+        new_name = "%s: Differentially expressed genes (Venn diagram preparation - 3)" % (an)
+        prepared_collections[an] = rename_generated_collection(info, new_name, False)
     # Concatenate header and the files (per DESeq analyses) and 
     # prepare for inter DESeq analysis concatenation
-    deg_datamaps = {'global':{}}
+    global_an_id = '%s_global' % analysis_type
+    deg_datamaps = {global_an_id:{}}
     for an in prepared_collections:
-        # Concatenate the header and the files
+        col_id = prepared_collections[an]
+        # Check population state before continuing
+        populated_state = check_col_state(col_id, "concatenate %s" % an) 
+        if populated_state == 'error':
+            continue
+        # Retrieve the datasets to concatenate (in a collection)
         datamap = {"inputs": {'src':'hda','id': venn_header_ds}}
-        for idx,ds in enumerate(gi.show_dataset_collection(hist,prepared_collections[an])['elements']):
+        for idx,el in enumerate(gi.histories.show_dataset_collection(hist,col_id)['elements']):
             ds_id = el['object']['id']
-            datamap['queries_%s|inputs2' % ds_id ] = {'src':'hda','id': ds_id}
+            input_id = 'queries_%s|inputs2' % idx
+            datamap[input_id] = {'src':'hda','id': ds_id}
+            # Prepare concatenation of differentially expressed genes per age comparison
+            an_id = el['element_identifier']
+            # Per age
+            deg_datamaps.setdefault(an_id, {})
+            added_file_nb = len(deg_datamaps[an_id].keys())
+            input_id = 'queries_%s|inputs2' % added_file_nb
+            deg_datamaps[an_id].setdefault(input_id, {'src':'hda','id': el['object']['id']})
+            # Global
+            added_file_nb = len(deg_datamaps[global_an_id].keys())
+            input_id = 'queries_%s|inputs2' % added_file_nb
+            deg_datamaps[global_an_id].setdefault(input_id, {'src':'hda','id': el['object']['id']})
+        # Concatenate the header and the files
         info = gi.tools.run_tool(hist, cat_id, datamap)
+        new_name = "%s: Differentially expressed genes (formatted for Venn diagram)" % (an)
         for out in info['outputs']:
             ds_id = out['id']
-            new_name = "%s: Differentially expressed genes (formatted for Venn diagram)" % (an)
-            gi.histories.update_dataset_collection(hist, ds_id, name=new_name)
-        # Concatenate differentially expressed genes per age comparison
-        for an in prepared_collections:
-            for el in gi.show_dataset_collection(hist,prepared_collections[an])['elements']:
-                el_id = "%s el['element_identifier']" % analysis_type
-                # Per age
-                deg_datamaps.setdefault(el_id, {})
-                added_file_nb = len(deg_datamaps[el_id].keys())
-                datamap[el_id]['queries_%s|inputs2' % added_file_nb ] = {'src':'hda','id': el['object']['id']}
-                # Global
-                added_file_nb = len(deg_datamaps['global'].keys())
-                datamap['%s global' % analysis_type]['queries_%s|inputs2' % added_file_nb ] = {'src':'hda','id': el['object']['id']}
+            gi.histories.update_dataset(hist, ds_id, name=new_name)
     # Concatenate inter DESeq analyses
     for an in deg_datamaps:
-        datamaps[an]["inputs"] = {'src':'hda','id': venn_header_ds}
-        info = gi.tools.run_tool(hist, cat_id, datamap)
+        deg_datamaps[an]["inputs"] = {'src':'hda','id': venn_header_ds}
+        info = gi.tools.run_tool(hist, cat_id, deg_datamaps[an])
+        new_name = "%s: Differentially expressed genes (formatted for Venn diagram)" % (an)
         for out in info['outputs']:
             ds_id = out['id']
-            new_name = "%s: Differentially expressed genes (formatted for Venn diagram)" % (an)
-            gi.histories.update_dataset_collection(hist, ds_id, name=new_name)
+            gi.histories.update_dataset(hist, ds_id, name=new_name)
+
+
+def delete_datasets(in_name):
+    '''
+    Delete all datasets and collections for which in_name is found in the name
+    '''
+    datasets = gi.histories.show_history(hist, contents=True, visible=False)
+    datasets += gi.histories.show_history(hist, contents=True, visible=None)
+    for ds in datasets:
+        if ds["history_content_type"] == 'dataset':
+            if ds['purged']:
+                continue
+            if ds['name'].find(in_name) != -1:
+                print('dataset(%s): %s' % (ds['id'],ds['name']))
+                gi.histories.delete_dataset(hist, ds['id'], purge=True)
+        if ds["history_content_type"] == 'dataset_collection':
+            if ds['deleted']:
+                continue
+            if ds['name'].find(in_name) != -1:
+                print('collection(%s): %s' % (ds['id'],ds['name']))
+                gi.histories.delete_dataset_collection(hist, ds['id'])
 
 
 configfile: "config.yaml"
@@ -894,3 +999,74 @@ rule run_age_dge_deseq:
                             {'src':'hda', 'id': ds})
         # Launch DESeq and change the generated names to have the analysis id in it
         launch_deseq_analyses(datamaps, "age")
+
+
+rule run_gender_dge_deseq:
+    '''
+    Run the 6 differential gene expression analyses based on the gender
+    '''
+    run:
+        # Search for the collection id with the count data
+        input_data_coll_id = get_working_collection_id(
+            config["collection_names"]["feature_counts"]['counts'])
+        # Create a dataset dictionary to collect dataset info (id in correct section)
+        analysis_datasets = {}
+        # Parse the content of the collection and assign datasets to the correct analysis
+        coll_content = gi.histories.show_dataset_collection(hist,input_data_coll_id)
+        for el in coll_content['elements']:
+            el_id = el['element_identifier']
+            dataset_id = el['object']['id']
+            # Extract metadata and build analysis id
+            mice_type, age, gender = extract_dataset_metadate(el_id)
+            analysis_id = "gender_%s_%s" % (mice_type, age)
+            analysis_datasets.setdefault(analysis_id, {'genders': {}, 'project_lane': {}})
+            # Extract the project and lane info
+            project_id = finename_desc_df.at[el_id, 'Project id']
+            lane = finename_desc_df.at[el_id, 'Lane'].replace("&", "_").replace(" ", "")
+            project_lane = "%s_%s" % (project_id, lane)
+            # Add dataset id in the correct age section
+            analysis_datasets[analysis_id]['genders'].setdefault(age, [])
+            analysis_datasets[analysis_id]['genders'][gender].append(dataset_id)
+            # Add dataset id in the correct project_lane section (and age: to check that )
+            analysis_datasets[analysis_id]['project_lane'].setdefault(age, {})
+            analysis_datasets[analysis_id]['project_lane'][gender].setdefault(project_lane, [])
+            analysis_datasets[analysis_id]['project_lane'][gender][project_lane].append(dataset_id)
+        # Prepare datamap for each analysis
+        datamaps = {}
+        for an in analysis_datasets:
+            # Create the datamap
+            datamaps[an] = prepare_deseq_datamap()
+            # Retrieve the ages and sort them
+            genders = list(analysis_datasets[an]['genders'].keys())
+            genders.sort()
+            # Fill the datamap with the age factor and check if lane must be added as second factor
+            # (if it has different datasets than the first factor)
+            datamaps[an]["rep_factorName_0|factorName"] = "age"
+            datamap_lane_preparation = {}
+            add_lane_as_second_factor = False
+            gender_nb = 0
+            for idx,ge in enumerate(genders):
+                # Fill the first factor with the age as level and related datasets
+                datamaps[an]["rep_factorName_0|rep_factorLevel_%s|factorLevel" % (idx)] = ge
+                datamaps[an]["rep_factorName_0|rep_factorLevel_%s|countsFile" % (idx)] = []
+                for ds in analysis_datasets[an]['ages'][ge]:
+                    datamaps[an]["rep_factorName_0|rep_factorLevel_%s|countsFile" % (idx)].append(
+                        {'src':'hda', 'id': ds})
+                # Check if there is different project_lane for a same age
+                if len(analysis_datasets[an]['project_lane'][ge].keys()) > 1:
+                    add_lane_as_second_factor = True
+                for pl in analysis_datasets[an]['project_lane'][ge]:
+                    datamap_lane_preparation.setdefault(pl, [])
+                    for ds in analysis_datasets[an]['project_lane'][ge][pl]: 
+                        datamap_lane_preparation[pl].append(ds)
+            # Add the project_lane as second factor if needed
+            if add_lane_as_second_factor:
+                datamaps[an]["rep_factorName_1|factorName"] = "project_lane"
+                for idx,pl in enumerate(datamap_lane_preparation):
+                    datamaps[an]["rep_factorName_1|rep_factorLevel_%s|factorLevel" % (idx)] = pl
+                    datamaps[an]["rep_factorName_1|rep_factorLevel_%s|countsFile" % (idx)] = []
+                    for ds in datamap_lane_preparation[pl]:
+                        datamaps[an]["rep_factorName_1|rep_factorLevel_%s|countsFile" % (idx)].append(
+                            {'src':'hda', 'id': ds})
+        # Launch DESeq and change the generated names to have the analysis id in it
+        launch_deseq_analyses(datamaps, "gender")
