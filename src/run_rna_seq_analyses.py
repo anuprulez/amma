@@ -14,22 +14,22 @@ def check_hist(hist_name):
     return hist
 
 
-def get_tool_id(tool_name, version):
+def get_tool_id(tool_ids):
     '''
     Retrieve the id of a tool
     '''
     tool_id = ''
     for tool in tools:
-        if tool["name"] == tool_name and tool["version"] == version:
+        if tool["id"] == tool_ids:
             tool_id = tool["id"]
     return tool_id
 
 
-def get_working_tool_id(tool_name, version):
+def get_working_tool_id(tool_name):
     '''
     Retrieve the id of a tool and test if it exists
     '''
-    tool_id = get_tool_id(tool_name, version)
+    tool_id = get_tool_id(tool_name)
     assert tool_id != '', "No %s tool" % tool_name
     return tool_id
 
@@ -344,34 +344,17 @@ sample_names = list(finename_desc_df.index)
 
 # Get tools in the Galaxy instance
 tools = gi.tools.get_tools()
-# Get the id for MultiQC tool
-multiqc_id = get_working_tool_id(
-    config["tool_names"]["multiqc"],
-    config["tool_versions"]["multiqc"])
-# Get the id for DESeq tool
-deseq_id = get_working_tool_id(
-    config["tool_names"]["deseq"],
-    config["tool_versions"]["deseq"])
-# Get the id for Filter tool
-filter_id = get_working_tool_id(
-    config["tool_names"]["filter"],
-    config["tool_versions"]["filter"])
-# Get the id for Cut tool
-cut_id = get_working_tool_id(
-    config["tool_names"]["cut"],
-    config["tool_versions"]["cut"])
-# Get the id for add_input_name_as_column tool
-add_input_name_as_column_id = get_working_tool_id(
-    config["tool_names"]["add_input_name_as_column"],
-    config["tool_versions"]["add_input_name_as_column"])
-# Get the id for convert tool
-convert_id = get_working_tool_id(
-    config["tool_names"]["convert"],
-    config["tool_versions"]["convert"])
-# Get the id for concatenate tool
-cat_id = get_working_tool_id(
-    config["tool_names"]["cat"],
-    config["tool_versions"]["cat"])
+# Get the id for tools
+multiqc_id = get_working_tool_id(config["tool_ids"]["multiqc"])
+deseq_id = get_working_tool_id(config["tool_ids"]["deseq"])
+filter_id = get_working_tool_id(config["tool_ids"]["filter"])
+cut_id = get_working_tool_id(config["tool_ids"]["cut"])
+add_input_name_as_column_id = get_working_tool_id(config["tool_ids"]["add_input_name_as_column"])
+convert_id = get_working_tool_id(config["tool_ids"]["convert"])
+replace_id = get_working_tool_id(config["tool_ids"]["replace"])
+cat_id = get_working_tool_id(config["tool_ids"]["cat"])
+add_column_id = get_working_tool_id(config["tool_ids"]["add_column"])
+awk_id = get_working_tool_id(config["tool_ids"]["awk"])
 
 
 rule prepare_files:
@@ -433,9 +416,7 @@ rule prepare_files:
                     'src': 'hda'
                     })
         # Get concatenate tool
-        tool_id = get_working_tool_id(
-            config["tool_names"]["merging"],
-            config["tool_versions"]["merging"])
+        tool_id = get_working_tool_id(config["tool_names"]["merging"])
         # Merge datasets
         unmerged_dataset_ids = []
         for dataset in to_merge:
@@ -519,9 +500,7 @@ rule launch_fastqc:
     '''
     run:
         # Get the id for FastQC tool
-        tool_id = get_working_tool_id(
-            config["tool_names"]["fastqc"],
-            config["tool_versions"]["fastqc"])
+        tool_id = get_working_tool_id(config["tool_names"]["fastqc"])
         # Search for the collection id with the raw data
         raw_data_coll_id = get_working_collection_id(
             config["collection_names"]["raw_data"])
@@ -569,9 +548,7 @@ rule launch_trim_galore:
     '''
     run:
         # Get the id for Trim Galore! tool
-        tool_id = get_working_tool_id(
-            config["tool_names"]["trim_galore"],
-            config["tool_versions"]["trim_galore"])
+        tool_id = get_working_tool_id(config["tool_names"]["trim_galore"])
         # Search for the collection id with the raw data
         raw_data_coll_id = get_working_collection_id(
             config["collection_names"]["raw_data"])
@@ -626,9 +603,7 @@ rule launch_preliminary_mapping:
     '''
     run:
         # Get the id for the tool to downsample the datasets
-        tool_id = get_working_tool_id(
-            config["tool_names"]["seq_extraction"],
-            config["tool_versions"]["seq_extraction"])
+        tool_id = get_working_tool_id(config["tool_names"]["seq_extraction"])
         # Search for the collection id with the trimmed data
         input_data_coll_id = get_working_collection_id(
             config["collection_names"]["trim_galore"]["trimmed"])
@@ -657,9 +632,7 @@ rule launch_preliminary_mapping:
                 name=config["collection_names"]["preliminary_mapping"]["seq_extraction"])
         assert downsample_coll_id != '', "No collection for %s" % config["collection_names"]["preliminary_mapping"]["seq_extraction"]
         # Get the id for STAR
-        tool_id = get_working_tool_id(
-            config["tool_names"]["star"],
-            config["tool_versions"]["star"])
+        tool_id = get_working_tool_id(config["tool_names"]["star"])
         # Extract the annotation dataset id
         annotation_id = get_annotation_id()
         # Create the input datamap for STAR
@@ -708,9 +681,7 @@ rule launch_preliminary_mapping:
                     visible=False)
         assert star_data_coll_id != '', "No collection for preliminary mapped reads"
         # Get the id for "Infer experiment"
-        tool_id = get_working_tool_id(
-            config["tool_names"]["infer_experiment"],
-            config["tool_versions"]["infer_experiment"])
+        tool_id = get_working_tool_id(config["tool_names"]["infer_experiment"])
         # Create the input datamap for "Infer experiment"
         datamap = {
             "input" : {'batch': True,'values': [
@@ -740,9 +711,7 @@ rule launch_star:
     '''
     run:
         # Get the id for the tool to downsample the datasets
-        tool_id = get_working_tool_id(
-            config["tool_names"]["star"],
-            config["tool_versions"]["star"])
+        tool_id = get_working_tool_id(config["tool_names"]["star"])
         # Search for the collection id with the trimmed data
         input_data_coll_id = get_working_collection_id(
             config["collection_names"]["trim_galore"]["trimmed"])
@@ -801,9 +770,7 @@ rule launch_feature_counts:
     '''
     run:
         # Get the id for the tool to downsample the datasets
-        tool_id = get_working_tool_id(
-            config["tool_names"]["feature_counts"],
-            config["tool_versions"]["feature_counts"])
+        tool_id = get_working_tool_id(config["tool_names"]["feature_counts"])
         # Search for the collection id with the trimmed data
         input_data_coll_id = get_working_collection_id(
             config["collection_names"]["star"]["mapped"])
