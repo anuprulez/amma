@@ -7,17 +7,12 @@ configfile: "config.yaml"
 
 # Connect to Galaxy and retrieve the history
 gi = GalaxyInstance(config["galaxy_url"], config["api_key"])
-print(config["galaxy_url"],config["api_key"])
-print(gi)
 hist = get_hist(gi, config["hist_name"])
-print(hist)
 # Get tools in the Galaxy instance
 tools = gi.tools.get_tools()
 # Extract the sample names
 finename_desc_df = pd.read_csv("data/file_description.csv", index_col = 0)
-print(finename_desc_df)
 sample_names = list(finename_desc_df.index)
-print(sample_names)
 
 rule all:
     input:
@@ -38,7 +33,6 @@ rule prepare_files:
         lib = gi.libraries.get_libraries(name=config["library_names"]["input_data"])
         assert len(lib) > 0, "No library found for Prinz lab"
         lib_id = lib[0]["id"]
-        print(lib_id)
         # Parse the data library datasets
         for ds in gi.libraries.show_library(lib_id, contents=True):
             # Eliminate the folder
@@ -50,7 +44,6 @@ rule prepare_files:
             # Add the files to the history
             gi.histories.upload_dataset_from_library(hist, ds["id"])
         out.write("Added the files to the history\n")
-        print("Added the files to the history\n")
         # Retrieve the name of samples to merge
         to_merge = {}
         for sample in sample_names:
@@ -58,18 +51,15 @@ rule prepare_files:
             if project_id not in ["Project_S178", "Project_S198", "Project_S225"]:
                 continue
             to_merge.setdefault(sample, [])
-        print(to_merge)
         # Parse the dataset in history to extract the ids of dataset to merge,
         # rename the other files and add them to a collection
         raw_dataset_ids = []
         input_data = gi.histories.show_matching_datasets(hist)
         for dataset in input_data:
             name = dataset['name']
-            print(name)
             if not name.endswith("fastq"):
                 continue
             sample_name = os.path.splitext(name)[0][:-1]
-            print(sample_name)
             if sample_name in to_merge:
                 to_merge[sample_name].append(dataset["id"])
                 # Hide the file
@@ -83,8 +73,6 @@ rule prepare_files:
                 # Add the file to the collection
                 raw_dataset_ids.append({'id': dataset["id"], 'name': sample_name, 'src': 'hda'})
         out.write("Got info about the files to merge\n")
-        print(to_merge)
-        print("Got info about the files to merge\n")
         # Get concatenate tool
         tool_id = get_working_tool_id(config["tool_ids"]["merging"], tools)
         # Merge datasets
