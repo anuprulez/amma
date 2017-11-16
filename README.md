@@ -14,7 +14,7 @@ Links
     $ conda env create -f environment.yml
     ```
 
-- Add the API key to [http://galaxy.uni-freiburg.de/](http://galaxy.uni-freiburg.de/) in [`config.yaml`](config.yaml)
+- Add the API key to [https://galaxy.uni-freiburg.de/](https://galaxy.uni-freiburg.de/) in [`config.yaml`](config.yaml)
 
 # Usage for the data analyses
 
@@ -33,15 +33,13 @@ Links
         --output_dir <path to output directory>\
     ```
 
-- Upload the data on [http://galaxy.uni-freiburg.de/](http://galaxy.uni-freiburg.de/) inside an history named "NeuroMac RNA seq" (or change the name of the history in [`config.yaml`](config.yaml))
-
-- Prepare the files into collections
+- Upload the data on [http://galaxy.uni-freiburg.de/](http://galaxy.uni-freiburg.de/) inside an history named "NeuroMac: GF mices - DGE analysis"
 
     ```
-    $ snakemake --snakefile src/run_rna_seq_analyses.py prepare_files
+    $ snakemake --snakefile src/prepare_data.py
     ```
 
-- Launch quality control and trimming
+    You can change the name of the history in [`config.yaml`](config.yaml)
 
     ```
     # Launch FastQC
