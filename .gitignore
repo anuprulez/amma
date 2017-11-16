@@ -1,3 +1,6 @@
 .DS_Store
 doc/report.pdf
 data/raw_data/
+.snakemake
+logs
+__pycache__
