@@ -41,38 +41,21 @@ Links
 
     You can change the name of the history in [`config.yaml`](config.yaml)
 
-    ```
-    # Launch FastQC
-    $ snakemake --snakefile src/run_rna_seq_analyses.py launch_fastqc
-    # Launch TrimGalore!
-    $ snakemake --snakefile src/run_rna_seq_analyses.py launch_trim_galore
-    ```
-
-- Launch mapping
+- Launch workflow to extract gene counts
 
     ```
-    # Launch preliminary mapping
-    $ snakemake --snakefile src/run_rna_seq_analyses.py launch_preliminary_mapping
-    # Launch STAR mapping
-    $ snakemake --snakefile src/run_rna_seq_analyses.py launch_star
+    $ snakemake --snakefile src/extract_gene_counts.py
     ```
 
-- Launch counting
-    
-    ```
-    $ snakemake --snakefile src/run_rna_seq_analyses.py launch_feature_counts
-    ```
+    The worklow do:
+    1. Quality control and trimming using FastQC and Trim Galore!
+    2. Preliminary mapping and experiment inference using STAR and RSeQC
+    3. Mapping using STAR
+    4. Gene counting using FeatureCounts
 
-- Launch the DGE analyses
+    The workflow is applied on each dataset (organized into data collection)
 
-    ```
-    # Run DGE analses for the ages
-    $ snakemake --snakefile src/run_rna_seq_analyses.py run_age_dge
-    # Run DGE analses for the gender
-    $ 
-    # Run DGE analses for the type of mices
-    $ 
-    ```
+- Do the DGE analyses
 
 # Usage for the report generation
 
