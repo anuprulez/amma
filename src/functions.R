@@ -72,9 +72,8 @@ extract_diff_expr_genes = function(in_l, name){
     #system(paste("put -p", name, "-t tabular"), intern=T)
     ## GO and KEGG analysis                  
     assayed_genes = rownames(in_l[[1]])
-    assayed_genes
     # extract the DE genes (1 in the deg matrix)
-    de_genes = sapply(colnames(l$deg), function(x) names(which(l$deg[,x]==1)))
+    de_genes = sapply(colnames(l$deg), function(x) names(which(abs(l$fc_deg[,x])>=1)))
     # extract in the full list of genes the DE ones                  
     gene_vector = sapply(de_genes, function(x) as.integer(assayed_genes%in%x))
     rownames(gene_vector) = assayed_genes
@@ -82,17 +81,17 @@ extract_diff_expr_genes = function(in_l, name){
     pwf = lapply(1:dim(gene_vector)[2], function(x) nullp(gene_vector[,x], 'mm10', 'geneSymbol', plot.fit=F))
     names(pwf) = colnames(gene_vector)
     # calculate the over and under expressed GO categories among the DE genes
-    GO_wall = lapply(pwf, function(x) goseq(x,'mm10', 'geneSymbol'))
+    l$GO_wall = lapply(pwf, function(x) goseq(x,'mm10', 'geneSymbol'))
     # calculate the over and under expressed KEGG pathways among the DE genes
-    KEGG_wall = lapply(pwf, function(x) goseq(x,'mm10', 'geneSymbol', test.cats="KEGG"))
+    l$KEGG_wall = lapply(pwf, function(x) goseq(x,'mm10', 'geneSymbol', test.cats="KEGG"))
     # extract interesting pathways/categories and export them
-    l$over_represented_GO = get_interesting_cat(GO_wall, "over_represented_pvalue", "GO")
+    l$over_represented_GO = get_interesting_cat(l$GO_wall, "over_represented_pvalue", "GO")
     write.table(l$over_represented_GO, paste("../results/dge/", name, "over_represented_GO"), sep = "\t", quote = FALSE)                
-    l$under_represented_GO = get_interesting_cat(GO_wall, "under_represented_pvalue", "GO")
+    l$under_represented_GO = get_interesting_cat(l$GO_wall, "under_represented_pvalue", "GO")
     write.table(l$under_represented_GO, paste("../results/dge/", name, "under_represented_GO"), sep = "\t", quote = FALSE)
-    l$over_represented_KEGG = get_interesting_cat(KEGG_wall, "over_represented_pvalue", "KEGG")
+    l$over_represented_KEGG = get_interesting_cat(l$KEGG_wall, "over_represented_pvalue", "KEGG")
     write.table(l$over_represented_KEGG, paste("../results/dge/", name, "over_represented_KEGG"), sep = "\t", quote = FALSE)    
-    l$under_represented_KEGG = get_interesting_cat(KEGG_wall, "under_represented_pvalue", "KEGG")
+    l$under_represented_KEGG = get_interesting_cat(l$KEGG_wall, "under_represented_pvalue", "KEGG")
     write.table(l$under_represented_KEGG, paste("../results/dge/", name, "under_represented_KEGG"), sep = "\t", quote = FALSE)                       
     return(l)
 }
@@ -169,4 +168,7 @@ get_deg_colors = function(comp_deg, comp, connected_gene_colors, module_nb){
     deg_col[sign_neg_FC[sign_neg_FC %in% names(deg_col)]] = module_nb + 2
     return(deg_col)
 }
-    
+
+get_smallest_value_id = function(matrix, column, nb){
+    return(rownames(matrix)[order(matrix[,column])][1:nb])
+}
