@@ -28,23 +28,33 @@ clean_mat = function(mat){
     return(new_mat)
 }
 
+
 get_interesting_cat = function(wall, data_type, cat_type){
+    pvalue_threshold = 0.05
+    # 
+    adj_pvalues = sapply(wall, function(x) p.adjust(x[,data_type], method="BH"))
     # extract the categories with a significant p-values (over or under represented pvalue)
-    enriched_cat = lapply(wall, function(x) x[p.adjust(x[,data_type],method="BH")<.05,])
+    enriched_cat = which(apply(adj_pvalues <= pvalue_threshold & adj_pvalues > 0, 1, any))
+    # 
+    adj_pvalues[adj_pvalues > pvalue_threshold] = NA
     # extract the category names for the significant categories and merge them for all the comparisons
     if(cat_type == "GO"){
-        cat = unique(do.call(rbind,lapply(enriched_cat, function(x) x[,c("category","term","ontology")])))
-        rownames(cat) = do.call(rbind,strsplit(rownames(cat), split='.', fixed=TRUE))[,2]
+        to_extract = c("category","term","ontology")
     }else{
-        cat = unique(do.call(rbind,lapply(enriched_cat, function(x) cbind(rownames(x),x[,c("category")]))))
-        names = cat[,1]
-        cat = matrix(cat[,-1])
-        rownames(cat) = names
+        to_extract = c("category")
     }
+    cat = wall[[1]][enriched_cat, to_extract]
     # combine the significant categories for all comparisons
-    full_mat = cbind(cat, sapply(enriched_cat, function(x) x[rownames(cat),data_type]))
+    adj_pvalues = adj_pvalues[enriched_cat,]
+    if(is.matrix(adj_pvalues)){
+        full_mat = cbind(cat, adj_pvalues)
+    }else{
+        full_mat = t(c(cat, adj_pvalues))
+    }
+    
     return(full_mat)
 }
+
 
 extract_diff_expr_genes = function(in_l, name){
     l = list()
@@ -171,4 +181,40 @@ get_deg_colors = function(comp_deg, comp, connected_gene_colors, module_nb){
 
 get_smallest_value_id = function(matrix, column, nb){
     return(rownames(matrix)[order(matrix[,column])][1:nb])
+}
+
+get_col_ramp = function(values, min_col, max_col){
+    if(dim(values)[1] == 0){
+        return(c())
+    }else{
+        all_values = unlist(c(values[,2:dim(values)[2]]))
+        all_values = all_values[!is.na(all_values)]
+        ii = cut(all_values,
+            breaks = exp(log(10)*seq(log10(min(all_values)),log10(0.05),len = 100)),
+            include.lowest = TRUE)
+        colors = cbind(sort(all_values), colorRampPalette(c(min_col, max_col))(99)[ii])
+        return(colors)
+    }
+}
+
+get_GO_network_col = function(over_represented, under_represented, comp, all_GO){
+    #
+    over_repr_colors = get_col_ramp(over_represented, "red", "lightpink")
+    under_repr_colors = get_col_ramp(under_represented, "blue", "lightblue")
+    # extract under and over represented GO
+    over_represented_GO = over_represented[!is.na(over_represented[,comp]),1]
+    under_represented_GO = under_represented[!is.na(under_represented[,comp]),1]
+    # colors for the nodes
+    col = rep("white", length(all_GO))
+    names(col) = all_GO
+    if(length(over_represented_GO) > 0){
+        val = over_represented[names(col) %in% over_represented_GO,comp]
+        col[names(col) %in% over_represented_GO] = sapply(val, function(i) return(over_repr_colors[which(over_repr_colors[,1] == i)[1],2]))
+    }
+    if(length(under_represented_GO) > 0){
+        val = under_represented_GO[names(col) %in% under_represented_GO,comp]
+        col[names(col) %in% under_represented_GO] = sapply(val, function(i) return(under_repr_colors[which(under_repr_colors[,1] == i)[1],2]))
+    }
+    col = unlist(col)
+    return(col)
 }

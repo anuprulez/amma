@@ -13,7 +13,7 @@ library(org.Mm.eg.db)
 library(rentrez)
 library(goseq)
 library(dendextend)
-
+library(GOSemSim)
 
 library(WGCNA)
 allowWGCNAThreads()
