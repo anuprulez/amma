@@ -20,3 +20,10 @@ allowWGCNAThreads()
 options(stringsAsFactors = FALSE)
 library(igraph)
 library(clusterProfiler)
+
+library(threejs)
+library(htmlwidgets)
+
+MF_GO = godata('org.Mm.eg.db', ont="MF")
+CC_GO = godata('org.Mm.eg.db', ont="CC")
+BP_GO = godata('org.Mm.eg.db', ont="BP")

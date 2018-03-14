@@ -15,3 +15,5 @@ biocLite(c("AnnotationDbi", "impute", "GO.db", "preprocessCore"))
 install.packages("WGCNA")
 
 biocLite("clusterProfiler")
+
+install.packages('threejs')

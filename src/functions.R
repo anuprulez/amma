@@ -170,6 +170,28 @@ plot_net_with_fr_layout = function(net, colors, pal2){
         ncol=1)
 }
 
+
+plot_top_go = function(go, go_wall, ont, comp, top_nb){
+    # extract the GO for the ontology
+    ont_go = go[go$ontology == ont,c(2,4:6)]
+    # conserve the top 20 for every comparison
+    to_conserve = unique(c(sapply(comp, function(i) return(get_smallest_value_id(ont_go, i, top_nb)))))
+    ont_go = ont_go[to_conserve,]
+    ont_go = ont_go[order(ont_go[,comp[1]]),]
+    # extract the ratios of the conserved GO
+    ratios = sapply(go_wall, function(x) x[to_conserve,"numDEInCat"]/x[to_conserve,"numInCat"])
+    # create a matrix for the ggplot
+    go_mat = expand.grid(x = ont_go$term, y = comp)
+    colnames(go_mat) = c("term", "comparison")
+    go_mat$p_value = c(sapply(comp, function(i) return(ont_go[, i])))
+    go_mat$ratio = c(sapply(comp, function(i) return(ratios[, i])))
+    # plot                 
+    require(ggplot2)
+    p = ggplot(go_mat, aes(factor(comparison), factor(term))) + labs(x = "", y = "")
+    p + geom_point(aes(size=ratio,col=p_value)) + scale_colour_gradient(low = "blue", high="red")
+}
+
+
 get_deg_colors = function(comp_deg, comp, connected_gene_colors, module_nb){
     deg_col = connected_gene_colors
     sign_pos_FC = rownames(comp_deg$pos)[comp_deg$pos[,comp] == 1]
@@ -181,6 +203,46 @@ get_deg_colors = function(comp_deg, comp, connected_gene_colors, module_nb){
 
 get_smallest_value_id = function(matrix, column, nb){
     return(rownames(matrix)[order(matrix[,column])][1:nb])
+}
+
+get_interesting_GO = function(go, ont){
+    col_nb = dim(go)[2]
+    not_na = !is.na(go[,4:col_nb])
+    if(!is.matrix(not_na)) not_na = t(not_na)
+    return(go[go[,"ontology"] == ont & apply(not_na, 1, any), "category"])
+}
+
+
+create_GO_network = function(deg, ont, ont_go){
+    l = list()
+    # Get GO term for ontology and that are at least once over-represented or under-represented
+    l$interesting_GO = c(get_interesting_GO(deg$over_represented_GO, ont),
+                       get_interesting_GO(deg$under_represented_GO, ont))
+    # Get similarity between GO terms
+    l$go_sim = mgoSim(l$interesting_GO, l$interesting_GO, semData=ont_go, measure="Wang", combine=NULL)
+    # Extract adjency matrix by keeping only the distance > 0.5
+    l$go_sim = (l$go_sim > 0.5)*1
+    # Replace the diagonal values by 0
+    diag(l$go_sim) = 0
+    # Keep only the GO with at least one connection
+    #l$go_sim = l$go_sim[rowSums(l$go_sim)>0,rowSums(l$go_sim)>0]
+    # Build the network
+    l$go_net = graph_from_adjacency_matrix(l$go_sim, diag = FALSE, weighted = TRUE, mode="undirected")
+    l$go_net_layout = layout_with_fr(l$go_net)
+    l$go_net_layout_3d = layout_with_fr(l$go_net, dim=3)
+    #plot(l$go_net, 
+    #     vertex.label=NA,
+    #     vertex.size=4,
+    #     layout=l$go_net_layout)
+    # Update list of interesting GO
+    l$interesting_GO = rownames(l$go_sim)
+    return(l)
+}
+
+
+get_ont_GO = function(go, ont){
+    col_nb = dim(go)[2]
+    return(go[go$ontology == ont, c(1,4:col_nb)])
 }
 
 get_col_ramp = function(values, min_col, max_col){
@@ -217,4 +279,31 @@ get_GO_network_col = function(over_represented, under_represented, comp, all_GO)
     }
     col = unlist(col)
     return(col)
+}
+
+
+plot_GO_network = function(over_repr, under_repr, network, comp){
+    # get color based on adjusted p-value
+    col = get_GO_network_col(over_repr, under_repr, comp, network$interesting_GO)
+    # plot network
+    plot(network$go_net, 
+         vertex.label=NA,
+         vertex.size=4,
+         vertex.color=col,
+         layout=network$go_net_layout)
+}
+
+plot_interactive_GO_network = function(over_repr, under_repr, net, comp, full_go_desc){
+    col = get_GO_network_col(over_repr, under_repr, comp, net$interesting_GO)
+    # get term for selected GO terms
+    go_desc = full_go_desc[names(col)]
+    # plot the graph
+    graphjs(net$go_net,
+            layout=net$go_net_layout_3d,
+            height=500,
+            vertex.size=1,
+            vertex.color=as.vector(col),
+            vertex.shape="sphere",
+            vertex.label=as.vector(go_desc),
+            edge.color="grey")
 }
