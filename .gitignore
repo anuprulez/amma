@@ -4,3 +4,4 @@ data/raw_data/
 .snakemake
 logs
 __pycache__
+src/.ipynb_checkpoints
