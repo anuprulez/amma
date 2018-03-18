@@ -62,3 +62,11 @@ Links
 ```
 $ pandoc doc/report.md --latex-engine=xelatex --filter pandoc-citeproc  --toc -o doc/report.pdf
 ```
+
+# Generate HTML of the Jupyter Notebooks (for doc)
+
+```
+$ jupyter nbconvert --template=nbextensions --to=html src/age-effect.ipynb --output-dir doc/
+```
+
+Add `<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r79/three.min.js"></script>` on the generated HTML file
