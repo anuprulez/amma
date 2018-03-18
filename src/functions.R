@@ -160,7 +160,11 @@ plot_net_with_fr_layout = function(net, colors, pal2){
         layout=l)
     legend(x=-1.5,
         y=-1,
-        c("response to endoplasmic reticulum stress/transport", "chromatine/chromosome organization/regulation", "metabolic process", "translation","immune system"),
+        c("chromatine/chromosome organization/RNA metabolic process",
+            "response to endoplasmic reticulum stress/transport",
+            "metabolic process (ATP, ribonucleoside)",
+            "translation/rRNA",
+            "immune system"),
         pch=21,
         col="#777777",
         pt.bg=pal2[c(1,2,3,5,9)],

@@ -1,19 +1,17 @@
 source("https://bioconductor.org/biocLite.R")
-biocLite("DESeq2")
-install.packages("pheatmap")
-install.packages("gplots")
-install.packages("UpSetR")
-biocLite("org.Mm.eg.db")
-install.packages("rentrez")
-biocLite("TxDb.Mmusculus.UCSC.mm10.knownGene")
+suppressMessages(biocLite("DESeq2"))
+suppressMessages(install.packages("pheatmap"))
+suppressMessages(install.packages("gplots"))
+suppressMessages(install.packages("UpSetR"))
+suppressMessages(biocLite("org.Mm.eg.db"))
+suppressMessages(install.packages("rentrez"))
+suppressMessages(biocLite("TxDb.Mmusculus.UCSC.mm10.knownGene"))
 
 install.packages.2 <- function (pkg) if (!require(pkg)) install.packages(pkg);
-install.packages.2('devtools')
-devtools::install_github('talgalili/dendextend', force=TRUE)
+suppressMessages(install.packages.2('devtools'))
+suppressMessages(devtools::install_github('talgalili/dendextend', force=TRUE))
 
-biocLite(c("AnnotationDbi", "impute", "GO.db", "preprocessCore")) 
-install.packages("WGCNA")
-
-biocLite("clusterProfiler")
-
-install.packages('threejs')
+suppressMessages(biocLite(c("AnnotationDbi", "impute", "GO.db", "preprocessCore")))
+suppressMessages(install.packages("WGCNA"))
+suppressMessages(biocLite("clusterProfiler"))
+suppressMessages(install.packages('threejs'))
