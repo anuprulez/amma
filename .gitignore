@@ -5,3 +5,5 @@ data/raw_data/
 logs
 __pycache__
 src/.ipynb_checkpoints
+src/*.png
+src/*.xml
