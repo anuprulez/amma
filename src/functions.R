@@ -56,7 +56,9 @@ get_interesting_cat = function(wall, data_type, cat_type){
 }
 
 
-extract_diff_expr_genes = function(in_l, name){
+extract_diff_expr_genes = function(in_l, dir_path){
+    # create dir if it does not exist
+    dir.create(dir_path, showWarnings = FALSE)
     l = list()
     # extract the significant differentially expressed genes (all, upregulated, downregulated)
     l$deg = sapply(in_l, function(mat) return(mat$padj < 0.05))*1
@@ -78,7 +80,7 @@ extract_diff_expr_genes = function(in_l, name){
     l$fc_deg = sapply(in_l, function(mat) return(mat[deg_names, 'log2FoldChange']))
     rownames(l$fc_deg) = deg_names
     l$fc_deg[l$deg == 0] = NA
-    write.table(l$fc_deg, paste("../results/dge/", name), sep = "\t", quote = FALSE)
+    write.table(l$fc_deg, paste("../results/dge/", dir_path, "fc_deg", sep=""), sep = "\t", quote = FALSE)
     #system(paste("put -p", name, "-t tabular"), intern=T)
     ## GO and KEGG analysis                  
     assayed_genes = rownames(in_l[[1]])
@@ -88,21 +90,21 @@ extract_diff_expr_genes = function(in_l, name){
     gene_vector = sapply(de_genes, function(x) as.integer(assayed_genes%in%x))
     rownames(gene_vector) = assayed_genes
     # fit the probability weighting function
-    pwf = lapply(1:dim(gene_vector)[2], function(x) nullp(gene_vector[,x], 'mm10', 'geneSymbol', plot.fit=F))
+    pwf = lapply(1:dim(gene_vector)[2], function(x) suppressMessages(nullp(gene_vector[,x], 'mm10', 'geneSymbol', plot.fit=F)))
     names(pwf) = colnames(gene_vector)
     # calculate the over and under expressed GO categories among the DE genes
-    l$GO_wall = lapply(pwf, function(x) goseq(x,'mm10', 'geneSymbol'))
+    l$GO_wall = lapply(pwf, function(x) suppressMessages(goseq(x,'mm10', 'geneSymbol')))
     # calculate the over and under expressed KEGG pathways among the DE genes
-    l$KEGG_wall = lapply(pwf, function(x) goseq(x,'mm10', 'geneSymbol', test.cats="KEGG"))
+    l$KEGG_wall = lapply(pwf, function(x) suppressMessages(goseq(x,'mm10', 'geneSymbol', test.cats="KEGG")))
     # extract interesting pathways/categories and export them
     l$over_represented_GO = get_interesting_cat(l$GO_wall, "over_represented_pvalue", "GO")
-    write.table(l$over_represented_GO, paste("../results/dge/", name, "over_represented_GO"), sep = "\t", quote = FALSE)                
+    write.table(l$over_represented_GO, paste("../results/dge/", dir_path, "over_represented_GO", sep=""), sep = "\t", quote = FALSE)                
     l$under_represented_GO = get_interesting_cat(l$GO_wall, "under_represented_pvalue", "GO")
-    write.table(l$under_represented_GO, paste("../results/dge/", name, "under_represented_GO"), sep = "\t", quote = FALSE)
+    write.table(l$under_represented_GO, paste("../results/dge/", dir_path, "under_represented_GO", sep=""), sep = "\t", quote = FALSE)
     l$over_represented_KEGG = get_interesting_cat(l$KEGG_wall, "over_represented_pvalue", "KEGG")
-    write.table(l$over_represented_KEGG, paste("../results/dge/", name, "over_represented_KEGG"), sep = "\t", quote = FALSE)    
+    write.table(l$over_represented_KEGG, paste("../results/dge/", dir_path, "over_represented_KEGG", sep=""), sep = "\t", quote = FALSE)    
     l$under_represented_KEGG = get_interesting_cat(l$KEGG_wall, "under_represented_pvalue", "KEGG")
-    write.table(l$under_represented_KEGG, paste("../results/dge/", name, "under_represented_KEGG"), sep = "\t", quote = FALSE)                       
+    write.table(l$under_represented_KEGG, paste("../results/dge/", dir_path, "under_represented_KEGG", sep=""), sep = "\t", quote = FALSE)                       
     return(l)
 }
 
@@ -297,6 +299,7 @@ plot_GO_network = function(over_repr, under_repr, network, comp){
          layout=network$go_net_layout)
 }
 
+
 plot_interactive_GO_network = function(over_repr, under_repr, net, comp, full_go_desc){
     col = get_GO_network_col(over_repr, under_repr, comp, net$interesting_GO)
     # get term for selected GO terms
@@ -310,4 +313,19 @@ plot_interactive_GO_network = function(over_repr, under_repr, net, comp, full_go
             vertex.shape="sphere",
             vertex.label=as.vector(go_desc),
             edge.color="grey")
+}
+
+
+plot_kegg_pathways = function(kegg_cats, fc_deg, dir_path){
+    dir.create(dir_path, showWarnings = FALSE)
+    for(cat in kegg_cats){
+        if(cat!="01100"){
+            suppressMessages(pathview(gene.data=fc_deg,
+                                      pathway.id=cat,
+                                      species="Mus musculus",
+                                      gene.idtype="Symbol"))
+            file.rename(from=paste("mmu", cat, ".pathview.multi.png",sep=""),
+                        to=paste(dir_path,"mmu", cat, ".pathview.multi.png",sep=""))
+        }
+    }
 }

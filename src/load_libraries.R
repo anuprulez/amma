@@ -24,6 +24,8 @@ suppressMessages(library(clusterProfiler))
 suppressMessages(library(threejs))
 suppressMessages(library(htmlwidgets))
 
+suppressMessages(library(pathview))
+
 MF_GO = godata('org.Mm.eg.db', ont="MF")
 CC_GO = godata('org.Mm.eg.db', ont="CC")
 BP_GO = godata('org.Mm.eg.db', ont="BP")

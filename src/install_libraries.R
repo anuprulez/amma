@@ -15,3 +15,4 @@ suppressMessages(biocLite(c("AnnotationDbi", "impute", "GO.db", "preprocessCore"
 suppressMessages(install.packages("WGCNA"))
 suppressMessages(biocLite("clusterProfiler"))
 suppressMessages(install.packages('threejs'))
+suppressMessages(biocLite("pathview"))
