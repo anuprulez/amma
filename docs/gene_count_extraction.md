@@ -26,34 +26,34 @@ Results: (details in the [Google doc](https://docs.google.com/spreadsheets/d/1DL
 - Between 22.4M and 52.2M of reads
 - Good average quality score per sequence
 
-    ![Per Sequence Quality Scores (generated with FastQC and MultiQC)](../results/fastqc/fastqc_per_sequence_quality_scores_plot.png)
+    ![Per Sequence Quality Scores (generated with FastQC and MultiQC)](https://github.com/bebatut/neuromac_GF_mices/blob/master/results/fastqc/fastqc_per_sequence_quality_scores_plot.png?raw=true)
 
 - No big reduction of quality at the end of the sequences
     
-    ![Sequence Quality Histograms (generated with FastQC and MultiQC)](../results/fastqc/fastqc_per_base_sequence_quality_plot.png)
+    ![Sequence Quality Histograms (generated with FastQC and MultiQC)](https://github.com/bebatut/neuromac_GF_mices/blob/master/results/fastqc/fastqc_per_base_sequence_quality_plot.png?raw=true)
 
 - Per Base Sequence Content: 52 samples with a warning and 2 with an error (non homogenous proportion of each base at the beginning of the sequences)
 - Per Sequence GC Content: all samples with a warning (small increase of %GC around 10-20 bp, likely related to the overrepresentation of C and G sequences at the begining seen in the previous check)
 
-    ![Per Sequence GC Content (generated with FastQC and MultiQC)](../results/fastqc/fastqc_per_sequence_gc_content_plot.png)
+    ![Per Sequence GC Content (generated with FastQC and MultiQC)](https://github.com/bebatut/neuromac_GF_mices/blob/master/results/fastqc/fastqc_per_sequence_gc_content_plot.png?raw=true)
 
 - Per Base N Content: 10 samples with a warning
 
-    ![Per Base N Content (generated with FastQC and MultiQC)](../results/fastqc/fastqc_per_base_n_content_plot.png)
+    ![Per Base N Content (generated with FastQC and MultiQC)](https://github.com/bebatut/neuromac_GF_mices/blob/master/results/fastqc/fastqc_per_base_n_content_plot.png?raw=true)
 
 - Numerous read duplications: expected for RNA seq data
 
-    ![Sequence Duplication Levels (generated with FastQC and MultiQC)](../results/fastqc/fastqc_sequence_duplication_levels_plot.png)
+    ![Sequence Duplication Levels (generated with FastQC and MultiQC)](https://github.com/bebatut/neuromac_GF_mices/blob/master/results/fastqc/fastqc_sequence_duplication_levels_plot.png?raw=true)
 
 - Overrepresented sequences: 55 samples with a warning and 1 with an error
 
-    ![Overrepresented sequences (generated with FastQC and MultiQC)](../results/fastqc/fastqc_overrepresented_sequencesi_plot.png)
+    ![Overrepresented sequences (generated with FastQC and MultiQC)](https://github.com/bebatut/neuromac_GF_mices/blob/master/results/fastqc/fastqc_overrepresented_sequencesi_plot.png?raw=true)
 
     - Need to check with BLAST what are the overrepresented sequences
 
 - Few remaining adapters at the end of the sequences
 
-    ![Adapter Content (generated with FastQC and MultiQC)](../results/fastqc/fastqc_adapter_content_plot.png)
+    ![Adapter Content (generated with FastQC and MultiQC)](https://github.com/bebatut/neuromac_GF_mices/blob/master/results/fastqc/fastqc_adapter_content_plot.png?raw=true)
 
 #### Trimming
 
@@ -120,7 +120,7 @@ Details
 
 Results: Details in the [Google doc](https://docs.google.com/spreadsheets/d/1DL8pEVj5cvGflPIiaSPRXy-dMk2S7CxmnIk6Ubta2xs/edit?usp=sharing) in "STAR report"
 
-![Alignment Scores (generated with STAR and MultiQC)](../results/star/star_alignment_plot.png){ width=500px }
+![Alignment Scores (generated with STAR and MultiQC)](https://github.com/bebatut/neuromac_GF_mices/blob/master/results/star/star_alignment_plot.png?raw=true)
 
 - Good percentage of reads that are uniquely mapped (> 70.9%)
 - Good percentage of reads that are mapped (uniquely + multi-mapped, > 85%)
@@ -146,7 +146,7 @@ Details
 
 Results Details in the [Google doc](https://docs.google.com/spreadsheets/d/1DL8pEVj5cvGflPIiaSPRXy-dMk2S7CxmnIk6Ubta2xs/edit?usp=sharing) in "FeatureCounts report"
 
-![Reads assigned (generated with FeatureCounts and MultiQC)](results/featureCounts/featureCounts_assignment_plot.png)
+![Reads assigned (generated with FeatureCounts and MultiQC)](https://github.com/bebatut/neuromac_GF_mices/blob/master/results/featureCounts/featureCounts_assignment_plot.png?raw=true)
 
 - Good percentage of assigned reads to genes (> 60 % except 2 samples)
 - Keep an eye on
