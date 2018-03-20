@@ -46,12 +46,11 @@ get_interesting_cat = function(wall, data_type, cat_type){
     cat = wall[[1]][enriched_cat, to_extract]
     # combine the significant categories for all comparisons
     adj_pvalues = adj_pvalues[enriched_cat,]
-    if(is.matrix(adj_pvalues)){
+    if(is.matrix(adj_pvalues) || length(adj_pvalues)>1){
         full_mat = cbind(cat, adj_pvalues)
     }else{
         full_mat = t(c(cat, adj_pvalues))
     }
-    
     return(full_mat)
 }
 
@@ -65,8 +64,11 @@ extract_diff_expr_genes = function(in_l, dir_path){
     l$deg = sapply(in_l, function(mat) return(mat$padj < 0.05))*1
     rownames(l$deg) = rownames(in_l[[1]])
     l$deg = clean_mat(l$deg)
-    deg_names = rownames(l$deg)
-    head(l$deg)
+    if(length(in_l)>1){
+        deg_names=rownames(l$deg)
+    }else{
+        deg_names=names(l$deg)
+    }
     # extract the significant differentially more expressed genes
     l$pos = sapply(in_l, function(mat) return(mat[deg_names, 'log2FoldChange'] > 0))*1
     l$pos[l$deg == 0] = 0
@@ -86,7 +88,12 @@ extract_diff_expr_genes = function(in_l, dir_path){
     ## GO and KEGG analysis                  
     assayed_genes = rownames(in_l[[1]])
     # extract the DE genes (1 in the deg matrix)
-    de_genes = sapply(colnames(l$deg), function(x) names(which(abs(l$fc_deg[,x])>=1)))
+    if(length(in_l)>1){
+        de_genes = sapply(colnames(l$deg), function(x) names(which(abs(l$fc_deg[,x])>=1)))
+    }else{
+        de_genes = list()
+        de_genes[[names(in_l)[1]]] = rownames(l$fc_deg)[which(abs(l$fc_deg)>=1)]
+    }
     # extract in the full list of genes the DE ones                  
     gene_vector = sapply(de_genes, function(x) as.integer(assayed_genes%in%x))
     rownames(gene_vector) = assayed_genes
@@ -181,9 +188,6 @@ plot_net_with_layout = function(net, colors, pal2, layout){
         ncol=1)
 }
 
-
-
-
 plot_top_go = function(go, go_wall, ont, comp, top_nb){
     # extract the GO for the ontology
     ont_go = go[go$ontology == ont,c(2,4:dim(go)[2])]
@@ -204,12 +208,16 @@ plot_top_go = function(go, go_wall, ont, comp, top_nb){
     p + geom_point(aes(size=ratio,col=p_value)) + scale_colour_gradient(low = "blue", high="red")
 }
 
-
 get_deg_colors = function(comp_deg, comp, connected_gene_colors, module_nb){
     deg_col = connected_gene_colors
-    sign_pos_FC = rownames(comp_deg$pos)[comp_deg$pos[,comp] == 1]
+    if(is.matrix(comp_deg$pos)){
+        sign_pos_FC = rownames(comp_deg$pos)[comp_deg$pos[,comp] == 1]
+        sign_neg_FC = rownames(comp_deg$neg)[comp_deg$neg[,comp] == 1]
+    }else{
+        sign_pos_FC = names(comp_deg$pos)[comp_deg$pos == 1]
+        sign_neg_FC = names(comp_deg$neg)[comp_deg$neg == 1]
+    }
     deg_col[which(names(deg_col) %in% sign_pos_FC)] = module_nb + 1
-    sign_neg_FC = rownames(comp_deg$neg)[comp_deg$neg[,comp] == 1]
     deg_col[which(names(deg_col) %in% sign_neg_FC)] = module_nb + 2
     return(deg_col)
 }
