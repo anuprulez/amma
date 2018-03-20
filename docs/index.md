@@ -1,5 +1,5 @@
-Neuromac project on the differential gene expression in germ free mices
-=======================================================================
+Differential gene expression in mice (germ free or normal, different ages, 2 genders)
+=====================================================================================
 
 # Biological context
 
@@ -30,8 +30,12 @@ More details are available [here](data)
 1. [Extraction of number of reads mapped on each annotated genes for each samples](gene_count_extraction)
 2. Differential expression analyses
     1. [Building of the differential expression analysis (normalization of the counts)](dge_analysis)
-    2. [Pre-visualization of the normalized count data before any differential analysis](Pre-visualization)
-    3. [Effect of the age on the expressed genes](age-effect)
+    2. [Pre-visualization of the normalized count data before any differential analysis](pre-visualization)
+    3. Effect of the age on the expressed genes
+        1. Comparison between the ages (after controlling for type and gender): [report](age-effect-general) and [results](../results/dge/age-effect/age)
+        2. Comparison between the ages for the types (after controlling for gender): [report](age-effect-type) and [results](../results/dge/age-effect/age_type)
+        3. Comparison between the ages for the genders (after controlling for type): [report](age-effect-gender) and [results](../results/dge/age-effect/age_gender)
+        4. Comparison between  the ages for the genders and types: [report](age-effect-type-gender) and [results](../results/dge/age-effect/age_type_gender)
     4. Effect of the gender on the expressed genes
     5. Effect of the type on the expressed genes
 

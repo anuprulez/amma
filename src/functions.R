@@ -58,7 +58,8 @@ get_interesting_cat = function(wall, data_type, cat_type){
 
 extract_diff_expr_genes = function(in_l, dir_path){
     # create dir if it does not exist
-    dir.create(dir_path, showWarnings = FALSE)
+    full_dir_path = paste("../results/dge/", dir_path, sep="")
+    dir.create(full_dir_path, showWarnings = FALSE)
     l = list()
     # extract the significant differentially expressed genes (all, upregulated, downregulated)
     l$deg = sapply(in_l, function(mat) return(mat$padj < 0.05))*1
@@ -80,7 +81,7 @@ extract_diff_expr_genes = function(in_l, dir_path){
     l$fc_deg = sapply(in_l, function(mat) return(mat[deg_names, 'log2FoldChange']))
     rownames(l$fc_deg) = deg_names
     l$fc_deg[l$deg == 0] = NA
-    write.table(l$fc_deg, paste("../results/dge/", dir_path, "fc_deg", sep=""), sep = "\t", quote = FALSE)
+    write.table(l$fc_deg, paste(full_dir_path, "fc_deg", sep=""), sep = "\t", quote = FALSE)
     #system(paste("put -p", name, "-t tabular"), intern=T)
     ## GO and KEGG analysis                  
     assayed_genes = rownames(in_l[[1]])
@@ -98,13 +99,13 @@ extract_diff_expr_genes = function(in_l, dir_path){
     l$KEGG_wall = lapply(pwf, function(x) suppressMessages(goseq(x,'mm10', 'geneSymbol', test.cats="KEGG")))
     # extract interesting pathways/categories and export them
     l$over_represented_GO = get_interesting_cat(l$GO_wall, "over_represented_pvalue", "GO")
-    write.table(l$over_represented_GO, paste("../results/dge/", dir_path, "over_represented_GO", sep=""), sep = "\t", quote = FALSE)                
+    write.table(l$over_represented_GO, paste(full_dir_path, "over_represented_GO", sep=""), sep = "\t", quote = FALSE)                
     l$under_represented_GO = get_interesting_cat(l$GO_wall, "under_represented_pvalue", "GO")
-    write.table(l$under_represented_GO, paste("../results/dge/", dir_path, "under_represented_GO", sep=""), sep = "\t", quote = FALSE)
+    write.table(l$under_represented_GO, paste(full_dir_path, "under_represented_GO", sep=""), sep = "\t", quote = FALSE)
     l$over_represented_KEGG = get_interesting_cat(l$KEGG_wall, "over_represented_pvalue", "KEGG")
-    write.table(l$over_represented_KEGG, paste("../results/dge/", dir_path, "over_represented_KEGG", sep=""), sep = "\t", quote = FALSE)    
+    write.table(l$over_represented_KEGG, paste(full_dir_path, "over_represented_KEGG", sep=""), sep = "\t", quote = FALSE)    
     l$under_represented_KEGG = get_interesting_cat(l$KEGG_wall, "under_represented_pvalue", "KEGG")
-    write.table(l$under_represented_KEGG, paste("../results/dge/", dir_path, "under_represented_KEGG", sep=""), sep = "\t", quote = FALSE)                       
+    write.table(l$under_represented_KEGG, paste(full_dir_path, "under_represented_KEGG", sep=""), sep = "\t", quote = FALSE)                       
     return(l)
 }
 
@@ -153,23 +154,27 @@ capFirst = function(s) {
 }
 
 
-plot_net_with_fr_layout = function(net, colors, pal2){
-    l = layout_with_fr(net)
+plot_net_with_layout = function(net, colors, pal2, layout){
     plot(net, 
         vertex.label=NA,
         vertex.size=4,
         vertex.color=pal2[colors],
-        layout=l)
+        layout=layout)
+    module_annot = list()
+    module_annot$"1" = "chromatine/chromosome organization/RNA metabolic process"
+    module_annot$"2" = "response to endoplasmic reticulum stress/transport"
+    module_annot$"3" = "metabolic process (ATP, ribonucleoside)"
+    module_annot$"6" = "metabolic process (primary, cellular)"
+    module_annot$"7" = "immune system"
+    module_annot$"8" = "translation/rRNA"
+    module_annot$"10" = "organelle"
+    module_annot$"11" = "localization"
     legend(x=-1.5,
-        y=-1,
-        c("chromatine/chromosome organization/RNA metabolic process",
-            "response to endoplasmic reticulum stress/transport",
-            "metabolic process (ATP, ribonucleoside)",
-            "translation/rRNA",
-            "immune system"),
+        y=-.9,
+        unlist(module_annot),
         pch=21,
         col="#777777",
-        pt.bg=pal2[c(1,2,3,5,9)],
+        pt.bg=pal2[as.integer(names(module_annot))],
         pt.cex=2,
         cex=.8,
         bty="n",
@@ -177,9 +182,11 @@ plot_net_with_fr_layout = function(net, colors, pal2){
 }
 
 
+
+
 plot_top_go = function(go, go_wall, ont, comp, top_nb){
     # extract the GO for the ontology
-    ont_go = go[go$ontology == ont,c(2,4:6)]
+    ont_go = go[go$ontology == ont,c(2,4:dim(go)[2])]
     # conserve the top 20 for every comparison
     to_conserve = unique(c(sapply(comp, function(i) return(get_smallest_value_id(ont_go, i, top_nb)))))
     ont_go = ont_go[to_conserve,]
@@ -193,7 +200,7 @@ plot_top_go = function(go, go_wall, ont, comp, top_nb){
     go_mat$ratio = c(sapply(comp, function(i) return(ratios[, i])))
     # plot                 
     require(ggplot2)
-    p = ggplot(go_mat, aes(factor(comparison), factor(term))) + labs(x = "", y = "")
+    p = ggplot(go_mat, aes(factor(comparison), factor(term))) + labs(x = "", y = "") + theme(axis.text.x = element_text(angle = 90, hjust = 1))
     p + geom_point(aes(size=ratio,col=p_value)) + scale_colour_gradient(low = "blue", high="red")
 }
 
@@ -201,9 +208,9 @@ plot_top_go = function(go, go_wall, ont, comp, top_nb){
 get_deg_colors = function(comp_deg, comp, connected_gene_colors, module_nb){
     deg_col = connected_gene_colors
     sign_pos_FC = rownames(comp_deg$pos)[comp_deg$pos[,comp] == 1]
-    deg_col[sign_pos_FC[sign_pos_FC %in% names(deg_col)]] = module_nb + 1
+    deg_col[which(names(deg_col) %in% sign_pos_FC)] = module_nb + 1
     sign_neg_FC = rownames(comp_deg$neg)[comp_deg$neg[,comp] == 1]
-    deg_col[sign_neg_FC[sign_neg_FC %in% names(deg_col)]] = module_nb + 2
+    deg_col[which(names(deg_col) %in% sign_neg_FC)] = module_nb + 2
     return(deg_col)
 }
 
@@ -288,23 +295,16 @@ get_GO_network_col = function(over_represented, under_represented, comp, all_GO)
 }
 
 
-plot_GO_network = function(over_repr, under_repr, network, comp){
-    # get color based on adjusted p-value
-    col = get_GO_network_col(over_repr, under_repr, comp, network$interesting_GO)
-    # plot network
-    plot(network$go_net, 
+plot_GO_network = function(net, col){
+    plot(net$go_net, 
          vertex.label=NA,
          vertex.size=4,
          vertex.color=col,
-         layout=network$go_net_layout)
+         layout=net$go_net_layout)
 }
 
 
-plot_interactive_GO_network = function(over_repr, under_repr, net, comp, full_go_desc){
-    col = get_GO_network_col(over_repr, under_repr, comp, net$interesting_GO)
-    # get term for selected GO terms
-    go_desc = full_go_desc[names(col)]
-    # plot the graph
+plot_interactive_GO_network = function(net, col, go_desc){
     graphjs(net$go_net,
             layout=net$go_net_layout_3d,
             height=500,
@@ -313,6 +313,16 @@ plot_interactive_GO_network = function(over_repr, under_repr, net, comp, full_go
             vertex.shape="sphere",
             vertex.label=as.vector(go_desc),
             edge.color="grey")
+}
+
+plot_GO_networks = function(over_repr, under_repr, net, comp, full_go_desc){
+    # get color based on adjusted p-value
+    col = get_GO_network_col(over_repr, under_repr, comp, net$interesting_GO)
+    # get names for the vertext: term for selected GO terms
+    go_desc = full_go_desc[names(col)]
+    # plots
+    plot_GO_network(net, col)
+    plot_interactive_GO_network(net, col, go_desc)
 }
 
 
@@ -328,4 +338,37 @@ plot_kegg_pathways = function(kegg_cats, fc_deg, dir_path){
                         to=paste(dir_path,"mmu", cat, ".pathview.multi.png",sep=""))
         }
     }
+}
+
+investigate_gene_set = function(mat){
+    print(dim(mat)[1])
+    print(cor.test(mat[,1],mat[,2]))     
+}
+
+investigate_enrichement = function(set, all_genes){
+    deg = 1*(all_genes %in% set)
+    names(deg) = all_genes
+    pwf = nullp(deg, 'mm10', 'geneSymbol', plot.fit=F)
+    res = matrix(0,nrow=2,ncol=2, dimnames=list(c("over", "under"),c("GO","KEGG")))
+    # GO
+    GO_wall = goseq(pwf,'mm10', 'geneSymbol')
+    over_represented_GO = GO_wall[GO_wall$over_represented_pvalue < 0.05,c("category","term","ontology")]
+    under_represented_GO = GO_wall[GO_wall$under_represented_pvalue < 0.05,c("category","term","ontology")]
+    res[1,1] = dim(over_represented_GO)[1]
+    res[2,1] = dim(under_represented_GO)[1]
+    # plot ontology barplot
+    GO_ontology_counts = merge(count(over_represented_GO, var="ontology"), count(under_represented_GO, var="ontology"), by="ontology")
+    rownames(GO_ontology_counts) = GO_ontology_counts[,1]
+    GO_ontology_counts = GO_ontology_counts[,-1]
+    colnames(GO_ontology_counts) = c("over_represented_GO", "under_represented_GO")
+    GO_ontology_counts = as.matrix(GO_ontology_counts)
+    barplot(t(GO_ontology_counts), beside = TRUE, col=c("green4", "red4"))
+    legend("topright", c("over", "under"), fill=c("green4", "red4"))
+    # KEGG pathways
+    KEGG_wall = goseq(pwf,'mm10', 'geneSymbol', test.cats="KEGG")
+    over_represented_KEGG = KEGG_wall[KEGG_wall$over_represented_pvalue < 0.05,]
+    under_represented_KEGG = KEGG_wall[KEGG_wall$under_represented_pvalue < 0.05,]
+    res[1,2] = dim(over_represented_KEGG)[1]
+    res[2,2] = dim(under_represented_KEGG)[1]
+    print(res)
 }

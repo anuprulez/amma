@@ -1,0 +1,10 @@
+category	term	ontology	52w VS 8w (F)	52w VS 8w (M)	104w VS 8w (F)	104w VS 8w (M)	104w VS 52w (F)	104w VS 52w (M)
+453	GO:0001156	TFIIIC-class transcription factor binding	MF	NA	NA	NA	NA	NA	0.000227149583350243
+456	GO:0001160	transcription termination site DNA binding	MF	NA	NA	NA	NA	NA	0.000263466877547822
+459	GO:0001163	RNA polymerase I regulatory region sequence-specific DNA binding	MF	NA	NA	NA	NA	NA	2.26715314479467e-05
+621	GO:0001710	mesodermal cell fate commitment	BP	NA	NA	0.00191406290767468	NA	NA	NA
+1907	GO:0004131	cytosine deaminase activity	MF	NA	NA	NA	0.00694717063570232	NA	NA
+1908	GO:0004132	dCMP deaminase activity	MF	NA	NA	NA	8.13572096743813e-05	NA	NA
+10319	GO:0036327	VEGF-B-activated receptor activity	MF	NA	NA	NA	0.00336403517283904	NA	NA
+14025	GO:0051444	negative regulation of ubiquitin-protein transferase activity	BP	NA	NA	0.000448304861032868	NA	NA	NA
+15657	GO:0061886	negative regulation of mini excitatory postsynaptic potential	BP	NA	NA	0.0406191602762524	NA	NA	NA

@@ -1,0 +1,9 @@
+category	term	ontology	52w VS 8w (SPF)	52w VS 8w (GF)	104w VS 8w (SPF)	104w VS 8w (GF)	104w VS 52w (SPF)	104w VS 52w (GF)
+1971	GO:0004329	formate-tetrahydrofolate ligase activity	MF	NA	NA	NA	0.00133216920726302	NA	NA
+1972	GO:0004331	fructose-2,6-bisphosphate 2-phosphatase activity	MF	NA	NA	NA	0.000957485815538215	NA	NA
+1973	GO:0004332	fructose-bisphosphate aldolase activity	MF	NA	NA	NA	0.000304255632492546	NA	NA
+3095	GO:0006228	UTP biosynthetic process	BP	NA	NA	0.0337762521374067	NA	NA	NA
+3096	GO:0006231	dTMP biosynthetic process	BP	NA	NA	0.00661997031504049	NA	NA	NA
+3099	GO:0006238	CMP salvage	BP	NA	NA	1.97790370794166e-05	NA	NA	NA
+14836	GO:0060354	negative regulation of cell adhesion molecule production	BP	NA	NA	1.2211687514973e-05	NA	NA	NA
+16021	GO:0070564	positive regulation of vitamin D receptor signaling pathway	BP	NA	NA	0.00155013451323613	NA	NA	NA
