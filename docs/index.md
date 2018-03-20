@@ -32,10 +32,10 @@ More details are available [here](data)
     1. [Building of the differential expression analysis (normalization of the counts)](dge_analysis)
     2. [Pre-visualization of the normalized count data before any differential analysis](pre-visualization)
     3. Effect of the age on the expressed genes
-        1. Comparison between the ages (after controlling for type and gender): [report](age-effect-general) and [results](../results/dge/age-effect/age)
-        2. Comparison between the ages for the types (after controlling for gender): [report](age-effect-type) and [results](../results/dge/age-effect/age_type)
-        3. Comparison between the ages for the genders (after controlling for type): [report](age-effect-gender) and [results](../results/dge/age-effect/age_gender)
-        4. Comparison between  the ages for the genders and types: [report](age-effect-type-gender) and [results](../results/dge/age-effect/age_type_gender)
+        1. Comparison between the ages (after controlling for type and gender): [report](age-effect-general) and [results](https://github.com/bebatut/neuromac_GF_mices/tree/master/results/dge/age-effect/age)
+        2. Comparison between the ages for the types (after controlling for gender): [report](age-effect-type) and [results](https://github.com/bebatut/neuromac_GF_mices/tree/master/results/dge/age-effect/age_type)
+        3. Comparison between the ages for the genders (after controlling for type): [report](age-effect-gender) and [results](https://github.com/bebatut/neuromac_GF_mices/tree/master/results/dge/age-effect/age_gender)
+        4. Comparison between  the ages for the genders and types: [report](age-effect-type-gender) and [results](https://github.com/bebatut/neuromac_GF_mices/tree/master/results/dge/age-effect/age_type_gender)
     4. Effect of the gender on the expressed genes
     5. Effect of the type on the expressed genes
 
