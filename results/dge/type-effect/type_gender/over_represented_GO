@@ -1,0 +1,35 @@
+category	term	ontology	GF VS SPF (F)	GF VS SPF (M)	GF VS SPF (global)
+GO:0051239	regulation of multicellular organismal process	BP	0.00485576103901453	0.000134317755805422	0.00443543593624621
+GO:0048518	positive regulation of biological process	BP	0.00617877795410173	0.000134317755805422	0.0211688558031389
+GO:0048519	negative regulation of biological process	BP	0.00617877795410173	0.000150315095910476	0.0211688558031389
+GO:0048522	positive regulation of cellular process	BP	0.00617877795410173	0.00139714021796781	0.0211688558031389
+GO:0002376	immune system process	BP	0.00652739297062027	0.00139714021796781	0.0211688558031389
+GO:0035556	intracellular signal transduction	BP	0.0105337028411202	0.00264021870990515	0.0211688558031389
+GO:0048583	regulation of response to stimulus	BP	0.0109425272288347	0.00286248203659575	0.0249921885319977
+GO:0002682	regulation of immune system process	BP	0.0178443423625799	0.00286891761542311	0.0249921885319977
+GO:0008144	drug binding	MF	0.0179244997375221	0.00297298451793049	0.0249921885319977
+GO:0051179	localization	BP	0.0329187641768148	0.00297298451793049	0.0344035456158138
+GO:0009966	regulation of signal transduction	BP	0.0428802873954597	0.00297298451793049	0.0344035456158138
+GO:0010646	regulation of cell communication	BP	NA	0.00297298451793049	0.0354642456960245
+GO:0050794	regulation of cellular process	BP	NA	0.00300527428046327	NA
+GO:0032879	regulation of localization	BP	NA	0.0031251115972019	NA
+GO:0023051	regulation of signaling	BP	NA	0.0050693829142104	NA
+GO:0050789	regulation of biological process	BP	NA	0.0050693829142104	NA
+GO:0048523	negative regulation of cellular process	BP	NA	0.0081520693071601	NA
+GO:0071944	cell periphery	CC	NA	0.0112526692783392	NA
+GO:0048584	positive regulation of response to stimulus	BP	NA	0.0122015716117189	NA
+GO:0065008	regulation of biological quality	BP	NA	0.0185578534406391	NA
+GO:2000026	regulation of multicellular organismal development	BP	NA	0.0286567552702775	NA
+GO:0048585	negative regulation of response to stimulus	BP	NA	0.0286567552702775	NA
+GO:1902531	regulation of intracellular signal transduction	BP	NA	0.0295444534760661	NA
+GO:0050793	regulation of developmental process	BP	NA	0.03114737695505	NA
+GO:0009897	external side of plasma membrane	CC	NA	0.0324888328950748	NA
+GO:0009968	negative regulation of signal transduction	BP	NA	0.0338547889218862	NA
+GO:0005886	plasma membrane	CC	NA	0.0346062735676087	NA
+GO:0002688	regulation of leukocyte chemotaxis	BP	NA	0.0360668528507949	NA
+GO:0051240	positive regulation of multicellular organismal process	BP	NA	0.0414153757681409	NA
+GO:0050920	regulation of chemotaxis	BP	NA	0.0453038784851862	NA
+GO:0006950	response to stress	BP	NA	0.0453038784851862	NA
+GO:0065007	biological regulation	BP	NA	0.0453038784851862	NA
+GO:0032101	regulation of response to external stimulus	BP	NA	0.0474603306403511	NA
+GO:0002690	positive regulation of leukocyte chemotaxis	BP	NA	0.0488092421316815	NA

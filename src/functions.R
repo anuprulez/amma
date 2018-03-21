@@ -46,10 +46,10 @@ get_interesting_cat = function(wall, data_type, cat_type){
     cat = wall[[1]][enriched_cat, to_extract]
     # combine the significant categories for all comparisons
     adj_pvalues = adj_pvalues[enriched_cat,]
-    if(is.matrix(adj_pvalues) || length(adj_pvalues)>1){
+    if(is.matrix(adj_pvalues) || length(cat)>1){
         full_mat = cbind(cat, adj_pvalues)
         colnames(full_mat) = c(to_extract, names(wall))
-    }else if (length(adj_pvalues)==1){
+    }else if (length(cat)==1){
         full_mat = t(c(cat, adj_pvalues))
         colnames(full_mat) = c(to_extract, names(wall))
     }else{
