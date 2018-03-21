@@ -165,31 +165,33 @@ capFirst = function(s) {
 }
 
 
-plot_net_with_layout = function(net, colors, pal2, layout){
+plot_net_with_layout = function(net, colors, pal2, layout, add_legend = TRUE){
     plot(net, 
         vertex.label=NA,
         vertex.size=4,
         vertex.color=pal2[colors],
         layout=layout)
-    module_annot = list()
-    module_annot$"1" = "chromatine/chromosome organization/RNA metabolic process"
-    module_annot$"2" = "response to endoplasmic reticulum stress/transport"
-    module_annot$"3" = "metabolic process (ATP, ribonucleoside)"
-    module_annot$"6" = "metabolic process (primary, cellular)"
-    module_annot$"7" = "immune system"
-    module_annot$"8" = "translation/rRNA"
-    module_annot$"10" = "organelle"
-    module_annot$"11" = "localization"
-    legend(x=-1.5,
-        y=-.9,
-        unlist(module_annot),
-        pch=21,
-        col="#777777",
-        pt.bg=pal2[as.integer(names(module_annot))],
-        pt.cex=2,
-        cex=.8,
-        bty="n",
-        ncol=1)
+    if(add_legend){
+       module_annot = list()
+        module_annot$"1" = "chromatine/chromosome organization/RNA metabolic process"
+        module_annot$"2" = "response to endoplasmic reticulum stress/transport"
+        module_annot$"3" = "metabolic process (ATP, ribonucleoside)"
+        module_annot$"6" = "metabolic process (primary, cellular)"
+        module_annot$"7" = "immune system"
+        module_annot$"8" = "translation/rRNA"
+        module_annot$"10" = "organelle"
+        module_annot$"11" = "localization"
+        legend(x=-1.5,
+            y=-.9,
+            unlist(module_annot),
+            pch=21,
+            col="#777777",
+            pt.bg=pal2[as.integer(names(module_annot))],
+            pt.cex=2,
+            cex=.8,
+            bty="n",
+            ncol=1) 
+    }
 }
 
 plot_top_go = function(go, go_wall, ont, comp, top_nb){
@@ -206,9 +208,11 @@ plot_top_go = function(go, go_wall, ont, comp, top_nb){
     colnames(go_mat) = c("term", "comparison")
     go_mat$p_value = c(sapply(comp, function(i) return(ont_go[, i])))
     go_mat$ratio = c(sapply(comp, function(i) return(ratios[, i])))
+    # reformate the terms to have less than 8 words
+    go_mat$term = sapply(strsplit(as.character(go_mat$term), " "), function(i) paste(i[1:ifelse(length(i)>8,8,length(i))],collapse = " "))
     # plot                 
     require(ggplot2)
-    p = ggplot(go_mat, aes(factor(comparison), factor(term))) + labs(x = "", y = "") + theme(axis.text.x = element_text(angle = 90, hjust = 1))
+    p = ggplot(go_mat, aes(factor(comparison), factor(term))) + labs(x = "", y = "") + theme(axis.text.x = element_text(angle = 90, hjust = 1), axis.title.y = element_text(size = rel(1.8)))
     p + geom_point(aes(size=ratio,col=p_value)) + scale_colour_gradient(low = "blue", high="red")
 }
 
@@ -327,14 +331,18 @@ plot_interactive_GO_network = function(net, col, go_desc){
             edge.color="grey")
 }
 
-plot_GO_networks = function(over_repr, under_repr, net, comp, full_go_desc){
+plot_GO_networks = function(over_repr, under_repr, net, comp, full_go_desc, plot_non_interactive = TRUE, plot_interactive = TRUE){
     # get color based on adjusted p-value
     col = get_GO_network_col(over_repr, under_repr, comp, net$interesting_GO)
     # get names for the vertext: term for selected GO terms
     go_desc = full_go_desc[names(col)]
     # plots
-    plot_GO_network(net, col)
-    plot_interactive_GO_network(net, col, go_desc)
+    if(plot_non_interactive){
+        plot_GO_network(net, col)
+    }
+    if(plot_interactive){
+        plot_interactive_GO_network(net, col, go_desc)
+    }
 }
 
 
