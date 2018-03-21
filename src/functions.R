@@ -48,8 +48,12 @@ get_interesting_cat = function(wall, data_type, cat_type){
     adj_pvalues = adj_pvalues[enriched_cat,]
     if(is.matrix(adj_pvalues) || length(adj_pvalues)>1){
         full_mat = cbind(cat, adj_pvalues)
-    }else{
+        colnames(full_mat) = c(to_extract, names(wall))
+    }else if (length(adj_pvalues)==1){
         full_mat = t(c(cat, adj_pvalues))
+        colnames(full_mat) = c(to_extract, names(wall))
+    }else{
+        full_mat = c()
     }
     return(full_mat)
 }
@@ -106,13 +110,13 @@ extract_diff_expr_genes = function(in_l, dir_path){
     l$KEGG_wall = lapply(pwf, function(x) suppressMessages(goseq(x,'mm10', 'geneSymbol', test.cats="KEGG")))
     # extract interesting pathways/categories and export them
     l$over_represented_GO = get_interesting_cat(l$GO_wall, "over_represented_pvalue", "GO")
-    write.table(l$over_represented_GO, paste(full_dir_path, "over_represented_GO", sep=""), sep = "\t", quote = FALSE)                
+    write.table(l$over_represented_GO, paste(full_dir_path, "over_represented_GO", sep=""), sep = "\t", quote = FALSE, row.names = FALSE)                
     l$under_represented_GO = get_interesting_cat(l$GO_wall, "under_represented_pvalue", "GO")
-    write.table(l$under_represented_GO, paste(full_dir_path, "under_represented_GO", sep=""), sep = "\t", quote = FALSE)
+    write.table(l$under_represented_GO, paste(full_dir_path, "under_represented_GO", sep=""), sep = "\t", quote = FALSE, row.names = FALSE)
     l$over_represented_KEGG = get_interesting_cat(l$KEGG_wall, "over_represented_pvalue", "KEGG")
-    write.table(l$over_represented_KEGG, paste(full_dir_path, "over_represented_KEGG", sep=""), sep = "\t", quote = FALSE)    
+    write.table(l$over_represented_KEGG, paste(full_dir_path, "over_represented_KEGG", sep=""), sep = "\t", quote = FALSE, row.names = FALSE)    
     l$under_represented_KEGG = get_interesting_cat(l$KEGG_wall, "under_represented_pvalue", "KEGG")
-    write.table(l$under_represented_KEGG, paste(full_dir_path, "under_represented_KEGG", sep=""), sep = "\t", quote = FALSE)                       
+    write.table(l$under_represented_KEGG, paste(full_dir_path, "under_represented_KEGG", sep=""), sep = "\t", quote = FALSE, row.names = FALSE)                       
     return(l)
 }
 
@@ -342,8 +346,13 @@ plot_kegg_pathways = function(kegg_cats, fc_deg, dir_path){
                                       pathway.id=cat,
                                       species="Mus musculus",
                                       gene.idtype="Symbol"))
-            file.rename(from=paste("mmu", cat, ".pathview.multi.png",sep=""),
-                        to=paste(dir_path,"mmu", cat, ".pathview.multi.png",sep=""))
+            if(dim(fc_deg)[2] > 1){
+                file.rename(from=paste("mmu", cat, ".pathview.multi.png",sep=""),
+                            to=paste(dir_path,"mmu", cat, ".pathview.multi.png",sep=""))
+            }else{
+                file.rename(from=paste("mmu", cat, ".pathview.png",sep=""),
+                            to=paste(dir_path,"mmu", cat, ".pathview.png",sep=""))
+            }   
         }
     }
 }
