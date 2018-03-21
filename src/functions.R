@@ -299,7 +299,7 @@ get_GO_network_col = function(over_represented, under_represented, comp, all_GO)
         col[names(col) %in% over_represented_GO] = sapply(val, function(i) return(over_repr_colors[which(over_repr_colors[,1] == i)[1],2]))
     }
     if(length(under_represented_GO) > 0){
-        val = under_represented_GO[names(col) %in% under_represented_GO,comp]
+        val = under_represented[names(col) %in% under_represented_GO,comp]
         col[names(col) %in% under_represented_GO] = sapply(val, function(i) return(under_repr_colors[which(under_repr_colors[,1] == i)[1],2]))
     }
     col = unlist(col)

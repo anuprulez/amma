@@ -39,6 +39,7 @@ More details are available [here](data)
     4. Effect of the gender on the expressed genes
         1. Comparison between the types (after controlling for age and gender): [report](type-effect-general) and [results](https://github.com/bebatut/neuromac_GF_mices/tree/master/results/dge/type-effect/type)
         2. Comparison between the ages for the genders (after controlling for age): [report](type-effect-gender) and [results](https://github.com/bebatut/neuromac_GF_mices/tree/master/results/dge/type-effect/type_gender)
+        3. Comparison between the ages for the ages (after controlling for gender): [report](type-effect-age) and [results](https://github.com/bebatut/neuromac_GF_mices/tree/master/results/dge/type-effect/type_age)
     5. Effect of the type on the expressed genes
 
 

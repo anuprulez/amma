@@ -1,0 +1,44 @@
+category	term	ontology	GF VS SPF (8w)	GF VS SPF (52w)	GF VS SPF (104w)	GF VS SPF (global)
+GO:0002376	immune system process	BP	0.0210479366276814	2.62017011294563e-05	NA	0.00443543593624621
+GO:0048522	positive regulation of cellular process	BP	NA	6.58907778567962e-05	NA	0.0211688558031389
+GO:0048518	positive regulation of biological process	BP	NA	9.71671776950198e-05	NA	0.0211688558031389
+GO:0070488	neutrophil aggregation	BP	NA	0.000153811782844894	NA	0.0211688558031389
+GO:0018119	peptidyl-cysteine S-nitrosylation	BP	NA	0.000753815631455692	NA	0.0211688558031389
+GO:0017014	protein nitrosylation	BP	NA	0.000753815631455692	NA	0.0211688558031389
+GO:0035662	Toll-like receptor 4 binding	MF	NA	0.000753815631455692	NA	0.0249921885319977
+GO:0016477	cell migration	BP	NA	0.000753815631455692	NA	0.0249921885319977
+GO:0050900	leukocyte migration	BP	NA	0.000757735300780935	NA	0.0249921885319977
+GO:0002682	regulation of immune system process	BP	NA	0.000866079209950926	NA	0.0344035456158138
+GO:2000026	regulation of multicellular organismal development	BP	NA	0.00113089618436452	NA	0.0344035456158138
+GO:0048870	cell motility	BP	NA	0.00117281470888372	NA	0.0354642456960245
+GO:0051674	localization of cell	BP	NA	0.00117281470888372	NA	NA
+GO:0030595	leukocyte chemotaxis	BP	NA	0.00241845890170675	NA	NA
+GO:0032103	positive regulation of response to external stimulus	BP	NA	0.00254874201720841	NA	NA
+GO:0050786	RAGE receptor binding	MF	NA	0.00255798552442863	NA	NA
+GO:0018198	peptidyl-cysteine modification	BP	NA	0.00625783001352453	NA	NA
+GO:1900086	positive regulation of peptidyl-tyrosine autophosphorylation	BP	NA	0.00642403560746466	NA	NA
+GO:0006952	defense response	BP	NA	0.00751411871005666	NA	NA
+GO:0007163	establishment or maintenance of cell polarity	BP	NA	0.00888936984732601	NA	NA
+GO:0030334	regulation of cell migration	BP	NA	0.0105040459407618	NA	NA
+GO:0030261	chromosome condensation	BP	NA	0.0121726749990299	NA	NA
+GO:0060978	angiogenesis involved in coronary vascular morphogenesis	BP	NA	0.0168048740437871	NA	NA
+GO:1900084	regulation of peptidyl-tyrosine autophosphorylation	BP	NA	0.0168048740437871	NA	NA
+GO:0050544	arachidonic acid binding	MF	NA	0.0173223446204244	NA	NA
+GO:0050543	icosatetraenoic acid binding	MF	NA	0.0194276038761184	NA	NA
+GO:0046983	protein dimerization activity	MF	NA	0.02272460785791	NA	NA
+GO:2000145	regulation of cell motility	BP	NA	0.0231095862296346	NA	NA
+GO:0098609	cell-cell adhesion	BP	NA	0.0243255175619812	NA	NA
+GO:0022407	regulation of cell-cell adhesion	BP	NA	0.0243255175619812	NA	NA
+GO:1903047	mitotic cell cycle process	BP	NA	0.0253595726953363	NA	NA
+GO:0050542	icosanoid binding	MF	NA	0.02541294862802	NA	NA
+GO:0009897	external side of plasma membrane	CC	NA	0.02541294862802	NA	NA
+GO:0060426	lung vasculature development	BP	NA	0.02541294862802	NA	NA
+GO:0034392	negative regulation of smooth muscle cell apoptotic process	BP	NA	0.0255376374357407	NA	NA
+GO:0090068	positive regulation of cell cycle process	BP	NA	0.0398820141484817	NA	NA
+GO:0050793	regulation of developmental process	BP	NA	0.0398820141484817	NA	NA
+GO:0009986	cell surface	CC	NA	0.0403060190395992	NA	NA
+GO:0032879	regulation of localization	BP	NA	0.0411174059579335	NA	NA
+GO:0002683	negative regulation of immune system process	BP	NA	0.0432091635013688	NA	NA
+GO:0042803	protein homodimerization activity	MF	NA	0.0435736485609777	NA	NA
+GO:0040011	locomotion	BP	NA	0.0462668719473055	NA	NA
+GO:0007159	leukocyte cell-cell adhesion	BP	NA	0.0467707647670883	NA	NA
