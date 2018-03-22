@@ -1,0 +1,27 @@
+category	term	ontology	M VS F
+GO:0006334	nucleosome assembly	BP	3.10568066673256e-09
+GO:0000786	nucleosome	CC	1.83937269568053e-08
+GO:0031497	chromatin assembly	BP	1.83937269568053e-08
+GO:0044815	DNA packaging complex	CC	5.05931277123133e-08
+GO:0034728	nucleosome organization	BP	5.20732149220802e-08
+GO:0006333	chromatin assembly or disassembly	BP	1.66717951533217e-07
+GO:0006323	DNA packaging	BP	2.54300125974999e-07
+GO:0000788	nuclear nucleosome	CC	3.3231827615883e-07
+GO:0006335	DNA replication-dependent nucleosome assembly	BP	5.35627985280217e-07
+GO:0034723	DNA replication-dependent nucleosome organization	BP	5.35627985280217e-07
+GO:0065004	protein-DNA complex assembly	BP	1.55791042694309e-06
+GO:0071103	DNA conformation change	BP	3.0715127857015e-06
+GO:0032993	protein-DNA complex	CC	1.38601045654848e-05
+GO:0071824	protein-DNA complex subunit organization	BP	1.97615659208609e-05
+GO:0051290	protein heterotetramerization	BP	3.49106732356727e-05
+GO:0045653	negative regulation of megakaryocyte differentiation	BP	0.000874264191036554
+GO:0006325	chromatin organization	BP	0.00176270327904015
+GO:0000784	nuclear chromosome, telomeric region	CC	0.00493268473230082
+GO:0051276	chromosome organization	BP	0.00657528775022891
+GO:0002227	innate immune response in mucosa	BP	0.0114225564443192
+GO:0034622	cellular macromolecular complex assembly	BP	0.0114991004318647
+GO:0006336	DNA replication-independent nucleosome assembly	BP	0.0137617127547305
+GO:0045652	regulation of megakaryocyte differentiation	BP	0.0137617127547305
+GO:0034724	DNA replication-independent nucleosome organization	BP	0.015772089987769
+GO:0098687	chromosomal region	CC	0.0220096286570833
+GO:0000781	chromosome, telomeric region	CC	0.0354355713914377

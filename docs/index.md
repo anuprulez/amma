@@ -42,7 +42,7 @@ More details are available [here](data)
         3. [Comparison between the types for the ages (after controlling for gender)](type-effect-age) - [data](https://github.com/bebatut/neuromac_GF_mices/tree/master/results/dge/type-effect/type_age)
         4. [Comparison between the types for the genders and ages: [report](type-effect-age-gender) - [data](https://github.com/bebatut/neuromac_GF_mices/tree/master/results/dge/type-effect/type_gender_age)
     5. Effect of the gender on the expressed genes
-        1. 
+        1. [Comparison between the genders (after controlling for type and age)](gender-effect-general) - [data](https://github.com/bebatut/neuromac_GF_mices/tree/master/results/dge/gender-effect/gender)
         2. [Comparison between the genders for the types (after controlling for age)](gender-effect-type) - [data](https://github.com/bebatut/neuromac_GF_mices/tree/master/results/dge/gender-effect/gender_type)
         3. [Comparison between the genders for the ages (after controlling for type)](gender-effect-age) - [data](https://github.com/bebatut/neuromac_GF_mices/tree/master/results/dge/gender-effect/gender_age)
         4. [Comparison between the genders for the types and ages](gender-effect-type-age) - [data](https://github.com/bebatut/neuromac_GF_mices/tree/master/results/dge/gender-effect/gender_type_age)

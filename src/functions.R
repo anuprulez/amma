@@ -294,6 +294,10 @@ get_ont_GO = function(go, ont){
     col_nb = dim(go)[2]
     val = which(go$ontology == ont)
     ont_go = go[val, 4:col_nb]
+    if(!is.matrix(ont_go)){
+        ont_go = matrix(ont_go, ncol = 1)
+        colnames(ont_go) = colnames(go)[4:col_nb]
+    }
     rownames(ont_go) = go[val, 1]
     return(ont_go)
 }
