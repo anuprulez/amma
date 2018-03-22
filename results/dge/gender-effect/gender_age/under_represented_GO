@@ -1,0 +1,29 @@
+category	term	ontology	M VS F (8w)	M VS F (52w)	M VS F (104w)
+GO:0004871	signal transducer activity	MF	0.0016450558140698	NA	NA
+GO:0007186	G-protein coupled receptor signaling pathway	BP	0.0016450558140698	NA	NA
+GO:0016020	membrane	CC	8.66582421255973e-05	NA	NA
+GO:0038023	signaling receptor activity	MF	1.94489942438193e-05	NA	NA
+GO:0004872	receptor activity	MF	2.40823443462257e-06	NA	NA
+GO:0060089	molecular transducer activity	MF	2.40823443462257e-06	NA	NA
+GO:0099600	transmembrane receptor activity	MF	2.32611751277071e-06	NA	NA
+GO:0004888	transmembrane signaling receptor activity	MF	1.8477474774745e-06	NA	NA
+GO:2000984	negative regulation of ATP citrate synthase activity	BP	NA	0.0131715172747097	NA
+GO:0050265	RNA uridylyltransferase activity	MF	NA	0.0102405887504299	NA
+GO:1905340	regulation of protein localization to kinetochore	BP	NA	0.00152617998782656	NA
+GO:1905342	positive regulation of protein localization to kinetochore	BP	NA	0.00143359515548116	NA
+GO:1903422	negative regulation of synaptic vesicle recycling	BP	NA	0.00114325801243325	NA
+GO:0043259	laminin-10 complex	CC	NA	0.000615486922671364	NA
+GO:0051316	attachment of spindle microtubules to kinetochore involved in meiotic chromosome segregation	BP	NA	0.000470190086713721	NA
+GO:1902606	regulation of large conductance calcium-activated potassium channel activity	BP	NA	0.000138255834021547	NA
+GO:1902608	positive regulation of large conductance calcium-activated potassium channel activity	BP	NA	9.86260185868923e-05	NA
+GO:0042091	interleukin-10 biosynthetic process	BP	NA	9.68199437932307e-05	NA
+GO:0045074	regulation of interleukin-10 biosynthetic process	BP	NA	9.68199437932307e-05	NA
+GO:0051088	PMA-inducible membrane protein ectodomain proteolysis	BP	NA	1.92573988875249e-05	NA
+GO:0086053	AV node cell to bundle of His cell communication by electrical coupling	BP	NA	1.4678176178842e-05	NA
+GO:0086077	gap junction channel activity involved in AV node cell-bundle of His cell electrical coupling	MF	NA	5.05802584336981e-06	NA
+GO:0002414	immunoglobulin transcytosis in epithelial cells	BP	NA	5.05802584336981e-06	NA
+GO:0051987	positive regulation of attachment of spindle microtubules to kinetochore	BP	NA	1.47708159864199e-06	NA
+GO:0004984	olfactory receptor activity	MF	3.78537487157537e-07	NA	NA
+GO:0007606	sensory perception of chemical stimulus	BP	1.1445395301758e-07	NA	NA
+GO:0007608	sensory perception of smell	BP	2.09081351226718e-07	NA	NA
+GO:0043496	regulation of protein homodimerization activity	BP	NA	0.0103055689445592	NA
