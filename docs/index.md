@@ -36,12 +36,12 @@ More details are available [here](data)
         2. Comparison between the ages for the types (after controlling for gender): [report](age-effect-type) and [results](https://github.com/bebatut/neuromac_GF_mices/tree/master/results/dge/age-effect/age_type)
         3. Comparison between the ages for the genders (after controlling for type): [report](age-effect-gender) and [results](https://github.com/bebatut/neuromac_GF_mices/tree/master/results/dge/age-effect/age_gender)
         4. Comparison between the ages for the genders and types: [report](age-effect-type-gender) and [results](https://github.com/bebatut/neuromac_GF_mices/tree/master/results/dge/age-effect/age_type_gender)
-    4. Effect of the gender on the expressed genes
+    4. Effect of the type on the expressed genes
         1. Comparison between the types (after controlling for age and gender): [report](type-effect-general) and [results](https://github.com/bebatut/neuromac_GF_mices/tree/master/results/dge/type-effect/type)
         2. Comparison between the ages for the genders (after controlling for age): [report](type-effect-gender) and [results](https://github.com/bebatut/neuromac_GF_mices/tree/master/results/dge/type-effect/type_gender)
         3. Comparison between the ages for the ages (after controlling for gender): [report](type-effect-age) and [results](https://github.com/bebatut/neuromac_GF_mices/tree/master/results/dge/type-effect/type_age)
         4. Comparison between the types for the genders and ages: [report](type-effect-age-gender) and [results](https://github.com/bebatut/neuromac_GF_mices/tree/master/results/dge/type-effect/type_gender_age)
-    5. Effect of the type on the expressed genes
+    5. Effect of the gender on the expressed genes
 
 
 

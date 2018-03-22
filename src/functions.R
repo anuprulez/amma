@@ -1,6 +1,7 @@
 get_perc = function(v, l){
     s = sum(v, na.rm=T)
-    return(round(s*100/l, digits=2))
+    return(s)
+    #return(round(s*100/l, digits=2))
 }
 
 get_sign_padj = function(dge_res) {
@@ -28,6 +29,16 @@ clean_mat = function(mat){
     return(new_mat)
 }
 
+plot_stat_mat = function(stat_mat){
+    colnames(stat_mat) = c("DEG", "Up-regulated", "Down-regulated")
+    go_mat = expand.grid(x = rownames(stat_mat), y = colnames(stat_mat))
+    colnames(go_mat) = c("comp", "gene")
+    go_mat$value = c(sapply(colnames(stat_mat), function(i) return(stat_mat[,i])))
+    require(ggplot2)
+        p = ggplot(go_mat, aes(factor(comp), factor(gene))) + labs(x = "", y = "") + theme(axis.text.x = element_text(angle = 90, hjust = 1), axis.title.y = element_text(size = rel(1.8)))
+        p + geom_point(aes(size=value,col=value)) + scale_colour_gradient(low = "blue", high="red")
+}
+
 
 get_interesting_cat = function(wall, data_type, cat_type){
     pvalue_threshold = 0.05
@@ -46,14 +57,20 @@ get_interesting_cat = function(wall, data_type, cat_type){
     cat = wall[[1]][enriched_cat, to_extract]
     # combine the significant categories for all comparisons
     adj_pvalues = adj_pvalues[enriched_cat,]
-    if(is.matrix(adj_pvalues) || length(cat)>1){
-        full_mat = cbind(cat, adj_pvalues)
-        colnames(full_mat) = c(to_extract, names(wall))
-    }else if (length(cat)==1){
-        full_mat = t(c(cat, adj_pvalues))
-        colnames(full_mat) = c(to_extract, names(wall))
+    if(!is.matrix(adj_pvalues)){
+        if(length(adj_pvalues)==0){
+            full_mat = c()
+        }
+        else if(length(names(wall))==1){
+            full_mat = cbind(cat, adj_pvalues)
+            colnames(full_mat) = c(to_extract, names(wall))
+        }else{
+            full_mat = t(c(cat, adj_pvalues))
+            colnames(full_mat) = c(to_extract, names(wall))
+        }
     }else{
-        full_mat = c()
+        full_mat = cbind(cat, adj_pvalues)
+        colnames(full_mat) = c(to_extract, names(wall)) 
     }
     return(full_mat)
 }
@@ -265,20 +282,27 @@ create_GO_network = function(deg, ont, ont_go){
     #     layout=l$go_net_layout)
     # Update list of interesting GO
     l$interesting_GO = rownames(l$go_sim)
+    # extract over and under represented GO
+    l$over_repr = get_ont_GO(deg$over_represented_GO, ont)
+    l$under_repr = get_ont_GO(deg$under_represented_GO, ont)
+    # 
     return(l)
 }
 
 
 get_ont_GO = function(go, ont){
     col_nb = dim(go)[2]
-    return(go[go$ontology == ont, c(1,4:col_nb)])
+    val = which(go$ontology == ont)
+    ont_go = go[val, 4:col_nb]
+    rownames(ont_go) = go[val, 1]
+    return(ont_go)
 }
 
 get_col_ramp = function(values, min_col, max_col){
     if(dim(values)[1] == 0){
         return(c())
     }else{
-        all_values = unlist(c(values[,2:dim(values)[2]]))
+        all_values = unlist(values)
         all_values = all_values[!is.na(all_values)]
         ii = cut(all_values,
             breaks = exp(log(10)*seq(log10(min(all_values)),log10(0.05),len = 100)),
@@ -288,25 +312,27 @@ get_col_ramp = function(values, min_col, max_col){
     }
 }
 
-get_GO_network_col = function(over_represented, under_represented, comp, all_GO){
+get_GO_network_col = function(net, comp, all_GO){
     #
-    over_repr_colors = get_col_ramp(over_represented, "red", "lightpink")
-    under_repr_colors = get_col_ramp(under_represented, "blue", "lightblue")
-    # extract under and over represented GO
-    over_represented_GO = over_represented[!is.na(over_represented[,comp]),1]
-    under_represented_GO = under_represented[!is.na(under_represented[,comp]),1]
+    over_repr_colors = get_col_ramp(net$over_repr, "red", "lightpink")
+    under_repr_colors = get_col_ramp(net$under_repr, "blue", "lightblue")
+    # extract under and over represented GO and their value
+    v = which(!is.na(net$over_repr[,comp]))
+    over_repr_GO = net$over_repr[v,comp]
+    names(over_repr_GO) = rownames(net$over_repr)[v]
+    v = which(!is.na(net$under_repr[,comp]))
+    under_repr_GO = net$under_repr[v,comp]
+    names(under_repr_GO) = rownames(net$under_repr)[v]
     # colors for the nodes
-    col = rep("white", length(all_GO))
-    names(col) = all_GO
-    if(length(over_represented_GO) > 0){
-        val = over_represented[names(col) %in% over_represented_GO,comp]
-        col[names(col) %in% over_represented_GO] = sapply(val, function(i) return(over_repr_colors[which(over_repr_colors[,1] == i)[1],2]))
+    col = rep("white", length(net$interesting_GO))
+    names(col) = net$interesting_GO
+    if(length(over_repr_GO) > 0){
+        col[names(over_repr_GO)] = sapply(over_repr_GO, function(i) return(over_repr_colors[which(over_repr_colors[,1] == i)[1],2]))
     }
-    if(length(under_represented_GO) > 0){
-        val = under_represented[names(col) %in% under_represented_GO,comp]
-        col[names(col) %in% under_represented_GO] = sapply(val, function(i) return(under_repr_colors[which(under_repr_colors[,1] == i)[1],2]))
-    }
-    col = unlist(col)
+    if(length(under_repr_GO) > 0){
+        col[names(under_repr_GO)] = sapply(under_repr_GO, function(i) return(under_repr_colors[which(under_repr_colors[,1] == i)[1],2]))
+    }                       
+    names(col) = full_go_desc[net$interesting_GO]
     return(col)
 }
 
@@ -331,9 +357,9 @@ plot_interactive_GO_network = function(net, col, go_desc){
             edge.color="grey")
 }
 
-plot_GO_networks = function(over_repr, under_repr, net, comp, full_go_desc, plot_non_interactive = TRUE, plot_interactive = TRUE){
+plot_GO_networks = function(net, comp, full_go_desc, plot_non_interactive = TRUE, plot_interactive = TRUE){
     # get color based on adjusted p-value
-    col = get_GO_network_col(over_repr, under_repr, comp, net$interesting_GO)
+    col = get_GO_network_col(net, comp, full_go_desc)
     # get names for the vertext: term for selected GO terms
     go_desc = full_go_desc[names(col)]
     # plots
