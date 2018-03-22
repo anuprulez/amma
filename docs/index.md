@@ -45,6 +45,7 @@ More details are available [here](data)
         1. 
         2. [Comparison between the genders for the types (after controlling for age)](gender-effect-type) - [data](https://github.com/bebatut/neuromac_GF_mices/tree/master/results/dge/gender-effect/gender_type)
         3. [Comparison between the genders for the ages (after controlling for type)](gender-effect-age) - [data](https://github.com/bebatut/neuromac_GF_mices/tree/master/results/dge/gender-effect/gender_age)
+        4. [Comparison between the genders for the types and ages](gender-effect-type-age) - [data](https://github.com/bebatut/neuromac_GF_mices/tree/master/results/dge/gender-effect/gender_type_age)
 
 
 

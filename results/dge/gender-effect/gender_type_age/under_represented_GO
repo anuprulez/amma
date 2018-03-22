@@ -1,0 +1,54 @@
+category	term	ontology	M VS F (SPF, 8w)	M VS F (GF, 8w)	M VS F (SPF, 52w)	M VS F (GF, 52w)	M VS F (SPF, 104w)	M VS F (GF, 104w)
+GO:0004871	signal transducer activity	MF	0.0210626109863742	NA	NA	NA	NA	NA
+GO:0007186	G-protein coupled receptor signaling pathway	BP	0.00448010497360873	NA	NA	NA	NA	NA
+GO:0016020	membrane	CC	0.0018853759280335	NA	NA	NA	NA	NA
+GO:0044425	membrane part	CC	8.45185832820957e-05	NA	NA	NA	NA	NA
+GO:0060089	molecular transducer activity	MF	3.77060951100137e-05	NA	NA	NA	NA	NA
+GO:0004872	receptor activity	MF	3.77060951100137e-05	NA	NA	NA	NA	NA
+GO:0031224	intrinsic component of membrane	CC	2.29081864108449e-05	NA	NA	NA	NA	NA
+GO:0038023	signaling receptor activity	MF	2.59113969865016e-05	NA	NA	NA	NA	NA
+GO:0016021	integral component of membrane	CC	1.17654206852269e-05	NA	NA	NA	NA	NA
+GO:0099600	transmembrane receptor activity	MF	1.17654206852269e-05	NA	NA	NA	NA	NA
+GO:0004888	transmembrane signaling receptor activity	MF	1.17654206852269e-05	NA	NA	NA	NA	NA
+GO:0008260	3-oxoacid CoA-transferase activity	MF	NA	NA	0.0409243573586277	NA	NA	NA
+GO:0047045	testosterone 17-beta-dehydrogenase (NADP+) activity	MF	NA	NA	0.0366154002714944	NA	NA	NA
+GO:0016015	morphogen activity	MF	NA	NA	0.0173626262002117	NA	NA	NA
+GO:0035061	interchromatin granule	CC	NA	NA	0.0118483017548844	NA	NA	NA
+GO:0035441	cell migration involved in vasculogenesis	BP	NA	NA	0.000191737099741658	NA	NA	NA
+GO:0004534	5'-3' exoribonuclease activity	MF	NA	NA	4.9103312723342e-05	NA	NA	NA
+GO:0004651	polynucleotide 5'-phosphatase activity	MF	NA	NA	4.9103312723342e-05	NA	NA	NA
+GO:0072190	ureter urothelium development	BP	NA	NA	1.53264021295101e-05	NA	NA	NA
+GO:0018199	peptidyl-glutamine modification	BP	NA	NA	2.52230777202908e-05	NA	NA	NA
+GO:0006015	5-phosphoribose 1-diphosphate biosynthetic process	BP	NA	NA	7.38035080423058e-06	NA	NA	NA
+GO:0046391	5-phosphoribose 1-diphosphate metabolic process	BP	NA	NA	3.3602622997152e-06	NA	NA	NA
+GO:0046573	lactonohydrolase activity	MF	NA	NA	2.74422076088744e-06	NA	NA	NA
+GO:0031662	positive regulation of cyclin-dependent protein serine/threonine kinase activity involved in G2/M transition of mitotic cell cycle	BP	NA	0.0424402042880244	NA	NA	NA	NA
+GO:0071317	cellular response to isoquinoline alkaloid	BP	NA	0.0446235012178343	NA	NA	NA	NA
+GO:0035938	estradiol secretion	BP	NA	0.027555054530781	NA	NA	NA	NA
+GO:2000864	regulation of estradiol secretion	BP	NA	0.0446235012178343	NA	NA	NA	NA
+GO:0015860	purine nucleoside transmembrane transport	BP	NA	0.0103751700979535	NA	NA	NA	NA
+GO:1901642	nucleoside transmembrane transport	BP	NA	0.00984401871787307	NA	NA	NA	NA
+GO:0046136	positive regulation of vitamin metabolic process	BP	NA	0.00425040065600407	NA	NA	NA	NA
+GO:0060557	positive regulation of vitamin D biosynthetic process	BP	NA	0.00545326545991451	NA	NA	NA	NA
+GO:0060559	positive regulation of calcidiol 1-monooxygenase activity	BP	NA	0.000307072208299837	NA	NA	NA	NA
+GO:0008476	protein-tyrosine sulfotransferase activity	MF	NA	NA	8.10727939104448e-07	NA	NA	NA
+GO:0047238	glucuronosyl-N-acetylgalactosaminyl-proteoglycan 4-beta-N-acetylgalactosaminyltransferase activity	MF	NA	NA	NA	0.0411706495320758	NA	NA
+GO:0035402	histone kinase activity (H3-T11 specific)	MF	NA	NA	NA	0.040567942173274	NA	NA
+GO:0021529	spinal cord oligodendrocyte cell differentiation	BP	NA	NA	NA	0.0277671510231528	NA	NA
+GO:0021530	spinal cord oligodendrocyte cell fate specification	BP	NA	NA	NA	0.00863593224866894	NA	NA
+GO:0004167	dopachrome isomerase activity	MF	NA	NA	NA	0.00139247058419047	NA	NA
+GO:0070376	regulation of ERK5 cascade	BP	NA	NA	NA	0.00139247058419047	NA	NA
+GO:2001013	epithelial cell proliferation involved in renal tubule morphogenesis	BP	NA	NA	NA	0.000898115879003932	NA	NA
+GO:0008900	hydrogen:potassium-exchanging ATPase activity	MF	NA	NA	NA	0.0011376501729766	NA	NA
+GO:0033180	proton-transporting V-type ATPase, V1 domain	CC	NA	NA	NA	5.22227464605919e-05	NA	NA
+GO:0060282	positive regulation of oocyte development	BP	NA	NA	NA	4.00395761498597e-05	NA	NA
+GO:1905881	positive regulation of oogenesis	BP	NA	NA	NA	2.73820316412916e-05	NA	NA
+GO:0032264	IMP salvage	BP	NA	NA	NA	8.18711971044106e-06	NA	NA
+GO:0004991	parathyroid hormone receptor activity	MF	NA	NA	7.93311782719595e-07	NA	NA	NA
+GO:0004984	olfactory receptor activity	MF	2.29081864108449e-05	NA	NA	NA	NA	NA
+GO:0007608	sensory perception of smell	BP	1.53787139772267e-05	NA	NA	NA	NA	NA
+GO:0048485	sympathetic nervous system development	BP	NA	NA	4.93799963624363e-07	NA	NA	NA
+GO:0048566	embryonic digestive tract development	BP	NA	NA	4.93799963624363e-07	NA	NA	NA
+GO:1904036	negative regulation of epithelial cell apoptotic process	BP	NA	NA	NA	8.18711971044106e-06	NA	NA
+GO:0061552	ganglion morphogenesis	BP	NA	NA	4.93799963624363e-07	NA	NA	NA
+GO:1902442	regulation of ripoptosome assembly involved in necroptotic process	BP	NA	NA	4.93799963624363e-07	NA	NA	NA
