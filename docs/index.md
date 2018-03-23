@@ -14,7 +14,7 @@ Differential gene expression in mice (germ free or normal, different ages, 2 gen
 
 - Differential gene expression between SPF and GF already known for 8 weeks mices ([article](http://www.nature.com/neuro/journal/v18/n7/abs/nn.4030.html))
 - Expected gender bias in 104w SPF
-- Differential gene expression between SPF and GF already known for embryonic weeks mices
+- Differential gene expression between SPF and GF already known for embryonic and early mices ([article](https://www.sciencedirect.com/science/article/pii/S0092867417314320))
 
 # Data
 

@@ -294,7 +294,7 @@ get_ont_GO = function(go, ont){
     col_nb = dim(go)[2]
     val = which(go$ontology == ont)
     ont_go = go[val, 4:col_nb]
-    if(!is.matrix(ont_go)){
+    if(!is.matrix(ont_go) && !is.data.frame(ont_go)){
         ont_go = matrix(ont_go, ncol = 1)
         colnames(ont_go) = colnames(go)[4:col_nb]
     }
@@ -371,7 +371,7 @@ plot_GO_networks = function(net, comp, full_go_desc, plot_non_interactive = TRUE
         plot_GO_network(net, col)
     }
     if(plot_interactive){
-        plot_interactive_GO_network(net, col, go_desc)
+        plot_interactive_GO_network(net, col, names(col))
     }
 }
 
