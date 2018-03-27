@@ -14,6 +14,8 @@ suppressMessages(library(rentrez))
 suppressMessages(library(goseq))
 suppressMessages(library(dendextend))
 suppressMessages(library(GOSemSim))
+suppressMessages(library(reshape2))
+suppressMessages(library(ggplot2))
 
 suppressMessages(library(WGCNA))
 allowWGCNAThreads()
