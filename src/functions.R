@@ -35,7 +35,7 @@ plot_stat_mat = function(stat_mat){
     colnames(go_mat) = c("comp", "gene")
     go_mat$value = c(sapply(colnames(stat_mat), function(i) return(stat_mat[,i])))
     require(ggplot2)
-        p = ggplot(go_mat, aes(factor(comp), factor(gene))) + labs(x = "", y = "") + theme(axis.text.x = element_text(angle = 90, hjust = 1), axis.title.y = element_text(size = rel(1.8)))
+        p = ggplot(go_mat, aes(factor(comp), factor(gene))) + labs(x = "", y = "") + theme_bw() + theme(axis.text.x = element_text(angle = 90, hjust = 1), axis.title.y = element_text(size = rel(1.8)), panel.border = element_blank(), panel.grid.major = element_blank(), panel.grid.minor = element_blank())
         p + geom_point(aes(size=value,col=value)) + scale_colour_gradient(low = "blue", high="red")
 }
 
