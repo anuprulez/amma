@@ -1,54 +1,49 @@
 category	term	ontology	M VS F (SPF, 8w)	M VS F (GF, 8w)	M VS F (SPF, 52w)	M VS F (GF, 52w)	M VS F (SPF, 104w)	M VS F (GF, 104w)
-GO:0004871	signal transducer activity	MF	0.0210626109863742	NA	NA	NA	NA	NA
-GO:0007186	G-protein coupled receptor signaling pathway	BP	0.00448010497360873	NA	NA	NA	NA	NA
-GO:0016020	membrane	CC	0.0018853759280335	NA	NA	NA	NA	NA
-GO:0044425	membrane part	CC	8.45185832820957e-05	NA	NA	NA	NA	NA
-GO:0060089	molecular transducer activity	MF	3.77060951100137e-05	NA	NA	NA	NA	NA
-GO:0004872	receptor activity	MF	3.77060951100137e-05	NA	NA	NA	NA	NA
-GO:0031224	intrinsic component of membrane	CC	2.29081864108449e-05	NA	NA	NA	NA	NA
-GO:0038023	signaling receptor activity	MF	2.59113969865016e-05	NA	NA	NA	NA	NA
-GO:0016021	integral component of membrane	CC	1.17654206852269e-05	NA	NA	NA	NA	NA
-GO:0099600	transmembrane receptor activity	MF	1.17654206852269e-05	NA	NA	NA	NA	NA
-GO:0004888	transmembrane signaling receptor activity	MF	1.17654206852269e-05	NA	NA	NA	NA	NA
-GO:0008260	3-oxoacid CoA-transferase activity	MF	NA	NA	0.0409243573586277	NA	NA	NA
-GO:0047045	testosterone 17-beta-dehydrogenase (NADP+) activity	MF	NA	NA	0.0366154002714944	NA	NA	NA
-GO:0016015	morphogen activity	MF	NA	NA	0.0173626262002117	NA	NA	NA
-GO:0035061	interchromatin granule	CC	NA	NA	0.0118483017548844	NA	NA	NA
-GO:0035441	cell migration involved in vasculogenesis	BP	NA	NA	0.000191737099741658	NA	NA	NA
-GO:0004534	5'-3' exoribonuclease activity	MF	NA	NA	4.9103312723342e-05	NA	NA	NA
-GO:0004651	polynucleotide 5'-phosphatase activity	MF	NA	NA	4.9103312723342e-05	NA	NA	NA
-GO:0072190	ureter urothelium development	BP	NA	NA	1.53264021295101e-05	NA	NA	NA
-GO:0018199	peptidyl-glutamine modification	BP	NA	NA	2.52230777202908e-05	NA	NA	NA
-GO:0006015	5-phosphoribose 1-diphosphate biosynthetic process	BP	NA	NA	7.38035080423058e-06	NA	NA	NA
-GO:0046391	5-phosphoribose 1-diphosphate metabolic process	BP	NA	NA	3.3602622997152e-06	NA	NA	NA
-GO:0046573	lactonohydrolase activity	MF	NA	NA	2.74422076088744e-06	NA	NA	NA
-GO:0031662	positive regulation of cyclin-dependent protein serine/threonine kinase activity involved in G2/M transition of mitotic cell cycle	BP	NA	0.0424402042880244	NA	NA	NA	NA
-GO:0071317	cellular response to isoquinoline alkaloid	BP	NA	0.0446235012178343	NA	NA	NA	NA
-GO:0035938	estradiol secretion	BP	NA	0.027555054530781	NA	NA	NA	NA
-GO:2000864	regulation of estradiol secretion	BP	NA	0.0446235012178343	NA	NA	NA	NA
-GO:0015860	purine nucleoside transmembrane transport	BP	NA	0.0103751700979535	NA	NA	NA	NA
-GO:1901642	nucleoside transmembrane transport	BP	NA	0.00984401871787307	NA	NA	NA	NA
-GO:0046136	positive regulation of vitamin metabolic process	BP	NA	0.00425040065600407	NA	NA	NA	NA
-GO:0060557	positive regulation of vitamin D biosynthetic process	BP	NA	0.00545326545991451	NA	NA	NA	NA
-GO:0060559	positive regulation of calcidiol 1-monooxygenase activity	BP	NA	0.000307072208299837	NA	NA	NA	NA
-GO:0008476	protein-tyrosine sulfotransferase activity	MF	NA	NA	8.10727939104448e-07	NA	NA	NA
-GO:0047238	glucuronosyl-N-acetylgalactosaminyl-proteoglycan 4-beta-N-acetylgalactosaminyltransferase activity	MF	NA	NA	NA	0.0411706495320758	NA	NA
-GO:0035402	histone kinase activity (H3-T11 specific)	MF	NA	NA	NA	0.040567942173274	NA	NA
-GO:0021529	spinal cord oligodendrocyte cell differentiation	BP	NA	NA	NA	0.0277671510231528	NA	NA
-GO:0021530	spinal cord oligodendrocyte cell fate specification	BP	NA	NA	NA	0.00863593224866894	NA	NA
-GO:0004167	dopachrome isomerase activity	MF	NA	NA	NA	0.00139247058419047	NA	NA
-GO:0070376	regulation of ERK5 cascade	BP	NA	NA	NA	0.00139247058419047	NA	NA
-GO:2001013	epithelial cell proliferation involved in renal tubule morphogenesis	BP	NA	NA	NA	0.000898115879003932	NA	NA
-GO:0008900	hydrogen:potassium-exchanging ATPase activity	MF	NA	NA	NA	0.0011376501729766	NA	NA
-GO:0033180	proton-transporting V-type ATPase, V1 domain	CC	NA	NA	NA	5.22227464605919e-05	NA	NA
-GO:0060282	positive regulation of oocyte development	BP	NA	NA	NA	4.00395761498597e-05	NA	NA
-GO:1905881	positive regulation of oogenesis	BP	NA	NA	NA	2.73820316412916e-05	NA	NA
-GO:0032264	IMP salvage	BP	NA	NA	NA	8.18711971044106e-06	NA	NA
-GO:0004991	parathyroid hormone receptor activity	MF	NA	NA	7.93311782719595e-07	NA	NA	NA
-GO:0004984	olfactory receptor activity	MF	2.29081864108449e-05	NA	NA	NA	NA	NA
-GO:0007608	sensory perception of smell	BP	1.53787139772267e-05	NA	NA	NA	NA	NA
-GO:0048485	sympathetic nervous system development	BP	NA	NA	4.93799963624363e-07	NA	NA	NA
-GO:0048566	embryonic digestive tract development	BP	NA	NA	4.93799963624363e-07	NA	NA	NA
-GO:1904036	negative regulation of epithelial cell apoptotic process	BP	NA	NA	NA	8.18711971044106e-06	NA	NA
-GO:0061552	ganglion morphogenesis	BP	NA	NA	4.93799963624363e-07	NA	NA	NA
-GO:1902442	regulation of ripoptosome assembly involved in necroptotic process	BP	NA	NA	4.93799963624363e-07	NA	NA	NA
+GO:0042802	identical protein binding	MF	NA	NA	0.0350432229435885	NA	NA	NA
+GO:0004930	G-protein coupled receptor activity	MF	NA	NA	0.00390445189907475	NA	NA	NA
+GO:0044712	single-organism catabolic process	BP	NA	NA	0.000116090623925905	NA	NA	NA
+GO:0010033	response to organic substance	BP	NA	NA	0.000154042010819282	NA	NA	NA
+GO:0042221	response to chemical	BP	NA	NA	1.76571208395358e-05	NA	NA	NA
+GO:0043161	proteasome-mediated ubiquitin-dependent protein catabolic process	BP	NA	NA	1.20432283408822e-05	NA	NA	NA
+GO:0010498	proteasomal protein catabolic process	BP	NA	NA	1.03946983470322e-05	NA	NA	NA
+GO:0004871	signal transducer activity	MF	0.0438861935933866	NA	1.76571208395358e-05	NA	NA	NA
+GO:0007186	G-protein coupled receptor signaling pathway	BP	0.00410493607245999	NA	1.76571208395358e-05	NA	NA	NA
+GO:0016020	membrane	CC	0.000838818812098494	NA	NA	NA	NA	NA
+GO:0044425	membrane part	CC	5.56811157922778e-05	NA	NA	NA	NA	NA
+GO:0004872	receptor activity	MF	4.95459683118982e-05	NA	NA	NA	NA	NA
+GO:0060089	molecular transducer activity	MF	4.95459683118982e-05	NA	NA	NA	NA	NA
+GO:0038023	signaling receptor activity	MF	4.3457477450412e-05	NA	NA	NA	NA	NA
+GO:0099600	transmembrane receptor activity	MF	1.71127265379939e-05	NA	NA	NA	NA	NA
+GO:0031224	intrinsic component of membrane	CC	1.54837630890652e-05	NA	NA	NA	NA	NA
+GO:0004888	transmembrane signaling receptor activity	MF	1.54837630890652e-05	NA	NA	NA	NA	NA
+GO:0007606	sensory perception of chemical stimulus	BP	2.42479520010263e-05	NA	NA	NA	NA	NA
+GO:0016021	integral component of membrane	CC	9.10957386840062e-06	NA	NA	NA	NA	NA
+GO:0046083	adenine metabolic process	BP	NA	NA	8.12098264780696e-07	NA	NA	NA
+GO:0035509	negative regulation of myosin-light-chain-phosphatase activity	BP	NA	NA	8.12098264780696e-07	NA	NA	NA
+GO:2000409	positive regulation of T cell extravasation	BP	NA	NA	8.12098264780696e-07	NA	NA	NA
+GO:0102007	acyl-L-homoserine-lactone lactonohydrolase activity	MF	NA	0.0251448449992032	NA	NA	NA	NA
+GO:0033600	negative regulation of mammary gland epithelial cell proliferation	BP	NA	0.0251448449992032	NA	NA	NA	NA
+GO:0002591	positive regulation of antigen processing and presentation of peptide antigen via MHC class I	BP	NA	0.033613790753266	NA	NA	NA	NA
+GO:0016005	phospholipase A2 activator activity	MF	NA	0.0112717701983884	NA	NA	NA	NA
+GO:0070874	negative regulation of glycogen metabolic process	BP	NA	0.00601906896030562	NA	NA	NA	NA
+GO:0035280	miRNA loading onto RISC involved in gene silencing by miRNA	BP	NA	3.96841766722542e-05	NA	NA	NA	NA
+GO:2000343	positive regulation of chemokine (C-X-C motif) ligand 2 production	BP	NA	NA	NA	0.0418779173336746	NA	NA
+GO:0014038	regulation of Schwann cell differentiation	BP	NA	NA	NA	0.0418779173336746	NA	NA
+GO:0014040	positive regulation of Schwann cell differentiation	BP	NA	NA	NA	0.0418779173336746	NA	NA
+GO:0006689	ganglioside catabolic process	BP	NA	NA	NA	0.0285430695323398	NA	NA
+GO:0008441	3'(2'),5'-bisphosphate nucleotidase activity	MF	NA	NA	NA	0.0175838160968262	NA	NA
+GO:0033216	ferric iron import	BP	NA	NA	NA	0.00617119969920723	NA	NA
+GO:2000543	positive regulation of gastrulation	BP	NA	NA	NA	0.00617119969920723	NA	NA
+GO:0032819	positive regulation of natural killer cell proliferation	BP	NA	NA	NA	0.00179114754967388	NA	NA
+GO:0042361	menaquinone catabolic process	BP	NA	NA	NA	0.00179114754967388	NA	NA
+GO:0042377	vitamin K catabolic process	BP	NA	NA	NA	0.000302732591976084	NA	NA
+GO:0071649	regulation of chemokine (C-C motif) ligand 5 production	BP	NA	NA	NA	0.000258129143484423	NA	NA
+GO:0005968	Rab-protein geranylgeranyltransferase complex	CC	NA	NA	NA	0.000170891789010041	NA	NA
+GO:0006561	proline biosynthetic process	BP	NA	NA	NA	1.62023488878405e-05	NA	NA
+GO:2000646	positive regulation of receptor catabolic process	BP	NA	NA	NA	2.17455205948355e-05	NA	NA
+GO:0004984	olfactory receptor activity	MF	2.24583373516596e-05	NA	NA	NA	NA	NA
+GO:0007608	sensory perception of smell	BP	1.54837630890652e-05	NA	NA	NA	NA	NA
+GO:0018749	(3,5-dichlorophenylurea)acetate amidohydrolase activity	MF	NA	NA	3.99775572565701e-07	NA	NA	NA
+GO:0019103	pyrimidine nucleotide binding	MF	NA	NA	3.99775572565701e-07	NA	NA	NA
+GO:0044065	regulation of respiratory system process	BP	NA	NA	NA	8.06117689513208e-06	NA	NA
+GO:0005785	signal recognition particle receptor complex	CC	NA	NA	3.99775572565701e-07	NA	NA	NA
