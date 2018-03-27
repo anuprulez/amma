@@ -1,13 +1,17 @@
 category	term	ontology	GF VS SPF
-GO:0007059	chromosome segregation	BP	0.00443543593624621
-GO:0051301	cell division	BP	0.0211688558031389
-GO:0007049	cell cycle	BP	0.0211688558031389
-GO:0006323	DNA packaging	BP	0.0211688558031389
-GO:0098813	nuclear chromosome segregation	BP	0.0211688558031389
-GO:0000280	nuclear division	BP	0.0211688558031389
-GO:0048285	organelle fission	BP	0.0249921885319977
-GO:0005515	protein binding	MF	0.0249921885319977
-GO:0048585	negative regulation of response to stimulus	BP	0.0249921885319977
-GO:0000278	mitotic cell cycle	BP	0.0344035456158138
-GO:0009897	external side of plasma membrane	CC	0.0344035456158138
-GO:1903047	mitotic cell cycle process	BP	0.0354642456960245
+GO:0000280	nuclear division	BP	1.20659589360526e-05
+GO:0048285	organelle fission	BP	1.20659589360526e-05
+GO:0007067	mitotic nuclear division	BP	0.0011849519699709
+GO:0007059	chromosome segregation	BP	0.00159773082452447
+GO:1903047	mitotic cell cycle process	BP	0.00218938829384514
+GO:0000278	mitotic cell cycle	BP	0.00218938829384514
+GO:0051301	cell division	BP	0.00266050028710031
+GO:0098813	nuclear chromosome segregation	BP	0.00380567257782349
+GO:0006323	DNA packaging	BP	0.00564273521552248
+GO:0007049	cell cycle	BP	0.00648538360305639
+GO:0022402	cell cycle process	BP	0.0114323661126414
+GO:0009897	external side of plasma membrane	CC	0.0148799923516217
+GO:0071103	DNA conformation change	BP	0.0253838522104437
+GO:0000793	condensed chromosome	CC	0.0260557018866178
+GO:0019220	regulation of phosphate metabolic process	BP	0.0391045257807733
+GO:0051174	regulation of phosphorus metabolic process	BP	0.0391045257807733

@@ -1,5 +1,2 @@
-category	term	ontology	GF VS SPF (F, 8w)	GF VS SPF (M, 8w)	GF VS SPF (F, 52w)	GF VS SPF (M, 52w)	GF VS SPF (F, 104w)	GF VS SPF (M, 104w)	GF VS SPF (global)
-GO:0006930	substrate-dependent cell migration, cell extension	BP	NA	NA	NA	NA	NA	0.0426757008705954	NA
-GO:0006931	substrate-dependent cell migration, cell attachment to substrate	BP	NA	NA	NA	NA	NA	0.0343986575631872	NA
-GO:0008386	cholesterol monooxygenase (side-chain-cleaving) activity	MF	NA	NA	NA	NA	0.0231579367117263	NA	NA
-GO:0018002	N-terminal peptidyl-glutamic acid acetylation	BP	NA	NA	NA	NA	0.00603486101503976	NA	NA
+category	term	ontology	GF VS SPF (F, 8w)	GF VS SPF (M, 8w)	GF VS SPF (F, 52w)	GF VS SPF (M, 52w)	GF VS SPF (F, 104w)	GF VS SPF (M, 104w)
+GO:0017112	Rab guanyl-nucleotide exchange factor activity	MF	NA	NA	NA	NA	0.00601584753400126	NA

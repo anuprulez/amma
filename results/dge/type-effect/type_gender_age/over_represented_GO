@@ -1,77 +1,69 @@
-category	term	ontology	GF VS SPF (F, 8w)	GF VS SPF (M, 8w)	GF VS SPF (F, 52w)	GF VS SPF (M, 52w)	GF VS SPF (F, 104w)	GF VS SPF (M, 104w)	GF VS SPF (global)
-GO:0002376	immune system process	BP	NA	NA	0.00981473696245726	0.000378594503090276	0.00444863079047326	NA	0.00443543593624621
-GO:0070488	neutrophil aggregation	BP	NA	NA	0.0110158345563117	0.000378594503090276	NA	NA	0.0211688558031389
-GO:0010812	negative regulation of cell-substrate adhesion	BP	NA	NA	0.0110158345563117	0.000663954495934473	NA	NA	0.0211688558031389
-GO:0048030	disaccharide binding	MF	NA	NA	0.0355936214961527	0.000663954495934473	NA	NA	0.0211688558031389
-GO:2001027	negative regulation of endothelial cell chemotaxis	BP	NA	NA	0.0400209178850543	0.000663954495934473	NA	NA	0.0211688558031389
-GO:0030595	leukocyte chemotaxis	BP	NA	NA	0.0410343448871111	0.000663954495934473	NA	NA	0.0211688558031389
-GO:0018119	peptidyl-cysteine S-nitrosylation	BP	NA	NA	0.0410343448871111	0.00121153600127389	NA	NA	0.0249921885319977
-GO:0035662	Toll-like receptor 4 binding	MF	NA	NA	0.0410343448871111	0.00121153600127389	NA	NA	0.0249921885319977
-GO:0017014	protein nitrosylation	BP	NA	NA	0.0410343448871111	0.00129125454107786	NA	NA	0.0249921885319977
-GO:0034143	regulation of toll-like receptor 4 signaling pathway	BP	NA	NA	0.0410343448871111	0.00221976973306759	NA	NA	0.0344035456158138
-GO:0048522	positive regulation of cellular process	BP	NA	NA	0.0410343448871111	0.00403506800152858	NA	NA	0.0344035456158138
-GO:0006952	defense response	BP	NA	NA	0.0410343448871111	0.00417894912721834	NA	NA	0.0354642456960245
-GO:0050900	leukocyte migration	BP	NA	NA	0.0410343448871111	0.00452431717408612	NA	NA	NA
-GO:0050793	regulation of developmental process	BP	NA	NA	0.0410343448871111	0.00548482318760217	NA	NA	NA
-GO:0002682	regulation of immune system process	BP	NA	NA	0.0410343448871111	0.00791479113250665	NA	NA	NA
-GO:0002291	T cell activation via T cell receptor contact with antigen bound to MHC molecule on antigen presenting cell	BP	NA	NA	0.0410343448871111	0.00935660933043191	NA	NA	NA
-GO:0048518	positive regulation of biological process	BP	NA	NA	0.045586064776374	0.00935660933043191	NA	NA	NA
-GO:0050786	RAGE receptor binding	MF	NA	NA	NA	0.012318077488628	NA	NA	NA
-GO:0097529	myeloid leukocyte migration	BP	NA	NA	NA	0.0124724883461674	NA	NA	NA
-GO:0061844	antimicrobial humoral immune response mediated by antimicrobial peptide	BP	NA	NA	NA	0.0130530064193645	NA	NA	NA
-GO:0009897	external side of plasma membrane	CC	NA	NA	NA	0.0130530064193645	NA	NA	NA
-GO:0071674	mononuclear cell migration	BP	NA	NA	NA	0.0130530064193645	NA	NA	NA
-GO:0060326	cell chemotaxis	BP	NA	NA	NA	0.0130530064193645	NA	NA	NA
-GO:0031640	killing of cells of other organism	BP	NA	NA	NA	0.0137225603607416	NA	NA	NA
-GO:0044364	disruption of cells of other organism	BP	NA	NA	NA	0.0137225603607416	NA	NA	NA
-GO:2000026	regulation of multicellular organismal development	BP	NA	NA	NA	0.0137225603607416	NA	NA	NA
-GO:0051239	regulation of multicellular organismal process	BP	NA	NA	NA	0.0137225603607416	NA	NA	NA
-GO:0018198	peptidyl-cysteine modification	BP	NA	NA	NA	0.0153634074639399	NA	NA	NA
-GO:0002683	negative regulation of immune system process	BP	NA	NA	NA	0.0164778891786098	NA	NA	NA
-GO:0050544	arachidonic acid binding	MF	NA	NA	NA	0.0169252354401153	NA	NA	NA
-GO:0034358	plasma lipoprotein particle	CC	NA	NA	NA	0.0169252354401153	NA	NA	NA
-GO:1990777	lipoprotein particle	CC	NA	NA	NA	0.0188210526842636	NA	NA	NA
-GO:0034142	toll-like receptor 4 signaling pathway	BP	NA	NA	NA	0.0188210526842636	NA	NA	NA
-GO:0050543	icosatetraenoic acid binding	MF	NA	NA	NA	0.0198934116067378	NA	NA	NA
-GO:0035331	negative regulation of hippo signaling	BP	NA	NA	NA	0.0198934116067378	NA	NA	NA
-GO:0008270	zinc ion binding	MF	NA	NA	NA	0.0198934116067378	NA	NA	NA
-GO:0032994	protein-lipid complex	CC	NA	NA	NA	0.0202109716883665	NA	NA	NA
-GO:0050542	icosanoid binding	MF	NA	NA	NA	0.0202109716883665	NA	NA	NA
-GO:0071838	cell proliferation in bone marrow	BP	NA	NA	NA	0.0202109716883665	NA	NA	NA
-GO:0007162	negative regulation of cell adhesion	BP	NA	NA	NA	0.0202109716883665	NA	NA	NA
-GO:0032502	developmental process	BP	NA	NA	NA	0.0204341549213299	NA	NA	NA
-GO:0005504	fatty acid binding	MF	NA	NA	NA	0.0206189663743832	NA	NA	NA
-GO:0008144	drug binding	MF	NA	NA	NA	0.0233653252090669	NA	NA	NA
-GO:0043236	laminin binding	MF	NA	NA	NA	0.0243033730860625	NA	NA	NA
-GO:0006811	ion transport	BP	NA	NA	NA	0.0243033730860625	NA	NA	NA
-GO:0050922	negative regulation of chemotaxis	BP	NA	NA	NA	0.0243033730860625	NA	NA	NA
-GO:0001953	negative regulation of cell-matrix adhesion	BP	NA	NA	NA	0.0243033730860625	NA	NA	NA
-GO:0016485	protein processing	BP	NA	NA	NA	0.0243033730860625	NA	NA	NA
-GO:0048246	macrophage chemotaxis	BP	NA	NA	NA	0.0247987301722766	NA	NA	NA
-GO:0046914	transition metal ion binding	MF	NA	NA	NA	0.0249918409865638	NA	NA	NA
-GO:0019882	antigen processing and presentation	BP	NA	NA	NA	0.0252573257028274	NA	NA	NA
-GO:0019730	antimicrobial humoral response	BP	NA	NA	NA	0.0252757811260981	NA	NA	NA
-GO:0034145	positive regulation of toll-like receptor 4 signaling pathway	BP	NA	NA	NA	0.0267755593867738	NA	NA	NA
-GO:0002227	innate immune response in mucosa	BP	NA	NA	NA	0.026821792123513	NA	NA	NA
-GO:0015711	organic anion transport	BP	NA	NA	NA	0.0268526354339445	NA	NA	NA
-GO:0071675	regulation of mononuclear cell migration	BP	NA	NA	NA	0.0279028664390077	NA	NA	NA
-GO:0070492	oligosaccharide binding	MF	NA	NA	NA	0.0296189596806011	NA	NA	NA
-GO:0070232	regulation of T cell apoptotic process	BP	NA	NA	NA	0.032553877003252	NA	NA	NA
-GO:1905517	macrophage migration	BP	NA	NA	NA	0.0349326354175372	NA	NA	NA
-GO:0006869	lipid transport	BP	NA	NA	NA	0.0359892551385304	NA	NA	NA
-GO:0035330	regulation of hippo signaling	BP	NA	NA	NA	0.0369968641319065	NA	NA	NA
-GO:0048731	system development	BP	NA	NA	NA	0.0369968641319065	NA	NA	NA
-GO:0051094	positive regulation of developmental process	BP	NA	NA	NA	0.0369968641319065	NA	NA	NA
-GO:0006915	apoptotic process	BP	NA	NA	NA	0.0369968641319065	NA	NA	NA
-GO:0034362	low-density lipoprotein particle	CC	NA	NA	NA	0.0389402994539722	NA	NA	NA
-GO:0035325	Toll-like receptor binding	MF	NA	NA	NA	0.0432115770991159	NA	NA	NA
-GO:0042581	specific granule	CC	NA	NA	NA	0.0446218355424891	NA	NA	NA
-GO:0035821	modification of morphology or physiology of other organism	BP	NA	NA	NA	0.0446218355424891	NA	NA	NA
-GO:0071621	granulocyte chemotaxis	BP	NA	NA	NA	0.0446218355424891	NA	NA	NA
-GO:0012501	programmed cell death	BP	NA	NA	NA	0.0446218355424891	NA	NA	NA
-GO:0050789	regulation of biological process	BP	NA	NA	NA	0.0446218355424891	NA	NA	NA
-GO:0070486	leukocyte aggregation	BP	NA	NA	NA	0.0446218355424891	NA	NA	NA
-GO:0051179	localization	BP	NA	NA	NA	0.0446218355424891	NA	NA	NA
-GO:0002688	regulation of leukocyte chemotaxis	BP	NA	NA	NA	0.0448752191673457	NA	NA	NA
-GO:0036041	long-chain fatty acid binding	MF	NA	NA	NA	0.0448752191673457	NA	NA	NA
-GO:0002523	leukocyte migration involved in inflammatory response	BP	NA	NA	NA	0.0448752191673457	NA	NA	NA
+category	term	ontology	GF VS SPF (F, 8w)	GF VS SPF (M, 8w)	GF VS SPF (F, 52w)	GF VS SPF (M, 52w)	GF VS SPF (F, 104w)	GF VS SPF (M, 104w)
+GO:0070488	neutrophil aggregation	BP	NA	NA	0.00425464474747383	6.09880452193375e-05	0.00258265621308414	0.00981679596646124
+GO:0010812	negative regulation of cell-substrate adhesion	BP	NA	NA	0.00666675609705085	6.09880452193375e-05	NA	NA
+GO:0030595	leukocyte chemotaxis	BP	NA	NA	0.0189732755849135	6.09880452193375e-05	NA	NA
+GO:0002376	immune system process	BP	NA	NA	0.0189732755849135	6.09880452193375e-05	NA	NA
+GO:0048030	disaccharide binding	MF	NA	NA	0.0189732755849135	7.28467372366436e-05	NA	NA
+GO:0018119	peptidyl-cysteine S-nitrosylation	BP	NA	NA	0.020358701685129	0.00025384341535369	NA	NA
+GO:2001027	negative regulation of endothelial cell chemotaxis	BP	NA	NA	0.0285205715649961	0.000381129924710941	NA	NA
+GO:0017014	protein nitrosylation	BP	NA	NA	0.029477479192964	0.000406297488974444	NA	NA
+GO:0035662	Toll-like receptor 4 binding	MF	NA	NA	0.029477479192964	0.000406297488974444	NA	NA
+GO:0050900	leukocyte migration	BP	NA	NA	0.029477479192964	0.000512211190322352	NA	NA
+GO:0034143	regulation of toll-like receptor 4 signaling pathway	BP	NA	NA	0.0351758138365139	0.000670294989300564	NA	NA
+GO:0097529	myeloid leukocyte migration	BP	NA	NA	NA	0.000670294989300564	NA	NA
+GO:0005615	extracellular space	CC	NA	NA	NA	0.00208062871033931	NA	NA
+GO:0006952	defense response	BP	NA	NA	NA	0.00208062871033931	NA	NA
+GO:0009897	external side of plasma membrane	CC	NA	NA	NA	0.00241348216214507	NA	NA
+GO:0071674	mononuclear cell migration	BP	NA	NA	NA	0.00241348216214507	NA	NA
+GO:0060326	cell chemotaxis	BP	NA	NA	NA	0.0025251030110438	NA	NA
+GO:0050786	RAGE receptor binding	MF	NA	NA	NA	0.0025251030110438	NA	NA
+GO:0002291	T cell activation via T cell receptor contact with antigen bound to MHC molecule on antigen presenting cell	BP	NA	NA	NA	0.00287962728510728	NA	NA
+GO:0050542	icosanoid binding	MF	NA	NA	NA	0.00287962728510728	NA	NA
+GO:0050544	arachidonic acid binding	MF	NA	NA	NA	0.00365303597421105	NA	NA
+GO:0048522	positive regulation of cellular process	BP	NA	NA	NA	0.00365303597421105	NA	NA
+GO:0050543	icosatetraenoic acid binding	MF	NA	NA	NA	0.00369516189697404	NA	NA
+GO:0018198	peptidyl-cysteine modification	BP	NA	NA	NA	0.00478856631190749	NA	NA
+GO:0006811	ion transport	BP	NA	NA	NA	0.00537261056939591	NA	NA
+GO:0034358	plasma lipoprotein particle	CC	NA	NA	NA	0.00537261056939591	NA	NA
+GO:1990777	lipoprotein particle	CC	NA	NA	NA	0.00590421345056814	NA	NA
+GO:0005504	fatty acid binding	MF	NA	NA	NA	0.00597838589441706	NA	NA
+GO:0070492	oligosaccharide binding	MF	NA	NA	NA	0.00628672222999099	NA	NA
+GO:0032994	protein-lipid complex	CC	NA	NA	NA	0.00628672222999099	NA	NA
+GO:0034142	toll-like receptor 4 signaling pathway	BP	NA	NA	NA	0.00644008854903251	NA	NA
+GO:0043236	laminin binding	MF	NA	NA	NA	0.00687467789597133	NA	NA
+GO:0048246	macrophage chemotaxis	BP	NA	NA	NA	0.00687467789597133	NA	NA
+GO:0008237	metallopeptidase activity	MF	NA	NA	NA	0.00823939939962114	NA	NA
+GO:0071838	cell proliferation in bone marrow	BP	NA	NA	NA	0.0107132323308388	NA	NA
+GO:0008144	drug binding	MF	NA	NA	NA	0.0107132323308388	NA	NA
+GO:0071675	regulation of mononuclear cell migration	BP	NA	NA	NA	0.0107132323308388	NA	NA
+GO:0015711	organic anion transport	BP	NA	NA	NA	0.0114052967049751	NA	NA
+GO:0044403	symbiosis, encompassing mutualism through parasitism	BP	NA	NA	NA	0.0118703115316833	NA	NA
+GO:0044419	interspecies interaction between organisms	BP	NA	NA	NA	0.0140542956893785	NA	NA
+GO:0001953	negative regulation of cell-matrix adhesion	BP	NA	NA	NA	0.0172511327320655	NA	NA
+GO:0048518	positive regulation of biological process	BP	NA	NA	NA	0.0177420000658628	NA	NA
+GO:0002683	negative regulation of immune system process	BP	NA	NA	NA	0.0179784014439037	NA	NA
+GO:0006869	lipid transport	BP	NA	NA	NA	0.0179861373165895	NA	NA
+GO:0002227	innate immune response in mucosa	BP	NA	NA	NA	0.01878923000363	NA	NA
+GO:0070232	regulation of T cell apoptotic process	BP	NA	NA	NA	0.0189395960933794	NA	NA
+GO:0071621	granulocyte chemotaxis	BP	NA	NA	NA	0.0189395960933794	NA	NA
+GO:0016485	protein processing	BP	NA	NA	NA	0.0204727454970708	NA	NA
+GO:0036041	long-chain fatty acid binding	MF	NA	NA	NA	0.0204727454970708	NA	NA
+GO:0034145	positive regulation of toll-like receptor 4 signaling pathway	BP	NA	NA	NA	0.0204727454970708	NA	NA
+GO:0046983	protein dimerization activity	MF	NA	NA	NA	0.0224006761509226	NA	NA
+GO:0035325	Toll-like receptor binding	MF	NA	NA	NA	0.0224006761509226	NA	NA
+GO:0034362	low-density lipoprotein particle	CC	NA	NA	NA	0.0227580220291136	NA	NA
+GO:0002688	regulation of leukocyte chemotaxis	BP	NA	NA	NA	0.0232230891674379	NA	NA
+GO:0002685	regulation of leukocyte migration	BP	NA	NA	NA	0.0237480326799565	NA	NA
+GO:0002682	regulation of immune system process	BP	NA	NA	NA	0.0248956245340212	NA	NA
+GO:0044764	multi-organism cellular process	BP	NA	NA	NA	0.0257702478709284	NA	NA
+GO:0051818	disruption of cells of other organism involved in symbiotic interaction	BP	NA	NA	NA	0.027403745304933	NA	NA
+GO:0051883	killing of cells in other organism involved in symbiotic interaction	BP	NA	NA	NA	0.0302718960559896	NA	NA
+GO:0042581	specific granule	CC	NA	NA	NA	0.0371953257595658	NA	NA
+GO:0044707	single-multicellular organism process	BP	NA	NA	NA	0.0406284217924471	NA	NA
+GO:0051604	protein maturation	BP	NA	NA	NA	0.0409557754206308	NA	NA
+GO:0019882	antigen processing and presentation	BP	NA	NA	NA	0.0413911639421107	NA	NA
+GO:0044133	growth of symbiont on or near host	BP	NA	NA	NA	0.0418952122339845	NA	NA
+GO:0044139	modulation of growth of symbiont on or near host	BP	NA	NA	NA	0.0438272063039981	NA	NA
+GO:0044140	negative regulation of growth of symbiont on or near host surface	BP	NA	NA	NA	0.0442928607717259	NA	NA
+GO:0097530	granulocyte migration	BP	NA	NA	NA	0.0442928607717259	NA	NA
+GO:0010942	positive regulation of cell death	BP	NA	NA	NA	0.0460456816837536	NA	NA

@@ -1,3 +1,2 @@
-category	term	ontology	GF VS SPF (8w)	GF VS SPF (52w)	GF VS SPF (104w)	GF VS SPF (global)
-GO:0006990	positive regulation of transcription from RNA polymerase II promoter involved in unfolded protein response	BP	NA	NA	0.0182429258567903	NA
-GO:0006995	cellular response to nitrogen starvation	BP	NA	NA	0.0122116236239946	NA
+category	term	ontology	GF VS SPF (8w)	GF VS SPF (52w)	GF VS SPF (104w)
+GO:0007252	I-kappaB phosphorylation	BP	NA	NA	0.0354715444415763
