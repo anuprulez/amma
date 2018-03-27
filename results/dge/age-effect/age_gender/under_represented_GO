@@ -1,10 +1,11 @@
 category	term	ontology	52w VS 8w (F)	52w VS 8w (M)	104w VS 8w (F)	104w VS 8w (M)	104w VS 52w (F)	104w VS 52w (M)
-GO:0001156	TFIIIC-class transcription factor binding	MF	NA	NA	NA	NA	NA	0.000227149583350243
-GO:0001160	transcription termination site DNA binding	MF	NA	NA	NA	NA	NA	0.000263466877547822
-GO:0001163	RNA polymerase I regulatory region sequence-specific DNA binding	MF	NA	NA	NA	NA	NA	2.26715314479467e-05
-GO:0001710	mesodermal cell fate commitment	BP	NA	NA	0.00191406290767468	NA	NA	NA
-GO:0004131	cytosine deaminase activity	MF	NA	NA	NA	0.00694717063570232	NA	NA
-GO:0004132	dCMP deaminase activity	MF	NA	NA	NA	8.13572096743813e-05	NA	NA
-GO:0036327	VEGF-B-activated receptor activity	MF	NA	NA	NA	0.00336403517283904	NA	NA
-GO:0051444	negative regulation of ubiquitin-protein transferase activity	BP	NA	NA	0.000448304861032868	NA	NA	NA
-GO:0061886	negative regulation of mini excitatory postsynaptic potential	BP	NA	NA	0.0406191602762524	NA	NA	NA
+GO:0001739	sex chromatin	CC	NA	NA	NA	NA	NA	0.0112690408878913
+GO:0001740	Barr body	CC	NA	NA	NA	NA	NA	0.00092486516195875
+GO:0001743	optic placode formation	BP	NA	NA	NA	NA	NA	0.000434147428849289
+GO:0002332	transitional stage B cell differentiation	BP	NA	NA	0.00212163386673769	NA	NA	NA
+GO:0004608	phosphatidylethanolamine N-methyltransferase activity	MF	NA	NA	NA	0.0396085477627478	NA	NA
+GO:0004609	phosphatidylserine decarboxylase activity	MF	NA	NA	NA	0.0337337190345084	NA	NA
+GO:0004610	phosphoacetylglucosamine mutase activity	MF	NA	NA	NA	0.00153249275267824	NA	NA
+GO:0004611	phosphoenolpyruvate carboxykinase activity	MF	NA	NA	NA	1.25375166416228e-05	NA	NA
+GO:0032786	positive regulation of DNA-templated transcription, elongation	BP	NA	NA	0.000522592965530266	NA	NA	NA
+GO:0035721	intraciliary retrograde transport	BP	NA	NA	NA	0.0029965955471709	NA	NA
