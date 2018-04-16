@@ -76,6 +76,18 @@ get_interesting_cat = function(wall, data_type, cat_type){
 }
 
 
+get_cat_de_genes = function(cat_id, cat2genes, de_genes){
+    cat_genes = cat2genes[cat2genes$values == cat_id, "ind"]
+    return(as.character(cat_genes[cat_genes %in% toupper(de_genes)]))
+}
+
+
+extract_go_de_genes = function(selected_go, cat, de_genes, full_go_genes, file_prefix){
+    go_de_genes = sapply(selected_go, function(y) get_cat_de_genes(y, full_go_genes, de_genes[[cat]]))
+    capture.output(go_de_genes, file = paste(file_prefix, gsub(" ", "_", cat), sep=""))
+}
+
+
 extract_diff_expr_genes = function(in_l, dir_path){
     # create dir if it does not exist
     full_dir_path = paste("../results/dge/", dir_path, sep="")
@@ -108,9 +120,9 @@ extract_diff_expr_genes = function(in_l, dir_path){
     #system(paste("put -p", name, "-t tabular"), intern=T)
     ## GO and KEGG analysis                  
     assayed_genes = rownames(in_l[[1]])
-    # extract the DE genes (1 in the deg matrix)
+    # extract the DE genes with abs(FC)>=2
     if(length(in_l)>1){
-        de_genes = sapply(colnames(l$deg), function(x) names(which(abs(l$fc_deg[,x])>=1)))
+        de_genes = sapply(colnames(l$fc_deg), function(x) names(which(abs(l$fc_deg[,x])>=1)))
     }else{
         de_genes = list()
         de_genes[[names(in_l)[1]]] = rownames(l$fc_deg)[which(abs(l$fc_deg)>=1)]
@@ -122,9 +134,9 @@ extract_diff_expr_genes = function(in_l, dir_path){
     pwf = lapply(1:dim(gene_vector)[2], function(x) suppressMessages(nullp(gene_vector[,x], 'mm10', 'geneSymbol', plot.fit=F)))
     names(pwf) = colnames(gene_vector)
     # calculate the over and under expressed GO categories among the DE genes
-    l$GO_wall = lapply(pwf, function(x) suppressMessages(goseq(x,'mm10', 'geneSymbol')))
+    l$GO_wall = lapply(pwf, function(x) suppressMessages(goseq(x, 'mm10', 'geneSymbol')))
     # calculate the over and under expressed KEGG pathways among the DE genes
-    l$KEGG_wall = lapply(pwf, function(x) suppressMessages(goseq(x,'mm10', 'geneSymbol', test.cats="KEGG")))
+    l$KEGG_wall = lapply(pwf, function(x) suppressMessages(goseq(x, 'mm10', 'geneSymbol', test.cats="KEGG")))
     # extract interesting pathways/categories and export them
     l$over_represented_GO = get_interesting_cat(l$GO_wall, "over_represented_pvalue", "GO")
     write.table(l$over_represented_GO, paste(full_dir_path, "over_represented_GO", sep=""), sep = "\t", quote = FALSE, row.names = FALSE)                
@@ -134,6 +146,26 @@ extract_diff_expr_genes = function(in_l, dir_path){
     write.table(l$over_represented_KEGG, paste(full_dir_path, "over_represented_KEGG", sep=""), sep = "\t", quote = FALSE, row.names = FALSE)    
     l$under_represented_KEGG = get_interesting_cat(l$KEGG_wall, "under_represented_pvalue", "KEGG")
     write.table(l$under_represented_KEGG, paste(full_dir_path, "under_represented_KEGG", sep=""), sep = "\t", quote = FALSE, row.names = FALSE)                       
+    # extract list of genes involved in the over and under represented GO
+    full_go_genes = stack(getgo(rownames(l$deg), 'mm10', 'geneSymbol'))
+    over_represented_GO = sapply(colnames(l$deg), function(x) l$over_represented_GO[which(!is.na(l$over_represented_GO[,x])),"category"])
+    under_represented_GO = sapply(colnames(l$deg), function(x) l$under_represented_GO[which(!is.na(l$under_represented_GO[,x])),"category"])
+    go_dir_path = paste(full_dir_path, "GO/", sep="")
+    dir.create(go_dir_path, showWarnings = FALSE)
+    for(x in colnames(l$deg)){
+        extract_go_de_genes(over_represented_GO[[x]], x, de_genes, full_go_genes, paste(go_dir_path, "over_repr_"))
+        extract_go_de_genes(under_represented_GO[[x]], x, de_genes, full_go_genes, paste(go_dir_path, "under_repr_"))
+    }
+    # extract list of genes involved in the over and under represented KEGG
+    full_kegg_genes = stack(getgo(rownames(l$deg), 'mm10', 'geneSymbol', fetch.cats="KEGG"))
+    over_represented_KEGG = sapply(colnames(l$deg), function(x) l$over_represented_KEGG[which(!is.na(l$over_represented_KEGG[,x])),"category"])
+    under_represented_KEGG = sapply(colnames(l$deg), function(x) l$under_represented_KEGG[which(!is.na(l$under_represented_KEGG[,x])),"category"])
+    kegg_dir_path = paste(full_dir_path, "KEGG/", sep="")
+    dir.create(kegg_dir_path, showWarnings = FALSE)
+    for(x in colnames(l$deg)){
+        extract_go_de_genes(over_represented_KEGG[[x]], x, de_genes, full_go_genes, paste(kegg_dir_path, "over_repr_"))
+        extract_go_de_genes(under_represented_KEGG[[x]], x, de_genes, full_go_genes, paste(kegg_dir_path, "under_repr_"))
+    }
     return(l)
 }
 

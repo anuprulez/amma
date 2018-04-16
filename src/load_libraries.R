@@ -16,6 +16,8 @@ suppressMessages(library(dendextend))
 suppressMessages(library(GOSemSim))
 suppressMessages(library(reshape2))
 suppressMessages(library(ggplot2))
+suppressMessages(library(GO.db))
+suppressMessages(library(annotate))
 
 suppressMessages(library(WGCNA))
 allowWGCNAThreads()
