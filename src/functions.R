@@ -182,13 +182,25 @@ get_repartition_3col = function(dge_mat) return(cbind(
     get_number(dge_mat[,1]<0 & dge_mat[,2]<0 & dge_mat[,3]<0)))
 
 quantile_breaks = function(xs, n = 10) {
-    breaks = quantile(xs, probs = seq(0, 1, length.out = n))
+    breaks = quantile(unlist(xs), probs = seq(0, 1, length.out = n))
     breaks[!duplicated(breaks)]
 }
+
 plot_count_heatmap = function(genes, samples, annot){
-    data = norm_counts[genes,samples]
+    plot_heatmap(norm_counts, genes, samples, annot)
+}
+
+plot_heatmap = function(count, genes, samples, annot){
+    data = count[genes,samples]
     breaks = quantile_breaks(data, n = 11)
-    pheatmap(data, cluster_rows=F, cluster_cols=F, show_rownames=F, show_colnames=F, annotation_col=annot, breaks=breaks, color=inferno(10))  
+    pheatmap(data,
+             cluster_rows=F,
+             cluster_cols=F,
+             show_rownames=F,
+             show_colnames=F,
+             annotation_col=annot,
+             breaks=breaks,
+             color=inferno(10))  
 }
 
 get_list = function(mapping){

@@ -18,6 +18,7 @@ suppressMessages(library(reshape2))
 suppressMessages(library(ggplot2))
 suppressMessages(library(GO.db))
 suppressMessages(library(annotate))
+suppressMessages(library(moe430a.db))
 
 suppressMessages(library(WGCNA))
 allowWGCNAThreads()

@@ -65,7 +65,9 @@ Analyses:
 2. [Comparison between the ages for the types (after controlling for gender)](age-effect-type) - [data](https://github.com/bebatut/neuromac_GF_mices/tree/master/results/dge/age-effect/age_type)
 3. [Comparison between the ages for the genders (after controlling for type)](age-effect-gender) - [data](https://github.com/bebatut/neuromac_GF_mices/tree/master/results/dge/age-effect/age_gender)
 4. [Comparison between the ages for the genders and types](age-effect-type-gender) - [data](https://github.com/bebatut/neuromac_GF_mices/tree/master/results/dge/age-effect/age_type_gender)
+5. [Comparison with results of Grabert et al, 2016](grabert_comparison)
 
 Summary:
 
 ![](https://github.com/bebatut/neuromac_GF_mices/blob/master/results/dge/age-effect/summary_dge.png?raw=true)
+
