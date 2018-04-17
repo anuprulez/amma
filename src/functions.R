@@ -82,16 +82,33 @@ get_cat_de_genes = function(cat_id, cat2genes, de_genes){
 }
 
 
-extract_go_de_genes = function(selected_go, cat, de_genes, full_go_genes, file_prefix){
-    go_de_genes = sapply(selected_go, function(y) get_cat_de_genes(y, full_go_genes, de_genes[[cat]]))
-    capture.output(go_de_genes, file = paste(file_prefix, gsub(" ", "_", cat), sep=""))
+extract_cat_de_genes = function(selected_cat, cat, de_genes, cat2genes, file_prefix){
+    cat_de_genes = sapply(selected_cat, function(y) get_cat_de_genes(y, cat2genes, de_genes[[cat]]))
+    capture.output(cat_de_genes, file = paste(file_prefix, gsub(" ", "_", cat), sep=""))
 }
 
+
+get_interesting_categories = function(deg, interesting_cat){
+    l = sapply(colnames(deg), function(x) interesting_cat[which(!is.na(interesting_cat[,x])),"category"])
+    if(dim(deg)[2]>1){
+        l = as.list()
+    }else{
+        l2 = list()
+        l2[[colnames(deg)]] = l
+        l = l2
+    }
+    names(l) = gsub(".category", "", names(l))
+    return(l)
+}
 
 extract_diff_expr_genes = function(in_l, dir_path){
     # create dir if it does not exist
     full_dir_path = paste("../results/dge/", dir_path, sep="")
     dir.create(full_dir_path, showWarnings = FALSE)
+    go_dir_path = paste(full_dir_path, "go/", sep="")
+    dir.create(go_dir_path, showWarnings = FALSE)
+    kegg_dir_path = paste(full_dir_path, "kegg/", sep="")
+    dir.create(kegg_dir_path, showWarnings = FALSE)
     l = list()
     # extract the significant differentially expressed genes (all, upregulated, downregulated)
     l$deg = sapply(in_l, function(mat) return(mat$padj < 0.05))*1
@@ -139,32 +156,30 @@ extract_diff_expr_genes = function(in_l, dir_path){
     l$KEGG_wall = lapply(pwf, function(x) suppressMessages(goseq(x, 'mm10', 'geneSymbol', test.cats="KEGG")))
     # extract interesting pathways/categories and export them
     l$over_represented_GO = get_interesting_cat(l$GO_wall, "over_represented_pvalue", "GO")
-    write.table(l$over_represented_GO, paste(full_dir_path, "over_represented_GO", sep=""), sep = "\t", quote = FALSE, row.names = FALSE)                
+    write.table(l$over_represented_GO, paste(go_dir_path, "over_represented_GO", sep=""), sep = "\t", quote = FALSE, row.names = FALSE)                
     l$under_represented_GO = get_interesting_cat(l$GO_wall, "under_represented_pvalue", "GO")
-    write.table(l$under_represented_GO, paste(full_dir_path, "under_represented_GO", sep=""), sep = "\t", quote = FALSE, row.names = FALSE)
+    write.table(l$under_represented_GO, paste(go_dir_path, "under_represented_GO", sep=""), sep = "\t", quote = FALSE, row.names = FALSE)
     l$over_represented_KEGG = get_interesting_cat(l$KEGG_wall, "over_represented_pvalue", "KEGG")
-    write.table(l$over_represented_KEGG, paste(full_dir_path, "over_represented_KEGG", sep=""), sep = "\t", quote = FALSE, row.names = FALSE)    
+    write.table(l$over_represented_KEGG, paste(kegg_dir_path, "over_represented_KEGG", sep=""), sep = "\t", quote = FALSE, row.names = FALSE)    
     l$under_represented_KEGG = get_interesting_cat(l$KEGG_wall, "under_represented_pvalue", "KEGG")
-    write.table(l$under_represented_KEGG, paste(full_dir_path, "under_represented_KEGG", sep=""), sep = "\t", quote = FALSE, row.names = FALSE)                       
+    write.table(l$under_represented_KEGG, paste(kegg_dir_path, "under_represented_KEGG", sep=""), sep = "\t", quote = FALSE, row.names = FALSE)                       
     # extract list of genes involved in the over and under represented GO
+    l$deg = as.data.frame(l$deg)
+    colnames(l$deg) = names(in_l)
     full_go_genes = stack(getgo(rownames(l$deg), 'mm10', 'geneSymbol'))
-    over_represented_GO = sapply(colnames(l$deg), function(x) l$over_represented_GO[which(!is.na(l$over_represented_GO[,x])),"category"])
-    under_represented_GO = sapply(colnames(l$deg), function(x) l$under_represented_GO[which(!is.na(l$under_represented_GO[,x])),"category"])
-    go_dir_path = paste(full_dir_path, "GO/", sep="")
-    dir.create(go_dir_path, showWarnings = FALSE)
+    over_represented_GO = get_interesting_categories(l$deg, l$over_represented_GO)
+    under_represented_GO = get_interesting_categories(l$deg, l$under_represented_GO)
     for(x in colnames(l$deg)){
-        extract_go_de_genes(over_represented_GO[[x]], x, de_genes, full_go_genes, paste(go_dir_path, "over_repr_"))
-        extract_go_de_genes(under_represented_GO[[x]], x, de_genes, full_go_genes, paste(go_dir_path, "under_repr_"))
+        extract_cat_de_genes(over_represented_GO[[x]], x, de_genes, full_go_genes, paste(go_dir_path, "over_repr_"))
+        extract_cat_de_genes(under_represented_GO[[x]], x, de_genes, full_go_genes, paste(go_dir_path, "under_repr_"))
     }
     # extract list of genes involved in the over and under represented KEGG
-    full_kegg_genes = stack(getgo(rownames(l$deg), 'mm10', 'geneSymbol', fetch.cats="KEGG"))
-    over_represented_KEGG = sapply(colnames(l$deg), function(x) l$over_represented_KEGG[which(!is.na(l$over_represented_KEGG[,x])),"category"])
-    under_represented_KEGG = sapply(colnames(l$deg), function(x) l$under_represented_KEGG[which(!is.na(l$under_represented_KEGG[,x])),"category"])
-    kegg_dir_path = paste(full_dir_path, "KEGG/", sep="")
-    dir.create(kegg_dir_path, showWarnings = FALSE)
+    full_kegg_genes = stack(getgo(rownames(as.data.frame(l$deg)), 'mm10', 'geneSymbol', fetch.cats="KEGG"))
+    over_represented_KEGG = get_interesting_categories(l$deg, l$over_represented_KEGG)
+    under_represented_KEGG =  get_interesting_categories(l$deg, l$under_represented_KEGG)
     for(x in colnames(l$deg)){
-        extract_go_de_genes(over_represented_KEGG[[x]], x, de_genes, full_go_genes, paste(kegg_dir_path, "over_repr_"))
-        extract_go_de_genes(under_represented_KEGG[[x]], x, de_genes, full_go_genes, paste(kegg_dir_path, "under_repr_"))
+        extract_cat_de_genes(over_represented_KEGG[[x]], x, de_genes, full_kegg_genes, paste(kegg_dir_path, "over_repr_", sep = ""))
+        extract_cat_de_genes(under_represented_KEGG[[x]], x, de_genes, full_kegg_genes, paste(kegg_dir_path, "under_repr_", sep = ""))
     }
     return(l)
 }

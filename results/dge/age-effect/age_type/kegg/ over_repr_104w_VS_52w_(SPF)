@@ -1,0 +1,9 @@
+$`04110`
+character(0)
+
+$`04114`
+[1] "IGF1"
+
+$`04060`
+[1] "CCL8"   "CXCL13" "CXCL14" "CXCR4"  "FLT1"   "IL2RG"  "PF4"   
+

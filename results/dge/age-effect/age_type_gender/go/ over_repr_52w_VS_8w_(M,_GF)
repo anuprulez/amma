@@ -1,0 +1,110 @@
+$`GO:0006952`
+ [1] "ACE"       "CAMP"      "CCR1"      "CD163"     "CHIL3"     "CHST1"    
+ [7] "CXCL13"    "FABP1"     "FCNB"      "HIST1H2BE" "KCNJ8"     "KLRD1"    
+[13] "LCN2"      "LTF"       "LY9"       "MASP1"     "MRC1"      "NGP"      
+[19] "PDE2A"     "PF4"       "PLA2G7"    "PPARG"     "PTK2"      "S100A8"   
+[25] "S100A9"    "TNFSF8"    "TRPV4"    
+
+$`GO:0008092`
+ [1] "ABLIM1" "APBB1"  "DLG5"   "FAM83D" "KIF11"  "KRT10"  "MLPH"   "MYH6"  
+ [9] "PPARG"  "PTK2"   "S100A8" "S100A9" "TRPV4" 
+
+$`GO:0009897`
+ [1] "ACE"     "CCR1"    "CD200R3" "CD22"    "EPOR"    "FCNB"    "KLRD1"  
+ [8] "MS4A1"   "PDCD1"   "VCAM1"  
+
+$`GO:0008017`
+[1] "FAM83D" "KIF11"  "MLPH"   "S100A8" "S100A9" "TRPV4" 
+
+$`GO:0050896`
+ [1] "ABLIM1"    "ACE"       "ADCY8"     "APBB1"     "CACNA1S"   "CAMP"     
+ [7] "CCR1"      "CD151"     "CD163"     "CD22"      "CHIL3"     "CHST1"    
+[13] "CXCL13"    "CYP11A1"   "ECEL1"     "EFNA2"     "EGR1"      "EMP2"     
+[19] "EPOR"      "FABP1"     "FAM83D"    "FCNB"      "FST"       "FZD8"     
+[25] "HIST1H2BE" "HMGN3"     "HTRA3"     "IGF1"      "ILDR2"     "KCNJ8"    
+[31] "KLRD1"     "KRT10"     "LCN2"      "LTF"       "LY9"       "MASP1"    
+[37] "MCPT8"     "AFDN"      "MRC1"      "MYH6"      "NGP"       "OCLN"     
+[43] "OLFM1"     "PDE2A"     "PF4"       "PLA2G7"    "PPARG"     "PTK2"     
+[49] "RGS7BP"    "RXRG"      "S100A8"    "S100A9"    "SLC1A4"    "SLC25A13" 
+[55] "SYP"       "TFEC"      "TNFSF13B"  "TNFSF8"    "TOP2A"     "TRPV4"    
+[61] "TSPAN17"   "UPK1B"     "VCAM1"    
+
+$`GO:0006955`
+ [1] "CAMP"      "CCR1"      "CXCL13"    "EMP2"      "FCNB"      "HIST1H2BE"
+ [7] "KLRD1"     "LCN2"      "LTF"       "LY9"       "MASP1"     "MCPT8"    
+[13] "MRC1"      "PF4"       "PPARG"     "PTK2"      "S100A8"    "S100A9"   
+[19] "TNFSF13B"  "TNFSF8"   
+
+$`GO:0098552`
+ [1] "ACE"     "CCR1"    "CD200R3" "CD22"    "EPOR"    "FCNB"    "KLRD1"  
+ [8] "MS4A1"   "PDCD1"   "PTK2"    "VCAM1"  
+
+$`GO:0002376`
+ [1] "ACE"       "CAMP"      "CCNB2"     "CCR1"      "CD151"     "CXCL13"   
+ [7] "EFNA2"     "EGR1"      "EMP2"      "FABP1"     "FCNB"      "FST"      
+[13] "FZD8"      "H2-M2"     "HIST1H2BE" "IGF1"      "KCNJ8"     "KLRD1"    
+[19] "LCN2"      "LTF"       "LY9"       "MASP1"     "MCPT8"     "MRC1"     
+[25] "MS4A1"     "PDCD1"     "PF4"       "PLA2G7"    "PPARG"     "PTK2"     
+[31] "S100A8"    "S100A9"    "TNFSF13B"  "TNFSF8"    "TOP2A"     "TRPV4"    
+[37] "VCAM1"    
+
+$`GO:0006950`
+ [1] "ACE"       "APBB1"     "CAMP"      "CCR1"      "CD163"     "CHIL3"    
+ [7] "CHST1"     "CXCL13"    "CYP11A1"   "EGR1"      "EPOR"      "FABP1"    
+[13] "FCNB"      "FZD8"      "HIST1H2BE" "IGF1"      "KCNJ8"     "KLRD1"    
+[19] "LCN2"      "LTF"       "LY9"       "MASP1"     "MRC1"      "MYH6"     
+[25] "NGP"       "PDE2A"     "PF4"       "PLA2G7"    "PPARG"     "PTK2"     
+[31] "S100A8"    "S100A9"    "SLC1A4"    "TFEC"      "TNFSF8"    "TOP2A"    
+[37] "TRPV4"    
+
+$`GO:0015631`
+[1] "FAM83D" "KIF11"  "MLPH"   "S100A8" "S100A9" "TRPV4" 
+
+$`GO:0031349`
+[1] "ACE"    "FCNB"   "LTF"    "PDE2A"  "S100A8" "S100A9" "TRPV4" 
+
+$`GO:0009986`
+ [1] "ACE"     "ACHE"    "CCR1"    "CD200R3" "CD22"    "EMP2"    "EPOR"   
+ [8] "FCNB"    "H2-M2"   "KLRD1"   "LPL"     "LTF"     "LY9"     "MRC1"   
+[15] "MS4A1"   "OCLN"    "PDCD1"   "SLC1A4"  "TRPV4"   "VCAM1"  
+
+$`GO:0030155`
+[1] "CXCL13"   "EMILIN1"  "EMP2"     "IGF1"     "PTK2"     "TNFSF13B" "TRPV4"   
+[8] "VCAM1"   
+
+$`GO:0050865`
+[1] "IGF1"     "TNFSF13B" "VCAM1"   
+
+$`GO:0022407`
+[1] "CXCL13"   "IGF1"     "PTK2"     "TNFSF13B" "TRPV4"    "VCAM1"   
+
+$`GO:0002682`
+ [1] "ACE"      "CCR1"     "CXCL13"   "FABP1"    "FCNB"     "IGF1"    
+ [7] "LTF"      "MASP1"    "PDCD1"    "PF4"      "PLA2G7"   "PPARG"   
+[13] "TNFSF13B" "TRPV4"    "VCAM1"   
+
+$`GO:0002694`
+[1] "IGF1"     "TNFSF13B" "VCAM1"   
+
+$`GO:0045087`
+ [1] "CAMP"      "CCR1"      "FCNB"      "HIST1H2BE" "KLRD1"     "LCN2"     
+ [7] "LTF"       "LY9"       "MASP1"     "MRC1"      "PPARG"     "PTK2"     
+[13] "S100A8"    "S100A9"   
+
+$`GO:0002684`
+ [1] "CCR1"     "CXCL13"   "FCNB"     "IGF1"     "LTF"      "MASP1"   
+ [7] "PF4"      "PLA2G7"   "TNFSF13B" "TRPV4"    "VCAM1"   
+
+$`GO:0006954`
+ [1] "ACE"    "CCR1"   "CD163"  "CHIL3"  "CHST1"  "CXCL13" "PDE2A"  "PF4"   
+ [9] "PLA2G7" "PPARG"  "S100A8" "S100A9" "TRPV4" 
+
+$`GO:0022610`
+ [1] "ACHE"     "CCNB2"    "CD151"    "CD22"     "CXCL13"   "EGR1"    
+ [7] "EMILIN1"  "EMP2"     "ESAM"     "FZD8"     "IGF1"     "LTF"     
+[13] "LY9"      "MB21D2"   "AFDN"     "PTK2"     "S100A8"   "S100A9"  
+[19] "TNFSF13B" "TNFSF8"   "TRPV4"    "VCAM1"   
+
+$`GO:0051249`
+[1] "IGF1"     "TNFSF13B" "VCAM1"   
+

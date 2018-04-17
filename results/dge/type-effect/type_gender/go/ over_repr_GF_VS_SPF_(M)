@@ -1,0 +1,171 @@
+$`GO:0051239`
+ [1] "ABAT"    "ACACB"   "ACE"     "BRCA1"   "CACNA1E" "CAMK2B"  "CAMP"   
+ [8] "CAV1"    "CCNB1"   "CDH5"    "CHIL1"   "CLU"     "CXCL13"  "DDX60"  
+[15] "DSP"     "DYNLT1B" "ECM1"    "FGFBP3"  "FOS"     "GJA1"    "GRM3"   
+[22] "HEG1"    "HIST4H4" "KL"      "LTF"     "NGP"     "NOTCH4"  "PDCD1"  
+[29] "RXRG"    "SOX9"    "TGFBR3"  "TSC22D3" "TSPAN8"  "VEGFA"   "XDH"    
+[36] "XK"      "ZBTB16" 
+
+$`GO:0002376`
+ [1] "ACE"     "CAMP"    "CAV1"    "CCNB2"   "CLEC12A" "CLU"     "CTSE"   
+ [8] "CXCL13"  "DDIT4"   "DDX60"   "ECM1"    "FOS"     "GBP6"    "HELLS"  
+[15] "HIST4H4" "LCN2"    "LTF"     "MPO"     "NLRC5"   "OLFM4"   "PDCD1"  
+[22] "RAB4A"   "RTKN2"   "SOX9"    "TGFBR3"  "TOP2A"   "TSC22D3" "VEGFA"  
+[29] "WDFY1"   "WDR78"   "ZBTB16" 
+
+$`GO:0008144`
+[1] "ACE"   "FKBP5" "PYGM"  "TOP2A"
+
+$`GO:0035556`
+ [1] "ADCY3"    "BRCA1"    "BUB1"     "CAV1"     "CDC42EP1" "CHIL1"   
+ [7] "CLU"      "DDIT4"    "DDX60"    "DHCR24"   "DUSP1"    "DYNLT1B" 
+[13] "ECM1"     "FAM83D"   "FGFBP3"   "GJA1"     "HELLS"    "KL"      
+[19] "LRRC4"    "LTF"      "MAP3K6"   "MELK"     "MID1"     "OLFM4"   
+[25] "PBK"      "PIK3IP1"  "PLCD3"    "RAB4A"    "RACGAP1"  "SLC9A3R2"
+[31] "SOX9"     "TGFBR3"   "VEGFA"    "XDH"     
+
+$`GO:0048518`
+ [1] "ABAT"     "ACACB"    "ACE"      "ADCY3"    "ALDH1A3"  "BIRC5"   
+ [7] "BRCA1"    "BUB1"     "CAMK2B"   "CAMP"     "CAV1"     "CCNA2"   
+[13] "CCNB1"    "CCP110"   "CDC42EP1" "CDCA2"    "CDH5"     "CDK5RAP1"
+[19] "CHEK1"    "CHIL1"    "CLU"      "CXCL13"   "DDIT4"    "DDX60"   
+[25] "DUSP1"    "DYNLT1B"  "ECM1"     "FAM83D"   "FGFBP3"   "FOS"     
+[31] "GJA1"     "HEG1"     "KCTD17"   "KIF23"    "KL"       "LCN2"    
+[37] "LDLR"     "LTF"      "MAOB"     "MAP3K6"   "MELK"     "MID1"    
+[43] "MSR1"     "NLRC5"    "NOTCH4"   "NUSAP1"   "OAZ3"     "OLFM4"   
+[49] "PDCD1"    "PLET1"    "PROM2"    "RACGAP1"  "RAD51B"   "RTKN2"   
+[55] "RXRG"     "SOX9"     "STIL"     "TGFBR3"   "TOP2A"    "UBE2C"   
+[61] "UHRF1"    "VEGFA"    "WDFY1"    "XDH"      "ZBTB16"  
+
+$`GO:0048519`
+ [1] "ABAT"     "ACACB"    "ACE"      "BIRC5"    "BRCA1"    "BUB1"    
+ [7] "CAMK2B"   "CAMP"     "KNL1"     "CAV1"     "CCNB1"    "CCP110"  
+[13] "CDH5"     "CDK5RAP1" "CHEK1"    "CLU"      "CST7"     "CXCL13"  
+[19] "DDIT4"    "DHCR24"   "DUSP1"    "DYNLT1B"  "ECM1"     "EML2"    
+[25] "GCM2"     "GJA1"     "HELLS"    "HIST4H4"  "HTRA3"    "LDLR"    
+[31] "LRRC4"    "LTF"      "MAOB"     "MID1"     "MPO"      "NGP"     
+[37] "NLRC5"    "NOTCH4"   "OAZ3"     "OLFM4"    "PBK"      "PDCD1"   
+[43] "PIK3IP1"  "PLCB4"    "PLEKHH2"  "PLET1"    "PROM2"    "SLC9A3R2"
+[49] "SOX9"     "STIL"     "TGFBR3"   "TMOD1"    "TOP2A"    "TSC22D3" 
+[55] "TSPAN8"   "UHRF1"    "VEGFA"    "XDH"      "ZBTB16"   "ZMYND15" 
+
+$`GO:0048522`
+ [1] "ABAT"     "ACE"      "ADCY3"    "ALDH1A3"  "BIRC5"    "BRCA1"   
+ [7] "BUB1"     "CAMK2B"   "CAMP"     "CAV1"     "CCNA2"    "CCNB1"   
+[13] "CCP110"   "CDC42EP1" "CDCA2"    "CDH5"     "CDK5RAP1" "CHEK1"   
+[19] "CHIL1"    "CLU"      "CXCL13"   "DDIT4"    "DDX60"    "DUSP1"   
+[25] "DYNLT1B"  "ECM1"     "FAM83D"   "FGFBP3"   "FOS"      "GJA1"    
+[31] "KCTD17"   "KIF23"    "KL"       "LCN2"     "LDLR"     "LTF"     
+[37] "MAOB"     "MAP3K6"   "MELK"     "MID1"     "MSR1"     "NLRC5"   
+[43] "NUSAP1"   "OLFM4"    "PDCD1"    "PLET1"    "PROM2"    "RACGAP1" 
+[49] "RAD51B"   "RTKN2"    "RXRG"     "SOX9"     "STIL"     "TGFBR3"  
+[55] "TOP2A"    "UBE2C"    "UHRF1"    "VEGFA"    "WDFY1"    "XDH"     
+[61] "ZBTB16"  
+
+$`GO:0050920`
+[1] "CXCL13" "VEGFA" 
+
+$`GO:0051179`
+ [1] "ABAT"     "ACACB"    "ACE"      "ADCY3"    "BIRC5"    "BRCA1"   
+ [7] "CACNA1E"  "CAMK2B"   "KNL1"     "CAV1"     "CCNB1"    "CHIL1"   
+[13] "CLIC6"    "CLU"      "CXCL13"   "DDIT4"    "DHCR24"   "DSP"     
+[19] "DYNLT1B"  "ECM1"     "ERO1LB"   "FADS3"    "FAM83D"   "GJA1"    
+[25] "IER2"     "KCNJ16"   "KIF18A"   "KIF23"    "LCN2"     "LDLR"    
+[31] "LRP11"    "LRRC4"    "LTF"      "LY6K"     "MAOB"     "MID1"    
+[37] "MSR1"     "NNT"      "NOTCH4"   "NUSAP1"   "OAZ3"     "PLCB4"   
+[43] "PLET1"    "PROM2"    "RAB4A"    "RACGAP1"  "SLC10A6"  "SLC22A15"
+[49] "SLC43A1"  "SOX9"     "STIL"     "TGFBR3"   "VEGFA"    "XDH"     
+[55] "XK"       "ZBTB16"  
+
+$`GO:0002682`
+ [1] "ACE"     "CAV1"    "CLEC12A" "CXCL13"  "DDX60"   "ECM1"    "FOS"    
+ [8] "HIST4H4" "LTF"     "NLRC5"   "OLFM4"   "PDCD1"   "SOX9"    "TSC22D3"
+[15] "VEGFA"   "WDFY1"   "ZBTB16" 
+
+$`GO:0044707`
+ [1] "ABAT"    "ACACB"   "ACE"     "ADCY3"   "ALDH1A3" "BIRC5"   "BRCA1"  
+ [8] "BUB1"    "CACNA1E" "CAMK2B"  "CAMP"    "CAV1"    "CCNB1"   "CCNB2"  
+[15] "CDH5"    "CHEK1"   "CHIL1"   "CLU"     "CSRP1"   "CXCL13"  "DDIT4"  
+[22] "DDX60"   "DHCR24"  "DSP"     "DUSP1"   "DYNLT1B" "ECM1"    "FAM83D" 
+[29] "FGFBP3"  "FOS"     "GCM2"    "GJA1"    "HEG1"    "HELLS"   "HIST4H4"
+[36] "IER2"    "ISPD"    "KIF18A"  "KL"      "LDLR"    "LRP11"   "LTF"    
+[43] "MKI67"   "MPO"     "MSR1"    "NGP"     "NOTCH4"  "PDCD1"   "PLCD3"  
+[50] "PTCHD1"  "RACGAP1" "RAD51B"  "RTKN2"   "RXRG"    "SOX9"    "STIL"   
+[57] "TGFBR3"  "TMOD1"   "TOP2A"   "TSC22D3" "TSPAN8"  "VEGFA"   "WDR78"  
+[64] "WEE1"    "XDH"     "XK"      "ZBTB16" 
+
+$`GO:0009897`
+[1] "ACE"     "CD200R4" "CDH5"    "HEG1"    "LDLR"    "PDCD1"   "PLET1"  
+[8] "TGFBR3" 
+
+$`GO:0002688`
+[1] "CXCL13" "VEGFA" 
+
+$`GO:0070887`
+ [1] "ADCY3"   "BIRC5"   "BRCA1"   "CACNA1E" "CAV1"    "CDH5"    "CXCL13" 
+ [8] "DDIT4"   "ECM1"    "FGFBP3"  "FOS"     "GBP6"    "GCM2"    "GSTM1"  
+[15] "GSTO2"   "HTRA3"   "KL"      "LCN2"    "LDLR"    "LRRC4"   "LTF"    
+[22] "MELK"    "MPO"     "NLRC5"   "RXRG"    "SOX9"    "SULT1A1" "TGFBR3" 
+[29] "VEGFA"   "XDH"    
+
+$`GO:0048583`
+ [1] "ABAT"     "ACE"      "ALDH1A3"  "BIRC5"    "BRCA1"    "BUB1"    
+ [7] "CACNA1E"  "CAMK2B"   "CAV1"     "CHEK1"    "CHIL1"    "CLEC12A" 
+[13] "CLU"      "CXCL13"   "DDIT4"    "DDX60"    "DUSP1"    "DYNLT1B" 
+[19] "ECM1"     "FAM83D"   "FGFBP3"   "GJA1"     "HELLS"    "HTRA3"   
+[25] "KL"       "LDLR"     "LRRC4"    "LTF"      "MAP3K6"   "MID1"    
+[31] "NLRC5"    "NOTCH4"   "OLFM4"    "PBK"      "PIK3IP1"  "SLC9A3R2"
+[37] "SOX9"     "TGFBR3"   "TSPAN8"   "VEGFA"    "WDFY1"    "XDH"     
+
+$`GO:0006950`
+ [1] "ABAT"    "ACE"     "BRCA1"   "CACNA1E" "CAMP"    "CAV1"    "CHEK1"  
+ [8] "CHIL1"   "CLU"     "CSRP1"   "CXCL13"  "DDIT4"   "DDX60"   "DTL"    
+[15] "ECM1"    "FOS"     "GBP6"    "GJA1"    "KL"      "LCN2"    "LDLR"   
+[22] "LRP11"   "LTF"     "MELK"    "MID1"    "MPO"     "NGP"     "NLRC5"  
+[29] "PBK"     "PLET1"   "PYGM"    "RAD51B"  "TOP2A"   "TRIP13"  "TSC22D3"
+[36] "TSPAN8"  "UHRF1"   "VEGFA"   "WDFY1"   "XDH"    
+
+$`GO:0048523`
+ [1] "ABAT"     "ACACB"    "ACE"      "BIRC5"    "BRCA1"    "BUB1"    
+ [7] "CAMK2B"   "KNL1"     "CAV1"     "CCNB1"    "CCP110"   "CDH5"    
+[13] "CDK5RAP1" "CHEK1"    "CLU"      "CST7"     "CXCL13"   "DDIT4"   
+[19] "DHCR24"   "DUSP1"    "DYNLT1B"  "ECM1"     "EML2"     "GCM2"    
+[25] "GJA1"     "HELLS"    "HIST4H4"  "HTRA3"    "LRRC4"    "LTF"     
+[31] "MAOB"     "MID1"     "NGP"      "NLRC5"    "NOTCH4"   "OLFM4"   
+[37] "PBK"      "PDCD1"    "PIK3IP1"  "PLEKHH2"  "PLET1"    "PROM2"   
+[43] "SLC9A3R2" "SOX9"     "STIL"     "TGFBR3"   "TMOD1"    "TOP2A"   
+[49] "TSC22D3"  "UHRF1"    "VEGFA"    "XDH"      "ZBTB16"   "ZMYND15" 
+
+$`GO:0002690`
+[1] "CXCL13" "VEGFA" 
+
+$`GO:0098552`
+[1] "ACE"     "CD200R4" "CDH5"    "HEG1"    "LDLR"    "PDCD1"   "PLET1"  
+[8] "RACGAP1" "TGFBR3" 
+
+$`GO:0098602`
+ [1] "ABAT"   "CAV1"   "CDH5"   "CSRP1"  "CXCL13" "DSP"    "ICAM2"  "OLFM4" 
+ [9] "SOX9"   "VEGFA"  "ZBTB16"
+
+$`GO:0033993`
+ [1] "ACE"     "ADCY3"   "BRCA1"   "CAV1"    "CXCL13"  "DDIT4"   "GBP6"   
+ [8] "LDLR"    "LTF"     "RXRG"    "SOX9"    "SULT1A1"
+
+$`GO:0016337`
+ [1] "ABAT"   "CAV1"   "CDH5"   "CSRP1"  "CXCL13" "DSP"    "ICAM2"  "SOX9"  
+ [9] "VEGFA"  "ZBTB16"
+
+$`GO:0065008`
+ [1] "ABAT"     "ACACB"    "ACE"      "ALDH1A3"  "BIRC5"    "CACNA1E" 
+ [7] "CAMK2B"   "CAMP"     "CAV1"     "CCNB2"    "CDC42EP1" "CDK5RAP1"
+[13] "CLU"      "CSRP1"    "CXCL13"   "DDO"      "DSP"      "ERO1LB"  
+[19] "FGFBP3"   "GCM2"     "GJA1"     "HEG1"     "KCTD17"   "KL"      
+[25] "LCN2"     "LDLR"     "LRRC4"    "LTF"      "MAOB"     "MSR1"    
+[31] "NNT"      "PLEKHH2"  "PYGM"     "SLC9A3R2" "SOX9"     "SULT1A1" 
+[37] "TGFBR3"   "TMOD1"    "TSC22D3"  "TSPAN8"   "UBE2C"    "VEGFA"   
+[43] "XDH"      "XK"      
+
+$`GO:0032101`
+ [1] "ABAT"   "ACE"    "CAV1"   "CXCL13" "DDX60"  "GJA1"   "LDLR"   "LTF"   
+ [9] "PBK"    "TSPAN8" "VEGFA" 
+

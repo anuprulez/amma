@@ -1,0 +1,756 @@
+$`GO:0044815`
+ [1] "HIST1H1D"  "HIST1H1E"  "HIST1H2BB" "HIST1H2BE" "HIST1H2BF" "HIST1H2BG"
+ [7] "HIST1H3A"  "HIST1H3D"  "HIST1H3E"  "HIST1H3F"  "HIST1H4C"  "HIST1H4D" 
+[13] "HIST1H4H"  "HIST1H4I"  "HIST2H2BB" "HIST2H4"   "HIST4H4"   "KAT6A"    
+
+$`GO:0000786`
+ [1] "HIST1H1D"  "HIST1H1E"  "HIST1H2BB" "HIST1H2BE" "HIST1H2BF" "HIST1H2BG"
+ [7] "HIST1H3A"  "HIST1H3D"  "HIST1H3E"  "HIST1H3F"  "HIST1H4C"  "HIST1H4D" 
+[13] "HIST1H4H"  "HIST1H4I"  "HIST2H2BB" "HIST2H4"   "HIST4H4"   "KAT6A"    
+
+$`GO:0006334`
+ [1] "ATRX"      "BRD2"      "HIST1H1D"  "HIST1H1E"  "HIST1H2BB" "HIST1H2BE"
+ [7] "HIST1H2BF" "HIST1H2BG" "HIST1H3A"  "HIST1H3D"  "HIST1H3E"  "HIST1H3F" 
+[13] "HIST1H4C"  "HIST1H4D"  "HIST1H4H"  "HIST1H4I"  "HIST2H2BB" "HIST2H4"  
+[19] "HIST4H4"   "KAT6A"    
+
+$`GO:0031497`
+ [1] "ATRX"      "BAZ2A"     "BRD2"      "HIST1H1D"  "HIST1H1E"  "HIST1H2BB"
+ [7] "HIST1H2BE" "HIST1H2BF" "HIST1H2BG" "HIST1H3A"  "HIST1H3D"  "HIST1H3E" 
+[13] "HIST1H3F"  "HIST1H4C"  "HIST1H4D"  "HIST1H4H"  "HIST1H4I"  "HIST2H2BB"
+[19] "HIST2H4"   "HIST4H4"   "KAT6A"     "TNRC18"   
+
+$`GO:0034728`
+ [1] "ATRX"      "BRD2"      "HIST1H1D"  "HIST1H1E"  "HIST1H2BB" "HIST1H2BE"
+ [7] "HIST1H2BF" "HIST1H2BG" "HIST1H3A"  "HIST1H3D"  "HIST1H3E"  "HIST1H3F" 
+[13] "HIST1H4C"  "HIST1H4D"  "HIST1H4H"  "HIST1H4I"  "HIST2H2BB" "HIST2H4"  
+[19] "HIST4H4"   "KAT6A"     "SETD2"    
+
+$`GO:0000788`
+[1] "HIST1H2BB" "HIST1H2BE" "HIST1H2BF" "HIST1H2BG" "HIST1H3A"  "HIST1H3D" 
+[7] "HIST1H3E"  "HIST2H2BB"
+
+$`GO:0006323`
+ [1] "AKAP8L"    "ATRX"      "BAZ2A"     "BRD2"      "HIST1H1D"  "HIST1H1E" 
+ [7] "HIST1H2BB" "HIST1H2BE" "HIST1H2BF" "HIST1H2BG" "HIST1H3A"  "HIST1H3D" 
+[13] "HIST1H3E"  "HIST1H3F"  "HIST1H4C"  "HIST1H4D"  "HIST1H4H"  "HIST1H4I" 
+[19] "HIST2H2BB" "HIST2H4"   "HIST4H4"   "KAT6A"     "TNRC18"   
+
+$`GO:0006333`
+ [1] "ATRX"      "BAZ2A"     "BRD2"      "CHD3"      "HIST1H1D"  "HIST1H1E" 
+ [7] "HIST1H2BB" "HIST1H2BE" "HIST1H2BF" "HIST1H2BG" "HIST1H3A"  "HIST1H3D" 
+[13] "HIST1H3E"  "HIST1H3F"  "HIST1H4C"  "HIST1H4D"  "HIST1H4H"  "HIST1H4I" 
+[19] "HIST2H2BB" "HIST2H4"   "HIST4H4"   "KAT6A"     "TNRC18"   
+
+$`GO:0032993`
+ [1] "HIST1H1D"  "HIST1H1E"  "HIST1H2BB" "HIST1H2BE" "HIST1H2BF" "HIST1H2BG"
+ [7] "HIST1H3A"  "HIST1H3D"  "HIST1H3E"  "HIST1H3F"  "HIST1H4C"  "HIST1H4D" 
+[13] "HIST1H4H"  "HIST1H4I"  "HIST2H2BB" "HIST2H4"   "HIST4H4"   "KAT6A"    
+[19] "POT1B"    
+
+$`GO:0065004`
+ [1] "ATRX"      "BRD2"      "HIST1H1D"  "HIST1H1E"  "HIST1H2BB" "HIST1H2BE"
+ [7] "HIST1H2BF" "HIST1H2BG" "HIST1H3A"  "HIST1H3D"  "HIST1H3E"  "HIST1H3F" 
+[13] "HIST1H4C"  "HIST1H4D"  "HIST1H4H"  "HIST1H4I"  "HIST2H2BB" "HIST2H4"  
+[19] "HIST4H4"   "KAT6A"    
+
+$`GO:0006335`
+[1] "HIST1H3A" "HIST1H3D" "HIST1H3E" "HIST1H4C" "HIST1H4D" "HIST1H4H" "HIST1H4I"
+[8] "HIST2H4"  "HIST4H4" 
+
+$`GO:0034723`
+[1] "HIST1H3A" "HIST1H3D" "HIST1H3E" "HIST1H4C" "HIST1H4D" "HIST1H4H" "HIST1H4I"
+[8] "HIST2H4"  "HIST4H4" 
+
+$`GO:0071103`
+ [1] "AKAP8L"    "ANXA1"     "ATRX"      "BAZ2A"     "BRD2"      "HIST1H1D" 
+ [7] "HIST1H1E"  "HIST1H2BB" "HIST1H2BE" "HIST1H2BF" "HIST1H2BG" "HIST1H3A" 
+[13] "HIST1H3D"  "HIST1H3E"  "HIST1H3F"  "HIST1H4C"  "HIST1H4D"  "HIST1H4H" 
+[19] "HIST1H4I"  "HIST2H2BB" "HIST2H4"   "HIST4H4"   "KAT6A"     "TNRC18"   
+
+$`GO:0071824`
+ [1] "ATRX"      "BRD2"      "HIST1H1D"  "HIST1H1E"  "HIST1H2BB" "HIST1H2BE"
+ [7] "HIST1H2BF" "HIST1H2BG" "HIST1H3A"  "HIST1H3D"  "HIST1H3E"  "HIST1H3F" 
+[13] "HIST1H4C"  "HIST1H4D"  "HIST1H4H"  "HIST1H4I"  "HIST2H2BB" "HIST2H4"  
+[19] "HIST4H4"   "KAT6A"     "SETD2"    
+
+$`GO:0006325`
+ [1] "AKAP8L"    "ASH1L"     "ATAD2B"    "ATM"       "ATRX"      "ATXN7"    
+ [7] "BAZ2A"     "BPTF"      "BRD2"      "CBX7"      "CHD2"      "CHD3"     
+[13] "CHD6"      "CHD7"      "CHD9"      "DICER1"    "DNMT3A"    "DNMT3B"   
+[19] "DOT1L"     "FTX"       "HIST1H1D"  "HIST1H1E"  "HIST1H2AC" "HIST1H2AD"
+[25] "HIST1H2AE" "HIST1H2BB" "HIST1H2BE" "HIST1H2BF" "HIST1H2BG" "HIST1H3A" 
+[31] "HIST1H3D"  "HIST1H3E"  "HIST1H3F"  "HIST1H4C"  "HIST1H4D"  "HIST1H4H" 
+[37] "HIST1H4I"  "HIST2H2BB" "HIST2H4"   "HIST4H4"   "HOPX"      "HUWE1"    
+[43] "INO80"     "JDP2"      "KAT6A"     "KDM5D"     "KMT2A"     "KMT2B"    
+[49] "KMT2C"     "KMT2D"     "MTHFR"     "MYC"       "NSD1"      "OGT"      
+[55] "PAXBP1"    "PER1"      "PER2"      "SETD1B"    "SETD2"     "TET1"     
+[61] "TET2"      "TET3"      "TNRC18"    "TSIX"      "USP34"     "UTY"      
+
+$`GO:0051290`
+ [1] "ALDOC"    "ANXA2"    "HIST1H3A" "HIST1H3D" "HIST1H3E" "HIST1H4C"
+ [7] "HIST1H4D" "HIST1H4H" "HIST1H4I" "HIST2H4"  "HIST4H4" 
+
+$`GO:0002227`
+[1] "CAMP"      "HIST1H2BE" "HIST1H2BF" "HIST1H2BG" "LTF"      
+
+$`GO:0045653`
+[1] "HIST1H4C" "HIST1H4D" "HIST1H4H" "HIST1H4I" "HIST2H4"  "HIST4H4" 
+
+$`GO:0051276`
+ [1] "AGO4"      "AKAP8L"    "ANXA1"     "APC"       "ATM"       "ATRX"     
+ [7] "BAZ2A"     "BRD2"      "HIST1H1D"  "HIST1H1E"  "HIST1H2BB" "HIST1H2BE"
+[13] "HIST1H2BF" "HIST1H2BG" "HIST1H3A"  "HIST1H3D"  "HIST1H3E"  "HIST1H3F" 
+[19] "HIST1H4C"  "HIST1H4D"  "HIST1H4H"  "HIST1H4I"  "HIST2H2BB" "HIST2H4"  
+[25] "HIST4H4"   "HSPA1A"    "INO80"     "KAT6A"     "KIF23"     "MYC"      
+[31] "POT1B"     "PRKDC"     "SMG1"      "TNRC18"    "TRIP13"    "YLPM1"    
+
+$`GO:0045652`
+[1] "HIST1H4C" "HIST1H4D" "HIST1H4H" "HIST1H4I" "HIST2H4"  "HIST4H4"  "RAB7B"   
+
+$`GO:0002385`
+[1] "CAMP"      "HIST1H2BE" "HIST1H2BF" "HIST1H2BG" "LTF"      
+
+$`GO:0002251`
+[1] "CAMP"      "HIST1H2BE" "HIST1H2BF" "HIST1H2BG" "LTF"      
+
+$`GO:0043933`
+  [1] "AGO3"      "AGO4"      "AKAP8L"    "ALDOC"     "ANXA2"     "APC"      
+  [7] "ASH1L"     "ATAD2B"    "ATM"       "ATRX"      "ATXN7"     "BAIAP2L1" 
+ [13] "BAZ2A"     "BCLAF1"    "BICD1"     "BPTF"      "BRD2"      "CAV1"     
+ [19] "CBX7"      "CD24A"     "CD74"      "CHD2"      "CHD3"      "CHD6"     
+ [25] "CHD7"      "CHD9"      "CHRNB2"    "DDIT4"     "DDX6"      "DGKH"     
+ [31] "DICER1"    "DNM1"      "DNMT3A"    "DNMT3B"    "DOT1L"     "EIF2S3Y"  
+ [37] "FBXO5"     "FTX"       "GAS7"      "GPX3"      "HIST1H1D"  "HIST1H1E" 
+ [43] "HIST1H2AC" "HIST1H2AD" "HIST1H2AE" "HIST1H2BB" "HIST1H2BE" "HIST1H2BF"
+ [49] "HIST1H2BG" "HIST1H3A"  "HIST1H3D"  "HIST1H3E"  "HIST1H3F"  "HIST1H4C" 
+ [55] "HIST1H4D"  "HIST1H4H"  "HIST1H4I"  "HIST2H2BB" "HIST2H4"   "HIST4H4"  
+ [61] "HOPX"      "HUWE1"     "INO80"     "JDP2"      "JUN"       "KAT6A"    
+ [67] "KCND3"     "KCNRG"     "KCTD3"     "KDM5D"     "KIF13A"    "KMT2A"    
+ [73] "KMT2B"     "KMT2C"     "KMT2D"     "LCN2"      "LUC7L"     "LUC7L2"   
+ [79] "MAPK8"     "MAX"       "MDN1"      "MGST1"     "MICAL3"    "MLC1"     
+ [85] "MPO"       "MTHFR"     "MYC"       "NAPB"      "NSD1"      "OGT"      
+ [91] "PAN3"      "PAXBP1"    "PER1"      "PER2"      "PLA2G7"    "PLEKHH2"  
+ [97] "POLQ"      "PPP1R9A"   "PRNP"      "PRPF39"    "PTBP2"     "PTGER4"   
+[103] "RPL10"     "RPL12"     "RPS27"     "SETD1B"    "SETD2"     "SETX"     
+[109] "SH3PXD2A"  "SH3PXD2B"  "SNAP25"    "STX4A"     "TET1"      "TET2"     
+[115] "TET3"      "TGFBR3"    "TNF"       "TNRC18"    "TRAF3IP1"  "TRPM7"    
+[121] "TSC1"      "TSIX"      "USP34"     "UTY"       "VAMP1"     "ZC3H12A"  
+[127] "ZFYVE9"   
+
+$`GO:0001750`
+[1] "CEP290" "GUCA1B"
+
+$`GO:0065003`
+ [1] "AGO3"      "AGO4"      "ALDOC"     "ANXA2"     "APC"       "ATM"      
+ [7] "ATRX"      "BAIAP2L1"  "BAZ2A"     "BCLAF1"    "BICD1"     "BRD2"     
+[13] "CAV1"      "CD24A"     "CD74"      "CHRNB2"    "DDX6"      "DGKH"     
+[19] "DICER1"    "DNM1"      "EIF2S3Y"   "FBXO5"     "GAS7"      "GPX3"     
+[25] "HIST1H1D"  "HIST1H1E"  "HIST1H2BB" "HIST1H2BE" "HIST1H2BF" "HIST1H2BG"
+[31] "HIST1H3A"  "HIST1H3D"  "HIST1H3E"  "HIST1H3F"  "HIST1H4C"  "HIST1H4D" 
+[37] "HIST1H4H"  "HIST1H4I"  "HIST2H2BB" "HIST2H4"   "HIST4H4"   "JUN"      
+[43] "KAT6A"     "KCND3"     "KCNRG"     "KCTD3"     "KIF13A"    "KMT2A"    
+[49] "LCN2"      "LUC7L"     "LUC7L2"    "MAPK8"     "MAX"       "MDN1"     
+[55] "MGST1"     "MLC1"      "NAPB"      "OGT"       "PAN3"      "POLQ"     
+[61] "PPP1R9A"   "PRNP"      "PRPF39"    "PTBP2"     "PTGER4"    "RPL10"    
+[67] "RPL12"     "RPS27"     "SETX"      "SH3PXD2A"  "SH3PXD2B"  "SNAP25"   
+[73] "STX4A"     "TGFBR3"    "TNF"       "TNRC18"    "TRAF3IP1"  "TRPM7"    
+[79] "TSC1"      "VAMP1"     "ZC3H12A"   "ZFYVE9"   
+
+$`GO:0000785`
+ [1] "AKAP8L"    "ATRX"      "BAZ2A"     "CBX7"      "CLOCK"     "DDX6"     
+ [7] "DNMT3A"    "DNMT3B"    "HIST1H1D"  "HIST1H1E"  "HIST1H2AC" "HIST1H2AD"
+[13] "HIST1H2AE" "HIST1H2BB" "HIST1H2BE" "HIST1H2BF" "HIST1H2BG" "HIST1H3A" 
+[19] "HIST1H3D"  "HIST1H3E"  "HIST1H3F"  "HIST1H4C"  "HIST1H4D"  "HIST1H4H" 
+[25] "HIST1H4I"  "HIST2H2BB" "HIST2H4"   "HIST4H4"   "INO80"     "JUN"      
+[31] "KAT6A"     "KLF4"      "MYC"       "NR1D1"     "OGT"       "TNRC18"   
+
+$`GO:0044427`
+ [1] "AKAP8L"    "APC"       "ATM"       "ATRX"      "BAZ2A"     "CBX7"     
+ [7] "CLOCK"     "DDX6"      "DNMT3A"    "DNMT3B"    "HIST1H1D"  "HIST1H1E" 
+[13] "HIST1H2AC" "HIST1H2AD" "HIST1H2AE" "HIST1H2BB" "HIST1H2BE" "HIST1H2BF"
+[19] "HIST1H2BG" "HIST1H3A"  "HIST1H3D"  "HIST1H3E"  "HIST1H3F"  "HIST1H4C" 
+[25] "HIST1H4D"  "HIST1H4H"  "HIST1H4I"  "HIST2H2BB" "HIST2H4"   "HIST4H4"  
+[31] "INO80"     "JUN"       "KAT6A"     "KLF4"      "MBD5"      "MBD6"     
+[37] "MYC"       "NR1D1"     "OGT"       "POT1B"     "PRKDC"     "SETX"     
+[43] "SYCP2"     "TNRC18"   
+
+$`GO:0005694`
+ [1] "AGO3"      "AKAP8L"    "APC"       "ASH1L"     "ATM"       "ATRX"     
+ [7] "BAZ2A"     "CBX7"      "CLOCK"     "DDX6"      "DNMT3A"    "DNMT3B"   
+[13] "HIST1H1D"  "HIST1H1E"  "HIST1H2AC" "HIST1H2AD" "HIST1H2AE" "HIST1H2BB"
+[19] "HIST1H2BE" "HIST1H2BF" "HIST1H2BG" "HIST1H3A"  "HIST1H3D"  "HIST1H3E" 
+[25] "HIST1H3F"  "HIST1H4C"  "HIST1H4D"  "HIST1H4H"  "HIST1H4I"  "HIST2H2BB"
+[31] "HIST2H4"   "HIST4H4"   "INO80"     "JUN"       "KAT6A"     "KLF4"     
+[37] "MBD5"      "MBD6"      "MYC"       "NR1D1"     "NSD1"      "OGT"      
+[43] "POLQ"      "POT1B"     "PRKDC"     "SETD1B"    "SETD2"     "SETX"     
+[49] "SYCP2"     "TNRC18"    "UVSSA"     "XIST"      "ZBTB32"   
+
+$`GO:0044454`
+ [1] "ATRX"      "CBX7"      "CLOCK"     "DNMT3A"    "DNMT3B"    "HIST1H1D" 
+ [7] "HIST1H2AC" "HIST1H2AD" "HIST1H2AE" "HIST1H2BB" "HIST1H2BE" "HIST1H2BF"
+[13] "HIST1H2BG" "HIST1H3A"  "HIST1H3D"  "HIST1H3E"  "HIST1H4C"  "HIST1H4D" 
+[19] "HIST1H4H"  "HIST1H4I"  "HIST2H2BB" "HIST2H4"   "HIST4H4"   "INO80"    
+[25] "JUN"       "KLF4"      "MYC"       "NR1D1"     "POT1B"     "PRKDC"    
+[31] "SYCP2"    
+
+$`GO:0007601`
+[1] "CHRNB2"  "GABRR2"  "GUCA1B"  "RDH5"    "RPGRIP1"
+
+$`GO:0050953`
+[1] "CHRNB2"  "GABRR2"  "GUCA1B"  "RDH5"    "RPGRIP1" "WHRN"   
+
+$`GO:0080182`
+[1] "HIST1H1D" "HIST1H1E" "KMT2A"    "KMT2B"    "OGT"      "TET2"     "TET3"    
+
+$`GO:0006461`
+ [1] "ALDOC"     "ANXA2"     "APC"       "ATRX"      "BAIAP2L1"  "BCLAF1"   
+ [7] "BRD2"      "CAV1"      "CD24A"     "CD74"      "CHRNB2"    "DGKH"     
+[13] "DNM1"      "FBXO5"     "GAS7"      "GPX3"      "HIST1H1D"  "HIST1H1E" 
+[19] "HIST1H2BB" "HIST1H2BE" "HIST1H2BF" "HIST1H2BG" "HIST1H3A"  "HIST1H3D" 
+[25] "HIST1H3E"  "HIST1H3F"  "HIST1H4C"  "HIST1H4D"  "HIST1H4H"  "HIST1H4I" 
+[31] "HIST2H2BB" "HIST2H4"   "HIST4H4"   "JUN"       "KAT6A"     "KCND3"    
+[37] "KCNRG"     "KCTD3"     "KMT2A"     "LCN2"      "MAPK8"     "MAX"      
+[43] "MGST1"     "MLC1"      "NAPB"      "OGT"       "POLQ"      "PPP1R9A"  
+[49] "PRNP"      "PTGER4"    "SETX"      "SH3PXD2A"  "SH3PXD2B"  "SNAP25"   
+[55] "STX4A"     "TGFBR3"    "TNF"       "TRAF3IP1"  "TRPM7"     "TSC1"     
+[61] "VAMP1"     "ZC3H12A"   "ZFYVE9"   
+
+$`GO:0070271`
+ [1] "ALDOC"     "ANXA2"     "APC"       "ATRX"      "BAIAP2L1"  "BCLAF1"   
+ [7] "BRD2"      "CAV1"      "CD24A"     "CD74"      "CHRNB2"    "DGKH"     
+[13] "DNM1"      "FBXO5"     "GAS7"      "GPX3"      "HIST1H1D"  "HIST1H1E" 
+[19] "HIST1H2BB" "HIST1H2BE" "HIST1H2BF" "HIST1H2BG" "HIST1H3A"  "HIST1H3D" 
+[25] "HIST1H3E"  "HIST1H3F"  "HIST1H4C"  "HIST1H4D"  "HIST1H4H"  "HIST1H4I" 
+[31] "HIST2H2BB" "HIST2H4"   "HIST4H4"   "JUN"       "KAT6A"     "KCND3"    
+[37] "KCNRG"     "KCTD3"     "KMT2A"     "LCN2"      "MAPK8"     "MAX"      
+[43] "MGST1"     "MLC1"      "NAPB"      "OGT"       "POLQ"      "PPP1R9A"  
+[49] "PRNP"      "PTGER4"    "SETX"      "SH3PXD2A"  "SH3PXD2B"  "SNAP25"   
+[55] "STX4A"     "TGFBR3"    "TNF"       "TRAF3IP1"  "TRPM7"     "TSC1"     
+[61] "VAMP1"     "ZC3H12A"   "ZFYVE9"   
+
+$`GO:0030705`
+ [1] "ARHGAP21" "BICD1"    "DST"      "FYCO1"    "HTT"      "KIF13A"  
+ [7] "KIF1C"    "KIF23"    "MGARP"    "TRAF3IP1"
+
+$`GO:0006336`
+[1] "ATRX"     "HIST1H4C" "HIST1H4D" "HIST1H4H" "HIST1H4I" "HIST2H4"  "HIST4H4" 
+
+$`GO:0034724`
+[1] "ATRX"     "HIST1H4C" "HIST1H4D" "HIST1H4H" "HIST1H4I" "HIST2H4"  "HIST4H4" 
+
+$`GO:0051262`
+ [1] "ALDOC"    "ANXA2"    "DNM1"     "GPX3"     "HIST1H3A" "HIST1H3D"
+ [7] "HIST1H3E" "HIST1H4C" "HIST1H4D" "HIST1H4H" "HIST1H4I" "HIST2H4" 
+[13] "HIST4H4"  "TRPM7"   
+
+$`GO:0019731`
+[1] "CAMP"      "HIST1H2BE" "HIST1H2BF" "HIST1H2BG" "LTF"      
+
+$`GO:0043228`
+  [1] "1700029J07RIK" "ACTC1"         "AGO3"          "AGO4"         
+  [5] "AKAP8L"        "ANKRD23"       "ANXA2"         "APBB3"        
+  [9] "APC"           "ARHGAP21"      "ARHGAP32"      "ARHGAP39"     
+ [13] "ARHGAP6"       "ARID3A"        "ASH1L"         "ATM"          
+ [17] "ATRX"          "ATXN7"         "BAIAP2L1"      "BAZ2A"        
+ [21] "BCLAF1"        "BICD1"         "BIRC6"         "BRWD1"        
+ [25] "CARF"          "CAV1"          "CBX7"          "CDC42BPA"     
+ [29] "CEP135"        "CEP162"        "CEP290"        "CEP350"       
+ [33] "CHD2"          "CHD3"          "CLOCK"         "CMYA5"        
+ [37] "CNTRL"         "CROCC"         "CSRP1"         "DDX3Y"        
+ [41] "DDX6"          "DGKQ"          "DHX9"          "DISC1"        
+ [45] "DLC1"          "DNAH17"        "DNM1"          "DNMT3A"       
+ [49] "DNMT3B"        "DST"           "DVL1"          "EML5"         
+ [53] "EML6"          "ENAH"          "FBXO5"         "FHL3"         
+ [57] "GAP43"         "GAS7"          "HELQ"          "HERC2"        
+ [61] "HIST1H1D"      "HIST1H1E"      "HIST1H2AC"     "HIST1H2AD"    
+ [65] "HIST1H2AE"     "HIST1H2BB"     "HIST1H2BE"     "HIST1H2BF"    
+ [69] "HIST1H2BG"     "HIST1H3A"      "HIST1H3D"      "HIST1H3E"     
+ [73] "HIST1H3F"      "HIST1H4C"      "HIST1H4D"      "HIST1H4H"     
+ [77] "HIST1H4I"      "HIST2H2BB"     "HIST2H4"       "HIST4H4"      
+ [81] "HSPA1A"        "HTT"           "INO80"         "JUN"          
+ [85] "KAT6A"         "KIF13A"        "KIF1C"         "KIF21B"       
+ [89] "KIF23"         "KLF4"          "KLHL3"         "LRRC45"       
+ [93] "LYST"          "MACF1"         "MAPK8"         "MBD5"         
+ [97] "MBD6"          "MDN1"          "MICAL3"        "MYC"          
+[101] "MYCBP2"        "MYO18B"        "MYO9A"         "NOS1AP"       
+[105] "NR1D1"         "NSD1"          "OGT"           "PAN3"         
+[109] "PDZD2"         "PKP4"          "PLEKHH2"       "PLSCR1"       
+[113] "POLQ"          "POT1B"         "PPP1R12B"      "PPP1R9A"      
+[117] "PRKDC"         "PTPN4"         "RAB11FIP3"     "REV3L"        
+[121] "RPGRIP1"       "RPL10"         "RPL10A"        "RPL12"        
+[125] "RPL17"         "RPS12"         "RPS27"         "RTTN"         
+[129] "S100A8"        "S100A9"        "SCLT1"         "SCNN1A"       
+[133] "SEPT3"         "SETD1B"        "SETD2"         "SETX"         
+[137] "SH3PXD2A"      "SH3PXD2B"      "SIPA1L3"       "SNAP25"       
+[141] "SORBS2"        "STON2"         "SYCP2"         "TAF1D"        
+[145] "TIAM1"         "TNRC18"        "TNRC6A"        "TRA2A"        
+[149] "TRAF3IP1"      "TRIM12C"       "TRIP6"         "TSC1"         
+[153] "TTLL3"         "TTLL4"         "UBR4"          "UPF3B"        
+[157] "UVSSA"         "WHRN"          "XIST"          "ZBED6"        
+[161] "ZBTB16"        "ZBTB32"        "ZC3H12A"       "ZCCHC7"       
+[165] "ZFP146"        "ZFP369"        "ZFYVE26"      
+
+$`GO:0043232`
+  [1] "1700029J07RIK" "ACTC1"         "AGO3"          "AGO4"         
+  [5] "AKAP8L"        "ANKRD23"       "ANXA2"         "APBB3"        
+  [9] "APC"           "ARHGAP21"      "ARHGAP32"      "ARHGAP39"     
+ [13] "ARHGAP6"       "ARID3A"        "ASH1L"         "ATM"          
+ [17] "ATRX"          "ATXN7"         "BAIAP2L1"      "BAZ2A"        
+ [21] "BCLAF1"        "BICD1"         "BIRC6"         "BRWD1"        
+ [25] "CARF"          "CAV1"          "CBX7"          "CDC42BPA"     
+ [29] "CEP135"        "CEP162"        "CEP290"        "CEP350"       
+ [33] "CHD2"          "CHD3"          "CLOCK"         "CMYA5"        
+ [37] "CNTRL"         "CROCC"         "CSRP1"         "DDX3Y"        
+ [41] "DDX6"          "DGKQ"          "DHX9"          "DISC1"        
+ [45] "DLC1"          "DNAH17"        "DNM1"          "DNMT3A"       
+ [49] "DNMT3B"        "DST"           "DVL1"          "EML5"         
+ [53] "EML6"          "ENAH"          "FBXO5"         "FHL3"         
+ [57] "GAP43"         "GAS7"          "HELQ"          "HERC2"        
+ [61] "HIST1H1D"      "HIST1H1E"      "HIST1H2AC"     "HIST1H2AD"    
+ [65] "HIST1H2AE"     "HIST1H2BB"     "HIST1H2BE"     "HIST1H2BF"    
+ [69] "HIST1H2BG"     "HIST1H3A"      "HIST1H3D"      "HIST1H3E"     
+ [73] "HIST1H3F"      "HIST1H4C"      "HIST1H4D"      "HIST1H4H"     
+ [77] "HIST1H4I"      "HIST2H2BB"     "HIST2H4"       "HIST4H4"      
+ [81] "HSPA1A"        "HTT"           "INO80"         "JUN"          
+ [85] "KAT6A"         "KIF13A"        "KIF1C"         "KIF21B"       
+ [89] "KIF23"         "KLF4"          "KLHL3"         "LRRC45"       
+ [93] "LYST"          "MACF1"         "MAPK8"         "MBD5"         
+ [97] "MBD6"          "MDN1"          "MICAL3"        "MYC"          
+[101] "MYCBP2"        "MYO18B"        "MYO9A"         "NOS1AP"       
+[105] "NR1D1"         "NSD1"          "OGT"           "PAN3"         
+[109] "PDZD2"         "PKP4"          "PLEKHH2"       "PLSCR1"       
+[113] "POLQ"          "POT1B"         "PPP1R12B"      "PPP1R9A"      
+[117] "PRKDC"         "PTPN4"         "RAB11FIP3"     "REV3L"        
+[121] "RPGRIP1"       "RPL10"         "RPL10A"        "RPL12"        
+[125] "RPL17"         "RPS12"         "RPS27"         "RTTN"         
+[129] "S100A8"        "S100A9"        "SCLT1"         "SCNN1A"       
+[133] "SEPT3"         "SETD1B"        "SETD2"         "SETX"         
+[137] "SH3PXD2A"      "SH3PXD2B"      "SIPA1L3"       "SNAP25"       
+[141] "SORBS2"        "STON2"         "SYCP2"         "TAF1D"        
+[145] "TIAM1"         "TNRC18"        "TNRC6A"        "TRA2A"        
+[149] "TRAF3IP1"      "TRIM12C"       "TRIP6"         "TSC1"         
+[153] "TTLL3"         "TTLL4"         "UBR4"          "UPF3B"        
+[157] "UVSSA"         "WHRN"          "XIST"          "ZBED6"        
+[161] "ZBTB16"        "ZBTB32"        "ZC3H12A"       "ZCCHC7"       
+[165] "ZFP146"        "ZFP369"        "ZFYVE26"      
+
+$`GO:0000228`
+ [1] "AGO3"      "ATRX"      "CBX7"      "CLOCK"     "DNMT3A"    "DNMT3B"   
+ [7] "HIST1H1D"  "HIST1H2AC" "HIST1H2AD" "HIST1H2AE" "HIST1H2BB" "HIST1H2BE"
+[13] "HIST1H2BF" "HIST1H2BG" "HIST1H3A"  "HIST1H3D"  "HIST1H3E"  "HIST1H4C" 
+[19] "HIST1H4D"  "HIST1H4H"  "HIST1H4I"  "HIST2H2BB" "HIST2H4"   "HIST4H4"  
+[25] "INO80"     "JUN"       "KLF4"      "MYC"       "NR1D1"     "POT1B"    
+[31] "PRKDC"     "SETX"      "SYCP2"     "ZBTB32"   
+
+$`GO:0019730`
+[1] "CAMP"      "HIST1H2BE" "HIST1H2BF" "HIST1H2BG" "LTF"      
+
+$`GO:0000784`
+ [1] "ATRX"      "HIST1H2BB" "HIST1H3A"  "HIST1H3D"  "HIST1H3E"  "HIST1H4C" 
+ [7] "HIST1H4D"  "HIST1H4H"  "HIST1H4I"  "HIST2H4"   "HIST4H4"   "POT1B"    
+[13] "PRKDC"    
+
+$`GO:0005732`
+[1] "SNORA64" "SNORA65" "SNORA68"
+
+$`GO:0048248`
+character(0)
+
+$`GO:0097150`
+[1] "MAPK8" "PROX1"
+
+$`GO:0007143`
+[1] "FBXO5"  "MARF1"  "SYCP2"  "TRIP13"
+
+$`GO:0001917`
+[1] "CROCC"  "DNM1"   "GUCA1B" "WHRN"  
+
+$`GO:0022607`
+  [1] "2410089E03RIK" "ACTC1"         "ADAMTS16"      "ADNP"         
+  [5] "AGO3"          "AGO4"          "ALDOC"         "ANKRD23"      
+  [9] "ANXA2"         "APC"           "ARHGAP6"       "ARHGEF26"     
+ [13] "ARHGEF4"       "ATM"           "ATRX"          "BAIAP2L1"     
+ [17] "BAZ2A"         "BCLAF1"        "BICD1"         "BRD2"         
+ [21] "CAV1"          "CD24A"         "CD74"          "CEP135"       
+ [25] "CEP162"        "CEP290"        "CHRNB2"        "DDX6"         
+ [29] "DGKH"          "DICER1"        "DISC1"         "DLC1"         
+ [33] "DNM1"          "EIF2S3Y"       "EPS8L2"        "FBXO5"        
+ [37] "GAP43"         "GAS7"          "GPR65"         "GPX3"         
+ [41] "HIST1H1D"      "HIST1H1E"      "HIST1H2BB"     "HIST1H2BE"    
+ [45] "HIST1H2BF"     "HIST1H2BG"     "HIST1H3A"      "HIST1H3D"     
+ [49] "HIST1H3E"      "HIST1H3F"      "HIST1H4C"      "HIST1H4D"     
+ [53] "HIST1H4H"      "HIST1H4I"      "HIST2H2BB"     "HIST2H4"      
+ [57] "HIST4H4"       "HTT"           "INO80"         "JUN"          
+ [61] "KAT6A"         "KCND3"         "KCNRG"         "KCTD3"        
+ [65] "KIF13A"        "KIF23"         "KMT2A"         "LCN2"         
+ [69] "LRRTM2"        "LUC7L"         "LUC7L2"        "MACF1"        
+ [73] "MAPK8"         "MAX"           "MDN1"          "MGST1"        
+ [77] "MLC1"          "NAPB"          "OGT"           "PAN3"         
+ [81] "PKP4"          "POLQ"          "PPP1R9A"       "PRNP"         
+ [85] "PROX1"         "PRPF39"        "PTBP2"         "PTGER4"       
+ [89] "RPL10"         "RPL12"         "RPS27"         "SCLT1"        
+ [93] "SETX"          "SH3PXD2A"      "SH3PXD2B"      "SNAP25"       
+ [97] "STX4A"         "TGFBR3"        "TNF"           "TNRC18"       
+[101] "TRAF3IP1"      "TRIP13"        "TRPM7"         "TSC1"         
+[105] "TTLL3"         "VAMP1"         "ZC3H12A"       "ZFYVE9"       
+
+$`GO:0071822`
+ [1] "ALDOC"     "ANXA2"     "APC"       "ATRX"      "BAIAP2L1"  "BCLAF1"   
+ [7] "BRD2"      "CAV1"      "CD24A"     "CD74"      "CHRNB2"    "DDIT4"    
+[13] "DGKH"      "DNM1"      "FBXO5"     "GAS7"      "GPX3"      "HIST1H1D" 
+[19] "HIST1H1E"  "HIST1H2BB" "HIST1H2BE" "HIST1H2BF" "HIST1H2BG" "HIST1H3A" 
+[25] "HIST1H3D"  "HIST1H3E"  "HIST1H3F"  "HIST1H4C"  "HIST1H4D"  "HIST1H4H" 
+[31] "HIST1H4I"  "HIST2H2BB" "HIST2H4"   "HIST4H4"   "JUN"       "KAT6A"    
+[37] "KCND3"     "KCNRG"     "KCTD3"     "KMT2A"     "LCN2"      "MAPK8"    
+[43] "MAX"       "MGST1"     "MICAL3"    "MLC1"      "NAPB"      "OGT"      
+[49] "PER2"      "PLEKHH2"   "POLQ"      "PPP1R9A"   "PRNP"      "PTGER4"   
+[55] "SETD2"     "SETX"      "SH3PXD2A"  "SH3PXD2B"  "SNAP25"    "STX4A"    
+[61] "TGFBR3"    "TNF"       "TRAF3IP1"  "TRPM7"     "TSC1"      "VAMP1"    
+[67] "ZC3H12A"   "ZFYVE9"   
+
+$`GO:0018023`
+[1] "ATRX"     "HIST1H1D" "HIST1H1E" "KMT2A"    "KMT2B"    "OGT"      "SETD2"   
+[8] "TET2"     "TET3"    
+
+$`GO:0031513`
+[1] "2410089E03RIK" "CEP290"        "GUCA1B"        "RPGRIP1"      
+[5] "TIAM1"         "TRAF3IP1"      "WHRN"         
+
+$`GO:0030219`
+[1] "HIST1H4C" "HIST1H4D" "HIST1H4H" "HIST1H4I" "HIST2H4"  "HIST4H4"  "NBEAL2"  
+[8] "RAB7B"   
+
+$`GO:1903046`
+[1] "AGO4"   "ATM"    "FANCM"  "FBXO5"  "MARF1"  "SYCP2"  "TRIP13"
+
+$`GO:0000781`
+ [1] "ATM"       "ATRX"      "HIST1H2BB" "HIST1H3A"  "HIST1H3D"  "HIST1H3E" 
+ [7] "HIST1H4C"  "HIST1H4D"  "HIST1H4H"  "HIST1H4I"  "HIST2H4"   "HIST4H4"  
+[13] "POT1B"     "PRKDC"     "SETX"     
+
+$`GO:0034622`
+ [1] "AGO3"      "AGO4"      "APC"       "ATM"       "ATRX"      "BAIAP2L1" 
+ [7] "BICD1"     "BRD2"      "CAV1"      "DDX6"      "DICER1"    "DNM1"     
+[13] "EIF2S3Y"   "FBXO5"     "GAS7"      "HIST1H1D"  "HIST1H1E"  "HIST1H2BB"
+[19] "HIST1H2BE" "HIST1H2BF" "HIST1H2BG" "HIST1H3A"  "HIST1H3D"  "HIST1H3E" 
+[25] "HIST1H3F"  "HIST1H4C"  "HIST1H4D"  "HIST1H4H"  "HIST1H4I"  "HIST2H2BB"
+[31] "HIST2H4"   "HIST4H4"   "KAT6A"     "KIF13A"    "LUC7L"     "LUC7L2"   
+[37] "MAPK8"     "MDN1"      "NAPB"      "PAN3"      "PPP1R9A"   "PRPF39"   
+[43] "PTBP2"     "RPL10"     "RPL12"     "RPS27"     "SETX"      "SNAP25"   
+[49] "STX4A"     "TGFBR3"    "VAMP1"     "ZFYVE9"   
+
+$`GO:0015630`
+ [1] "1700029J07RIK" "APC"           "ATM"           "ATXN7"        
+ [5] "BICD1"         "BIRC6"         "CEP135"        "CEP162"       
+ [9] "CEP290"        "CEP350"        "CHD3"          "CNTRL"        
+[13] "CROCC"         "DHX9"          "DISC1"         "DNAH17"       
+[17] "DNM1"          "DST"           "DVL1"          "EML5"         
+[21] "EML6"          "FBXO5"         "HSPA1A"        "HTT"          
+[25] "INO80"         "KIF13A"        "KIF1C"         "KIF21B"       
+[29] "KIF23"         "LRRC45"        "LYST"          "MACF1"        
+[33] "MYC"           "MYCBP2"        "PKP4"          "RAB11FIP3"    
+[37] "RTTN"          "SCLT1"         "TAF1D"         "TIAM1"        
+[41] "TRAF3IP1"      "TTLL3"         "TTLL4"         "UBR4"         
+[45] "UPF3B"         "WHRN"          "ZFP369"        "ZFYVE26"      
+
+$`GO:0000790`
+ [1] "ATRX"      "CBX7"      "CLOCK"     "DNMT3A"    "DNMT3B"    "HIST1H1D" 
+ [7] "HIST1H2AC" "HIST1H2AD" "HIST1H2AE" "HIST1H2BB" "HIST1H2BE" "HIST1H2BF"
+[13] "HIST1H2BG" "HIST1H3A"  "HIST1H3D"  "HIST1H3E"  "HIST2H2BB" "INO80"    
+[19] "JUN"       "KLF4"      "MYC"       "NR1D1"    
+
+$`GO:0007018`
+ [1] "ARHGAP21" "BICD1"    "DNAH17"   "DST"      "FYCO1"    "HTT"     
+ [7] "KIF13A"   "KIF1C"    "KIF21B"   "KIF23"    "MGARP"    "TRAF3IP1"
+
+$`GO:0005594`
+character(0)
+
+$`GO:0003777`
+[1] "DNAH17" "KIF13A" "KIF1C"  "KIF21B" "KIF23" 
+
+$`GO:0003774`
+[1] "DNAH17" "KIF13A" "KIF1C"  "KIF21B" "KIF23"  "MYO9A" 
+
+$`GO:0072372`
+[1] "2410089E03RIK" "CEP290"        "GUCA1B"        "NPHP3"        
+[5] "RPGRIP1"       "TIAM1"         "TRAF3IP1"      "WHRN"         
+
+$`GO:0010970`
+[1] "ARHGAP21" "BICD1"    "DST"      "FYCO1"    "HTT"      "KIF13A"   "KIF23"   
+[8] "MGARP"    "TRAF3IP1"
+
+$`GO:0051446`
+[1] "FBXO5"
+
+$`GO:0045911`
+character(0)
+
+$`GO:0031490`
+[1] "CLOCK"    "HIST1H1D" "HIST1H3A" "HIST1H3D" "HIST1H3E" "HIST1H3F" "PER1"    
+
+$`GO:0044085`
+  [1] "2410089E03RIK" "ACTC1"         "ADAMTS16"      "ADNP"         
+  [5] "AGO3"          "AGO4"          "ALDOC"         "ANKRD23"      
+  [9] "ANXA2"         "APC"           "ARHGAP6"       "ARHGEF26"     
+ [13] "ARHGEF4"       "ATM"           "ATRX"          "BAIAP2L1"     
+ [17] "BAZ2A"         "BCLAF1"        "BICD1"         "BRD2"         
+ [21] "CAV1"          "CD24A"         "CD74"          "CEP135"       
+ [25] "CEP162"        "CEP290"        "CHD7"          "CHRNB2"       
+ [29] "DDX6"          "DGKH"          "DICER1"        "DISC1"        
+ [33] "DLC1"          "DNM1"          "EIF2S3Y"       "EPS8L2"       
+ [37] "FBXO5"         "GAP43"         "GAS7"          "GPR65"        
+ [41] "GPX3"          "HIST1H1D"      "HIST1H1E"      "HIST1H2BB"    
+ [45] "HIST1H2BE"     "HIST1H2BF"     "HIST1H2BG"     "HIST1H3A"     
+ [49] "HIST1H3D"      "HIST1H3E"      "HIST1H3F"      "HIST1H4C"     
+ [53] "HIST1H4D"      "HIST1H4H"      "HIST1H4I"      "HIST2H2BB"    
+ [57] "HIST2H4"       "HIST4H4"       "HTT"           "INO80"        
+ [61] "JUN"           "KAT6A"         "KCND3"         "KCNRG"        
+ [65] "KCTD3"         "KIF13A"        "KIF23"         "KMT2A"        
+ [69] "LCN2"          "LRRTM2"        "LUC7L"         "LUC7L2"       
+ [73] "MACF1"         "MAPK8"         "MAX"           "MDN1"         
+ [77] "MGST1"         "MLC1"          "NAPB"          "OGT"          
+ [81] "PAN3"          "PKP4"          "POLQ"          "PPP1R9A"      
+ [85] "PRNP"          "PROX1"         "PRPF39"        "PTBP2"        
+ [89] "PTGER4"        "RNASEL"        "RPL10"         "RPL10A"       
+ [93] "RPL12"         "RPS27"         "SCLT1"         "SETX"         
+ [97] "SH3PXD2A"      "SH3PXD2B"      "SNAP25"        "STX4A"        
+[101] "TGFBR3"        "TNF"           "TNRC18"        "TRAF3IP1"     
+[105] "TRIP13"        "TRPM7"         "TSC1"          "TTLL3"        
+[109] "VAMP1"         "ZC3H12A"       "ZFYVE9"       
+
+$`GO:0035413`
+character(0)
+
+$`GO:0003416`
+[1] "COL27A1"
+
+$`GO:2000664`
+character(0)
+
+$`GO:2000667`
+character(0)
+
+$`GO:0071800`
+[1] "MAPK8"    "SH3PXD2A" "SH3PXD2B" "TNF"     
+
+$`GO:0007017`
+ [1] "APC"      "ARHGAP21" "ATXN7"    "BICD1"    "CAV1"     "CDC42BPA"
+ [7] "CEP135"   "CHD3"     "CROCC"    "DICER1"   "DISC1"    "DNAH17"  
+[13] "DST"      "DVL1"     "FBXO5"    "FYCO1"    "HTT"      "INO80"   
+[19] "KIF13A"   "KIF1C"    "KIF21B"   "KIF23"    "LYST"     "MACF1"   
+[25] "MAPK8"    "MGARP"    "TRAF3IP1"
+
+$`GO:0042744`
+[1] "GPX3" "MPO" 
+
+$`GO:0051291`
+ [1] "ALDOC"    "ANXA2"    "CHRNB2"   "HIST1H3A" "HIST1H3D" "HIST1H3E"
+ [7] "HIST1H4C" "HIST1H4D" "HIST1H4H" "HIST1H4I" "HIST2H4"  "HIST4H4" 
+[13] "OGT"      "TSC1"    
+
+$`GO:0003431`
+[1] "COL27A1"
+
+$`GO:0003677`
+  [1] "ADNP"      "AKAP8L"    "ANXA1"     "ARID3A"    "ASH1L"     "ATM"      
+  [7] "ATRX"      "BACH1"     "BATF2"     "BAZ2A"     "BCL6B"     "BCLAF1"   
+ [13] "BDP1"      "BPTF"      "BTBD8"     "CARF"      "CHD2"      "CHD6"     
+ [19] "CHD7"      "CHD9"      "CLOCK"     "CREB3L1"   "CREBL2"    "CREBZF"   
+ [25] "CRY2"      "DHX9"      "DICER1"    "DNMT3A"    "DNMT3B"    "FANCM"    
+ [31] "FOS"       "FOSB"      "GABPB2"    "HIF3A"     "HIST1H1D"  "HIST1H1E" 
+ [37] "HIST1H2AC" "HIST1H2AD" "HIST1H2AE" "HIST1H2BB" "HIST1H2BE" "HIST1H2BF"
+ [43] "HIST1H2BG" "HIST1H3A"  "HIST1H3D"  "HIST1H3E"  "HIST1H3F"  "HIST2H2BB"
+ [49] "HIVEP1"    "HIVEP3"    "HNRNPDL"   "HOPX"      "HSF2"      "HUWE1"    
+ [55] "IER2"      "INO80"     "JDP2"      "JUN"       "KAT6A"     "KDM5D"    
+ [61] "KLF13"     "KLF4"      "KLF9"      "KMT2A"     "KMT2B"     "KMT2C"    
+ [67] "KMT2D"     "LCOR"      "MAFF"      "MAX"       "MBD5"      "MBD6"     
+ [73] "MGA"       "MYC"       "MYCL"      "NFAT5"     "NR1D1"     "NSD1"     
+ [79] "PAXBP1"    "PER1"      "PER2"      "PLSCR1"    "PNN"       "POLQ"     
+ [85] "POT1B"     "PRDM15"    "PRKDC"     "PROX1"     "RAD54L2"   "REL"      
+ [91] "REV3L"     "SAFB2"     "SETX"      "SMG1"      "SNAPC4"    "SPEN"     
+ [97] "SYCP2"     "TAF1D"     "TBX6"      "TCF20"     "TEAD2"     "TET1"     
+[103] "TET2"      "TET3"      "TFEC"      "TNF"       "TNRC18"    "UTY"      
+[109] "ZBED6"     "ZBTB16"    "ZBTB32"    "ZBTB38"    "ZBTB48"    "ZC3H12A"  
+[115] "ZEB2"      "ZFP146"    "ZFP182"    "ZFP326"    "ZFP369"    "ZFP638"   
+[121] "ZFP691"    "ZFP692"    "ZHX3"      "ZMYM6"     "ZSCAN26"  
+
+$`GO:0006952`
+ [1] "9930111J21RIK1" "AGER"           "ALPK1"          "ANXA1"         
+ [5] "ASH1L"          "BATF2"          "C3"             "CAMP"          
+ [9] "CAV1"           "CCL8"           "CD160"          "CD163"         
+[13] "CD24A"          "CD27"           "CD44"           "CD74"          
+[17] "CHIL3"          "CLEC2D"         "CLEC4N"         "CLOCK"         
+[21] "COLEC12"        "DDIT4"          "DICER1"         "DUSP10"        
+[25] "FAM13B"         "GBP4"           "HIST1H2BE"      "HIST1H2BF"     
+[29] "HIST1H2BG"      "HIST1H3A"       "HIST1H3D"       "HIST1H3E"      
+[33] "IFITM2"         "IL1RN"          "ITGAX"          "ITGB2L"        
+[37] "KLRB1C"         "LCN2"           "LGALS3"         "LTB4R1"        
+[41] "LTF"            "LYST"           "MAPK8"          "MBD5"          
+[45] "MPO"            "MRC1"           "MX2"            "NAIP6"         
+[49] "NFKBID"         "NFKBIZ"         "NGP"            "NLRP1B"        
+[53] "NR1D1"          "OAS1B"          "OAS2"           "PELI3"         
+[57] "PER1"           "PGLYRP1"        "PLA2G7"         "PLSCR1"        
+[61] "PTGER4"         "RAB7B"          "REL"            "RNASEL"        
+[65] "RPS6KA3"        "S100A8"         "S100A9"         "SLAMF7"        
+[69] "SLC26A6"        "TNF"            "TRAF3IP1"       "TREM3"         
+[73] "TRIM56"         "ZC3H12A"       
+
+$`GO:0002102`
+[1] "MAPK8"    "SH3PXD2A" "SH3PXD2B"
+
+$`GO:0097167`
+[1] "PER1" "PER2"
+
+$`GO:0098868`
+[1] "COL27A1"
+
+$`GO:0099518`
+[1] "FYCO1"  "HTT"    "KIF13A" "KIF23" 
+
+$`GO:0005856`
+ [1] "1700029J07RIK" "ACTC1"         "ANKRD23"       "ANXA2"        
+ [5] "APBB3"         "APC"           "ARHGAP21"      "ARHGAP32"     
+ [9] "ARHGAP39"      "ARHGAP6"       "ATM"           "ATXN7"        
+[13] "BAIAP2L1"      "BICD1"         "BIRC6"         "CDC42BPA"     
+[17] "CEP135"        "CEP162"        "CEP290"        "CEP350"       
+[21] "CHD3"          "CNTRL"         "CROCC"         "CSRP1"        
+[25] "DDX6"          "DGKQ"          "DHX9"          "DISC1"        
+[29] "DLC1"          "DNAH17"        "DNM1"          "DST"          
+[33] "DVL1"          "EML5"          "EML6"          "ENAH"         
+[37] "FBXO5"         "FHL3"          "GAS7"          "HERC2"        
+[41] "HSPA1A"        "HTT"           "INO80"         "KIF13A"       
+[45] "KIF1C"         "KIF21B"        "KIF23"         "KLHL3"        
+[49] "LRRC45"        "LYST"          "MACF1"         "MAPK8"        
+[53] "MDN1"          "MICAL3"        "MYC"           "MYCBP2"       
+[57] "MYO18B"        "MYO9A"         "PKP4"          "PLEKHH2"      
+[61] "PPP1R9A"       "PTPN4"         "RAB11FIP3"     "RPGRIP1"      
+[65] "RTTN"          "S100A8"        "S100A9"        "SCLT1"        
+[69] "SCNN1A"        "SEPT3"         "SH3PXD2A"      "SH3PXD2B"     
+[73] "SIPA1L3"       "SNAP25"        "SORBS2"        "TAF1D"        
+[77] "TIAM1"         "TRAF3IP1"      "TRIP6"         "TSC1"         
+[81] "TTLL3"         "TTLL4"         "UBR4"          "UPF3B"        
+[85] "WHRN"          "ZC3H12A"       "ZFP369"        "ZFYVE26"      
+
+$`GO:0070044`
+[1] "NAPB"   "SNAP25"
+
+$`GO:0045836`
+[1] "FBXO5"
+
+$`GO:0019249`
+[1] "HTT"  "PER2"
+
+$`GO:0098687`
+ [1] "APC"       "ATM"       "ATRX"      "DNMT3A"    "DNMT3B"    "HIST1H2BB"
+ [7] "HIST1H3A"  "HIST1H3D"  "HIST1H3E"  "HIST1H4C"  "HIST1H4D"  "HIST1H4H" 
+[13] "HIST1H4I"  "HIST2H4"   "HIST4H4"   "MBD5"      "MBD6"      "POT1B"    
+[19] "PRKDC"     "SETX"     
+
+$`GO:0005874`
+ [1] "APC"    "BICD1"  "CEP162" "DISC1"  "DNAH17" "DNM1"   "DST"    "DVL1"  
+ [9] "EML5"   "EML6"   "INO80"  "KIF13A" "KIF1C"  "KIF21B" "KIF23"  "MACF1" 
+[17] "TIAM1"  "TTLL3"  "TTLL4" 
+
+$`GO:0005593`
+character(0)
+
+$`GO:0015631`
+ [1] "ADNP"     "APC"      "DNM1"     "DST"      "HTT"      "INO80"   
+ [7] "KIF13A"   "KIF1C"    "KIF21B"   "KIF23"    "MACF1"    "MX2"     
+[13] "PRNP"     "S100A8"   "S100A9"   "SNCB"     "TIAM1"    "TRAF3IP1"
+[19] "TTLL4"   
+
+$`GO:0072603`
+character(0)
+
+$`GO:0072611`
+character(0)
+
+$`GO:2000662`
+character(0)
+
+$`GO:2000665`
+character(0)
+
+$`GO:0072383`
+[1] "FYCO1"  "KIF13A" "KIF23" 
+
+$`GO:0072386`
+[1] "FYCO1"  "KIF13A" "KIF23" 
+
+$`GO:0051568`
+ [1] "ASH1L"    "DNMT3B"   "HIST1H1D" "HIST1H1E" "KMT2A"    "KMT2B"   
+ [7] "KMT2D"    "OGT"      "TET2"     "TET3"    
+
+$`GO:0051259`
+ [1] "ALDOC"    "ANXA2"    "CAV1"     "CHRNB2"   "DGKH"     "DNM1"    
+ [7] "GPX3"     "HIST1H3A" "HIST1H3D" "HIST1H3E" "HIST1H4C" "HIST1H4D"
+[13] "HIST1H4H" "HIST1H4I" "HIST2H4"  "HIST4H4"  "KCND3"    "KCNRG"   
+[19] "KCTD3"    "LCN2"     "MGST1"    "MLC1"     "OGT"      "POLQ"    
+[25] "PRNP"     "TRPM7"    "TSC1"     "ZC3H12A" 
+
+$`GO:0042092`
+[1] "ANXA1" "CD74" 
+
+$`GO:0005871`
+[1] "DISC1"  "KIF13A" "KIF1C"  "KIF21B" "KIF23" 
+
+$`GO:0007126`
+[1] "AGO4"   "ATM"    "FANCM"  "FBXO5"  "MARF1"  "SYCP2"  "TRIP13"
+
+$`GO:0060968`
+[1] "ATAD2B"   "HIST1H3A" "HIST1H3D" "HIST1H3E" "TET1"     "UTY"      "ZC3H12A" 
+
+$`GO:0050830`
+[1] "CAMP"      "HIST1H2BE" "HIST1H2BF" "HIST1H2BG" "PGLYRP1"   "TNF"      
+
+$`GO:0008017`
+ [1] "APC"      "DNM1"     "DST"      "KIF13A"   "KIF1C"    "KIF21B"  
+ [7] "KIF23"    "MACF1"    "MX2"      "PRNP"     "S100A8"   "S100A9"  
+[13] "TIAM1"    "TRAF3IP1"
+
+$`GO:0006954`
+ [1] "AGER"    "ANXA1"   "ASH1L"   "C3"      "CCL8"    "CD163"   "CD24A"  
+ [8] "CD27"    "CD44"    "CHIL3"   "CLOCK"   "DICER1"  "DUSP10"  "IL1RN"  
+[15] "ITGB2L"  "LTB4R1"  "MAPK8"   "NAIP6"   "NFKBID"  "NFKBIZ"  "NLRP1B" 
+[22] "PER1"    "PGLYRP1" "PLA2G7"  "PLSCR1"  "PTGER4"  "REL"     "S100A8" 
+[29] "S100A9"  "TNF"     "ZC3H12A"
+
+$`GO:0006479`
+ [1] "ASH1L"    "ATRX"     "BAZ2A"    "DNMT3B"   "DOT1L"    "HIST1H1D"
+ [7] "HIST1H1E" "KMT2A"    "KMT2B"    "KMT2C"    "KMT2D"    "MTHFR"   
+[13] "NSD1"     "OGT"      "PAXBP1"   "SETD2"    "TET1"     "TET2"    
+[19] "TET3"    
+
+$`GO:0008213`
+ [1] "ASH1L"    "ATRX"     "BAZ2A"    "DNMT3B"   "DOT1L"    "HIST1H1D"
+ [7] "HIST1H1E" "KMT2A"    "KMT2B"    "KMT2C"    "KMT2D"    "MTHFR"   
+[13] "NSD1"     "OGT"      "PAXBP1"   "SETD2"    "TET1"     "TET2"    
+[19] "TET3"    
+
+$`GO:0051321`
+[1] "AGO4"   "ATM"    "FANCM"  "FBXO5"  "MARF1"  "SYCP2"  "TRIP13" "ZFP318"
+
+$`GO:0060903`
+[1] "FBXO5"
+
+$`GO:0009584`
+character(0)
+
+$`GO:0044130`
+[1] "CAMP" "MPO"  "TNF" 
+
+$`GO:0044146`
+[1] "CAMP" "MPO"  "TNF" 
+
+$`GO:0004697`
+[1] "ALPK1"
+
+$`GO:0002714`
+[1] "C3"  "TNF"
+
+$`GO:0002891`
+[1] "C3"  "TNF"
+

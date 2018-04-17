@@ -1,0 +1,12 @@
+$`04110`
+[1] "CCNA2" "CCNB1" "CCNB2" "CCNE1" "CDC20" "TGFB2"
+
+$`04114`
+[1] "ADCY8"  "AURKA"  "CCNB1"  "CCNB2"  "CCNE1"  "CDC20"  "CPEB1"  "PPP3CC"
+
+$`04060`
+ [1] "ACKR3"    "CCL5"     "CCL8"     "CCR1"     "CCR3"     "CCR9"    
+ [7] "CD40"     "CRLF2"    "CXCL13"   "CXCL14"   "CXCR4"    "EPOR"    
+[13] "FLT1"     "IL2RG"    "IL3RA"    "TGFB2"    "TNFSF13"  "TNFSF13B"
+[19] "TNFSF8"  
+

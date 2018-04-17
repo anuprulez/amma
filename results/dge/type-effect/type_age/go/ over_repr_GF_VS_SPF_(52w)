@@ -1,0 +1,217 @@
+$`GO:0002376`
+ [1] "ADORA1"   "BCL3"     "CAMP"     "CAV1"     "CCNB2"    "CCR6"    
+ [7] "CD180"    "CD300LF"  "CDKN1A"   "CTSE"     "CXCL10"   "DDIT4"   
+[13] "ESCO2"    "GPR18"    "HIST1H4C" "HP"       "IFIT1"    "IFIT2"   
+[19] "IFIT3B"   "IFITM3"   "IL15RA"   "IL6ST"    "LCN2"     "LTF"     
+[25] "LY86"     "MMP28"    "OASL2"    "OLFM4"    "PDCD1"    "RAB4A"   
+[31] "RSAD2"    "THSD1"    "TNFRSF26" "TNFSF8"   "TOP2A"    "TRPV4"   
+[37] "TSC22D3"  "VEGFA"    "WDFY1"    "ZBTB16"  
+
+$`GO:0070488`
+character(0)
+
+$`GO:0018119`
+character(0)
+
+$`GO:0017014`
+character(0)
+
+$`GO:0048522`
+ [1] "ADORA1"   "ASNS"     "AURKA"    "BCL3"     "BIRC5"    "BUB1"    
+ [7] "CAMP"     "CAV1"     "CCNA2"    "CCNB1"    "CCR6"     "CD180"   
+[13] "CDC20"    "CDC42EP1" "CDCA2"    "CDCA5"    "CDK5RAP1" "CDKN1A"  
+[19] "CLSPN"    "CXCL10"   "DBP"      "DDIT4"    "DUOXA1"   "DUSP1"   
+[25] "DYNLT1B"  "E2F1"     "ELAVL4"   "FGFBP3"   "HP"       "IFIT2"   
+[31] "IL15RA"   "IL1RN"    "IL6ST"    "JDP2"     "KIF23"    "LCN2"    
+[37] "LDLR"     "LTF"      "LY86"     "MELK"     "MID1"     "MSR1"    
+[43] "NUSAP1"   "OLFM4"    "PDCD1"    "PER1"     "PLET1"    "PRC1"    
+[49] "RACGAP1"  "RSAD2"    "RXRG"     "TNFSF8"   "TOP2A"    "TRPV4"   
+[55] "UHRF1"    "VEGFA"    "WDFY1"    "XDH"      "ZBTB16"  
+
+$`GO:0050900`
+[1] "ADORA1" "CCR6"   "CXCL10" "GPR18"  "MMP28"  "TRPV4"  "VEGFA" 
+
+$`GO:0035662`
+character(0)
+
+$`GO:0016477`
+ [1] "ADORA1" "CCR6"   "CXCL10" "DDIT4"  "GPR18"  "IL1RN"  "IL6ST"  "MMP28" 
+ [9] "PLET1"  "TRPV4"  "VEGFA" 
+
+$`GO:0048518`
+ [1] "ADORA1"   "ASNS"     "AURKA"    "BCL3"     "BIRC5"    "BUB1"    
+ [7] "CAMP"     "CAV1"     "CCNA2"    "CCNB1"    "CCR6"     "CD180"   
+[13] "CDC20"    "CDC42EP1" "CDCA2"    "CDCA5"    "CDK5RAP1" "CDKN1A"  
+[19] "CLSPN"    "CXCL10"   "DBP"      "DDIT4"    "DUOXA1"   "DUSP1"   
+[25] "DYNLT1B"  "E2F1"     "ELAVL4"   "FGFBP3"   "HP"       "IFIT2"   
+[31] "IL12RB2"  "IL15RA"   "IL1RN"    "IL6ST"    "JDP2"     "KIF23"   
+[37] "LCN2"     "LDLR"     "LTF"      "LY86"     "MELK"     "MID1"    
+[43] "MSR1"     "NOTCH4"   "NUSAP1"   "OLFM4"    "PDCD1"    "PER1"    
+[49] "PLET1"    "PRC1"     "RACGAP1"  "RSAD2"    "RXRG"     "TNFSF8"  
+[55] "TOP2A"    "TRPV4"    "UHRF1"    "VEGFA"    "WDFY1"    "XDH"     
+[61] "ZBTB16"  
+
+$`GO:0030595`
+[1] "CCR6"   "CXCL10" "GPR18"  "MMP28"  "TRPV4"  "VEGFA" 
+
+$`GO:0032103`
+[1] "CCR6"   "CD180"  "CXCL10" "LDLR"   "LY86"   "TRPV4"  "VEGFA" 
+
+$`GO:0046983`
+ [1] "ADORA1"  "ASNS"    "CAV1"    "CPQ"     "CTSE"    "E2F1"    "HP"     
+ [8] "IL6ST"   "JDP2"    "LCN2"    "MID1"    "MYCL"    "OLFM4"   "SULT1A1"
+[15] "TOP2A"   "VEGFA"   "XDH"     "ZBTB16" 
+
+$`GO:0048870`
+ [1] "ADORA1" "CCR6"   "CXCL10" "DDIT4"  "GPR18"  "IER2"   "IL1RN"  "IL6ST" 
+ [9] "MMP28"  "PLET1"  "TRPV4"  "VEGFA" 
+
+$`GO:0051674`
+ [1] "ADORA1" "CCR6"   "CXCL10" "DDIT4"  "GPR18"  "IER2"   "IL1RN"  "IL6ST" 
+ [9] "MMP28"  "PLET1"  "TRPV4"  "VEGFA" 
+
+$`GO:0007163`
+[1] "DYNLT1B" "WEE1"   
+
+$`GO:1900086`
+[1] "VEGFA"
+
+$`GO:0050786`
+character(0)
+
+$`GO:0018198`
+character(0)
+
+$`GO:0006952`
+ [1] "ADORA1"   "BCL3"     "CAMP"     "CAV1"     "CCR6"     "CD180"   
+ [7] "CHIL3"    "CXCL10"   "DDIT4"    "DUOXA1"   "HP"       "IFIT1"   
+[13] "IFIT2"    "IFIT3B"   "IFITM3"   "IL1RN"    "LCN2"     "LDLR"    
+[19] "LTF"      "LY86"     "NGP"      "OASL2"    "PBK"      "PER1"    
+[25] "RSAD2"    "TNFRSF26" "TNFSF8"   "TRPV4"    "WDFY1"   
+
+$`GO:0060978`
+[1] "VEGFA"
+
+$`GO:1900084`
+[1] "CAV1"  "VEGFA"
+
+$`GO:0042803`
+ [1] "ASNS"    "CPQ"     "CTSE"    "HP"      "LCN2"    "MID1"    "OLFM4"  
+ [8] "SULT1A1" "TOP2A"   "VEGFA"   "XDH"     "ZBTB16" 
+
+$`GO:0002682`
+ [1] "ADORA1"   "CAV1"     "CCR6"     "CD180"    "CDKN1A"   "CXCL10"  
+ [7] "GPR18"    "HIST1H4C" "IFIT1"    "IL15RA"   "IL6ST"    "LTF"     
+[13] "MMP28"    "OLFM4"    "PDCD1"    "RSAD2"    "TRPV4"    "TSC22D3" 
+[19] "VEGFA"    "WDFY1"    "ZBTB16"  
+
+$`GO:0050542`
+character(0)
+
+$`GO:0050544`
+character(0)
+
+$`GO:0030261`
+[1] "CCNB1"  "CDCA5"  "NUSAP1" "TOP2A" 
+
+$`GO:0050543`
+character(0)
+
+$`GO:0009897`
+[1] "CXCL10"  "IL12RB2" "IL6ST"   "LDLR"    "PDCD1"   "PLET1"  
+
+$`GO:0006955`
+ [1] "BCL3"     "CAMP"     "CAV1"     "CCR6"     "CD180"    "CXCL10"  
+ [7] "IFIT1"    "IFIT2"    "IFITM3"   "LCN2"     "LTF"      "LY86"    
+[13] "OASL2"    "OLFM4"    "RSAD2"    "TNFRSF26" "TNFSF8"   "VEGFA"   
+[19] "WDFY1"   
+
+$`GO:0034392`
+character(0)
+
+$`GO:0016337`
+ [1] "BCL3"   "CAV1"   "CCR6"   "CSRP1"  "GPR18"  "IL1RN"  "IL6ST"  "RSAD2" 
+ [9] "TNFSF8" "TRPV4"  "VEGFA"  "ZBTB16"
+
+$`GO:0097529`
+[1] "CXCL10" "MMP28"  "TRPV4"  "VEGFA" 
+
+$`GO:0035088`
+character(0)
+
+$`GO:0061245`
+character(0)
+
+$`GO:0060326`
+[1] "CCR6"   "CXCL10" "GPR18"  "MMP28"  "TRPV4"  "VEGFA" 
+
+$`GO:0060426`
+[1] "VEGFA"
+
+$`GO:0030334`
+ [1] "ADORA1" "CCR6"   "CXCL10" "GPR18"  "IL1RN"  "IL6ST"  "MMP28"  "PLET1" 
+ [9] "TRPV4"  "VEGFA" 
+
+$`GO:0042445`
+[1] "CPQ"     "DUOXA1"  "ERO1LB"  "SULT1A1"
+
+$`GO:0035325`
+character(0)
+
+$`GO:0040011`
+ [1] "ADORA1" "CCR6"   "CXCL10" "DDIT4"  "GPR18"  "IER2"   "IL1RN"  "IL6ST" 
+ [9] "MMP28"  "PLET1"  "TRPV4"  "VEGFA" 
+
+$`GO:0002688`
+[1] "CCR6"   "CXCL10" "GPR18"  "MMP28"  "TRPV4"  "VEGFA" 
+
+$`GO:0035630`
+character(0)
+
+$`GO:0036041`
+character(0)
+
+$`GO:0044403`
+ [1] "ATG16L2"  "BCL3"     "CAMP"     "CAV1"     "CXCL10"   "DDIT4"   
+ [7] "IFI27L2A" "IFIT1"    "IFIT2"    "IFIT3B"   "IFITM3"   "LCN2"    
+[13] "LTF"      "OAS1A"    "OASL2"    "RSAD2"    "TOP2A"   
+
+$`GO:0044419`
+ [1] "ATG16L2"  "BCL3"     "CAMP"     "CAV1"     "CXCL10"   "DDIT4"   
+ [7] "IFI27L2A" "IFIT1"    "IFIT2"    "IFIT3B"   "IFITM3"   "LCN2"    
+[13] "LTF"      "OAS1A"    "OASL2"    "RSAD2"    "TOP2A"   
+
+$`GO:2000145`
+ [1] "ADORA1" "CCR6"   "CXCL10" "GPR18"  "IL1RN"  "IL6ST"  "MMP28"  "PLET1" 
+ [9] "TRPV4"  "VEGFA" 
+
+$`GO:0098602`
+ [1] "BCL3"   "CAV1"   "CCR6"   "CSRP1"  "GPR18"  "IL1RN"  "IL6ST"  "OLFM4" 
+ [9] "RSAD2"  "TNFSF8" "TRPV4"  "VEGFA"  "ZBTB16"
+
+$`GO:0051345`
+[1] "RGS1"  "VEGFA" "XDH"  
+
+$`GO:0065010`
+character(0)
+
+$`GO:0060541`
+[1] "VEGFA"
+
+$`GO:2000026`
+ [1] "CAMP"     "CAV1"     "CCNB1"    "CDC20"    "CXCL10"   "DUOXA1"  
+ [7] "DYNLT1B"  "ELAVL4"   "HIST1H4C" "IL15RA"   "IL1RN"    "IL6ST"   
+[13] "MAFF"     "MYCL"     "NGP"      "NOTCH4"   "PDCD1"    "PER2"    
+[19] "RXRG"     "TRPV4"    "TSC22D3"  "VEGFA"    "XDH"      "ZBTB16"  
+
+$`GO:0048018`
+[1] "VEGFA"
+
+$`GO:0051093`
+ [1] "CAV1"     "CXCL10"   "DYNLT1B"  "E2F1"     "HIST1H4C" "IL15RA"  
+ [7] "JDP2"     "NGP"      "NOTCH4"   "PDCD1"    "TRPV4"    "TSC22D3" 
+[13] "VEGFA"    "XDH"      "ZBTB16"  
+
+$`GO:0031349`
+[1] "CAV1"  "CD180" "LDLR"  "LTF"   "RSAD2" "TRPV4" "WDFY1"
+

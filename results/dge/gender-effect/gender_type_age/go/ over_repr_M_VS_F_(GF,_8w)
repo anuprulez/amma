@@ -1,0 +1,400 @@
+$`GO:0044815`
+ [1] "HIST1H1C"  "HIST1H1D"  "HIST1H1E"  "HIST1H2BB" "HIST1H2BE" "HIST1H2BF"
+ [7] "HIST1H2BG" "HIST1H3A"  "HIST1H3C"  "HIST1H3D"  "HIST1H3E"  "HIST1H3F" 
+[13] "HIST1H4C"  "HIST1H4D"  "HIST1H4H"  "HIST1H4I"  "HIST2H2BB" "HIST2H3B" 
+[19] "HIST2H4"   "HIST4H4"   "KAT6B"    
+
+$`GO:0000786`
+ [1] "HIST1H1C"  "HIST1H1D"  "HIST1H1E"  "HIST1H2BB" "HIST1H2BE" "HIST1H2BF"
+ [7] "HIST1H2BG" "HIST1H3A"  "HIST1H3C"  "HIST1H3D"  "HIST1H3E"  "HIST1H3F" 
+[13] "HIST1H4C"  "HIST1H4D"  "HIST1H4H"  "HIST1H4I"  "HIST2H2BB" "HIST2H3B" 
+[19] "HIST2H4"   "HIST4H4"   "KAT6B"    
+
+$`GO:0006334`
+ [1] "HIRA"      "HIST1H1C"  "HIST1H1D"  "HIST1H1E"  "HIST1H2BB" "HIST1H2BE"
+ [7] "HIST1H2BF" "HIST1H2BG" "HIST1H3A"  "HIST1H3C"  "HIST1H3D"  "HIST1H3E" 
+[13] "HIST1H3F"  "HIST1H4C"  "HIST1H4D"  "HIST1H4H"  "HIST1H4I"  "HIST2H2BB"
+[19] "HIST2H3B"  "HIST2H4"   "HIST4H4"   "KAT6B"    
+
+$`GO:0031497`
+ [1] "HIRA"      "HIST1H1C"  "HIST1H1D"  "HIST1H1E"  "HIST1H2BB" "HIST1H2BE"
+ [7] "HIST1H2BF" "HIST1H2BG" "HIST1H3A"  "HIST1H3C"  "HIST1H3D"  "HIST1H3E" 
+[13] "HIST1H3F"  "HIST1H4C"  "HIST1H4D"  "HIST1H4H"  "HIST1H4I"  "HIST2H2BB"
+[19] "HIST2H3B"  "HIST2H4"   "HIST4H4"   "KAT6B"     "TNRC18"   
+
+$`GO:0034728`
+ [1] "HIRA"      "HIST1H1C"  "HIST1H1D"  "HIST1H1E"  "HIST1H2BB" "HIST1H2BE"
+ [7] "HIST1H2BF" "HIST1H2BG" "HIST1H3A"  "HIST1H3C"  "HIST1H3D"  "HIST1H3E" 
+[13] "HIST1H3F"  "HIST1H4C"  "HIST1H4D"  "HIST1H4H"  "HIST1H4I"  "HIST2H2BB"
+[19] "HIST2H3B"  "HIST2H4"   "HIST4H4"   "KAT6B"    
+
+$`GO:0000788`
+[1] "HIST1H2BB" "HIST1H2BE" "HIST1H2BF" "HIST1H2BG" "HIST1H3A"  "HIST1H3D" 
+[7] "HIST1H3E"  "HIST2H2BB" "HIST2H3B" 
+
+$`GO:0006323`
+ [1] "HIRA"      "HIST1H1C"  "HIST1H1D"  "HIST1H1E"  "HIST1H2BB" "HIST1H2BE"
+ [7] "HIST1H2BF" "HIST1H2BG" "HIST1H3A"  "HIST1H3C"  "HIST1H3D"  "HIST1H3E" 
+[13] "HIST1H3F"  "HIST1H4C"  "HIST1H4D"  "HIST1H4H"  "HIST1H4I"  "HIST2H2BB"
+[19] "HIST2H3B"  "HIST2H4"   "HIST4H4"   "KAT6B"     "TNRC18"   
+
+$`GO:0006333`
+ [1] "HIRA"      "HIST1H1C"  "HIST1H1D"  "HIST1H1E"  "HIST1H2BB" "HIST1H2BE"
+ [7] "HIST1H2BF" "HIST1H2BG" "HIST1H3A"  "HIST1H3C"  "HIST1H3D"  "HIST1H3E" 
+[13] "HIST1H3F"  "HIST1H4C"  "HIST1H4D"  "HIST1H4H"  "HIST1H4I"  "HIST2H2BB"
+[19] "HIST2H3B"  "HIST2H4"   "HIST4H4"   "KAT6B"     "TNRC18"   
+
+$`GO:0032993`
+ [1] "HIST1H1C"  "HIST1H1D"  "HIST1H1E"  "HIST1H2BB" "HIST1H2BE" "HIST1H2BF"
+ [7] "HIST1H2BG" "HIST1H3A"  "HIST1H3C"  "HIST1H3D"  "HIST1H3E"  "HIST1H3F" 
+[13] "HIST1H4C"  "HIST1H4D"  "HIST1H4H"  "HIST1H4I"  "HIST2H2BB" "HIST2H3B" 
+[19] "HIST2H4"   "HIST4H4"   "KAT6B"    
+
+$`GO:0065004`
+ [1] "HIRA"      "HIST1H1C"  "HIST1H1D"  "HIST1H1E"  "HIST1H2BB" "HIST1H2BE"
+ [7] "HIST1H2BF" "HIST1H2BG" "HIST1H3A"  "HIST1H3C"  "HIST1H3D"  "HIST1H3E" 
+[13] "HIST1H3F"  "HIST1H4C"  "HIST1H4D"  "HIST1H4H"  "HIST1H4I"  "HIST2H2BB"
+[19] "HIST2H3B"  "HIST2H4"   "HIST4H4"   "KAT6B"    
+
+$`GO:0006335`
+ [1] "HIST1H3A" "HIST1H3D" "HIST1H3E" "HIST1H4C" "HIST1H4D" "HIST1H4H"
+ [7] "HIST1H4I" "HIST2H3B" "HIST2H4"  "HIST4H4" 
+
+$`GO:0034723`
+ [1] "HIST1H3A" "HIST1H3D" "HIST1H3E" "HIST1H4C" "HIST1H4D" "HIST1H4H"
+ [7] "HIST1H4I" "HIST2H3B" "HIST2H4"  "HIST4H4" 
+
+$`GO:0071103`
+ [1] "HIRA"      "HIST1H1C"  "HIST1H1D"  "HIST1H1E"  "HIST1H2BB" "HIST1H2BE"
+ [7] "HIST1H2BF" "HIST1H2BG" "HIST1H3A"  "HIST1H3C"  "HIST1H3D"  "HIST1H3E" 
+[13] "HIST1H3F"  "HIST1H4C"  "HIST1H4D"  "HIST1H4H"  "HIST1H4I"  "HIST2H2BB"
+[19] "HIST2H3B"  "HIST2H4"   "HIST4H4"   "KAT6B"     "TNRC18"   
+
+$`GO:0071824`
+ [1] "HIRA"      "HIST1H1C"  "HIST1H1D"  "HIST1H1E"  "HIST1H2BB" "HIST1H2BE"
+ [7] "HIST1H2BF" "HIST1H2BG" "HIST1H3A"  "HIST1H3C"  "HIST1H3D"  "HIST1H3E" 
+[13] "HIST1H3F"  "HIST1H4C"  "HIST1H4D"  "HIST1H4H"  "HIST1H4I"  "HIST2H2BB"
+[19] "HIST2H3B"  "HIST2H4"   "HIST4H4"   "KAT6B"    
+
+$`GO:0006325`
+ [1] "ASH1L"     "BPTF"      "CHD9"      "DOT1L"     "FTX"       "HDAC4"    
+ [7] "HIRA"      "HIST1H1C"  "HIST1H1D"  "HIST1H1E"  "HIST1H2AB" "HIST1H2AC"
+[13] "HIST1H2AD" "HIST1H2AE" "HIST1H2BB" "HIST1H2BE" "HIST1H2BF" "HIST1H2BG"
+[19] "HIST1H3A"  "HIST1H3C"  "HIST1H3D"  "HIST1H3E"  "HIST1H3F"  "HIST1H4C" 
+[25] "HIST1H4D"  "HIST1H4H"  "HIST1H4I"  "HIST2H2BB" "HIST2H3B"  "HIST2H4"  
+[31] "HIST4H4"   "HUWE1"     "INO80"     "KAT6B"     "KDM5D"     "KDM6B"    
+[37] "KMT2A"     "KMT2B"     "KMT2C"     "KMT2D"     "MTHFR"     "MYC"      
+[43] "PER2"      "PRDM9"     "PRKAA2"    "SETD1A"    "SETD1B"    "TET1"     
+[49] "TET2"      "TET3"      "TNRC18"    "TRRAP"     "TSIX"      "UBR5"     
+[55] "USP34"     "UTY"      
+
+$`GO:0051290`
+ [1] "HIST1H3A" "HIST1H3D" "HIST1H3E" "HIST1H4C" "HIST1H4D" "HIST1H4H"
+ [7] "HIST1H4I" "HIST2H3B" "HIST2H4"  "HIST4H4" 
+
+$`GO:0002227`
+[1] "CAMP"      "HIST1H2BE" "HIST1H2BF" "HIST1H2BG" "LTF"       "NOD2"     
+
+$`GO:0045653`
+[1] "HIST1H4C" "HIST1H4D" "HIST1H4H" "HIST1H4I" "HIST2H4"  "HIST4H4"  "PF4"     
+
+$`GO:0051276`
+ [1] "APC"       "HIRA"      "HIST1H1C"  "HIST1H1D"  "HIST1H1E"  "HIST1H2BB"
+ [7] "HIST1H2BE" "HIST1H2BF" "HIST1H2BG" "HIST1H3A"  "HIST1H3C"  "HIST1H3D" 
+[13] "HIST1H3E"  "HIST1H3F"  "HIST1H4C"  "HIST1H4D"  "HIST1H4H"  "HIST1H4I" 
+[19] "HIST2H2BB" "HIST2H3B"  "HIST2H4"   "HIST4H4"   "HSPA1A"    "INO80"    
+[25] "KAT6B"     "MYC"       "PRKDC"     "SMG1"      "SMG6"      "TNRC18"   
+[31] "TRIP13"   
+
+$`GO:0045652`
+[1] "HIST1H4C" "HIST1H4D" "HIST1H4H" "HIST1H4I" "HIST2H4"  "HIST4H4"  "PF4"     
+
+$`GO:0002385`
+[1] "CAMP"      "HIST1H2BE" "HIST1H2BF" "HIST1H2BG" "LTF"       "NOD2"     
+
+$`GO:0002251`
+[1] "CAMP"      "HIST1H2BE" "HIST1H2BF" "HIST1H2BG" "LTF"       "NOD2"     
+
+$`GO:0043933`
+ [1] "ACACA"     "ACACB"     "AGO2"      "APC"       "ASH1L"     "BC068281" 
+ [7] "BPTF"      "CADPS2"    "CAMK2G"    "CHD9"      "CPSF7"     "CXCL13"   
+[13] "DDIT4"     "DOT1L"     "DYNC1H1"   "EIF2S3Y"   "FBXO5"     "FTX"      
+[19] "HDAC4"     "HIRA"      "HIST1H1C"  "HIST1H1D"  "HIST1H1E"  "HIST1H2AB"
+[25] "HIST1H2AC" "HIST1H2AD" "HIST1H2AE" "HIST1H2BB" "HIST1H2BE" "HIST1H2BF"
+[31] "HIST1H2BG" "HIST1H3A"  "HIST1H3C"  "HIST1H3D"  "HIST1H3E"  "HIST1H3F" 
+[37] "HIST1H4C"  "HIST1H4D"  "HIST1H4H"  "HIST1H4I"  "HIST2H2BB" "HIST2H3B" 
+[43] "HIST2H4"   "HIST4H4"   "HUWE1"     "INO80"     "ITPR3"     "JUN"      
+[49] "KAT6B"     "KCNRG"     "KDM5D"     "KDM6B"     "KMT2A"     "KMT2B"    
+[55] "KMT2C"     "KMT2D"     "LCN2"      "MAPK8"     "MDM4"      "MDN1"     
+[61] "MGST1"     "MICAL3"    "MPO"       "MTHFR"     "MTOR"      "MYC"      
+[67] "NAPB"      "NIN"       "NOD2"      "PAN3"      "PER2"      "PF4"      
+[73] "PRDM9"     "PRKAA2"    "PTBP2"     "PTGER4"    "RP1"       "RPL10"    
+[79] "RPL12"     "SETD1A"    "SETD1B"    "SH3PXD2A"  "STK11"     "STX1A"    
+[85] "TET1"      "TET2"      "TET3"      "TMSB10"    "TNF"       "TNRC18"   
+[91] "TRRAP"     "TSC1"      "TSIX"      "UBR5"      "USP34"     "UTY"      
+[97] "VAMP1"     "ZC3H12A"  
+
+$`GO:0001750`
+[1] "GNAT1"  "PDC"    "PHLPP2" "PRPH2"  "RGS9"   "RHO"    "RP1"   
+
+$`GO:0065003`
+ [1] "ACACA"     "ACACB"     "AGO2"      "APC"       "BC068281"  "CADPS2"   
+ [7] "CAMK2G"    "CPSF7"     "CXCL13"    "DYNC1H1"   "EIF2S3Y"   "FBXO5"    
+[13] "HIRA"      "HIST1H1C"  "HIST1H1D"  "HIST1H1E"  "HIST1H2BB" "HIST1H2BE"
+[19] "HIST1H2BF" "HIST1H2BG" "HIST1H3A"  "HIST1H3C"  "HIST1H3D"  "HIST1H3E" 
+[25] "HIST1H3F"  "HIST1H4C"  "HIST1H4D"  "HIST1H4H"  "HIST1H4I"  "HIST2H2BB"
+[31] "HIST2H3B"  "HIST2H4"   "HIST4H4"   "ITPR3"     "JUN"       "KAT6B"    
+[37] "KCNRG"     "KMT2A"     "LCN2"      "MAPK8"     "MDM4"      "MDN1"     
+[43] "MGST1"     "MTOR"      "NAPB"      "NIN"       "NOD2"      "PAN3"     
+[49] "PF4"       "PRKAA2"    "PTBP2"     "PTGER4"    "RP1"       "RPL10"    
+[55] "RPL12"     "SH3PXD2A"  "STK11"     "STX1A"     "TMSB10"    "TNF"      
+[61] "TNRC18"    "TSC1"      "VAMP1"     "ZC3H12A"  
+
+$`GO:0000785`
+ [1] "HIRA"      "HIST1H1C"  "HIST1H1D"  "HIST1H1E"  "HIST1H2AB" "HIST1H2AC"
+ [7] "HIST1H2AD" "HIST1H2AE" "HIST1H2BB" "HIST1H2BE" "HIST1H2BF" "HIST1H2BG"
+[13] "HIST1H3A"  "HIST1H3C"  "HIST1H3D"  "HIST1H3E"  "HIST1H3F"  "HIST1H4C" 
+[19] "HIST1H4D"  "HIST1H4H"  "HIST1H4I"  "HIST2H2BB" "HIST2H3B"  "HIST2H4"  
+[25] "HIST4H4"   "INO80"     "JUN"       "KAT6B"     "MYC"       "NFRKB"    
+[31] "PPARD"     "RARG"      "SETD1A"    "THRB"      "TNRC18"    "TRRAP"    
+
+$`GO:0044427`
+ [1] "APC"       "KNL1"      "HIRA"      "HIST1H1C"  "HIST1H1D"  "HIST1H1E" 
+ [7] "HIST1H2AB" "HIST1H2AC" "HIST1H2AD" "HIST1H2AE" "HIST1H2BB" "HIST1H2BE"
+[13] "HIST1H2BF" "HIST1H2BG" "HIST1H3A"  "HIST1H3C"  "HIST1H3D"  "HIST1H3E" 
+[19] "HIST1H3F"  "HIST1H4C"  "HIST1H4D"  "HIST1H4H"  "HIST1H4I"  "HIST2H2BB"
+[25] "HIST2H3B"  "HIST2H4"   "HIST4H4"   "INO80"     "JUN"       "KAT6B"    
+[31] "KNTC1"     "MBD6"      "MYC"       "NFRKB"     "PPARD"     "PRKDC"    
+[37] "RARG"      "SETD1A"    "SMG6"      "SYCP2"     "THRB"      "TNRC18"   
+[43] "TRRAP"    
+
+$`GO:0005694`
+ [1] "APC"       "ASH1L"     "KNL1"      "FBXO11"    "HIRA"      "HIST1H1C" 
+ [7] "HIST1H1D"  "HIST1H1E"  "HIST1H2AB" "HIST1H2AC" "HIST1H2AD" "HIST1H2AE"
+[13] "HIST1H2BB" "HIST1H2BE" "HIST1H2BF" "HIST1H2BG" "HIST1H3A"  "HIST1H3C" 
+[19] "HIST1H3D"  "HIST1H3E"  "HIST1H3F"  "HIST1H4C"  "HIST1H4D"  "HIST1H4H" 
+[25] "HIST1H4I"  "HIST2H2BB" "HIST2H3B"  "HIST2H4"   "HIST4H4"   "INO80"    
+[31] "JUN"       "KAT6B"     "KNTC1"     "MBD6"      "MYC"       "NFRKB"    
+[37] "PPARD"     "PRDM9"     "PRKDC"     "RARG"      "SETD1A"    "SETD1B"   
+[43] "SMG6"      "SYCP2"     "THRB"      "TNRC18"    "TRRAP"     "UVSSA"    
+[49] "XIST"      "ZBTB32"   
+
+$`GO:0044454`
+ [1] "HIRA"      "HIST1H1C"  "HIST1H1D"  "HIST1H2AB" "HIST1H2AC" "HIST1H2AD"
+ [7] "HIST1H2AE" "HIST1H2BB" "HIST1H2BE" "HIST1H2BF" "HIST1H2BG" "HIST1H3A" 
+[13] "HIST1H3D"  "HIST1H3E"  "HIST1H4C"  "HIST1H4D"  "HIST1H4H"  "HIST1H4I" 
+[19] "HIST2H2BB" "HIST2H3B"  "HIST2H4"   "HIST4H4"   "INO80"     "JUN"      
+[25] "MYC"       "NFRKB"     "PPARD"     "PRKDC"     "RARG"      "SETD1A"   
+[31] "SYCP2"     "THRB"      "TRRAP"    
+
+$`GO:0007601`
+[1] "GNAT1" "PDC"   "PDE6A" "PRPH2" "RBP3"  "RDH5"  "RGS9"  "RHO"   "RP1"  
+
+$`GO:0050953`
+[1] "GNAT1" "PDC"   "PDE6A" "PRPH2" "RBP3"  "RDH5"  "RGS9"  "RHO"   "RP1"  
+
+$`GO:0080182`
+[1] "HIST1H1C" "HIST1H1D" "HIST1H1E" "KMT2A"    "KMT2B"    "TET2"     "TET3"    
+
+$`GO:0006461`
+ [1] "ACACA"     "ACACB"     "APC"       "BC068281"  "CADPS2"    "CAMK2G"   
+ [7] "CPSF7"     "CXCL13"    "FBXO5"     "HIRA"      "HIST1H1C"  "HIST1H1D" 
+[13] "HIST1H1E"  "HIST1H2BB" "HIST1H2BE" "HIST1H2BF" "HIST1H2BG" "HIST1H3A" 
+[19] "HIST1H3C"  "HIST1H3D"  "HIST1H3E"  "HIST1H3F"  "HIST1H4C"  "HIST1H4D" 
+[25] "HIST1H4H"  "HIST1H4I"  "HIST2H2BB" "HIST2H3B"  "HIST2H4"   "HIST4H4"  
+[31] "ITPR3"     "JUN"       "KAT6B"     "KCNRG"     "KMT2A"     "LCN2"     
+[37] "MAPK8"     "MDM4"      "MGST1"     "MTOR"      "NAPB"      "NIN"      
+[43] "NOD2"      "PF4"       "PRKAA2"    "PTGER4"    "RP1"       "SH3PXD2A" 
+[49] "STK11"     "STX1A"     "TMSB10"    "TNF"       "TSC1"      "VAMP1"    
+[55] "ZC3H12A"  
+
+$`GO:0070271`
+ [1] "ACACA"     "ACACB"     "APC"       "BC068281"  "CADPS2"    "CAMK2G"   
+ [7] "CPSF7"     "CXCL13"    "FBXO5"     "HIRA"      "HIST1H1C"  "HIST1H1D" 
+[13] "HIST1H1E"  "HIST1H2BB" "HIST1H2BE" "HIST1H2BF" "HIST1H2BG" "HIST1H3A" 
+[19] "HIST1H3C"  "HIST1H3D"  "HIST1H3E"  "HIST1H3F"  "HIST1H4C"  "HIST1H4D" 
+[25] "HIST1H4H"  "HIST1H4I"  "HIST2H2BB" "HIST2H3B"  "HIST2H4"   "HIST4H4"  
+[31] "ITPR3"     "JUN"       "KAT6B"     "KCNRG"     "KMT2A"     "LCN2"     
+[37] "MAPK8"     "MDM4"      "MGST1"     "MTOR"      "NAPB"      "NIN"      
+[43] "NOD2"      "PF4"       "PRKAA2"    "PTGER4"    "RP1"       "SH3PXD2A" 
+[49] "STK11"     "STX1A"     "TMSB10"    "TNF"       "TSC1"      "VAMP1"    
+[55] "ZC3H12A"  
+
+$`GO:0030705`
+[1] "DST"     "DYNC2H1" "FYCO1"   "KIF1C"   "MGARP"   "PCM1"   
+
+$`GO:0006336`
+[1] "HIRA"     "HIST1H4C" "HIST1H4D" "HIST1H4H" "HIST1H4I" "HIST2H4"  "HIST4H4" 
+
+$`GO:0034724`
+[1] "HIRA"     "HIST1H4C" "HIST1H4D" "HIST1H4H" "HIST1H4I" "HIST2H4"  "HIST4H4" 
+
+$`GO:0051262`
+ [1] "ACACA"    "ACACB"    "CPSF7"    "HIST1H3A" "HIST1H3D" "HIST1H3E"
+ [7] "HIST1H4C" "HIST1H4D" "HIST1H4H" "HIST1H4I" "HIST2H3B" "HIST2H4" 
+[13] "HIST4H4" 
+
+$`GO:0019731`
+[1] "CAMP"      "HIST1H2BE" "HIST1H2BF" "HIST1H2BG" "LTF"       "NOD2"     
+
+$`GO:0043228`
+  [1] "4933427D14RIK" "ACACA"         "ADGRL1"        "GRK3"         
+  [5] "AGO2"          "ANKRD23"       "APBB3"         "APC"          
+  [9] "ASH1L"         "BIRC6"         "CAMK2G"        "KNL1"         
+ [13] "CCDC14"        "CCDC15"        "CDC42BPA"      "CEP170B"      
+ [17] "CEP250"        "CEP350"        "CLIP2"         "CNTRL"        
+ [21] "CSRP1"         "DDX23"         "DDX3Y"         "DNAH17"       
+ [25] "DST"           "DVL1"          "DYNC1H1"       "DYNC2H1"      
+ [29] "EML5"          "FAM83D"        "FAM83H"        "FBXO11"       
+ [33] "FBXO5"         "FHOD1"         "FRY"           "GAN"          
+ [37] "HDAC4"         "HERC2"         "HIRA"          "HIST1H1C"     
+ [41] "HIST1H1D"      "HIST1H1E"      "HIST1H2AB"     "HIST1H2AC"    
+ [45] "HIST1H2AD"     "HIST1H2AE"     "HIST1H2BB"     "HIST1H2BE"    
+ [49] "HIST1H2BF"     "HIST1H2BG"     "HIST1H3A"      "HIST1H3C"     
+ [53] "HIST1H3D"      "HIST1H3E"      "HIST1H3F"      "HIST1H4C"     
+ [57] "HIST1H4D"      "HIST1H4H"      "HIST1H4I"      "HIST2H2BB"    
+ [61] "HIST2H3B"      "HIST2H4"       "HIST4H4"       "HSPA1A"       
+ [65] "INO80"         "ITPR3"         "JUN"           "KAT6B"        
+ [69] "KIF1C"         "KIF21B"        "KIFC2"         "KNTC1"        
+ [73] "LRRC45"        "LYST"          "MACF1"         "MAPK8"        
+ [77] "MBD6"          "MDN1"          "MICAL3"        "MYC"          
+ [81] "MYCBP2"        "MYO15"         "MYO9A"         "NAV1"         
+ [85] "NEURL4"        "NFRKB"         "NIN"           "NOD2"         
+ [89] "NOS1AP"        "NOVA1"         "PAN3"          "PARP4"        
+ [93] "PARVB"         "PCM1"          "PKP4"          "PLEC"         
+ [97] "POU6F1"        "PPARD"         "PRDM9"         "PRKDC"        
+[101] "IFI208"        "PYGM"          "RARG"          "RP1"          
+[105] "RPL10"         "RPL10A"        "RPL12"         "RPS12"        
+[109] "RYR1"          "S100A16"       "S100A8"        "S100A9"       
+[113] "SETD1A"        "SETD1B"        "SETD4"         "SH3PXD2A"     
+[117] "SMG6"          "SSH3"          "STX1A"         "SYCP2"        
+[121] "TAF1A"         "THRB"          "TIAM1"         "TMSB10"       
+[125] "TNRC18"        "TRIM41"        "TRIP6"         "TRRAP"        
+[129] "TSC1"          "TTLL3"         "UBR4"          "UPF3B"        
+[133] "UVSSA"         "WEE1"          "XIST"          "ZBED6"        
+[137] "ZBTB32"        "ZC3H12A"       "ZCCHC7"        "ZFHX3"        
+[141] "ZFP36"        
+
+$`GO:0043232`
+  [1] "4933427D14RIK" "ACACA"         "ADGRL1"        "GRK3"         
+  [5] "AGO2"          "ANKRD23"       "APBB3"         "APC"          
+  [9] "ASH1L"         "BIRC6"         "CAMK2G"        "KNL1"         
+ [13] "CCDC14"        "CCDC15"        "CDC42BPA"      "CEP170B"      
+ [17] "CEP250"        "CEP350"        "CLIP2"         "CNTRL"        
+ [21] "CSRP1"         "DDX23"         "DDX3Y"         "DNAH17"       
+ [25] "DST"           "DVL1"          "DYNC1H1"       "DYNC2H1"      
+ [29] "EML5"          "FAM83D"        "FAM83H"        "FBXO11"       
+ [33] "FBXO5"         "FHOD1"         "FRY"           "GAN"          
+ [37] "HDAC4"         "HERC2"         "HIRA"          "HIST1H1C"     
+ [41] "HIST1H1D"      "HIST1H1E"      "HIST1H2AB"     "HIST1H2AC"    
+ [45] "HIST1H2AD"     "HIST1H2AE"     "HIST1H2BB"     "HIST1H2BE"    
+ [49] "HIST1H2BF"     "HIST1H2BG"     "HIST1H3A"      "HIST1H3C"     
+ [53] "HIST1H3D"      "HIST1H3E"      "HIST1H3F"      "HIST1H4C"     
+ [57] "HIST1H4D"      "HIST1H4H"      "HIST1H4I"      "HIST2H2BB"    
+ [61] "HIST2H3B"      "HIST2H4"       "HIST4H4"       "HSPA1A"       
+ [65] "INO80"         "ITPR3"         "JUN"           "KAT6B"        
+ [69] "KIF1C"         "KIF21B"        "KIFC2"         "KNTC1"        
+ [73] "LRRC45"        "LYST"          "MACF1"         "MAPK8"        
+ [77] "MBD6"          "MDN1"          "MICAL3"        "MYC"          
+ [81] "MYCBP2"        "MYO15"         "MYO9A"         "NAV1"         
+ [85] "NEURL4"        "NFRKB"         "NIN"           "NOD2"         
+ [89] "NOS1AP"        "NOVA1"         "PAN3"          "PARP4"        
+ [93] "PARVB"         "PCM1"          "PKP4"          "PLEC"         
+ [97] "POU6F1"        "PPARD"         "PRDM9"         "PRKDC"        
+[101] "IFI208"        "PYGM"          "RARG"          "RP1"          
+[105] "RPL10"         "RPL10A"        "RPL12"         "RPS12"        
+[109] "RYR1"          "S100A16"       "S100A8"        "S100A9"       
+[113] "SETD1A"        "SETD1B"        "SETD4"         "SH3PXD2A"     
+[117] "SMG6"          "SSH3"          "STX1A"         "SYCP2"        
+[121] "TAF1A"         "THRB"          "TIAM1"         "TMSB10"       
+[125] "TNRC18"        "TRIM41"        "TRIP6"         "TRRAP"        
+[129] "TSC1"          "TTLL3"         "UBR4"          "UPF3B"        
+[133] "UVSSA"         "WEE1"          "XIST"          "ZBED6"        
+[137] "ZBTB32"        "ZC3H12A"       "ZCCHC7"        "ZFHX3"        
+[141] "ZFP36"        
+
+$`GO:0000228`
+ [1] "HIRA"      "HIST1H1C"  "HIST1H1D"  "HIST1H2AB" "HIST1H2AC" "HIST1H2AD"
+ [7] "HIST1H2AE" "HIST1H2BB" "HIST1H2BE" "HIST1H2BF" "HIST1H2BG" "HIST1H3A" 
+[13] "HIST1H3D"  "HIST1H3E"  "HIST1H4C"  "HIST1H4D"  "HIST1H4H"  "HIST1H4I" 
+[19] "HIST2H2BB" "HIST2H3B"  "HIST2H4"   "HIST4H4"   "INO80"     "JUN"      
+[25] "MYC"       "NFRKB"     "PPARD"     "PRKDC"     "RARG"      "SETD1A"   
+[31] "SYCP2"     "THRB"      "TRRAP"     "ZBTB32"   
+
+$`GO:0019730`
+[1] "CAMP"      "HIST1H2BE" "HIST1H2BF" "HIST1H2BG" "LTF"       "NOD2"     
+
+$`GO:0000784`
+ [1] "HIST1H2BB" "HIST1H3A"  "HIST1H3D"  "HIST1H3E"  "HIST1H4C"  "HIST1H4D" 
+ [7] "HIST1H4H"  "HIST1H4I"  "HIST2H3B"  "HIST2H4"   "HIST4H4"   "PRKDC"    
+
+$`GO:0005732`
+[1] "SNORA65" "SNORA68" "SNORA70"
+
+$`GO:0048248`
+[1] "CXCL13" "PF4"   
+
+$`GO:0097150`
+[1] "FOXO3" "MAPK8" "PCM1" 
+
+$`GO:0007143`
+[1] "FBXO5"  "MARF1"  "SYCP2"  "TRIP13"
+
+$`GO:0001917`
+[1] "GNAT1"  "PHLPP2" "RGS9"   "RHO"    "RP1"   
+
+$`GO:0022607`
+ [1] "2410089E03RIK" "4933427D14RIK" "ACACA"         "ACACB"        
+ [5] "ACE"           "ADGRL1"        "AGO2"          "ANKRD23"      
+ [9] "APC"           "ARHGEF4"       "BC068281"      "CADPS2"       
+[13] "CAMK2G"        "CEP250"        "CPSF7"         "CXCL13"       
+[17] "DYNC1H1"       "DYNC2H1"       "EIF2S3Y"       "FBXO5"        
+[21] "HDAC4"         "HIRA"          "HIST1H1C"      "HIST1H1D"     
+[25] "HIST1H1E"      "HIST1H2BB"     "HIST1H2BE"     "HIST1H2BF"    
+[29] "HIST1H2BG"     "HIST1H3A"      "HIST1H3C"      "HIST1H3D"     
+[33] "HIST1H3E"      "HIST1H3F"      "HIST1H4C"      "HIST1H4D"     
+[37] "HIST1H4H"      "HIST1H4I"      "HIST2H2BB"     "HIST2H3B"     
+[41] "HIST2H4"       "HIST4H4"       "INO80"         "ITPR3"        
+[45] "JUN"           "KAT6B"         "KCNRG"         "KMT2A"        
+[49] "LCN2"          "LRTM1"         "MACF1"         "MAPK8"        
+[53] "MDM4"          "MDN1"          "MGST1"         "MTOR"         
+[57] "NAPB"          "NIN"           "NOD2"          "PAN3"         
+[61] "PARVB"         "PCM1"          "PF4"           "PKP4"         
+[65] "PLEC"          "PRKAA2"        "PTBP2"         "PTGER4"       
+[69] "RP1"           "RPL10"         "RPL12"         "SH3PXD2A"     
+[73] "SSH3"          "STK11"         "STX1A"         "TMSB10"       
+[77] "TNF"           "TNRC18"        "TNS1"          "TRIP13"       
+[81] "TSC1"          "TTLL3"         "VAMP1"         "ZC3H12A"      
+
+$`GO:0071822`
+ [1] "ACACA"     "ACACB"     "APC"       "BC068281"  "CADPS2"    "CAMK2G"   
+ [7] "CPSF7"     "CXCL13"    "DDIT4"     "FBXO5"     "HIRA"      "HIST1H1C" 
+[13] "HIST1H1D"  "HIST1H1E"  "HIST1H2BB" "HIST1H2BE" "HIST1H2BF" "HIST1H2BG"
+[19] "HIST1H3A"  "HIST1H3C"  "HIST1H3D"  "HIST1H3E"  "HIST1H3F"  "HIST1H4C" 
+[25] "HIST1H4D"  "HIST1H4H"  "HIST1H4I"  "HIST2H2BB" "HIST2H3B"  "HIST2H4"  
+[31] "HIST4H4"   "ITPR3"     "JUN"       "KAT6B"     "KCNRG"     "KMT2A"    
+[37] "LCN2"      "MAPK8"     "MDM4"      "MGST1"     "MICAL3"    "MTOR"     
+[43] "NAPB"      "NIN"       "NOD2"      "PER2"      "PF4"       "PRKAA2"   
+[49] "PTGER4"    "RP1"       "SH3PXD2A"  "STK11"     "STX1A"     "TMSB10"   
+[55] "TNF"       "TSC1"      "VAMP1"     "ZC3H12A"  
+
+$`GO:0018023`
+[1] "HIST1H1C" "HIST1H1D" "HIST1H1E" "KMT2A"    "KMT2B"    "SETD4"    "TET2"    
+[8] "TET3"    
+
+$`GO:0031513`
+ [1] "2410089E03RIK" "GNAT1"         "PCM1"          "PDC"          
+ [5] "PHLPP2"        "PRPH2"         "RGS9"          "RHO"          
+ [9] "RP1"           "TIAM1"        
+
+$`GO:0030219`
+[1] "HIST1H4C" "HIST1H4D" "HIST1H4H" "HIST1H4I" "HIST2H4"  "HIST4H4"  "PF4"     
+
+$`GO:1903046`
+[1] "FBXO5"  "MARF1"  "OVOL1"  "PRDM9"  "SYCP2"  "TRIP13"
+
+$`GO:0000781`
+ [1] "HIST1H2BB" "HIST1H3A"  "HIST1H3D"  "HIST1H3E"  "HIST1H4C"  "HIST1H4D" 
+ [7] "HIST1H4H"  "HIST1H4I"  "HIST2H3B"  "HIST2H4"   "HIST4H4"   "PRKDC"    
+[13] "SMG6"     
+

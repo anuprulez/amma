@@ -1,0 +1,48 @@
+$`04110`
+ [1] "CCNA2"   "CCNB1"   "CCNB2"   "CCND2"   "CCNE2"   "CDC20"   "CDC6"   
+ [8] "CHEK1"   "E2F1"    "GADD45G" "MCM2"    "MCM5"    "PLK1"    "WEE1"   
+
+$`04114`
+[1] "CCNB1" "CCNB2" "CCNE2" "CDC20" "CPEB1" "IGF1"  "PLK1" 
+
+$`04060`
+ [1] "CCL12"    "CCL5"     "CCL8"     "CCR1"     "CD40"     "CRLF2"   
+ [7] "CSF1"     "CXCL10"   "CXCL13"   "CXCL14"   "CXCL9"    "CXCR4"   
+[13] "CXCR6"    "EPOR"     "FLT1"     "HGF"      "IL12B"    "IL1B"    
+[19] "IL1R1"    "IL1R2"    "IL2RG"    "IL3RA"    "TNFSF13B" "TNFSF8"  
+[25] "VEGFA"   
+
+$`04115`
+[1] "CCNB1"    "CCNB2"    "CCND2"    "CCNE2"    "CHEK1"    "GADD45G"  "IGF1"    
+[8] "SERPINE1"
+
+$`05323`
+ [1] "ATP6V1C2" "ATP6V1G2" "CCL5"     "CSF1"     "FLT1"     "FOS"     
+ [7] "H2-AA"    "H2-AB1"   "H2-EB1"   "IL1B"     "ITGAL"    "ITGB2L"  
+[13] "JUN"      "TLR2"     "TNFSF13B" "VEGFA"   
+
+$`04914`
+[1] "CCNA2" "CCNB1" "CCNB2" "CPEB1" "IGF1"  "PLK1" 
+
+$`04672`
+[1] "CD40"     "CXCR4"    "H2-AA"    "H2-AB1"   "H2-EB1"   "ICOS"     "TNFSF13B"
+
+$`04514`
+ [1] "CD22"   "CD274"  "CD40"   "CLDN1"  "H2-AA"  "H2-AB1" "H2-EB1" "ICOS"  
+ [9] "ITGAL"  "ITGB2L" "OCLN"   "PDCD1"  "SDC3"   "VCAM1" 
+
+$`04670`
+[1] "CLDN1"  "CXCR4"  "CYBB"   "ITGAL"  "ITGB2L" "AFDN"   "OCLN"   "PTK2"  
+[9] "VCAM1" 
+
+$`05144`
+[1] "CD36"   "CD40"   "HGF"    "IL1B"   "ITGAL"  "ITGB2L" "SDC3"   "TLR2"  
+[9] "VCAM1" 
+
+$`05150`
+[1] "C3"     "C4B"    "H2-AA"  "H2-AB1" "H2-EB1" "ITGAL"  "ITGB2L" "KRT10" 
+[9] "MASP1" 
+
+$`04710`
+[1] "BHLHE40" "NR1D1"   "PER2"   
+

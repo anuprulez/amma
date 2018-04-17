@@ -1,0 +1,1919 @@
+$`GO:0006950`
+ [1] "ACKR3"     "ADAM8"     "ADAMTS4"   "ALAS2"     "ALB"       "ANXA2"    
+ [7] "APOE"      "ARNT2"     "ASNS"      "AXL"       "C3"        "CADPS2"   
+[13] "CAV1"      "CCL4"      "CCL5"      "CCL8"      "CD163"     "CD36"     
+[19] "CD38"      "CD44"      "CD74"      "CHST2"     "CLU"       "COLEC12"  
+[25] "CPEB1"     "CRIP1"     "CRLF2"     "CSPG4"     "CTLA2A"    "CXCL13"   
+[31] "CXCR4"     "CYBB"      "EGLN3"     "F13A1"     "FCNB"      "FGR"      
+[37] "FLT1"      "GP1BA"     "GPER1"     "GPX3"      "HIST1H2BG" "HIST1H3A" 
+[43] "HIST1H3D"  "HIST1H3E"  "HP"        "IFITM2"    "IFITM3"    "IGF1"     
+[49] "IIGP1"     "IL1RN"     "ITGAX"     "KL"        "LCN2"      "LGALS3"   
+[55] "LOX"       "MACROD2"   "MAP3K13"   "MGARP"     "MGST1"     "MMP12"    
+[61] "MPO"       "MYOF"      "NGP"       "OASL2"     "OLR1"      "PF4"      
+[67] "PLA2G7"    "PTGER4"    "RAB7B"     "S100A8"    "S100A9"    "SLAMF7"   
+[73] "SLC1A2"    "SPP1"      "SZT2"      "TFEC"      "TSPAN8"    "XDH"      
+
+$`GO:0044459`
+ [1] "ADAM8"   "ALCAM"   "ANK1"    "ANXA2"   "APOE"    "CACNB3"  "CADPS2" 
+ [8] "CAV1"    "CD200R4" "CD36"    "CD44"    "CD72"    "CD74"    "CP"     
+[15] "CPEB1"   "CRLF2"   "CSPG4"   "CXCR4"   "CYBB"    "CYP4F18" "DLG4"   
+[22] "EHD1"    "FCNB"    "FGR"     "FLT1"    "FXYD5"   "GABRQ"   "GP1BA"  
+[29] "GPER1"   "GPNMB"   "GRIP2"   "GRM3"    "H2-AA"   "H2-AB1"  "H2-EB1" 
+[36] "IGF1"    "IL2RG"   "ITGAX"   "KL"      "LGALS3"  "LIME1"   "LRP8"   
+[43] "MYOF"    "OLR1"    "PDCD1"   "PIANP"   "PTGER4"  "S1PR4"   "SHISA7" 
+[50] "SLAMF7"  "SLC10A6" "SLC12A5" "SLC1A1"  "SLC1A2"  "SLC23A1" "SLC4A4" 
+[57] "SLC7A3"  "STX1A"   "TRIP6"   "TRPC4"   "TSPAN8"  "VCAM1"  
+
+$`GO:0006952`
+ [1] "ACKR3"     "ADAM8"     "ADAMTS4"   "APOE"      "AXL"       "C3"       
+ [7] "CAV1"      "CCL4"      "CCL5"      "CCL8"      "CD163"     "CD36"     
+[13] "CD44"      "CD74"      "CHST2"     "COLEC12"   "CRLF2"     "CSPG4"    
+[19] "CTLA2A"    "CXCL13"    "CYBB"      "FCNB"      "FGR"       "GPER1"    
+[25] "HIST1H2BG" "HIST1H3A"  "HIST1H3D"  "HIST1H3E"  "HP"        "IFITM2"   
+[31] "IFITM3"    "IIGP1"     "IL1RN"     "ITGAX"     "KL"        "LCN2"     
+[37] "LGALS3"    "MPO"       "NGP"       "OASL2"     "OLR1"      "PF4"      
+[43] "PLA2G7"    "PTGER4"    "RAB7B"     "S100A8"    "S100A9"    "SLAMF7"   
+
+$`GO:0051301`
+[1] "KIF23"  "ZFP365"
+
+$`GO:0002376`
+ [1] "ACKR3"     "ADAM8"     "ALAS2"     "ALCAM"     "ANK1"      "ANXA2"    
+ [7] "AXL"       "C3"        "CACNB3"    "CAV1"      "CCL4"      "CCL5"     
+[13] "CCL8"      "CCR9"      "CD300LB"   "CD300LF"   "CD36"      "CD38"     
+[19] "CD44"      "CD74"      "CH25H"     "CLEC12A"   "CLU"       "COLEC12"  
+[25] "CRLF2"     "CTLA2A"    "CTSE"      "CXCL13"    "CXCL14"    "CXCR4"    
+[31] "CYBB"      "FAM20C"    "FCNB"      "FGR"       "FLT1"      "GPER1"    
+[37] "GPR18"     "H2-AA"     "H2-AB1"    "H2-EB1"    "HCAR2"     "HIST1H2BG"
+[43] "HIST1H3A"  "HIST1H3D"  "HIST1H3E"  "HP"        "IFITM2"    "IFITM3"   
+[49] "IGF1"      "IIGP1"     "IL2RG"     "ITGAX"     "LCN2"      "LGALS3"   
+[55] "LILRB4A"   "LIME1"     "MPO"       "OASL2"     "OLR1"      "PDCD1"    
+[61] "PF4"       "PLA2G7"    "PTGER4"    "RAB7B"     "RUNX3"     "S100A8"   
+[67] "S100A9"    "SLAMF7"    "SPP1"      "VCAM1"    
+
+$`GO:0005886`
+  [1] "ACKR3"         "ADAM8"         "ADCY1"         "AHNAK"        
+  [5] "ALCAM"         "ANK1"          "ANXA2"         "APOE"         
+  [9] "AXL"           "BNC2"          "CACNB3"        "CADPS2"       
+ [13] "CAPNS2"        "CAV1"          "CCDC8"         "CCR9"         
+ [17] "CD163"         "CD177"         "CD200R4"       "CD300LB"      
+ [21] "CD300LF"       "CD36"          "CD38"          "CD44"         
+ [25] "CD52"          "CD72"          "CD74"          "CISH"         
+ [29] "CLEC12A"       "CP"            "CPEB1"         "CRLF2"        
+ [33] "CSPG4"         "CXCR4"         "CYBB"          "CYP4F18"      
+ [37] "D830031N03RIK" "DLG4"          "EHD1"          "FCNB"         
+ [41] "FGR"           "FLT1"          "FXYD5"         "GABRQ"        
+ [45] "GP1BA"         "GPER1"         "GPNMB"         "GPR18"        
+ [49] "GPRC5C"        "GRIP2"         "GRM3"          "GUCA1B"       
+ [53] "H2-AA"         "H2-AB1"        "H2-EB1"        "HCAR2"        
+ [57] "IFITM2"        "IFITM3"        "IGF1"          "IGF2R"        
+ [61] "IGFLR1"        "IL2RG"         "ITGAX"         "KL"           
+ [65] "KLRB1A"        "LGALS3"        "LILRB4A"       "LIME1"        
+ [69] "LPL"           "LRP8"          "LRRC45"        "LY6I"         
+ [73] "LYVE1"         "MSR1"          "MYOF"          "OLR1"         
+ [77] "PDCD1"         "PIANP"         "PKD1L3"        "PLCD4"        
+ [81] "PTGER4"        "S100A8"        "S100A9"        "S1PR4"        
+ [85] "SHISA7"        "SLAMF7"        "SLC10A6"       "SLC12A5"      
+ [89] "SLC1A1"        "SLC1A2"        "SLC23A1"       "SLC4A4"       
+ [93] "SLC7A3"        "STX1A"         "TRIP6"         "TRPC4"        
+ [97] "TSPAN8"        "TUB"           "VCAM1"         "VNN3"         
+
+$`GO:1903047`
+[1] "CCDC8"  "IGF1"   "KIF23"  "ZFP365"
+
+$`GO:0050896`
+  [1] "ACKR3"     "ADAM8"     "ADAMTS4"   "ADCY1"     "ALAS2"     "ALB"      
+  [7] "ALCAM"     "ALDH1A3"   "ANK1"      "ANKRD23"   "ANXA2"     "APOE"     
+ [13] "ARNT2"     "ASNS"      "AXL"       "BHLHE40"   "C3"        "CACNB3"   
+ [19] "CADPS2"    "CASKIN1"   "CAV1"      "CCL4"      "CCL5"      "CCL8"     
+ [25] "CCR9"      "CD163"     "CD300LB"   "CD36"      "CD38"      "CD44"     
+ [31] "CD74"      "CH25H"     "CHST2"     "CISH"      "CLEC12A"   "CLU"      
+ [37] "CMYA5"     "COLEC12"   "CP"        "CPEB1"     "CRIP1"     "CRLF2"    
+ [43] "CSPG4"     "CTLA2A"    "CXCL13"    "CXCL14"    "CXCR4"     "CYBB"     
+ [49] "DHCR24"    "DLG4"      "DUSP9"     "EGLN3"     "EHD1"      "F13A1"    
+ [55] "FAM20C"    "FCNB"      "FGR"       "FLT1"      "GABRQ"     "GP1BA"    
+ [61] "GPER1"     "GPR18"     "GPRC5C"    "GPX3"      "GRIP2"     "GRM3"     
+ [67] "GUCA1B"    "H2-AA"     "H2-AB1"    "H2-EB1"    "HCAR2"     "HIST1H2BG"
+ [73] "HIST1H3A"  "HIST1H3D"  "HIST1H3E"  "HP"        "IFI27L2A"  "IFITM2"   
+ [79] "IFITM3"    "IGF1"      "IGF2R"     "IIGP1"     "IL1RN"     "ITGAX"    
+ [85] "KIF5A"     "KL"        "LCN2"      "LGALS3"    "LILRB4A"   "LIME1"    
+ [91] "LOX"       "LRP8"      "MACROD2"   "MAP3K13"   "MGARP"     "MGST1"    
+ [97] "MMP12"     "MPO"       "MYOF"      "NGP"       "NPFF"      "OASL2"    
+[103] "OLFR99"    "OLR1"      "PDE1B"     "PERM1"     "PF4"       "PKD1L3"   
+[109] "PLA2G7"    "PLCD4"     "PPP1R14A"  "PTGER4"    "RAB30"     "RAB7B"    
+[115] "RTP4"      "RUNX3"     "RXRG"      "S100A4"    "S100A8"    "S100A9"   
+[121] "S1PR4"     "SATB2"     "SLAMF7"    "SLC12A5"   "SLC1A2"    "SLC23A1"  
+[127] "SLC7A3"    "SPARCL1"   "SPP1"      "STX1A"     "SZT2"      "TFEC"     
+[133] "TRIP6"     "TSPAN8"    "TTC26"     "TUB"       "UNC79"     "VCAM1"    
+[139] "XDH"       "ZFYVE9"   
+
+$`GO:0050793`
+ [1] "2700046G09RIK" "ADAM8"         "ANKRD23"       "APOE"         
+ [5] "AXL"           "C3"            "CAV1"          "CCL5"         
+ [9] "CCL8"          "CD36"          "CD44"          "CD74"         
+[13] "CLU"           "CPEB1"         "CSPG4"         "CTLA2A"       
+[17] "CXCL14"        "CXCR4"         "CYBB"          "EHD1"         
+[21] "ERMN"          "FAM20C"        "FGR"           "FLT1"         
+[25] "GAS7"          "GPER1"         "H2-AA"         "IGF1"         
+[29] "IL1RN"         "IL2RG"         "INF2"          "KCTD17"       
+[33] "KL"            "LGALS3"        "LPL"           "LRP8"         
+[37] "MAFF"          "MSR1"          "NGP"           "PDCD1"        
+[41] "PF4"           "PTGER4"        "RAB7B"         "RUNX3"        
+[45] "RXRG"          "SH3PXD2B"      "SLC45A3"       "VASH2"        
+[49] "XDH"          
+
+$`GO:2000026`
+ [1] "2700046G09RIK" "ADAM8"         "APOE"          "AXL"          
+ [5] "C3"            "CAV1"          "CCL5"          "CD36"         
+ [9] "CD44"          "CD74"          "CPEB1"         "CSPG4"        
+[13] "CTLA2A"        "CXCR4"         "CYBB"          "FAM20C"       
+[17] "FLT1"          "GPER1"         "H2-AA"         "IGF1"         
+[21] "IL1RN"         "IL2RG"         "KL"            "LGALS3"       
+[25] "LRP8"          "MAFF"          "NGP"           "PDCD1"        
+[29] "PF4"           "PTGER4"        "RAB7B"         "RXRG"         
+[33] "SLC45A3"       "VASH2"         "XDH"          
+
+$`GO:0071944`
+  [1] "ACKR3"         "ADAM8"         "ADCY1"         "AHNAK"        
+  [5] "ALCAM"         "ANK1"          "ANXA2"         "APOE"         
+  [9] "AXL"           "BNC2"          "CACNB3"        "CADPS2"       
+ [13] "CAPNS2"        "CAV1"          "CCDC8"         "CCR9"         
+ [17] "CD163"         "CD177"         "CD200R4"       "CD300LB"      
+ [21] "CD300LF"       "CD36"          "CD38"          "CD44"         
+ [25] "CD52"          "CD72"          "CD74"          "CISH"         
+ [29] "CLEC12A"       "CP"            "CPEB1"         "CRLF2"        
+ [33] "CSPG4"         "CXCR4"         "CYBB"          "CYP4F18"      
+ [37] "D830031N03RIK" "DLG4"          "EHD1"          "ERMN"         
+ [41] "FCNB"          "FGR"           "FLT1"          "FXYD5"        
+ [45] "GABRQ"         "GP1BA"         "GPER1"         "GPNMB"        
+ [49] "GPR18"         "GPRC5C"        "GRIP2"         "GRM3"         
+ [53] "GUCA1B"        "H2-AA"         "H2-AB1"        "H2-EB1"       
+ [57] "HCAR2"         "IFITM2"        "IFITM3"        "IGF1"         
+ [61] "IGF2R"         "IGFLR1"        "IL2RG"         "ITGAX"        
+ [65] "KL"            "KLRB1A"        "LGALS3"        "LILRB4A"      
+ [69] "LIME1"         "LPL"           "LRP8"          "LRRC45"       
+ [73] "LY6I"          "LYVE1"         "MSR1"          "MYOF"         
+ [77] "OLR1"          "PDCD1"         "PIANP"         "PKD1L3"       
+ [81] "PLCD4"         "PTGER4"        "S100A8"        "S100A9"       
+ [85] "S1PR4"         "SHISA7"        "SLAMF7"        "SLC10A6"      
+ [89] "SLC12A5"       "SLC1A1"        "SLC1A2"        "SLC23A1"      
+ [93] "SLC4A4"        "SLC7A3"        "STX1A"         "TRIP6"        
+ [97] "TRPC4"         "TSPAN8"        "TUB"           "VCAM1"        
+[101] "VNN3"         
+
+$`GO:0002682`
+ [1] "ACKR3"    "ADAM8"    "AXL"      "C3"       "CACNB3"   "CAV1"    
+ [7] "CCL4"     "CCL5"     "CD300LB"  "CD36"     "CD38"     "CD44"    
+[13] "CD74"     "CLEC12A"  "COLEC12"  "CTLA2A"   "CXCL13"   "CXCL14"  
+[19] "FCNB"     "FGR"      "FLT1"     "GPER1"    "GPR18"    "H2-AA"   
+[25] "H2-AB1"   "HCAR2"    "HIST1H3A" "HIST1H3D" "HIST1H3E" "IGF1"    
+[31] "IL2RG"    "LGALS3"   "LIME1"    "PDCD1"    "PF4"      "PLA2G7"  
+[37] "PTGER4"   "RAB7B"    "SLAMF7"   "VCAM1"   
+
+$`GO:0005515`
+  [1] "IFI207"    "ACKR3"     "ACTR3B"    "ADAM8"     "ADAMTS4"   "ADCY1"    
+  [7] "AHNAK"     "ALB"       "ALCAM"     "ALDH1A3"   "ANK1"      "ANKRD23"  
+ [13] "ANXA2"     "APOE"      "ARNT2"     "ASNS"      "AXL"       "BHLHE40"  
+ [19] "C3"        "CACNB3"    "CADPS2"    "CASKIN1"   "CAV1"      "CBR2"     
+ [25] "CCL4"      "CCL5"      "CCL8"      "CCR9"      "CD200R4"   "CD300LB"  
+ [31] "CD300LF"   "CD36"      "CD44"      "CD74"      "CEP72"     "CISH"     
+ [37] "CLEC12A"   "CLU"       "CMYA5"     "CP"        "CPEB1"     "CRLF2"    
+ [43] "CSPG4"     "CST7"      "CTSE"      "CXCL13"    "CXCL14"    "CXCR4"    
+ [49] "CYBB"      "DHCR24"    "DLG4"      "EHD1"      "ERMN"      "ETL4"     
+ [55] "FABP3"     "FCNB"      "FGR"       "FLT1"      "FXYD5"     "GAS7"     
+ [61] "GPNMB"     "GPRC5C"    "GRIP2"     "H2-AA"     "H2-AB1"    "H2-EB1"   
+ [67] "HIST1H1D"  "HIST1H2AC" "HIST1H2AE" "HIST1H3A"  "HIST1H3D"  "HIST1H3E" 
+ [73] "HP"        "IGF1"      "IGF2R"     "IGFLR1"    "IIGP1"     "IL1RN"    
+ [79] "IL2RG"     "INF2"      "KCTD17"    "KIF23"     "KIF5A"     "KL"       
+ [85] "LCN2"      "LGALS3"    "LIME1"     "LOX"       "LPL"       "LRP8"     
+ [91] "MAP3K13"   "MGARP"     "MGST1"     "NPFF"      "PDCD1"     "PDE1B"    
+ [97] "PF4"       "PKD1L3"    "PLCB4"     "PLEKHN1"   "PRDM5"     "IFI213"   
+[103] "RTP4"      "RUNX3"     "S100A4"    "S100A8"    "S100A9"    "SATB2"    
+[109] "SH3PXD2B"  "SLAMF7"    "SLC12A5"   "SLC1A1"    "SLC4A4"    "SPARCL1"  
+[115] "SPP1"      "STX1A"     "TBC1D2"    "TCF20"     "TCTEX1D4"  "TET1"     
+[121] "TFEC"      "TOX2"      "TPPP3"     "TRIP6"     "TRPC4"     "TSPAN8"   
+[127] "TTC26"     "TUB"       "UNC79"     "VAMP1"     "VCAM1"     "XDH"      
+[133] "ZFP365"    "ZFYVE9"   
+
+$`GO:0048731`
+ [1] "2700046G09RIK" "ACKR3"         "ADAM8"         "ADCY1"        
+ [5] "ALAS2"         "ALCAM"         "ALDH1A3"       "ANK1"         
+ [9] "ANXA2"         "APOE"          "ARNT2"         "AXL"          
+[13] "BCAN"          "BNC2"          "C3"            "CAV1"         
+[17] "CCL5"          "CCR9"          "CD300LF"       "CD36"         
+[21] "CD44"          "CD74"          "CLU"           "CPEB1"        
+[25] "CSPG4"         "CTLA2A"        "CXCL13"        "CXCL14"       
+[29] "CXCR4"         "CYBB"          "DHCR24"        "DLG4"         
+[33] "DNASE1L2"      "EFHD1"         "EHD1"          "ETL4"         
+[37] "FAM20C"        "FLT1"          "GAS7"          "GPER1"        
+[41] "GPR18"         "H2-AA"         "HP"            "IGF1"         
+[45] "IGF2R"         "IL2RG"         "KIF5A"         "KL"           
+[49] "LGALS3"        "LOX"           "LRP8"          "MAB21L1"      
+[53] "MACROD2"       "MAFF"          "NGP"           "NHS"          
+[57] "PDCD1"         "PF4"           "PTGER4"        "RAB7B"        
+[61] "RBM20"         "RUNX3"         "RXRG"          "S100A8"       
+[65] "S100A9"        "SATB2"         "SH3PXD2B"      "SLC12A5"      
+[69] "SLC1A2"        "SLC23A1"       "SLC45A3"       "SPP1"         
+[73] "SZT2"          "TRPC4"         "TTC26"         "TUB"          
+[77] "VASH2"         "VCAM1"         "VNN3"          "XDH"          
+
+$`GO:0051239`
+ [1] "2700046G09RIK" "ADAM8"         "ALB"           "ANXA2"        
+ [5] "APOE"          "AXL"           "C3"            "CAV1"         
+ [9] "CCL4"          "CCL5"          "CD36"          "CD38"         
+[13] "CD44"          "CD74"          "CLU"           "CMYA5"        
+[17] "CPEB1"         "CSPG4"         "CTLA2A"        "CXCL13"       
+[21] "CXCR4"         "CYBB"          "FAM20C"        "FCNB"         
+[25] "FGR"           "FLT1"          "GP1BA"         "GPER1"        
+[29] "GPNMB"         "GPR18"         "GRM3"          "H2-AA"        
+[33] "HCAR2"         "IGF1"          "IL1RN"         "IL2RG"        
+[37] "KL"            "LGALS3"        "LPL"           "LRP8"         
+[41] "MAFF"          "NGP"           "NPFF"          "PDCD1"        
+[45] "PF4"           "PTGER4"        "RAB7B"         "RXRG"         
+[49] "S100A9"        "SLC1A1"        "SLC45A3"       "SPP1"         
+[53] "TSPAN8"        "VASH2"         "XDH"          
+
+$`GO:0008017`
+[1] "KIF23"  "KIF5A"  "S100A8" "S100A9"
+
+$`GO:0005615`
+ [1] "ADAMTS4"   "ALB"       "ANXA2"     "APOC1"     "APOC4"     "APOE"     
+ [7] "AXL"       "BCAN"      "C3"        "CCL4"      "CCL5"      "CCL8"     
+[13] "CD36"      "CLU"       "CP"        "CPXM1"     "CST7"      "CXCL13"   
+[19] "CXCL14"    "F13A1"     "FABP3"     "FAM20C"    "FLT1"      "GPX3"     
+[25] "HIST1H2BG" "HP"        "IGF1"      "IGF2R"     "IL1RN"     "KL"       
+[31] "LCN2"      "LGALS3"    "LIME1"     "LPL"       "LRP8"      "MPO"      
+[37] "MSR1"      "NGP"       "NPFF"      "PF4"       "PLA2G7"    "S100A4"   
+[43] "S100A8"    "S100A9"    "SPARCL1"   "SPP1"      "VCAM1"     "VNN3"     
+[49] "XDH"      
+
+$`GO:0000278`
+[1] "ASNS"   "CCDC8"  "IGF1"   "KIF23"  "PRDM5"  "ZFP365"
+
+$`GO:0007067`
+[1] "CCDC8" "IGF1"  "KIF23"
+
+$`GO:0032502`
+ [1] "2700046G09RIK" "ACKR3"         "ADAM8"         "ADCY1"        
+ [5] "ALAS2"         "ALCAM"         "ALDH1A3"       "ANK1"         
+ [9] "ANKRD23"       "ANXA2"         "APOE"          "ARNT2"        
+[13] "AXL"           "BCAN"          "BNC2"          "C3"           
+[17] "CAV1"          "CCL5"          "CCL8"          "CCR9"         
+[21] "CD300LF"       "CD36"          "CD44"          "CD74"         
+[25] "CLU"           "CPEB1"         "CSPG4"         "CTLA2A"       
+[29] "CXCL13"        "CXCL14"        "CXCR4"         "CYBB"         
+[33] "DHCR24"        "DLG4"          "DNASE1L2"      "EFHD1"        
+[37] "EHD1"          "ERMN"          "ETL4"          "FAM20C"       
+[41] "FGR"           "FLT1"          "GAS7"          "GP1BA"        
+[45] "GPER1"         "GPR18"         "H2-AA"         "HP"           
+[49] "IFI27L2A"      "IGF1"          "IGF2R"         "IL1RN"        
+[53] "IL2RG"         "INF2"          "KCTD17"        "KIF5A"        
+[57] "KL"            "LGALS3"        "LOX"           "LPL"          
+[61] "LRP8"          "MAB21L1"       "MACROD2"       "MAFF"         
+[65] "MMP12"         "MSR1"          "NGP"           "NHS"          
+[69] "PDCD1"         "PF4"           "PTGER4"        "RAB7B"        
+[73] "RBM20"         "RUNX3"         "RXRG"          "S100A8"       
+[77] "S100A9"        "SATB2"         "SH3PXD2B"      "SLC12A5"      
+[81] "SLC1A2"        "SLC23A1"       "SLC45A3"       "SPARCL1"      
+[85] "SPP1"          "SZT2"          "TET1"          "TRPC4"        
+[89] "TTC26"         "TTLL3"         "TUB"           "UNC79"        
+[93] "VASH2"         "VCAM1"         "VNN3"          "XDH"          
+
+$`GO:0048856`
+ [1] "2700046G09RIK" "ACKR3"         "ADAM8"         "ADCY1"        
+ [5] "ALAS2"         "ALCAM"         "ALDH1A3"       "ANK1"         
+ [9] "ANKRD23"       "ANXA2"         "APOE"          "ARNT2"        
+[13] "AXL"           "BCAN"          "BNC2"          "C3"           
+[17] "CAV1"          "CCL5"          "CCL8"          "CCR9"         
+[21] "CD300LF"       "CD36"          "CD44"          "CD74"         
+[25] "CLU"           "CPEB1"         "CSPG4"         "CTLA2A"       
+[29] "CXCL13"        "CXCL14"        "CXCR4"         "CYBB"         
+[33] "DHCR24"        "DLG4"          "DNASE1L2"      "EFHD1"        
+[37] "EHD1"          "ERMN"          "ETL4"          "FAM20C"       
+[41] "FGR"           "FLT1"          "GAS7"          "GP1BA"        
+[45] "GPER1"         "GPR18"         "H2-AA"         "HP"           
+[49] "IGF1"          "IGF2R"         "IL1RN"         "IL2RG"        
+[53] "INF2"          "KCTD17"        "KIF5A"         "KL"           
+[57] "LGALS3"        "LOX"           "LRP8"          "MAB21L1"      
+[61] "MACROD2"       "MAFF"          "MMP12"         "NGP"          
+[65] "NHS"           "PDCD1"         "PF4"           "PTGER4"       
+[69] "RAB7B"         "RBM20"         "RUNX3"         "RXRG"         
+[73] "S100A8"        "S100A9"        "SATB2"         "SH3PXD2B"     
+[77] "SLC12A5"       "SLC1A2"        "SLC23A1"       "SLC45A3"      
+[81] "SPARCL1"       "SPP1"          "SZT2"          "TET1"         
+[85] "TRPC4"         "TTC26"         "TTLL3"         "TUB"          
+[89] "VASH2"         "VCAM1"         "VNN3"          "XDH"          
+
+$`GO:0008092`
+ [1] "ACTR3B"  "ANK1"    "ANKRD23" "ANXA2"   "APOE"    "AXL"     "CXCR4"  
+ [8] "ERMN"    "FABP3"   "FXYD5"   "GAS7"    "INF2"    "KIF23"   "KIF5A"  
+[15] "LRP8"    "S100A4"  "S100A8"  "S100A9"  "STX1A"   "TPPP3"  
+
+$`GO:0006954`
+ [1] "ADAM8"  "APOE"   "AXL"    "C3"     "CCL4"   "CCL5"   "CCL8"   "CD163" 
+ [9] "CD44"   "CHST2"  "CRLF2"  "CSPG4"  "CTLA2A" "CXCL13" "CYBB"   "GPER1" 
+[17] "HP"     "IL1RN"  "KL"     "OLR1"   "PF4"    "PLA2G7" "PTGER4" "S100A8"
+[25] "S100A9"
+
+$`GO:0044707`
+  [1] "2700046G09RIK" "ACKR3"         "ADAM8"         "ADCY1"        
+  [5] "ALAS2"         "ALB"           "ALCAM"         "ALDH1A3"      
+  [9] "ANK1"          "ANXA2"         "APOE"          "ARNT2"        
+ [13] "AXL"           "BCAN"          "BHLHE40"       "BNC2"         
+ [17] "C3"            "CAV1"          "CCL4"          "CCL5"         
+ [21] "CCR9"          "CD300LF"       "CD36"          "CD38"         
+ [25] "CD44"          "CD74"          "CLU"           "CPEB1"        
+ [29] "CRLF2"         "CSPG4"         "CTLA2A"        "CXCL13"       
+ [33] "CXCL14"        "CXCR4"         "CYBB"          "DHCR24"       
+ [37] "DLG4"          "DNASE1L2"      "EFHD1"         "EHD1"         
+ [41] "ERMN"          "ETL4"          "F13A1"         "FAM20C"       
+ [45] "FCNB"          "FGR"           "FLT1"          "GAS7"         
+ [49] "GP1BA"         "GPER1"         "GPNMB"         "GPR18"        
+ [53] "H2-AA"         "HCAR2"         "HP"            "IGF1"         
+ [57] "IGF2R"         "IL1RN"         "IL2RG"         "KIF5A"        
+ [61] "KL"            "LGALS3"        "LOX"           "LPL"          
+ [65] "LRP8"          "MAB21L1"       "MACROD2"       "MAFF"         
+ [69] "MPO"           "MSR1"          "NGP"           "NHS"          
+ [73] "NPFF"          "PDCD1"         "PDE1B"         "PF4"          
+ [77] "PLA2G7"        "PTGER4"        "RAB7B"         "RBM20"        
+ [81] "RUNX3"         "RXRG"          "S100A8"        "S100A9"       
+ [85] "SATB2"         "SH3PXD2B"      "SLC12A5"       "SLC1A1"       
+ [89] "SLC1A2"        "SLC23A1"       "SLC45A3"       "SPP1"         
+ [93] "SZT2"          "TET1"          "TRPC4"         "TSPAN8"       
+ [97] "TTC26"         "TUB"           "UNC79"         "VASH2"        
+[101] "VCAM1"         "VNN3"          "XDH"          
+
+$`GO:0002684`
+ [1] "ADAM8"   "AXL"     "C3"      "CACNB3"  "CAV1"    "CCL4"    "CCL5"   
+ [8] "CD300LB" "CD36"    "CD38"    "CD44"    "CD74"    "COLEC12" "CXCL13" 
+[15] "CXCL14"  "FCNB"    "FGR"     "FLT1"    "H2-AA"   "HCAR2"   "IGF1"   
+[22] "IL2RG"   "LGALS3"  "LIME1"   "PF4"     "PLA2G7"  "PTGER4"  "RAB7B"  
+[29] "VCAM1"  
+
+$`GO:0051240`
+ [1] "2700046G09RIK" "ADAM8"         "ALB"           "APOE"         
+ [5] "AXL"           "C3"            "CAV1"          "CCL4"         
+ [9] "CCL5"          "CD36"          "CD38"          "CD74"         
+[13] "CLU"           "CPEB1"         "CXCR4"         "CYBB"         
+[17] "FAM20C"        "FCNB"          "FGR"           "FLT1"         
+[21] "GPER1"         "H2-AA"         "HCAR2"         "IGF1"         
+[25] "IL2RG"         "KL"            "LGALS3"        "LPL"          
+[29] "LRP8"          "PF4"           "PTGER4"        "RAB7B"        
+[33] "S100A9"        "SLC1A1"        "SPP1"          "VASH2"        
+
+$`GO:0022402`
+[1] "CCDC8"  "CEP72"  "CPEB1"  "GPER1"  "IGF1"   "KIF23"  "PRDM9"  "ZFP365"
+
+$`GO:0006955`
+ [1] "ADAM8"     "ALCAM"     "AXL"       "C3"        "CACNB3"    "CAV1"     
+ [7] "CCL4"      "CCL5"      "CCL8"      "CCR9"      "CD36"      "CD38"     
+[13] "CD44"      "CD74"      "CLEC12A"   "COLEC12"   "CRLF2"     "CXCL13"   
+[19] "CXCL14"    "CYBB"      "FCNB"      "FGR"       "GPER1"     "H2-AA"    
+[25] "H2-AB1"    "H2-EB1"    "HIST1H2BG" "IFITM2"    "IFITM3"    "IIGP1"    
+[31] "LCN2"      "LGALS3"    "LILRB4A"   "LIME1"     "OASL2"     "PF4"      
+[37] "PTGER4"    "RAB7B"     "S100A8"    "S100A9"    "SLAMF7"   
+
+$`GO:0000280`
+[1] "CCDC8" "CPEB1" "IGF1"  "KIF23" "PRDM9"
+
+$`GO:0009605`
+ [1] "ACKR3"     "ADAM8"     "ADAMTS4"   "ALB"       "ALCAM"     "ALDH1A3"  
+ [7] "ANKRD23"   "ANXA2"     "APOE"      "ASNS"      "AXL"       "BHLHE40"  
+[13] "C3"        "CADPS2"    "CAV1"      "CCL4"      "CCL5"      "CCL8"     
+[19] "CCR9"      "CD300LB"   "CD36"      "CD44"      "CD74"      "CH25H"    
+[25] "CTLA2A"    "CXCL13"    "CXCL14"    "CXCR4"     "FGR"       "FLT1"     
+[31] "GP1BA"     "GPER1"     "GPR18"     "GUCA1B"    "HIST1H2BG" "HIST1H3A" 
+[37] "HIST1H3D"  "HIST1H3E"  "HP"        "IFI27L2A"  "IFITM2"    "IFITM3"   
+[43] "IGF1"      "IIGP1"     "ITGAX"     "KIF5A"     "LCN2"      "LGALS3"   
+[49] "MGST1"     "MPO"       "NPFF"      "OASL2"     "PF4"       "PKD1L3"   
+[55] "PLA2G7"    "PTGER4"    "RUNX3"     "S100A8"    "S100A9"    "SLC1A2"   
+[61] "SPP1"      "TSPAN8"    "VCAM1"    
+
+$`GO:0044767`
+ [1] "2700046G09RIK" "ACKR3"         "ADAM8"         "ADCY1"        
+ [5] "ALAS2"         "ALCAM"         "ALDH1A3"       "ANK1"         
+ [9] "ANKRD23"       "ANXA2"         "APOE"          "ARNT2"        
+[13] "AXL"           "BCAN"          "BNC2"          "C3"           
+[17] "CAV1"          "CCL5"          "CCL8"          "CCR9"         
+[21] "CD300LF"       "CD36"          "CD44"          "CD74"         
+[25] "CLU"           "CPEB1"         "CSPG4"         "CTLA2A"       
+[29] "CXCL13"        "CXCL14"        "CXCR4"         "CYBB"         
+[33] "DHCR24"        "DLG4"          "DNASE1L2"      "EFHD1"        
+[37] "EHD1"          "ERMN"          "ETL4"          "FAM20C"       
+[41] "FGR"           "FLT1"          "GAS7"          "GP1BA"        
+[45] "GPER1"         "GPR18"         "H2-AA"         "HP"           
+[49] "IFI27L2A"      "IGF1"          "IGF2R"         "IL1RN"        
+[53] "IL2RG"         "KCTD17"        "KIF5A"         "KL"           
+[57] "LGALS3"        "LOX"           "LPL"           "LRP8"         
+[61] "MAB21L1"       "MACROD2"       "MAFF"          "MMP12"        
+[65] "MSR1"          "NGP"           "NHS"           "PDCD1"        
+[69] "PF4"           "PTGER4"        "RAB7B"         "RBM20"        
+[73] "RUNX3"         "RXRG"          "S100A8"        "S100A9"       
+[77] "SATB2"         "SH3PXD2B"      "SLC12A5"       "SLC1A2"       
+[81] "SLC23A1"       "SLC45A3"       "SPP1"          "SZT2"         
+[85] "TET1"          "TRPC4"         "TTC26"         "TTLL3"        
+[89] "TUB"           "UNC79"         "VASH2"         "VCAM1"        
+[93] "VNN3"          "XDH"          
+
+$`GO:0007059`
+[1] "CPEB1" "DDX3Y" "KIF23"
+
+$`GO:0044297`
+ [1] "ALCAM"   "APOE"    "CPEB1"   "CYBB"    "ERMN"    "IGF1"    "KIF5A"  
+ [8] "LRP8"    "NPFF"    "PDE1B"   "PTGER4"  "SLC12A5"
+
+$`GO:0015631`
+[1] "KIF23"  "KIF5A"  "S100A8" "S100A9" "TPPP3" 
+
+$`GO:0048285`
+[1] "CCDC8" "CPEB1" "IGF1"  "INF2"  "KIF23" "PRDM9"
+
+$`GO:0098590`
+ [1] "ANK1"    "ANXA2"   "CACNB3"  "CADPS2"  "CAV1"    "CD36"    "CD44"   
+ [8] "CPEB1"   "CYP4F18" "DLG4"    "EHD1"    "FGR"     "GABRQ"   "GPER1"  
+[15] "GRIP2"   "GRM3"    "LRP8"    "MYOF"    "PIANP"   "SLC12A5" "SLC1A1" 
+[22] "SLC1A2"  "SLC23A1" "SLC4A4"  "TRPC4"  
+
+$`GO:0006935`
+ [1] "ACKR3"  "ADAM8"  "ALCAM"  "CCL4"   "CCL5"   "CCL8"   "CCR9"   "CD74"  
+ [9] "CH25H"  "CXCL13" "CXCL14" "CXCR4"  "FLT1"   "GPR18"  "KIF5A"  "LGALS3"
+[17] "PF4"    "PLA2G7" "RUNX3"  "S100A8" "S100A9" "SPP1"   "VCAM1" 
+
+$`GO:0042330`
+ [1] "ACKR3"  "ADAM8"  "ALCAM"  "CCL4"   "CCL5"   "CCL8"   "CCR9"   "CD74"  
+ [9] "CH25H"  "CXCL13" "CXCL14" "CXCR4"  "FLT1"   "GPR18"  "KIF5A"  "LGALS3"
+[17] "PF4"    "PLA2G7" "RUNX3"  "S100A8" "S100A9" "SPP1"   "VCAM1" 
+
+$`GO:0005819`
+[1] "CPEB1" "KIF23" "TUBG2"
+
+$`GO:0042221`
+ [1] "ACKR3"    "ADAM8"    "ALCAM"    "ANXA2"    "ARNT2"    "AXL"     
+ [7] "CAV1"     "CCL4"     "CCL5"     "CCL8"     "CCR9"     "CD300LB" 
+[13] "CD36"     "CD38"     "CD44"     "CD74"     "CH25H"    "CISH"    
+[19] "CLU"      "CP"       "CPEB1"    "CRIP1"    "CXCL13"   "CXCL14"  
+[25] "CXCR4"    "CYBB"     "DLG4"     "EHD1"     "FAM20C"   "FLT1"    
+[31] "GP1BA"    "GPER1"    "GPR18"    "HP"       "IFITM2"   "IFITM3"  
+[37] "IGF1"     "IGF2R"    "IIGP1"    "IL1RN"    "KIF5A"    "KL"      
+[43] "LCN2"     "LGALS3"   "LOX"      "MGARP"    "MGST1"    "MPO"     
+[49] "MYOF"     "NPFF"     "PDE1B"    "PF4"      "PKD1L3"   "PLA2G7"  
+[55] "PPP1R14A" "PTGER4"   "RTP4"     "RUNX3"    "RXRG"     "S100A8"  
+[61] "S100A9"   "SATB2"    "SLC12A5"  "SLC1A2"   "SLC23A1"  "SPP1"    
+[67] "SZT2"     "UNC79"    "VCAM1"    "XDH"      "ZFYVE9"  
+
+$`GO:0045595`
+ [1] "ADAM8"    "ANKRD23"  "APOE"     "AXL"      "CAV1"     "CCL5"    
+ [7] "CCL8"     "CD36"     "CD44"     "CD74"     "CLU"      "CPEB1"   
+[13] "CSPG4"    "CTLA2A"   "CXCL14"   "CXCR4"    "EHD1"     "FAM20C"  
+[19] "FLT1"     "GPER1"    "H2-AA"    "IGF1"     "IL2RG"    "LPL"     
+[25] "LRP8"     "MAFF"     "MSR1"     "PF4"      "PTGER4"   "RAB7B"   
+[31] "RUNX3"    "SH3PXD2B" "SLC45A3"  "XDH"     
+
+$`GO:0051129`
+ [1] "ANXA2"  "APOE"   "CAV1"   "CLU"    "CSPG4"  "DLG4"   "IGF1"   "LGALS3"
+ [9] "PTGER4" "TET1"  
+
+$`GO:0031349`
+ [1] "ADAM8"   "C3"      "CAV1"    "CCL4"    "CCL5"    "CCL8"    "CD74"   
+ [8] "COLEC12" "FCNB"    "PTGER4"  "RAB7B"   "S100A8"  "S100A9" 
+
+$`GO:0007275`
+ [1] "2700046G09RIK" "ACKR3"         "ADAM8"         "ADCY1"        
+ [5] "ALAS2"         "ALCAM"         "ALDH1A3"       "ANK1"         
+ [9] "ANXA2"         "APOE"          "ARNT2"         "AXL"          
+[13] "BCAN"          "BNC2"          "C3"            "CAV1"         
+[17] "CCL5"          "CCR9"          "CD300LF"       "CD36"         
+[21] "CD44"          "CD74"          "CLU"           "CPEB1"        
+[25] "CSPG4"         "CTLA2A"        "CXCL13"        "CXCL14"       
+[29] "CXCR4"         "CYBB"          "DHCR24"        "DLG4"         
+[33] "DNASE1L2"      "EFHD1"         "EHD1"          "ETL4"         
+[37] "FAM20C"        "FLT1"          "GAS7"          "GPER1"        
+[41] "GPR18"         "H2-AA"         "HP"            "IGF1"         
+[45] "IGF2R"         "IL1RN"         "IL2RG"         "KIF5A"        
+[49] "KL"            "LGALS3"        "LOX"           "LRP8"         
+[53] "MAB21L1"       "MACROD2"       "MAFF"          "NGP"          
+[57] "NHS"           "PDCD1"         "PF4"           "PTGER4"       
+[61] "RAB7B"         "RBM20"         "RUNX3"         "RXRG"         
+[65] "S100A8"        "S100A9"        "SATB2"         "SH3PXD2B"     
+[69] "SLC12A5"       "SLC1A2"        "SLC23A1"       "SLC45A3"      
+[73] "SPP1"          "SZT2"          "TET1"          "TRPC4"        
+[77] "TTC26"         "TUB"           "VASH2"         "VCAM1"        
+[81] "VNN3"          "XDH"          
+
+$`GO:0050542`
+[1] "S100A8" "S100A9"
+
+$`GO:0050544`
+[1] "S100A8" "S100A9"
+
+$`GO:0043025`
+ [1] "ALCAM"   "APOE"    "CPEB1"   "CYBB"    "ERMN"    "IGF1"    "KIF5A"  
+ [8] "LRP8"    "NPFF"    "PDE1B"   "PTGER4"  "SLC12A5"
+
+$`GO:0098813`
+[1] "CPEB1" "KIF23"
+
+$`GO:0036477`
+ [1] "ALCAM"   "APOE"    "BCAN"    "CLU"     "CPEB1"   "CTLA2A"  "CYBB"   
+ [8] "DLG4"    "ERMN"    "GPER1"   "GRIP2"   "GRM3"    "IGF1"    "KIF5A"  
+[15] "LRP8"    "NPFF"    "PDE1B"   "PLCB4"   "PTGER4"  "SLC12A5" "SLC1A2" 
+
+$`GO:0009986`
+ [1] "ACKR3"   "ADAM8"   "ALCAM"   "ANXA2"   "APOE"    "AXL"     "CAV1"   
+ [8] "CCR9"    "CD200R4" "CD36"    "CD38"    "CD44"    "CD74"    "CLEC12A"
+[15] "CLU"     "CRLF2"   "CSPG4"   "CXCR4"   "FCNB"    "GP1BA"   "H2-AA"  
+[22] "H2-AB1"  "IFITM3"  "IGF2R"   "IL2RG"   "ITGAX"   "LGALS3"  "LPL"    
+[29] "PDCD1"   "PKD1L3"  "SLAMF7"  "SLC1A2"  "TRPC4"   "VAMP1"   "VCAM1"  
+
+$`GO:0051241`
+ [1] "ANXA2"  "APOE"   "AXL"    "CAV1"   "CD36"   "CD38"   "CD44"   "CD74"  
+ [9] "CSPG4"  "CXCL13" "GP1BA"  "GPNMB"  "GPR18"  "IGF1"   "NGP"    "NPFF"  
+[17] "PDCD1"  "PF4"    "PTGER4" "TSPAN8" "XDH"   
+
+$`GO:0032496`
+[1] "AXL"     "CCL5"    "CD300LB" "CD36"    "CXCL13"  "MGST1"   "PF4"    
+[8] "PTGER4" 
+
+$`GO:0050543`
+[1] "FABP3"  "S100A8" "S100A9"
+
+$`GO:0006928`
+ [1] "ACKR3"  "ADAM8"  "ALCAM"  "APOE"   "AXL"    "CAV1"   "CCL4"   "CCL5"  
+ [9] "CCL8"   "CD44"   "CD74"   "CH25H"  "CPEB1"  "CSPG4"  "CXCL13" "CXCL14"
+[17] "CXCR4"  "FGR"    "FLT1"   "GPER1"  "GPR18"  "IGF1"   "IL1RN"  "KIF23" 
+[25] "KIF5A"  "LGALS3" "LRP8"   "MGARP"  "MMP12"  "PF4"    "PLA2G7" "PTGER4"
+[33] "RUNX3"  "S100A8" "S100A9" "SATB2"  "SPP1"   "TRIP6"  "TTC26"  "VCAM1" 
+
+$`GO:0051094`
+ [1] "2700046G09RIK" "ADAM8"         "APOE"          "AXL"          
+ [5] "C3"            "CCL5"          "CCL8"          "CD36"         
+ [9] "CD74"          "CLU"           "CPEB1"         "CXCR4"        
+[13] "CYBB"          "EHD1"          "FAM20C"        "FLT1"         
+[17] "GPER1"         "H2-AA"         "IGF1"          "IL2RG"        
+[21] "KCTD17"        "KL"            "LGALS3"        "LPL"          
+[25] "LRP8"          "MSR1"          "PF4"           "PTGER4"       
+[29] "RAB7B"         "SH3PXD2B"      "VASH2"        
+
+$`GO:0048584`
+ [1] "ACKR3"   "ADAM8"   "ALDH1A3" "AXL"     "C3"      "CACNB3"  "CAV1"   
+ [8] "CCL4"    "CCL5"    "CCL8"    "CD36"    "CD38"    "CD44"    "CD74"   
+[15] "COLEC12" "CSPG4"   "CXCL13"  "CXCL14"  "CXCR4"   "DLG4"    "FCNB"   
+[22] "FGR"     "FLT1"    "GPER1"   "IGF1"    "IL1RN"   "KL"      "LGALS3" 
+[29] "LIME1"   "MAP3K13" "PF4"     "PLA2G7"  "PTGER4"  "RAB7B"   "RUNX3"  
+[36] "S100A4"  "S100A8"  "S100A9"  "STX1A"   "TRIP6"   "XDH"    
+
+$`GO:0097458`
+ [1] "ALCAM"   "ANK1"    "APOE"    "BCAN"    "CADPS2"  "CLU"     "CPEB1"  
+ [8] "CTLA2A"  "CXCR4"   "CYBB"    "DLG4"    "ERMN"    "GPER1"   "GRIP2"  
+[15] "GRM3"    "GUCA1B"  "IGF1"    "KIF5A"   "LRP8"    "NPFF"    "PDE1B"  
+[22] "PDZD2"   "PLCB4"   "PTGER4"  "S100A4"  "SLC12A5" "SLC1A2"  "STX1A"  
+[29] "TMEM163" "VAMP1"  
+
+$`GO:0000226`
+[1] "CAV1"  "CCDC8" "CEP72" "KIF23" "TPPP3" "TUBG2"
+
+$`GO:0045653`
+[1] "PF4"
+
+$`GO:0000940`
+character(0)
+
+$`GO:0060326`
+ [1] "ADAM8"  "CCL4"   "CCL5"   "CCL8"   "CD74"   "CH25H"  "CXCL13" "CXCL14"
+ [9] "FLT1"   "GPR18"  "LGALS3" "PF4"    "PLA2G7" "S100A8" "S100A9" "SPP1"  
+[17] "VCAM1" 
+
+$`GO:0005876`
+[1] "TUBG2"
+
+$`GO:0045087`
+ [1] "ADAM8"     "AXL"       "C3"        "CAV1"      "CCL4"      "CCL5"     
+ [7] "CCL8"      "CD74"      "COLEC12"   "CYBB"      "FCNB"      "FGR"      
+[13] "GPER1"     "HIST1H2BG" "IFITM2"    "IFITM3"    "IIGP1"     "LCN2"     
+[19] "LGALS3"    "OASL2"     "RAB7B"     "S100A8"    "S100A9"    "SLAMF7"   
+
+$`GO:0032757`
+[1] "FCNB"   "PTGER4"
+
+$`GO:0002237`
+[1] "AXL"     "CCL5"    "CD300LB" "CD36"    "CXCL13"  "MGST1"   "PF4"    
+[8] "PTGER4" 
+
+$`GO:0040011`
+ [1] "ACKR3"  "ADAM8"  "ALCAM"  "APOE"   "AXL"    "CCL4"   "CCL5"   "CCL8"  
+ [9] "CCR9"   "CD44"   "CD74"   "CH25H"  "CPEB1"  "CSPG4"  "CXCL13" "CXCL14"
+[17] "CXCR4"  "FGR"    "FLT1"   "GPER1"  "GPR18"  "IGF1"   "IL1RN"  "KIF5A" 
+[25] "LGALS3" "LRP8"   "MMP12"  "PF4"    "PLA2G7" "PTGER4" "RUNX3"  "S100A8"
+[33] "S100A9" "SATB2"  "SPP1"   "TRIP6"  "VCAM1" 
+
+$`GO:0070887`
+ [1] "ACKR3"    "ADAM8"    "ANXA2"    "AXL"      "CAV1"     "CCL4"    
+ [7] "CCL5"     "CCL8"     "CD300LB"  "CD36"     "CD44"     "CD74"    
+[13] "CH25H"    "CISH"     "CPEB1"    "CRIP1"    "CXCL13"   "CXCL14"  
+[19] "CXCR4"    "CYBB"     "EHD1"     "FAM20C"   "FLT1"     "GP1BA"   
+[25] "GPER1"    "GPR18"    "IFITM3"   "IGF1"     "IIGP1"    "IL1RN"   
+[31] "KL"       "LCN2"     "LGALS3"   "MGARP"    "MGST1"    "MPO"     
+[37] "MYOF"     "PDE1B"    "PF4"      "PLA2G7"   "PPP1R14A" "PTGER4"  
+[43] "RXRG"     "S100A8"   "S100A9"   "SATB2"    "SPP1"     "SZT2"    
+[49] "VCAM1"    "XDH"      "ZFYVE9"  
+
+$`GO:0016020`
+  [1] "6430571L13RIK" "IFI207"        "ACKR3"         "ADAM8"        
+  [5] "ADCY1"         "AHNAK"         "ALAS2"         "ALCAM"        
+  [9] "ANK1"          "ANXA2"         "APOE"          "AXL"          
+ [13] "B3GNT3"        "BCAN"          "BNC2"          "CACNB3"       
+ [17] "CADPS2"        "CAPNS2"        "CAV1"          "CCDC8"        
+ [21] "CCR9"          "CD163"         "CD177"         "CD200R4"      
+ [25] "CD300LB"       "CD300LF"       "CD36"          "CD38"         
+ [29] "CD44"          "CD52"          "CD72"          "CD74"         
+ [33] "CH25H"         "CHST2"         "CISH"          "CLEC12A"      
+ [37] "CLU"           "COLEC12"       "COX6A2"        "CP"           
+ [41] "CPEB1"         "CRLF2"         "CSPG4"         "CXCR4"        
+ [45] "CYBB"          "CYP4F18"       "D830031N03RIK" "DDX3Y"        
+ [49] "DEGS2"         "DHCR24"        "DLG4"          "EFHD1"        
+ [53] "EHD1"          "FAM198B"       "FCNB"          "FGR"          
+ [57] "FLT1"          "FXYD5"         "GABRQ"         "GP1BA"        
+ [61] "GPER1"         "GPNMB"         "GPR18"         "GPRC5C"       
+ [65] "GRIP2"         "GRM3"          "GUCA1B"        "H2-AA"        
+ [69] "H2-AB1"        "H2-EB1"        "HCAR2"         "HIST1H3A"     
+ [73] "HIST1H3D"      "HIST1H3E"      "IFI27L2A"      "IFITM2"       
+ [77] "IFITM3"        "IGF1"          "IGF2R"         "IGFLR1"       
+ [81] "IIGP1"         "IL2RG"         "ITGAX"         "KIF5A"        
+ [85] "KL"            "KLRB1A"        "KRTCAP3"       "LGALS3"       
+ [89] "LILRB4A"       "LIME1"         "LPL"           "LRP8"         
+ [93] "LRRC45"        "LY6I"          "LYVE1"         "MAP3K13"      
+ [97] "MGARP"         "MGST1"         "MSR1"          "MYOF"         
+[101] "OCIAD2"        "OLFR99"        "OLR1"          "PCNX2"        
+[105] "PDCD1"         "PIANP"         "PKD1L3"        "PLCD4"        
+[109] "PTGER4"        "IFI213"        "RAB30"         "RAB7B"        
+[113] "RTP4"          "S100A8"        "S100A9"        "S1PR4"        
+[117] "SEC31B"        "SHISA7"        "SLAMF7"        "SLC10A6"      
+[121] "SLC12A5"       "SLC1A1"        "SLC1A2"        "SLC23A1"      
+[125] "SLC45A3"       "SLC4A4"        "SLC7A3"        "ST8SIA6"      
+[129] "STX1A"         "TMEM163"       "TMEM51"        "TRIP6"        
+[133] "TRPC4"         "TSPAN8"        "TUB"           "UNC79"        
+[137] "VAMP1"         "VCAM1"         "VNN3"          "ZFYVE9"       
+
+$`GO:0000070`
+[1] "KIF23"
+
+$`GO:0042127`
+ [1] "ANXA2"   "APOE"    "ARNT2"   "CAV1"    "CCL5"    "CD38"    "CD44"   
+ [8] "CD74"    "CLU"     "CPEB1"   "CXCL13"  "DHCR24"  "DLEC1"   "EGLN3"  
+[15] "FGR"     "GPER1"   "H2-AA"   "H2-AB1"  "IFITM3"  "IGF1"    "LGALS3" 
+[22] "MAB21L1" "MMP12"   "PF4"     "PTGER4"  "RUNX3"   "TET1"    "VASH2"  
+[29] "VCAM1"   "XDH"    
+
+$`GO:0007049`
+ [1] "ASNS"   "CCDC8"  "CEP72"  "CPEB1"  "GPER1"  "IGF1"   "KIF23"  "PRDM5" 
+ [9] "PRDM9"  "RUNX3"  "ZFP365"
+
+$`GO:0008283`
+ [1] "ANXA2"   "APOE"    "ARNT2"   "CAV1"    "CCL5"    "CD38"    "CD44"   
+ [8] "CD74"    "CLU"     "CPEB1"   "CSPG4"   "CXCL13"  "CXCR4"   "DHCR24" 
+[15] "DLEC1"   "EGLN3"   "FGR"     "GPER1"   "H2-AA"   "H2-AB1"  "IFITM3" 
+[22] "IGF1"    "LGALS3"  "MAB21L1" "MMP12"   "PF4"     "PTGER4"  "RUNX3"  
+[29] "TET1"    "VASH2"   "VCAM1"   "XDH"    
+
+$`GO:0031347`
+ [1] "ACKR3"    "ADAM8"    "APOE"     "C3"       "CAV1"     "CCL4"    
+ [7] "CCL5"     "CCL8"     "CD44"     "CD74"     "COLEC12"  "CTLA2A"  
+[13] "FCNB"     "FGR"      "GPER1"    "HIST1H3A" "HIST1H3D" "HIST1H3E"
+[19] "PTGER4"   "RAB7B"    "S100A8"   "S100A9"  
+
+$`GO:0030595`
+ [1] "ADAM8"  "CCL4"   "CCL5"   "CCL8"   "CD74"   "CH25H"  "CXCL13" "CXCL14"
+ [9] "FLT1"   "GPR18"  "LGALS3" "PF4"    "PLA2G7" "S100A8" "S100A9" "SPP1"  
+
+$`GO:0000819`
+[1] "KIF23"
+
+$`GO:0008284`
+ [1] "ANXA2"   "ARNT2"   "CAV1"    "CCL5"    "CD38"    "CD74"    "CLU"    
+ [8] "GPER1"   "IGF1"    "LGALS3"  "MAB21L1" "MMP12"   "PTGER4"  "TET1"   
+[15] "VASH2"   "VCAM1"  
+
+$`GO:0080134`
+ [1] "ACKR3"    "ADAM8"    "ANXA2"    "APOE"     "C3"       "CAV1"    
+ [7] "CCL4"     "CCL5"     "CCL8"     "CD36"     "CD44"     "CD74"    
+[13] "CLU"      "COLEC12"  "CTLA2A"   "CXCR4"    "FCNB"     "FGR"     
+[19] "GP1BA"    "GPER1"    "HIST1H3A" "HIST1H3D" "HIST1H3E" "IL1RN"   
+[25] "PTGER4"   "RAB7B"    "S100A8"   "S100A9"   "SZT2"     "TSPAN8"  
+[31] "XDH"     
+
+$`GO:0043085`
+ [1] "ADAM8"   "ADCY1"   "APOE"    "CAV1"    "CCL4"    "CCL5"    "CCL8"   
+ [8] "CD74"    "CLU"     "CSPG4"   "CXCL13"  "FGR"     "FLT1"    "GPER1"  
+[15] "IGF1"    "IL1RN"   "LRP8"    "MAP3K13" "S100A8"  "S100A9"  "TBC1D2" 
+[22] "XDH"    
+
+$`GO:0000777`
+character(0)
+
+$`GO:0030154`
+ [1] "ACKR3"    "ADAM8"    "ADCY1"    "ALAS2"    "ALCAM"    "ANK1"    
+ [7] "ANKRD23"  "ANXA2"    "APOE"     "AXL"      "CAV1"     "CCL5"    
+[13] "CCL8"     "CCR9"     "CD300LF"  "CD36"     "CD44"     "CD74"    
+[19] "CLU"      "CPEB1"    "CSPG4"    "CTLA2A"   "CXCL14"   "CXCR4"   
+[25] "DLG4"     "DNASE1L2" "EFHD1"    "EHD1"     "FAM20C"   "FGR"     
+[31] "FLT1"     "GAS7"     "GPER1"    "GPR18"    "H2-AA"    "IGF1"    
+[37] "IL2RG"    "KIF5A"    "LGALS3"   "LPL"      "LRP8"     "MAFF"    
+[43] "MSR1"     "NHS"      "PF4"      "PTGER4"   "RAB7B"    "RUNX3"   
+[49] "S100A8"   "S100A9"   "SATB2"    "SH3PXD2B" "SLC12A5"  "SLC45A3" 
+[55] "SPP1"     "SZT2"     "TET1"     "TRPC4"    "TTC26"    "XDH"     
+
+$`GO:0045652`
+[1] "PF4"   "RAB7B"
+
+$`GO:0065008`
+ [1] "2700046G09RIK" "ACTR3B"        "ADAM8"         "ALAS2"        
+ [5] "ALB"           "ALDH1A3"       "ANK1"          "ANXA2"        
+ [9] "APOC4"         "APOE"          "AXL"           "C3"           
+[13] "CACNB3"        "CADPS2"        "CAV1"          "CCL4"         
+[17] "CCL5"          "CD36"          "CD38"          "CD44"         
+[21] "CD74"          "CLU"           "CP"            "CPEB1"        
+[25] "CXCL13"        "CYP4F18"       "DLG4"          "EHD1"         
+[29] "ERMN"          "F13A1"         "FABP3"         "FGR"          
+[33] "GAS7"          "GP1BA"         "GPER1"         "GRIP2"        
+[37] "HCAR2"         "IGF1"          "IL1RN"         "INF2"         
+[41] "KCTD17"        "KL"            "LCN2"          "LIME1"        
+[45] "LPL"           "MSR1"          "NPFF"          "PDE1B"        
+[49] "PF4"           "PTGER4"        "S100A9"        "SHISA7"       
+[53] "SLC12A5"       "SLC1A1"        "SLC4A4"        "SPP1"         
+[57] "STX1A"         "TRIP6"         "TRPC4"         "TSPAN8"       
+[61] "TUB"           "VCAM1"         "XDH"          
+
+$`GO:0000775`
+character(0)
+
+$`GO:0032103`
+ [1] "ADAM8"  "C3"     "CCL4"   "CCL5"   "CCL8"   "CD74"   "CXCL13" "CXCL14"
+ [9] "PF4"    "PLA2G7" "PTGER4" "S100A8" "S100A9"
+
+$`GO:0048522`
+ [1] "2700046G09RIK" "ACKR3"         "ACTR3B"        "ADAM8"        
+ [5] "ADCY1"         "ALDH1A3"       "ANK1"          "ANXA2"        
+ [9] "APOE"          "ARNT2"         "ASNS"          "AXL"          
+[13] "C3"            "CADPS2"        "CAV1"          "CCL4"         
+[17] "CCL5"          "CCL8"          "CD300LB"       "CD36"         
+[21] "CD38"          "CD44"          "CD74"          "CLU"          
+[25] "COLEC12"       "CPEB1"         "CSPG4"         "CXCL13"       
+[29] "CXCL14"        "CXCR4"         "CYBB"          "DLG4"         
+[33] "EHD1"          "FABP3"         "FAM20C"        "FCNB"         
+[37] "FGR"           "FLT1"          "GPER1"         "H2-AA"        
+[41] "HCAR2"         "HP"            "IGF1"          "IGF2R"        
+[45] "IL1RN"         "IL2RG"         "ITGAX"         "KCTD17"       
+[49] "KIF23"         "KL"            "LCN2"          "LGALS3"       
+[53] "LPL"           "LRP8"          "MAB21L1"       "MAP3K13"      
+[57] "MGARP"         "MMP12"         "MSR1"          "PDCD1"        
+[61] "PF4"           "PLA2G7"        "PRDM9"         "PTGER4"       
+[65] "RAB7B"         "RBM20"         "RUNX3"         "RXRG"         
+[69] "S100A4"        "S100A8"        "S100A9"        "SATB2"        
+[73] "SH3PXD2B"      "SLC45A3"       "STX1A"         "TCF20"        
+[77] "TET1"          "TOX2"          "TRIP6"         "TUB"          
+[81] "VASH2"         "VCAM1"         "XDH"          
+
+$`GO:0007010`
+ [1] "ACTR3B"  "ANKRD23" "CAV1"    "CCDC8"   "CEP72"   "ERMN"    "FGR"    
+ [8] "GAS7"    "INF2"    "KIF23"   "PTGER4"  "S100A9"  "TPPP3"   "TUBG2"  
+
+$`GO:0051093`
+ [1] "CAV1"   "CD36"   "CD44"   "CD74"   "CSPG4"  "CXCL14" "GPER1"  "IGF1"  
+ [9] "NGP"    "PDCD1"  "PF4"    "PTGER4" "XDH"   
+
+$`GO:0045177`
+ [1] "CACNB3"  "CD36"    "CD44"    "CYP4F18" "IFITM3"  "MGST1"   "PDZD2"  
+ [8] "SLC1A1"  "SLC23A1" "SPP1"    "VCAM1"  
+
+$`GO:0051128`
+ [1] "ACTR3B"  "ANK1"    "ANKRD23" "ANXA2"   "APOE"    "AXL"     "C3"     
+ [8] "CAV1"    "CCDC8"   "CCL8"    "CD36"    "CD38"    "CD44"    "CLU"    
+[15] "CPEB1"   "CSPG4"   "CXCL13"  "DLG4"    "EHD1"    "ERMN"    "FGR"    
+[22] "GAS7"    "GPER1"   "IGF1"    "INF2"    "ITGAX"   "KCTD17"  "LCN2"   
+[29] "LGALS3"  "LRP8"    "MGARP"   "PRDM9"   "PTGER4"  "S100A9"  "STX1A"  
+[36] "TBC1D2"  "TET1"    "TUB"    
+
+$`GO:0007017`
+[1] "CAV1"  "CCDC8" "CEP72" "KIF23" "KIF5A" "MGARP" "TPPP3" "TTC26" "TUBG2"
+
+$`GO:0036041`
+[1] "CD36"   "FABP3"  "S100A8" "S100A9"
+
+$`GO:0033993`
+ [1] "AXL"     "CAV1"    "CCL5"    "CD300LB" "CD36"    "CXCL13"  "GPER1"  
+ [8] "IGF1"    "IGF2R"   "IL1RN"   "LOX"     "MGARP"   "MGST1"   "PF4"    
+[15] "PTGER4"  "RXRG"    "SPP1"   
+
+$`GO:0005488`
+  [1] "IFI207"    "ACKR3"     "ACTR3B"    "ADAM8"     "ADAMTS4"   "ADCY1"    
+  [7] "AHNAK"     "ALAS2"     "ALB"       "ALCAM"     "ALDH1A3"   "ANK1"     
+ [13] "ANKRD23"   "ANXA2"     "APOE"      "ARNT2"     "ASNS"      "AXL"      
+ [19] "BCAN"      "BHLHE40"   "BNC2"      "C3"        "CACNB3"    "CADPS2"   
+ [25] "CAPNS2"    "CASKIN1"   "CAV1"      "CBR2"      "CCL4"      "CCL5"     
+ [31] "CCL8"      "CCR9"      "CD200R4"   "CD300LB"   "CD300LF"   "CD36"     
+ [37] "CD44"      "CD72"      "CD74"      "CEP72"     "CH25H"     "CISH"     
+ [43] "CLEC12A"   "CLU"       "CMYA5"     "COLEC12"   "CP"        "CPEB1"    
+ [49] "CPXM1"     "CRIP1"     "CRLF2"     "CSPG4"     "CST7"      "CTSE"     
+ [55] "CXCL13"    "CXCL14"    "CXCR4"     "CYBB"      "CYP4F18"   "DDX3Y"    
+ [61] "DHCR24"    "DLG4"      "DNASE1L2"  "DQX1"      "EFCAB6"    "EFCAB7"   
+ [67] "EFHD1"     "EGFL8"     "EGLN3"     "EHD1"      "EIF2S3Y"   "ERMN"     
+ [73] "ETL4"      "F13A1"     "FABP3"     "FABP5"     "FAM20C"    "FCNB"     
+ [79] "FGR"       "FLT1"      "FXYD5"     "GAS7"      "GPER1"     "GPNMB"    
+ [85] "GPRC5C"    "GPX3"      "GRIP2"     "GUCA1B"    "H2-AA"     "H2-AB1"   
+ [91] "H2-EB1"    "HCAR2"     "HIST1H1D"  "HIST1H2AC" "HIST1H2AE" "HIST1H2BG"
+ [97] "HIST1H3A"  "HIST1H3D"  "HIST1H3E"  "HP"        "IGF1"      "IGF2R"    
+[103] "IGFLR1"    "IIGP1"     "IL1RN"     "IL2RG"     "INF2"      "ITGAX"    
+[109] "KCTD17"    "KIF23"     "KIF5A"     "KL"        "KLRB1A"    "LCN2"     
+[115] "LGALS3"    "LIME1"     "LOX"       "LPL"       "LRP8"      "LYVE1"    
+[121] "MAFF"      "MAP3K13"   "MGARP"     "MGST1"     "MMP12"     "MOK"      
+[127] "MPO"       "MSR1"      "MYOF"      "NPFF"      "OASL2"     "OLR1"     
+[133] "PDCD1"     "PDE1B"     "PF4"       "PKD1L3"    "PLA2G7"    "PLCB4"    
+[139] "PLCD4"     "PLEKHN1"   "POU6F1"    "PRDM5"     "PRDM9"     "IFI213"   
+[145] "RAB30"     "RAB7B"     "RBM20"     "RTP4"      "RUNX3"     "RXRG"     
+[151] "S100A4"    "S100A8"    "S100A9"    "SATB2"     "SH3PXD2B"  "SLAMF7"   
+[157] "SLC12A5"   "SLC1A1"    "SLC4A4"    "SPARCL1"   "SPP1"      "STX1A"    
+[163] "TBC1D2"    "TCF20"     "TCTEX1D4"  "TET1"      "TFEC"      "TMEM163"  
+[169] "TOX2"      "TPPP3"     "TRIP6"     "TRPC4"     "TSPAN8"    "TTC26"    
+[175] "TTLL3"     "TUB"       "TUBG2"     "UNC79"     "VAMP1"     "VCAM1"    
+[181] "XDH"       "ZFP365"    "ZFP473"    "ZFP786"    "ZFYVE9"   
+
+$`GO:0000942`
+character(0)
+
+$`GO:0031175`
+ [1] "ADCY1"   "ALCAM"   "APOE"    "CD44"    "CLU"     "CPEB1"   "CSPG4"  
+ [8] "CXCR4"   "DLG4"    "EFHD1"   "EHD1"    "GAS7"    "KIF5A"   "LRP8"   
+[15] "RUNX3"   "SLC12A5" "SZT2"   
+
+$`GO:0001934`
+ [1] "ACKR3"   "ADAM8"   "ANXA2"   "C3"      "CAV1"    "CCL4"    "CCL5"   
+ [8] "CCL8"    "CD36"    "CD44"    "CD74"    "CLU"     "CSPG4"   "CXCR4"  
+[15] "FLT1"    "GPER1"   "IGF1"    "IL1RN"   "KL"      "LRP8"    "MAP3K13"
+[22] "PTGER4"  "XDH"    
+
+$`GO:0000922`
+character(0)
+
+$`GO:0048518`
+ [1] "2700046G09RIK" "ACKR3"         "ACTR3B"        "ADAM8"        
+ [5] "ADCY1"         "ALB"           "ALDH1A3"       "ANK1"         
+ [9] "ANXA2"         "APOC4"         "APOE"          "ARNT2"        
+[13] "ASNS"          "AXL"           "C3"            "CACNB3"       
+[17] "CADPS2"        "CAV1"          "CCL4"          "CCL5"         
+[21] "CCL8"          "CD300LB"       "CD36"          "CD38"         
+[25] "CD44"          "CD74"          "CLU"           "COLEC12"      
+[29] "CPEB1"         "CSPG4"         "CXCL13"        "CXCL14"       
+[33] "CXCR4"         "CYBB"          "CYP4F18"       "DLG4"         
+[37] "EHD1"          "FABP3"         "FAM20C"        "FCNB"         
+[41] "FGR"           "FLT1"          "GPER1"         "H2-AA"        
+[45] "HCAR2"         "HP"            "IGF1"          "IGF2R"        
+[49] "IL1RN"         "IL2RG"         "ITGAX"         "KCTD17"       
+[53] "KIF23"         "KL"            "LCN2"          "LGALS3"       
+[57] "LIME1"         "LPL"           "LRP8"          "MAB21L1"      
+[61] "MAP3K13"       "MGARP"         "MMP12"         "MSR1"         
+[65] "PDCD1"         "PF4"           "PLA2G7"        "PRDM9"        
+[69] "PTGER4"        "RAB7B"         "RBM20"         "RUNX3"        
+[73] "RXRG"          "S100A4"        "S100A8"        "S100A9"       
+[77] "SATB2"         "SH3PXD2B"      "SLC1A1"        "SLC1A2"       
+[81] "SLC45A3"       "SPP1"          "STX1A"         "TCF20"        
+[85] "TET1"          "TOX2"          "TRIP6"         "TUB"          
+[89] "VASH2"         "VCAM1"         "XDH"          
+
+$`GO:0016477`
+ [1] "ACKR3"  "ADAM8"  "APOE"   "AXL"    "CCL4"   "CCL5"   "CCL8"   "CD44"  
+ [9] "CD74"   "CH25H"  "CPEB1"  "CSPG4"  "CXCL13" "CXCL14" "CXCR4"  "FGR"   
+[17] "FLT1"   "GPER1"  "GPR18"  "IGF1"   "IL1RN"  "LGALS3" "LRP8"   "MMP12" 
+[25] "PF4"    "PLA2G7" "PTGER4" "S100A8" "S100A9" "SATB2"  "SPP1"   "TRIP6" 
+[33] "VCAM1" 
+
+$`GO:0051726`
+[1] "ASNS"  "CCDC8" "GPER1" "IGF1"  "KIF23" "PRDM9" "RUNX3"
+
+$`GO:0000776`
+character(0)
+
+$`GO:0042327`
+ [1] "ACKR3"   "ADAM8"   "ANXA2"   "C3"      "CAV1"    "CCL4"    "CCL5"   
+ [8] "CCL8"    "CD36"    "CD44"    "CD74"    "CLU"     "CSPG4"   "CXCR4"  
+[15] "FGR"     "FLT1"    "GPER1"   "IGF1"    "IL1RN"   "KL"      "LRP8"   
+[22] "MAP3K13" "PTGER4"  "XDH"    
+
+$`GO:0051046`
+ [1] "CADPS2"  "CCL5"    "CD36"    "CD38"    "CD74"    "CYP4F18" "FCNB"   
+ [8] "FGR"     "GPER1"   "HCAR2"   "IGF1"    "IL1RN"   "LGALS3"  "LPL"    
+[15] "NPFF"    "PTGER4"  "S100A8"  "S100A9"  "STX1A"  
+
+$`GO:0002683`
+ [1] "ADAM8"  "AXL"    "CD44"   "CD74"   "GPER1"  "GPR18"  "H2-AA"  "H2-AB1"
+ [9] "LGALS3" "PDCD1"  "PF4"    "PTGER4" "RAB7B" 
+
+$`GO:0044763`
+  [1] "2700046G09RIK" "ACKR3"         "ACTR3B"        "ADAM8"        
+  [5] "ADCY1"         "ALAS2"         "ALB"           "ALCAM"        
+  [9] "ALDH1A3"       "ANK1"          "ANKRD23"       "ANXA2"        
+ [13] "APOC1"         "APOE"          "ARNT2"         "ASNS"         
+ [17] "AXL"           "B3GNT3"        "C3"            "CACNB3"       
+ [21] "CADPS2"        "CASKIN1"       "CAV1"          "CBR2"         
+ [25] "CCDC8"         "CCL4"          "CCL5"          "CCL8"         
+ [29] "CCR9"          "CD300LB"       "CD300LF"       "CD36"         
+ [33] "CD38"          "CD44"          "CD74"          "CEP72"        
+ [37] "CH25H"         "CISH"          "CLU"           "CMYA5"        
+ [41] "COLEC12"       "CP"            "CPEB1"         "CRIP1"        
+ [45] "CRLF2"         "CSPG4"         "CTLA2A"        "CXCL13"       
+ [49] "CXCL14"        "CXCR4"         "CYBB"          "CYP4F18"      
+ [53] "DDX3Y"         "DEGS2"         "DHCR24"        "DLG4"         
+ [57] "DNASE1L2"      "DUSP9"         "EFHD1"         "EGLN3"        
+ [61] "EHD1"          "ERMN"          "FABP3"         "FAM20C"       
+ [65] "FCNB"          "FGR"           "FLT1"          "GABRQ"        
+ [69] "GAS7"          "GP1BA"         "GPER1"         "GPR18"        
+ [73] "GPRC5C"        "GRIP2"         "GRM3"          "GUCA1B"       
+ [77] "H2-AA"         "H2-AB1"        "HCAR2"         "HIST1H2AC"    
+ [81] "HIST1H2AE"     "HIST1H3A"      "HIST1H3D"      "HIST1H3E"     
+ [85] "HP"            "IFITM3"        "IGF1"          "IGF2R"        
+ [89] "IIGP1"         "IL1RN"         "IL2RG"         "INF2"         
+ [93] "ITGAX"         "KCTD17"        "KIF23"         "KIF5A"        
+ [97] "KL"            "LCN2"          "LGALS3"        "LIME1"        
+[101] "LOX"           "LPL"           "LRP8"          "MACROD2"      
+[105] "MAFF"          "MAP3K13"       "MGARP"         "MMP12"        
+[109] "MPO"           "MSR1"          "MYOF"          "NHS"          
+[113] "NPFF"          "OASL2"         "OLFR99"        "OLR1"         
+[117] "PDCD1"         "PDE1B"         "PF4"           "PLA2G7"       
+[121] "PLCD4"         "PRDM5"         "PRDM9"         "PTGER4"       
+[125] "RAB30"         "RAB7B"         "RTP4"          "RUNX3"        
+[129] "RXRG"          "S100A4"        "S100A8"        "S100A9"       
+[133] "S1PR4"         "SATB2"         "SH3PXD2B"      "SHISA7"       
+[137] "SLAMF7"        "SLC12A5"       "SLC1A2"        "SLC45A3"      
+[141] "SLC4A4"        "SLC7A3"        "SPARCL1"       "SPP1"         
+[145] "ST8SIA6"       "STX1A"         "SZT2"          "TBC1D2"       
+[149] "TET1"          "TPPP3"         "TRIP6"         "TRPC4"        
+[153] "TSPAN8"        "TTC26"         "TTLL3"         "TUB"          
+[157] "TUBG2"         "VAMP1"         "VASH2"         "VCAM1"        
+[161] "VNN3"          "XDH"           "ZFP365"        "ZFYVE9"       
+
+$`GO:0010562`
+ [1] "ACKR3"   "ADAM8"   "ADCY1"   "ANXA2"   "APOE"    "C3"      "CAV1"   
+ [8] "CCL4"    "CCL5"    "CCL8"    "CD36"    "CD44"    "CD74"    "CLU"    
+[15] "CSPG4"   "CXCR4"   "FABP3"   "FGR"     "FLT1"    "GPER1"   "IGF1"   
+[22] "IL1RN"   "KL"      "LRP8"    "MAP3K13" "PF4"     "PTGER4"  "XDH"    
+
+$`GO:0045937`
+ [1] "ACKR3"   "ADAM8"   "ADCY1"   "ANXA2"   "APOE"    "C3"      "CAV1"   
+ [8] "CCL4"    "CCL5"    "CCL8"    "CD36"    "CD44"    "CD74"    "CLU"    
+[15] "CSPG4"   "CXCR4"   "FABP3"   "FGR"     "FLT1"    "GPER1"   "IGF1"   
+[22] "IL1RN"   "KL"      "LRP8"    "MAP3K13" "PF4"     "PTGER4"  "XDH"    
+
+$`GO:0090307`
+[1] "KIF23"
+
+$`GO:1902850`
+[1] "KIF23"
+
+$`GO:0000778`
+character(0)
+
+$`GO:0045597`
+ [1] "ADAM8"    "APOE"     "AXL"      "CCL5"     "CCL8"     "CD36"    
+ [7] "CD74"     "CLU"      "CPEB1"    "CXCR4"    "EHD1"     "FAM20C"  
+[13] "FLT1"     "GPER1"    "H2-AA"    "IGF1"     "IL2RG"    "LPL"     
+[19] "LRP8"     "MSR1"     "PF4"      "PTGER4"   "RAB7B"    "SH3PXD2B"
+
+$`GO:0048514`
+ [1] "ACKR3"  "ADAM8"  "ANXA2"  "APOE"   "C3"     "CAV1"   "CCL5"   "CD36"  
+ [9] "CSPG4"  "CXCR4"  "CYBB"   "FLT1"   "LGALS3" "NGP"    "PF4"    "PTGER4"
+[17] "VASH2"  "XDH"   
+
+$`GO:0032677`
+[1] "FCNB"   "PTGER4"
+
+$`GO:0000228`
+[1] "HIST1H1D"  "HIST1H2AC" "HIST1H2AE" "HIST1H2BG" "HIST1H3A"  "HIST1H3D" 
+[7] "HIST1H3E"  "RUNX3"     "SATB2"    
+
+$`GO:0001817`
+ [1] "ADAM8"  "AXL"    "C3"     "CCL4"   "CCL5"   "CD36"   "CD74"   "CLU"   
+ [9] "CYBB"   "FCNB"   "FGR"    "GPNMB"  "GPR18"  "LPL"    "PF4"    "PTGER4"
+[17] "RAB7B" 
+
+$`GO:0046602`
+character(0)
+
+$`GO:0010033`
+ [1] "ACKR3"   "AXL"     "CAV1"    "CCL4"    "CCL5"    "CCL8"    "CD300LB"
+ [8] "CD36"    "CD38"    "CD44"    "CD74"    "CISH"    "CLU"     "CPEB1"  
+[15] "CXCL13"  "CXCR4"   "DLG4"    "EHD1"    "FAM20C"  "FLT1"    "GP1BA"  
+[22] "GPER1"   "IFITM2"  "IFITM3"  "IGF1"    "IGF2R"   "IIGP1"   "IL1RN"  
+[29] "KL"      "LOX"     "MGARP"   "MGST1"   "MYOF"    "PDE1B"   "PF4"    
+[36] "PTGER4"  "RUNX3"   "RXRG"    "SATB2"   "SLC1A2"  "SPP1"    "UNC79"  
+[43] "VCAM1"   "XDH"     "ZFYVE9" 
+
+$`GO:0044699`
+  [1] "2700046G09RIK" "ACKR3"         "ACTR3B"        "ADAM8"        
+  [5] "ADCY1"         "ALAS2"         "ALB"           "ALCAM"        
+  [9] "ALDH1A3"       "ANK1"          "ANKRD23"       "ANXA2"        
+ [13] "APOC1"         "APOC4"         "APOE"          "ARNT2"        
+ [17] "ASNS"          "AXL"           "B3GNT3"        "BCAN"         
+ [21] "BHLHE40"       "BNC2"          "C3"            "CACNB3"       
+ [25] "CADPS2"        "CASKIN1"       "CAV1"          "CBR2"         
+ [29] "CCDC8"         "CCL4"          "CCL5"          "CCL8"         
+ [33] "CCR9"          "CD300LB"       "CD300LF"       "CD36"         
+ [37] "CD38"          "CD44"          "CD74"          "CEP72"        
+ [41] "CH25H"         "CISH"          "CLU"           "CMYA5"        
+ [45] "COLEC12"       "CP"            "CPEB1"         "CRIP1"        
+ [49] "CRLF2"         "CSPG4"         "CTLA2A"        "CXCL13"       
+ [53] "CXCL14"        "CXCR4"         "CYBB"          "CYP4F18"      
+ [57] "DDX3Y"         "DEGS2"         "DHCR24"        "DLEC1"        
+ [61] "DLG4"          "DNASE1L2"      "DUSP9"         "EFHD1"        
+ [65] "EGLN3"         "EHD1"          "ERMN"          "ETL4"         
+ [69] "F13A1"         "FABP3"         "FABP5"         "FAM20C"       
+ [73] "FCNB"          "FGR"           "FLT1"          "GABRQ"        
+ [77] "GAS7"          "GP1BA"         "GPER1"         "GPNMB"        
+ [81] "GPR18"         "GPRC5C"        "GPX3"          "GRIP2"        
+ [85] "GRM3"          "GUCA1B"        "H2-AA"         "H2-AB1"       
+ [89] "HCAR2"         "HIST1H2AC"     "HIST1H2AE"     "HIST1H3A"     
+ [93] "HIST1H3D"      "HIST1H3E"      "HP"            "IFI27L2A"     
+ [97] "IFITM3"        "IGF1"          "IGF2R"         "IIGP1"        
+[101] "IL1RN"         "IL2RG"         "INF2"          "ITGAX"        
+[105] "KCTD17"        "KIF23"         "KIF5A"         "KL"           
+[109] "LCN2"          "LGALS3"        "LIME1"         "LOX"          
+[113] "LPL"           "LRP8"          "MAB21L1"       "MACROD2"      
+[117] "MAFF"          "MAP3K13"       "MGARP"         "MGST1"        
+[121] "MMP12"         "MPO"           "MSR1"          "MYOF"         
+[125] "NGP"           "NHS"           "NPFF"          "OASL2"        
+[129] "OLFR99"        "OLR1"          "PDCD1"         "PDE1B"        
+[133] "PF4"           "PLA2G7"        "PLCD4"         "PRDM5"        
+[137] "PRDM9"         "PTGER4"        "RAB30"         "RAB7B"        
+[141] "RBM20"         "RTP4"          "RUNX3"         "RXRG"         
+[145] "S100A4"        "S100A8"        "S100A9"        "S1PR4"        
+[149] "SATB2"         "SH3PXD2B"      "SHISA7"        "SLAMF7"       
+[153] "SLC12A5"       "SLC1A1"        "SLC1A2"        "SLC23A1"      
+[157] "SLC45A3"       "SLC4A4"        "SLC7A3"        "SPARCL1"      
+[161] "SPP1"          "ST8SIA6"       "STX1A"         "SZT2"         
+[165] "TBC1D2"        "TET1"          "TPPP3"         "TRIP6"        
+[169] "TRPC4"         "TSPAN8"        "TTC26"         "TTLL3"        
+[173] "TUB"           "TUBG2"         "UNC79"         "VAMP1"        
+[177] "VASH2"         "VCAM1"         "VNN3"          "XDH"          
+[181] "ZFP365"        "ZFYVE9"       
+
+$`GO:0018108`
+ [1] "CAV1"   "CCL5"   "CD36"   "CD44"   "CD74"   "CSPG4"  "FGR"    "FLT1"  
+ [9] "IGF1"   "LRP8"   "PTGER4"
+
+$`GO:0051247`
+ [1] "ACKR3"   "ADAM8"   "ANXA2"   "APOE"    "C3"      "CAV1"    "CCL4"   
+ [8] "CCL5"    "CCL8"    "CD36"    "CD44"    "CD74"    "CLU"     "CPEB1"  
+[15] "CSPG4"   "CXCR4"   "CYBB"    "FLT1"    "GPER1"   "IGF1"    "IL1RN"  
+[22] "KL"      "LRP8"    "MAP3K13" "PTGER4"  "S100A8"  "S100A9"  "TET1"   
+[29] "XDH"    
+
+$`GO:0001944`
+ [1] "ACKR3"  "ADAM8"  "ANXA2"  "APOE"   "C3"     "CAV1"   "CCL5"   "CD36"  
+ [9] "CSPG4"  "CXCR4"  "CYBB"   "FLT1"   "GPER1"  "IGF1"   "LGALS3" "LOX"   
+[17] "NGP"    "PF4"    "PTGER4" "VASH2"  "XDH"   
+
+$`GO:0018212`
+ [1] "CAV1"   "CCL5"   "CD36"   "CD44"   "CD74"   "CSPG4"  "FGR"    "FLT1"  
+ [9] "IGF1"   "LRP8"   "PTGER4"
+
+$`GO:0048812`
+ [1] "ADCY1" "ALCAM" "APOE"  "CLU"   "CXCR4" "DLG4"  "GAS7"  "KIF5A" "LRP8" 
+[10] "RUNX3" "SZT2" 
+
+$`GO:0016323`
+[1] "ANXA2"   "CAV1"    "CD44"    "DLG4"    "PIANP"   "SLC23A1" "SLC4A4" 
+[8] "TRPC4"  
+
+$`GO:0098687`
+[1] "HIST1H3A" "HIST1H3D" "HIST1H3E"
+
+$`GO:0015630`
+ [1] "APOE"     "CCDC8"    "CEP72"    "CPEB1"    "KIF23"    "KIF5A"   
+ [7] "LRP8"     "LRRC45"   "ODF2L"    "TCTEX1D4" "TPPP3"    "TTC26"   
+[13] "TTLL3"    "TUBG2"    "ZFP365"  
+
+$`GO:0044430`
+ [1] "ACTR3B"   "ADAM8"    "ANXA2"    "APOE"     "CCDC8"    "CEP72"   
+ [7] "CPEB1"    "GAS7"     "GPER1"    "KIF23"    "KIF5A"    "LRP8"    
+[13] "LRRC45"   "ODF2L"    "SH3PXD2B" "STX1A"    "TCTEX1D4" "TPPP3"   
+[19] "TTC26"    "TTLL3"    "TUBG2"    "VCAM1"    "ZFP365"  
+
+$`GO:0046903`
+ [1] "ANXA2"   "AXL"     "CADPS2"  "CAV1"    "CCL5"    "CD36"    "CD38"   
+ [8] "CD74"    "CRLF2"   "CYP4F18" "FCNB"    "FGR"     "GPER1"   "HCAR2"  
+[15] "IGF1"    "IL1RN"   "LGALS3"  "LPL"     "NPFF"    "PTGER4"  "S100A8" 
+[22] "S100A9"  "STX1A"   "TRPC4"   "VAMP1"   "XDH"    
+
+$`GO:0032501`
+  [1] "2700046G09RIK" "ACKR3"         "ADAM8"         "ADCY1"        
+  [5] "ALAS2"         "ALB"           "ALCAM"         "ALDH1A3"      
+  [9] "ANK1"          "ANXA2"         "APOE"          "ARNT2"        
+ [13] "AXL"           "BCAN"          "BHLHE40"       "BNC2"         
+ [17] "C3"            "CAV1"          "CCL4"          "CCL5"         
+ [21] "CCR9"          "CD300LF"       "CD36"          "CD38"         
+ [25] "CD44"          "CD74"          "CLU"           "CMYA5"        
+ [29] "CPEB1"         "CRLF2"         "CSPG4"         "CTLA2A"       
+ [33] "CXCL13"        "CXCL14"        "CXCR4"         "CYBB"         
+ [37] "CYP4F18"       "DHCR24"        "DLG4"          "DNASE1L2"     
+ [41] "EFHD1"         "EHD1"          "ERMN"          "ETL4"         
+ [45] "F13A1"         "FAM20C"        "FCNB"          "FGR"          
+ [49] "FLT1"          "GAS7"          "GP1BA"         "GPER1"        
+ [53] "GPNMB"         "GPR18"         "GPRC5C"        "GRIP2"        
+ [57] "GRM3"          "GUCA1B"        "H2-AA"         "HCAR2"        
+ [61] "HP"            "IGF1"          "IGF2R"         "IL1RN"        
+ [65] "IL2RG"         "KIF5A"         "KL"            "LGALS3"       
+ [69] "LOX"           "LPL"           "LRP8"          "MAB21L1"      
+ [73] "MACROD2"       "MAFF"          "MPO"           "MSR1"         
+ [77] "NGP"           "NHS"           "NPFF"          "OLFR99"       
+ [81] "PDCD1"         "PDE1B"         "PF4"           "PKD1L3"       
+ [85] "PLA2G7"        "PRDM9"         "PTGER4"        "RAB7B"        
+ [89] "RBM20"         "RTP4"          "RUNX3"         "RXRG"         
+ [93] "S100A8"        "S100A9"        "SATB2"         "SH3PXD2B"     
+ [97] "SLC12A5"       "SLC1A1"        "SLC1A2"        "SLC23A1"      
+[101] "SLC45A3"       "SPP1"          "SZT2"          "TET1"         
+[105] "TRPC4"         "TSPAN8"        "TTC26"         "TUB"          
+[109] "UNC79"         "VASH2"         "VCAM1"         "VNN3"         
+[113] "XDH"          
+
+$`GO:0048869`
+ [1] "ACKR3"    "ADAM8"    "ADCY1"    "ALAS2"    "ALCAM"    "ANK1"    
+ [7] "ANKRD23"  "ANXA2"    "APOE"     "AXL"      "CAV1"     "CCL5"    
+[13] "CCL8"     "CCR9"     "CD300LF"  "CD36"     "CD44"     "CD74"    
+[19] "CLU"      "CPEB1"    "CSPG4"    "CTLA2A"   "CXCL14"   "CXCR4"   
+[25] "DLG4"     "DNASE1L2" "EFHD1"    "EHD1"     "ERMN"     "FAM20C"  
+[31] "FGR"      "FLT1"     "GAS7"     "GP1BA"    "GPER1"    "GPR18"   
+[37] "H2-AA"    "IGF1"     "IL2RG"    "KCTD17"   "KIF5A"    "LGALS3"  
+[43] "LPL"      "LRP8"     "MAFF"     "MSR1"     "NHS"      "PF4"     
+[49] "PTGER4"   "RAB7B"    "RUNX3"    "S100A8"   "S100A9"   "SATB2"   
+[55] "SH3PXD2B" "SLC12A5"  "SLC45A3"  "SPP1"     "SZT2"     "TET1"    
+[61] "TRPC4"    "TTC26"    "TTLL3"    "XDH"     
+
+$`GO:0001568`
+ [1] "ACKR3"  "ADAM8"  "ANXA2"  "APOE"   "C3"     "CAV1"   "CCL5"   "CD36"  
+ [9] "CSPG4"  "CXCR4"  "CYBB"   "FLT1"   "GPER1"  "LGALS3" "LOX"    "NGP"   
+[17] "PF4"    "PTGER4" "VASH2"  "XDH"   
+
+$`GO:0098552`
+ [1] "ALCAM"   "APOE"    "CD200R4" "CD36"    "CD44"    "CD74"    "CRLF2"  
+ [8] "CXCR4"   "DLG4"    "FCNB"    "FGR"     "GP1BA"   "H2-AA"   "H2-AB1" 
+[15] "IL2RG"   "ITGAX"   "LGALS3"  "PDCD1"   "SLAMF7"  "VCAM1"  
+
+$`GO:0031401`
+ [1] "ACKR3"   "ADAM8"   "ANXA2"   "C3"      "CAV1"    "CCL4"    "CCL5"   
+ [8] "CCL8"    "CD36"    "CD44"    "CD74"    "CLU"     "CSPG4"   "CXCR4"  
+[15] "FLT1"    "GPER1"   "IGF1"    "IL1RN"   "KL"      "LRP8"    "MAP3K13"
+[22] "PTGER4"  "TET1"    "XDH"    
+
+$`GO:0034097`
+ [1] "ACKR3"  "AXL"    "CAV1"   "CCL4"   "CCL5"   "CCL8"   "CD74"   "CISH"  
+ [9] "CXCL13" "CXCR4"  "GP1BA"  "GPER1"  "IFITM2" "IFITM3" "IIGP1"  "IL1RN" 
+[17] "PDE1B"  "PF4"   
+
+$`GO:0071345`
+ [1] "ACKR3"  "AXL"    "CAV1"   "CCL4"   "CCL5"   "CCL8"   "CD74"   "CISH"  
+ [9] "CXCL13" "CXCR4"  "GP1BA"  "GPER1"  "IFITM3" "IIGP1"  "IL1RN"  "PDE1B" 
+[17] "PF4"   
+
+$`GO:0000793`
+character(0)
+
+$`GO:0051960`
+ [1] "2700046G09RIK" "APOE"          "CAV1"          "CCL5"         
+ [5] "CPEB1"         "CSPG4"         "CXCR4"         "GPER1"        
+ [9] "IGF1"          "LRP8"          "RXRG"          "SLC45A3"      
+
+$`GO:0044464`
+  [1] "IFI207"        "ACKR3"         "ACTR3B"        "ADAM8"        
+  [5] "ADCY1"         "AHNAK"         "ALAS2"         "ALB"          
+  [9] "ALCAM"         "ALDH1A3"       "ANK1"          "ANKRD23"      
+ [13] "ANXA2"         "APOE"          "ARNT2"         "ASNS"         
+ [17] "AXL"           "B3GNT3"        "BCAN"          "BHLHE40"      
+ [21] "BNC2"          "CACNB3"        "CADPS2"        "CAPNS2"       
+ [25] "CASKIN1"       "CAV1"          "CBR2"          "CCDC8"        
+ [29] "CCL5"          "CCR9"          "CD163"         "CD177"        
+ [33] "CD200R4"       "CD300LB"       "CD300LF"       "CD36"         
+ [37] "CD38"          "CD44"          "CD52"          "CD72"         
+ [41] "CD74"          "CEP72"         "CH25H"         "CHST2"        
+ [45] "CISH"          "CLEC12A"       "CLU"           "CMYA5"        
+ [49] "COX6A2"        "CP"            "CPEB1"         "CRIP1"        
+ [53] "CRLF2"         "CSPG4"         "CTLA2A"        "CTSE"         
+ [57] "CXCL14"        "CXCR4"         "CYBB"          "CYP4F18"      
+ [61] "D830031N03RIK" "DDX3Y"         "DDX43"         "DEGS2"        
+ [65] "DHCR24"        "DLEC1"         "DLG4"          "DNASE1L2"     
+ [69] "DQX1"          "DUSP9"         "EFCAB6"        "EFHD1"        
+ [73] "EGLN3"         "EHD1"          "EIF2S3Y"       "ERMN"         
+ [77] "ETL4"          "F13A1"         "FABP3"         "FABP5"        
+ [81] "FAM198B"       "FAM20C"        "FCNB"          "FGR"          
+ [85] "FLT1"          "FXYD5"         "GABRQ"         "GAS7"         
+ [89] "GP1BA"         "GPER1"         "GPNMB"         "GPR18"        
+ [93] "GPRC5C"        "GRIP2"         "GRM3"          "GUCA1B"       
+ [97] "H2-AA"         "H2-AB1"        "H2-EB1"        "HCAR2"        
+[101] "HIST1H1D"      "HIST1H2AC"     "HIST1H2AE"     "HIST1H2BG"    
+[105] "HIST1H3A"      "HIST1H3D"      "HIST1H3E"      "HP"           
+[109] "IFI44"         "IFITM2"        "IFITM3"        "IGF1"         
+[113] "IGF2R"         "IGFLR1"        "IIGP1"         "IL1RN"        
+[117] "IL2RG"         "INF2"          "ITGAX"         "KCTD17"       
+[121] "KIF23"         "KIF5A"         "KL"            "KLRB1A"       
+[125] "LCN2"          "LGALS3"        "LILRB4A"       "LIME1"        
+[129] "LOX"           "LPL"           "LRP8"          "LRRC45"       
+[133] "LY6I"          "LYVE1"         "MAB21L1"       "MACROD2"      
+[137] "MAFF"          "MAGEH1"        "MAP3K13"       "MGARP"        
+[141] "MGST1"         "MOK"           "MPO"           "MSR1"         
+[145] "MYOF"          "NGP"           "NPFF"          "OCIAD2"       
+[149] "ODF2L"         "OLR1"          "PDCD1"         "PDE1B"        
+[153] "PDZD2"         "PERM1"         "PF4"           "PIANP"        
+[157] "PKD1L3"        "PLA2G7"        "PLCB4"         "PLCD4"        
+[161] "POU6F1"        "PPP1R14A"      "PRDM5"         "PRDM9"        
+[165] "PTGER4"        "PTPRH"         "IFI213"        "RAB30"        
+[169] "RAB7B"         "RBM20"         "RTP4"          "RUNX3"        
+[173] "RXRG"          "S100A4"        "S100A8"        "S100A9"       
+[177] "S1PR4"         "SATB2"         "SEC31B"        "SH3PXD2B"     
+[181] "SHISA7"        "SLAMF7"        "SLC10A6"       "SLC12A5"      
+[185] "SLC1A1"        "SLC1A2"        "SLC23A1"       "SLC4A4"       
+[189] "SLC7A3"        "SNORA64"       "SNORA70"       "SPP1"         
+[193] "ST8SIA6"       "STX1A"         "SZT2"          "TBC1D2"       
+[197] "TCF20"         "TCTEX1D4"      "TET1"          "TFEC"         
+[201] "TMEM163"       "TOX2"          "TPPP3"         "TRIP6"        
+[205] "TRPC4"         "TSPAN8"        "TTC26"         "TTC41"        
+[209] "TTLL3"         "TUB"           "TUBG2"         "VAMP1"        
+[213] "VASH2"         "VCAM1"         "VNN3"          "XDH"          
+[217] "ZFP365"        "ZFP473"        "ZFP786"        "ZFYVE9"       
+
+$`GO:0070488`
+[1] "S100A8" "S100A9"
+
+$`GO:0042995`
+ [1] "ACTR3B"   "ALCAM"    "ANK1"     "ANXA2"    "APOE"     "BCAN"    
+ [7] "CAV1"     "CD36"     "CD52"     "CLU"      "CPEB1"    "CSPG4"   
+[13] "CTLA2A"   "CXCR4"    "CYBB"     "DLG4"     "EHD1"     "ERMN"    
+[19] "FGR"      "GAS7"     "GPER1"    "GRIP2"    "GRM3"     "GUCA1B"  
+[25] "KIF5A"    "LRP8"     "MOK"      "NPFF"     "PDZD2"    "PLCB4"   
+[31] "PTGER4"   "PTPRH"    "S100A4"   "SH3PXD2B" "SLC12A5"  "SLC1A2"  
+[37] "SPP1"     "STX1A"    "TCTEX1D4" "TTC26"    "TTLL3"    "TUB"     
+[43] "VAMP1"    "VCAM1"   
+
+$`GO:0097529`
+ [1] "ADAM8"  "CCL4"   "CCL5"   "CCL8"   "CD74"   "FLT1"   "LGALS3" "PLA2G7"
+ [9] "PTGER4" "S100A8" "S100A9" "SPP1"  
+
+$`GO:0032637`
+[1] "FCNB"   "PTGER4"
+
+$`GO:0005623`
+  [1] "IFI207"        "ACKR3"         "ACTR3B"        "ADAM8"        
+  [5] "ADCY1"         "AHNAK"         "ALAS2"         "ALB"          
+  [9] "ALCAM"         "ALDH1A3"       "ANK1"          "ANKRD23"      
+ [13] "ANXA2"         "APOE"          "ARNT2"         "ASNS"         
+ [17] "AXL"           "B3GNT3"        "BCAN"          "BHLHE40"      
+ [21] "BNC2"          "CACNB3"        "CADPS2"        "CAPNS2"       
+ [25] "CASKIN1"       "CAV1"          "CBR2"          "CCDC8"        
+ [29] "CCL5"          "CCR9"          "CD163"         "CD177"        
+ [33] "CD200R4"       "CD300LB"       "CD300LF"       "CD36"         
+ [37] "CD38"          "CD44"          "CD52"          "CD72"         
+ [41] "CD74"          "CEP72"         "CH25H"         "CHST2"        
+ [45] "CISH"          "CLEC12A"       "CLU"           "CMYA5"        
+ [49] "COX6A2"        "CP"            "CPEB1"         "CRIP1"        
+ [53] "CRLF2"         "CSPG4"         "CTLA2A"        "CTSE"         
+ [57] "CXCL14"        "CXCR4"         "CYBB"          "CYP4F18"      
+ [61] "D830031N03RIK" "DDX3Y"         "DDX43"         "DEGS2"        
+ [65] "DHCR24"        "DLEC1"         "DLG4"          "DNASE1L2"     
+ [69] "DQX1"          "DUSP9"         "EFCAB6"        "EFHD1"        
+ [73] "EGLN3"         "EHD1"          "EIF2S3Y"       "ERMN"         
+ [77] "ETL4"          "F13A1"         "FABP3"         "FABP5"        
+ [81] "FAM198B"       "FAM20C"        "FCNB"          "FGR"          
+ [85] "FLT1"          "FXYD5"         "GABRQ"         "GAS7"         
+ [89] "GP1BA"         "GPER1"         "GPNMB"         "GPR18"        
+ [93] "GPRC5C"        "GRIP2"         "GRM3"          "GUCA1B"       
+ [97] "H2-AA"         "H2-AB1"        "H2-EB1"        "HCAR2"        
+[101] "HIST1H1D"      "HIST1H2AC"     "HIST1H2AE"     "HIST1H2BG"    
+[105] "HIST1H3A"      "HIST1H3D"      "HIST1H3E"      "HP"           
+[109] "IFI44"         "IFITM2"        "IFITM3"        "IGF1"         
+[113] "IGF2R"         "IGFLR1"        "IIGP1"         "IL1RN"        
+[117] "IL2RG"         "INF2"          "ITGAX"         "KCTD17"       
+[121] "KIF23"         "KIF5A"         "KL"            "KLRB1A"       
+[125] "LCN2"          "LGALS3"        "LILRB4A"       "LIME1"        
+[129] "LOX"           "LPL"           "LRP8"          "LRRC45"       
+[133] "LY6I"          "LYVE1"         "MAB21L1"       "MACROD2"      
+[137] "MAFF"          "MAGEH1"        "MAP3K13"       "MGARP"        
+[141] "MGST1"         "MOK"           "MPO"           "MSR1"         
+[145] "MYOF"          "NGP"           "NPFF"          "OCIAD2"       
+[149] "ODF2L"         "OLR1"          "PDCD1"         "PDE1B"        
+[153] "PDZD2"         "PERM1"         "PF4"           "PIANP"        
+[157] "PKD1L3"        "PLA2G7"        "PLCB4"         "PLCD4"        
+[161] "POU6F1"        "PPP1R14A"      "PRDM5"         "PRDM9"        
+[165] "PTGER4"        "PTPRH"         "IFI213"        "RAB30"        
+[169] "RAB7B"         "RBM20"         "RTP4"          "RUNX3"        
+[173] "RXRG"          "S100A4"        "S100A8"        "S100A9"       
+[177] "S1PR4"         "SATB2"         "SEC31B"        "SH3PXD2B"     
+[181] "SHISA7"        "SLAMF7"        "SLC10A6"       "SLC12A5"      
+[185] "SLC1A1"        "SLC1A2"        "SLC23A1"       "SLC4A4"       
+[189] "SLC7A3"        "SNORA64"       "SNORA70"       "SPP1"         
+[193] "ST8SIA6"       "STX1A"         "SZT2"          "TBC1D2"       
+[197] "TCF20"         "TCTEX1D4"      "TET1"          "TFEC"         
+[201] "TMEM163"       "TOX2"          "TPPP3"         "TRIP6"        
+[205] "TRPC4"         "TSPAN8"        "TTC26"         "TTC41"        
+[209] "TTLL3"         "TUB"           "TUBG2"         "VAMP1"        
+[213] "VASH2"         "VCAM1"         "VNN3"          "XDH"          
+[217] "ZFP365"        "ZFP473"        "ZFP786"        "ZFYVE9"       
+
+$`GO:0072358`
+ [1] "ACKR3"  "ADAM8"  "ANXA2"  "APOE"   "C3"     "CAV1"   "CCL5"   "CD36"  
+ [9] "CSPG4"  "CXCR4"  "CYBB"   "FLT1"   "GPER1"  "IGF1"   "LGALS3" "LOX"   
+[17] "NGP"    "PF4"    "PTGER4" "VASH2"  "XDH"   
+
+$`GO:0048870`
+ [1] "ACKR3"  "ADAM8"  "APOE"   "AXL"    "CCL4"   "CCL5"   "CCL8"   "CD44"  
+ [9] "CD74"   "CH25H"  "CPEB1"  "CSPG4"  "CXCL13" "CXCL14" "CXCR4"  "FGR"   
+[17] "FLT1"   "GPER1"  "GPR18"  "IGF1"   "IL1RN"  "LGALS3" "LRP8"   "MMP12" 
+[25] "PF4"    "PLA2G7" "PTGER4" "S100A8" "S100A9" "SATB2"  "SPP1"   "TRIP6" 
+[33] "VCAM1" 
+
+$`GO:0051674`
+ [1] "ACKR3"  "ADAM8"  "APOE"   "AXL"    "CCL4"   "CCL5"   "CCL8"   "CD44"  
+ [9] "CD74"   "CH25H"  "CPEB1"  "CSPG4"  "CXCL13" "CXCL14" "CXCR4"  "FGR"   
+[17] "FLT1"   "GPER1"  "GPR18"  "IGF1"   "IL1RN"  "LGALS3" "LRP8"   "MMP12" 
+[25] "PF4"    "PLA2G7" "PTGER4" "S100A8" "S100A9" "SATB2"  "SPP1"   "TRIP6" 
+[33] "VCAM1" 
+
+$`GO:0043901`
+[1] "CCL4"   "CCL5"   "CD36"   "FCNB"   "IFITM2" "IFITM3" "IGF1"   "MPO"   
+
+$`GO:0005576`
+  [1] "ACTR3B"    "ADAMTS4"   "ADCY1"     "AHNAK"     "ALB"       "ALCAM"    
+  [7] "ALDH1A3"   "ANXA2"     "APOC1"     "APOC4"     "APOE"      "AXL"      
+ [13] "BCAN"      "C3"        "CCL4"      "CCL5"      "CCL8"      "CD163"    
+ [19] "CD177"     "CD36"      "CD38"      "CD44"      "CD74"      "CLU"      
+ [25] "COLEC12"   "CP"        "CPXM1"     "CRLF2"     "CSPG4"     "CST7"     
+ [31] "CTLA2A"    "CTSE"      "CXCL13"    "CXCL14"    "CXCR4"     "DNASE1L2" 
+ [37] "EFHD1"     "EGFL8"     "EHD1"      "EMILIN2"   "ERMN"      "F13A1"    
+ [43] "FABP3"     "FABP5"     "FAM20C"    "FCNB"      "FGR"       "FLT1"     
+ [49] "GP1BA"     "GPRC5C"    "GPX3"      "H2-EB1"    "HIST1H2AC" "HIST1H2AE"
+ [55] "HIST1H2BG" "HIST1H3A"  "HIST1H3D"  "HIST1H3E"  "HP"        "IFITM3"   
+ [61] "IGF1"      "IGF2R"     "IIGP1"     "IL1RN"     "KIF23"     "KL"       
+ [67] "LCN2"      "LGALS3"    "LILRB4A"   "LIME1"     "LOX"       "LPL"      
+ [73] "LRP8"      "LYVE1"     "MMP12"     "MPO"       "MSR1"      "MYOF"     
+ [79] "NGP"       "NPFF"      "OLR1"      "PDZD2"     "PF4"       "PKD1L3"   
+ [85] "PLA2G7"    "S100A4"    "S100A8"    "S100A9"    "SH3D21"    "SLC1A1"   
+ [91] "SLC23A1"   "SLC4A4"    "SPARCL1"   "SPP1"      "SZT2"      "TPPP3"    
+ [97] "TSPAN8"    "TUB"       "VASH2"     "VCAM1"     "VNN3"      "XDH"      
+
+$`GO:0048666`
+ [1] "ADCY1"   "ALCAM"   "APOE"    "CD44"    "CLU"     "CPEB1"   "CSPG4"  
+ [8] "CXCR4"   "DLG4"    "EFHD1"   "EHD1"    "GAS7"    "KIF5A"   "LRP8"   
+[15] "RUNX3"   "SLC12A5" "SZT2"    "TTC26"  
+
+$`GO:0045860`
+[1] "ADAM8"   "CD74"    "CLU"     "CSPG4"   "FLT1"    "IGF1"    "IL1RN"  
+[8] "LRP8"    "MAP3K13"
+
+$`GO:0050729`
+[1] "ADAM8"  "C3"     "CCL4"   "CCL5"   "CCL8"   "PTGER4" "S100A8" "S100A9"
+
+$`GO:0000779`
+character(0)
+
+$`GO:0016324`
+[1] "CACNB3"  "CD44"    "CYP4F18" "SLC1A1"  "SLC23A1"
+
+$`GO:0032101`
+ [1] "ACKR3"    "ADAM8"    "ANXA2"    "APOE"     "C3"       "CAV1"    
+ [7] "CCL4"     "CCL5"     "CCL8"     "CD36"     "CD44"     "CD74"    
+[13] "CTLA2A"   "CXCL13"   "CXCL14"   "CXCR4"    "GP1BA"    "GPER1"   
+[19] "GPR18"    "HIST1H3A" "HIST1H3D" "HIST1H3E" "NPFF"     "PF4"     
+[25] "PLA2G7"   "PTGER4"   "S100A8"   "S100A9"   "TSPAN8"  
+
+$`GO:0001047`
+[1] "IFI207" "IFI213"
+
+$`GO:0051716`
+  [1] "ACKR3"    "ADAM8"    "ADCY1"    "ALB"      "ALDH1A3"  "ANK1"    
+  [7] "ANXA2"    "APOE"     "ARNT2"    "ASNS"     "AXL"      "C3"      
+ [13] "CACNB3"   "CADPS2"   "CASKIN1"  "CAV1"     "CCL4"     "CCL5"    
+ [19] "CCL8"     "CCR9"     "CD300LB"  "CD36"     "CD38"     "CD44"    
+ [25] "CD74"     "CH25H"    "CISH"     "CLU"      "CMYA5"    "COLEC12" 
+ [31] "CPEB1"    "CRIP1"    "CSPG4"    "CXCL13"   "CXCL14"   "CXCR4"   
+ [37] "CYBB"     "DHCR24"   "DLG4"     "DUSP9"    "EGLN3"    "EHD1"    
+ [43] "FAM20C"   "FCNB"     "FGR"      "FLT1"     "GABRQ"    "GP1BA"   
+ [49] "GPER1"    "GPR18"    "GPRC5C"   "GRIP2"    "GRM3"     "GUCA1B"  
+ [55] "HCAR2"    "HP"       "IFITM3"   "IGF1"     "IGF2R"    "IIGP1"   
+ [61] "IL1RN"    "ITGAX"    "KL"       "LCN2"     "LGALS3"   "LIME1"   
+ [67] "LRP8"     "MACROD2"  "MAP3K13"  "MGARP"    "MGST1"    "MPO"     
+ [73] "MYOF"     "NPFF"     "OLFR99"   "PDE1B"    "PF4"      "PKD1L3"  
+ [79] "PLA2G7"   "PLCD4"    "PPP1R14A" "PTGER4"   "RAB30"    "RAB7B"   
+ [85] "RUNX3"    "RXRG"     "S100A4"   "S100A8"   "S100A9"   "S1PR4"   
+ [91] "SATB2"    "SLC1A2"   "SLC7A3"   "SPARCL1"  "SPP1"     "STX1A"   
+ [97] "SZT2"     "TFEC"     "TRIP6"    "TSPAN8"   "TTC26"    "VCAM1"   
+[103] "XDH"      "ZFYVE9"  
+
+$`GO:0048519`
+ [1] "2700046G09RIK" "ACKR3"         "ADAM8"         "ALB"          
+ [5] "ANXA2"         "APOE"          "ARNT2"         "ASNS"         
+ [9] "AXL"           "BHLHE40"       "CAV1"          "CCDC8"        
+[13] "CCL4"          "CCL5"          "CD36"          "CD38"         
+[17] "CD44"          "CD74"          "CISH"          "CLU"          
+[21] "CMYA5"         "CPEB1"         "CSPG4"         "CST7"         
+[25] "CTLA2A"        "CXCL13"        "CXCL14"        "CYP4F18"      
+[29] "DHCR24"        "DLEC1"         "DLG4"          "DUSP9"        
+[33] "FCNB"          "GP1BA"         "GPER1"         "GPNMB"        
+[37] "GPR18"         "H2-AA"         "H2-AB1"        "HCAR2"        
+[41] "HIST1H1D"      "HIST1H2AC"     "HIST1H2AE"     "HIST1H3A"     
+[45] "HIST1H3D"      "HIST1H3E"      "HP"            "IFITM2"       
+[49] "IFITM3"        "IGF1"          "IL1RN"         "LGALS3"       
+[53] "LIME1"         "LRP8"          "MPO"           "NGP"          
+[57] "NPFF"          "PDCD1"         "PF4"           "PLCB4"        
+[61] "PRDM5"         "PTGER4"        "RAB7B"         "RUNX3"        
+[65] "SATB2"         "SPP1"          "TET1"          "TRIP6"        
+[69] "TSPAN8"        "XDH"          
+
+$`GO:0031344`
+[1] "APOE"   "CAV1"   "CPEB1"  "CSPG4"  "ERMN"   "KCTD17" "LCN2"   "LRP8"  
+
+$`GO:0014910`
+[1] "CCL5"   "IGF1"   "PTGER4"
+
+$`GO:0045785`
+ [1] "ADAM8"  "CAV1"   "CCL5"   "CD36"   "CD44"   "CD74"   "CXCL13" "H2-AA" 
+ [9] "IGF1"   "IL2RG"  "PTGER4" "SPP1"   "VCAM1" 
+
+$`GO:0051347`
+ [1] "ADAM8"   "CD74"    "CLU"     "CSPG4"   "FGR"     "FLT1"    "IGF1"   
+ [8] "IL1RN"   "LRP8"    "MAP3K13"
+
+$`GO:0051130`
+ [1] "ACTR3B" "ANK1"   "ANXA2"  "APOE"   "AXL"    "C3"     "CAV1"   "CCL8"  
+ [9] "CD36"   "CLU"    "CPEB1"  "CXCL13" "EHD1"   "GPER1"  "IGF1"   "ITGAX" 
+[17] "KCTD17" "LCN2"   "LRP8"   "MGARP"  "PRDM9"  "TET1"   "TUB"   
+
+$`GO:0048583`
+ [1] "ACKR3"    "ADAM8"    "ALDH1A3"  "ANXA2"    "APOE"     "AXL"     
+ [7] "C3"       "CACNB3"   "CAV1"     "CCL4"     "CCL5"     "CCL8"    
+[13] "CD36"     "CD38"     "CD44"     "CD74"     "CISH"     "CLEC12A" 
+[19] "CLU"      "CMYA5"    "COLEC12"  "CSPG4"    "CTLA2A"   "CXCL13"  
+[25] "CXCL14"   "CXCR4"    "DLG4"     "DUSP9"    "FAM20C"   "FCNB"    
+[31] "FGR"      "FLT1"     "GP1BA"    "GPER1"    "GPR18"    "HIST1H3A"
+[37] "HIST1H3D" "HIST1H3E" "IGF1"     "IL1RN"    "KL"       "LGALS3"  
+[43] "LIME1"    "MAP3K13"  "MYOF"     "NPFF"     "PF4"      "PLA2G7"  
+[49] "PTGER4"   "RAB7B"    "RUNX3"    "S100A4"   "S100A8"   "S100A9"  
+[55] "SLC7A3"   "STX1A"    "SZT2"     "TRIP6"    "TSPAN8"   "XDH"     
+[61] "ZFYVE9"  
+
+$`GO:0016043`
+ [1] "ACTR3B"    "ADAM8"     "ADCY1"     "AHNAK"     "ALCAM"     "ANK1"     
+ [7] "ANKRD23"   "ANXA2"     "APOE"      "AXL"       "C3"        "CACNB3"   
+[13] "CADPS2"    "CAV1"      "CBR2"      "CCDC8"     "CCL5"      "CCL8"     
+[19] "CD36"      "CD38"      "CD44"      "CD74"      "CEP72"     "CLU"      
+[25] "CPEB1"     "CSPG4"     "CXCL13"    "CXCR4"     "DHCR24"    "DLG4"     
+[31] "EFHD1"     "EHD1"      "EIF2S3Y"   "ERMN"      "FGR"       "GAS7"     
+[37] "GP1BA"     "GPER1"     "GPX3"      "HIST1H1D"  "HIST1H2AC" "HIST1H2AE"
+[43] "HIST1H2BG" "HIST1H3A"  "HIST1H3D"  "HIST1H3E"  "IGF1"      "INF2"     
+[49] "ITGAX"     "KCTD17"    "KIF23"     "KIF5A"     "LCN2"      "LGALS3"   
+[55] "LOX"       "LPL"       "LRP8"      "MGARP"     "MGST1"     "MPO"      
+[61] "MYOF"      "PF4"       "PLA2G7"    "PRDM5"     "PRDM9"     "PTGER4"   
+[67] "RAB30"     "RTP4"      "RUNX3"     "RXRG"      "S100A9"    "SATB2"    
+[73] "SH3PXD2B"  "SLC12A5"   "SLC1A1"    "STX1A"     "SZT2"      "TBC1D2"   
+[79] "TET1"      "TPPP3"     "TTC26"     "TTLL3"     "TUB"       "TUBG2"    
+[85] "VAMP1"     "VASH2"     "ZFYVE9"   
+
+$`GO:0009897`
+ [1] "ALCAM"   "APOE"    "CD200R4" "CD36"    "CD44"    "CD74"    "CRLF2"  
+ [8] "CXCR4"   "FCNB"    "GP1BA"   "H2-AA"   "H2-AB1"  "IL2RG"   "ITGAX"  
+[15] "LGALS3"  "PDCD1"   "SLAMF7"  "VCAM1"  
+
+$`GO:0031348`
+[1] "APOE"   "CD44"   "CTLA2A" "GPER1"  "PTGER4"
+
+$`GO:0051983`
+character(0)
+
+$`GO:0051276`
+[1] "CPEB1"     "GPER1"     "HIST1H1D"  "HIST1H2BG" "HIST1H3A"  "HIST1H3D" 
+[7] "HIST1H3E"  "KIF23"    
+
+$`GO:0009653`
+ [1] "ACKR3"   "ADAM8"   "ADCY1"   "ALCAM"   "ALDH1A3" "ANKRD23" "ANXA2"  
+ [8] "APOE"    "AXL"     "C3"      "CAV1"    "CCL5"    "CCL8"    "CD36"   
+[15] "CD44"    "CLU"     "CSPG4"   "CXCR4"   "CYBB"    "DLG4"    "EHD1"   
+[22] "ERMN"    "FAM20C"  "FGR"     "FLT1"    "GAS7"    "GP1BA"   "IGF1"   
+[29] "IL1RN"   "INF2"    "KCTD17"  "KIF5A"   "LGALS3"  "LRP8"    "MMP12"  
+[36] "NGP"     "PF4"     "PTGER4"  "RUNX3"   "SATB2"   "SZT2"    "TET1"   
+[43] "TTC26"   "TTLL3"   "VASH2"   "VCAM1"   "XDH"    
+
+$`GO:0051225`
+[1] "KIF23"
+
+$`GO:0005694`
+ [1] "HIST1H1D"  "HIST1H2AC" "HIST1H2AE" "HIST1H2BG" "HIST1H3A"  "HIST1H3D" 
+ [7] "HIST1H3E"  "PRDM9"     "RUNX3"     "SATB2"    
+
+$`GO:0045112`
+[1] "S100A9"
+
+$`GO:0050727`
+ [1] "ADAM8"  "APOE"   "C3"     "CCL4"   "CCL5"   "CCL8"   "CD44"   "CTLA2A"
+ [9] "GPER1"  "PTGER4" "S100A8" "S100A9"
+
+$`GO:1902430`
+[1] "APOE" "CLU" 
+
+$`GO:0042060`
+ [1] "ANXA2"  "APOE"   "AXL"    "C3"     "CAV1"   "CD36"   "CD44"   "CXCR4" 
+ [9] "F13A1"  "GP1BA"  "IGF1"   "LOX"    "MMP12"  "MYOF"   "PF4"    "PTGER4"
+[17] "S100A9" "TSPAN8"
+
+$`GO:0007051`
+[1] "CEP72" "KIF23"
+
+$`GO:0050900`
+ [1] "ADAM8"  "CCL4"   "CCL5"   "CCL8"   "CD74"   "CH25H"  "CXCL13" "CXCL14"
+ [9] "FLT1"   "GPR18"  "LGALS3" "PF4"    "PLA2G7" "PTGER4" "S100A8" "S100A9"
+[17] "SPP1"   "VCAM1" 
+
+$`GO:0022008`
+ [1] "ADCY1"   "ALCAM"   "APOE"    "AXL"     "CAV1"    "CCL5"    "CD44"   
+ [8] "CLU"     "CPEB1"   "CSPG4"   "CXCR4"   "DLG4"    "EFHD1"   "EHD1"   
+[15] "GAS7"    "GPER1"   "IGF1"    "KIF5A"   "LRP8"    "RUNX3"   "S100A8" 
+[22] "S100A9"  "SATB2"   "SLC12A5" "SLC45A3" "SZT2"    "TRPC4"   "TTC26"  
+
+$`GO:0048248`
+[1] "CXCL13" "PF4"   
+
+$`GO:0001819`
+ [1] "ADAM8"  "C3"     "CCL4"   "CCL5"   "CD36"   "CD74"   "CLU"    "CYBB"  
+ [9] "FCNB"   "FGR"    "LPL"    "PF4"    "PTGER4" "RAB7B" 
+
+$`GO:0045088`
+[1] "ADAM8"   "CAV1"    "CD74"    "COLEC12" "FCNB"    "FGR"     "RAB7B"  
+
+$`GO:0009617`
+ [1] "ADAMTS4"   "AXL"       "CAV1"      "CCL5"      "CD300LB"   "CD36"     
+ [7] "CXCL13"    "FGR"       "HIST1H2BG" "HP"        "IIGP1"     "MGST1"    
+[13] "MPO"       "PF4"       "PTGER4"   
+
+$`GO:0030424`
+ [1] "ALCAM"  "ANK1"   "DLG4"   "ERMN"   "GPER1"  "GRM3"   "KIF5A"  "LRP8"  
+ [9] "NPFF"   "SLC1A2"
+
+$`GO:0050708`
+ [1] "CCL5"   "CD36"   "CD38"   "FCNB"   "FGR"    "GPER1"  "HCAR2"  "IGF1"  
+ [9] "LPL"    "NPFF"   "PTGER4"
+
+$`GO:0032270`
+ [1] "ACKR3"   "ADAM8"   "ANXA2"   "APOE"    "C3"      "CAV1"    "CCL4"   
+ [8] "CCL5"    "CCL8"    "CD36"    "CD44"    "CD74"    "CLU"     "CPEB1"  
+[15] "CSPG4"   "CXCR4"   "FLT1"    "GPER1"   "IGF1"    "IL1RN"   "KL"     
+[22] "LRP8"    "MAP3K13" "PTGER4"  "S100A8"  "S100A9"  "TET1"    "XDH"    
+
+$`GO:0016056`
+character(0)
+
+$`GO:0009966`
+ [1] "ACKR3"   "ADAM8"   "ALDH1A3" "ANXA2"   "APOE"    "AXL"     "C3"     
+ [8] "CAV1"    "CCL4"    "CCL5"    "CCL8"    "CD36"    "CD44"    "CD74"   
+[15] "CISH"    "CLU"     "CMYA5"   "CSPG4"   "DLG4"    "DUSP9"   "FAM20C" 
+[22] "FGR"     "FLT1"    "GP1BA"   "GPER1"   "IGF1"    "IL1RN"   "KL"     
+[29] "LGALS3"  "LIME1"   "MAP3K13" "MYOF"    "PF4"     "PTGER4"  "RAB7B"  
+[36] "RUNX3"   "S100A4"  "S100A8"  "S100A9"  "SLC7A3"  "STX1A"   "TRIP6"  
+[43] "XDH"     "ZFYVE9" 
+
+$`GO:0007088`
+[1] "CCDC8" "IGF1" 
+
+$`GO:0031225`
+[1] "BCAN"  "CD177" "CD52"  "CP"    "GP1BA" "LPL"   "LY6I"  "VCAM1" "VNN3" 
+
+$`GO:0032102`
+ [1] "ANXA2"  "APOE"   "CD44"   "CTLA2A" "CXCL13" "GP1BA"  "GPER1"  "GPR18" 
+ [9] "NPFF"   "PTGER4" "TSPAN8"
+
+$`GO:0032690`
+[1] "PTGER4"
+
+$`GO:0050712`
+[1] "PTGER4"
+
+$`GO:0001664`
+ [1] "C3"     "CCL4"   "CCL5"   "CCL8"   "CXCL13" "CXCL14" "DLG4"   "FCNB"  
+ [9] "NPFF"   "PF4"    "RTP4"  
+
+$`GO:0050776`
+ [1] "ADAM8"   "C3"      "CACNB3"  "CAV1"    "CD36"    "CD38"    "CD44"   
+ [8] "CD74"    "CLEC12A" "COLEC12" "FCNB"    "FGR"     "LGALS3"  "LIME1"  
+[15] "RAB7B"  
+
+$`GO:0005874`
+[1] "APOE"  "KIF23" "TPPP3" "TTLL3" "TUBG2"
+
+$`GO:0042063`
+[1] "CLU"     "CSPG4"   "CXCR4"   "IGF1"    "LRP8"    "S100A8"  "S100A9" 
+[8] "SLC45A3" "TRPC4"  
+
+$`GO:0044130`
+[1] "CD36" "MPO" 
+
+$`GO:0044146`
+[1] "CD36" "MPO" 
+
+$`GO:0048523`
+ [1] "ACKR3"     "ADAM8"     "ALB"       "ANXA2"     "APOE"      "ARNT2"    
+ [7] "ASNS"      "AXL"       "BHLHE40"   "CAV1"      "CCDC8"     "CCL4"     
+[13] "CCL5"      "CD36"      "CD38"      "CD44"      "CD74"      "CISH"     
+[19] "CLU"       "CMYA5"     "CPEB1"     "CSPG4"     "CST7"      "CTLA2A"   
+[25] "CXCL13"    "CXCL14"    "DHCR24"    "DLEC1"     "DLG4"      "DUSP9"    
+[31] "FCNB"      "GP1BA"     "GPER1"     "GPR18"     "H2-AA"     "H2-AB1"   
+[37] "HIST1H1D"  "HIST1H2AC" "HIST1H2AE" "HP"        "IFITM2"    "IFITM3"   
+[43] "IGF1"      "IL1RN"     "LGALS3"    "LIME1"     "LRP8"      "NGP"      
+[49] "NPFF"      "PDCD1"     "PF4"       "PRDM5"     "PTGER4"    "RAB7B"    
+[55] "RUNX3"     "SATB2"     "SPP1"      "TET1"      "TRIP6"     "XDH"      
+
+$`GO:0071216`
+[1] "AXL"     "CCL5"    "CD300LB" "CD36"   
+
+$`GO:0019894`
+[1] "KIF5A" "LRP8" 
+
+$`GO:0051047`
+ [1] "CADPS2"  "CD36"    "CD38"    "CYP4F18" "FCNB"    "FGR"     "GPER1"  
+ [8] "HCAR2"   "IGF1"    "LGALS3"  "LPL"     "PTGER4"  "S100A8"  "S100A9" 
+[15] "STX1A"  
+
+$`GO:0051783`
+[1] "CCDC8" "IGF1"  "PRDM9"
+
+$`GO:0043005`
+ [1] "ALCAM"   "ANK1"    "APOE"    "BCAN"    "CLU"     "CPEB1"   "CTLA2A" 
+ [8] "CXCR4"   "CYBB"    "DLG4"    "ERMN"    "GPER1"   "GRIP2"   "GRM3"   
+[15] "KIF5A"   "LRP8"    "NPFF"    "PDZD2"   "PLCB4"   "PTGER4"  "S100A4" 
+[22] "SLC12A5" "SLC1A2"  "STX1A"   "VAMP1"  
+
+$`GO:0014909`
+[1] "CCL5"   "IGF1"   "PTGER4"
+
+$`GO:0050878`
+ [1] "ANXA2"  "APOE"   "AXL"    "C3"     "CAV1"   "CD36"   "F13A1"  "GP1BA" 
+ [9] "PF4"    "PTGER4" "S100A9" "TSPAN8" "XDH"   
+
+$`GO:0006335`
+[1] "HIST1H3A" "HIST1H3D" "HIST1H3E"
+
+$`GO:0034723`
+[1] "HIST1H3A" "HIST1H3D" "HIST1H3E"
+
+$`GO:0002688`
+[1] "CCL4"   "CCL5"   "CD74"   "CXCL13" "CXCL14" "GPR18"  "PF4"    "PLA2G7"
+
+$`GO:0050731`
+[1] "CCL5"   "CD36"   "CD44"   "CD74"   "CSPG4"  "IGF1"   "LRP8"   "PTGER4"
+
+$`GO:0034142`
+[1] "RAB7B"
+
+$`GO:0048513`
+ [1] "ADAM8"    "ALAS2"    "ALDH1A3"  "ANK1"     "ANXA2"    "ARNT2"   
+ [7] "AXL"      "BCAN"     "BNC2"     "CAV1"     "CCL5"     "CCR9"    
+[13] "CD300LF"  "CD44"     "CD74"     "CLU"      "CTLA2A"   "CXCL13"  
+[19] "CXCL14"   "CXCR4"    "DHCR24"   "DNASE1L2" "FAM20C"   "FLT1"    
+[25] "GPER1"    "GPR18"    "H2-AA"    "HP"       "IGF1"     "IGF2R"   
+[31] "IL2RG"    "KL"       "LOX"      "LRP8"     "MAB21L1"  "MACROD2" 
+[37] "MAFF"     "NHS"      "PF4"      "PTGER4"   "RAB7B"    "RBM20"   
+[43] "RUNX3"    "SATB2"    "SH3PXD2B" "SLC1A2"   "SLC23A1"  "SPP1"    
+[49] "SZT2"     "TUB"      "VASH2"    "VCAM1"    "XDH"     
+
+$`GO:0044770`
+character(0)
+
+$`GO:0071310`
+ [1] "ACKR3"   "AXL"     "CAV1"    "CCL4"    "CCL5"    "CCL8"    "CD300LB"
+ [8] "CD36"    "CD44"    "CD74"    "CISH"    "CPEB1"   "CXCL13"  "CXCR4"  
+[15] "EHD1"    "FAM20C"  "FLT1"    "GP1BA"   "GPER1"   "IFITM3"  "IGF1"   
+[22] "IIGP1"   "IL1RN"   "KL"      "MGARP"   "MYOF"    "PDE1B"   "PF4"    
+[29] "PTGER4"  "RXRG"    "SATB2"   "VCAM1"   "XDH"     "ZFYVE9" 
+
+$`GO:0023051`
+ [1] "ACKR3"   "ADAM8"   "ALDH1A3" "ANXA2"   "APOE"    "AXL"     "C3"     
+ [8] "CAV1"    "CCL4"    "CCL5"    "CCL8"    "CD36"    "CD38"    "CD44"   
+[15] "CD74"    "CISH"    "CLU"     "CMYA5"   "CPEB1"   "CSPG4"   "DLG4"   
+[22] "DUSP9"   "FAM20C"  "FGR"     "FLT1"    "GP1BA"   "GPER1"   "GRM3"   
+[29] "HCAR2"   "IGF1"    "IL1RN"   "KL"      "LGALS3"  "LIME1"   "LRP8"   
+[36] "MAP3K13" "MYOF"    "NPFF"    "PF4"     "PTGER4"  "RAB7B"   "RUNX3"  
+[43] "S100A4"  "S100A8"  "S100A9"  "SHISA7"  "SLC7A3"  "STX1A"   "TRIP6"  
+[50] "XDH"     "ZFYVE9" 
+
+$`GO:0007100`
+character(0)
+
+$`GO:0044126`
+[1] "CD36" "MPO" 
+
+$`GO:0044144`
+[1] "CD36" "MPO" 
+
+$`GO:0005102`
+ [1] "ADAM8"  "APOE"   "ARNT2"  "C3"     "CAV1"   "CCL4"   "CCL5"   "CCL8"  
+ [9] "CD44"   "CD74"   "CRLF2"  "CXCL13" "CXCL14" "DLG4"   "FCNB"   "FGR"   
+[17] "GPNMB"  "GPRC5C" "GRIP2"  "IGF1"   "IL1RN"  "KL"     "LGALS3" "LPL"   
+[25] "NPFF"   "PF4"    "RTP4"   "S100A4" "S100A8" "S100A9" "SPP1"   "TRIP6" 
+[33] "TSPAN8" "VCAM1" 
+
+$`GO:0009611`
+ [1] "ANXA2"  "APOE"   "AXL"    "C3"     "CAV1"   "CD36"   "CD44"   "CXCR4" 
+ [9] "F13A1"  "GP1BA"  "IGF1"   "LOX"    "MMP12"  "MYOF"   "PF4"    "PTGER4"
+[17] "S100A9" "SLC1A2" "TSPAN8"
+
+$`GO:0034143`
+[1] "RAB7B"
+
+$`GO:0002690`
+[1] "CCL4"   "CCL5"   "CD74"   "CXCL13" "CXCL14" "PF4"    "PLA2G7"
+
+$`GO:0005737`
+  [1] "IFI207"    "ACKR3"     "ACTR3B"    "ADAM8"     "ADCY1"     "AHNAK"    
+  [7] "ALAS2"     "ALB"       "ALDH1A3"   "ANK1"      "ANKRD23"   "ANXA2"    
+ [13] "APOE"      "ARNT2"     "ASNS"      "B3GNT3"    "BHLHE40"   "BNC2"     
+ [19] "CADPS2"    "CAPNS2"    "CASKIN1"   "CAV1"      "CBR2"      "CCDC8"    
+ [25] "CCL5"      "CD36"      "CD44"      "CD74"      "CEP72"     "CH25H"    
+ [31] "CHST2"     "CISH"      "CLU"       "CMYA5"     "COX6A2"    "CP"       
+ [37] "CPEB1"     "CRIP1"     "CTSE"      "CXCL14"    "CXCR4"     "CYBB"     
+ [43] "CYP4F18"   "DDX3Y"     "DEGS2"     "DHCR24"    "DLEC1"     "DLG4"     
+ [49] "DNASE1L2"  "DQX1"      "DUSP9"     "EFHD1"     "EGLN3"     "EHD1"     
+ [55] "ERMN"      "ETL4"      "F13A1"     "FABP3"     "FABP5"     "FAM198B"  
+ [61] "FAM20C"    "FGR"       "FLT1"      "GAS7"      "GP1BA"     "GPER1"    
+ [67] "GPNMB"     "GPRC5C"    "GRIP2"     "H2-AA"     "H2-AB1"    "H2-EB1"   
+ [73] "HIST1H2BG" "HP"        "IFI44"     "IFITM3"    "IGF1"      "IGF2R"    
+ [79] "IIGP1"     "IL1RN"     "INF2"      "KCTD17"    "KIF23"     "KIF5A"    
+ [85] "LCN2"      "LGALS3"    "LRRC45"    "MAFF"      "MAGEH1"    "MAP3K13"  
+ [91] "MGARP"     "MGST1"     "MOK"       "MPO"       "MSR1"      "MYOF"     
+ [97] "NGP"       "OCIAD2"    "PDE1B"     "PDZD2"     "PERM1"     "PF4"      
+[103] "PLA2G7"    "PLCB4"     "PLCD4"     "PPP1R14A"  "IFI213"    "RAB30"    
+[109] "RAB7B"     "RTP4"      "RUNX3"     "S100A4"    "S100A8"    "S100A9"   
+[115] "SATB2"     "SEC31B"    "SH3PXD2B"  "SLC23A1"   "SPP1"      "ST8SIA6"  
+[121] "STX1A"     "SZT2"      "TBC1D2"    "TCTEX1D4"  "TFEC"      "TMEM163"  
+[127] "TPPP3"     "TRIP6"     "TRPC4"     "TTC41"     "TTLL3"     "TUB"      
+[133] "TUBG2"     "VAMP1"     "VASH2"     "VCAM1"     "XDH"       "ZFP365"   
+[139] "ZFYVE9"   
+
+$`GO:0033674`
+ [1] "ADAM8"   "CD74"    "CLU"     "CSPG4"   "FGR"     "FLT1"    "IGF1"   
+ [8] "IL1RN"   "LRP8"    "MAP3K13"
+
+$`GO:0045596`
+[1] "CAV1"   "CD44"   "CD74"   "CSPG4"  "CXCL14" "GPER1"  "IGF1"   "PF4"   
+[9] "XDH"   
+
+$`GO:0071822`
+ [1] "ACTR3B"    "AHNAK"     "ANXA2"     "CADPS2"    "CAV1"      "CBR2"     
+ [7] "CCL5"      "CD36"      "CD74"      "CLU"       "CXCL13"    "DLG4"     
+[13] "EHD1"      "GAS7"      "GPX3"      "HIST1H1D"  "HIST1H2BG" "HIST1H3A" 
+[19] "HIST1H3D"  "HIST1H3E"  "LCN2"      "LOX"       "MGST1"     "PF4"      
+[25] "PTGER4"    "RXRG"      "SH3PXD2B"  "SLC1A1"    "STX1A"     "TPPP3"    
+[31] "TUBG2"     "VAMP1"     "ZFYVE9"   
+
+$`GO:0071219`
+[1] "AXL"     "CCL5"    "CD300LB" "CD36"   
+
+$`GO:1902578`
+ [1] "ACKR3"    "ALB"      "ANK1"     "ANXA2"    "APOC1"    "APOC4"   
+ [7] "APOE"     "AXL"      "C3"       "CACNB3"   "CADPS2"   "CAV1"    
+[13] "CCL5"     "CD36"     "CD38"     "CD74"     "CLU"      "COLEC12" 
+[19] "CRLF2"    "CYP4F18"  "DLG4"     "FABP3"    "FABP5"    "FCNB"    
+[25] "FGR"      "GPER1"    "HCAR2"    "IGF1"     "IL1RN"    "KIF23"   
+[31] "LCN2"     "LGALS3"   "LIME1"    "LPL"      "MGARP"    "MSR1"    
+[37] "NPFF"     "PTGER4"   "RTP4"     "S100A8"   "S100A9"   "SH3PXD2B"
+[43] "SLC1A1"   "SLC1A2"   "SLC23A1"  "SLC45A3"  "SLC7A3"   "STX1A"   
+[49] "TRIP6"    "TRPC4"    "TTC26"    "TUB"      "VAMP1"    "XDH"     
+[55] "ZFYVE9"  
+
+$`GO:0001816`
+ [1] "ADAM8"  "AXL"    "C3"     "CCL4"   "CCL5"   "CD36"   "CD74"   "CLU"   
+ [9] "CRLF2"  "CYBB"   "FCNB"   "FGR"    "GPNMB"  "GPR18"  "LPL"    "PF4"   
+[17] "PTGER4" "RAB7B"  "RUNX3" 
+
+$`GO:0051179`
+ [1] "ACKR3"    "ADAM8"    "AHNAK"    "ALB"      "ANK1"     "ANXA2"   
+ [7] "APOC1"    "APOC4"    "APOE"     "AXL"      "C3"       "CACNB3"  
+[13] "CADPS2"   "CAV1"     "CCL4"     "CCL5"     "CCL8"     "CD36"    
+[19] "CD38"     "CD44"     "CD74"     "CEP72"    "CH25H"    "CLU"     
+[25] "COLEC12"  "CP"       "CPEB1"    "CRLF2"    "CSPG4"    "CXCL13"  
+[31] "CXCL14"   "CXCR4"    "CYBB"     "CYP4F18"  "DHCR24"   "DLG4"    
+[37] "EHD1"     "FABP3"    "FABP5"    "FCNB"     "FGR"      "FLT1"    
+[43] "FXYD5"    "GABRQ"    "GPER1"    "GPR18"    "GRIP2"    "HCAR2"   
+[49] "IFITM3"   "IGF1"     "IGF2R"    "IL1RN"    "ITGAX"    "KIF23"   
+[55] "KIF5A"    "LCN2"     "LGALS3"   "LIME1"    "LPL"      "LRP8"    
+[61] "LYVE1"    "MGARP"    "MMP12"    "MSR1"     "NPFF"     "PF4"     
+[67] "PKD1L3"   "PLA2G7"   "PLCB4"    "PTGER4"   "RAB7B"    "RTP4"    
+[73] "S100A8"   "S100A9"   "SATB2"    "SEC31B"   "SH3PXD2B" "SLC10A6" 
+[79] "SLC12A5"  "SLC1A1"   "SLC1A2"   "SLC23A1"  "SLC45A3"  "SLC4A4"  
+[85] "SLC7A3"   "SPP1"     "STX1A"    "TBC1D2"   "TRIP6"    "TRPC4"   
+[91] "TTC26"    "TUB"      "VAMP1"    "VCAM1"    "XDH"      "ZFP365"  
+[97] "ZFYVE9"  
+
+$`GO:0050767`
+[1] "APOE"    "CAV1"    "CCL5"    "CPEB1"   "CSPG4"   "CXCR4"   "GPER1"  
+[8] "LRP8"    "SLC45A3"
+
+$`GO:0033628`
+[1] "CCL5"   "CXCL13"
+
+$`GO:0010646`
+ [1] "ACKR3"   "ADAM8"   "ALDH1A3" "ANXA2"   "APOE"    "AXL"     "C3"     
+ [8] "CAV1"    "CCL4"    "CCL5"    "CCL8"    "CD36"    "CD38"    "CD44"   
+[15] "CD74"    "CISH"    "CLU"     "CMYA5"   "CPEB1"   "CSPG4"   "DLG4"   
+[22] "DUSP9"   "FAM20C"  "FGR"     "FLT1"    "GP1BA"   "GPER1"   "GRM3"   
+[29] "HCAR2"   "IGF1"    "IL1RN"   "KL"      "LGALS3"  "LIME1"   "LRP8"   
+[36] "MAP3K13" "MYOF"    "NPFF"    "PF4"     "PTGER4"  "RAB7B"   "RUNX3"  
+[43] "S100A4"  "S100A8"  "S100A9"  "SHISA7"  "SLC7A3"  "STX1A"   "TRIP6"  
+[50] "XDH"     "ZFYVE9" 
+
+$`GO:0044427`
+[1] "HIST1H1D"  "HIST1H2AC" "HIST1H2AE" "HIST1H2BG" "HIST1H3A"  "HIST1H3D" 
+[7] "HIST1H3E"  "RUNX3"     "SATB2"    
+
+$`GO:0010639`
+[1] "IGF1"
+
+$`GO:0051304`
+character(0)
+
+$`GO:1903706`
+ [1] "ADAM8"  "AXL"    "CCL5"   "CD44"   "CD74"   "CTLA2A" "FLT1"   "H2-AA" 
+ [9] "IL2RG"  "PF4"    "RAB7B" 
+
+$`GO:0035313`
+[1] "MMP12"
+
+$`GO:0044421`
+ [1] "ACTR3B"    "ADAMTS4"   "ADCY1"     "AHNAK"     "ALB"       "ALCAM"    
+ [7] "ALDH1A3"   "ANXA2"     "APOC1"     "APOC4"     "APOE"      "AXL"      
+[13] "BCAN"      "C3"        "CCL4"      "CCL5"      "CCL8"      "CD177"    
+[19] "CD36"      "CD38"      "CD44"      "CD74"      "CLU"       "COLEC12"  
+[25] "CP"        "CPXM1"     "CSPG4"     "CST7"      "CTSE"      "CXCL13"   
+[31] "CXCL14"    "CXCR4"     "EFHD1"     "EHD1"      "EMILIN2"   "ERMN"     
+[37] "F13A1"     "FABP3"     "FABP5"     "FAM20C"    "FGR"       "FLT1"     
+[43] "GP1BA"     "GPRC5C"    "GPX3"      "H2-EB1"    "HIST1H2AC" "HIST1H2AE"
+[49] "HIST1H2BG" "HIST1H3A"  "HIST1H3D"  "HIST1H3E"  "HP"        "IFITM3"   
+[55] "IGF1"      "IGF2R"     "IIGP1"     "IL1RN"     "KIF23"     "KL"       
+[61] "LCN2"      "LGALS3"    "LILRB4A"   "LIME1"     "LOX"       "LPL"      
+[67] "LRP8"      "LYVE1"     "MMP12"     "MPO"       "MSR1"      "MYOF"     
+[73] "NGP"       "NPFF"      "OLR1"      "PF4"       "PKD1L3"    "PLA2G7"   
+[79] "S100A4"    "S100A8"    "S100A9"    "SH3D21"    "SLC1A1"    "SLC23A1"  
+[85] "SLC4A4"    "SPARCL1"   "SPP1"      "SZT2"      "TPPP3"     "TSPAN8"   
+[91] "VCAM1"     "VNN3"      "XDH"      
+
+$`GO:1902589`
+ [1] "ACTR3B"  "ANKRD23" "ANXA2"   "CAV1"    "CCDC8"   "CEP72"   "DLG4"   
+ [8] "EHD1"    "ERMN"    "FGR"     "GAS7"    "INF2"    "KCTD17"  "KIF23"  
+[15] "PTGER4"  "S100A9"  "STX1A"   "TBC1D2"  "TPPP3"   "TTC26"   "TTLL3"  
+[22] "TUBG2"   "VAMP1"  
+
+$`GO:0044093`
+ [1] "ADAM8"   "ADCY1"   "ANXA2"   "APOE"    "CAV1"    "CCL4"    "CCL5"   
+ [8] "CCL8"    "CD74"    "CLU"     "CSPG4"   "CXCL13"  "FGR"     "FLT1"   
+[15] "GPER1"   "IGF1"    "IL1RN"   "LRP8"    "MAP3K13" "RAB7B"   "S100A8" 
+[22] "S100A9"  "TBC1D2"  "XDH"    
+
+$`GO:0001227`
+[1] "IFI207"  "BHLHE40" "PRDM5"   "IFI213" 
+
+$`GO:1901342`
+ [1] "C3"     "CCL5"   "CD36"   "CXCR4"  "CYBB"   "FLT1"   "GPER1"  "LGALS3"
+ [9] "NGP"    "PF4"    "PTGER4" "VASH2"  "XDH"   
+
+$`GO:0007346`
+[1] "ASNS"  "CCDC8" "IGF1" 
+
+$`GO:0071840`
+ [1] "ACTR3B"    "ADAM8"     "ADCY1"     "AHNAK"     "ALCAM"     "ANK1"     
+ [7] "ANKRD23"   "ANXA2"     "APOE"      "AXL"       "C3"        "CACNB3"   
+[13] "CADPS2"    "CAV1"      "CBR2"      "CCDC8"     "CCL5"      "CCL8"     
+[19] "CD36"      "CD38"      "CD44"      "CD74"      "CEP72"     "CLU"      
+[25] "CPEB1"     "CSPG4"     "CXCL13"    "CXCR4"     "DHCR24"    "DLG4"     
+[31] "EFHD1"     "EHD1"      "EIF2S3Y"   "ERMN"      "FGR"       "GAS7"     
+[37] "GP1BA"     "GPER1"     "GPX3"      "HIST1H1D"  "HIST1H2AC" "HIST1H2AE"
+[43] "HIST1H2BG" "HIST1H3A"  "HIST1H3D"  "HIST1H3E"  "IGF1"      "INF2"     
+[49] "ITGAX"     "KCTD17"    "KIF23"     "KIF5A"     "LCN2"      "LGALS3"   
+[55] "LOX"       "LPL"       "LRP8"      "MGARP"     "MGST1"     "MPO"      
+[61] "MYOF"      "PF4"       "PLA2G7"    "PRDM5"     "PRDM9"     "PTGER4"   
+[67] "RAB30"     "RTP4"      "RUNX3"     "RXRG"      "S100A9"    "SATB2"    
+[73] "SH3PXD2B"  "SLC12A5"   "SLC1A1"    "STX1A"     "SZT2"      "TBC1D2"   
+[79] "TET1"      "TPPP3"     "TTC26"     "TTLL3"     "TUB"       "TUBG2"    
+[85] "VAMP1"     "VASH2"     "ZFYVE9"   
+
+$`GO:0032877`
+character(0)
+
+$`GO:0000780`
+character(0)
+
+$`GO:0006468`
+ [1] "ACKR3"   "ADAM8"   "ANXA2"   "APOE"    "AXL"     "C3"      "CAV1"   
+ [8] "CCL4"    "CCL5"    "CCL8"    "CD36"    "CD44"    "CD74"    "CISH"   
+[15] "CLU"     "CSPG4"   "CXCR4"   "DUSP9"   "FAM20C"  "FGR"     "FLT1"   
+[22] "GP1BA"   "GPER1"   "IGF1"    "IL1RN"   "KL"      "LIME1"   "LRP8"   
+[29] "MAP3K13" "MOK"     "PTGER4"  "RUNX3"   "XDH"    
+
+$`GO:0051246`
+ [1] "ACKR3"    "ADAM8"    "ANXA2"    "APOE"     "C3"       "CAV1"    
+ [7] "CCL4"     "CCL5"     "CCL8"     "CD36"     "CD44"     "CD74"    
+[13] "CISH"     "CLU"      "CMYA5"    "CPEB1"    "CSPG4"    "CST7"    
+[19] "CTLA2A"   "CXCR4"    "CYBB"     "DHCR24"   "DUSP9"    "FGR"     
+[25] "FLT1"     "GP1BA"    "GPER1"    "IGF1"     "IL1RN"    "KL"      
+[31] "LIME1"    "LRP8"     "MAP3K13"  "NGP"      "PPP1R14A" "PTGER4"  
+[37] "S100A8"   "S100A9"   "TET1"     "XDH"     
+

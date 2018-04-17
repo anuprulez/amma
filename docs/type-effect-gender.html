@@ -11793,6 +11793,16 @@ div#notebook {
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span><span class="kn">source</span><span class="p">(</span><span class="s">&quot;load_libraries.R&quot;</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
 
 <div class="output_wrapper">
 <div class="output">
@@ -11800,10 +11810,52 @@ div#notebook {
 
 <div class="output_area">
 
-<div class="prompt"> </div>
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stderr output_text">
+<pre>Warning message in is.na(x[[i]]):
+“is.na() applied to non-(list or vector) of type &#39;environment&#39;”Warning message in rsqlite_fetch(res@ptr, n = n):
+“Don&#39;t need to call dbFetch() for statements, only for queries”</pre>
+</div>
+</div>
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Allowing multi-threading with up to 4 threads.
+<pre>==========================================================================
+*
+*  Package WGCNA 1.63 loaded.
+*
+*    Important note: It appears that your system supports multi-threading,
+*    but it is not enabled within WGCNA in R. 
+*    To allow multi-threading within WGCNA with all available cores, use 
+*
+*          allowWGCNAThreads()
+*
+*    within R. Use disableWGCNAThreads() to disable threading if necessary.
+*    Alternatively, set the following environment variable on your system:
+*
+*          ALLOW_WGCNA_THREADS=&lt;number_of_processors&gt;
+*
+*    for example 
+*
+*          ALLOW_WGCNA_THREADS=4
+*
+*    To set the environment variable in linux bash shell, type 
+*
+*           export ALLOW_WGCNA_THREADS=4
+*
+*     before running R. Other operating systems or shells will
+*     have a similar command to achieve the same aim.
+*
+==========================================================================
+
+
+Allowing multi-threading with up to 4 threads.
 [1] &#34;preparing gene to GO mapping data...&#34;
 [1] &#34;preparing IC data...&#34;
 [1] &#34;preparing gene to GO mapping data...&#34;
@@ -11819,6 +11871,16 @@ div#notebook {
 
 </div>
 <div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span><span class="kn">source</span><span class="p">(</span><span class="s">&quot;functions.R&quot;</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
@@ -11830,18 +11892,83 @@ div#notebook {
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span><span class="kp">load</span><span class="p">(</span><span class="s">&quot;../results/dge/norm_counts.RData&quot;</span><span class="p">)</span>
+<span class="kp">load</span><span class="p">(</span><span class="s">&quot;../results/dge/dge.RData&quot;</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
 
 </div>
 <div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span><span class="kp">load</span><span class="p">(</span><span class="s">&quot;../results/dge/dge_net.RData&quot;</span><span class="p">)</span>
+<span class="kp">load</span><span class="p">(</span><span class="s">&quot;../results/dge/dge_layout.RData&quot;</span><span class="p">)</span>
+<span class="kp">load</span><span class="p">(</span><span class="s">&quot;../results/dge/dge_net_connected_gene_colors.RData&quot;</span><span class="p">)</span>
+<span class="kp">load</span><span class="p">(</span><span class="s">&quot;../results/dge/dge_net_pal2.RData&quot;</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
 
 </div>
 <div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span>module_nb <span class="o">=</span> <span class="kp">length</span><span class="p">(</span><span class="kp">unique</span><span class="p">(</span>connected_gene_colors<span class="p">))</span>
+pal2 <span class="o">=</span> <span class="kt">c</span><span class="p">(</span>pal2<span class="p">,</span> <span class="s">&quot;white&quot;</span><span class="p">,</span> <span class="s">&quot;black&quot;</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
 
 </div>
 <div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span><span class="c1"># Interactions between genders and types (after controlling age)</span>
+GF_SPF <span class="o">=</span> results<span class="p">(</span>dge<span class="p">,</span>contrast<span class="o">=</span> <span class="kt">c</span><span class="p">(</span><span class="m">0</span><span class="p">,</span><span class="m">0</span><span class="p">,</span><span class="m">1</span><span class="p">,</span><span class="m">0</span><span class="p">,</span><span class="m">0</span><span class="p">,</span><span class="m">0</span><span class="p">,</span><span class="m">0</span><span class="p">,</span><span class="m">1</span><span class="o">/</span><span class="m">2</span><span class="p">,</span><span class="m">1</span><span class="o">/</span><span class="m">3</span><span class="p">,</span><span class="m">1</span><span class="o">/</span><span class="m">3</span><span class="p">),</span> alpha<span class="o">=</span><span class="m">0.05</span><span class="p">,</span> test<span class="o">=</span><span class="s">&quot;Wald&quot;</span><span class="p">)</span>
+GF_SPF_F <span class="o">=</span> results<span class="p">(</span>dge<span class="p">,</span>contrast<span class="o">=</span> <span class="kt">c</span><span class="p">(</span><span class="m">0</span><span class="p">,</span><span class="m">0</span><span class="p">,</span><span class="m">1</span><span class="p">,</span><span class="m">0</span><span class="p">,</span><span class="m">0</span><span class="p">,</span><span class="m">0</span><span class="p">,</span><span class="m">0</span><span class="p">,</span><span class="m">0</span><span class="p">,</span><span class="m">1</span><span class="o">/</span><span class="m">3</span><span class="p">,</span><span class="m">1</span><span class="o">/</span><span class="m">3</span><span class="p">),</span> alpha<span class="o">=</span><span class="m">0.05</span><span class="p">,</span> test<span class="o">=</span><span class="s">&quot;Wald&quot;</span><span class="p">)</span>
+GF_SPF_M <span class="o">=</span> results<span class="p">(</span>dge<span class="p">,</span>contrast<span class="o">=</span> <span class="kt">c</span><span class="p">(</span><span class="m">0</span><span class="p">,</span><span class="m">0</span><span class="p">,</span><span class="m">1</span><span class="p">,</span><span class="m">0</span><span class="p">,</span><span class="m">0</span><span class="p">,</span><span class="m">0</span><span class="p">,</span><span class="m">0</span><span class="p">,</span><span class="m">1</span><span class="p">,</span><span class="m">1</span><span class="o">/</span><span class="m">3</span><span class="p">,</span><span class="m">1</span><span class="o">/</span><span class="m">3</span><span class="p">),</span> alpha<span class="o">=</span><span class="m">0.05</span><span class="p">,</span> test<span class="o">=</span><span class="s">&quot;Wald&quot;</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
 
 </div>
 <div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span>F_samples <span class="o">=</span> <span class="kt">c</span><span class="p">(</span>
+    <span class="s">&#39;SPF_8w_F_1_2&#39;</span><span class="p">,</span><span class="s">&#39;SPF_8w_F_3_2&#39;</span><span class="p">,</span><span class="s">&#39;SPF_8w_F_4_2&#39;</span><span class="p">,</span><span class="s">&#39;SPF_8w_F_5_2&#39;</span><span class="p">,</span><span class="s">&#39;SPF_52w_F_1_2&#39;</span><span class="p">,</span><span class="s">&#39;SPF_52w_F_2_2&#39;</span><span class="p">,</span><span class="s">&#39;SPF_52w_F_3_2&#39;</span><span class="p">,</span><span class="s">&#39;SPF_52w_F_4_2&#39;</span><span class="p">,</span><span class="s">&#39;SPF_52w_F_5_2&#39;</span><span class="p">,</span><span class="s">&#39;SPF_52w_F_6_2&#39;</span><span class="p">,</span><span class="s">&#39;SPF_104w_F_1_2&#39;</span><span class="p">,</span><span class="s">&#39;SPF_104w_F_2_2&#39;</span><span class="p">,</span><span class="s">&#39;SPF_104w_F_3_2&#39;</span><span class="p">,</span>
+    <span class="s">&#39;GF_8w_F_1_2&#39;</span><span class="p">,</span><span class="s">&#39;GF_8w_F_2_2&#39;</span><span class="p">,</span><span class="s">&#39;GF_8w_F_3_2&#39;</span><span class="p">,</span><span class="s">&#39;GF_8w_F_4_2&#39;</span><span class="p">,</span><span class="s">&#39;GF_8w_F_5_2&#39;</span><span class="p">,</span><span class="s">&#39;GF_52w_F_1_2&#39;</span><span class="p">,</span><span class="s">&#39;GF_52w_F_2_2&#39;</span><span class="p">,</span><span class="s">&#39;GF_52w_F_3_2&#39;</span><span class="p">,</span><span class="s">&#39;GF_52w_F_4_2&#39;</span><span class="p">,</span><span class="s">&#39;GF_52w_F_5_2&#39;</span><span class="p">,</span><span class="s">&#39;GF_52w_F_6_2&#39;</span><span class="p">,</span><span class="s">&#39;GF_104w_F_1_2&#39;</span><span class="p">,</span><span class="s">&#39;GF_104w_F_2_2&#39;</span><span class="p">,</span><span class="s">&#39;GF_104w_F_3_2&#39;</span><span class="p">)</span>
+M_samples <span class="o">=</span> <span class="kt">c</span><span class="p">(</span>
+    <span class="s">&#39;SPF_8w_M_1_2&#39;</span><span class="p">,</span><span class="s">&#39;SPF_8w_M_2_2&#39;</span><span class="p">,</span><span class="s">&#39;SPF_8w_M_3_2&#39;</span><span class="p">,</span><span class="s">&#39;SPF_8w_M_4_2&#39;</span><span class="p">,</span><span class="s">&#39;SPF_52w_M_1_2&#39;</span><span class="p">,</span><span class="s">&#39;SPF_52w_M_2_2&#39;</span><span class="p">,</span><span class="s">&#39;SPF_52w_M_3_2&#39;</span><span class="p">,</span><span class="s">&#39;SPF_52w_M_4_2&#39;</span><span class="p">,</span><span class="s">&#39;SPF_52w_M_5_2&#39;</span><span class="p">,</span><span class="s">&#39;SPF_104w_M_1_2&#39;</span><span class="p">,</span><span class="s">&#39;SPF_104w_M_2_2&#39;</span><span class="p">,</span><span class="s">&#39;SPF_104w_M_3_2&#39;</span><span class="p">,</span><span class="s">&#39;SPF_104w_M_4_2&#39;</span><span class="p">,</span><span class="s">&#39;SPF_104w_M_5_2&#39;</span><span class="p">,</span><span class="s">&#39;SPF_104w_M_6_2&#39;</span><span class="p">,</span><span class="s">&#39;SPF_104w_M_7_2&#39;</span><span class="p">,</span><span class="s">&#39;SPF_104w_M_8_2&#39;</span><span class="p">,</span><span class="s">&#39;SPF_104w_M_9_2&#39;</span><span class="p">,</span><span class="s">&#39;SPF_104w_M_10_2&#39;</span><span class="p">,</span><span class="s">&#39;SPF_104w_M_11_2&#39;</span><span class="p">,</span><span class="s">&#39;SPF_104w_M_12_2&#39;</span><span class="p">,</span><span class="s">&#39;SPF_104w_M_13_2&#39;</span><span class="p">,</span><span class="s">&#39;SPF_104w_M_14_2&#39;</span><span class="p">,</span>
+    <span class="s">&#39;GF_8w_M_1_2&#39;</span><span class="p">,</span><span class="s">&#39;GF_8w_M_2_2&#39;</span><span class="p">,</span><span class="s">&#39;GF_8w_M_3_2&#39;</span><span class="p">,</span><span class="s">&#39;GF_8w_M_4_2&#39;</span><span class="p">,</span><span class="s">&#39;GF_52w_M_1_2&#39;</span><span class="p">,</span><span class="s">&#39;GF_52w_M_2_2&#39;</span><span class="p">,</span><span class="s">&#39;GF_52w_M_3_2&#39;</span><span class="p">,</span><span class="s">&#39;GF_52w_M_4_2&#39;</span><span class="p">,</span><span class="s">&#39;GF_104w_M_1_2&#39;</span><span class="p">,</span><span class="s">&#39;GF_104w_M_2_2&#39;</span><span class="p">)</span>
+annot <span class="o">=</span> <span class="kp">as.data.frame</span><span class="p">(</span>colData<span class="p">(</span>dge<span class="p">)[,</span> <span class="kt">c</span><span class="p">(</span><span class="s">&quot;type&quot;</span><span class="p">,</span><span class="s">&quot;age&quot;</span><span class="p">)])</span>
+to_comp <span class="o">=</span> <span class="kt">c</span><span class="p">(</span><span class="s">&quot;GF VS SPF (F)&quot;</span><span class="p">,</span> <span class="s">&quot;GF VS SPF (M)&quot;</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
@@ -11853,6 +11980,22 @@ div#notebook {
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span><span class="c1"># Stats</span>
+type_gender_stats <span class="o">=</span> <span class="kt">matrix</span><span class="p">(</span><span class="m">0</span><span class="p">,</span> nrow<span class="o">=</span><span class="m">2</span><span class="p">,</span> ncol<span class="o">=</span><span class="m">3</span><span class="p">)</span>
+<span class="kp">rownames</span><span class="p">(</span>type_gender_stats<span class="p">)</span> <span class="o">=</span> to_comp
+<span class="kp">colnames</span><span class="p">(</span>type_gender_stats<span class="p">)</span> <span class="o">=</span> <span class="kt">c</span><span class="p">(</span><span class="s">&quot;Wald padj &lt; 0.05&quot;</span><span class="p">,</span> <span class="s">&quot;LFC &gt; 0 (Wald padj &lt; 0.05)&quot;</span><span class="p">,</span> <span class="s">&quot;LFC &lt; 0 (Wald padj &lt; 0.05)&quot;</span><span class="p">)</span>
+type_gender_stats<span class="p">[</span><span class="m">1</span><span class="p">,]</span> <span class="o">=</span> get_stats_padj<span class="p">(</span>GF_SPF_F<span class="p">)</span>
+type_gender_stats<span class="p">[</span><span class="m">2</span><span class="p">,]</span> <span class="o">=</span> get_stats_padj<span class="p">(</span>GF_SPF_M<span class="p">)</span>
+type_gender_stats
+</pre></div>
+
+</div>
+</div>
+</div>
 
 <div class="output_wrapper">
 <div class="output">
@@ -11860,7 +12003,8 @@ div#notebook {
 
 <div class="output_area">
 
-<div class="prompt"> </div>
+<div class="prompt"></div>
+
 
 
 <div class="output_html rendered_html output_subarea ">
@@ -11881,6 +12025,16 @@ div#notebook {
 
 </div>
 <div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span>plot_stat_mat<span class="p">(</span>type_gender_stats<span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
 
 <div class="output_wrapper">
 <div class="output">
@@ -11888,7 +12042,8 @@ div#notebook {
 
 <div class="output_area">
 
-<div class="prompt"> </div>
+<div class="prompt"></div>
+
 
 
 
@@ -11897,7 +12052,8 @@ div#notebook {
 
 <div class="output_area">
 
-<div class="prompt"> </div>
+<div class="prompt"></div>
+
 
 
 
@@ -12677,6 +12833,18 @@ AABJRU5ErkJggg=="
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span>type_gender_data <span class="o">=</span> <span class="kt">list</span><span class="p">(</span>GF_SPF_F<span class="p">,</span> GF_SPF_M<span class="p">)</span>
+<span class="kp">names</span><span class="p">(</span>type_gender_data<span class="p">)</span> <span class="o">=</span> to_comp
+type_gender_deg <span class="o">=</span> extract_diff_expr_genes<span class="p">(</span>type_gender_data<span class="p">,</span> <span class="s">&quot;type-effect/type_gender/&quot;</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
 
 <div class="output_wrapper">
 <div class="output">
@@ -12684,14 +12852,17 @@ AABJRU5ErkJggg=="
 
 <div class="output_area">
 
-<div class="prompt"> </div>
+<div class="prompt"></div>
+
 
 <div class="output_subarea output_stream output_stderr output_text">
 <pre>Warning message in grep(txdbPattern, installedPackages):
 “argument &#39;pattern&#39; has length &gt; 1 and only the first element will be used”Warning message in pcls(G):
 “initial point very close to some inequality constraints”Warning message in grep(txdbPattern, installedPackages):
 “argument &#39;pattern&#39; has length &gt; 1 and only the first element will be used”Warning message in pcls(G):
-“initial point very close to some inequality constraints”</pre>
+“initial point very close to some inequality constraints”Warning message in stack.default(getgo(rownames(l$deg), &#34;mm10&#34;, &#34;geneSymbol&#34;)):
+“non-vector elements will be ignored”Warning message in stack.default(getgo(rownames(l$deg), &#34;mm10&#34;, &#34;geneSymbol&#34;, fetch.cats = &#34;KEGG&#34;)):
+“non-vector elements will be ignored”</pre>
 </div>
 </div>
 
@@ -12717,6 +12888,18 @@ AABJRU5ErkJggg=="
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span><span class="c1"># GF != SPF for F with abs(FC) &gt; 2</span>
+genes <span class="o">=</span> <span class="kp">names</span><span class="p">((</span><span class="kp">sort</span><span class="p">(</span>type_gender_deg<span class="o">$</span>fc_deg<span class="p">[</span><span class="kp">which</span><span class="p">(</span><span class="kp">abs</span><span class="p">(</span>type_gender_deg<span class="o">$</span>fc_deg<span class="p">[,</span><span class="m">1</span><span class="p">])</span><span class="o">&gt;</span><span class="m">1</span><span class="p">),</span><span class="m">1</span><span class="p">])))</span>
+plot_count_heatmap<span class="p">(</span>genes<span class="p">,</span>F_samples<span class="p">,</span> annot<span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
 
 <div class="output_wrapper">
 <div class="output">
@@ -12724,7 +12907,8 @@ AABJRU5ErkJggg=="
 
 <div class="output_area">
 
-<div class="prompt"> </div>
+<div class="prompt"></div>
+
 
 
 
@@ -13717,6 +13901,18 @@ IECAAAECIy9ggjTyJZQAAQIECBAgQIAAAQJtCfz/Sz1Vfgsl9F4AAAAASUVORK5CYII="
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[12]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span><span class="c1"># GF != SPF for M with abs(FC) &gt; 2</span>
+genes <span class="o">=</span> <span class="kp">names</span><span class="p">((</span><span class="kp">sort</span><span class="p">(</span>type_gender_deg<span class="o">$</span>fc_deg<span class="p">[</span><span class="kp">which</span><span class="p">(</span><span class="kp">abs</span><span class="p">(</span>type_gender_deg<span class="o">$</span>fc_deg<span class="p">[,</span><span class="m">2</span><span class="p">])</span><span class="o">&gt;</span><span class="m">1</span><span class="p">),</span><span class="m">2</span><span class="p">])))</span>
+plot_count_heatmap<span class="p">(</span>genes<span class="p">,</span>F_samples<span class="p">,</span> annot<span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
 
 <div class="output_wrapper">
 <div class="output">
@@ -13724,7 +13920,8 @@ IECAAAECIy9ggjTyJZQAAQIECBAgQIAAAQJtCfz/Sz1Vfgsl9F4AAAAASUVORK5CYII="
 
 <div class="output_area">
 
-<div class="prompt"> </div>
+<div class="prompt"></div>
+
 
 
 
@@ -14626,6 +14823,17 @@ QmCC"
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[13]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span><span class="c1"># Differentially expressed genes</span>
+upset<span class="p">(</span><span class="kp">as.data.frame</span><span class="p">(</span>type_gender_deg<span class="o">$</span>deg<span class="p">))</span>
+</pre></div>
+
+</div>
+</div>
+</div>
 
 <div class="output_wrapper">
 <div class="output">
@@ -14633,7 +14841,8 @@ QmCC"
 
 <div class="output_area">
 
-<div class="prompt"> </div>
+<div class="prompt"></div>
+
 
 
 
@@ -15243,6 +15452,20 @@ iUsBAQQQQAABBBBAAAEEEMgW+D80WHvtNQHPCQAAAABJRU5ErkJggg=="
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[14]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span>par<span class="p">(</span>mfrow<span class="o">=</span><span class="kt">c</span><span class="p">(</span><span class="m">2</span><span class="p">,</span><span class="m">1</span><span class="p">),</span>mar<span class="o">=</span><span class="kt">c</span><span class="p">(</span><span class="m">0</span><span class="p">,</span><span class="m">0</span><span class="p">,</span><span class="m">0</span><span class="p">,</span><span class="m">0</span><span class="p">))</span>
+col_GF_vs_SPF_F <span class="o">=</span> get_deg_colors<span class="p">(</span>type_gender_deg<span class="p">,</span> <span class="s">&quot;GF VS SPF (F)&quot;</span><span class="p">,</span> connected_gene_colors<span class="p">,</span> module_nb<span class="p">)</span>
+plot_net_with_layout<span class="p">(</span>net<span class="p">,</span> col_GF_vs_SPF_F<span class="p">,</span> pal2<span class="p">,</span> layout<span class="p">,</span> add_legend <span class="o">=</span> <span class="kc">FALSE</span><span class="p">)</span>
+col_GF_vs_SPF_M <span class="o">=</span> get_deg_colors<span class="p">(</span>type_gender_deg<span class="p">,</span> <span class="s">&quot;GF VS SPF (M)&quot;</span><span class="p">,</span> connected_gene_colors<span class="p">,</span> module_nb<span class="p">)</span>
+plot_net_with_layout<span class="p">(</span>net<span class="p">,</span> col_GF_vs_SPF_M<span class="p">,</span> pal2<span class="p">,</span> layout<span class="p">,</span> add_legend <span class="o">=</span> <span class="kc">FALSE</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
 
 <div class="output_wrapper">
 <div class="output">
@@ -15250,7 +15473,8 @@ iUsBAQQQQAABBBBAAAEEEMgW+D80WHvtNQHPCQAAAABJRU5ErkJggg=="
 
 <div class="output_area">
 
-<div class="prompt"> </div>
+<div class="prompt"></div>
+
 
 
 
@@ -22257,6 +22481,19 @@ q1PUhqNStgYAAAAASUVORK5CYII="
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[15]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span>full_go_desc <span class="o">=</span> type_gender_deg<span class="o">$</span>GO_wall<span class="p">[[</span><span class="m">1</span><span class="p">]][,</span><span class="s">&quot;term&quot;</span><span class="p">]</span>
+<span class="kp">names</span><span class="p">(</span>full_go_desc<span class="p">)</span> <span class="o">=</span> type_gender_deg<span class="o">$</span>GO_wall<span class="p">[[</span><span class="m">1</span><span class="p">]][,</span><span class="s">&quot;category&quot;</span><span class="p">]</span>
+comp <span class="o">=</span> <span class="kp">colnames</span><span class="p">(</span>type_gender_deg<span class="o">$</span>over_represented_GO<span class="p">)</span>
+comp <span class="o">=</span> comp<span class="p">[</span><span class="m">4</span><span class="o">:</span><span class="kp">length</span><span class="p">(</span>comp<span class="p">)]</span>
+</pre></div>
+
+</div>
+</div>
+</div>
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
@@ -22277,6 +22514,20 @@ q1PUhqNStgYAAAAASUVORK5CYII="
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[16]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span>plot_top_go<span class="p">(</span>type_gender_deg<span class="o">$</span>over_represented_GO<span class="p">,</span>
+            type_gender_deg<span class="o">$</span>GO_wall<span class="p">,</span>
+            <span class="s">&quot;BP&quot;</span><span class="p">,</span>
+            comp<span class="p">,</span>
+            <span class="m">20</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
 
 <div class="output_wrapper">
 <div class="output">
@@ -22284,7 +22535,8 @@ q1PUhqNStgYAAAAASUVORK5CYII="
 
 <div class="output_area">
 
-<div class="prompt"> </div>
+<div class="prompt"></div>
+
 
 
 
@@ -22293,7 +22545,8 @@ q1PUhqNStgYAAAAASUVORK5CYII="
 
 <div class="output_area">
 
-<div class="prompt"> </div>
+<div class="prompt"></div>
+
 
 
 
@@ -24276,9 +24529,31 @@ gAACCCDgGwECJN9UJQVBAAEEEEAAAQQQQACBeAX+H7SFrael2b9pAAAAAElFTkSuQmCC"
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[17]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span>BP_network <span class="o">=</span> create_GO_network<span class="p">(</span>type_gender_deg<span class="p">,</span> <span class="s">&quot;BP&quot;</span><span class="p">,</span> BP_GO<span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
 
 </div>
 <div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[18]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span>par<span class="p">(</span>mfrow<span class="o">=</span><span class="kt">c</span><span class="p">(</span><span class="m">2</span><span class="p">,</span><span class="m">1</span><span class="p">),</span>mar<span class="o">=</span><span class="kt">c</span><span class="p">(</span><span class="m">0</span><span class="p">,</span><span class="m">0</span><span class="p">,</span><span class="m">0</span><span class="p">,</span><span class="m">0</span><span class="p">))</span>
+plot_GO_networks<span class="p">(</span>BP_network<span class="p">,</span> <span class="s">&quot;GF VS SPF (F)&quot;</span><span class="p">,</span> full_go_desc<span class="p">,</span> plot_interactive <span class="o">=</span> <span class="kc">FALSE</span><span class="p">)</span>
+plot_GO_networks<span class="p">(</span>BP_network<span class="p">,</span> <span class="s">&quot;GF VS SPF (M)&quot;</span><span class="p">,</span> full_go_desc<span class="p">,</span> plot_interactive <span class="o">=</span> <span class="kc">FALSE</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
 
 <div class="output_wrapper">
 <div class="output">
@@ -24286,7 +24561,8 @@ gAACCCDgGwECJN9UJQVBAAEEEEAAAQQQQACBeAX+H7SFrael2b9pAAAAAElFTkSuQmCC"
 
 <div class="output_area">
 
-<div class="prompt"> </div>
+<div class="prompt"></div>
+
 
 
 
@@ -25216,6 +25492,17 @@ EEAAAQQQQAABBBBAAAEEEIg1gf8H2sVS1DchkzQAAAAASUVORK5CYII="
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[19]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span><span class="c1"># GF VS SPF (F)</span>
+plot_GO_networks<span class="p">(</span>BP_network<span class="p">,</span> <span class="s">&quot;GF VS SPF (F)&quot;</span><span class="p">,</span> full_go_desc<span class="p">,</span> plot_non_interactive <span class="o">=</span> <span class="kc">FALSE</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
 
 <div class="output_wrapper">
 <div class="output">
@@ -25223,7 +25510,8 @@ EEAAAQQQQAABBBBAAAEEEIg1gf8H2sVS1DchkzQAAAAASUVORK5CYII="
 
 <div class="output_area">
 
-<div class="prompt"> </div>
+<div class="prompt"></div>
+
 
 
 <div class="output_html rendered_html output_subarea ">
@@ -31982,12 +32270,12 @@ padding-right: inherit;
 </head>
 <body style="background-color:white;">
 <div id="htmlwidget_container">
-<div id="htmlwidget-d3c9d42af72990b42870" class="scatterplotThree html-widget" style="width:960px;height:500px;">
+<div id="htmlwidget-8f4802d36addc6ff61a3" class="scatterplotThree html-widget" style="width:960px;height:500px;">
 
 </div>
 </div>
-<script type="application/json" data-for="htmlwidget-d3c9d42af72990b42870">{"x":{"NROW":21,"height":null,"width":null,"axis":false,"numticks":[6,6,6],"xticklabs":null,"yticklabs":null,"zticklabs":null,"color":[["#FFB4BF","#FFB4BF","#FFB4BF","#FFB4BF","#FFB4BF","#FFB4BF","#FFFFFF","#FFFFFF","#FFFFFF","#FFFFFF","#FFFFFF","#FFFFFF","#FFFFFF","#FFFFFF","#FFFFFF","#FFFFFF","#FFFFFF","#FFFFFF","#FFFFFF","#FFFFFF","#FFFFFF"]],"size":1,"stroke":"black","flipy":true,"grid":false,"renderer":"auto","signif":8,"bg":"white","cexsymbols":1,"xlim":[-1,1],"ylim":[-1,1],"zlim":[-1,1],"pch":["o","o","o","o","o","o","o","o","o","o","o","o","o","o","o","o","o","o","o","o","o"],"from":[[0,0,0,0,1,3,3,3,3,4,4,4,5,6,6,8,10,12,16]],"to":[[3,4,8,12,8,4,5,8,12,8,12,14,14,10,20,12,15,20,18]],"lwd":1,"linealpha":1,"center":true,"main":[""],"lcol":["#BEBEBE"],"labels":["regulation of multicellular organismal process","immune system process","intracellular signal transduction","positive regulation of biological process","negative regulation of biological process","positive regulation of cellular process","regulation of chemotaxis","localization","regulation of immune system process","single-multicellular organism process","regulation of leukocyte chemotaxis","cellular response to chemical stimulus","regulation of response to stimulus","response to stress","negative regulation of cellular process","positive regulation of leukocyte chemotaxis","single organism cell adhesion","response to lipid","single organismal cell-cell adhesion","regulation of biological quality","regulation of response to external stimulus"],"options":true,"alpha":[[1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1]],"vertices":[[-0.56454219,-0.57873691,0.74122402,0.08483252,-0.64243398,0.98601232,-0.30582554,-0.91343164,-1,-0.72357714,-0.46041983,0.53051263,-0.50861677,-0.39639117,0.365276,-1,-0.068498967,0.41861966,0.45208229,-0.93488003,0.031521262,-0.63643887,0.612087,-0.5233075,-0.29228459,-0.62281581,0.66589405,1,0.084518417,-0.26268933,0.68956004,-0.80331121,-0.27587665,0.4400012,0.52898693,-0.61295018,-0.40427946,-0.76980765,0.37328055,0.88715517,0.22918627,0.89619865,-0.70624118,0.079147874,0.309832,0.69118709,-0.71991691,-0.64903184,0.15752127,0.71798639,1,-0.22780638,0.085232175,-0.9641919,0.31839722,0.77003444,0.70206623,-0.1585339,1,0.036037708,0.021766516,-1,0.14372787]],"xticklab":["-1.00","-0.60","-0.20","0.20","0.60","1.00"],"yticklab":["-1.00","-0.60","-0.20","0.20","0.60","1.00"],"zticklab":["1.00","0.60","0.20","-0.20","-0.60","-1.00"],"xtick":[0,0.2,0.4,0.6,0.8,1],"ytick":[0,0.2,0.4,0.6,0.8,1],"ztick":[0,0.2,0.4,0.6,0.8,1]},"evals":[],"jsHooks":[]}</script>
-<script type="application/htmlwidget-sizing" data-for="htmlwidget-d3c9d42af72990b42870">{"viewer":{"width":450,"height":500,"padding":0,"fill":false},"browser":{"width":960,"height":500,"padding":0,"fill":false}}</script>
+<script type="application/json" data-for="htmlwidget-8f4802d36addc6ff61a3">{"x":{"NROW":21,"height":null,"width":null,"axis":false,"numticks":[6,6,6],"xticklabs":null,"yticklabs":null,"zticklabs":null,"color":[["#FFB4BF","#FFB4BF","#FFB4BF","#FFB4BF","#FFB4BF","#FFB4BF","#FFFFFF","#FFFFFF","#FFFFFF","#FFFFFF","#FFFFFF","#FFFFFF","#FFFFFF","#FFFFFF","#FFFFFF","#FFFFFF","#FFFFFF","#FFFFFF","#FFFFFF","#FFFFFF","#FFFFFF"]],"size":1,"stroke":"black","flipy":true,"grid":false,"renderer":"auto","signif":8,"bg":"white","cexsymbols":1,"xlim":[-1,1],"ylim":[-1,1],"zlim":[-1,1],"pch":["o","o","o","o","o","o","o","o","o","o","o","o","o","o","o","o","o","o","o","o","o"],"from":[[0,0,0,0,1,3,3,3,3,4,4,4,5,6,6,8,10,12,16]],"to":[[3,4,8,12,8,4,5,8,12,8,12,14,14,10,20,12,15,20,18]],"lwd":1,"linealpha":1,"center":true,"main":[""],"lcol":["#BEBEBE"],"labels":["regulation of multicellular organismal process","immune system process","intracellular signal transduction","positive regulation of biological process","negative regulation of biological process","positive regulation of cellular process","regulation of chemotaxis","localization","regulation of immune system process","single-multicellular organism process","regulation of leukocyte chemotaxis","cellular response to chemical stimulus","regulation of response to stimulus","response to stress","negative regulation of cellular process","positive regulation of leukocyte chemotaxis","single organism cell adhesion","response to lipid","single organismal cell-cell adhesion","regulation of biological quality","regulation of response to external stimulus"],"options":true,"alpha":[[1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1]],"vertices":[[-0.56454219,-0.57873691,0.74122402,0.08483252,-0.64243398,0.98601232,-0.30582554,-0.91343164,-1,-0.72357714,-0.46041983,0.53051263,-0.50861677,-0.39639117,0.365276,-1,-0.068498967,0.41861966,0.45208229,-0.93488003,0.031521262,-0.63643887,0.612087,-0.5233075,-0.29228459,-0.62281581,0.66589405,1,0.084518417,-0.26268933,0.68956004,-0.80331121,-0.27587665,0.4400012,0.52898693,-0.61295018,-0.40427946,-0.76980765,0.37328055,0.88715517,0.22918627,0.89619865,-0.70624118,0.079147874,0.309832,0.69118709,-0.71991691,-0.64903184,0.15752127,0.71798639,1,-0.22780638,0.085232175,-0.9641919,0.31839722,0.77003444,0.70206623,-0.1585339,1,0.036037708,0.021766516,-1,0.14372787]],"xticklab":["-1.00","-0.60","-0.20","0.20","0.60","1.00"],"yticklab":["-1.00","-0.60","-0.20","0.20","0.60","1.00"],"zticklab":["1.00","0.60","0.20","-0.20","-0.60","-1.00"],"xtick":[0,0.2,0.4,0.6,0.8,1],"ytick":[0,0.2,0.4,0.6,0.8,1],"ztick":[0,0.2,0.4,0.6,0.8,1]},"evals":[],"jsHooks":[]}</script>
+<script type="application/htmlwidget-sizing" data-for="htmlwidget-8f4802d36addc6ff61a3">{"viewer":{"width":450,"height":500,"padding":0,"fill":false},"browser":{"width":960,"height":500,"padding":0,"fill":false}}</script>
 </body>
 </html>
 
@@ -32009,6 +32297,17 @@ padding-right: inherit;
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[20]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span><span class="c1"># GF VS SPF (M)</span>
+plot_GO_networks<span class="p">(</span>BP_network<span class="p">,</span> <span class="s">&quot;GF VS SPF (M)&quot;</span><span class="p">,</span> full_go_desc<span class="p">,</span> plot_non_interactive <span class="o">=</span> <span class="kc">FALSE</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
 
 <div class="output_wrapper">
 <div class="output">
@@ -32016,7 +32315,8 @@ padding-right: inherit;
 
 <div class="output_area">
 
-<div class="prompt"> </div>
+<div class="prompt"></div>
+
 
 
 <div class="output_html rendered_html output_subarea ">
@@ -38775,12 +39075,12 @@ padding-right: inherit;
 </head>
 <body style="background-color:white;">
 <div id="htmlwidget_container">
-<div id="htmlwidget-defa508accbb0bcbcd89" class="scatterplotThree html-widget" style="width:960px;height:500px;">
+<div id="htmlwidget-135a142402efd5d66b9a" class="scatterplotThree html-widget" style="width:960px;height:500px;">
 
 </div>
 </div>
-<script type="application/json" data-for="htmlwidget-defa508accbb0bcbcd89">{"x":{"NROW":21,"height":null,"width":null,"axis":false,"numticks":[6,6,6],"xticklabs":null,"yticklabs":null,"zticklabs":null,"color":[["#FFB4BF","#FFB4BF","#FFB4BF","#FFB4BF","#FFB4BF","#FFB4BF","#FFB4BF","#FF0E0F","#FF3D40","#FF3F42","#FF4144","#FF4144","#FF4C50","#FF4C50","#FF4C50","#FF9BA5","#FF9BA5","#FF9BA5","#FF9BA5","#FF9BA5","#FFAAB5"]],"size":1,"stroke":"black","flipy":true,"grid":false,"renderer":"auto","signif":8,"bg":"white","cexsymbols":1,"xlim":[-1,1],"ylim":[-1,1],"zlim":[-1,1],"pch":["o","o","o","o","o","o","o","o","o","o","o","o","o","o","o","o","o","o","o","o","o"],"from":[[0,0,0,0,1,3,3,3,3,4,4,4,5,6,6,8,10,12,16]],"to":[[3,4,8,12,8,4,5,8,12,8,12,14,14,10,20,12,15,20,18]],"lwd":1,"linealpha":1,"center":true,"main":[""],"lcol":["#BEBEBE"],"labels":["regulation of multicellular organismal process","immune system process","intracellular signal transduction","positive regulation of biological process","negative regulation of biological process","positive regulation of cellular process","regulation of chemotaxis","localization","regulation of immune system process","single-multicellular organism process","regulation of leukocyte chemotaxis","cellular response to chemical stimulus","regulation of response to stimulus","response to stress","negative regulation of cellular process","positive regulation of leukocyte chemotaxis","single organism cell adhesion","response to lipid","single organismal cell-cell adhesion","regulation of biological quality","regulation of response to external stimulus"],"options":true,"alpha":[[1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1]],"vertices":[[-0.56454219,-0.57873691,0.74122402,0.08483252,-0.64243398,0.98601232,-0.30582554,-0.91343164,-1,-0.72357714,-0.46041983,0.53051263,-0.50861677,-0.39639117,0.365276,-1,-0.068498967,0.41861966,0.45208229,-0.93488003,0.031521262,-0.63643887,0.612087,-0.5233075,-0.29228459,-0.62281581,0.66589405,1,0.084518417,-0.26268933,0.68956004,-0.80331121,-0.27587665,0.4400012,0.52898693,-0.61295018,-0.40427946,-0.76980765,0.37328055,0.88715517,0.22918627,0.89619865,-0.70624118,0.079147874,0.309832,0.69118709,-0.71991691,-0.64903184,0.15752127,0.71798639,1,-0.22780638,0.085232175,-0.9641919,0.31839722,0.77003444,0.70206623,-0.1585339,1,0.036037708,0.021766516,-1,0.14372787]],"xticklab":["-1.00","-0.60","-0.20","0.20","0.60","1.00"],"yticklab":["-1.00","-0.60","-0.20","0.20","0.60","1.00"],"zticklab":["1.00","0.60","0.20","-0.20","-0.60","-1.00"],"xtick":[0,0.2,0.4,0.6,0.8,1],"ytick":[0,0.2,0.4,0.6,0.8,1],"ztick":[0,0.2,0.4,0.6,0.8,1]},"evals":[],"jsHooks":[]}</script>
-<script type="application/htmlwidget-sizing" data-for="htmlwidget-defa508accbb0bcbcd89">{"viewer":{"width":450,"height":500,"padding":0,"fill":false},"browser":{"width":960,"height":500,"padding":0,"fill":false}}</script>
+<script type="application/json" data-for="htmlwidget-135a142402efd5d66b9a">{"x":{"NROW":21,"height":null,"width":null,"axis":false,"numticks":[6,6,6],"xticklabs":null,"yticklabs":null,"zticklabs":null,"color":[["#FFB4BF","#FFB4BF","#FFB4BF","#FFB4BF","#FFB4BF","#FFB4BF","#FFB4BF","#FF0E0F","#FF3D40","#FF3F42","#FF4144","#FF4144","#FF4C50","#FF4C50","#FF4C50","#FF9BA5","#FF9BA5","#FF9BA5","#FF9BA5","#FF9BA5","#FFAAB5"]],"size":1,"stroke":"black","flipy":true,"grid":false,"renderer":"auto","signif":8,"bg":"white","cexsymbols":1,"xlim":[-1,1],"ylim":[-1,1],"zlim":[-1,1],"pch":["o","o","o","o","o","o","o","o","o","o","o","o","o","o","o","o","o","o","o","o","o"],"from":[[0,0,0,0,1,3,3,3,3,4,4,4,5,6,6,8,10,12,16]],"to":[[3,4,8,12,8,4,5,8,12,8,12,14,14,10,20,12,15,20,18]],"lwd":1,"linealpha":1,"center":true,"main":[""],"lcol":["#BEBEBE"],"labels":["regulation of multicellular organismal process","immune system process","intracellular signal transduction","positive regulation of biological process","negative regulation of biological process","positive regulation of cellular process","regulation of chemotaxis","localization","regulation of immune system process","single-multicellular organism process","regulation of leukocyte chemotaxis","cellular response to chemical stimulus","regulation of response to stimulus","response to stress","negative regulation of cellular process","positive regulation of leukocyte chemotaxis","single organism cell adhesion","response to lipid","single organismal cell-cell adhesion","regulation of biological quality","regulation of response to external stimulus"],"options":true,"alpha":[[1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1]],"vertices":[[-0.56454219,-0.57873691,0.74122402,0.08483252,-0.64243398,0.98601232,-0.30582554,-0.91343164,-1,-0.72357714,-0.46041983,0.53051263,-0.50861677,-0.39639117,0.365276,-1,-0.068498967,0.41861966,0.45208229,-0.93488003,0.031521262,-0.63643887,0.612087,-0.5233075,-0.29228459,-0.62281581,0.66589405,1,0.084518417,-0.26268933,0.68956004,-0.80331121,-0.27587665,0.4400012,0.52898693,-0.61295018,-0.40427946,-0.76980765,0.37328055,0.88715517,0.22918627,0.89619865,-0.70624118,0.079147874,0.309832,0.69118709,-0.71991691,-0.64903184,0.15752127,0.71798639,1,-0.22780638,0.085232175,-0.9641919,0.31839722,0.77003444,0.70206623,-0.1585339,1,0.036037708,0.021766516,-1,0.14372787]],"xticklab":["-1.00","-0.60","-0.20","0.20","0.60","1.00"],"yticklab":["-1.00","-0.60","-0.20","0.20","0.60","1.00"],"zticklab":["1.00","0.60","0.20","-0.20","-0.60","-1.00"],"xtick":[0,0.2,0.4,0.6,0.8,1],"ytick":[0,0.2,0.4,0.6,0.8,1],"ztick":[0,0.2,0.4,0.6,0.8,1]},"evals":[],"jsHooks":[]}</script>
+<script type="application/htmlwidget-sizing" data-for="htmlwidget-135a142402efd5d66b9a">{"viewer":{"width":450,"height":500,"padding":0,"fill":false},"browser":{"width":960,"height":500,"padding":0,"fill":false}}</script>
 </body>
 </html>
 
@@ -38810,6 +39110,20 @@ padding-right: inherit;
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[21]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span>plot_top_go<span class="p">(</span>type_gender_deg<span class="o">$</span>over_represented_GO<span class="p">,</span>
+            type_gender_deg<span class="o">$</span>GO_wall<span class="p">,</span>
+            <span class="s">&quot;CC&quot;</span><span class="p">,</span>
+            comp<span class="p">,</span>
+            <span class="m">20</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
 
 <div class="output_wrapper">
 <div class="output">
@@ -38817,7 +39131,8 @@ padding-right: inherit;
 
 <div class="output_area">
 
-<div class="prompt"> </div>
+<div class="prompt"></div>
+
 
 <div class="output_subarea output_stream output_stderr output_text">
 <pre>Warning message:
@@ -38827,7 +39142,8 @@ padding-right: inherit;
 
 <div class="output_area">
 
-<div class="prompt"> </div>
+<div class="prompt"></div>
+
 
 
 
@@ -38836,7 +39152,8 @@ padding-right: inherit;
 
 <div class="output_area">
 
-<div class="prompt"> </div>
+<div class="prompt"></div>
+
 
 
 
@@ -39714,6 +40031,20 @@ OAAAAABJRU5ErkJggg=="
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[22]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span>plot_top_go<span class="p">(</span>type_gender_deg<span class="o">$</span>over_represented_GO<span class="p">,</span>
+            type_gender_deg<span class="o">$</span>GO_wall<span class="p">,</span>
+            <span class="s">&quot;MF&quot;</span><span class="p">,</span>
+            comp<span class="p">,</span>
+            <span class="m">20</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
 
 <div class="output_wrapper">
 <div class="output">
@@ -39721,7 +40052,8 @@ OAAAAABJRU5ErkJggg=="
 
 <div class="output_area">
 
-<div class="prompt"> </div>
+<div class="prompt"></div>
+
 
 <div class="output_subarea output_stream output_stderr output_text">
 <pre>Warning message:
@@ -39731,7 +40063,8 @@ OAAAAABJRU5ErkJggg=="
 
 <div class="output_area">
 
-<div class="prompt"> </div>
+<div class="prompt"></div>
+
 
 
 
@@ -39740,7 +40073,8 @@ OAAAAABJRU5ErkJggg=="
 
 <div class="output_area">
 
-<div class="prompt"> </div>
+<div class="prompt"></div>
+
 
 
 
@@ -40470,6 +40804,18 @@ EEjkCb69/AAAAABJRU5ErkJggg=="
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[23]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span>plot_kegg_pathways<span class="p">(</span>type_gender_deg<span class="o">$</span>over_represented_KEGG<span class="p">[,</span><span class="s">&quot;category&quot;</span><span class="p">],</span>
+                   type_gender_deg<span class="o">$</span>fc_deg<span class="p">,</span>
+                   <span class="s">&quot;../results/dge/type-effect/type_gender/over_repr_kegg/&quot;</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
 
 <div class="output_wrapper">
 <div class="output">
@@ -40477,7 +40823,8 @@ EEjkCb69/AAAAABJRU5ErkJggg=="
 
 <div class="output_area">
 
-<div class="prompt"> </div>
+<div class="prompt"></div>
+
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>[1] &#34;Note: 24 of 2121 unique input IDs unmapped.&#34;
@@ -40490,6 +40837,18 @@ EEjkCb69/AAAAABJRU5ErkJggg=="
 
 </div>
 <div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[24]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span>plot_kegg_pathways<span class="p">(</span>type_gender_deg<span class="o">$</span>under_represented_KEGG<span class="p">[,</span><span class="s">&quot;category&quot;</span><span class="p">],</span>
+                   type_gender_deg<span class="o">$</span>fc_deg<span class="p">,</span>
+                   <span class="s">&quot;../results/dge/type-effect/type_gender/under_repr_kegg/&quot;</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
 
 </div>
     </div>
