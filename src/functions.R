@@ -91,9 +91,9 @@ extract_cat_de_genes = function(selected_cat, cat, de_genes, cat2genes, file_pre
 get_interesting_categories = function(deg, interesting_cat){
     l = sapply(colnames(deg), function(x) interesting_cat[which(!is.na(interesting_cat[,x])),"category"])
     if(dim(deg)[2]>1){
-        l = as.list()
+        l = as.list(l)
     }else{
-        l2 = list()
+        l2 = list(l)
         l2[[colnames(deg)]] = l
         l = l2
     }

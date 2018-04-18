@@ -56,6 +56,19 @@ Links
     The workflow is applied on each dataset (organized into data collection)
 
 - Do the DGE analyses
+    - Launch R and install the libraries
+
+    ```
+    $ source("src/install_libraries.R") 
+    ```
+
+    - Launch Jupyter
+
+    ```
+    $ jupyter notebook
+    ```
+
+    - Run the different notebooks in `src`
 
 # Usage for the report generation
 
@@ -66,7 +79,6 @@ $ pandoc doc/report.md --latex-engine=xelatex --filter pandoc-citeproc  --toc -o
 # Generate HTML of the Jupyter Notebooks (for doc)
 
 ```
-$ jupyter nbconvert --template=nbextensions --to=html src/age-effect.ipynb --output-dir doc/
+$ jupyter nbconvert --template=nbextensions --to=html src/*.ipynb --output-dir docs/
+$ for i in $(find docs/ -path "*.html"); do awk '/jquery.min.js/{ print; print "<script src=\"https://cdnjs.cloudflare.com/ajax/libs/three.js/r79/three.min.js\"></script>"; next }1' $i > tmp; mv tmp $i; done
 ```
-
-Add `<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r79/three.min.js"></script>` on the generated HTML file

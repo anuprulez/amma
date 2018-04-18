@@ -3,6 +3,7 @@
 <head><meta charset="utf-8" />
 <title>type-effect-age</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r79/three.min.js"></script>
 
 <style type="text/css">
     /*!
@@ -11793,6 +11794,16 @@ div#notebook {
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span><span class="kn">source</span><span class="p">(</span><span class="s">&quot;load_libraries.R&quot;</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
 
 <div class="output_wrapper">
 <div class="output">
@@ -11800,7 +11811,8 @@ div#notebook {
 
 <div class="output_area">
 
-<div class="prompt"> </div>
+<div class="prompt"></div>
+
 
 <div class="output_subarea output_stream output_stderr output_text">
 <pre>Warning message in is.na(x[[i]]):
@@ -11811,7 +11823,8 @@ div#notebook {
 
 <div class="output_area">
 
-<div class="prompt"> </div>
+<div class="prompt"></div>
+
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>==========================================================================
@@ -11859,6 +11872,16 @@ Allowing multi-threading with up to 4 threads.
 
 </div>
 <div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span><span class="kn">source</span><span class="p">(</span><span class="s">&quot;functions.R&quot;</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
@@ -11870,18 +11893,87 @@ Allowing multi-threading with up to 4 threads.
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span><span class="kp">load</span><span class="p">(</span><span class="s">&quot;../results/dge/norm_counts.RData&quot;</span><span class="p">)</span>
+<span class="kp">load</span><span class="p">(</span><span class="s">&quot;../results/dge/dge.RData&quot;</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
 
 </div>
 <div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span><span class="kp">load</span><span class="p">(</span><span class="s">&quot;../results/dge/dge_net.RData&quot;</span><span class="p">)</span>
+<span class="kp">load</span><span class="p">(</span><span class="s">&quot;../results/dge/dge_layout.RData&quot;</span><span class="p">)</span>
+<span class="kp">load</span><span class="p">(</span><span class="s">&quot;../results/dge/dge_net_connected_gene_colors.RData&quot;</span><span class="p">)</span>
+<span class="kp">load</span><span class="p">(</span><span class="s">&quot;../results/dge/dge_net_pal2.RData&quot;</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
 
 </div>
 <div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span>module_nb <span class="o">=</span> <span class="kp">length</span><span class="p">(</span><span class="kp">unique</span><span class="p">(</span>connected_gene_colors<span class="p">))</span>
+pal2 <span class="o">=</span> <span class="kt">c</span><span class="p">(</span>pal2<span class="p">,</span> <span class="s">&quot;white&quot;</span><span class="p">,</span> <span class="s">&quot;black&quot;</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
 
 </div>
 <div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span><span class="c1"># Interactions between genders and ages (after controlling type)</span>
+GF_SPF_8w <span class="o">=</span> results<span class="p">(</span>dge<span class="p">,</span>contrast<span class="o">=</span> <span class="kt">c</span><span class="p">(</span><span class="m">0</span><span class="p">,</span><span class="m">0</span><span class="p">,</span><span class="m">1</span><span class="p">,</span><span class="m">0</span><span class="p">,</span><span class="m">0</span><span class="p">,</span><span class="m">0</span><span class="p">,</span><span class="m">0</span><span class="p">,</span><span class="m">1</span><span class="o">/</span><span class="m">2</span><span class="p">,</span><span class="m">0</span><span class="p">,</span><span class="m">0</span><span class="p">),</span> alpha<span class="o">=</span><span class="m">0.05</span><span class="p">,</span> test<span class="o">=</span><span class="s">&quot;Wald&quot;</span><span class="p">)</span>
+GF_SPF_52w <span class="o">=</span> results<span class="p">(</span>dge<span class="p">,</span>contrast<span class="o">=</span> <span class="kt">c</span><span class="p">(</span><span class="m">0</span><span class="p">,</span><span class="m">0</span><span class="p">,</span><span class="m">1</span><span class="p">,</span><span class="m">0</span><span class="p">,</span><span class="m">0</span><span class="p">,</span><span class="m">0</span><span class="p">,</span><span class="m">0</span><span class="p">,</span><span class="m">1</span><span class="o">/</span><span class="m">2</span><span class="p">,</span><span class="m">0</span><span class="p">,</span><span class="m">1</span><span class="p">),</span> alpha<span class="o">=</span><span class="m">0.05</span><span class="p">,</span> test<span class="o">=</span><span class="s">&quot;Wald&quot;</span><span class="p">)</span>
+GF_SPF_104w <span class="o">=</span> results<span class="p">(</span>dge<span class="p">,</span>contrast<span class="o">=</span> <span class="kt">c</span><span class="p">(</span><span class="m">0</span><span class="p">,</span><span class="m">0</span><span class="p">,</span><span class="m">1</span><span class="p">,</span><span class="m">0</span><span class="p">,</span><span class="m">0</span><span class="p">,</span><span class="m">0</span><span class="p">,</span><span class="m">0</span><span class="p">,</span><span class="m">1</span><span class="o">/</span><span class="m">2</span><span class="p">,</span><span class="m">1</span><span class="p">,</span><span class="m">0</span><span class="p">),</span> alpha<span class="o">=</span><span class="m">0.05</span><span class="p">,</span> test<span class="o">=</span><span class="s">&quot;Wald&quot;</span><span class="p">)</span>
+GF_SPF <span class="o">=</span> results<span class="p">(</span>dge<span class="p">,</span>contrast<span class="o">=</span> <span class="kt">c</span><span class="p">(</span><span class="m">0</span><span class="p">,</span><span class="m">0</span><span class="p">,</span><span class="m">1</span><span class="p">,</span><span class="m">0</span><span class="p">,</span><span class="m">0</span><span class="p">,</span><span class="m">0</span><span class="p">,</span><span class="m">0</span><span class="p">,</span><span class="m">1</span><span class="o">/</span><span class="m">2</span><span class="p">,</span><span class="m">1</span><span class="o">/</span><span class="m">3</span><span class="p">,</span><span class="m">1</span><span class="o">/</span><span class="m">3</span><span class="p">),</span> alpha<span class="o">=</span><span class="m">0.05</span><span class="p">,</span> test<span class="o">=</span><span class="s">&quot;Wald&quot;</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
 
 </div>
 <div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span>w8_samples <span class="o">=</span> <span class="kt">c</span><span class="p">(</span>
+    <span class="s">&#39;SPF_8w_F_1_2&#39;</span><span class="p">,</span><span class="s">&#39;SPF_8w_F_3_2&#39;</span><span class="p">,</span><span class="s">&#39;SPF_8w_F_4_2&#39;</span><span class="p">,</span><span class="s">&#39;SPF_8w_F_5_2&#39;</span><span class="p">,</span><span class="s">&#39;SPF_8w_M_1_2&#39;</span><span class="p">,</span><span class="s">&#39;SPF_8w_M_2_2&#39;</span><span class="p">,</span><span class="s">&#39;SPF_8w_M_3_2&#39;</span><span class="p">,</span><span class="s">&#39;SPF_8w_M_4_2&#39;</span><span class="p">,</span>
+    <span class="s">&#39;GF_8w_F_1_2&#39;</span><span class="p">,</span><span class="s">&#39;GF_8w_F_2_2&#39;</span><span class="p">,</span><span class="s">&#39;GF_8w_F_3_2&#39;</span><span class="p">,</span><span class="s">&#39;GF_8w_F_4_2&#39;</span><span class="p">,</span><span class="s">&#39;GF_8w_F_5_2&#39;</span><span class="p">,</span><span class="s">&#39;GF_8w_M_1_2&#39;</span><span class="p">,</span><span class="s">&#39;GF_8w_M_2_2&#39;</span><span class="p">,</span><span class="s">&#39;GF_8w_M_3_2&#39;</span><span class="p">,</span><span class="s">&#39;GF_8w_M_4_2&#39;</span><span class="p">)</span>
+w52_samples <span class="o">=</span> <span class="kt">c</span><span class="p">(</span>    
+    <span class="s">&#39;SPF_52w_F_1_2&#39;</span><span class="p">,</span><span class="s">&#39;SPF_52w_F_2_2&#39;</span><span class="p">,</span><span class="s">&#39;SPF_52w_F_3_2&#39;</span><span class="p">,</span><span class="s">&#39;SPF_52w_F_4_2&#39;</span><span class="p">,</span><span class="s">&#39;SPF_52w_F_5_2&#39;</span><span class="p">,</span><span class="s">&#39;SPF_52w_F_6_2&#39;</span><span class="p">,</span><span class="s">&#39;SPF_52w_M_1_2&#39;</span><span class="p">,</span><span class="s">&#39;SPF_52w_M_2_2&#39;</span><span class="p">,</span><span class="s">&#39;SPF_52w_M_3_2&#39;</span><span class="p">,</span><span class="s">&#39;SPF_52w_M_4_2&#39;</span><span class="p">,</span><span class="s">&#39;SPF_52w_M_5_2&#39;</span><span class="p">,</span>
+    <span class="s">&#39;GF_52w_F_1_2&#39;</span><span class="p">,</span><span class="s">&#39;GF_52w_F_2_2&#39;</span><span class="p">,</span><span class="s">&#39;GF_52w_F_3_2&#39;</span><span class="p">,</span><span class="s">&#39;GF_52w_F_4_2&#39;</span><span class="p">,</span><span class="s">&#39;GF_52w_F_5_2&#39;</span><span class="p">,</span><span class="s">&#39;GF_52w_F_6_2&#39;</span><span class="p">,</span><span class="s">&#39;GF_52w_M_1_2&#39;</span><span class="p">,</span><span class="s">&#39;GF_52w_M_2_2&#39;</span><span class="p">,</span><span class="s">&#39;GF_52w_M_3_2&#39;</span><span class="p">,</span><span class="s">&#39;GF_52w_M_4_2&#39;</span><span class="p">)</span>
+w104_samples <span class="o">=</span> <span class="kt">c</span><span class="p">(</span>      
+    <span class="s">&#39;SPF_104w_F_1_2&#39;</span><span class="p">,</span><span class="s">&#39;SPF_104w_F_2_2&#39;</span><span class="p">,</span><span class="s">&#39;SPF_104w_F_3_2&#39;</span><span class="p">,</span><span class="s">&#39;SPF_104w_M_1_2&#39;</span><span class="p">,</span><span class="s">&#39;SPF_104w_M_2_2&#39;</span><span class="p">,</span><span class="s">&#39;SPF_104w_M_3_2&#39;</span><span class="p">,</span><span class="s">&#39;SPF_104w_M_4_2&#39;</span><span class="p">,</span><span class="s">&#39;SPF_104w_M_5_2&#39;</span><span class="p">,</span><span class="s">&#39;SPF_104w_M_6_2&#39;</span><span class="p">,</span><span class="s">&#39;SPF_104w_M_7_2&#39;</span><span class="p">,</span><span class="s">&#39;SPF_104w_M_8_2&#39;</span><span class="p">,</span><span class="s">&#39;SPF_104w_M_9_2&#39;</span><span class="p">,</span><span class="s">&#39;SPF_104w_M_10_2&#39;</span><span class="p">,</span><span class="s">&#39;SPF_104w_M_11_2&#39;</span><span class="p">,</span><span class="s">&#39;SPF_104w_M_12_2&#39;</span><span class="p">,</span><span class="s">&#39;SPF_104w_M_13_2&#39;</span><span class="p">,</span><span class="s">&#39;SPF_104w_M_14_2&#39;</span><span class="p">,</span>
+    <span class="s">&#39;GF_104w_F_1_2&#39;</span><span class="p">,</span><span class="s">&#39;GF_104w_F_2_2&#39;</span><span class="p">,</span><span class="s">&#39;GF_104w_F_3_2&#39;</span><span class="p">,</span><span class="s">&#39;GF_104w_M_1_2&#39;</span><span class="p">,</span><span class="s">&#39;GF_104w_M_2_2&#39;</span><span class="p">)</span>
+annot <span class="o">=</span> <span class="kp">as.data.frame</span><span class="p">(</span>colData<span class="p">(</span>dge<span class="p">)[,</span> <span class="kt">c</span><span class="p">(</span><span class="s">&quot;type&quot;</span><span class="p">,</span><span class="s">&quot;gender&quot;</span><span class="p">)])</span>
+to_comp <span class="o">=</span> <span class="kt">c</span><span class="p">(</span><span class="s">&quot;GF VS SPF (8w)&quot;</span><span class="p">,</span> <span class="s">&quot;GF VS SPF (52w)&quot;</span><span class="p">,</span> <span class="s">&quot;GF VS SPF (104w)&quot;</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
@@ -11893,6 +11985,23 @@ Allowing multi-threading with up to 4 threads.
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span><span class="c1"># Stats</span>
+type_age_stats <span class="o">=</span> <span class="kt">matrix</span><span class="p">(</span><span class="m">0</span><span class="p">,</span> nrow<span class="o">=</span><span class="m">3</span><span class="p">,</span> ncol<span class="o">=</span><span class="m">3</span><span class="p">)</span>
+<span class="kp">rownames</span><span class="p">(</span>type_age_stats<span class="p">)</span> <span class="o">=</span> to_comp
+<span class="kp">colnames</span><span class="p">(</span>type_age_stats<span class="p">)</span> <span class="o">=</span> <span class="kt">c</span><span class="p">(</span><span class="s">&quot;Wald padj &lt; 0.05&quot;</span><span class="p">,</span> <span class="s">&quot;LFC &gt; 0 (Wald padj &lt; 0.05)&quot;</span><span class="p">,</span> <span class="s">&quot;LFC &lt; 0 (Wald padj &lt; 0.05)&quot;</span><span class="p">)</span>
+type_age_stats<span class="p">[</span><span class="s">&quot;GF VS SPF (8w)&quot;</span><span class="p">,]</span> <span class="o">=</span> get_stats_padj<span class="p">(</span>GF_SPF_8w<span class="p">)</span>
+type_age_stats<span class="p">[</span><span class="s">&quot;GF VS SPF (52w)&quot;</span><span class="p">,]</span> <span class="o">=</span> get_stats_padj<span class="p">(</span>GF_SPF_52w<span class="p">)</span>
+type_age_stats<span class="p">[</span><span class="s">&quot;GF VS SPF (104w)&quot;</span><span class="p">,]</span> <span class="o">=</span> get_stats_padj<span class="p">(</span>GF_SPF_104w<span class="p">)</span>
+type_age_stats
+</pre></div>
+
+</div>
+</div>
+</div>
 
 <div class="output_wrapper">
 <div class="output">
@@ -11900,7 +12009,8 @@ Allowing multi-threading with up to 4 threads.
 
 <div class="output_area">
 
-<div class="prompt"> </div>
+<div class="prompt"></div>
+
 
 
 <div class="output_html rendered_html output_subarea ">
@@ -11922,6 +12032,16 @@ Allowing multi-threading with up to 4 threads.
 
 </div>
 <div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span>plot_stat_mat<span class="p">(</span>type_age_stats<span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
 
 <div class="output_wrapper">
 <div class="output">
@@ -11929,7 +12049,8 @@ Allowing multi-threading with up to 4 threads.
 
 <div class="output_area">
 
-<div class="prompt"> </div>
+<div class="prompt"></div>
+
 
 
 
@@ -11938,7 +12059,8 @@ Allowing multi-threading with up to 4 threads.
 
 <div class="output_area">
 
-<div class="prompt"> </div>
+<div class="prompt"></div>
+
 
 
 
@@ -12796,6 +12918,18 @@ jQAAAABJRU5ErkJggg=="
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span>type_age_data <span class="o">=</span> <span class="kt">list</span><span class="p">(</span>GF_SPF_8w<span class="p">,</span> GF_SPF_52w<span class="p">,</span> GF_SPF_104w<span class="p">)</span>
+<span class="kp">names</span><span class="p">(</span>type_age_data<span class="p">)</span> <span class="o">=</span> to_comp
+type_age_deg <span class="o">=</span> extract_diff_expr_genes<span class="p">(</span>type_age_data<span class="p">,</span> <span class="s">&quot;type-effect/type_age/&quot;</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
 
 <div class="output_wrapper">
 <div class="output">
@@ -12803,7 +12937,8 @@ jQAAAABJRU5ErkJggg=="
 
 <div class="output_area">
 
-<div class="prompt"> </div>
+<div class="prompt"></div>
+
 
 <div class="output_subarea output_stream output_stderr output_text">
 <pre>Warning message in grep(txdbPattern, installedPackages):
@@ -12840,6 +12975,18 @@ jQAAAABJRU5ErkJggg=="
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span><span class="c1"># GF != SPF for 8w with abs(FC) &gt; 2</span>
+genes <span class="o">=</span> <span class="kp">names</span><span class="p">((</span><span class="kp">sort</span><span class="p">(</span>type_age_deg<span class="o">$</span>fc_deg<span class="p">[</span><span class="kp">which</span><span class="p">(</span><span class="kp">abs</span><span class="p">(</span>type_age_deg<span class="o">$</span>fc_deg<span class="p">[,</span><span class="m">1</span><span class="p">])</span><span class="o">&gt;</span><span class="m">1</span><span class="p">),</span><span class="m">1</span><span class="p">])))</span>
+plot_count_heatmap<span class="p">(</span>genes<span class="p">,</span>w8_samples<span class="p">,</span> annot<span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
 
 <div class="output_wrapper">
 <div class="output">
@@ -12847,7 +12994,8 @@ jQAAAABJRU5ErkJggg=="
 
 <div class="output_area">
 
-<div class="prompt"> </div>
+<div class="prompt"></div>
+
 
 
 
@@ -14656,6 +14804,18 @@ QAIkMOAJMEAa8E3IAyABEiABEiABEiABEiABEugtAv8/3ppxvPLBefIAAAAASUVORK5CYII="
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[12]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span><span class="c1"># GF != SPF for 52w with abs(FC) &gt; 2</span>
+genes <span class="o">=</span> <span class="kp">names</span><span class="p">((</span><span class="kp">sort</span><span class="p">(</span>type_age_deg<span class="o">$</span>fc_deg<span class="p">[</span><span class="kp">which</span><span class="p">(</span><span class="kp">abs</span><span class="p">(</span>type_age_deg<span class="o">$</span>fc_deg<span class="p">[,</span><span class="m">2</span><span class="p">])</span><span class="o">&gt;</span><span class="m">1</span><span class="p">),</span><span class="m">2</span><span class="p">])))</span>
+plot_count_heatmap<span class="p">(</span>genes<span class="p">,</span>w52_samples<span class="p">,</span> annot<span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
 
 <div class="output_wrapper">
 <div class="output">
@@ -14663,7 +14823,8 @@ QAIkMOAJMEAa8E3IAyABEiABEiABEiABEiABEugtAv8/3ppxvPLBefIAAAAASUVORK5CYII="
 
 <div class="output_area">
 
-<div class="prompt"> </div>
+<div class="prompt"></div>
+
 
 
 
@@ -15410,6 +15571,18 @@ AAAAAElFTkSuQmCC"
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[13]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span><span class="c1"># GF != SPF for 104w with abs(FC) &gt; 2</span>
+genes <span class="o">=</span> <span class="kp">names</span><span class="p">((</span><span class="kp">sort</span><span class="p">(</span>type_age_deg<span class="o">$</span>fc_deg<span class="p">[</span><span class="kp">which</span><span class="p">(</span><span class="kp">abs</span><span class="p">(</span>type_age_deg<span class="o">$</span>fc_deg<span class="p">[,</span><span class="m">3</span><span class="p">])</span><span class="o">&gt;</span><span class="m">1</span><span class="p">),</span><span class="m">3</span><span class="p">])))</span>
+plot_count_heatmap<span class="p">(</span>genes<span class="p">,</span>w104_samples<span class="p">,</span> annot<span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
 
 <div class="output_wrapper">
 <div class="output">
@@ -15417,7 +15590,8 @@ AAAAAElFTkSuQmCC"
 
 <div class="output_area">
 
-<div class="prompt"> </div>
+<div class="prompt"></div>
+
 
 
 
@@ -16546,6 +16720,17 @@ BCQgAQl0mYATpC57V20SkIAEJCABCUhAAhKQwFAE/n8okA+/yqQw+gAAAABJRU5ErkJggg=="
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[14]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span><span class="c1"># Differentially expressed genes</span>
+upset<span class="p">(</span><span class="kp">as.data.frame</span><span class="p">(</span>type_age_deg<span class="o">$</span>deg<span class="p">))</span>
+</pre></div>
+
+</div>
+</div>
+</div>
 
 <div class="output_wrapper">
 <div class="output">
@@ -16553,7 +16738,8 @@ BCQgAQl0mYATpC57V20SkIAEJCABCUhAAhKQwFAE/n8okA+/yqQw+gAAAABJRU5ErkJggg=="
 
 <div class="output_area">
 
-<div class="prompt"> </div>
+<div class="prompt"></div>
+
 
 
 
@@ -17318,6 +17504,22 @@ AAAAAElFTkSuQmCC"
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[15]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span>par<span class="p">(</span>mfrow<span class="o">=</span><span class="kt">c</span><span class="p">(</span><span class="m">1</span><span class="p">,</span><span class="m">3</span><span class="p">),</span>mar<span class="o">=</span><span class="kt">c</span><span class="p">(</span><span class="m">0</span><span class="p">,</span><span class="m">0</span><span class="p">,</span><span class="m">0</span><span class="p">,</span><span class="m">0</span><span class="p">))</span>
+col_GF_vs_SPF_8w <span class="o">=</span> get_deg_colors<span class="p">(</span>type_age_deg<span class="p">,</span> to_comp<span class="p">[</span><span class="m">1</span><span class="p">],</span> connected_gene_colors<span class="p">,</span> module_nb<span class="p">)</span>
+plot_net_with_layout<span class="p">(</span>net<span class="p">,</span> col_GF_vs_SPF_8w<span class="p">,</span> pal2<span class="p">,</span> layout<span class="p">,</span> add_legend <span class="o">=</span> <span class="kc">FALSE</span><span class="p">)</span>
+col_GF_vs_SPF_52w <span class="o">=</span> get_deg_colors<span class="p">(</span>type_age_deg<span class="p">,</span> to_comp<span class="p">[</span><span class="m">2</span><span class="p">],</span> connected_gene_colors<span class="p">,</span> module_nb<span class="p">)</span>
+plot_net_with_layout<span class="p">(</span>net<span class="p">,</span> col_GF_vs_SPF_52w<span class="p">,</span> pal2<span class="p">,</span> layout<span class="p">,</span> add_legend <span class="o">=</span> <span class="kc">FALSE</span><span class="p">)</span>
+col_GF_vs_SPF_104w <span class="o">=</span> get_deg_colors<span class="p">(</span>type_age_deg<span class="p">,</span> to_comp<span class="p">[</span><span class="m">3</span><span class="p">],</span> connected_gene_colors<span class="p">,</span> module_nb<span class="p">)</span>
+plot_net_with_layout<span class="p">(</span>net<span class="p">,</span> col_GF_vs_SPF_104w<span class="p">,</span> pal2<span class="p">,</span> layout<span class="p">,</span> add_legend <span class="o">=</span> <span class="kc">FALSE</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
 
 <div class="output_wrapper">
 <div class="output">
@@ -17325,7 +17527,8 @@ AAAAAElFTkSuQmCC"
 
 <div class="output_area">
 
-<div class="prompt"> </div>
+<div class="prompt"></div>
+
 
 
 
@@ -19966,6 +20169,19 @@ AQQQ2PYE/h92kX+6w2TiggAAAABJRU5ErkJggg=="
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[16]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span>full_go_desc <span class="o">=</span> type_age_deg<span class="o">$</span>GO_wall<span class="p">[[</span><span class="m">1</span><span class="p">]][,</span><span class="s">&quot;term&quot;</span><span class="p">]</span>
+<span class="kp">names</span><span class="p">(</span>full_go_desc<span class="p">)</span> <span class="o">=</span> type_age_deg<span class="o">$</span>GO_wall<span class="p">[[</span><span class="m">1</span><span class="p">]][,</span><span class="s">&quot;category&quot;</span><span class="p">]</span>
+comp <span class="o">=</span> <span class="kp">colnames</span><span class="p">(</span>type_age_deg<span class="o">$</span>over_represented_GO<span class="p">)</span>
+comp <span class="o">=</span> comp<span class="p">[</span><span class="m">4</span><span class="o">:</span><span class="kp">length</span><span class="p">(</span>comp<span class="p">)]</span>
+</pre></div>
+
+</div>
+</div>
+</div>
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
@@ -19986,6 +20202,20 @@ AQQQ2PYE/h92kX+6w2TiggAAAABJRU5ErkJggg=="
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[17]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span>plot_top_go<span class="p">(</span>type_age_deg<span class="o">$</span>over_represented_GO<span class="p">,</span>
+            type_age_deg<span class="o">$</span>GO_wall<span class="p">,</span>
+            <span class="s">&quot;BP&quot;</span><span class="p">,</span>
+            comp<span class="p">,</span>
+            <span class="m">20</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
 
 <div class="output_wrapper">
 <div class="output">
@@ -19993,7 +20223,8 @@ AQQQ2PYE/h92kX+6w2TiggAAAABJRU5ErkJggg=="
 
 <div class="output_area">
 
-<div class="prompt"> </div>
+<div class="prompt"></div>
+
 
 
 
@@ -20002,7 +20233,8 @@ AQQQ2PYE/h92kX+6w2TiggAAAABJRU5ErkJggg=="
 
 <div class="output_area">
 
-<div class="prompt"> </div>
+<div class="prompt"></div>
+
 
 
 
@@ -22090,6 +22322,16 @@ kNQEUJCSunkoHAQgAAEIQAACEIAABCCQSAIoSImkTV4QgAAEIAABCEAAAhCAQFIT+D9mhHan
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[18]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span>BP_network <span class="o">=</span> create_GO_network<span class="p">(</span>type_age_deg<span class="p">,</span> <span class="s">&quot;BP&quot;</span><span class="p">,</span> BP_GO<span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
@@ -22102,6 +22344,19 @@ kNQEUJCSunkoHAQgAAEIQAACEIAABCCQSAIoSImkTV4QgAAEIAABCEAAAhCAQFIT+D9mhHan
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[19]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span>par<span class="p">(</span>mfrow<span class="o">=</span><span class="kt">c</span><span class="p">(</span><span class="m">1</span><span class="p">,</span><span class="m">3</span><span class="p">),</span>mar<span class="o">=</span><span class="kt">c</span><span class="p">(</span><span class="m">0</span><span class="p">,</span><span class="m">0</span><span class="p">,</span><span class="m">0</span><span class="p">,</span><span class="m">0</span><span class="p">))</span>
+plot_GO_networks<span class="p">(</span>BP_network<span class="p">,</span> to_comp<span class="p">[</span><span class="m">1</span><span class="p">],</span> full_go_desc<span class="p">,</span> plot_interactive <span class="o">=</span> <span class="kc">FALSE</span><span class="p">)</span>
+plot_GO_networks<span class="p">(</span>BP_network<span class="p">,</span> to_comp<span class="p">[</span><span class="m">2</span><span class="p">],</span> full_go_desc<span class="p">,</span> plot_interactive <span class="o">=</span> <span class="kc">FALSE</span><span class="p">)</span>
+plot_GO_networks<span class="p">(</span>BP_network<span class="p">,</span> to_comp<span class="p">[</span><span class="m">3</span><span class="p">],</span> full_go_desc<span class="p">,</span> plot_interactive <span class="o">=</span> <span class="kc">FALSE</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
 
 <div class="output_wrapper">
 <div class="output">
@@ -22109,7 +22364,8 @@ kNQEUJCSunkoHAQgAAEIQAACEIAABCCQSAIoSImkTV4QgAAEIAABCEAAAhCAQFIT+D9mhHan
 
 <div class="output_area">
 
-<div class="prompt"> </div>
+<div class="prompt"></div>
+
 
 
 
@@ -22856,6 +23112,17 @@ CBAgQKCzBP4/pFZTYjX5szsAAAAASUVORK5CYII="
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[20]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span><span class="c1"># GF VS SPF (8w)</span>
+plot_GO_networks<span class="p">(</span>BP_network<span class="p">,</span> <span class="s">&quot;GF VS SPF (8w)&quot;</span><span class="p">,</span> full_go_desc<span class="p">,</span> plot_non_interactive <span class="o">=</span> <span class="bp">F</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
 
 <div class="output_wrapper">
 <div class="output">
@@ -22863,7 +23130,8 @@ CBAgQKCzBP4/pFZTYjX5szsAAAAASUVORK5CYII="
 
 <div class="output_area">
 
-<div class="prompt"> </div>
+<div class="prompt"></div>
+
 
 
 <div class="output_html rendered_html output_subarea ">
@@ -29649,6 +29917,17 @@ padding-right: inherit;
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[21]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span><span class="c1"># GF VS SPF (104w)</span>
+plot_GO_networks<span class="p">(</span>BP_network<span class="p">,</span> <span class="s">&quot;GF VS SPF (52w)&quot;</span><span class="p">,</span> full_go_desc<span class="p">,</span> plot_non_interactive <span class="o">=</span> <span class="bp">F</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
 
 <div class="output_wrapper">
 <div class="output">
@@ -29656,7 +29935,8 @@ padding-right: inherit;
 
 <div class="output_area">
 
-<div class="prompt"> </div>
+<div class="prompt"></div>
+
 
 
 <div class="output_html rendered_html output_subarea ">
@@ -36442,6 +36722,17 @@ padding-right: inherit;
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[22]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span><span class="c1"># GF VS SPF (104w)</span>
+plot_GO_networks<span class="p">(</span>BP_network<span class="p">,</span> <span class="s">&quot;GF VS SPF (104w)&quot;</span><span class="p">,</span> full_go_desc<span class="p">,</span> plot_non_interactive <span class="o">=</span> <span class="bp">F</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
 
 <div class="output_wrapper">
 <div class="output">
@@ -36449,7 +36740,8 @@ padding-right: inherit;
 
 <div class="output_area">
 
-<div class="prompt"> </div>
+<div class="prompt"></div>
+
 
 
 <div class="output_html rendered_html output_subarea ">
@@ -43243,6 +43535,20 @@ padding-right: inherit;
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[23]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span>plot_top_go<span class="p">(</span>type_age_deg<span class="o">$</span>over_represented_GO<span class="p">,</span>
+            type_age_deg<span class="o">$</span>GO_wall<span class="p">,</span>
+            <span class="s">&quot;CC&quot;</span><span class="p">,</span>
+            comp<span class="p">,</span>
+            <span class="m">20</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
 
 <div class="output_wrapper">
 <div class="output">
@@ -43250,7 +43556,8 @@ padding-right: inherit;
 
 <div class="output_area">
 
-<div class="prompt"> </div>
+<div class="prompt"></div>
+
 
 <div class="output_subarea output_stream output_stderr output_text">
 <pre>Warning message:
@@ -43260,7 +43567,8 @@ padding-right: inherit;
 
 <div class="output_area">
 
-<div class="prompt"> </div>
+<div class="prompt"></div>
+
 
 
 
@@ -43269,7 +43577,8 @@ padding-right: inherit;
 
 <div class="output_area">
 
-<div class="prompt"> </div>
+<div class="prompt"></div>
+
 
 
 
@@ -44184,6 +44493,20 @@ AABJRU5ErkJggg=="
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[24]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span>plot_top_go<span class="p">(</span>type_age_deg<span class="o">$</span>over_represented_GO<span class="p">,</span>
+            type_age_deg<span class="o">$</span>GO_wall<span class="p">,</span>
+            <span class="s">&quot;MF&quot;</span><span class="p">,</span>
+            comp<span class="p">,</span>
+            <span class="m">20</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
 
 <div class="output_wrapper">
 <div class="output">
@@ -44191,7 +44514,8 @@ AABJRU5ErkJggg=="
 
 <div class="output_area">
 
-<div class="prompt"> </div>
+<div class="prompt"></div>
+
 
 <div class="output_subarea output_stream output_stderr output_text">
 <pre>Warning message:
@@ -44201,7 +44525,8 @@ AABJRU5ErkJggg=="
 
 <div class="output_area">
 
-<div class="prompt"> </div>
+<div class="prompt"></div>
+
 
 
 
@@ -44210,7 +44535,8 @@ AABJRU5ErkJggg=="
 
 <div class="output_area">
 
-<div class="prompt"> </div>
+<div class="prompt"></div>
+
 
 
 
@@ -45634,6 +45960,18 @@ AAIIIIAAAgggkKgAAVKicuyHAAIIIIAAAggggAACgRMgQApclVIgBBBAAAEEEEAAAQQQSFTg
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[25]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span>plot_kegg_pathways<span class="p">(</span>type_age_deg<span class="o">$</span>over_represented_KEGG<span class="p">[,</span><span class="s">&quot;category&quot;</span><span class="p">],</span>
+                   type_age_deg<span class="o">$</span>fc_deg<span class="p">,</span>
+                   <span class="s">&quot;../results/dge/type-effect/type_age/kegg/over_repr_kegg/&quot;</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
 
 <div class="output_wrapper">
 <div class="output">
@@ -45641,7 +45979,8 @@ AAIIIIAAAgggkKgAAVKicuyHAAIIIIAAAggggAACgRMgQApclVIgBBBAAAEEEEAAAQQQSFTg
 
 <div class="output_area">
 
-<div class="prompt"> </div>
+<div class="prompt"></div>
+
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>[1] &#34;Note: 32 of 3155 unique input IDs unmapped.&#34;
@@ -45666,6 +46005,18 @@ AAIIIIAAAgggkKgAAVKicuyHAAIIIIAAAggggAACgRMgQApclVIgBBBAAAEEEEAAAQQQSFTg
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[26]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span>plot_kegg_pathways<span class="p">(</span>type_age_deg<span class="o">$</span>under_represented_KEGG<span class="p">[,</span><span class="s">&quot;category&quot;</span><span class="p">],</span>
+                   type_age_deg<span class="o">$</span>fc_deg<span class="p">,</span>
+                   <span class="s">&quot;../results/dge/type-effect/type_age/kegg/under_repr_kegg/&quot;</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
