@@ -84,7 +84,7 @@ get_cat_de_genes = function(cat_id, cat2genes, de_genes){
 
 extract_cat_de_genes = function(selected_cat, cat, de_genes, cat2genes, file_prefix){
     cat_de_genes = sapply(selected_cat, function(y) get_cat_de_genes(y, cat2genes, de_genes[[cat]]))
-    capture.output(cat_de_genes, file = paste(file_prefix, gsub(" ", "_", cat), sep=""))
+    capture.output(cat_de_genes, file = paste(file_prefix, gsub("[(),]", "", gsub(" ", "_", cat)), sep=""))
 }
 
 
@@ -139,16 +139,22 @@ extract_diff_expr_genes = function(in_l, dir_path){
     assayed_genes = rownames(in_l[[1]])
     # extract the DE genes with abs(FC)>=2
     if(length(in_l)>1){
-        de_genes = sapply(colnames(l$fc_deg), function(x) names(which(abs(l$fc_deg[,x])>=1)))
+        de_genes = sapply(colnames(l$fc_deg), function(x) names(which(abs(l$fc_deg[,x])>=log2(1.5))))
     }else{
         de_genes = list()
-        de_genes[[names(in_l)[1]]] = rownames(l$fc_deg)[which(abs(l$fc_deg)>=1)]
+        de_genes[[names(in_l)[1]]] = rownames(l$fc_deg)[which(abs(l$fc_deg)>=log2(1.5))]
     }
+    #if(length(in_l)>1){
+    #    de_genes = sapply(colnames(l$fc_deg), function(x) names(!is.na(l$fc_deg[,x])>=1))
+    #}else{
+    #    de_genes = list()
+    #    de_genes[[names(in_l)[1]]] = rownames(l$fc_deg)[!is.na(l$fc_deg)]
+    #}
     # extract in the full list of genes the DE ones                  
     gene_vector = sapply(de_genes, function(x) as.integer(assayed_genes%in%x))
     rownames(gene_vector) = assayed_genes
     # fit the probability weighting function
-    pwf = lapply(1:dim(gene_vector)[2], function(x) suppressMessages(nullp(gene_vector[,x], 'mm10', 'geneSymbol', plot.fit=F)))
+    pwf = lapply(1:dim(gene_vector)[2], function(x) suppressMessages(nullp(gene_vector[,x], 'mm10', 'geneSymbol', plot.fit=F,  bias.data=gene_length)))
     names(pwf) = colnames(gene_vector)
     # calculate the over and under expressed GO categories among the DE genes
     l$GO_wall = lapply(pwf, function(x) suppressMessages(goseq(x, 'mm10', 'geneSymbol')))
