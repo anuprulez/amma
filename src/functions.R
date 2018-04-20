@@ -276,26 +276,41 @@ plot_net_with_layout = function(net, colors, pal2, layout, add_legend = TRUE){
     }
 }
 
-plot_top_go = function(go, go_wall, ont, comp, top_nb){
-    # extract the GO for the ontology
+get_top_go = function(go, top_nb, ont, comp){
     ont_go = go[go$ontology == ont,c(2,4:dim(go)[2])]
     # conserve the top 20 for every comparison
     to_conserve = unique(c(sapply(comp, function(i) return(get_smallest_value_id(ont_go, i, top_nb)))))
-    ont_go = ont_go[to_conserve,]
-    ont_go = ont_go[order(ont_go[,comp[1]]),]
+    to_conserve = to_conserve[!is.na(to_conserve)]
+    return(ont_go[to_conserve,])
+}
+plot_top_go = function(over_repr_go, under_repr_go, go_wall, ont, top_nb){
+    # extract the top GO for the ontology                                  
+    over_repr_top_go = get_top_go(over_repr_go, top_nb, ont, names(go_wall))
+    over_repr_top_go$id = rownames(over_repr_top_go)
+    under_repr_top_go = get_top_go(under_repr_go, top_nb, ont, names(go_wall))
+    under_repr_top_go$id = rownames(under_repr_top_go)
     # extract the ratios of the conserved GO
-    ratios = sapply(go_wall, function(x) x[to_conserve,"numDEInCat"]/x[to_conserve,"numInCat"])
-    # create a matrix for the ggplot
-    go_mat = expand.grid(x = ont_go$term, y = comp)
-    colnames(go_mat) = c("term", "comparison")
-    go_mat$p_value = c(sapply(comp, function(i) return(ont_go[, i])))
-    go_mat$ratio = c(sapply(comp, function(i) return(ratios[, i])))
+    cons_GO = c(over_repr_top_go$id, under_repr_top_go$id)
+    ratios = sapply(go_wall, function(x) x[cons_GO,"numDEInCat"]/x[cons_GO,"numInCat"])
+    rownames(ratios) = cons_GO
+    # create a matrix for the ggplot                                  
+    mat = cbind(melt(over_repr_top_go), "over")
+    colnames(mat) = c("term", "id", "comparison", "p_value", "type")
+    tmp_mat = cbind(melt(under_repr_top_go), "under")
+    colnames(tmp_mat) = c("term", "id", "comparison", "p_value", "type") 
+    mat = rbind(mat, tmp_mat)
+    # add ratios
+    mat$ratio = sapply(1:dim(mat)[1], function(i) ratios[mat$id[i], mat$comp[i]])
     # reformate the terms to have less than 8 words
-    go_mat$term = sapply(strsplit(as.character(go_mat$term), " "), function(i) paste(i[1:ifelse(length(i)>8,8,length(i))],collapse = " "))
-    # plot                 
+    mat$term = sapply(strsplit(as.character(mat$term), " "), function(i) paste(i[1:ifelse(length(i)>8,8,length(i))],collapse = " "))
+    ## plot                 
     require(ggplot2)
-    p = ggplot(go_mat, aes(factor(comparison), factor(term))) + labs(x = "", y = "") + theme(axis.text.x = element_text(angle = 90, hjust = 1), axis.title.y = element_text(size = rel(1.8)))
-    p + geom_point(aes(size=ratio,col=p_value)) + scale_colour_gradient(low = "blue", high="red")
+    ggplot(mat, aes(factor(comparison), factor(term), factor(type)))+
+    labs(x = "", y = "")+
+    theme(axis.text.x = element_text(angle = 90, hjust = 1), axis.title.y = element_text(size = rel(1.8)))+
+    geom_point(aes(size=ratio,col=p_value))+
+    scale_colour_gradient(low = "red", high="blue")+
+    facet_grid(~ type)
 }
 
 get_deg_colors = function(comp_deg, comp, connected_gene_colors, module_nb){
