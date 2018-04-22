@@ -1,0 +1,17 @@
+$`04110`
+ [1] "BUB1"    "CCNA2"   "CCNB1"   "CCNB2"   "CDC20"   "CHEK1"   "GADD45G"
+ [8] "MCM2"    "MCM4"    "MCM5"    "MCM6"    "MCM7"    "PKMYT1"  "PLK1"   
+[15] "WEE1"   
+
+$`04060`
+ [1] "CCL9"     "CCR1"     "CD40"     "CRLF2"    "CSF1"     "CXCL10"  
+ [7] "CXCL12"   "CXCL13"   "FLT1"     "IL12B"    "IL1B"     "IL1R2"   
+[13] "IL2RG"    "IL3RA"    "IL7R"     "PF4"      "TNFSF13B" "TNFSF8"  
+
+$`05323`
+[1] "CSF1"     "CXCL12"   "FLT1"     "FOS"      "H2-AA"    "H2-AB1"   "IL1B"    
+[8] "ITGAL"    "TNFSF13B"
+
+$`03030`
+[1] "MCM2" "MCM4" "MCM5" "MCM6" "MCM7" "POLE"
+

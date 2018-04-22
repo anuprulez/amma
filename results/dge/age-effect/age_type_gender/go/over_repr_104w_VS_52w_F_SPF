@@ -1,0 +1,8 @@
+$`GO:0008092`
+[1] "ACTB"    "AGTPBP1" "APOE"    "AXL"     "BICD1"   "JMY"     "MYO5A"  
+[8] "PDLIM4" 
+
+$`GO:0006952`
+ [1] "APOE"   "AXL"    "CD74"   "CHST2"  "CSF1"   "GM4951" "IFIT3"  "IFITM3"
+ [9] "LGALS3" "LXN"    "LYST"   "MPO"    "NLRC5"  "RAB7B"  "SUPT3"  "TLR2"  
+

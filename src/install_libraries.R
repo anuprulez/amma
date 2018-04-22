@@ -26,3 +26,10 @@ biocLite("pathview")
 biocLite("goseq")
 install.packages('dendextend')
 biocLite("moe430a.db")
+
+install.packages("xlsx")
+
+biocLite("affy")
+biocLite("limma")
+
+install.packages("reshape")

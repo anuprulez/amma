@@ -1,0 +1,21 @@
+$`04110`
+ [1] "ANAPC11" "ANAPC13" "CCNA2"   "CCNB2"   "CCND3"   "CDC14A"  "CDKN1A" 
+ [8] "CDKN2C"  "CREBBP"  "DBF4"    "E2F1"    "EP300"   "SMAD3"  
+
+$`04060`
+ [1] "CCL3"      "CCL4"      "CCL5"      "CCL6"      "CCL9"      "CRLF2"    
+ [7] "CSF1"      "CXCL14"    "CXCR4"     "FLT1"      "IL12RB2"   "IL1A"     
+[13] "IL2RG"     "PDGFA"     "PF4"       "TNFRSF12A" "TNFSF13B"  "TNFSF8"   
+
+$`05323`
+[1] "CCL3"     "CCL5"     "CSF1"     "FLT1"     "H2-AA"    "IL1A"     "TNFSF13B"
+
+$`03030`
+character(0)
+
+$`04514`
+[1] "ALCAM" "CD276" "H2-AA" "H2-D1" "H2-K1" "ITGA9" "PDCD1" "VCAM1"
+
+$`05144`
+[1] "VCAM1"
+

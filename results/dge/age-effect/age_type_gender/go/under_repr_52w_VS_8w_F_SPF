@@ -1,0 +1,18 @@
+$`GO:0004888`
+ [1] "ACVR1B"  "AXL"     "CCR1"    "CCR9"    "CD40"    "CD74"    "CLEC2D" 
+ [8] "CNR2"    "CSF2RB"  "CSF2RB2" "CSF3R"   "EPHA1"   "FGFRL1"  "GPR162" 
+[15] "GPR65"   "GPR84"   "HCAR2"   "IL12B"   "IL1R2"   "IL2RG"   "IL7R"   
+[22] "ITGAL"   "ITPR3"   "JPH3"    "LAG3"    "LTB4R1"  "MRC1"    "MRGPRE" 
+[29] "OPN1SW"  "P2RY2"   "RAMP1"   "RHO"     "S1PR4"   "TRPV4"   "UNC5A"  
+
+$`GO:0099600`
+ [1] "ACVR1B"  "AXL"     "CCR1"    "CCR9"    "CD40"    "CD74"    "CLEC2D" 
+ [8] "CNR2"    "CSF2RB"  "CSF2RB2" "CSF3R"   "EPHA1"   "FGFRL1"  "GPR162" 
+[15] "GPR65"   "GPR84"   "HCAR2"   "IL12B"   "IL1R2"   "IL2RG"   "IL7R"   
+[22] "ITGAL"   "ITPR3"   "JPH3"    "KCNJ12"  "LAG3"    "LTB4R1"  "MRC1"   
+[29] "MRGPRE"  "OPN1SW"  "P2RY2"   "RAMP1"   "RHO"     "S1PR4"   "TRPV4"  
+[36] "UNC5A"  
+
+$`GO:0007606`
+[1] "GNAT1" "ITPR3"
+

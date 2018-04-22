@@ -139,19 +139,17 @@ extract_diff_expr_genes = function(in_l, dir_path){
     assayed_genes = rownames(in_l[[1]])
     # extract the DE genes with abs(FC)>=2
     if(length(in_l)>1){
-        de_genes = sapply(colnames(l$fc_deg), function(x) names(which(abs(l$fc_deg[,x])>=log2(1.5))))
+        sign_de_genes = sapply(colnames(l$fc_deg), function(x) names(which(abs(l$fc_deg[,x])>=log2(1.5))))
+        de_genes = sapply(colnames(l$fc_deg), function(x) sum(!is.na(l$fc_deg[,x])))
     }else{
-        de_genes = list()
-        de_genes[[names(in_l)[1]]] = rownames(l$fc_deg)[which(abs(l$fc_deg)>=log2(1.5))]
+        sign_de_genes = list()
+        sign_de_genes[[names(in_l)[1]]] = rownames(l$fc_deg)[which(abs(l$fc_deg)>=log2(1.5))]
+        de_genes = c()
+        de_genes[names(in_l)[1]] = sum(!is.na(l$fc_deg))
     }
-    #if(length(in_l)>1){
-    #    de_genes = sapply(colnames(l$fc_deg), function(x) names(!is.na(l$fc_deg[,x])>=1))
-    #}else{
-    #    de_genes = list()
-    #    de_genes[[names(in_l)[1]]] = rownames(l$fc_deg)[!is.na(l$fc_deg)]
-    #}
+    print(sapply(sign_de_genes, length)/de_genes)
     # extract in the full list of genes the DE ones                  
-    gene_vector = sapply(de_genes, function(x) as.integer(assayed_genes%in%x))
+    gene_vector = sapply(sign_de_genes, function(x) as.integer(assayed_genes%in%x))
     rownames(gene_vector) = assayed_genes
     # fit the probability weighting function
     pwf = lapply(1:dim(gene_vector)[2], function(x) suppressMessages(nullp(gene_vector[,x], 'mm10', 'geneSymbol', plot.fit=F,  bias.data=gene_length)))
@@ -176,16 +174,16 @@ extract_diff_expr_genes = function(in_l, dir_path){
     over_represented_GO = get_interesting_categories(l$deg, l$over_represented_GO)
     under_represented_GO = get_interesting_categories(l$deg, l$under_represented_GO)
     for(x in colnames(l$deg)){
-        extract_cat_de_genes(over_represented_GO[[x]], x, de_genes, full_go_genes, paste(go_dir_path, "over_repr_"))
-        extract_cat_de_genes(under_represented_GO[[x]], x, de_genes, full_go_genes, paste(go_dir_path, "under_repr_"))
+        extract_cat_de_genes(over_represented_GO[[x]], x, sign_de_genes, full_go_genes, paste(go_dir_path, "over_repr_", sep = ""))
+        extract_cat_de_genes(under_represented_GO[[x]], x, sign_de_genes, full_go_genes, paste(go_dir_path, "under_repr_", sep = ""))
     }
     # extract list of genes involved in the over and under represented KEGG
     full_kegg_genes = stack(getgo(rownames(as.data.frame(l$deg)), 'mm10', 'geneSymbol', fetch.cats="KEGG"))
     over_represented_KEGG = get_interesting_categories(l$deg, l$over_represented_KEGG)
     under_represented_KEGG =  get_interesting_categories(l$deg, l$under_represented_KEGG)
     for(x in colnames(l$deg)){
-        extract_cat_de_genes(over_represented_KEGG[[x]], x, de_genes, full_kegg_genes, paste(kegg_dir_path, "over_repr_", sep = ""))
-        extract_cat_de_genes(under_represented_KEGG[[x]], x, de_genes, full_kegg_genes, paste(kegg_dir_path, "under_repr_", sep = ""))
+        extract_cat_de_genes(over_represented_KEGG[[x]], x, sign_de_genes, full_kegg_genes, paste(kegg_dir_path, "over_repr_", sep = ""))
+        extract_cat_de_genes(under_represented_KEGG[[x]], x, sign_de_genes, full_kegg_genes, paste(kegg_dir_path, "under_repr_", sep = ""))
     }
     return(l)
 }
@@ -278,39 +276,55 @@ plot_net_with_layout = function(net, colors, pal2, layout, add_legend = TRUE){
 
 get_top_go = function(go, top_nb, ont, comp){
     ont_go = go[go$ontology == ont,c(2,4:dim(go)[2])]
-    # conserve the top 20 for every comparison
-    to_conserve = unique(c(sapply(comp, function(i) return(get_smallest_value_id(ont_go, i, top_nb)))))
-    to_conserve = to_conserve[!is.na(to_conserve)]
-    return(ont_go[to_conserve,])
+    if(length(ont_go)==0){
+        return(ont_go)
+    }else{
+        # conserve the top 20 for every comparison
+        to_conserve = unique(c(sapply(comp, function(i) return(get_smallest_value_id(ont_go, i, top_nb)))))
+        to_conserve = to_conserve[!is.na(to_conserve)]
+        return(ont_go[to_conserve,])
+    }
 }
+
+
 plot_top_go = function(over_repr_go, under_repr_go, go_wall, ont, top_nb){
     # extract the top GO for the ontology                                  
     over_repr_top_go = get_top_go(over_repr_go, top_nb, ont, names(go_wall))
     over_repr_top_go$id = rownames(over_repr_top_go)
     under_repr_top_go = get_top_go(under_repr_go, top_nb, ont, names(go_wall))
     under_repr_top_go$id = rownames(under_repr_top_go)
-    # extract the ratios of the conserved GO
-    cons_GO = c(over_repr_top_go$id, under_repr_top_go$id)
-    ratios = sapply(go_wall, function(x) x[cons_GO,"numDEInCat"]/x[cons_GO,"numInCat"])
-    rownames(ratios) = cons_GO
-    # create a matrix for the ggplot                                  
-    mat = cbind(melt(over_repr_top_go), "over")
-    colnames(mat) = c("term", "id", "comparison", "p_value", "type")
-    tmp_mat = cbind(melt(under_repr_top_go), "under")
-    colnames(tmp_mat) = c("term", "id", "comparison", "p_value", "type") 
-    mat = rbind(mat, tmp_mat)
-    # add ratios
-    mat$ratio = sapply(1:dim(mat)[1], function(i) ratios[mat$id[i], mat$comp[i]])
-    # reformate the terms to have less than 8 words
-    mat$term = sapply(strsplit(as.character(mat$term), " "), function(i) paste(i[1:ifelse(length(i)>8,8,length(i))],collapse = " "))
-    ## plot                 
-    require(ggplot2)
-    ggplot(mat, aes(factor(comparison), factor(term), factor(type)))+
-    labs(x = "", y = "")+
-    theme(axis.text.x = element_text(angle = 90, hjust = 1), axis.title.y = element_text(size = rel(1.8)))+
-    geom_point(aes(size=ratio,col=p_value))+
-    scale_colour_gradient(low = "red", high="blue")+
-    facet_grid(~ type)
+    if(dim(over_repr_top_go)[1] > 0 || dim(under_repr_top_go)[1] > 0){
+        # extract the ratios of the conserved GO
+        cons_GO = c(over_repr_top_go$id, under_repr_top_go$id)
+        ratios = data.frame(sapply(go_wall, function(x) x[cons_GO,"numDEInCat"]/x[cons_GO,"numInCat"]))
+        rownames(ratios) = cons_GO
+        # create a matrix for the ggplot
+        if(dim(over_repr_top_go)[1] > 0){
+            over_mat = cbind(melt(over_repr_top_go), "over")
+            colnames(over_mat) = c("term", "id", "comparison", "p_value", "type")
+        }else{
+            over_mat = NULL
+        }
+        if(dim(under_repr_top_go)[1] > 0){
+            under_mat = cbind(melt(under_repr_top_go), "under")
+            colnames(under_mat) = c("term", "id", "comparison", "p_value", "type")
+        }else{
+            under_mat = NULL
+        }
+        mat = rbind(over_mat, under_mat)
+        # add ratios
+        mat$ratio = sapply(1:dim(mat)[1], function(i) ratios[mat$id[i], mat$comp[i]])
+        # reformate the terms to have less than 8 words
+        mat$term = sapply(strsplit(as.character(mat$term), " "), function(i) paste(i[1:ifelse(length(i)>8,8,length(i))],collapse = " "))
+        ## plot                 
+        require(ggplot2)
+        ggplot(mat, aes(factor(comparison), factor(term), factor(type)))+
+        labs(x = "", y = "")+
+        theme(axis.text.x = element_text(angle = 90, hjust = 1), axis.title.y = element_text(size = rel(1.8)))+
+        geom_point(aes(size=ratio,col=p_value))+
+        scale_colour_gradient(low = "red", high="blue")+
+        facet_grid(~ type)
+    }
 }
 
 get_deg_colors = function(comp_deg, comp, connected_gene_colors, module_nb){

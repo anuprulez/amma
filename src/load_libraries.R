@@ -30,6 +30,11 @@ suppressMessages(library(threejs))
 suppressMessages(library(htmlwidgets))
 
 suppressMessages(library(pathview))
+suppressMessages(library(xlsx))
+
+suppressMessages(library(affy))
+suppressMessages(library(limma))
+suppressMessages(library(reshape))
 
 MF_GO = godata('org.Mm.eg.db', ont="MF")
 CC_GO = godata('org.Mm.eg.db', ont="CC")

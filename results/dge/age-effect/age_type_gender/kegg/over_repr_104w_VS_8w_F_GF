@@ -1,0 +1,63 @@
+$`04672`
+ [1] "CD40"     "CXCR4"    "H2-AA"    "H2-AB1"   "H2-DMB2"  "H2-EB1"  
+ [7] "ICOSL"    "IL15RA"   "TNFSF13"  "TNFSF13B"
+
+$`04110`
+ [1] "CCNA2" "CCNB1" "CCNB2" "CCND1" "CCND3" "CDC20" "PLK1"  "SKP2"  "SMAD3"
+[10] "TGFB2"
+
+$`04744`
+[1] "ARRB2" "CALM3" "GNAT1" "PDE6A" "RHO"  
+
+$`03030`
+character(0)
+
+$`04514`
+ [1] "ALCAM"   "CD22"    "CD276"   "CD40"    "H2-AA"   "H2-AB1"  "H2-D1"  
+ [8] "H2-DMB2" "H2-EB1"  "H2-K1"   "H2-M3"   "ICOSL"   "ITGA6"   "ITGAV"  
+[15] "PDCD1"   "SDC3"    "SDC4"    "VCAM1"  
+
+$`05150`
+ [1] "C3"      "C4B"     "C5AR1"   "FCGR4"   "H2-AA"   "H2-AB1"  "H2-DMB2"
+ [8] "H2-EB1"  "KRT10"   "MASP1"  
+
+$`05323`
+ [1] "CCL3"     "CCL5"     "CSF1"     "FLT1"     "H2-AA"    "H2-AB1"  
+ [7] "H2-DMB2"  "H2-EB1"   "TGFB2"    "TNFSF13"  "TNFSF13B"
+
+$`05140`
+[1] "C3"      "FCGR4"   "H2-AA"   "H2-AB1"  "H2-DMB2" "H2-EB1"  "NFKBIA" 
+[8] "TGFB2"  
+
+$`04060`
+ [1] "CCL3"      "CCL5"      "CCL8"      "CCR1"      "CCR3"      "CCR5"     
+ [7] "CD40"      "CRLF2"     "CSF1"      "CSF2RA"    "CXCL13"    "CXCL14"   
+[13] "CXCL16"    "CXCR4"     "EPOR"      "FLT1"      "IL15RA"    "IL2RG"    
+[19] "IL3RA"     "IL6RA"     "IL6ST"     "TGFB2"     "TGFBR1"    "TNFRSF12A"
+[25] "TNFSF12"   "TNFSF13"   "TNFSF13B"  "TNFSF8"   
+
+$`05144`
+[1] "CD40"  "SDC3"  "SDC4"  "TGFB2" "VCAM1"
+
+$`04145`
+ [1] "C3"      "CLEC7A"  "CYBB"    "FCGR4"   "H2-AA"   "H2-AB1"  "H2-D1"  
+ [8] "H2-DMB2" "H2-EB1"  "H2-K1"   "H2-M3"   "ITGA5"   "ITGAV"   "ITGB3"  
+[15] "MPO"     "MRC1"    "MRC2"    "RAB5C"   "RAB7B"   "TUBA1C"  "TUBA4A" 
+
+$`05310`
+[1] "CD40"    "H2-AA"   "H2-AB1"  "H2-DMB2" "H2-EB1" 
+
+$`05330`
+[1] "CD40"    "H2-AA"   "H2-AB1"  "H2-D1"   "H2-DMB2" "H2-EB1"  "H2-K1"  
+[8] "H2-M3"  
+
+$`05145`
+ [1] "ALOX5"   "CCR5"    "CD40"    "CHUK"    "H2-AA"   "H2-AB1"  "H2-DMB2"
+ [8] "H2-EB1"  "ITGA6"   "NFKBIA"  "TGFB2"  
+
+$`04710`
+[1] "BHLHE40" "CRY1"    "NR1D1"   "PER1"    "PER2"    "PER3"    "RORA"   
+
+$`00533`
+[1] "B3GNT7" "CHST1"  "CHST2" 
+

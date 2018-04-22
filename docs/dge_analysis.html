@@ -3,6 +3,7 @@
 <head><meta charset="utf-8" />
 <title>dge_analysis</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r79/three.min.js"></script>
 
 <style type="text/css">
     /*!
@@ -11780,42 +11781,9 @@ div#notebook {
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[3]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-r"><pre><span></span><span class="kp">options</span><span class="p">(</span>jupyter.plot_mimetypes <span class="o">=</span> <span class="kt">c</span><span class="p">(</span><span class="s">&quot;text/plain&quot;</span><span class="p">,</span> <span class="s">&quot;image/png&quot;</span> <span class="p">))</span>
-</pre></div>
-
-</div>
-</div>
-</div>
 
 </div>
 <div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-r"><pre><span></span><span class="kn">source</span><span class="p">(</span><span class="s">&quot;install_libraries.R&quot;</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[1]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-r"><pre><span></span><span class="kn">source</span><span class="p">(</span><span class="s">&quot;load_libraries.R&quot;</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
 
 <div class="output_wrapper">
 <div class="output">
@@ -11823,110 +11791,56 @@ div#notebook {
 
 <div class="output_area">
 
-<div class="prompt"></div>
-
+<div class="prompt"> </div>
 
 <div class="output_subarea output_stream output_stderr output_text">
-<pre>Loading required package: S4Vectors
-Loading required package: stats4
-Loading required package: BiocGenerics
-Loading required package: parallel
+<pre>Warning message in is.na(x[[i]]):
+“is.na() applied to non-(list or vector) of type &#39;environment&#39;”Warning message in rsqlite_fetch(res@ptr, n = n):
+“Don&#39;t need to call dbFetch() for statements, only for queries”</pre>
+</div>
+</div>
 
-Attaching package: ‘BiocGenerics’
+<div class="output_area">
 
-The following objects are masked from ‘package:parallel’:
+<div class="prompt"> </div>
 
-    clusterApply, clusterApplyLB, clusterCall, clusterEvalQ,
-    clusterExport, clusterMap, parApply, parCapply, parLapply,
-    parLapplyLB, parRapply, parSapply, parSapplyLB
-
-The following objects are masked from ‘package:stats’:
-
-    IQR, mad, sd, var, xtabs
-
-The following objects are masked from ‘package:base’:
-
-    anyDuplicated, append, as.data.frame, cbind, colMeans, colnames,
-    colSums, do.call, duplicated, eval, evalq, Filter, Find, get, grep,
-    grepl, intersect, is.unsorted, lapply, lengths, Map, mapply, match,
-    mget, order, paste, pmax, pmax.int, pmin, pmin.int, Position, rank,
-    rbind, Reduce, rowMeans, rownames, rowSums, sapply, setdiff, sort,
-    table, tapply, union, unique, unsplit, which, which.max, which.min
-
-
-Attaching package: ‘S4Vectors’
-
-The following object is masked from ‘package:base’:
-
-    expand.grid
-
-Loading required package: IRanges
-Loading required package: GenomicRanges
-Loading required package: GenomeInfoDb
-Loading required package: SummarizedExperiment
-Loading required package: Biobase
-Welcome to Bioconductor
-
-    Vignettes contain introductory material; view with
-    &#39;browseVignettes()&#39;. To cite Bioconductor, see
-    &#39;citation(&#34;Biobase&#34;)&#39;, and for packages &#39;citation(&#34;pkgname&#34;)&#39;.
-
-Loading required package: DelayedArray
-Loading required package: matrixStats
-
-Attaching package: ‘matrixStats’
-
-The following objects are masked from ‘package:Biobase’:
-
-    anyMissing, rowMedians
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>==========================================================================
+*
+*  Package WGCNA 1.63 loaded.
+*
+*    Important note: It appears that your system supports multi-threading,
+*    but it is not enabled within WGCNA in R. 
+*    To allow multi-threading within WGCNA with all available cores, use 
+*
+*          allowWGCNAThreads()
+*
+*    within R. Use disableWGCNAThreads() to disable threading if necessary.
+*    Alternatively, set the following environment variable on your system:
+*
+*          ALLOW_WGCNA_THREADS=&lt;number_of_processors&gt;
+*
+*    for example 
+*
+*          ALLOW_WGCNA_THREADS=4
+*
+*    To set the environment variable in linux bash shell, type 
+*
+*           export ALLOW_WGCNA_THREADS=4
+*
+*     before running R. Other operating systems or shells will
+*     have a similar command to achieve the same aim.
+*
+==========================================================================
 
 
-Attaching package: ‘DelayedArray’
-
-The following objects are masked from ‘package:matrixStats’:
-
-    colMaxs, colMins, colRanges, rowMaxs, rowMins, rowRanges
-
-The following object is masked from ‘package:base’:
-
-    apply
-
-
-Attaching package: ‘gplots’
-
-The following object is masked from ‘package:IRanges’:
-
-    space
-
-The following object is masked from ‘package:S4Vectors’:
-
-    space
-
-The following object is masked from ‘package:stats’:
-
-    lowess
-
-
-Attaching package: ‘plyr’
-
-The following object is masked from ‘package:matrixStats’:
-
-    count
-
-The following object is masked from ‘package:IRanges’:
-
-    desc
-
-The following object is masked from ‘package:S4Vectors’:
-
-    rename
-
-Loading required package: viridisLite
-Loading required package: AnnotationDbi
-
-Loading required package: BiasedUrn
-Loading required package: geneLenDataBase
-
+Allowing multi-threading with up to 4 threads.
+[1] &#34;preparing gene to GO mapping data...&#34;
+[1] &#34;preparing IC data...&#34;
+[1] &#34;preparing gene to GO mapping data...&#34;
+[1] &#34;preparing IC data...&#34;
+[1] &#34;preparing gene to GO mapping data...&#34;
+[1] &#34;preparing IC data...&#34;
 </pre>
 </div>
 </div>
@@ -11936,16 +11850,6 @@ Loading required package: geneLenDataBase
 
 </div>
 <div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[14]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-r"><pre><span></span><span class="kn">source</span><span class="p">(</span><span class="s">&quot;functions.R&quot;</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
@@ -11957,57 +11861,9 @@ Loading required package: geneLenDataBase
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[19]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-r"><pre><span></span><span class="c1"># Load the count table</span>
-<span class="c1">#counts = read.table(system(&quot;get -i 1184 &quot;, intern=T), sep=&quot;\t&quot;, header = 1, row.names=1)</span>
-counts <span class="o">=</span> read.table<span class="p">(</span><span class="s">&quot;../data/counts.tabular&quot;</span><span class="p">,</span> sep<span class="o">=</span><span class="s">&quot;\t&quot;</span><span class="p">,</span> header <span class="o">=</span> <span class="m">1</span><span class="p">,</span> row.names<span class="o">=</span><span class="m">1</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
 
 </div>
 <div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-r"><pre><span></span><span class="c1"># Map between Entrez Gene Identifiers and Gene Names (and description) </span>
-eg2name <span class="o">=</span> get_list<span class="p">(</span>org.Mm.egGENENAME<span class="p">)</span>
-<span class="c1"># Map between Gene Symbols and Entrez Gene Identifiers</span>
-symbol2eg <span class="o">=</span> get_list<span class="p">(</span>org.Mm.egSYMBOL2EG<span class="p">)</span>
-<span class="c1"># Map between RefSeq and Entrez Gene Identifiers</span>
-refseq2eg <span class="o">=</span> get_list<span class="p">(</span>org.Mm.egREFSEQ2EG<span class="p">)</span>
-<span class="c1"># Map between Gene Symbols and Gene Names (and description)</span>
-symbol2name <span class="o">=</span> <span class="kp">sapply</span><span class="p">(</span><span class="kp">names</span><span class="p">(</span>symbol2eg<span class="p">),</span> <span class="kr">function</span><span class="p">(</span>x<span class="p">)</span> <span class="kr">return</span><span class="p">(</span>eg2name<span class="p">[</span>symbol2eg<span class="p">[[</span>x<span class="p">]]]))</span>
-<span class="kp">head</span><span class="p">(</span>symbol2name<span class="p">)</span>
-<span class="c1"># Map between Entrez Gene Identifiers and KEGG pathways</span>
-eg2kegg<span class="o">=</span><span class="kp">as.list</span><span class="p">(</span>org.Mm.egPATH<span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[20]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-r"><pre><span></span><span class="c1"># get refseq ids for genes</span>
-refseq <span class="o">=</span> <span class="kp">sapply</span><span class="p">(</span><span class="kp">rownames</span><span class="p">(</span>counts<span class="p">),</span> <span class="kr">function</span><span class="p">(</span>x<span class="p">)</span> <span class="kr">return</span><span class="p">(</span>symbol2eg<span class="p">[[</span>x<span class="p">]]))</span> 
-<span class="kp">length</span><span class="p">(</span>refseq<span class="p">[</span><span class="kp">sapply</span><span class="p">(</span>refseq<span class="p">,</span> <span class="kp">is.null</span><span class="p">)])</span>
-to_change <span class="o">=</span> <span class="kp">names</span><span class="p">(</span>refseq<span class="p">[</span><span class="kp">sapply</span><span class="p">(</span>refseq<span class="p">,</span> <span class="kp">is.null</span><span class="p">)])</span>
-</pre></div>
-
-</div>
-</div>
-</div>
 
 <div class="output_wrapper">
 <div class="output">
@@ -12015,12 +11871,25 @@ to_change <span class="o">=</span> <span class="kp">names</span><span class="p">
 
 <div class="output_area">
 
-<div class="prompt"></div>
-
+<div class="prompt"> </div>
 
 
 <div class="output_html rendered_html output_subarea ">
-582
+<dl>
+	<dt>$Pzp</dt>
+		<dd><strong>$`11287`</strong> = 'pregnancy zone protein'</dd>
+	<dt>$Aanat</dt>
+		<dd><strong>$`11298`</strong> = 'arylalkylamine N-acetyltransferase'</dd>
+	<dt>$Aatk</dt>
+		<dd><strong>$`11302`</strong> = 'apoptosis-associated tyrosine kinase'</dd>
+	<dt>$Abca1</dt>
+		<dd><strong>$`11303`</strong> = 'ATP-binding cassette, sub-family A (ABC1), member 1'</dd>
+	<dt>$Abca4</dt>
+		<dd><strong>$`11304`</strong> = 'ATP-binding cassette, sub-family A (ABC1), member 4'</dd>
+	<dt>$Abca2</dt>
+		<dd><strong>$`11305`</strong> = 'ATP-binding cassette, sub-family A (ABC1), member 2'</dd>
+</dl>
+
 </div>
 
 </div>
@@ -12030,17 +11899,6 @@ to_change <span class="o">=</span> <span class="kp">names</span><span class="p">
 
 </div>
 <div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[25]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-r"><pre><span></span><span class="kp">head</span><span class="p">(</span>to_change<span class="p">)</span>
-search_name<span class="p">(</span><span class="s">&#39;0610007P14Rik&#39;</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
 
 <div class="output_wrapper">
 <div class="output">
@@ -12048,32 +11906,11 @@ search_name<span class="p">(</span><span class="s">&#39;0610007P14Rik&#39;</span
 
 <div class="output_area">
 
-<div class="prompt"></div>
-
-
-
-<div class="output_html rendered_html output_subarea ">
-<ol class=list-inline>
-	<li>'0610007P14Rik'</li>
-	<li>'0610011F06Rik'</li>
-	<li>'1110001J03Rik'</li>
-	<li>'1110007C09Rik'</li>
-	<li>'1110037F02Rik'</li>
-	<li>'1190002F15Rik'</li>
-</ol>
-
-</div>
-
-</div>
-
-<div class="output_area">
-
-<div class="prompt"></div>
-
+<div class="prompt"> </div>
 
 
 <div class="output_html rendered_html output_subarea ">
-'Erg28'
+312
 </div>
 
 </div>
@@ -12083,38 +11920,9 @@ search_name<span class="p">(</span><span class="s">&#39;0610007P14Rik&#39;</span
 
 </div>
 <div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[30]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-r"><pre><span></span>changes <span class="o">=</span> <span class="kp">sapply</span><span class="p">(</span>to_change<span class="p">,</span> search_name<span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
 
 </div>
 <div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[31]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-r"><pre><span></span>doubled <span class="o">=</span> <span class="kp">sapply</span><span class="p">(</span><span class="kp">names</span><span class="p">(</span>changes<span class="p">),</span> <span class="kr">function</span><span class="p">(</span>x<span class="p">)</span> <span class="kr">return</span><span class="p">(</span><span class="kp">length</span><span class="p">(</span>changes<span class="p">[[</span>x<span class="p">]])</span><span class="o">&gt;</span><span class="m">1</span><span class="p">))</span>
-<span class="kp">length</span><span class="p">(</span>changes<span class="p">[</span>doubled<span class="p">])</span>  
-single <span class="o">=</span> changes<span class="p">[</span><span class="o">!</span>doubled<span class="p">]</span>
-duplicated <span class="o">=</span> single <span class="o">%in%</span> <span class="kp">rownames</span><span class="p">(</span>counts<span class="p">)</span>
-<span class="kp">length</span><span class="p">(</span><span class="kp">single</span><span class="p">[</span><span class="kp">duplicated</span><span class="p">])</span>
-non_duplicated <span class="o">=</span> <span class="kp">single</span><span class="p">[</span><span class="o">!</span><span class="kp">duplicated</span><span class="p">]</span>
-duplicated_2 <span class="o">=</span> <span class="kp">duplicated</span><span class="p">(</span>non_duplicated<span class="p">)</span>
-<span class="kp">sum</span><span class="p">(</span>duplicated_2<span class="p">)</span>
-replacements <span class="o">=</span> non_duplicated<span class="p">[</span><span class="o">!</span>duplicated_2<span class="p">]</span>                 
-<span class="kp">length</span><span class="p">(</span>replacements<span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
 
 <div class="output_wrapper">
 <div class="output">
@@ -12122,48 +11930,11 @@ replacements <span class="o">=</span> non_duplicated<span class="p">[</span><spa
 
 <div class="output_area">
 
-<div class="prompt"></div>
-
-
-
-<div class="output_html rendered_html output_subarea ">
-17
-</div>
-
-</div>
-
-<div class="output_area">
-
-<div class="prompt"></div>
-
+<div class="prompt"> </div>
 
 
 <div class="output_html rendered_html output_subarea ">
-10
-</div>
-
-</div>
-
-<div class="output_area">
-
-<div class="prompt"></div>
-
-
-
-<div class="output_html rendered_html output_subarea ">
-40
-</div>
-
-</div>
-
-<div class="output_area">
-
-<div class="prompt"></div>
-
-
-
-<div class="output_html rendered_html output_subarea ">
-515
+'ttttttt'
 </div>
 
 </div>
@@ -12173,23 +11944,6 @@ replacements <span class="o">=</span> non_duplicated<span class="p">[</span><spa
 
 </div>
 <div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[32]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-r"><pre><span></span><span class="c1"># Fix name of the some genes (identified if no Entrez id found for them and with new names found)</span>
-replacements <span class="o">=</span> <span class="kp">unlist</span><span class="p">(</span>replacements<span class="p">)</span>
-<span class="c1">#rownames(counts)[rownames(counts) == &quot;1700112E06Rik&quot;] = &quot;Lrmda&quot;</span>
-new_names <span class="o">=</span> <span class="kp">rownames</span><span class="p">(</span>counts<span class="p">)</span>
-<span class="kp">names</span><span class="p">(</span>new_names<span class="p">)</span> <span class="o">=</span> <span class="kp">rownames</span><span class="p">(</span>counts<span class="p">)</span>
-new_names<span class="p">[</span><span class="kp">names</span><span class="p">(</span>replacements<span class="p">)]</span> <span class="o">=</span> replacements
-<span class="kp">head</span><span class="p">(</span>new_names<span class="p">)</span>
-<span class="kp">rownames</span><span class="p">(</span>counts<span class="p">)</span> <span class="o">=</span> new_names
-</pre></div>
-
-</div>
-</div>
-</div>
 
 <div class="output_wrapper">
 <div class="output">
@@ -12197,8 +11951,28 @@ new_names<span class="p">[</span><span class="kp">names</span><span class="p">(<
 
 <div class="output_area">
 
-<div class="prompt"></div>
+<div class="prompt"> </div>
 
+
+<div class="output_html rendered_html output_subarea ">
+277
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"> </div>
 
 
 <div class="output_html rendered_html output_subarea ">
@@ -12206,7 +11980,7 @@ new_names<span class="p">[</span><span class="kp">names</span><span class="p">(<
 	<dt>0610005C13Rik</dt>
 		<dd>'0610005C13Rik'</dd>
 	<dt>0610007P14Rik</dt>
-		<dd>'Erg28'</dd>
+		<dd>'0610007P14Rik'</dd>
 	<dt>0610009B22Rik</dt>
 		<dd>'0610009B22Rik'</dd>
 	<dt>0610009L18Rik</dt>
@@ -12226,17 +12000,6 @@ new_names<span class="p">[</span><span class="kp">names</span><span class="p">(<
 
 </div>
 <div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[33]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-r"><pre><span></span>refseq_check <span class="o">=</span> <span class="kp">sapply</span><span class="p">(</span><span class="kp">rownames</span><span class="p">(</span>counts<span class="p">),</span> <span class="kr">function</span><span class="p">(</span>x<span class="p">)</span> <span class="kr">return</span><span class="p">(</span>symbol2eg<span class="p">[[</span>x<span class="p">]]))</span> 
-<span class="kp">length</span><span class="p">(</span>refseq<span class="p">[</span><span class="kp">sapply</span><span class="p">(</span>refseq_check<span class="p">,</span> <span class="kp">is.null</span><span class="p">)])</span>
-</pre></div>
-
-</div>
-</div>
-</div>
 
 <div class="output_wrapper">
 <div class="output">
@@ -12244,12 +12007,47 @@ new_names<span class="p">[</span><span class="kp">names</span><span class="p">(<
 
 <div class="output_area">
 
-<div class="prompt"></div>
-
+<div class="prompt"> </div>
 
 
 <div class="output_html rendered_html output_subarea ">
-68
+<table>
+<thead><tr><th></th><th scope=col>GF_104w_F_1_2</th><th scope=col>GF_104w_F_2_2</th><th scope=col>GF_104w_F_3_2</th><th scope=col>GF_104w_M_1_2</th><th scope=col>GF_104w_M_2_2</th><th scope=col>GF_52w_M_1_2</th><th scope=col>GF_52w_M_2_2</th><th scope=col>GF_52w_M_3_2</th><th scope=col>GF_52w_M_4_2</th><th scope=col>GF_8w_M_1_2</th><th scope=col>⋯</th><th scope=col>SPF_8w_F_1_2</th><th scope=col>SPF_8w_F_2_2</th><th scope=col>SPF_8w_F_3_2</th><th scope=col>SPF_8w_F_4_2</th><th scope=col>SPF_8w_F_5_2</th><th scope=col>GF_8w_F_1_2</th><th scope=col>GF_8w_F_2_2</th><th scope=col>GF_8w_F_3_2</th><th scope=col>GF_8w_F_4_2</th><th scope=col>GF_8w_F_5_2</th></tr></thead>
+<tbody>
+	<tr><th scope=row>0610005C13Rik</th><td>   0</td><td>   0</td><td>   0</td><td>   2</td><td>   2</td><td>   1</td><td>  5 </td><td>  5 </td><td>  10</td><td>  7 </td><td>⋯   </td><td>   3</td><td>  3 </td><td>   2</td><td>  2 </td><td>   0</td><td> 17 </td><td>  0 </td><td>   2</td><td>  5 </td><td>  0 </td></tr>
+	<tr><th scope=row>0610007P14Rik</th><td> 954</td><td> 704</td><td> 999</td><td>1002</td><td>1577</td><td> 604</td><td>537 </td><td>459 </td><td>1021</td><td>499 </td><td>⋯   </td><td> 654</td><td>152 </td><td> 705</td><td>698 </td><td> 891</td><td>837 </td><td>627 </td><td> 605</td><td>563 </td><td>631 </td></tr>
+	<tr><th scope=row>0610009B22Rik</th><td>1122</td><td>1098</td><td>1296</td><td>1385</td><td>2475</td><td>1234</td><td>887 </td><td>907 </td><td>1214</td><td>784 </td><td>⋯   </td><td>1087</td><td>436 </td><td>1103</td><td>996 </td><td>1346</td><td>969 </td><td>938 </td><td>1128</td><td>911 </td><td>853 </td></tr>
+	<tr><th scope=row>0610009L18Rik</th><td>  31</td><td>  34</td><td>  20</td><td>  23</td><td>  61</td><td>  38</td><td> 27 </td><td> 20 </td><td>   6</td><td> 51 </td><td>⋯   </td><td>  36</td><td> 22 </td><td>  43</td><td> 79 </td><td>  67</td><td> 45 </td><td> 18 </td><td>  11</td><td> 43 </td><td> 19 </td></tr>
+	<tr><th scope=row>0610009O20Rik</th><td> 239</td><td> 262</td><td> 292</td><td> 256</td><td> 432</td><td> 356</td><td>354 </td><td>353 </td><td> 428</td><td>298 </td><td>⋯   </td><td> 235</td><td>204 </td><td> 239</td><td>175 </td><td> 172</td><td>216 </td><td>146 </td><td> 268</td><td>289 </td><td>210 </td></tr>
+	<tr><th scope=row>0610010B08Rik</th><td>   0</td><td>   0</td><td>   0</td><td>   0</td><td>   0</td><td>   0</td><td>  0 </td><td>  0 </td><td>   0</td><td>  0 </td><td>⋯   </td><td>   0</td><td>  0 </td><td>   0</td><td>  0 </td><td>   0</td><td>  0 </td><td>  0 </td><td>   0</td><td>  0 </td><td>  0 </td></tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+
+<div class="output_area">
+
+<div class="prompt"> </div>
+
+
+<div class="output_html rendered_html output_subarea ">
+<dl class=dl-horizontal>
+	<dt>0610005C13Rik</dt>
+		<dd>1122</dd>
+	<dt>0610007P14Rik</dt>
+		<dd>1185</dd>
+	<dt>0610009B22Rik</dt>
+		<dd>795</dd>
+	<dt>0610009L18Rik</dt>
+		<dd>619</dd>
+	<dt>0610009O20Rik</dt>
+		<dd>2404</dd>
+	<dt>0610010B08Rik</dt>
+		<dd>27229</dd>
+</dl>
+
 </div>
 
 </div>
@@ -12259,35 +12057,6 @@ new_names<span class="p">[</span><span class="kp">names</span><span class="p">(<
 
 </div>
 <div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[34]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-r"><pre><span></span><span class="c1"># Remove the columns with spurious data</span>
-to_remove <span class="o">=</span> <span class="kt">c</span><span class="p">(</span><span class="s">&quot;SPF_8w_F_2_2&quot;</span><span class="p">)</span>
-counts <span class="o">=</span> counts<span class="p">[,</span><span class="o">!</span><span class="kp">names</span><span class="p">(</span>counts<span class="p">)</span> <span class="o">%in%</span> to_remove<span class="p">]</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[35]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-r"><pre><span></span><span class="c1"># Extract the metadata</span>
-metadata <span class="o">=</span> <span class="kp">t</span><span class="p">(</span><span class="kp">sapply</span><span class="p">(</span><span class="kp">sapply</span><span class="p">(</span><span class="kp">colnames</span><span class="p">(</span>counts<span class="p">),</span> <span class="kp">strsplit</span><span class="p">,</span> split <span class="o">=</span> <span class="s">&quot;_&quot;</span><span class="p">),</span> <span class="kp">unlist</span><span class="p">))</span>
-metadata <span class="o">=</span> metadata<span class="p">[,</span><span class="m">-5</span><span class="p">]</span>
-<span class="kp">colnames</span><span class="p">(</span>metadata<span class="p">)</span> <span class="o">=</span> <span class="kt">c</span><span class="p">(</span><span class="s">&quot;type&quot;</span><span class="p">,</span> <span class="s">&quot;age&quot;</span><span class="p">,</span> <span class="s">&quot;gender&quot;</span><span class="p">,</span> <span class="s">&quot;replicate&quot;</span><span class="p">)</span>
-metadata
-</pre></div>
-
-</div>
-</div>
-</div>
 
 <div class="output_wrapper">
 <div class="output">
@@ -12295,8 +12064,31 @@ metadata
 
 <div class="output_area">
 
-<div class="prompt"></div>
+<div class="prompt"> </div>
 
+
+<div class="output_html rendered_html output_subarea ">
+37
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"> </div>
 
 
 <div class="output_html rendered_html output_subarea ">
@@ -12374,6 +12166,9 @@ metadata
 </div>
 
 </div>
+<div class="cell border-box-sizing code_cell rendered">
+
+</div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
@@ -12383,37 +12178,9 @@ metadata
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[60]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-r"><pre><span></span>complexif_stats <span class="o">=</span> <span class="kt">data.frame</span><span class="p">(</span><span class="kt">matrix</span><span class="p">(</span><span class="m">0</span><span class="p">,</span> nrow<span class="o">=</span><span class="m">0</span><span class="p">,</span> ncol<span class="o">=</span><span class="m">4</span><span class="p">))</span>
-<span class="kp">colnames</span><span class="p">(</span>complexif_stats<span class="p">)</span> <span class="o">=</span> <span class="kt">c</span><span class="p">(</span><span class="s">&quot;Design&quot;</span><span class="p">,</span> <span class="s">&quot;Reduced&quot;</span><span class="p">,</span> <span class="s">&quot;Tested&quot;</span><span class="p">,</span> <span class="s">&quot;Genes with LRT padj &lt; 0.05&quot;</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
 
 </div>
 <div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[61]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-r"><pre><span></span><span class="c1"># Design: gender</span>
-dds <span class="o">=</span> DESeqDataSetFromMatrix<span class="p">(</span>
-        countData <span class="o">=</span> counts<span class="p">,</span>
-        colData <span class="o">=</span> metadata<span class="p">,</span>
-        design <span class="o">=</span> <span class="o">~</span> gender<span class="p">)</span>
-dge <span class="o">=</span> DESeq<span class="p">(</span>dds<span class="p">,</span> test<span class="o">=</span><span class="s">&quot;LRT&quot;</span><span class="p">,</span> reduced <span class="o">=</span> <span class="o">~</span> <span class="m">1</span><span class="p">)</span>
-LRT_res <span class="o">=</span> results<span class="p">(</span>dge<span class="p">,</span> alpha<span class="o">=</span><span class="m">0.05</span><span class="p">)</span>
-complexif_stats<span class="p">[</span><span class="kp">nrow</span><span class="p">(</span>complexif_stats<span class="p">)</span> <span class="o">+</span> <span class="m">1</span><span class="p">,]</span> <span class="o">=</span> <span class="kt">c</span><span class="p">(</span><span class="s">&quot;gender&quot;</span><span class="p">,</span> <span class="s">&quot;1&quot;</span><span class="p">,</span> <span class="s">&quot;gender&quot;</span><span class="p">,</span> get_sign_padj<span class="p">(</span>LRT_res<span class="p">))</span>
-</pre></div>
-
-</div>
-</div>
-</div>
 
 <div class="output_wrapper">
 <div class="output">
@@ -12421,8 +12188,7 @@ complexif_stats<span class="p">[</span><span class="kp">nrow</span><span class="
 
 <div class="output_area">
 
-<div class="prompt"></div>
-
+<div class="prompt"> </div>
 
 <div class="output_subarea output_stream output_stderr output_text">
 <pre>estimating size factors
@@ -12445,23 +12211,6 @@ fitting model and testing
 
 </div>
 <div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[62]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-r"><pre><span></span><span class="c1"># Design: type</span>
-dds <span class="o">=</span> DESeqDataSetFromMatrix<span class="p">(</span>
-        countData <span class="o">=</span> counts<span class="p">,</span>
-        colData <span class="o">=</span> metadata<span class="p">,</span>
-        design <span class="o">=</span> <span class="o">~</span> type<span class="p">)</span>
-dge <span class="o">=</span> DESeq<span class="p">(</span>dds<span class="p">,</span> test<span class="o">=</span><span class="s">&quot;LRT&quot;</span><span class="p">,</span> reduced <span class="o">=</span> <span class="o">~</span> <span class="m">1</span><span class="p">)</span>
-LRT_res <span class="o">=</span> results<span class="p">(</span>dge<span class="p">,</span> alpha<span class="o">=</span><span class="m">0.05</span><span class="p">)</span>
-complexif_stats<span class="p">[</span><span class="kp">nrow</span><span class="p">(</span>complexif_stats<span class="p">)</span> <span class="o">+</span> <span class="m">1</span><span class="p">,]</span> <span class="o">=</span> <span class="kt">c</span><span class="p">(</span><span class="s">&quot;type&quot;</span><span class="p">,</span> <span class="s">&quot;1&quot;</span><span class="p">,</span> <span class="s">&quot;type&quot;</span><span class="p">,</span> get_sign_padj<span class="p">(</span>LRT_res<span class="p">))</span>
-</pre></div>
-
-</div>
-</div>
-</div>
 
 <div class="output_wrapper">
 <div class="output">
@@ -12469,8 +12218,7 @@ complexif_stats<span class="p">[</span><span class="kp">nrow</span><span class="
 
 <div class="output_area">
 
-<div class="prompt"></div>
-
+<div class="prompt"> </div>
 
 <div class="output_subarea output_stream output_stderr output_text">
 <pre>estimating size factors
@@ -12493,23 +12241,6 @@ fitting model and testing
 
 </div>
 <div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[63]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-r"><pre><span></span><span class="c1"># Design: age</span>
-dds <span class="o">=</span> DESeqDataSetFromMatrix<span class="p">(</span>
-        countData <span class="o">=</span> counts<span class="p">,</span>
-        colData <span class="o">=</span> metadata<span class="p">,</span>
-        design <span class="o">=</span> <span class="o">~</span> age<span class="p">)</span>
-dge <span class="o">=</span> DESeq<span class="p">(</span>dds<span class="p">,</span> test<span class="o">=</span><span class="s">&quot;LRT&quot;</span><span class="p">,</span> reduced <span class="o">=</span> <span class="o">~</span> <span class="m">1</span><span class="p">)</span>
-LRT_res <span class="o">=</span> results<span class="p">(</span>dge<span class="p">,</span> alpha<span class="o">=</span><span class="m">0.05</span><span class="p">)</span>
-complexif_stats<span class="p">[</span><span class="kp">nrow</span><span class="p">(</span>complexif_stats<span class="p">)</span> <span class="o">+</span> <span class="m">1</span><span class="p">,]</span> <span class="o">=</span> <span class="kt">c</span><span class="p">(</span><span class="s">&quot;age&quot;</span><span class="p">,</span> <span class="s">&quot;1&quot;</span><span class="p">,</span> <span class="s">&quot;age&quot;</span><span class="p">,</span> get_sign_padj<span class="p">(</span>LRT_res<span class="p">))</span>
-</pre></div>
-
-</div>
-</div>
-</div>
 
 <div class="output_wrapper">
 <div class="output">
@@ -12517,8 +12248,7 @@ complexif_stats<span class="p">[</span><span class="kp">nrow</span><span class="
 
 <div class="output_area">
 
-<div class="prompt"></div>
-
+<div class="prompt"> </div>
 
 <div class="output_subarea output_stream output_stderr output_text">
 <pre>estimating size factors
@@ -12541,23 +12271,6 @@ fitting model and testing
 
 </div>
 <div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[64]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-r"><pre><span></span><span class="c1"># Design: gender + type</span>
-dds <span class="o">=</span> DESeqDataSetFromMatrix<span class="p">(</span>
-        countData <span class="o">=</span> counts<span class="p">,</span>
-        colData <span class="o">=</span> metadata<span class="p">,</span>
-        design <span class="o">=</span> <span class="o">~</span> gender <span class="o">+</span> type<span class="p">)</span>
-dge <span class="o">=</span> DESeq<span class="p">(</span>dds<span class="p">,</span> test<span class="o">=</span><span class="s">&quot;LRT&quot;</span><span class="p">,</span> reduced <span class="o">=</span> <span class="o">~</span> gender<span class="p">)</span>
-LRT_res <span class="o">=</span> results<span class="p">(</span>dge<span class="p">,</span> alpha<span class="o">=</span><span class="m">0.05</span><span class="p">)</span>
-complexif_stats<span class="p">[</span><span class="kp">nrow</span><span class="p">(</span>complexif_stats<span class="p">)</span> <span class="o">+</span> <span class="m">1</span><span class="p">,]</span> <span class="o">=</span> <span class="kt">c</span><span class="p">(</span><span class="s">&quot;gender + type&quot;</span><span class="p">,</span> <span class="s">&quot;gender&quot;</span><span class="p">,</span> <span class="s">&quot;type&quot;</span><span class="p">,</span> get_sign_padj<span class="p">(</span>LRT_res<span class="p">))</span>
-</pre></div>
-
-</div>
-</div>
-</div>
 
 <div class="output_wrapper">
 <div class="output">
@@ -12565,8 +12278,7 @@ complexif_stats<span class="p">[</span><span class="kp">nrow</span><span class="
 
 <div class="output_area">
 
-<div class="prompt"></div>
-
+<div class="prompt"> </div>
 
 <div class="output_subarea output_stream output_stderr output_text">
 <pre>estimating size factors
@@ -12589,23 +12301,6 @@ fitting model and testing
 
 </div>
 <div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[65]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-r"><pre><span></span><span class="c1"># Design: gender + age</span>
-dds <span class="o">=</span> DESeqDataSetFromMatrix<span class="p">(</span>
-        countData <span class="o">=</span> counts<span class="p">,</span>
-        colData <span class="o">=</span> metadata<span class="p">,</span>
-        design <span class="o">=</span> <span class="o">~</span> gender <span class="o">+</span> age<span class="p">)</span>
-dge <span class="o">=</span> DESeq<span class="p">(</span>dds<span class="p">,</span> test<span class="o">=</span><span class="s">&quot;LRT&quot;</span><span class="p">,</span> reduced <span class="o">=</span> <span class="o">~</span> gender<span class="p">)</span>
-LRT_res <span class="o">=</span> results<span class="p">(</span>dge<span class="p">,</span> alpha<span class="o">=</span><span class="m">0.05</span><span class="p">)</span>
-complexif_stats<span class="p">[</span><span class="kp">nrow</span><span class="p">(</span>complexif_stats<span class="p">)</span> <span class="o">+</span> <span class="m">1</span><span class="p">,]</span> <span class="o">=</span> <span class="kt">c</span><span class="p">(</span><span class="s">&quot;gender + age&quot;</span><span class="p">,</span> <span class="s">&quot;gender&quot;</span><span class="p">,</span> <span class="s">&quot;age&quot;</span><span class="p">,</span> get_sign_padj<span class="p">(</span>LRT_res<span class="p">))</span>
-</pre></div>
-
-</div>
-</div>
-</div>
 
 <div class="output_wrapper">
 <div class="output">
@@ -12613,8 +12308,7 @@ complexif_stats<span class="p">[</span><span class="kp">nrow</span><span class="
 
 <div class="output_area">
 
-<div class="prompt"></div>
-
+<div class="prompt"> </div>
 
 <div class="output_subarea output_stream output_stderr output_text">
 <pre>estimating size factors
@@ -12637,23 +12331,6 @@ fitting model and testing
 
 </div>
 <div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[66]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-r"><pre><span></span><span class="c1"># Design: type + gender</span>
-dds <span class="o">=</span> DESeqDataSetFromMatrix<span class="p">(</span>
-        countData <span class="o">=</span> counts<span class="p">,</span>
-        colData <span class="o">=</span> metadata<span class="p">,</span>
-        design <span class="o">=</span> <span class="o">~</span> type <span class="o">+</span> gender<span class="p">)</span>
-dge <span class="o">=</span> DESeq<span class="p">(</span>dds<span class="p">,</span> test<span class="o">=</span><span class="s">&quot;LRT&quot;</span><span class="p">,</span> reduced <span class="o">=</span> <span class="o">~</span> type<span class="p">)</span>
-LRT_res <span class="o">=</span> results<span class="p">(</span>dge<span class="p">,</span> alpha<span class="o">=</span><span class="m">0.05</span><span class="p">)</span>
-complexif_stats<span class="p">[</span><span class="kp">nrow</span><span class="p">(</span>complexif_stats<span class="p">)</span> <span class="o">+</span> <span class="m">1</span><span class="p">,]</span> <span class="o">=</span> <span class="kt">c</span><span class="p">(</span><span class="s">&quot;type + gender&quot;</span><span class="p">,</span> <span class="s">&quot;type&quot;</span><span class="p">,</span> <span class="s">&quot;gender&quot;</span><span class="p">,</span> get_sign_padj<span class="p">(</span>LRT_res<span class="p">))</span>
-</pre></div>
-
-</div>
-</div>
-</div>
 
 <div class="output_wrapper">
 <div class="output">
@@ -12661,8 +12338,7 @@ complexif_stats<span class="p">[</span><span class="kp">nrow</span><span class="
 
 <div class="output_area">
 
-<div class="prompt"></div>
-
+<div class="prompt"> </div>
 
 <div class="output_subarea output_stream output_stderr output_text">
 <pre>estimating size factors
@@ -12685,23 +12361,6 @@ fitting model and testing
 
 </div>
 <div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[67]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-r"><pre><span></span><span class="c1"># Design: type + age</span>
-dds <span class="o">=</span> DESeqDataSetFromMatrix<span class="p">(</span>
-        countData <span class="o">=</span> counts<span class="p">,</span>
-        colData <span class="o">=</span> metadata<span class="p">,</span>
-        design <span class="o">=</span> <span class="o">~</span> type <span class="o">+</span> age<span class="p">)</span>
-dge <span class="o">=</span> DESeq<span class="p">(</span>dds<span class="p">,</span> test<span class="o">=</span><span class="s">&quot;LRT&quot;</span><span class="p">,</span> reduced <span class="o">=</span> <span class="o">~</span> type<span class="p">)</span>
-LRT_res <span class="o">=</span> results<span class="p">(</span>dge<span class="p">,</span> alpha<span class="o">=</span><span class="m">0.05</span><span class="p">)</span>
-complexif_stats<span class="p">[</span><span class="kp">nrow</span><span class="p">(</span>complexif_stats<span class="p">)</span> <span class="o">+</span> <span class="m">1</span><span class="p">,]</span> <span class="o">=</span> <span class="kt">c</span><span class="p">(</span><span class="s">&quot;type + age&quot;</span><span class="p">,</span> <span class="s">&quot;type&quot;</span><span class="p">,</span> <span class="s">&quot;age&quot;</span><span class="p">,</span> get_sign_padj<span class="p">(</span>LRT_res<span class="p">))</span>
-</pre></div>
-
-</div>
-</div>
-</div>
 
 <div class="output_wrapper">
 <div class="output">
@@ -12709,8 +12368,7 @@ complexif_stats<span class="p">[</span><span class="kp">nrow</span><span class="
 
 <div class="output_area">
 
-<div class="prompt"></div>
-
+<div class="prompt"> </div>
 
 <div class="output_subarea output_stream output_stderr output_text">
 <pre>estimating size factors
@@ -12733,23 +12391,6 @@ fitting model and testing
 
 </div>
 <div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[68]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-r"><pre><span></span><span class="c1"># Design: age + gender</span>
-dds <span class="o">=</span> DESeqDataSetFromMatrix<span class="p">(</span>
-        countData <span class="o">=</span> counts<span class="p">,</span>
-        colData <span class="o">=</span> metadata<span class="p">,</span>
-        design <span class="o">=</span> <span class="o">~</span> age <span class="o">+</span> gender<span class="p">)</span>
-dge <span class="o">=</span> DESeq<span class="p">(</span>dds<span class="p">,</span> test<span class="o">=</span><span class="s">&quot;LRT&quot;</span><span class="p">,</span> reduced <span class="o">=</span> <span class="o">~</span> age<span class="p">)</span>
-LRT_res <span class="o">=</span> results<span class="p">(</span>dge<span class="p">,</span> alpha<span class="o">=</span><span class="m">0.05</span><span class="p">)</span>
-complexif_stats<span class="p">[</span><span class="kp">nrow</span><span class="p">(</span>complexif_stats<span class="p">)</span> <span class="o">+</span> <span class="m">1</span><span class="p">,]</span> <span class="o">=</span> <span class="kt">c</span><span class="p">(</span><span class="s">&quot;age + gender&quot;</span><span class="p">,</span> <span class="s">&quot;age&quot;</span><span class="p">,</span> <span class="s">&quot;gender&quot;</span><span class="p">,</span> get_sign_padj<span class="p">(</span>LRT_res<span class="p">))</span>
-</pre></div>
-
-</div>
-</div>
-</div>
 
 <div class="output_wrapper">
 <div class="output">
@@ -12757,8 +12398,7 @@ complexif_stats<span class="p">[</span><span class="kp">nrow</span><span class="
 
 <div class="output_area">
 
-<div class="prompt"></div>
-
+<div class="prompt"> </div>
 
 <div class="output_subarea output_stream output_stderr output_text">
 <pre>estimating size factors
@@ -12781,23 +12421,6 @@ fitting model and testing
 
 </div>
 <div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[69]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-r"><pre><span></span><span class="c1"># Design: age + type</span>
-dds <span class="o">=</span> DESeqDataSetFromMatrix<span class="p">(</span>
-        countData <span class="o">=</span> counts<span class="p">,</span>
-        colData <span class="o">=</span> metadata<span class="p">,</span>
-        design <span class="o">=</span> <span class="o">~</span> age <span class="o">+</span> type<span class="p">)</span>
-dge <span class="o">=</span> DESeq<span class="p">(</span>dds<span class="p">,</span> test<span class="o">=</span><span class="s">&quot;LRT&quot;</span><span class="p">,</span> reduced <span class="o">=</span> <span class="o">~</span> age<span class="p">)</span>
-LRT_res <span class="o">=</span> results<span class="p">(</span>dge<span class="p">,</span> alpha<span class="o">=</span><span class="m">0.05</span><span class="p">)</span>
-complexif_stats<span class="p">[</span><span class="kp">nrow</span><span class="p">(</span>complexif_stats<span class="p">)</span> <span class="o">+</span> <span class="m">1</span><span class="p">,]</span> <span class="o">=</span> <span class="kt">c</span><span class="p">(</span><span class="s">&quot;age + type&quot;</span><span class="p">,</span> <span class="s">&quot;age&quot;</span><span class="p">,</span> <span class="s">&quot;type&quot;</span><span class="p">,</span> get_sign_padj<span class="p">(</span>LRT_res<span class="p">))</span>
-</pre></div>
-
-</div>
-</div>
-</div>
 
 <div class="output_wrapper">
 <div class="output">
@@ -12805,8 +12428,7 @@ complexif_stats<span class="p">[</span><span class="kp">nrow</span><span class="
 
 <div class="output_area">
 
-<div class="prompt"></div>
-
+<div class="prompt"> </div>
 
 <div class="output_subarea output_stream output_stderr output_text">
 <pre>estimating size factors
@@ -12829,23 +12451,6 @@ fitting model and testing
 
 </div>
 <div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[70]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-r"><pre><span></span><span class="c1"># Design: gender + type + gender:type</span>
-dds <span class="o">=</span> DESeqDataSetFromMatrix<span class="p">(</span>
-        countData <span class="o">=</span> counts<span class="p">,</span>
-        colData <span class="o">=</span> metadata<span class="p">,</span>
-        design <span class="o">=</span> <span class="o">~</span> gender <span class="o">+</span> type <span class="o">+</span> gender<span class="o">:</span>type<span class="p">)</span>
-dge <span class="o">=</span> DESeq<span class="p">(</span>dds<span class="p">,</span> test<span class="o">=</span><span class="s">&quot;LRT&quot;</span><span class="p">,</span> reduced <span class="o">=</span> <span class="o">~</span> gender <span class="o">+</span> type<span class="p">)</span>
-LRT_res <span class="o">=</span> results<span class="p">(</span>dge<span class="p">,</span> alpha<span class="o">=</span><span class="m">0.05</span><span class="p">)</span>
-complexif_stats<span class="p">[</span><span class="kp">nrow</span><span class="p">(</span>complexif_stats<span class="p">)</span> <span class="o">+</span> <span class="m">1</span><span class="p">,]</span> <span class="o">=</span> <span class="kt">c</span><span class="p">(</span><span class="s">&quot;gender + type + gender:type&quot;</span><span class="p">,</span> <span class="s">&quot;gender + type&quot;</span><span class="p">,</span> <span class="s">&quot;gender:type&quot;</span><span class="p">,</span> get_sign_padj<span class="p">(</span>LRT_res<span class="p">))</span>
-</pre></div>
-
-</div>
-</div>
-</div>
 
 <div class="output_wrapper">
 <div class="output">
@@ -12853,8 +12458,7 @@ complexif_stats<span class="p">[</span><span class="kp">nrow</span><span class="
 
 <div class="output_area">
 
-<div class="prompt"></div>
-
+<div class="prompt"> </div>
 
 <div class="output_subarea output_stream output_stderr output_text">
 <pre>estimating size factors
@@ -12877,23 +12481,6 @@ fitting model and testing
 
 </div>
 <div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[71]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-r"><pre><span></span><span class="c1"># Design: gender + age + gender:age</span>
-dds <span class="o">=</span> DESeqDataSetFromMatrix<span class="p">(</span>
-        countData <span class="o">=</span> counts<span class="p">,</span>
-        colData <span class="o">=</span> metadata<span class="p">,</span>
-        design <span class="o">=</span> <span class="o">~</span> gender <span class="o">+</span> age <span class="o">+</span> gender<span class="o">:</span>age<span class="p">)</span>
-dge <span class="o">=</span> DESeq<span class="p">(</span>dds<span class="p">,</span> test<span class="o">=</span><span class="s">&quot;LRT&quot;</span><span class="p">,</span> reduced <span class="o">=</span> <span class="o">~</span> gender <span class="o">+</span> age<span class="p">)</span>
-LRT_res <span class="o">=</span> results<span class="p">(</span>dge<span class="p">,</span> alpha<span class="o">=</span><span class="m">0.05</span><span class="p">)</span>
-complexif_stats<span class="p">[</span><span class="kp">nrow</span><span class="p">(</span>complexif_stats<span class="p">)</span> <span class="o">+</span> <span class="m">1</span><span class="p">,]</span> <span class="o">=</span> <span class="kt">c</span><span class="p">(</span><span class="s">&quot;gender + age + gender:age&quot;</span><span class="p">,</span> <span class="s">&quot;gender + age&quot;</span><span class="p">,</span> <span class="s">&quot;gender:age&quot;</span><span class="p">,</span> get_sign_padj<span class="p">(</span>LRT_res<span class="p">))</span>
-</pre></div>
-
-</div>
-</div>
-</div>
 
 <div class="output_wrapper">
 <div class="output">
@@ -12901,8 +12488,7 @@ complexif_stats<span class="p">[</span><span class="kp">nrow</span><span class="
 
 <div class="output_area">
 
-<div class="prompt"></div>
-
+<div class="prompt"> </div>
 
 <div class="output_subarea output_stream output_stderr output_text">
 <pre>estimating size factors
@@ -12925,23 +12511,6 @@ fitting model and testing
 
 </div>
 <div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[72]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-r"><pre><span></span><span class="c1"># Design: type + age + type:age</span>
-dds <span class="o">=</span> DESeqDataSetFromMatrix<span class="p">(</span>
-        countData <span class="o">=</span> counts<span class="p">,</span>
-        colData <span class="o">=</span> metadata<span class="p">,</span>
-        design <span class="o">=</span> <span class="o">~</span> type <span class="o">+</span> age <span class="o">+</span> type<span class="o">:</span>age<span class="p">)</span>
-dge <span class="o">=</span> DESeq<span class="p">(</span>dds<span class="p">,</span> test<span class="o">=</span><span class="s">&quot;LRT&quot;</span><span class="p">,</span> reduced <span class="o">=</span> <span class="o">~</span> type <span class="o">+</span> age<span class="p">)</span>
-LRT_res <span class="o">=</span> results<span class="p">(</span>dge<span class="p">,</span> alpha<span class="o">=</span><span class="m">0.05</span><span class="p">)</span>
-complexif_stats<span class="p">[</span><span class="kp">nrow</span><span class="p">(</span>complexif_stats<span class="p">)</span> <span class="o">+</span> <span class="m">1</span><span class="p">,]</span> <span class="o">=</span> <span class="kt">c</span><span class="p">(</span><span class="s">&quot;type + age + type:age&quot;</span><span class="p">,</span> <span class="s">&quot;type + age&quot;</span><span class="p">,</span> <span class="s">&quot;type:age&quot;</span><span class="p">,</span> get_sign_padj<span class="p">(</span>LRT_res<span class="p">))</span>
-</pre></div>
-
-</div>
-</div>
-</div>
 
 <div class="output_wrapper">
 <div class="output">
@@ -12949,8 +12518,7 @@ complexif_stats<span class="p">[</span><span class="kp">nrow</span><span class="
 
 <div class="output_area">
 
-<div class="prompt"></div>
-
+<div class="prompt"> </div>
 
 <div class="output_subarea output_stream output_stderr output_text">
 <pre>estimating size factors
@@ -12973,23 +12541,6 @@ fitting model and testing
 
 </div>
 <div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[73]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-r"><pre><span></span><span class="c1"># Design: gender + type + age</span>
-dds <span class="o">=</span> DESeqDataSetFromMatrix<span class="p">(</span>
-        countData <span class="o">=</span> counts<span class="p">,</span>
-        colData <span class="o">=</span> metadata<span class="p">,</span>
-        design <span class="o">=</span> <span class="o">~</span> gender <span class="o">+</span> type <span class="o">+</span> age<span class="p">)</span>
-dge <span class="o">=</span> DESeq<span class="p">(</span>dds<span class="p">,</span> test<span class="o">=</span><span class="s">&quot;LRT&quot;</span><span class="p">,</span> reduced <span class="o">=</span> <span class="o">~</span> gender <span class="o">+</span> type<span class="p">)</span>
-LRT_res <span class="o">=</span> results<span class="p">(</span>dge<span class="p">,</span> alpha<span class="o">=</span><span class="m">0.05</span><span class="p">)</span>
-complexif_stats<span class="p">[</span><span class="kp">nrow</span><span class="p">(</span>complexif_stats<span class="p">)</span> <span class="o">+</span> <span class="m">1</span><span class="p">,]</span> <span class="o">=</span> <span class="kt">c</span><span class="p">(</span><span class="s">&quot;gender + type + age&quot;</span><span class="p">,</span> <span class="s">&quot;gender + type&quot;</span><span class="p">,</span> <span class="s">&quot;age&quot;</span><span class="p">,</span> get_sign_padj<span class="p">(</span>LRT_res<span class="p">))</span>
-</pre></div>
-
-</div>
-</div>
-</div>
 
 <div class="output_wrapper">
 <div class="output">
@@ -12997,8 +12548,7 @@ complexif_stats<span class="p">[</span><span class="kp">nrow</span><span class="
 
 <div class="output_area">
 
-<div class="prompt"></div>
-
+<div class="prompt"> </div>
 
 <div class="output_subarea output_stream output_stderr output_text">
 <pre>estimating size factors
@@ -13021,23 +12571,6 @@ fitting model and testing
 
 </div>
 <div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[74]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-r"><pre><span></span><span class="c1"># Design: gender + type + age</span>
-dds <span class="o">=</span> DESeqDataSetFromMatrix<span class="p">(</span>
-        countData <span class="o">=</span> counts<span class="p">,</span>
-        colData <span class="o">=</span> metadata<span class="p">,</span>
-        design <span class="o">=</span> <span class="o">~</span> gender <span class="o">+</span> type <span class="o">+</span> age<span class="p">)</span>
-dge <span class="o">=</span> DESeq<span class="p">(</span>dds<span class="p">,</span> test<span class="o">=</span><span class="s">&quot;LRT&quot;</span><span class="p">,</span> reduced <span class="o">=</span> <span class="o">~</span> gender <span class="o">+</span> age<span class="p">)</span>
-LRT_res <span class="o">=</span> results<span class="p">(</span>dge<span class="p">,</span> alpha<span class="o">=</span><span class="m">0.05</span><span class="p">)</span>
-complexif_stats<span class="p">[</span><span class="kp">nrow</span><span class="p">(</span>complexif_stats<span class="p">)</span> <span class="o">+</span> <span class="m">1</span><span class="p">,]</span> <span class="o">=</span> <span class="kt">c</span><span class="p">(</span><span class="s">&quot;gender + type + age&quot;</span><span class="p">,</span> <span class="s">&quot;gender + age&quot;</span><span class="p">,</span> <span class="s">&quot;type&quot;</span><span class="p">,</span> get_sign_padj<span class="p">(</span>LRT_res<span class="p">))</span>
-</pre></div>
-
-</div>
-</div>
-</div>
 
 <div class="output_wrapper">
 <div class="output">
@@ -13045,8 +12578,7 @@ complexif_stats<span class="p">[</span><span class="kp">nrow</span><span class="
 
 <div class="output_area">
 
-<div class="prompt"></div>
-
+<div class="prompt"> </div>
 
 <div class="output_subarea output_stream output_stderr output_text">
 <pre>estimating size factors
@@ -13069,23 +12601,6 @@ fitting model and testing
 
 </div>
 <div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[75]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-r"><pre><span></span><span class="c1"># Design: gender + type + age</span>
-dds <span class="o">=</span> DESeqDataSetFromMatrix<span class="p">(</span>
-        countData <span class="o">=</span> counts<span class="p">,</span>
-        colData <span class="o">=</span> metadata<span class="p">,</span>
-        design <span class="o">=</span> <span class="o">~</span> gender <span class="o">+</span> type <span class="o">+</span> age<span class="p">)</span>
-dge <span class="o">=</span> DESeq<span class="p">(</span>dds<span class="p">,</span> test<span class="o">=</span><span class="s">&quot;LRT&quot;</span><span class="p">,</span> reduced <span class="o">=</span> <span class="o">~</span> type <span class="o">+</span> age<span class="p">)</span>
-LRT_res <span class="o">=</span> results<span class="p">(</span>dge<span class="p">,</span> alpha<span class="o">=</span><span class="m">0.05</span><span class="p">)</span>
-complexif_stats<span class="p">[</span><span class="kp">nrow</span><span class="p">(</span>complexif_stats<span class="p">)</span> <span class="o">+</span> <span class="m">1</span><span class="p">,]</span> <span class="o">=</span> <span class="kt">c</span><span class="p">(</span><span class="s">&quot;gender + type + age&quot;</span><span class="p">,</span> <span class="s">&quot;type + age&quot;</span><span class="p">,</span> <span class="s">&quot;gender&quot;</span><span class="p">,</span> get_sign_padj<span class="p">(</span>LRT_res<span class="p">))</span>
-</pre></div>
-
-</div>
-</div>
-</div>
 
 <div class="output_wrapper">
 <div class="output">
@@ -13093,8 +12608,7 @@ complexif_stats<span class="p">[</span><span class="kp">nrow</span><span class="
 
 <div class="output_area">
 
-<div class="prompt"></div>
-
+<div class="prompt"> </div>
 
 <div class="output_subarea output_stream output_stderr output_text">
 <pre>estimating size factors
@@ -13117,23 +12631,6 @@ fitting model and testing
 
 </div>
 <div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[76]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-r"><pre><span></span><span class="c1"># Design: gender + type + age + gender:type</span>
-dds <span class="o">=</span> DESeqDataSetFromMatrix<span class="p">(</span>
-        countData <span class="o">=</span> counts<span class="p">,</span>
-        colData <span class="o">=</span> metadata<span class="p">,</span>
-        design <span class="o">=</span> <span class="o">~</span> gender <span class="o">+</span> type <span class="o">+</span> age <span class="o">+</span> gender<span class="o">:</span>type<span class="p">)</span>
-dge <span class="o">=</span> DESeq<span class="p">(</span>dds<span class="p">,</span> test<span class="o">=</span><span class="s">&quot;LRT&quot;</span><span class="p">,</span> reduced <span class="o">=</span> <span class="o">~</span> gender <span class="o">+</span> type <span class="o">+</span> age<span class="p">)</span>
-LRT_res <span class="o">=</span> results<span class="p">(</span>dge<span class="p">,</span> alpha<span class="o">=</span><span class="m">0.05</span><span class="p">)</span>
-complexif_stats<span class="p">[</span><span class="kp">nrow</span><span class="p">(</span>complexif_stats<span class="p">)</span> <span class="o">+</span> <span class="m">1</span><span class="p">,]</span> <span class="o">=</span> <span class="kt">c</span><span class="p">(</span><span class="s">&quot;gender + type + age + gender:type&quot;</span><span class="p">,</span> <span class="s">&quot;gender + type + age&quot;</span><span class="p">,</span> <span class="s">&quot;gender:type&quot;</span><span class="p">,</span> get_sign_padj<span class="p">(</span>LRT_res<span class="p">))</span>
-</pre></div>
-
-</div>
-</div>
-</div>
 
 <div class="output_wrapper">
 <div class="output">
@@ -13141,8 +12638,7 @@ complexif_stats<span class="p">[</span><span class="kp">nrow</span><span class="
 
 <div class="output_area">
 
-<div class="prompt"></div>
-
+<div class="prompt"> </div>
 
 <div class="output_subarea output_stream output_stderr output_text">
 <pre>estimating size factors
@@ -13165,23 +12661,6 @@ fitting model and testing
 
 </div>
 <div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[77]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-r"><pre><span></span><span class="c1"># Design: gender + type + age + gender:age</span>
-dds <span class="o">=</span> DESeqDataSetFromMatrix<span class="p">(</span>
-        countData <span class="o">=</span> counts<span class="p">,</span>
-        colData <span class="o">=</span> metadata<span class="p">,</span>
-        design <span class="o">=</span> <span class="o">~</span> gender <span class="o">+</span> type <span class="o">+</span> age <span class="o">+</span> gender<span class="o">:</span>age<span class="p">)</span>
-dge <span class="o">=</span> DESeq<span class="p">(</span>dds<span class="p">,</span> test<span class="o">=</span><span class="s">&quot;LRT&quot;</span><span class="p">,</span> reduced <span class="o">=</span> <span class="o">~</span> gender <span class="o">+</span> type <span class="o">+</span> age<span class="p">)</span>
-LRT_res <span class="o">=</span> results<span class="p">(</span>dge<span class="p">,</span> alpha<span class="o">=</span><span class="m">0.05</span><span class="p">)</span>
-complexif_stats<span class="p">[</span><span class="kp">nrow</span><span class="p">(</span>complexif_stats<span class="p">)</span> <span class="o">+</span> <span class="m">1</span><span class="p">,]</span> <span class="o">=</span> <span class="kt">c</span><span class="p">(</span><span class="s">&quot;gender + type + age + gender:age&quot;</span><span class="p">,</span> <span class="s">&quot;gender + type + age&quot;</span><span class="p">,</span> <span class="s">&quot;gender:age&quot;</span><span class="p">,</span> get_sign_padj<span class="p">(</span>LRT_res<span class="p">))</span>
-</pre></div>
-
-</div>
-</div>
-</div>
 
 <div class="output_wrapper">
 <div class="output">
@@ -13189,8 +12668,7 @@ complexif_stats<span class="p">[</span><span class="kp">nrow</span><span class="
 
 <div class="output_area">
 
-<div class="prompt"></div>
-
+<div class="prompt"> </div>
 
 <div class="output_subarea output_stream output_stderr output_text">
 <pre>estimating size factors
@@ -13213,23 +12691,6 @@ fitting model and testing
 
 </div>
 <div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[78]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-r"><pre><span></span><span class="c1"># Design: gender + type + age + type:age</span>
-dds <span class="o">=</span> DESeqDataSetFromMatrix<span class="p">(</span>
-        countData <span class="o">=</span> counts<span class="p">,</span>
-        colData <span class="o">=</span> metadata<span class="p">,</span>
-        design <span class="o">=</span> <span class="o">~</span> gender <span class="o">+</span> type <span class="o">+</span> age <span class="o">+</span> type<span class="o">:</span>age<span class="p">)</span>
-dge <span class="o">=</span> DESeq<span class="p">(</span>dds<span class="p">,</span> test<span class="o">=</span><span class="s">&quot;LRT&quot;</span><span class="p">,</span> reduced <span class="o">=</span> <span class="o">~</span> gender <span class="o">+</span> type <span class="o">+</span> age<span class="p">)</span>
-LRT_res <span class="o">=</span> results<span class="p">(</span>dge<span class="p">,</span> alpha<span class="o">=</span><span class="m">0.05</span><span class="p">)</span>
-complexif_stats<span class="p">[</span><span class="kp">nrow</span><span class="p">(</span>complexif_stats<span class="p">)</span> <span class="o">+</span> <span class="m">1</span><span class="p">,]</span> <span class="o">=</span> <span class="kt">c</span><span class="p">(</span><span class="s">&quot;gender + type + age + type:age&quot;</span><span class="p">,</span> <span class="s">&quot;gender + type + age&quot;</span><span class="p">,</span> <span class="s">&quot;type:age&quot;</span><span class="p">,</span> get_sign_padj<span class="p">(</span>LRT_res<span class="p">))</span>
-</pre></div>
-
-</div>
-</div>
-</div>
 
 <div class="output_wrapper">
 <div class="output">
@@ -13237,8 +12698,7 @@ complexif_stats<span class="p">[</span><span class="kp">nrow</span><span class="
 
 <div class="output_area">
 
-<div class="prompt"></div>
-
+<div class="prompt"> </div>
 
 <div class="output_subarea output_stream output_stderr output_text">
 <pre>estimating size factors
@@ -13261,23 +12721,6 @@ fitting model and testing
 
 </div>
 <div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[79]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-r"><pre><span></span><span class="c1"># Design: gender + type + age + gender:type + gender:age</span>
-dds <span class="o">=</span> DESeqDataSetFromMatrix<span class="p">(</span>
-        countData <span class="o">=</span> counts<span class="p">,</span>
-        colData <span class="o">=</span> metadata<span class="p">,</span>
-        design <span class="o">=</span> <span class="o">~</span> gender <span class="o">+</span> type <span class="o">+</span> age <span class="o">+</span> gender<span class="o">:</span>type <span class="o">+</span> gender<span class="o">:</span>age<span class="p">)</span>
-dge <span class="o">=</span> DESeq<span class="p">(</span>dds<span class="p">,</span> test<span class="o">=</span><span class="s">&quot;LRT&quot;</span><span class="p">,</span> reduced <span class="o">=</span> <span class="o">~</span> gender <span class="o">+</span> type <span class="o">+</span> age <span class="o">+</span> gender<span class="o">:</span>type<span class="p">)</span>
-LRT_res <span class="o">=</span> results<span class="p">(</span>dge<span class="p">,</span> alpha<span class="o">=</span><span class="m">0.05</span><span class="p">)</span>
-complexif_stats<span class="p">[</span><span class="kp">nrow</span><span class="p">(</span>complexif_stats<span class="p">)</span> <span class="o">+</span> <span class="m">1</span><span class="p">,]</span> <span class="o">=</span> <span class="kt">c</span><span class="p">(</span><span class="s">&quot;gender + type + age + gender:type + gender:age&quot;</span><span class="p">,</span> <span class="s">&quot;gender + type + age + gender:type&quot;</span><span class="p">,</span> <span class="s">&quot;gender:age&quot;</span><span class="p">,</span> get_sign_padj<span class="p">(</span>LRT_res<span class="p">))</span>
-</pre></div>
-
-</div>
-</div>
-</div>
 
 <div class="output_wrapper">
 <div class="output">
@@ -13285,8 +12728,7 @@ complexif_stats<span class="p">[</span><span class="kp">nrow</span><span class="
 
 <div class="output_area">
 
-<div class="prompt"></div>
-
+<div class="prompt"> </div>
 
 <div class="output_subarea output_stream output_stderr output_text">
 <pre>estimating size factors
@@ -13309,23 +12751,6 @@ fitting model and testing
 
 </div>
 <div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[80]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-r"><pre><span></span><span class="c1"># Design: gender + type + age + gender:type + gender:age</span>
-dds <span class="o">=</span> DESeqDataSetFromMatrix<span class="p">(</span>
-        countData <span class="o">=</span> counts<span class="p">,</span>
-        colData <span class="o">=</span> metadata<span class="p">,</span>
-        design <span class="o">=</span> <span class="o">~</span> gender <span class="o">+</span> type <span class="o">+</span> age <span class="o">+</span> gender<span class="o">:</span>type <span class="o">+</span> gender<span class="o">:</span>age<span class="p">)</span>
-dge <span class="o">=</span> DESeq<span class="p">(</span>dds<span class="p">,</span> test<span class="o">=</span><span class="s">&quot;LRT&quot;</span><span class="p">,</span> reduced <span class="o">=</span> <span class="o">~</span> gender <span class="o">+</span> type <span class="o">+</span> age <span class="o">+</span> gender<span class="o">:</span>age<span class="p">)</span>
-LRT_res <span class="o">=</span> results<span class="p">(</span>dge<span class="p">,</span> alpha<span class="o">=</span><span class="m">0.05</span><span class="p">)</span>
-complexif_stats<span class="p">[</span><span class="kp">nrow</span><span class="p">(</span>complexif_stats<span class="p">)</span> <span class="o">+</span> <span class="m">1</span><span class="p">,]</span> <span class="o">=</span> <span class="kt">c</span><span class="p">(</span><span class="s">&quot;gender + type + age + gender:type + gender:age&quot;</span><span class="p">,</span> <span class="s">&quot;gender + type + age + gender:age&quot;</span><span class="p">,</span> <span class="s">&quot;gender:type&quot;</span><span class="p">,</span> get_sign_padj<span class="p">(</span>LRT_res<span class="p">))</span>
-</pre></div>
-
-</div>
-</div>
-</div>
 
 <div class="output_wrapper">
 <div class="output">
@@ -13333,8 +12758,7 @@ complexif_stats<span class="p">[</span><span class="kp">nrow</span><span class="
 
 <div class="output_area">
 
-<div class="prompt"></div>
-
+<div class="prompt"> </div>
 
 <div class="output_subarea output_stream output_stderr output_text">
 <pre>estimating size factors
@@ -13357,23 +12781,6 @@ fitting model and testing
 
 </div>
 <div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[81]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-r"><pre><span></span><span class="c1"># Design: gender + type + age + gender:type + type:age</span>
-dds <span class="o">=</span> DESeqDataSetFromMatrix<span class="p">(</span>
-        countData <span class="o">=</span> counts<span class="p">,</span>
-        colData <span class="o">=</span> metadata<span class="p">,</span>
-        design <span class="o">=</span> <span class="o">~</span> gender <span class="o">+</span> type <span class="o">+</span> age <span class="o">+</span> gender<span class="o">:</span>type <span class="o">+</span> type<span class="o">:</span>age<span class="p">)</span>
-dge <span class="o">=</span> DESeq<span class="p">(</span>dds<span class="p">,</span> test<span class="o">=</span><span class="s">&quot;LRT&quot;</span><span class="p">,</span> reduced <span class="o">=</span> <span class="o">~</span> gender <span class="o">+</span> type <span class="o">+</span> age <span class="o">+</span> gender<span class="o">:</span>type<span class="p">)</span>
-LRT_res <span class="o">=</span> results<span class="p">(</span>dge<span class="p">,</span> alpha<span class="o">=</span><span class="m">0.05</span><span class="p">)</span>
-complexif_stats<span class="p">[</span><span class="kp">nrow</span><span class="p">(</span>complexif_stats<span class="p">)</span> <span class="o">+</span> <span class="m">1</span><span class="p">,]</span> <span class="o">=</span> <span class="kt">c</span><span class="p">(</span><span class="s">&quot;gender + type + age + gender:type + type:age&quot;</span><span class="p">,</span> <span class="s">&quot;gender + type + age + gender:type&quot;</span><span class="p">,</span> <span class="s">&quot;type:age&quot;</span><span class="p">,</span> get_sign_padj<span class="p">(</span>LRT_res<span class="p">))</span>
-</pre></div>
-
-</div>
-</div>
-</div>
 
 <div class="output_wrapper">
 <div class="output">
@@ -13381,8 +12788,7 @@ complexif_stats<span class="p">[</span><span class="kp">nrow</span><span class="
 
 <div class="output_area">
 
-<div class="prompt"></div>
-
+<div class="prompt"> </div>
 
 <div class="output_subarea output_stream output_stderr output_text">
 <pre>estimating size factors
@@ -13405,23 +12811,6 @@ fitting model and testing
 
 </div>
 <div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[83]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-r"><pre><span></span><span class="c1"># Design: gender + type + age + gender:type + type:age</span>
-dds <span class="o">=</span> DESeqDataSetFromMatrix<span class="p">(</span>
-        countData <span class="o">=</span> counts<span class="p">,</span>
-        colData <span class="o">=</span> metadata<span class="p">,</span>
-        design <span class="o">=</span> <span class="o">~</span> gender <span class="o">+</span> type <span class="o">+</span> age <span class="o">+</span> gender<span class="o">:</span>type <span class="o">+</span> type<span class="o">:</span>age<span class="p">)</span>
-dge <span class="o">=</span> DESeq<span class="p">(</span>dds<span class="p">,</span> test<span class="o">=</span><span class="s">&quot;LRT&quot;</span><span class="p">,</span> reduced <span class="o">=</span> <span class="o">~</span> gender <span class="o">+</span> type <span class="o">+</span> age <span class="o">+</span> type<span class="o">:</span>age<span class="p">)</span>
-LRT_res <span class="o">=</span> results<span class="p">(</span>dge<span class="p">,</span> alpha<span class="o">=</span><span class="m">0.05</span><span class="p">)</span>
-complexif_stats<span class="p">[</span><span class="kp">nrow</span><span class="p">(</span>complexif_stats<span class="p">)</span> <span class="o">+</span> <span class="m">1</span><span class="p">,]</span> <span class="o">=</span> <span class="kt">c</span><span class="p">(</span><span class="s">&quot;gender + type + age + gender:type + type:age&quot;</span><span class="p">,</span> <span class="s">&quot;gender + type + age + type:age&quot;</span><span class="p">,</span> <span class="s">&quot;gender:type&quot;</span><span class="p">,</span> get_sign_padj<span class="p">(</span>LRT_res<span class="p">))</span>
-</pre></div>
-
-</div>
-</div>
-</div>
 
 <div class="output_wrapper">
 <div class="output">
@@ -13429,8 +12818,7 @@ complexif_stats<span class="p">[</span><span class="kp">nrow</span><span class="
 
 <div class="output_area">
 
-<div class="prompt"></div>
-
+<div class="prompt"> </div>
 
 <div class="output_subarea output_stream output_stderr output_text">
 <pre>estimating size factors
@@ -13453,23 +12841,6 @@ fitting model and testing
 
 </div>
 <div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[84]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-r"><pre><span></span><span class="c1"># Design: gender + type + age + gender:age + type:age</span>
-dds <span class="o">=</span> DESeqDataSetFromMatrix<span class="p">(</span>
-        countData <span class="o">=</span> counts<span class="p">,</span>
-        colData <span class="o">=</span> metadata<span class="p">,</span>
-        design <span class="o">=</span> <span class="o">~</span> gender <span class="o">+</span> type <span class="o">+</span> age <span class="o">+</span> gender<span class="o">:</span>age <span class="o">+</span> type<span class="o">:</span>age<span class="p">)</span>
-dge <span class="o">=</span> DESeq<span class="p">(</span>dds<span class="p">,</span> test<span class="o">=</span><span class="s">&quot;LRT&quot;</span><span class="p">,</span> reduced <span class="o">=</span> <span class="o">~</span> gender <span class="o">+</span> type <span class="o">+</span> age <span class="o">+</span> gender<span class="o">:</span>age<span class="p">)</span>
-LRT_res <span class="o">=</span> results<span class="p">(</span>dge<span class="p">,</span> alpha<span class="o">=</span><span class="m">0.05</span><span class="p">)</span>
-complexif_stats<span class="p">[</span><span class="kp">nrow</span><span class="p">(</span>complexif_stats<span class="p">)</span> <span class="o">+</span> <span class="m">1</span><span class="p">,]</span> <span class="o">=</span> <span class="kt">c</span><span class="p">(</span><span class="s">&quot;gender + type + age + gender:age + type:age&quot;</span><span class="p">,</span> <span class="s">&quot;gender + type + age + gender:age&quot;</span><span class="p">,</span> <span class="s">&quot;type:age&quot;</span><span class="p">,</span> get_sign_padj<span class="p">(</span>LRT_res<span class="p">))</span>
-</pre></div>
-
-</div>
-</div>
-</div>
 
 <div class="output_wrapper">
 <div class="output">
@@ -13477,8 +12848,7 @@ complexif_stats<span class="p">[</span><span class="kp">nrow</span><span class="
 
 <div class="output_area">
 
-<div class="prompt"></div>
-
+<div class="prompt"> </div>
 
 <div class="output_subarea output_stream output_stderr output_text">
 <pre>estimating size factors
@@ -13502,23 +12872,6 @@ fitting model and testing
 
 </div>
 <div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[85]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-r"><pre><span></span><span class="c1"># Design: gender + type + age + gender:age + type:age</span>
-dds <span class="o">=</span> DESeqDataSetFromMatrix<span class="p">(</span>
-        countData <span class="o">=</span> counts<span class="p">,</span>
-        colData <span class="o">=</span> metadata<span class="p">,</span>
-        design <span class="o">=</span> <span class="o">~</span> gender <span class="o">+</span> type <span class="o">+</span> age <span class="o">+</span> gender<span class="o">:</span>age <span class="o">+</span> type<span class="o">:</span>age<span class="p">)</span>
-dge <span class="o">=</span> DESeq<span class="p">(</span>dds<span class="p">,</span> test<span class="o">=</span><span class="s">&quot;LRT&quot;</span><span class="p">,</span> reduced <span class="o">=</span> <span class="o">~</span> gender <span class="o">+</span> type <span class="o">+</span> age <span class="o">+</span> type<span class="o">:</span>age<span class="p">)</span>
-LRT_res <span class="o">=</span> results<span class="p">(</span>dge<span class="p">,</span> alpha<span class="o">=</span><span class="m">0.05</span><span class="p">)</span>
-complexif_stats<span class="p">[</span><span class="kp">nrow</span><span class="p">(</span>complexif_stats<span class="p">)</span> <span class="o">+</span> <span class="m">1</span><span class="p">,]</span> <span class="o">=</span> <span class="kt">c</span><span class="p">(</span><span class="s">&quot;gender + type + age + gender:age + type:age&quot;</span><span class="p">,</span> <span class="s">&quot;gender + type + age + type:age&quot;</span><span class="p">,</span> <span class="s">&quot;gender:age&quot;</span><span class="p">,</span> get_sign_padj<span class="p">(</span>LRT_res<span class="p">))</span>
-</pre></div>
-
-</div>
-</div>
-</div>
 
 <div class="output_wrapper">
 <div class="output">
@@ -13526,8 +12879,7 @@ complexif_stats<span class="p">[</span><span class="kp">nrow</span><span class="
 
 <div class="output_area">
 
-<div class="prompt"></div>
-
+<div class="prompt"> </div>
 
 <div class="output_subarea output_stream output_stderr output_text">
 <pre>estimating size factors
@@ -13551,23 +12903,6 @@ fitting model and testing
 
 </div>
 <div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[86]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-r"><pre><span></span><span class="c1"># Design: gender + type + age + gender:type + gender:age + type:age</span>
-dds <span class="o">=</span> DESeqDataSetFromMatrix<span class="p">(</span>
-        countData <span class="o">=</span> counts<span class="p">,</span>
-        colData <span class="o">=</span> metadata<span class="p">,</span>
-        design <span class="o">=</span> <span class="o">~</span> gender <span class="o">+</span> type <span class="o">+</span> age <span class="o">+</span> gender<span class="o">:</span>type <span class="o">+</span> gender<span class="o">:</span>age <span class="o">+</span> type<span class="o">:</span>age<span class="p">)</span>
-dge <span class="o">=</span> DESeq<span class="p">(</span>dds<span class="p">,</span> test<span class="o">=</span><span class="s">&quot;LRT&quot;</span><span class="p">,</span> reduced <span class="o">=</span> <span class="o">~</span> gender <span class="o">+</span> type <span class="o">+</span> age <span class="o">+</span> gender<span class="o">:</span>type <span class="o">+</span> gender<span class="o">:</span>age<span class="p">)</span>
-LRT_res <span class="o">=</span> results<span class="p">(</span>dge<span class="p">,</span> alpha<span class="o">=</span><span class="m">0.05</span><span class="p">)</span>
-complexif_stats<span class="p">[</span><span class="kp">nrow</span><span class="p">(</span>complexif_stats<span class="p">)</span> <span class="o">+</span> <span class="m">1</span><span class="p">,]</span> <span class="o">=</span> <span class="kt">c</span><span class="p">(</span><span class="s">&quot;gender + type + age + gender:type + gender:age + type:age&quot;</span><span class="p">,</span> <span class="s">&quot;gender + type + age + gender:type + gender:age&quot;</span><span class="p">,</span> <span class="s">&quot;type:age&quot;</span><span class="p">,</span> get_sign_padj<span class="p">(</span>LRT_res<span class="p">))</span>
-</pre></div>
-
-</div>
-</div>
-</div>
 
 <div class="output_wrapper">
 <div class="output">
@@ -13575,8 +12910,7 @@ complexif_stats<span class="p">[</span><span class="kp">nrow</span><span class="
 
 <div class="output_area">
 
-<div class="prompt"></div>
-
+<div class="prompt"> </div>
 
 <div class="output_subarea output_stream output_stderr output_text">
 <pre>estimating size factors
@@ -13601,23 +12935,6 @@ fitting model and testing
 
 </div>
 <div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[87]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-r"><pre><span></span><span class="c1"># Design: gender + type + age + gender:type + gender:age + type:age</span>
-dds <span class="o">=</span> DESeqDataSetFromMatrix<span class="p">(</span>
-        countData <span class="o">=</span> counts<span class="p">,</span>
-        colData <span class="o">=</span> metadata<span class="p">,</span>
-        design <span class="o">=</span> <span class="o">~</span> gender <span class="o">+</span> type <span class="o">+</span> age <span class="o">+</span> gender<span class="o">:</span>type <span class="o">+</span> gender<span class="o">:</span>age <span class="o">+</span> type<span class="o">:</span>age<span class="p">)</span>
-dge <span class="o">=</span> DESeq<span class="p">(</span>dds<span class="p">,</span> test<span class="o">=</span><span class="s">&quot;LRT&quot;</span><span class="p">,</span> reduced <span class="o">=</span> <span class="o">~</span> gender <span class="o">+</span> type <span class="o">+</span> age <span class="o">+</span> gender<span class="o">:</span>type <span class="o">+</span> type<span class="o">:</span>age<span class="p">)</span>
-LRT_res <span class="o">=</span> results<span class="p">(</span>dge<span class="p">,</span> alpha<span class="o">=</span><span class="m">0.05</span><span class="p">)</span>
-complexif_stats<span class="p">[</span><span class="kp">nrow</span><span class="p">(</span>complexif_stats<span class="p">)</span> <span class="o">+</span> <span class="m">1</span><span class="p">,]</span> <span class="o">=</span> <span class="kt">c</span><span class="p">(</span><span class="s">&quot;gender + type + age + gender:type + gender:age + type:age&quot;</span><span class="p">,</span> <span class="s">&quot;gender + type + age + gender:type + type:age&quot;</span><span class="p">,</span> <span class="s">&quot;gender:age&quot;</span><span class="p">,</span> get_sign_padj<span class="p">(</span>LRT_res<span class="p">))</span>
-</pre></div>
-
-</div>
-</div>
-</div>
 
 <div class="output_wrapper">
 <div class="output">
@@ -13625,8 +12942,7 @@ complexif_stats<span class="p">[</span><span class="kp">nrow</span><span class="
 
 <div class="output_area">
 
-<div class="prompt"></div>
-
+<div class="prompt"> </div>
 
 <div class="output_subarea output_stream output_stderr output_text">
 <pre>estimating size factors
@@ -13651,23 +12967,6 @@ fitting model and testing
 
 </div>
 <div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[88]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-r"><pre><span></span><span class="c1"># Design: gender + type + age + gender:type + gender:age + type:age</span>
-dds <span class="o">=</span> DESeqDataSetFromMatrix<span class="p">(</span>
-        countData <span class="o">=</span> counts<span class="p">,</span>
-        colData <span class="o">=</span> metadata<span class="p">,</span>
-        design <span class="o">=</span> <span class="o">~</span> gender <span class="o">+</span> type <span class="o">+</span> age <span class="o">+</span> gender<span class="o">:</span>type <span class="o">+</span> gender<span class="o">:</span>age <span class="o">+</span> type<span class="o">:</span>age<span class="p">)</span>
-dge <span class="o">=</span> DESeq<span class="p">(</span>dds<span class="p">,</span> test<span class="o">=</span><span class="s">&quot;LRT&quot;</span><span class="p">,</span> reduced <span class="o">=</span> <span class="o">~</span> gender <span class="o">+</span> type <span class="o">+</span> age <span class="o">+</span> gender<span class="o">:</span>age <span class="o">+</span> type<span class="o">:</span>age<span class="p">)</span>
-LRT_res <span class="o">=</span> results<span class="p">(</span>dge<span class="p">,</span> alpha<span class="o">=</span><span class="m">0.05</span><span class="p">)</span>
-complexif_stats<span class="p">[</span><span class="kp">nrow</span><span class="p">(</span>complexif_stats<span class="p">)</span> <span class="o">+</span> <span class="m">1</span><span class="p">,]</span> <span class="o">=</span> <span class="kt">c</span><span class="p">(</span><span class="s">&quot;gender + type + age + gender:type + gender:age + type:age&quot;</span><span class="p">,</span> <span class="s">&quot;gender + type + age + gender:age + type:age&quot;</span><span class="p">,</span> <span class="s">&quot;gender:type&quot;</span><span class="p">,</span> get_sign_padj<span class="p">(</span>LRT_res<span class="p">))</span>
-</pre></div>
-
-</div>
-</div>
-</div>
 
 <div class="output_wrapper">
 <div class="output">
@@ -13675,8 +12974,7 @@ complexif_stats<span class="p">[</span><span class="kp">nrow</span><span class="
 
 <div class="output_area">
 
-<div class="prompt"></div>
-
+<div class="prompt"> </div>
 
 <div class="output_subarea output_stream output_stderr output_text">
 <pre>estimating size factors
@@ -13701,16 +12999,6 @@ fitting model and testing
 
 </div>
 <div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[89]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-r"><pre><span></span>complexif_stats
-</pre></div>
-
-</div>
-</div>
-</div>
 
 <div class="output_wrapper">
 <div class="output">
@@ -13718,8 +13006,7 @@ fitting model and testing
 
 <div class="output_area">
 
-<div class="prompt"></div>
-
+<div class="prompt"> </div>
 
 
 <div class="output_html rendered_html output_subarea ">
@@ -13814,26 +13101,6 @@ fitting model and testing
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[36]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-r"><pre><span></span><span class="c1"># Construct DESeqDataSet</span>
-dds <span class="o">=</span> DESeqDataSetFromMatrix<span class="p">(</span>
-        countData <span class="o">=</span> counts<span class="p">,</span>
-        colData <span class="o">=</span> metadata<span class="p">,</span>
-        design <span class="o">=</span> <span class="o">~</span> gender <span class="o">+</span> type <span class="o">+</span> age <span class="o">+</span> gender<span class="o">:</span>age <span class="o">+</span> gender<span class="o">:</span>type <span class="o">+</span> type<span class="o">:</span>age<span class="p">)</span>
-<span class="c1"># Organize levels of the factors (8w being the reference)</span>
-dds<span class="o">$</span>age <span class="o">=</span> relevel<span class="p">(</span>dds<span class="o">$</span>age<span class="p">,</span> ref<span class="o">=</span><span class="s">&quot;8w&quot;</span><span class="p">)</span>
-dds<span class="o">$</span>type <span class="o">=</span> relevel<span class="p">(</span>dds<span class="o">$</span>type<span class="p">,</span> ref<span class="o">=</span><span class="s">&quot;SPF&quot;</span><span class="p">)</span>
-dds<span class="o">$</span>gender <span class="o">=</span> relevel<span class="p">(</span>dds<span class="o">$</span>gender<span class="p">,</span> ref<span class="o">=</span><span class="s">&quot;F&quot;</span><span class="p">)</span>
-<span class="c1"># Differential expression analysis</span>
-dge <span class="o">=</span> DESeq<span class="p">(</span>dds<span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
 
 <div class="output_wrapper">
 <div class="output">
@@ -13841,11 +13108,11 @@ dge <span class="o">=</span> DESeq<span class="p">(</span>dds<span class="p">)</
 
 <div class="output_area">
 
-<div class="prompt"></div>
-
+<div class="prompt"> </div>
 
 <div class="output_subarea output_stream output_stderr output_text">
-<pre>estimating size factors
+<pre>Warning message in DESeqDataSet(se, design = design, ignoreRank):
+“some variables in design formula are characters, converting to factors”estimating size factors
 estimating dispersions
 gene-wise dispersion estimates
 mean-dispersion relationship
@@ -13866,16 +13133,6 @@ fitting model and testing
 
 </div>
 <div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[37]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-r"><pre><span></span>resultsNames<span class="p">(</span>dge<span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
 
 <div class="output_wrapper">
 <div class="output">
@@ -13883,8 +13140,7 @@ fitting model and testing
 
 <div class="output_area">
 
-<div class="prompt"></div>
-
+<div class="prompt"> </div>
 
 
 <div class="output_html rendered_html output_subarea ">
@@ -14547,30 +13803,38 @@ fitting model and testing
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-r"><pre><span></span>norm_counts <span class="o">=</span> counts<span class="p">(</span>dge<span class="p">,</span>normalized<span class="o">=</span><span class="kc">TRUE</span><span class="p">)</span>
-</pre></div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"> </div>
+
+
+<div class="output_html rendered_html output_subarea ">
+<table>
+<thead><tr><th></th><th scope=col>GF_104w_F_1_2</th><th scope=col>GF_104w_F_2_2</th><th scope=col>GF_104w_F_3_2</th><th scope=col>GF_104w_M_1_2</th><th scope=col>GF_104w_M_2_2</th><th scope=col>GF_52w_M_1_2</th><th scope=col>GF_52w_M_2_2</th><th scope=col>GF_52w_M_3_2</th><th scope=col>GF_52w_M_4_2</th><th scope=col>GF_8w_M_1_2</th><th scope=col>⋯</th><th scope=col>SPF_104w_M_14_2</th><th scope=col>SPF_8w_F_1_2</th><th scope=col>SPF_8w_F_3_2</th><th scope=col>SPF_8w_F_4_2</th><th scope=col>SPF_8w_F_5_2</th><th scope=col>GF_8w_F_1_2</th><th scope=col>GF_8w_F_2_2</th><th scope=col>GF_8w_F_3_2</th><th scope=col>GF_8w_F_4_2</th><th scope=col>GF_8w_F_5_2</th></tr></thead>
+<tbody>
+	<tr><th scope=row>0610005C13Rik</th><td>   0.0000   </td><td>   0.00000  </td><td>   0.0000   </td><td>   1.768593 </td><td>   1.259244 </td><td>   0.8418979</td><td>  4.942785  </td><td>   5.603216 </td><td>  7.231584  </td><td>  8.47277   </td><td>⋯           </td><td>   5.28524  </td><td>   3.500355 </td><td>   2.112002 </td><td>   2.602398 </td><td>   0.00000  </td><td>  18.24998  </td><td>   0.00000  </td><td>   2.025447 </td><td>  5.268672  </td><td>   0.00000  </td></tr>
+	<tr><th scope=row>0610007P14Rik</th><td> 868.4015   </td><td> 749.64927  </td><td> 910.3535   </td><td> 886.064952 </td><td> 992.913601 </td><td> 508.5063502</td><td>530.855142  </td><td> 514.375197 </td><td>738.344705  </td><td>603.98749   </td><td>⋯           </td><td> 692.36648  </td><td> 763.077332 </td><td> 744.480801 </td><td> 908.237050 </td><td> 957.79030  </td><td> 898.54336  </td><td> 682.26034  </td><td> 612.697796 </td><td>593.252445  </td><td> 809.27852  </td></tr>
+	<tr><th scope=row>0610009B22Rik</th><td>1021.3276   </td><td>1169.19730  </td><td>1180.9991   </td><td>1224.750457 </td><td>1558.313990 </td><td>1038.9020466</td><td>876.850113  </td><td>1016.423320 </td><td>877.914273  </td><td>948.95029   </td><td>⋯           </td><td>1206.79653  </td><td>1268.295198 </td><td>1164.769254 </td><td>1295.994415 </td><td>1446.89758  </td><td>1040.24912  </td><td>1020.67017  </td><td>1142.352254 </td><td>959.952003  </td><td>1094.00091  </td></tr>
+	<tr><th scope=row>0610009L18Rik</th><td>  28.2185   </td><td>  36.20465  </td><td>  18.2253   </td><td>  20.338816 </td><td>  38.406931 </td><td>  31.9921214</td><td> 26.691041  </td><td>  22.412863 </td><td>  4.338950  </td><td> 61.73018   </td><td>⋯           </td><td>  45.80542  </td><td>  42.004257 </td><td>  45.408049 </td><td> 102.794738 </td><td>  72.02239  </td><td>  48.30878  </td><td>  19.58642  </td><td>  11.139960 </td><td> 45.310578  </td><td>  24.36813  </td></tr>
+	<tr><th scope=row>0610009O20Rik</th><td> 217.5555   </td><td> 278.98879  </td><td> 266.0893   </td><td> 226.379868 </td><td> 271.996624 </td><td> 299.7156634</td><td>349.949200  </td><td> 395.587025 </td><td>309.511786  </td><td>360.69794   </td><td>⋯           </td><td> 178.81730  </td><td> 274.194454 </td><td> 252.384272 </td><td> 227.709862 </td><td> 184.89330  </td><td> 231.88216  </td><td> 158.86764  </td><td> 271.409933 </td><td>304.529230  </td><td> 269.33199  </td></tr>
+	<tr><th scope=row>0610010B08Rik</th><td>   0.0000   </td><td>   0.00000  </td><td>   0.0000   </td><td>   0.000000 </td><td>   0.000000 </td><td>   0.0000000</td><td>  0.000000  </td><td>   0.000000 </td><td>  0.000000  </td><td>  0.00000   </td><td>⋯           </td><td>   0.00000  </td><td>   0.000000 </td><td>   0.000000 </td><td>   0.000000 </td><td>   0.00000  </td><td>   0.00000  </td><td>   0.00000  </td><td>   0.000000 </td><td>  0.000000  </td><td>   0.00000  </td></tr>
+</tbody>
+</table>
 
 </div>
+
+</div>
+
 </div>
 </div>
 
 </div>
 <div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[143]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-r"><pre><span></span><span class="kp">save</span><span class="p">(</span>dge<span class="p">,</span> file <span class="o">=</span> <span class="s">&quot;../results/dge/dge.RData&quot;</span><span class="p">)</span>
-<span class="kp">save</span><span class="p">(</span>norm_counts<span class="p">,</span> file<span class="o">=</span><span class="s">&quot;../results/dge/norm_counts.RData&quot;</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
@@ -14582,17 +13846,6 @@ fitting model and testing
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-r"><pre><span></span><span class="c1"># Save the notebook into the history</span>
-<span class="kp">system</span><span class="p">(</span><span class="s">&quot;put -p dge_analysis.ipynb -t ipynb&quot;</span><span class="p">,</span> intern<span class="o">=</span><span class="bp">T</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
 
 </div>
     </div>

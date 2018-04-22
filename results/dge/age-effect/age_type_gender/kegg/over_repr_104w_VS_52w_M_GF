@@ -1,0 +1,72 @@
+$`04672`
+[1] "CXCR4"    "H2-AA"    "H2-AB1"   "H2-DMA"   "H2-DMB1"  "H2-EB1"   "MAP3K14" 
+[8] "TNFSF13B"
+
+$`04110`
+ [1] "ABL1"    "ANAPC11" "ANAPC13" "ATR"     "BUB1"    "CCNB2"   "CCND1"  
+ [8] "CCND3"   "CDC14A"  "CDKN1A"  "CDKN2C"  "CDKN2D"  "CREBBP"  "DBF4"   
+[15] "EP300"   "SMAD3"  
+
+$`04744`
+[1] "ARRB1" "CALM3"
+
+$`03030`
+[1] "POLD2"
+
+$`04514`
+ [1] "F11R"    "H2-AA"   "H2-AB1"  "H2-D1"   "H2-DMA"  "H2-DMB1" "H2-EB1" 
+ [8] "H2-K1"   "ICAM2"   "ITGA9"   "PDCD1"   "SPN"     "VCAM1"  
+
+$`05150`
+ [1] "C1QA"    "C1QC"    "C3"      "C5AR1"   "FCGR1"   "H2-AA"   "H2-AB1" 
+ [8] "H2-DMA"  "H2-DMB1" "H2-EB1" 
+
+$`05323`
+ [1] "ATP6V0E"  "CCL3"     "CCL5"     "FLT1"     "H2-AA"    "H2-AB1"  
+ [7] "H2-DMA"   "H2-DMB1"  "H2-EB1"   "IL1A"     "JUN"      "TLR2"    
+[13] "TNF"      "TNFSF13B"
+
+$`05140`
+ [1] "C3"      "CYBA"    "FCGR1"   "H2-AA"   "H2-AB1"  "H2-DMA"  "H2-DMB1"
+ [8] "H2-EB1"  "IL1A"    "JAK2"    "JUN"     "MAP3K7"  "NFKBIA"  "TLR2"   
+[15] "TNF"    
+
+$`04060`
+ [1] "CCL3"     "CCL4"     "CCL5"     "CCL6"     "CCL8"     "CCL9"    
+ [7] "CRLF2"    "CX3CR1"   "CXCL14"   "CXCL16"   "CXCR4"    "EGF"     
+[13] "FLT1"     "FLT3L"    "IL12RB2"  "IL1A"     "IL2RG"    "IL6RA"   
+[19] "PF4"      "TNF"      "TNFSF13B" "TNFSF8"  
+
+$`05144`
+[1] "CD81"  "LRP1"  "TLR2"  "TNF"   "VCAM1"
+
+$`04145`
+ [1] "ATP6V0E" "C3"      "CD14"    "CLEC7A"  "COLEC12" "CYBA"    "CYBB"   
+ [8] "DYNC1H1" "DYNC1I2" "DYNC2H1" "EEA1"    "FCGR1"   "H2-AA"   "H2-AB1" 
+[15] "H2-D1"   "H2-DMA"  "H2-DMB1" "H2-EB1"  "H2-K1"   "LAMP2"   "MPO"    
+[22] "MRC1"    "OLR1"    "PIKFYVE" "SEC61B"  "TLR2"    "TUBA1B"  "TUBA1C" 
+[29] "TUBB6"  
+
+$`05310`
+[1] "FCER1G"  "H2-AA"   "H2-AB1"  "H2-DMA"  "H2-DMB1" "H2-EB1"  "TNF"    
+
+$`05330`
+[1] "H2-AA"   "H2-AB1"  "H2-D1"   "H2-DMA"  "H2-DMB1" "H2-EB1"  "H2-K1"  
+[8] "TNF"    
+
+$`05145`
+ [1] "CHUK"    "H2-AA"   "H2-AB1"  "H2-DMA"  "H2-DMB1" "H2-EB1"  "JAK2"   
+ [8] "LY96"    "MAP3K7"  "MAPK8"   "NFKBIA"  "PIK3CD"  "PIK3R5"  "TLR2"   
+[15] "TNF"     "TYK2"   
+
+$`04710`
+[1] "BHLHE40" "CRY1"   
+
+$`00533`
+[1] "ST3GAL3"
+
+$`04670`
+ [1] "ARHGAP35" "CXCR4"    "CYBA"     "CYBB"     "EZR"      "F11R"    
+ [7] "AFDN"     "MYL2"     "PIK3CD"   "PIK3R5"   "PLCG1"    "PRKCA"   
+[13] "ROCK2"    "VAV2"     "VCAM1"   
+

@@ -1,2 +1,9 @@
 category	term	ontology	M VS F
-GO:0007606	sensory perception of chemical stimulus	BP	0.000404094804313205
+GO:0004888	transmembrane signaling receptor activity	MF	0.0460854052766825
+GO:0099600	transmembrane receptor activity	MF	0.0388242797126318
+GO:0016020	membrane	CC	1.97438629169076e-05
+GO:0044425	membrane part	CC	5.10794812684343e-06
+GO:0031224	intrinsic component of membrane	CC	3.73786585628546e-06
+GO:0007606	sensory perception of chemical stimulus	BP	4.5009943055774e-06
+GO:0005549	odorant binding	MF	0.0199227447913117
+GO:0007608	sensory perception of smell	BP	2.11519860405234e-07

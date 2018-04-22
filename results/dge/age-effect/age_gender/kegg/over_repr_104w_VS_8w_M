@@ -1,0 +1,67 @@
+$`04744`
+[1] "GUCA1B"
+
+$`04672`
+ [1] "CD40"     "CXCL12"   "CXCR4"    "H2-AA"    "H2-AB1"   "H2-DMA"  
+ [7] "H2-DMB1"  "H2-EB1"   "H2-OB"    "ICOS"     "MAP3K14"  "TNFSF13B"
+
+$`05322`
+ [1] "C3"        "C4B"       "CD40"      "FCGR4"     "H2-AA"     "H2-AB1"   
+ [7] "H2-DMA"    "H2-DMB1"   "H2-EB1"    "H2-OB"     "H2AFX"     "HIST1H2AC"
+[13] "HIST1H2AD" "HIST1H2AE" "HIST1H2BB" "HIST1H2BC" "HIST1H2BE" "HIST1H2BF"
+[19] "HIST1H2BG" "HIST1H3A"  "HIST1H3C"  "HIST1H3D"  "HIST1H3E"  "HIST1H3F" 
+[25] "HIST1H4C"  "HIST1H4D"  "HIST1H4H"  "HIST1H4I"  "HIST2H2BB" "HIST2H3B" 
+[31] "HIST2H4"   "HIST3H2BA" "HIST4H4"  
+
+$`00561`
+[1] "AGPAT4"  "ALDH1B1" "DGAT2"   "DGKQ"    "LPL"     "MBOAT1"  "MGLL"   
+[8] "PLPP1"   "PLPP2"  
+
+$`04060`
+ [1] "ACKR3"    "CCL12"    "CCL5"     "CCL6"     "CCL8"     "CCR1"    
+ [7] "CD40"     "CRLF2"    "CXCL12"   "CXCL13"   "CXCL14"   "CXCL16"  
+[13] "CXCL9"    "CXCR4"    "EGF"      "FLT1"     "IL1B"     "IL1RAP"  
+[19] "IL2RG"    "IL3RA"    "IL7R"     "LTB"      "PDGFC"    "TGFBR1"  
+[25] "TNFRSF4"  "TNFSF13B" "TNFSF8"  
+
+$`05310`
+[1] "CD40"    "H2-AA"   "H2-AB1"  "H2-DMA"  "H2-DMB1" "H2-EB1"  "H2-OB"  
+
+$`04115`
+ [1] "ATM"      "CCNB1"    "CCNB2"    "CCNE1"    "CCNE2"    "CDKN1A"  
+ [7] "GADD45G"  "MDM4"     "PIDD1"    "RRM2"     "SERPINE1" "SHISA5"  
+
+$`05150`
+ [1] "C3"      "C4B"     "C5AR1"   "FCGR4"   "H2-AA"   "H2-AB1"  "H2-DMA" 
+ [8] "H2-DMB1" "H2-EB1"  "H2-OB"   "KRT10"   "MASP1"  
+
+$`05323`
+ [1] "CCL5"     "CXCL12"   "FLT1"     "FOS"      "H2-AA"    "H2-AB1"  
+ [7] "H2-DMA"   "H2-DMB1"  "H2-EB1"   "H2-OB"    "IL1B"     "JUN"     
+[13] "LTB"      "TLR2"     "TNFSF13B"
+
+$`05140`
+ [1] "C3"      "FCGR4"   "FOS"     "H2-AA"   "H2-AB1"  "H2-DMA"  "H2-DMB1"
+ [8] "H2-EB1"  "H2-OB"   "IL1B"    "JUN"     "TAB1"    "TAB2"    "TLR2"   
+
+$`04110`
+ [1] "ATM"     "BUB1"    "CCNA2"   "CCNB1"   "CCNB2"   "CCNE1"   "CCNE2"  
+ [8] "CDC20"   "CDKN1A"  "CDKN1B"  "CREBBP"  "E2F1"    "GADD45G" "MCM2"   
+[15] "MCM4"    "MCM5"    "MCM6"    "PLK1"    "WEE1"   
+
+$`05145`
+ [1] "CD40"    "GNAI1"   "H2-AA"   "H2-AB1"  "H2-DMA"  "H2-DMB1" "H2-EB1" 
+ [8] "H2-OB"   "LAMB2"   "LDLR"    "MAPK8"   "TAB1"    "TAB2"    "TLR2"   
+
+$`00670`
+[1] "ALDH1L1" "MTHFR"  
+
+$`04360`
+ [1] "ARHGEF12" "CXCL12"   "CXCR4"    "DPYSL5"   "EFNA2"    "FYN"     
+ [7] "GNAI1"    "NFAT5"    "PPP3CC"   "PTK2"     "ROCK2"    "SEMA4G"  
+[13] "SEMA6D"   "UNC5A"   
+
+$`05330`
+ [1] "CD40"    "H2-AA"   "H2-AB1"  "H2-D1"   "H2-DMA"  "H2-DMB1" "H2-EB1" 
+ [8] "H2-K1"   "H2-M2"   "H2-M3"   "H2-OB"   "H2-Q2"  
+

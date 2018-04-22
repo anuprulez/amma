@@ -1,0 +1,18 @@
+$`GO:0002376`
+ [1] "1810011O10RIK" "ACE"           "ADA"           "CAMP"         
+ [5] "CTSE"          "CXCL13"        "DDIT4"         "FCNB"         
+ [9] "FLT3"          "FOXJ1"         "GBP6"          "HIST1H2BA"    
+[13] "HIST1H2BC"     "HOXA9"         "IGF1"          "ITGAL"        
+[17] "KCNJ8"         "KMT2A"         "LCN2"          "LGALS1"       
+[21] "LGALS3"        "LILRB4A"       "LST1"          "LY86"         
+[25] "MMP28"         "PDCD1"         "PLA2G7"        "RAB4A"        
+[29] "RAB7B"         "S100A8"        "S100A9"        "SEMA4A"       
+[33] "TAL1"          "THBS1"         "TNFRSF17"      "TOP2A"        
+[37] "TSC22D3"       "VEGFA"         "WDFY1"        
+
+$`GO:0018119`
+[1] "ACE"    "NOS1AP" "S100A8" "S100A9"
+
+$`GO:0017014`
+[1] "ACE"    "NOS1AP" "S100A8" "S100A9"
+
