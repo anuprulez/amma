@@ -32,7 +32,7 @@ After the [extraction of number of reads mapped on each annotated genes for each
 1.[Building of the differential expression analysis (normalization of the counts)](dge_analysis)
 2.[Pre-visualization of the normalized count data before any differential analysis](pre-visualization)
 
-We then analyzed the data given different angels
+We then analyzed the data given different angles
 
 ## Effect of the type on the expressed genes
 
@@ -71,3 +71,6 @@ Summary:
 
 ![](https://github.com/bebatut/neuromac_GF_mices/blob/master/results/dge/age-effect/summary_dge.png?raw=true)
 
+## Genes confirmed as a core signature for homeostatic microglia
+
+[Genes confirmed as a core signature for homeostatic microglia](homeostatic_core_signature_genes) - [data](https://github.com/bebatut/neuromac_GF_mices/tree/master/results/dge/homeostatic_core_signature_genes/)
