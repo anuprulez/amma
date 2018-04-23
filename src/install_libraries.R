@@ -33,3 +33,4 @@ biocLite("affy")
 biocLite("limma")
 
 install.packages("reshape")
+install.packages("plotly")

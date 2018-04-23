@@ -35,6 +35,7 @@ suppressMessages(library(xlsx))
 suppressMessages(library(affy))
 suppressMessages(library(limma))
 suppressMessages(library(reshape))
+suppressMessages(library(plotly))
 
 MF_GO = godata('org.Mm.eg.db', ont="MF")
 CC_GO = godata('org.Mm.eg.db', ont="CC")
