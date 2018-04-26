@@ -36,6 +36,7 @@ suppressMessages(library(affy))
 suppressMessages(library(limma))
 suppressMessages(library(reshape))
 suppressMessages(library(plotly))
+suppressMessages(library(RamiGO))
 
 MF_GO = godata('org.Mm.eg.db', ont="MF")
 CC_GO = godata('org.Mm.eg.db', ont="CC")

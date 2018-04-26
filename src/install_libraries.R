@@ -34,3 +34,5 @@ biocLite("limma")
 
 install.packages("reshape")
 install.packages("plotly")
+
+biocLite("RamiGO")

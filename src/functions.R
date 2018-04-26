@@ -410,7 +410,7 @@ get_col_ramp = function(values, min_col, max_col){
     }
 }
 
-get_GO_network_col = function(net, comp, all_GO){
+get_GO_network_col = function(net, comp, all_GO = NULL){
     #
     over_repr_colors = get_col_ramp(net$over_repr, "red", "lightpink")
     under_repr_colors = get_col_ramp(net$under_repr, "blue", "lightblue")
@@ -429,8 +429,10 @@ get_GO_network_col = function(net, comp, all_GO){
     }
     if(length(under_repr_GO) > 0){
         col[names(under_repr_GO)] = sapply(under_repr_GO, function(i) return(under_repr_colors[which(under_repr_colors[,1] == i)[1],2]))
-    }                       
-    names(col) = full_go_desc[net$interesting_GO]
+    } 
+    if(!is.null(all_GO)){
+        names(col) = all_GO[net$interesting_GO]
+    }
     return(col)
 }
 
