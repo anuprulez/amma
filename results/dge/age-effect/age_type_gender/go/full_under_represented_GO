@@ -1,0 +1,55 @@
+category	term	ontology	52w VS 8w (F, SPF)	52w VS 8w (F, GF)	52w VS 8w (M, SPF)	52w VS 8w (M, GF)	104w VS 52w (F, SPF)	104w VS 52w (F, GF)	104w VS 52w (M, SPF)	104w VS 52w (M, GF)	104w VS 8w (F, SPF)	104w VS 8w (F, GF)	104w VS 8w (M, SPF)	104w VS 8w (M, GF)
+GO:0060606	tube closure	BP	NA	NA	NA	NA	NA	0.0357412958844923	NA	NA	NA	NA	NA	NA
+GO:0045940	positive regulation of steroid metabolic process	BP	NA	NA	NA	NA	NA	0.0357412958844923	NA	NA	NA	NA	NA	NA
+GO:0030136	clathrin-coated vesicle	CC	NA	0.0329025678864787	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA
+GO:0000303	response to superoxide	BP	NA	0.0315017362675637	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA
+GO:0006639	acylglycerol metabolic process	BP	NA	NA	NA	NA	NA	0.0357412958844923	NA	NA	NA	NA	NA	NA
+GO:0004888	transmembrane signaling receptor activity	MF	0.0454163406604939	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA
+GO:0099600	transmembrane receptor activity	MF	0.0350889567640429	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA
+GO:0006583	melanin biosynthetic process from tyrosine	BP	NA	NA	NA	NA	NA	NA	0.00106105847903419	NA	NA	NA	NA	NA
+GO:0036337	Fas signaling pathway	BP	NA	NA	NA	NA	NA	NA	0.000393377440404057	NA	NA	NA	NA	NA
+GO:0001695	histamine catabolic process	BP	NA	NA	NA	NA	NA	NA	0.000259667013826044	NA	NA	NA	NA	NA
+GO:0046539	histamine N-methyltransferase activity	MF	NA	NA	NA	NA	NA	NA	0.000259667013826044	NA	NA	NA	NA	NA
+GO:0052805	imidazole-containing compound catabolic process	BP	NA	NA	NA	NA	NA	NA	1.96328105548443e-05	NA	NA	NA	NA	NA
+GO:0016108	tetraterpenoid metabolic process	BP	NA	NA	NA	NA	NA	NA	1.17921136700328e-06	NA	NA	NA	NA	NA
+GO:0019815	B cell receptor complex	CC	NA	NA	NA	NA	NA	NA	NA	NA	0.017061644829581	NA	NA	NA
+GO:0008510	sodium:bicarbonate symporter activity	MF	NA	NA	NA	NA	NA	NA	NA	NA	0.0121137289412611	NA	NA	NA
+GO:1904252	negative regulation of bile acid metabolic process	BP	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	0.0056329426513527
+GO:0014016	neuroblast differentiation	BP	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	0.00565493288650938
+GO:0031085	BLOC-3 complex	CC	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	0.00325623902838566
+GO:0008029	pentraxin receptor activity	MF	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	0.00253875612882734
+GO:0019785	ISG15-specific protease activity	MF	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	0.000281790723226731
+GO:0034275	kynurenic acid metabolic process	BP	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	0.000486108744234429
+GO:0034276	kynurenic acid biosynthetic process	BP	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	3.25211428962575e-06
+GO:0036269	swimming behavior	BP	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	3.25211428962575e-06
+GO:0061373	mammillary axonal complex development	BP	NA	NA	NA	NA	NA	NA	NA	0.0382647475039187	NA	NA	NA	NA
+GO:0030860	regulation of polarized epithelial cell differentiation	BP	NA	NA	NA	NA	NA	NA	NA	0.0366395372722221	NA	NA	NA	NA
+GO:0030862	positive regulation of polarized epithelial cell differentiation	BP	NA	NA	NA	NA	NA	NA	NA	0.0366395372722221	NA	NA	NA	NA
+GO:0019075	virus maturation	BP	NA	NA	NA	NA	NA	NA	NA	0.019971263727309	NA	NA	NA	NA
+GO:1904602	serotonin-activated cation-selective channel complex	CC	NA	NA	NA	NA	NA	NA	NA	0.0487964185781054	NA	NA	NA	NA
+GO:0097418	neurofibrillary tangle	CC	NA	NA	NA	NA	NA	NA	NA	0.0206213823270678	NA	NA	NA	NA
+GO:1904327	protein localization to cytosolic proteasome complex	BP	NA	NA	NA	NA	NA	NA	NA	0.0094591658545028	NA	NA	NA	NA
+GO:1904379	protein localization to cytosolic proteasome complex involved in ERAD pathway	BP	NA	NA	NA	NA	NA	NA	NA	0.0094591658545028	NA	NA	NA	NA
+GO:0080144	amino acid homeostasis	BP	NA	NA	NA	NA	NA	NA	NA	0.0094591658545028	NA	NA	NA	NA
+GO:0072135	kidney mesenchymal cell proliferation	BP	NA	NA	NA	NA	NA	NA	NA	0.000522911442815045	NA	NA	NA	NA
+GO:0072136	metanephric mesenchymal cell proliferation involved in metanephros development	BP	NA	NA	NA	NA	NA	NA	NA	0.00103837683428357	NA	NA	NA	NA
+GO:0000224	peptide-N4-(N-acetyl-beta-glucosaminyl)asparagine amidase activity	MF	NA	NA	NA	NA	NA	NA	NA	0.000341700413374849	NA	NA	NA	NA
+GO:0004325	ferrochelatase activity	MF	NA	NA	NA	NA	NA	NA	NA	0.0011941940924328	NA	NA	NA	NA
+GO:1901204	regulation of adrenergic receptor signaling pathway involved in heart process	BP	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	3.78876209568294e-07
+GO:0070868	heterochromatin organization involved in chromatin silencing	BP	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	0.0148713788954124	NA
+GO:0070869	heterochromatin assembly involved in chromatin silencing	BP	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	0.0106616900701072	NA
+GO:0097549	chromatin organization involved in negative regulation of transcription	BP	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	0.000841427937834791	NA
+GO:0033011	perinuclear theca	CC	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	0.00416073106701752	NA
+GO:0035039	male pronucleus assembly	BP	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	0.00018542910677029	NA
+GO:0071678	olfactory bulb axon guidance	BP	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	1.27904790295937e-06	NA
+GO:0004807	triose-phosphate isomerase activity	MF	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	1.27904790295937e-06	NA
+GO:2000532	regulation of renal albumin absorption	BP	NA	NA	NA	NA	NA	NA	NA	NA	NA	9.25172027629278e-07	NA	NA
+GO:0052855	ADP-dependent NAD(P)H-hydrate dehydratase activity	MF	NA	NA	NA	NA	NA	NA	NA	0.0171458167283271	NA	NA	NA	NA
+GO:1905097	regulation of guanyl-nucleotide exchange factor activity	BP	NA	NA	NA	NA	NA	NA	NA	1.72401400144354e-08	NA	NA	NA	NA
+GO:0002092	positive regulation of receptor internalization	BP	NA	NA	NA	NA	NA	NA	0.000126619362165896	NA	NA	NA	NA	NA
+GO:0007606	sensory perception of chemical stimulus	BP	1.06960496514493e-07	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA
+GO:0032375	negative regulation of cholesterol transport	BP	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	2.04672781185531e-06
+GO:0034382	chylomicron remnant clearance	BP	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	3.58954483374436e-07	NA
+GO:0034790	3,4-dihydroxy-3,4-dihydrofluorene dehydrogenase activity	MF	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	1.66494798865717e-07
+GO:0051044	positive regulation of membrane protein ectodomain proteolysis	BP	NA	NA	NA	NA	NA	NA	NA	NA	0.0010705599745906	NA	NA	NA
+GO:2000251	positive regulation of actin cytoskeleton reorganization	BP	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	0.0012372282490271

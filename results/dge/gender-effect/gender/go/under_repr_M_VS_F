@@ -186,9 +186,6 @@ $`GO:0031224`
 [149] "VAMP1"         "VASN"          "VCAM1"         "VSTM4"        
 [153] "XK"            "XKR6"          "ZGRF1"        
 
-$`GO:0007606`
-[1] "GNAT1"   "NAV2"    "OLFR111" "PKD1L3"  "TAS1R3" 
-
 $`GO:0005549`
 character(0)
 

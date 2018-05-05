@@ -1,6 +1,3 @@
-$`GO:0002314`
-character(0)
-
 $`GO:0047685`
 character(0)
 
@@ -11,15 +8,6 @@ $`GO:0035105`
 [1] "LMNA"
 
 $`GO:1903924`
-character(0)
-
-$`GO:0019732`
-[1] "LTF"
-
-$`GO:1901082`
-character(0)
-
-$`GO:0061181`
 character(0)
 
 $`GO:0030478`
@@ -35,18 +23,6 @@ $`GO:0071881`
 character(0)
 
 $`GO:0071882`
-character(0)
-
-$`GO:0010015`
-character(0)
-
-$`GO:0010053`
-character(0)
-
-$`GO:0010054`
-character(0)
-
-$`GO:0022622`
 character(0)
 
 $`GO:0010519`

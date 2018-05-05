@@ -1,6 +1,3 @@
-$`GO:0050907`
-[1] "GNAT1" "PLCB2"
-
 $`GO:0044306`
 [1] "APC"    "PTGER4" "SGIP1" 
 
@@ -29,16 +26,6 @@ $`GO:0003008`
 [67] "SERPINF1"  "SGK1"      "SLC26A6"   "THRB"      "TIAM1"     "TMF1"     
 [73] "TNF"       "TRPM7"     "UBA6"      "UTY"       "WHRN"      "WNK1"     
 [79] "ZC3H12A"  
-
-$`GO:0050877`
- [1] "ABL1"     "ACE"      "ALDH1A3"  "ATF6"     "ATXN1"    "CDKN1B"  
- [7] "CHD7"     "CLN5"     "DICER1"   "DVL1"     "EIF4EBP2" "FBXO11"  
-[13] "FGF13"    "GIGYF2"   "GNAT1"    "HERC1"    "HEXB"     "ITPR3"   
-[19] "JUN"      "KMT2A"    "KMT2B"    "MTOR"     "MYC"      "MYO15"   
-[25] "NAV2"     "NF1"      "NIPBL"    "OLFR456"  "PDC"      "PDE1B"   
-[31] "PDE4A"    "PDE6A"    "PLCB2"    "PRPH2"    "RBP3"     "RCAN1"   
-[37] "RDH5"     "RGS9"     "RHO"      "RP1"      "SERPINE2" "SERPINF1"
-[43] "SGK1"     "THRB"     "TNF"      "TRPM7"    "UBA6"     "WHRN"    
 
 $`GO:0005886`
   [1] "ABL1"          "ACE"           "ACHE"          "ACIN1"        
@@ -165,13 +152,6 @@ $`GO:0004871`
 [55] "RYR1"     "SGPP1"    "SLC20A1"  "SLC35B2"  "TAOK1"    "TAOK2"   
 [61] "TGFBR1"   "THBD"     "THRB"     "TIAM1"    "TLR3"     "TNFRSF14"
 [67] "TPCN1"   
-
-$`GO:0007600`
- [1] "ACE"      "ATF6"     "CDKN1B"   "CHD7"     "CLN5"     "FBXO11"  
- [7] "GNAT1"    "HEXB"     "ITPR3"    "MTOR"     "MYC"      "MYO15"   
-[13] "NAV2"     "NIPBL"    "OLFR456"  "PDC"      "PDE4A"    "PDE6A"   
-[19] "PLCB2"    "PRPH2"    "RBP3"     "RDH5"     "RGS9"     "RHO"     
-[25] "RP1"      "SERPINE2" "THRB"     "TNF"      "WHRN"    
 
 $`GO:0016020`
   [1] "2410089E03RIK"  "4932438A13RIK"  "9530068E07RIK"  "9930111J21RIK1"
@@ -358,9 +338,6 @@ character(0)
 $`GO:1990932`
 character(0)
 
-$`GO:0033092`
-character(0)
-
 $`GO:0045340`
 character(0)
 
@@ -371,8 +348,5 @@ $`GO:0021933`
 character(0)
 
 $`GO:0000012`
-character(0)
-
-$`GO:0003072`
 character(0)
 

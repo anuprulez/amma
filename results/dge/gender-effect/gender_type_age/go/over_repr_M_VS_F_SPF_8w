@@ -1999,9 +1999,6 @@ $`GO:0044391`
  [9] "RPL37A" "RPL38"  "RPL39"  "RPLP1"  "RPLP2"  "RPS14"  "RPS21"  "RPS24" 
 [17] "RPS26"  "RPS27" 
 
-$`GO:0002227`
-[1] "CAMP"      "HIST1H2BE" "HIST1H2BF" "HIST1H2BG" "NOD2"      "RPL39"    
-
 $`GO:0043933`
   [1] "ACHE"      "AGO2"      "AGO3"      "AKAP8"     "APBA1"     "APC"      
   [7] "APOBEC1"   "ARFGEF1"   "ARPC4"     "ARRB1"     "ASH1L"     "ATAD2"    
@@ -3508,10 +3505,6 @@ $`GO:0046483`
 [337] "ZFP653"        "ZFP668"        "ZFP704"        "ZFP784"       
 [341] "ZFP935"        "ZFYVE26"       "ZMYND15"       "ZRSR1"        
 [345] "ZSCAN2"        "ZSCAN26"      
-
-$`GO:0002385`
-[1] "CAMP"      "HIST1H2BE" "HIST1H2BF" "HIST1H2BG" "NOD2"      "RPL39"    
-[7] "TNFSF13"  
 
 $`GO:0043603`
  [1] "2010111I01RIK" "ACE"           "AGO2"          "AGO3"         

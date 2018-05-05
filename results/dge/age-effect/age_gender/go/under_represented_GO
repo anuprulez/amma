@@ -1,5 +1,4 @@
 category	term	ontology	52w VS 8w (F)	52w VS 8w (M)	104w VS 52w (F)	104w VS 52w (M)	104w VS 8w (F)	104w VS 8w (M)
-GO:0007606	sensory perception of chemical stimulus	BP	1.54991027738067e-05	NA	NA	NA	NA	NA
 GO:0003343	septum transversum development	BP	NA	NA	NA	NA	0.00795023424605171	NA
 GO:0032625	interleukin-21 production	BP	NA	NA	NA	NA	0.000172871495982336	NA
 GO:0001888	glucuronyl-galactosyl-proteoglycan 4-alpha-N-acetylglucosaminyltransferase activity	MF	NA	NA	NA	0.0390263838919933	NA	NA

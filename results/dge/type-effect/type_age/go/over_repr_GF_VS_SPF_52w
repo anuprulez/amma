@@ -128,21 +128,6 @@ character(0)
 $`GO:0050840`
 [1] "VEGFA"
 
-$`GO:2000026`
- [1] "1810011O10RIK" "ADA"           "ADRB1"         "ARNTL"        
- [5] "AXL"           "BCL2"          "BEND6"         "CAMP"         
- [9] "CAV1"          "CCNB1"         "CCND1"         "CD1D1"        
-[13] "CDC20"         "CXCL10"        "DDX17"         "DUOXA1"       
-[17] "DYNLT1B"       "ELAVL4"        "FAM20C"        "FAM213A"      
-[21] "GCNT2"         "HIST1H4C"      "IL15RA"        "IL1RN"        
-[25] "IL2RG"         "IL6ST"         "IL7R"          "JAK3"         
-[29] "KLF13"         "MAFF"          "MYCL"          "NGP"          
-[33] "NOTCH4"        "NR1D2"         "NRP1"          "NUPR1"        
-[37] "PDCD1"         "PER2"          "RASSF2"        "RXRG"         
-[41] "SEMA4A"        "SEMA6D"        "STK11"         "TAL1"         
-[45] "TRPV4"         "TSC22D3"       "UBASH3B"       "VEGFA"        
-[49] "XDH"           "ZBTB16"        "ZFP36L1"      
-
 $`GO:0048518`
   [1] "1810011O10RIK" "ADA"           "ADORA1"        "ADRB1"        
   [5] "ARNTL"         "ASNS"          "AURKA"         "AXL"          
@@ -248,9 +233,6 @@ $`GO:0050793`
 [61] "TSC22D3"       "UBASH3B"       "VEGFA"         "XDH"          
 [65] "ZBTB16"        "ZFP36L1"      
 
-$`GO:0070232`
-[1] "ADA"     "JAK3"    "PDCD1"   "TSC22D3"
-
 $`GO:0042445`
 [1] "CPQ"     "DUOXA1"  "ERO1LB"  "IDE"     "SELM"    "SULT1A1"
 
@@ -260,29 +242,6 @@ $`GO:0031638`
 $`GO:0002685`
  [1] "ADA"    "ADORA1" "CCR6"   "CXCL10" "GPR18"  "MMP28"  "PLA2G7" "SLAMF8"
  [9] "TRPV4"  "VEGFA" 
-
-$`GO:0051239`
- [1] "1810011O10RIK" "ADA"           "ADORA1"        "ADRB1"        
- [5] "ARNTL"         "AURKA"         "AXL"           "BCL2"         
- [9] "BCL3"          "BEND6"         "CACNB2"        "CAMP"         
-[13] "CAV1"          "CCNB1"         "CCND1"         "CCR6"         
-[17] "CD1D1"         "CDC20"         "CXCL10"        "DDX17"        
-[21] "DUOXA1"        "DYNLT1B"       "ELAVL4"        "FAM20C"       
-[25] "FAM213A"       "FGFBP3"        "GCNT2"         "GPR18"        
-[29] "HIST1H4C"      "IL12RB2"       "IL15RA"        "IL1RN"        
-[33] "IL2RG"         "IL6ST"         "IL7R"          "IRF7"         
-[37] "JAK3"          "KLF13"         "LPL"           "LTF"          
-[41] "MAFF"          "MYCL"          "NGP"           "NOTCH4"       
-[45] "NR1D2"         "NRP1"          "NUPR1"         "PDCD1"        
-[49] "PER1"          "PER2"          "PER3"          "RASSF2"       
-[53] "RELB"          "RSAD2"         "RXRG"          "SEMA4A"       
-[57] "SEMA6D"        "SLAMF8"        "STK11"         "TAL1"         
-[61] "TKFC"          "TLR7"          "TRAF3"         "TRPV4"        
-[65] "TSC22D3"       "TSPAN8"        "UBASH3B"       "VEGFA"        
-[69] "XDH"           "ZBTB16"        "ZFP36L1"      
-
-$`GO:2001026`
-[1] "VEGFA"
 
 $`GO:0051093`
  [1] "ADRB1"    "ARNTL"    "BCL2"     "CAV1"     "CCND1"    "CXCL10"  
@@ -327,9 +286,6 @@ $`GO:0006952`
 [37] "PER1"      "PLA2G7"    "RELB"      "RSAD2"     "SLAMF8"    "TKFC"     
 [43] "TLR7"      "TNFRSF26"  "TNFSF8"    "TRAF3"     "TRPV4"     "WDFY1"    
 
-$`GO:0002291`
-character(0)
-
 $`GO:0008219`
  [1] "1810011O10RIK" "ADA"           "ADORA1"        "ADRB1"        
  [5] "ASNS"          "AURKA"         "AXL"           "BCL2"         
@@ -373,9 +329,6 @@ $`GO:0007623`
 
 $`GO:0060978`
 [1] "NRP1"  "VEGFA"
-
-$`GO:0031100`
-[1] "AURKA" "CCND1" "LIFR" 
 
 $`GO:0060541`
 [1] "ADA"   "DHCR7" "VEGFA"
@@ -458,9 +411,6 @@ character(0)
 $`GO:0097197`
 [1] "TSPAN33"
 
-$`GO:0035767`
-[1] "NRP1"  "VEGFA"
-
 $`GO:0070492`
 character(0)
 
@@ -469,32 +419,6 @@ character(0)
 
 $`GO:0071674`
 [1] "CXCL10" "PLA2G7" "SLAMF8" "TRPV4" 
-
-$`GO:0048731`
- [1] "1810011O10RIK" "ADA"           "ADAMTS16"      "ADRB1"        
- [5] "ARNTL"         "ASB2"          "AURKA"         "AXL"          
- [9] "BCL2"          "BCL3"          "BEND6"         "CAMK2A"       
-[13] "CAMP"          "CAPN1"         "CAV1"          "CAV2"         
-[17] "CCNB1"         "CCNB2"         "CCND1"         "CCR6"         
-[21] "CD1D1"         "CD300LF"       "CDC20"         "CXCL10"       
-[25] "DDIT4"         "DDX17"         "DHCR24"        "DHCR7"        
-[29] "DNAAF3"        "DUOXA1"        "DYNLT1B"       "E2F1"         
-[33] "ELAVL4"        "ESCO2"         "ETV1"          "FAM20C"       
-[37] "FAM213A"       "GCM2"          "GCNT2"         "GPR18"        
-[41] "HIST1H4C"      "HP"            "IER2"          "IL15RA"       
-[45] "IL2RG"         "IL6ST"         "IL7R"          "JAK3"         
-[49] "KLF13"         "LIFR"          "LST1"          "LTF"          
-[53] "MACROD2"       "MAFF"          "MYCL"          "MYO1E"        
-[57] "NBEAL2"        "NES"           "NFKB2"         "NGP"          
-[61] "NOTCH4"        "NR1D2"         "NRP1"          "NUPR1"        
-[65] "PDCD1"         "PER2"          "PERP"          "PLCD3"        
-[69] "PRKAR1B"       "PTCHD1"        "RACGAP1"       "RASSF2"       
-[73] "RCAN1"         "RELB"          "RSAD2"         "RXRG"         
-[77] "SELM"          "SEMA4A"        "SEMA6D"        "STK11"        
-[81] "TAL1"          "THSD1"         "TMOD1"         "TNFSF8"       
-[85] "TOP2A"         "TRPV4"         "TSC22D3"       "TUBB2B"       
-[89] "UBASH3B"       "VEGFA"         "WEE1"          "XDH"          
-[93] "ZBTB16"        "ZFP36L1"      
 
 $`GO:0048585`
  [1] "1810011O10RIK" "ADA"           "ADORA1"        "AMER2"        
@@ -749,69 +673,6 @@ $`GO:0016337`
 $`GO:0045765`
 [1] "CAMP"   "CXCL10" "NGP"    "NOTCH4" "SEMA4A" "VEGFA" 
 
-$`GO:0044699`
-  [1] "1700112E06RIK" "1810011O10RIK" "ADA"           "ADAMTS16"     
-  [5] "ADCY8"         "ADORA1"        "ADRB1"         "AFMID"        
-  [9] "AKR1E1"        "AMER2"         "ANAPC16"       "ARNTL"        
- [13] "ASB2"          "ASNS"          "AURKA"         "AXL"          
- [17] "B3GALNT1"      "BBS10"         "BCL2"          "BCL3"         
- [21] "BEND6"         "BIRC5"         "BUB1"          "CACNB2"       
- [25] "CAMK2A"        "CAMP"          "CAPN1"         "CAV1"         
- [29] "CAV2"          "CCNA2"         "CCNB1"         "CCNB2"        
- [33] "CCND1"         "CCNE2"         "CCR6"          "CD180"        
- [37] "CD1D1"         "CD300LF"       "CDC20"         "CDC42EP1"     
- [41] "CDCA2"         "CDCA5"         "CDK5RAP1"      "CDKN1A"       
- [45] "CHAF1A"        "CHTF8"         "CLIP1"         "CLSPN"        
- [49] "CSRP1"         "CXCL10"        "CYB561A3"      "DBP"          
- [53] "DDIT4"         "DDX17"         "DHCR24"        "DHCR7"        
- [57] "DNAAF3"        "DTL"           "DUOXA1"        "DUSP1"        
- [61] "DUT"           "DYNLT1B"       "E2F1"          "EBI3"         
- [65] "ELAVL4"        "ERO1LB"        "ESCO2"         "ETV1"         
- [69] "FAM20C"        "FAM213A"       "FBLIM1"        "FBXO40"       
- [73] "FGFBP3"        "FIGNL1"        "GCM2"          "GCNT2"        
- [77] "GFOD2"         "GPD1"          "GPR18"         "GPR65"        
- [81] "GPR84"         "GSTO2"         "HIST1H4C"      "HP"           
- [85] "HTRA3"         "IDE"           "IER2"          "IER3"         
- [89] "IFI27L2A"      "IFIT2"         "IFITM3"        "IL12RB2"      
- [93] "IL15RA"        "IL1RN"         "IL2RG"         "IL6ST"        
- [97] "IL7R"          "IRF7"          "ITGB3BP"       "JAK3"         
-[101] "JDP2"          "KIF22"         "KIF23"         "KLF13"        
-[105] "KNTC1"         "LCN2"          "LDLR"          "LIFR"         
-[109] "LPL"           "LST1"          "LTF"           "LY6G6E"       
-[113] "LY86"          "M1AP"          "MACROD2"       "MAD2L1"       
-[117] "MAFF"          "MAST4"         "MBOAT1"        "MCM2"         
-[121] "MCM5"          "MCUR1"         "MELK"          "MID1"         
-[125] "MLPH"          "MMP28"         "MSR1"          "MT2"          
-[129] "MTHFD2"        "MYCL"          "MYO1E"         "NBEAL2"       
-[133] "NEAT1"         "NES"           "NFATC2"        "NFKB2"        
-[137] "NGP"           "NNT"           "NOTCH4"        "NR1D2"        
-[141] "NRP1"          "NUAK2"         "NUPR1"         "NUSAP1"       
-[145] "OAS1A"         "OASL2"         "OCLN"          "OLFM4"        
-[149] "P3H3"          "PBK"           "PDCD1"         "PER1"         
-[153] "PER2"          "PER3"          "PERP"          "PFAS"         
-[157] "PIGZ"          "PIK3IP1"       "PKMYT1"        "PLA2G7"       
-[161] "PLCD3"         "PLET1"         "PMAIP1"        "PNPLA2"       
-[165] "PLPP1"         "PRC1"          "PRKAR1B"       "PRR5L"        
-[169] "PTCHD1"        "RAB20"         "RAB3D"         "RAB4A"        
-[173] "RACGAP1"       "RALGDS"        "RASL2-9"       "RASSF2"       
-[177] "RASSF3"        "RBM3"          "RCAN1"         "RELB"         
-[181] "RGS1"          "RRM2"          "RSAD2"         "RSPH9"        
-[185] "RTP4"          "RXRG"          "S100A10"       "SAMSN1"       
-[189] "SDC3"          "SELM"          "SEMA4A"        "SEMA6D"       
-[193] "SEPW1"         "SH3GL2"        "SLAMF8"        "SLC1A4"       
-[197] "SLC1A5"        "SLC2A3"        "SLC35G1"       "SLC38A6"      
-[201] "SLC39A4"       "SLC7A1"        "SLFN2"         "SOX30"        
-[205] "SPNS3"         "ST5"           "ST8SIA6"       "STK11"        
-[209] "SULT1A1"       "SYP"           "TAL1"          "TBC1D7"       
-[213] "TEF"           "THSD1"         "TK1"           "TKFC"         
-[217] "TLR7"          "TMEM38A"       "TMOD1"         "TNFRSF17"     
-[221] "TNFRSF26"      "TNFSF8"        "TOP2A"         "TRAF3"        
-[225] "TRPV4"         "TSC22D3"       "TSPAN33"       "TSPAN8"       
-[229] "TUBA4A"        "TUBB2B"        "TUBB6"         "UBASH3B"      
-[233] "UHRF1"         "UROS"          "VEGFA"         "WDFY1"        
-[237] "WEE1"          "XDH"           "ZBTB16"        "ZFP36L1"      
-[241] "ZMAT1"         "ZMYND15"      
-
 $`GO:0006508`
  [1] "ADAMTS16" "ARNTL"    "ASB2"     "AURKA"    "BIRC5"    "C1RL"    
  [7] "CAPN1"    "CAV1"     "CDC20"    "CPQ"      "CST7"     "CTSE"    
@@ -930,9 +791,6 @@ $`GO:0016528`
 $`GO:0035630`
 character(0)
 
-$`GO:0002227`
-[1] "CAMP"      "HIST1H2BC" "LTF"      
-
 $`GO:0030335`
  [1] "BCL2"   "CCR6"   "CXCL10" "GCNT2"  "IL6ST"  "PLA2G7" "PLET1"  "SEMA4A"
  [9] "SEMA6D" "TRPV4"  "VEGFA" 
@@ -988,15 +846,8 @@ character(0)
 $`GO:0061245`
 character(0)
 
-$`GO:0071675`
-[1] "CXCL10" "PLA2G7" "SLAMF8" "TRPV4" 
-
 $`GO:0007162`
 [1] "GCNT2"   "IL1RN"   "JAK3"    "PLET1"   "TRPV4"   "UBASH3B" "VEGFA"  
-
-$`GO:0001525`
- [1] "CAMP"   "CAV1"   "CXCL10" "NGP"    "NOTCH4" "NRP1"   "PLCD3"  "SEMA4A"
- [9] "TAL1"   "VEGFA" 
 
 $`GO:0090130`
 [1] "CCR6"   "NRP1"   "SEMA4A" "VEGFA" 
@@ -1062,9 +913,6 @@ $`GO:0044140`
 
 $`GO:0043281`
 [1] "BIRC5"  "DHCR24" "PMAIP1" "VEGFA"  "XDH"   
-
-$`GO:0045766`
-[1] "CAMP"   "NOTCH4" "VEGFA" 
 
 $`GO:0006851`
 [1] "MCUR1"

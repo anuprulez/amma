@@ -1,12 +1,3 @@
-$`GO:0036305`
-character(0)
-
-$`GO:2000383`
-character(0)
-
-$`GO:2000384`
-character(0)
-
 $`GO:0005586`
 character(0)
 
@@ -22,16 +13,7 @@ character(0)
 $`GO:0061090`
 character(0)
 
-$`GO:0003322`
-character(0)
-
-$`GO:0021502`
-character(0)
-
 $`GO:0021905`
-character(0)
-
-$`GO:0072272`
 character(0)
 
 $`GO:0045009`

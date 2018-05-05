@@ -15,17 +15,6 @@ $`GO:0003008`
 [79] "THRB"     "TMF1"     "TMOD4"    "TRPM7"    "USP53"    "UTY"     
 [85] "WHRN"     "WNK1"     "WNK3"     "ZC3H12A" 
 
-$`GO:0050877`
- [1] "ACE"      "ADRB1"    "AGTPBP1"  "ATXN1"    "BRAF"     "CACNA1C" 
- [7] "CACNA1D"  "CAMK2B"   "CCDC66"   "CHD7"     "DICER1"   "DVL1"    
-[13] "EIF4EBP2" "FBXO11"   "FGF13"    "GNAT1"    "GPR155"   "GUCA1A"  
-[19] "HERC1"    "HTT"      "IGHMBP2"  "JUN"      "KMT2A"    "KMT2B"   
-[25] "MIF"      "MTOR"     "MYO15"    "MYO5A"    "NAV2"     "NPFF"    
-[31] "P2RX1"    "PDC"      "PDE1B"    "PDE4A"    "PDE6A"    "PRKCZ"   
-[37] "PRNP"     "PRPH2"    "RBP3"     "RDH5"     "RGS9"     "RGS9BP"  
-[43] "RHO"      "RP1"      "RPL38"    "SAG"      "SLC12A2"  "SLC1A3"  
-[49] "SLC6A1"   "SPTBN4"   "THRB"     "TRPM7"    "USP53"    "WHRN"    
-
 $`GO:0005886`
   [1] "2010111I01RIK" "ABCB6"         "ACE"           "ACHE"         
   [5] "ADAP2"         "ADGRL1"        "ADRB1"         "AFAP1L1"      
@@ -145,13 +134,6 @@ $`GO:0004871`
 [43] "PPARD"   "PTGER1"  "RAMP1"   "RAPGEF1" "RARG"    "RGS11"   "RGS9"   
 [50] "RHO"     "RHOC"    "RYR1"    "S1PR1"   "S1PR2"   "SLC20A1" "SLC35B2"
 [57] "TAOK1"   "TAOK2"   "THRB"    "TLR2"    "TLR3"   
-
-$`GO:0007600`
- [1] "ACE"     "ADRB1"   "CACNA1D" "CCDC66"  "CHD7"    "FBXO11"  "GNAT1"  
- [8] "GUCA1A"  "MTOR"    "MYO15"   "MYO5A"   "NAV2"    "NPFF"    "PDC"    
-[15] "PDE4A"   "PDE6A"   "PRPH2"   "RBP3"    "RDH5"    "RGS9"    "RGS9BP" 
-[22] "RHO"     "RP1"     "RPL38"   "SAG"     "SLC12A2" "SLC1A3"  "SPTBN4" 
-[29] "THRB"    "USP53"   "WHRN"   
 
 $`GO:0016020`
   [1] "2010107E04RIK"  "2010111I01RIK"  "2410015M20RIK"  "4932438A13RIK" 

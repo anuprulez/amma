@@ -4719,9 +4719,6 @@ $`GO:0003735`
 [13] "RPLP2"    "RPS14"    "RPS21"    "RPS27"    "SLC25A27" "SLC25A30"
 [19] "SLC25A37" "SLC25A43"
 
-$`GO:0002227`
-[1] "HIST1H2BE" "HIST1H2BF" "HIST1H2BG" "LTF"       "NOD2"      "RPL39"    
-
 $`GO:1903506`
   [1] "1810011O10RIK" "ZFP976"        "ABLIM1"        "AGO1"         
   [5] "AGO2"          "AKAP8"         "APBB3"         "APOBEC1"      
@@ -6717,10 +6714,6 @@ $`GO:0006342`
  [1] "APOBEC1"   "ARID1A"    "ATAD2"     "ATAD2B"    "BAZ2A"     "DICER1"   
  [7] "DNMT3A"    "DOT1L"     "H2AFX"     "HIST1H2AB" "HIST1H2AC" "HIST1H2AD"
 [13] "HIST1H2AE" "HIST2H2AB" "KMT2D"     "TET1"      "TNRC18"    "UTY"      
-
-$`GO:0002385`
-[1] "HIST1H2BE" "HIST1H2BF" "HIST1H2BG" "LTF"       "NOD2"      "RPL39"    
-[7] "TNFSF13"  
 
 $`GO:0042393`
  [1] "ASF1B"    "ATAD2"    "ATAD2B"   "ATRX"     "BAZ2A"    "CBX7"    

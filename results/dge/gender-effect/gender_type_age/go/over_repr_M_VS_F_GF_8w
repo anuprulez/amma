@@ -2241,9 +2241,6 @@ $`GO:0044822`
 $`GO:0044391`
 [1] "RPL10"  "RPL10A" "RPL12"  "RPL35"  "RPL37A" "RPS12"  "RPS21" 
 
-$`GO:0002227`
-[1] "CAMP"      "HIST1H2BE" "HIST1H2BF" "HIST1H2BG" "LTF"       "NOD2"     
-
 $`GO:0043933`
   [1] "ABL1"      "ACACA"     "ACACB"     "ACHE"      "AGO1"      "AGO2"     
   [7] "AGO3"      "AGO4"      "AKAP8"     "SLF1"      "APC"       "ARID1A"   
@@ -3949,10 +3946,6 @@ $`GO:0046483`
 [385] "ZFP704"        "ZFP809"        "ZFP865"        "ZFP935"       
 [389] "ZFYVE26"       "ZMIZ1"         "ZMYND15"       "ZRSR1"        
 [393] "ZSCAN2"        "ZSCAN26"      
-
-$`GO:0002385`
-[1] "CAMP"      "HIST1H2BE" "HIST1H2BF" "HIST1H2BG" "LTF"       "NOD2"     
-[7] "TNFSF13"  
 
 $`GO:0043603`
  [1] "ACE"      "ACER2"    "AGO1"     "AGO2"     "AGO3"     "AGO4"    
@@ -6332,9 +6325,6 @@ $`GO:2001141`
 [269] "ZFP809"        "ZFP865"        "ZFP935"        "ZMIZ1"        
 [273] "ZMYND15"       "ZSCAN2"        "ZSCAN26"      
 
-$`GO:0019731`
-[1] "CAMP"      "HIST1H2BE" "HIST1H2BF" "HIST1H2BG" "LTF"       "NOD2"     
-
 $`GO:1901566`
  [1] "ABAT"     "ACER2"    "ADCY7"    "ADCY9"    "AGO1"     "AGO2"    
  [7] "AGO3"     "AGO4"     "ATIC"     "ATP5E"    "ATP5K"    "B3GAT2"  
@@ -7363,16 +7353,6 @@ $`GO:0044427`
 [73] "POLR2A"    "POT1B"     "PPARD"     "PRKDC"     "RARG"      "SAP130"   
 [79] "SETD1A"    "SMARCA2"   "SMG6"      "SUN2"      "SYCP2"     "THRB"     
 [85] "TNRC18"    "TRRAP"     "ZFP276"   
-
-$`GO:0098542`
- [1] "ACIN1"     "ALPK1"     "ANKRD17"   "CAMP"      "CARD9"     "CD40"     
- [7] "CXCL13"    "DDIT4"     "DICER1"    "EIF2AK2"   "FAM13B"    "GBP7"     
-[13] "HIST1H2BE" "HIST1H2BF" "HIST1H2BG" "HIST1H3A"  "HIST1H3D"  "HIST1H3E" 
-[19] "HIST2H3B"  "ITCH"      "LTF"       "LYST"      "LYZ2"      "MBD5"     
-[25] "MPO"       "MX2"       "NAIP5"     "NOD2"      "NOTCH2"    "PUM2"     
-[31] "RNASEL"    "ROMO1"     "STAB1"     "TAGAP"     "TARBP2"    "TLR3"     
-[37] "TMF1"      "TNF"       "TNFRSF14"  "TNFSF8"    "TRAF3"     "TRIM56"   
-[43] "ZC3H12A"  
 
 $`GO:0030529`
  [1] "AGO1"      "AGO2"      "AGO3"      "AGO4"      "ATXN2L"    "CLOCK"    

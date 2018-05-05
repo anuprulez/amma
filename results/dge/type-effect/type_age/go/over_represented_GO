@@ -18,7 +18,6 @@ GO:0030595	leukocyte chemotaxis	BP	NA	0.000484761701432951	NA
 GO:0018198	peptidyl-cysteine modification	BP	NA	0.000558563941530018	NA
 GO:2000170	positive regulation of peptidyl-cysteine S-nitrosylation	BP	NA	0.000666677797968125	NA
 GO:0050840	extracellular matrix binding	MF	NA	0.000666677797968125	NA
-GO:2000026	regulation of multicellular organismal development	BP	NA	0.000666677797968125	NA
 GO:0048518	positive regulation of biological process	BP	NA	0.000875374094101136	NA
 GO:0009986	cell surface	CC	NA	0.00103517671354687	NA
 GO:0040012	regulation of locomotion	BP	NA	0.00123895183701561	NA
@@ -32,12 +31,9 @@ GO:2001027	negative regulation of endothelial cell chemotaxis	BP	NA	0.0014008563
 GO:0051604	protein maturation	BP	NA	0.00140085639775215	NA
 GO:0097529	myeloid leukocyte migration	BP	NA	0.00161558062239597	NA
 GO:0050793	regulation of developmental process	BP	NA	0.00190702505804105	NA
-GO:0070232	regulation of T cell apoptotic process	BP	NA	0.00190702505804105	NA
 GO:0042445	hormone metabolic process	BP	NA	0.00191299352990061	NA
 GO:0031638	zymogen activation	BP	NA	0.00192571158692863	NA
 GO:0002685	regulation of leukocyte migration	BP	NA	0.00195892109206895	NA
-GO:0051239	regulation of multicellular organismal process	BP	NA	0.00195892109206895	NA
-GO:2001026	regulation of endothelial cell chemotaxis	BP	NA	0.00195892109206895	NA
 GO:0051093	negative regulation of developmental process	BP	NA	0.00216922750467837	NA
 GO:0016485	protein processing	BP	NA	0.00216954558634662	NA
 GO:0042127	regulation of cell proliferation	BP	NA	0.00220481320567445	NA
@@ -45,7 +41,6 @@ GO:0006928	movement of cell or subcellular component	BP	NA	0.00220481320567445	N
 GO:0060326	cell chemotaxis	BP	NA	0.0022506995858611	NA
 GO:0010632	regulation of epithelial cell migration	BP	NA	0.0022506995858611	NA
 GO:0006952	defense response	BP	NA	0.00225094977624253	NA
-GO:0002291	T cell activation via T cell receptor contact with antigen bound to MHC molecule on antigen presenting cell	BP	NA	0.00228548039206795	NA
 GO:0008219	cell death	BP	NA	0.00247254521650492	NA
 GO:1900086	positive regulation of peptidyl-tyrosine autophosphorylation	BP	NA	0.00267926560912886	NA
 GO:0050922	negative regulation of chemotaxis	BP	NA	0.00268473904821786	NA
@@ -55,7 +50,6 @@ GO:0070231	T cell apoptotic process	BP	NA	0.00320345912626315	NA
 GO:0046983	protein dimerization activity	MF	NA	0.00337255091658466	NA
 GO:0007623	circadian rhythm	BP	NA	0.00374875729128543	NA
 GO:0060978	angiogenesis involved in coronary vascular morphogenesis	BP	NA	0.00374875729128543	NA
-GO:0031100	animal organ regeneration	BP	NA	0.00472120622333746	NA
 GO:0060541	respiratory system development	BP	NA	0.0058409809850502	NA
 GO:0012501	programmed cell death	BP	NA	0.00633589604300301	NA
 GO:0010633	negative regulation of epithelial cell migration	BP	NA	0.00633589604300301	NA
@@ -74,11 +68,9 @@ GO:0036444	calcium ion transmembrane import into mitochondrion	BP	NA	0.008378050
 GO:0050542	icosanoid binding	MF	NA	0.00837805021621505	NA
 GO:0050544	arachidonic acid binding	MF	NA	0.00837805021621505	NA
 GO:0097197	tetraspanin-enriched microdomain	CC	NA	0.00837805021621505	NA
-GO:0035767	endothelial cell chemotaxis	BP	NA	0.00837805021621505	NA
 GO:0070492	oligosaccharide binding	MF	NA	0.00841431731762844	NA
 GO:0051918	negative regulation of fibrinolysis	BP	NA	0.00849851547043056	NA
 GO:0071674	mononuclear cell migration	BP	NA	0.00987362029860482	NA
-GO:0048731	system development	BP	NA	0.0100924278471516	NA
 GO:0048585	negative regulation of response to stimulus	BP	NA	0.0101578368778656	NA
 GO:0050543	icosatetraenoic acid binding	MF	NA	0.0103875704565987	NA
 GO:0050820	positive regulation of coagulation	BP	NA	0.01132584733738	NA
@@ -116,7 +108,6 @@ GO:0010594	regulation of endothelial cell migration	BP	NA	0.0188168425764877	NA
 GO:0030336	negative regulation of cell migration	BP	NA	0.018854908998355	NA
 GO:0016337	single organismal cell-cell adhesion	BP	NA	0.018885310825757	NA
 GO:0045765	regulation of angiogenesis	BP	NA	0.0189874722941259	NA
-GO:0044699	single-organism process	BP	NA	0.0196074850515525	NA
 GO:0006508	proteolysis	BP	NA	0.0197247632551262	NA
 GO:0001772	immunological synapse	CC	NA	0.019862856537184	NA
 GO:0031012	extracellular matrix	CC	NA	0.0199892306961374	NA
@@ -138,7 +129,6 @@ GO:0010631	epithelial cell migration	BP	NA	0.0278246240842084	NA
 GO:0010608	posttranscriptional regulation of gene expression	BP	NA	0.0285199703400932	NA
 GO:0016528	sarcoplasm	CC	NA	0.0285671550428324	NA
 GO:0035630	bone mineralization involved in bone maturation	BP	NA	0.0293473763621053	NA
-GO:0002227	innate immune response in mucosa	BP	NA	0.0298055323349803	NA
 GO:0030335	positive regulation of cell migration	BP	NA	0.0298055323349803	NA
 GO:0045787	positive regulation of cell cycle	BP	NA	0.0298055323349803	NA
 GO:0010755	regulation of plasminogen activation	BP	NA	0.0305756868533341	NA
@@ -149,9 +139,7 @@ GO:0006950	response to stress	BP	NA	0.0334667720035315	NA
 GO:0033631	cell-cell adhesion mediated by integrin	BP	NA	0.0335497563109365	NA
 GO:0035088	establishment or maintenance of apical/basal cell polarity	BP	NA	0.0335497563109365	NA
 GO:0061245	establishment or maintenance of bipolar cell polarity	BP	NA	0.0335497563109365	NA
-GO:0071675	regulation of mononuclear cell migration	BP	NA	0.034783973798933	NA
 GO:0007162	negative regulation of cell adhesion	BP	NA	0.034783973798933	NA
-GO:0001525	angiogenesis	BP	NA	0.034783973798933	NA
 GO:0090130	tissue migration	BP	NA	0.0352384323239591	NA
 GO:0002690	positive regulation of leukocyte chemotaxis	BP	NA	0.0353785844417963	NA
 GO:0016782	transferase activity, transferring sulfur-containing groups	MF	NA	0.0353785844417963	NA
@@ -172,7 +160,6 @@ GO:0044133	growth of symbiont on or near host	BP	NA	0.0369593885650191	NA
 GO:0044139	modulation of growth of symbiont on or near host	BP	NA	0.0369593885650191	NA
 GO:0044140	negative regulation of growth of symbiont on or near host surface	BP	NA	0.0369593885650191	NA
 GO:0043281	regulation of cysteine-type endopeptidase activity involved in apoptotic process	BP	NA	0.0375678881120711	NA
-GO:0045766	positive regulation of angiogenesis	BP	NA	0.0375678881120711	NA
 GO:0006851	mitochondrial calcium ion transport	BP	NA	0.0379153377013084	NA
 GO:0048511	rhythmic process	BP	NA	0.0392984798871711	NA
 GO:0005102	receptor binding	MF	NA	0.0399000109044594	NA

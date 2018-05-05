@@ -1466,19 +1466,6 @@ $`GO:0050865`
 [31] "RASAL3"   "SLAMF7"   "STX4A"    "SYK"      "TNFSF13B" "TNFSF9"  
 [37] "VCAM1"    "ZC3H8"    "ZEB1"     "ZFP335"  
 
-$`GO:0050870`
- [1] "ADAM8"    "ANXA1"    "CCDC88B"  "CD244"    "CD24A"    "CD74"    
- [7] "H2-AA"    "IGF1"     "IL2RG"    "LGALS1"   "NLRP3"    "RASAL3"  
-[13] "SYK"      "TNFSF13B" "TNFSF9"   "VCAM1"   
-
-$`GO:0051249`
- [1] "ADAM8"    "ANXA1"    "AXL"      "CCDC88B"  "CD244"    "CD24A"   
- [7] "CD38"     "CD44"     "CD74"     "CLCF1"    "FLT3L"    "GSN"     
-[13] "H2-AA"    "H2-AB1"   "ID2"      "IGF1"     "IL2RG"    "LGALS1"  
-[19] "LGALS3"   "NFKBID"   "NLRP3"    "PAXIP1"   "PGLYRP1"  "RASAL3"  
-[25] "SLAMF7"   "SYK"      "TNFSF13B" "TNFSF9"   "VCAM1"    "ZC3H8"   
-[31] "ZEB1"     "ZFP335"  
-
 $`GO:0009986`
  [1] "ADAM8"     "ADGRE1"    "ANGPTL3"   "ANO6"      "ANXA1"     "ANXA2"    
  [7] "ANXA5"     "AXL"       "BMPR1A"    "BSN"       "C5AR1"     "CD200R4"  
@@ -1492,12 +1479,6 @@ $`GO:0009986`
 [55] "RAMP1"     "RAMP2"     "SDC3"      "SEPT2"     "SLAMF7"    "SLC11A2"  
 [61] "SLC46A1"   "SLC6A1"    "STX4A"     "TGFBR1"    "TLR2"      "TLR3"     
 [67] "TNFRSF22"  "TRPC4"     "VAMP1"     "VCAM1"     "WNT5B"    
-
-$`GO:0050863`
- [1] "ADAM8"    "ANXA1"    "CCDC88B"  "CD244"    "CD24A"    "CD44"    
- [7] "CD74"     "GSN"      "H2-AA"    "H2-AB1"   "IGF1"     "IL2RG"   
-[13] "LGALS1"   "LGALS3"   "NFKBID"   "NLRP3"    "RASAL3"   "SYK"     
-[19] "TNFSF13B" "TNFSF9"   "VCAM1"    "ZC3H8"    "ZEB1"    
 
 $`GO:0099080`
  [1] "APC"     "ARHGAP4" "CAMSAP1" "DDX6"    "DISC1"   "DMTN"    "DNM1"   
@@ -1541,9 +1522,6 @@ $`GO:1903037`
 [13] "LGALS1"   "LGALS3"   "NFKBID"   "NLRP3"    "RASAL3"   "SYK"     
 [19] "TNFSF13B" "TNFSF9"   "VCAM1"    "ZC3H8"    "ZEB1"    
 
-$`GO:0071675`
-[1] "ANO6"   "C3AR1"  "C5AR1"  "LGALS3" "PLA2G7"
-
 $`GO:0001816`
  [1] "ADAM8"   "AKAP8"   "ANXA1"   "ATF4"    "AXL"     "C3"      "C3AR1"  
  [8] "C5AR1"   "CACTIN"  "CCDC88B" "CCL4"    "CD209B"  "CD244"   "CD24A"  
@@ -1583,9 +1561,6 @@ $`GO:0045785`
 [19] "LGALS1"   "NLRP3"    "OLFM4"    "PTGER4"   "PTPN23"   "RASAL3"  
 [25] "SPP1"     "STX4A"    "SYK"      "TNFSF13B" "TNFSF9"   "TSC1"    
 [31] "VCAM1"   
-
-$`GO:0071677`
-[1] "ANO6"   "LGALS3" "PLA2G7"
 
 $`GO:1903039`
  [1] "ADAM8"    "ANXA1"    "CCDC88B"  "CD244"    "CD24A"    "CD44"    
@@ -1627,12 +1602,6 @@ $`GO:0030595`
  [9] "CCL8"   "CD74"   "CH25H"  "CXCL13" "CXCL14" "CXCL16" "GPR18"  "LBP"   
 [17] "LGALS3" "MMP28"  "PF4"    "PLA2G7" "RPL13A" "RPS19"  "S100A8" "S100A9"
 [25] "SPP1"   "SYK"    "TREM3" 
-
-$`GO:0051251`
- [1] "ADAM8"    "ANXA1"    "AXL"      "CCDC88B"  "CD244"    "CD24A"   
- [7] "CD38"     "CD74"     "CLCF1"    "FLT3L"    "H2-AA"    "IGF1"    
-[13] "IL2RG"    "LGALS1"   "NLRP3"    "PAXIP1"   "RASAL3"   "SYK"     
-[19] "TNFSF13B" "TNFSF9"   "VCAM1"    "ZFP335"  
 
 $`GO:0005856`
   [1] "1700029J07RIK" "2900011O08RIK" "4933427D14RIK" "ACTR3B"       
@@ -2189,10 +2158,6 @@ $`GO:0007049`
 [93] "TUBGCP4"       "TXLNG"         "UHMK1"         "UPF1"         
 [97] "ZFP318"        "ZFP365"        "ZFYVE26"      
 
-$`GO:0071621`
- [1] "ANXA1"  "C3AR1"  "C5AR1"  "CCL12"  "CCL4"   "CCL6"   "CCL8"   "CD74"  
- [9] "LBP"    "LGALS3" "S100A8" "S100A9" "SPP1"   "SYK"    "TREM3" 
-
 $`GO:0000278`
  [1] "AHCTF1"  "AKAP8"   "AKAP8L"  "ANXA1"   "APC"     "BACH1"   "BBS4"   
  [8] "CAMK2G"  "CCDC8"   "CDK11B"  "CEP250"  "CNTRL"   "CNTROB"  "CUL7"   
@@ -2200,22 +2165,6 @@ $`GO:0000278`
 [22] "MIIP"    "NIPBL"   "NLE1"    "NUP43"   "OVOL1"   "PIDD1"   "PPP2R2B"
 [29] "PPP2R3D" "PRDM5"   "RAD9B"   "RGCC"    "SDCBP"   "SEPT2"   "SETDB2" 
 [36] "SIRT7"   "SMARCD3" "SMC4"    "SPICE1"  "TRRAP"   "TUBGCP4" "ZFP365" 
-
-$`GO:0042110`
- [1] "ADAM8"    "ANXA1"    "APC"      "BCL2A1D"  "CCDC88B"  "CD151"   
- [7] "CD244"    "CD24A"    "CD44"     "CD48"     "CD74"     "CXCR4"   
-[13] "EIF2AK4"  "FZD8"     "GADD45G"  "GPR18"    "GSN"      "H2-AA"   
-[19] "H2-AB1"   "IGF1"     "IL2RG"    "LGALS1"   "LGALS3"   "NFKBID"  
-[25] "NLRP3"    "PTGER4"   "RASAL3"   "STK11"    "SYK"      "TNFSF13B"
-[31] "TNFSF9"   "TSC1"     "VCAM1"    "ZC3H8"    "ZEB1"    
-
-$`GO:0070489`
- [1] "ADAM8"    "ANXA1"    "APC"      "BCL2A1D"  "CCDC88B"  "CD151"   
- [7] "CD244"    "CD24A"    "CD44"     "CD48"     "CD74"     "CXCR4"   
-[13] "EIF2AK4"  "FZD8"     "GADD45G"  "GPR18"    "GSN"      "H2-AA"   
-[19] "H2-AB1"   "IGF1"     "IL2RG"    "LGALS1"   "LGALS3"   "NFKBID"  
-[25] "NLRP3"    "PTGER4"   "RASAL3"   "STK11"    "SYK"      "TNFSF13B"
-[31] "TNFSF9"   "TSC1"     "VCAM1"    "ZC3H8"    "ZEB1"    
 
 $`GO:0071593`
  [1] "ADAM8"    "ANXA1"    "APC"      "BCL2A1D"  "CCDC88B"  "CD151"   

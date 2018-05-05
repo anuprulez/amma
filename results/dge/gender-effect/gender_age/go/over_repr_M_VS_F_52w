@@ -5672,9 +5672,6 @@ $`GO:0003735`
  [1] "RPL10"    "RPL10A"   "RPL12"    "RPL17"    "RPL9"     "RPS12"   
  [7] "RPS13"    "RPS17"    "RPS27"    "SLC25A27" "SLC25A37"
 
-$`GO:0002227`
-[1] "CAMP"      "HIST1H2BE" "HIST1H2BF" "HIST1H2BG" "LTF"      
-
 $`GO:1903506`
   [1] "ZFP974"        "1810011O10RIK" "EMSY"          "DUBR"         
   [5] "ZFP976"        "ACTR5"         "ACVRL1"        "ADNP"         
@@ -8115,9 +8112,6 @@ $`GO:0006342`
  [7] "HIST1H2AC" "HIST1H2AD" "HIST1H2AE" "HIST2H2AB" "HIST3H2A"  "KMT2D"    
 [13] "TET1"      "TNRC18"    "UBR2"      "UTY"      
 
-$`GO:0002385`
-[1] "CAMP"      "HIST1H2BE" "HIST1H2BF" "HIST1H2BG" "LTF"      
-
 $`GO:0042393`
  [1] "ATAD2B"   "ATRX"     "BAZ1B"    "BAZ2A"    "BRD2"     "CBX7"    
  [7] "CHD1"     "CHD2"     "CHD8"     "CKS2"     "HIST1H3A" "HIST1H3D"
@@ -8708,24 +8702,6 @@ $`GO:0043207`
 [85] "TREM3"     "TRIM56"    "VIL1"      "WFDC21"    "XPR1"      "ZC3H12A"  
 [91] "ZFP36"    
 
-$`GO:0051707`
- [1] "ACIN1"     "AGO3"      "AIM2"      "AKAP8"     "ALPK1"     "ANXA5"    
- [7] "AXL"       "BAIAP2L1"  "BATF2"     "C5AR1"     "CAMP"      "CAV1"     
-[13] "CD14"      "CD160"     "CD24A"     "CD27"      "CD93"      "CHUK"     
-[19] "COTL1"     "CREBZF"    "CXCL16"    "CYBA"      "DDIT4"     "DDX60"    
-[25] "DICER1"    "DUSP10"    "EIF2AK2"   "EIF2AK4"   "ERBIN"     "FAM13B"   
-[31] "FCGR4"     "FGR"       "GBP4"      "GBP9"      "HIST1H2BE" "HIST1H2BF"
-[37] "HIST1H2BG" "HIST1H3A"  "HIST1H3D"  "HIST1H3E"  "HP"        "IFITM2"   
-[43] "ITGAX"     "JUN"       "JUNB"      "KRT8"      "LCN2"      "LTF"      
-[49] "LYST"      "MALT1"     "MAPK8"     "MBD5"      "MGST1"     "MIR181B-2"
-[55] "MIR199A-1" "MPO"       "MRC1"      "MX1"       "MX2"       "NAIP5"    
-[61] "NAIP6"     "NFKBIA"    "NOTCH2"    "NR1D1"     "OAS1B"     "OAS2"     
-[67] "OGT"       "PELI3"     "PGLYRP1"   "PLSCR1"    "PTGER1"    "RNASEL"   
-[73] "RPS6KA3"   "SYT11"     "TARBP2"    "TLR13"     "TLR3"      "TMF1"     
-[79] "TNF"       "TNFAIP3"   "TNFRSF14"  "TNFRSF4"   "TRAF3"     "TRAF3IP1" 
-[85] "TREM3"     "TRIM56"    "VIL1"      "WFDC21"    "XPR1"      "ZC3H12A"  
-[91] "ZFP36"    
-
 $`GO:0006259`
   [1] "EMSY"      "DUBR"      "ACTR5"     "ACVRL1"    "ALKBH1"    "ASCC3"    
   [7] "ATM"       "ATR"       "ATRX"      "BACH1"     "BAZ1A"     "BAZ1B"    
@@ -8788,18 +8764,6 @@ $`GO:0009615`
 
 $`GO:0070578`
 [1] "AGO2"   "AGO3"   "AGO4"   "DICER1" "TARBP2"
-
-$`GO:0098542`
- [1] "ACIN1"     "AIM2"      "ALPK1"     "ANXA5"     "BATF2"     "C5AR1"    
- [7] "CAMP"      "CD160"     "CD93"      "COTL1"     "CYBA"      "DDIT4"    
-[13] "DDX60"     "DICER1"    "EIF2AK2"   "EIF2AK4"   "FAM13B"    "FGR"      
-[19] "GBP4"      "GBP9"      "HIST1H2BE" "HIST1H2BF" "HIST1H2BG" "HIST1H3A" 
-[25] "HIST1H3D"  "HIST1H3E"  "HP"        "IFITM2"    "ITGAX"     "LTF"      
-[31] "LYST"      "MBD5"      "MPO"       "MX1"       "MX2"       "NAIP5"    
-[37] "NAIP6"     "NOTCH2"    "OAS1B"     "OAS2"      "PELI3"     "PGLYRP1"  
-[43] "PLSCR1"    "RNASEL"    "SYT11"     "TARBP2"    "TLR13"     "TLR3"     
-[49] "TMF1"      "TNF"       "TNFRSF14"  "TRAF3"     "TRAF3IP1"  "TREM3"    
-[55] "TRIM56"    "ZC3H12A"  
 
 $`GO:0034622`
   [1] "AGO2"      "AGO3"      "AGO4"      "AHCTF1"    "AIF1"      "APC"      

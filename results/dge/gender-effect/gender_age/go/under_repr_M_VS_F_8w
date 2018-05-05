@@ -39,18 +39,6 @@ $`GO:0031226`
 [43] "TLR3"    "TMEM8"   "TNF"     "TRAF3"   "TRIP6"   "TSPAN31" "TSPAN33"
 [50] "TSPAN5" 
 
-$`GO:0050877`
- [1] "ACE"      "ADCY1"    "AGTPBP1"  "AIPL1"    "ATXN1"    "BRAF"    
- [7] "CACNA1C"  "CACNA1D"  "CAMK2B"   "CCDC66"   "CDKN1B"   "CHD7"    
-[13] "CLN5"     "CNGA1"    "CRX"      "DICER1"   "DVL1"     "EIF4EBP2"
-[19] "FBXO11"   "FGF13"    "GIGYF2"   "GNAT1"    "GPR155"   "HERC1"   
-[25] "HTT"      "IGHMBP2"  "ITPR3"    "JUN"      "KMT2A"    "KMT2B"   
-[31] "MTOR"     "MYC"      "MYO15"    "MYO5A"    "NAV2"     "NPFF"    
-[37] "PARK2"    "PDC"      "PDE1B"    "PDE4A"    "PDE6A"    "PPP1R1B" 
-[43] "PRKCZ"    "PRNP"     "PRPH2"    "RBP3"     "RDH5"     "RGS9"    
-[49] "RGS9BP"   "RHO"      "RP1"      "RPL38"    "SAG"      "SGK1"    
-[55] "SLC6A1"   "THRB"     "TNF"      "TRPM7"    "USP53"    "WHRN"    
-
 $`GO:0044459`
   [1] "ACE"       "ACHE"      "ADCY9"     "ADIPOR2"   "AMOTL1"    "ANXA1"    
   [7] "APC"       "ARRB1"     "ATP1B2"    "BSG"       "CACNA1C"   "CACNA1D"  
@@ -89,13 +77,6 @@ $`GO:0003008`
 [79] "SLC26A6"   "SLC6A1"    "THRB"      "TMF1"      "TMOD4"     "TNF"      
 [85] "TRIM72"    "TRPM7"     "USP53"     "UTY"       "WHRN"      "WNK1"     
 [91] "WNK3"      "ZC3H12A"  
-
-$`GO:0007600`
- [1] "ACE"     "AIPL1"   "CACNA1D" "CCDC66"  "CDKN1B"  "CHD7"    "CLN5"   
- [8] "CNGA1"   "CRX"     "FBXO11"  "GNAT1"   "ITPR3"   "MTOR"    "MYC"    
-[15] "MYO15"   "MYO5A"   "NAV2"    "NPFF"    "PDC"     "PDE4A"   "PDE6A"  
-[22] "PRPH2"   "RBP3"    "RDH5"    "RGS9"    "RGS9BP"  "RHO"     "RP1"    
-[29] "RPL38"   "SAG"     "THRB"    "TNF"     "USP53"   "WHRN"   
 
 $`GO:0007186`
  [1] "ADCY1"    "ADCY7"    "ADCY9"    "ADGRL1"   "ADIPOR2"  "GRK3"    

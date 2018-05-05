@@ -19,7 +19,6 @@ GO:0031110	regulation of microtubule polymerization or depolymerization	BP	NA	NA
 GO:0007019	microtubule depolymerization	BP	NA	NA	5.90512867495625e-05	0.00496717345278873	0.00323979792141359	0.0354457752421435
 GO:0002221	pattern recognition receptor signaling pathway	BP	NA	NA	6.76306736585572e-05	0.00523711107145371	0.00323979792141359	0.0354457752421435
 GO:0002758	innate immune response-activating signal transduction	BP	NA	NA	7.73872273402528e-05	0.00523711107145371	0.00348529441746778	0.0354457752421435
-GO:0032502	developmental process	BP	NA	NA	7.98693344318306e-05	0.00632554514811221	0.0041608950076431	0.0354457752421435
 GO:0051604	protein maturation	BP	NA	NA	8.73527440102114e-05	0.00632554514811221	0.00433700787532866	0.0354457752421435
 GO:0032103	positive regulation of response to external stimulus	BP	NA	NA	0.000108950370440564	0.00632554514811221	0.00493460171851132	0.0354457752421435
 GO:0048246	macrophage chemotaxis	BP	NA	NA	0.000130114682119556	0.00758653828489275	0.00563730945023317	0.0399569827189998
@@ -27,36 +26,26 @@ GO:0006955	immune response	BP	NA	NA	0.000137876888067024	0.00976034761144741	0.0
 GO:0002218	activation of innate immune response	BP	NA	NA	0.000234113943493794	0.0104693508758027	0.00596139764341776	0.0399692723458299
 GO:0002224	toll-like receptor signaling pathway	BP	NA	NA	0.000252731968801579	0.0104693508758027	0.00709598404355794	0.039988074384557
 GO:0018198	peptidyl-cysteine modification	BP	NA	NA	0.000265927394987091	0.0119504393572814	0.00709598404355794	0.039988074384557
-GO:0044699	single-organism process	BP	NA	NA	0.000282747655136298	0.0151004433486948	0.00709598404355794	0.049695833311296
 GO:0031349	positive regulation of defense response	BP	NA	NA	0.000286774278504674	0.0151252511090975	0.00770724584827649	NA
 GO:0043241	protein complex disassembly	BP	NA	NA	0.000368450424692994	0.0198695985184964	0.00779656976859009	NA
 GO:0019882	antigen processing and presentation	BP	NA	NA	0.000513584134432886	0.0198695985184964	0.00933491159787286	NA
-GO:0044767	single-organism developmental process	BP	NA	NA	0.000574433731423511	0.0215027593248158	0.00933491159787286	NA
 GO:0045087	innate immune response	BP	NA	NA	0.000574433731423511	0.0233635140792731	0.00961817419557476	NA
 GO:0050794	regulation of cellular process	BP	NA	NA	0.000581568080855329	0.0249218004952501	0.0129294233548651	NA
 GO:0016485	protein processing	BP	NA	NA	0.000581568080855329	0.0284017772276555	0.0129294233548651	NA
 GO:0032606	type I interferon production	BP	NA	NA	0.000674852300290108	0.0300625118024738	0.0129294233548651	NA
-GO:0071675	regulation of mononuclear cell migration	BP	NA	NA	0.000701979883744138	0.0300625118024738	0.0132311703905596	NA
 GO:0031113	regulation of microtubule polymerization	BP	NA	NA	0.000701979883744138	0.0336175784329684	0.013547229747845	NA
 GO:0050900	leukocyte migration	BP	NA	NA	0.000701979883744138	0.0341118616627326	0.013547229747845	NA
-GO:0044707	single-multicellular organism process	BP	NA	NA	0.00076281815899077	0.0341118616627326	0.013547229747845	NA
-GO:0048731	system development	BP	NA	NA	0.0007891361855289	0.0362635276353366	0.01405387711676	NA
 GO:2001027	negative regulation of endothelial cell chemotaxis	BP	NA	NA	0.0007891361855289	0.037723163168387	0.0147342700674963	NA
 GO:0016782	transferase activity, transferring sulfur-containing groups	MF	NA	NA	0.0007891361855289	0.0378016457356096	0.0156866479775072	NA
 GO:0010812	negative regulation of cell-substrate adhesion	BP	NA	NA	0.0007891361855289	0.0438591868616723	0.0156866479775072	NA
 GO:0032984	macromolecular complex disassembly	BP	NA	NA	0.000789602345288098	0.0438931116713925	0.0156866479775072	NA
-GO:0044403	symbiosis, encompassing mutualism through parasitism	BP	NA	NA	0.000827523071038274	0.047490545207425	0.0156866479775072	NA
-GO:0044419	interspecies interaction between organisms	BP	NA	NA	0.000984347461079949	0.0487841496649553	0.0163477137535189	NA
 GO:0048519	negative regulation of biological process	BP	NA	NA	0.00116575649464216	NA	0.0163477137535189	NA
 GO:0060326	cell chemotaxis	BP	NA	NA	0.00117253913449861	NA	0.0163477137535189	NA
 GO:0050786	RAGE receptor binding	MF	NA	NA	0.00117253913449861	NA	0.0163477137535189	NA
 GO:0034143	regulation of toll-like receptor 4 signaling pathway	BP	NA	NA	0.00126154057761893	NA	0.0210038569046434	NA
-GO:0048856	anatomical structure development	BP	NA	NA	0.00126736804789128	NA	0.0217145114209472	NA
 GO:0006950	response to stress	BP	NA	NA	0.00127400979394013	NA	0.0219774484000061	NA
-GO:0002291	T cell activation via T cell receptor contact with antigen bound to MHC molecule on antigen presenting cell	BP	NA	NA	0.00130384835486766	NA	0.0233964733191848	NA
 GO:0031664	regulation of lipopolysaccharide-mediated signaling pathway	BP	NA	NA	0.00130384835486766	NA	0.0246356793442879	NA
 GO:0000079	regulation of cyclin-dependent protein serine/threonine kinase activity	BP	NA	NA	0.00130384835486766	NA	0.02474815411546	NA
-GO:0044764	multi-organism cellular process	BP	NA	NA	0.00130384835486766	NA	0.0250140886610402	NA
 GO:0009893	positive regulation of metabolic process	BP	NA	NA	0.00132628716201466	NA	0.0271739140917139	NA
 GO:1904029	regulation of cyclin-dependent protein kinase activity	BP	NA	NA	0.00135066123882574	NA	0.0271739140917139	NA
 GO:0048523	negative regulation of cellular process	BP	NA	NA	0.00136629193155705	NA	0.0271739140917139	NA
@@ -66,7 +55,6 @@ GO:0031954	positive regulation of protein autophosphorylation	BP	NA	NA	0.0014918
 GO:0051494	negative regulation of cytoskeleton organization	BP	NA	NA	0.00149187202601883	NA	0.0277730048138795	NA
 GO:0002757	immune response-activating signal transduction	BP	NA	NA	0.00149187202601883	NA	0.0281833523170446	NA
 GO:0010604	positive regulation of macromolecule metabolic process	BP	NA	NA	0.00153415187594557	NA	0.0286551391318056	NA
-GO:2001026	regulation of endothelial cell chemotaxis	BP	NA	NA	0.00179754971234279	NA	0.0291357215694921	NA
 GO:0030219	megakaryocyte differentiation	BP	NA	NA	0.00179754971234279	NA	0.0291465517179263	NA
 GO:0032608	interferon-beta production	BP	NA	NA	0.00179754971234279	NA	0.0291465517179263	NA
 GO:0065007	biological regulation	BP	NA	NA	0.00180133051377061	NA	0.0294520702854375	NA
@@ -78,11 +66,8 @@ GO:0010758	regulation of macrophage chemotaxis	BP	NA	NA	0.00191301154706168	NA	0
 GO:0050543	icosatetraenoic acid binding	MF	NA	NA	0.00192733346701153	NA	0.032181280909447	NA
 GO:0002764	immune response-regulating signaling pathway	BP	NA	NA	0.00197937015552492	NA	0.0322944208803637	NA
 GO:0070492	oligosaccharide binding	MF	NA	NA	0.00209040658858228	NA	0.0336539213996251	NA
-GO:0001525	angiogenesis	BP	NA	NA	0.00209040658858228	NA	0.0348998376890114	NA
 GO:0046983	protein dimerization activity	MF	NA	NA	0.00222560946469199	NA	0.0356934137445941	NA
-GO:0071621	granulocyte chemotaxis	BP	NA	NA	0.00226679638571925	NA	0.0356934137445941	NA
 GO:0045089	positive regulation of innate immune response	BP	NA	NA	0.00255275376075602	NA	0.0356934137445941	NA
-GO:0031100	animal organ regeneration	BP	NA	NA	0.00255275376075602	NA	0.0375442019062077	NA
 GO:0008146	sulfotransferase activity	MF	NA	NA	0.00255275376075602	NA	0.0384953742440898	NA
 GO:0015825	L-serine transport	BP	NA	NA	0.00263389827460314	NA	0.0405752751296681	NA
 GO:0008144	drug binding	MF	NA	NA	0.00263389827460314	NA	0.0405752751296681	NA
@@ -91,32 +76,26 @@ GO:0071838	cell proliferation in bone marrow	BP	NA	NA	0.00265513042830364	NA	0.0
 GO:0050793	regulation of developmental process	BP	NA	NA	0.00266559352487112	NA	0.0412726928973482	NA
 GO:0010467	gene expression	BP	NA	NA	0.00282338511490134	NA	0.0423753754970995	NA
 GO:0005615	extracellular space	CC	NA	NA	0.00284886448632297	NA	0.0423753754970995	NA
-GO:0051239	regulation of multicellular organismal process	BP	NA	NA	0.00284886448632297	NA	0.0423753754970995	NA
 GO:0080090	regulation of primary metabolic process	BP	NA	NA	0.00301857033284605	NA	0.0434525992845573	NA
 GO:0033993	response to lipid	BP	NA	NA	0.00301857033284605	NA	0.0435427266143624	NA
 GO:0016032	viral process	BP	NA	NA	0.00301857033284605	NA	0.044074829361355	NA
 GO:0051179	localization	BP	NA	NA	0.00309367246018988	NA	0.0442647578345132	NA
-GO:0007275	multicellular organism development	BP	NA	NA	0.00309367246018988	NA	0.0450100206439673	NA
 GO:0015194	L-serine transmembrane transporter activity	MF	NA	NA	0.00313989189447381	NA	0.0450100206439673	NA
 GO:0022889	serine transmembrane transporter activity	MF	NA	NA	0.00318685506406862	NA	0.0450100206439673	NA
 GO:1905361	L-serine transporter activity	MF	NA	NA	0.00335353711154719	NA	0.0450100206439673	NA
 GO:0043170	macromolecule metabolic process	BP	NA	NA	0.00335730896766315	NA	0.0450100206439673	NA
-GO:0048535	lymph node development	BP	NA	NA	0.00356755977004075	NA	0.0450100206439673	NA
 GO:0044793	negative regulation by host of viral process	BP	NA	NA	0.00359087604952613	NA	0.0450100206439673	NA
 GO:0031666	positive regulation of lipopolysaccharide-mediated signaling pathway	BP	NA	NA	0.00359087604952613	NA	0.0450100206439673	NA
 GO:0022411	cellular component disassembly	BP	NA	NA	0.00367730202067238	NA	0.0450100206439673	NA
 GO:0010942	positive regulation of cell death	BP	NA	NA	0.00368949201682222	NA	0.0470391342754331	NA
 GO:0042800	histone methyltransferase activity (H3-K4 specific)	MF	NA	NA	0.00368949201682222	NA	0.0493733741027899	NA
 GO:0043207	response to external biotic stimulus	BP	NA	NA	0.00378279793986743	NA	0.0493733741027899	NA
-GO:0051707	response to other organism	BP	NA	NA	0.00378279793986743	NA	0.0493733741027899	NA
 GO:0005504	fatty acid binding	MF	NA	NA	0.00383911531665457	NA	0.0493733741027899	NA
-GO:0035767	endothelial cell chemotaxis	BP	NA	NA	0.00383911531665457	NA	0.0496632132911352	NA
 GO:0032479	regulation of type I interferon production	BP	NA	NA	0.0040644973294612	NA	0.0498871242867672	NA
 GO:0016176	superoxide-generating NADPH oxidase activator activity	MF	NA	NA	0.0040644973294612	NA	0.0498871242867672	NA
 GO:0044133	growth of symbiont on or near host	BP	NA	NA	0.0040644973294612	NA	0.0498871242867672	NA
 GO:0044139	modulation of growth of symbiont on or near host	BP	NA	NA	0.0040644973294612	NA	0.0499757017050904	NA
 GO:0044140	negative regulation of growth of symbiont on or near host surface	BP	NA	NA	0.0040644973294612	NA	NA	NA
-GO:0002227	innate immune response in mucosa	BP	NA	NA	0.0040644973294612	NA	NA	NA
 GO:0030154	cell differentiation	BP	NA	NA	0.0040644973294612	NA	NA	NA
 GO:0012501	programmed cell death	BP	NA	NA	0.0044919768557306	NA	NA	NA
 GO:0034142	toll-like receptor 4 signaling pathway	BP	NA	NA	0.00460642288120916	NA	NA	NA
@@ -126,10 +105,8 @@ GO:0050840	extracellular matrix binding	MF	NA	NA	0.0049103827043389	NA	NA	NA
 GO:0031325	positive regulation of cellular metabolic process	BP	NA	NA	0.0049103827043389	NA	NA	NA
 GO:0097530	granulocyte migration	BP	NA	NA	0.005331518588769	NA	NA	NA
 GO:0034120	positive regulation of erythrocyte aggregation	BP	NA	NA	0.00535559196409407	NA	NA	NA
-GO:0072358	cardiovascular system development	BP	NA	NA	0.00556834290213139	NA	NA	NA
 GO:0006811	ion transport	BP	NA	NA	0.00559610780432092	NA	NA	NA
 GO:0035325	Toll-like receptor binding	MF	NA	NA	0.00568004527580609	NA	NA	NA
-GO:0009635	response to herbicide	BP	NA	NA	0.00596472530748967	NA	NA	NA
 GO:0043236	laminin binding	MF	NA	NA	0.00599750010848842	NA	NA	NA
 GO:0043068	positive regulation of programmed cell death	BP	NA	NA	0.0060438993672577	NA	NA	NA
 GO:0002252	immune effector process	BP	NA	NA	0.00613995910792855	NA	NA	NA
@@ -146,13 +123,11 @@ GO:0032926	negative regulation of activin receptor signaling pathway	BP	NA	NA	0.
 GO:1904018	positive regulation of vasculature development	BP	NA	NA	0.00724419236593755	NA	NA	NA
 GO:0001568	blood vessel development	BP	NA	NA	0.00724419236593755	NA	NA	NA
 GO:0031724	CXCR5 chemokine receptor binding	MF	NA	NA	0.00725663297820336	NA	NA	NA
-GO:0035769	B cell chemotaxis across high endothelial venule	BP	NA	NA	0.00754221506176211	NA	NA	NA
 GO:1904848	negative regulation of cell chemotaxis to fibroblast growth factor	BP	NA	NA	0.00761780746601739	NA	NA	NA
 GO:2000545	negative regulation of endothelial cell chemotaxis to fibroblast growth factor	BP	NA	NA	0.00838252964190409	NA	NA	NA
 GO:0032688	negative regulation of interferon-beta production	BP	NA	NA	0.00843405953832467	NA	NA	NA
 GO:0046785	microtubule polymerization	BP	NA	NA	0.00851189433325797	NA	NA	NA
 GO:0031323	regulation of cellular metabolic process	BP	NA	NA	0.00871333295560107	NA	NA	NA
-GO:0007519	skeletal muscle tissue development	BP	NA	NA	0.00880678215235518	NA	NA	NA
 GO:0009607	response to biotic stimulus	BP	NA	NA	0.00881693578633435	NA	NA	NA
 GO:0006915	apoptotic process	BP	NA	NA	0.00891288808870088	NA	NA	NA
 GO:0032994	protein-lipid complex	CC	NA	NA	0.00893630048060726	NA	NA	NA
@@ -169,27 +144,21 @@ GO:0017067	tyrosine-ester sulfotransferase activity	MF	NA	NA	0.0104180226763613	
 GO:0018960	4-nitrophenol metabolic process	BP	NA	NA	0.0105626030929984	NA	NA	NA
 GO:0016540	protein autoprocessing	BP	NA	NA	0.0108918523316945	NA	NA	NA
 GO:1903769	negative regulation of cell proliferation in bone marrow	BP	NA	NA	0.0114289076119258	NA	NA	NA
-GO:0030593	neutrophil chemotaxis	BP	NA	NA	0.0120776236378372	NA	NA	NA
 GO:0019838	growth factor binding	MF	NA	NA	0.0120776236378372	NA	NA	NA
 GO:0002683	negative regulation of immune system process	BP	NA	NA	0.0127325869084919	NA	NA	NA
 GO:0008219	cell death	BP	NA	NA	0.0128420479269635	NA	NA	NA
-GO:0070232	regulation of T cell apoptotic process	BP	NA	NA	0.0130942715464822	NA	NA	NA
 GO:0042581	specific granule	CC	NA	NA	0.0134583100635592	NA	NA	NA
 GO:1901342	regulation of vasculature development	BP	NA	NA	0.0134907505345381	NA	NA	NA
 GO:0043162	ubiquitin-dependent protein catabolic process via the multivesicular body sorting pathway	BP	NA	NA	0.0134907505345381	NA	NA	NA
-GO:0060538	skeletal muscle organ development	BP	NA	NA	0.01350869106555	NA	NA	NA
 GO:0038099	nodal receptor complex assembly	BP	NA	NA	0.0139441696193889	NA	NA	NA
 GO:1900123	regulation of nodal receptor complex assembly	BP	NA	NA	0.0152274841714832	NA	NA	NA
 GO:1900124	negative regulation of nodal receptor complex assembly	BP	NA	NA	0.0152488524153066	NA	NA	NA
-GO:0051818	disruption of cells of other organism involved in symbiotic interaction	BP	NA	NA	0.0156384939661256	NA	NA	NA
-GO:0051883	killing of cells in other organism involved in symbiotic interaction	BP	NA	NA	0.0164802198784111	NA	NA	NA
 GO:0008017	microtubule binding	MF	NA	NA	0.0170791541733614	NA	NA	NA
 GO:0045737	positive regulation of cyclin-dependent protein serine/threonine kinase activity	BP	NA	NA	0.0171827643690824	NA	NA	NA
 GO:0048584	positive regulation of response to stimulus	BP	NA	NA	0.0172187967144593	NA	NA	NA
 GO:0031638	zymogen activation	BP	NA	NA	0.0172450992027979	NA	NA	NA
 GO:0015643	toxic substance binding	MF	NA	NA	0.0176479241584829	NA	NA	NA
 GO:0031114	regulation of microtubule depolymerization	BP	NA	NA	0.0176479241584829	NA	NA	NA
-GO:2000026	regulation of multicellular organismal development	BP	NA	NA	0.0177168889922142	NA	NA	NA
 GO:0006448	regulation of translational elongation	BP	NA	NA	0.0177168889922142	NA	NA	NA
 GO:0051171	regulation of nitrogen compound metabolic process	BP	NA	NA	0.0180994240194276	NA	NA	NA
 GO:0070507	regulation of microtubule cytoskeleton organization	BP	NA	NA	0.0187638909473599	NA	NA	NA
@@ -211,23 +180,15 @@ GO:0034930	1-hydroxypyrene sulfotransferase activity	MF	NA	NA	0.0214837623422185
 GO:0050698	proteoglycan sulfotransferase activity	MF	NA	NA	0.0225052129438268	NA	NA	NA
 GO:0051922	cholesterol sulfotransferase activity	MF	NA	NA	0.0225052129438268	NA	NA	NA
 GO:0080131	hydroxyjasmonate sulfotransferase activity	MF	NA	NA	0.0225052129438268	NA	NA	NA
-GO:0098542	defense response to other organism	BP	NA	NA	0.0226234524959279	NA	NA	NA
 GO:0001944	vasculature development	BP	NA	NA	0.0228612389748493	NA	NA	NA
 GO:0035597	N6-isopentenyladenosine methylthiotransferase activity	MF	NA	NA	0.0228652383452621	NA	NA	NA
 GO:0034362	low-density lipoprotein particle	CC	NA	NA	0.0234989877950906	NA	NA	NA
 GO:0072686	mitotic spindle	CC	NA	NA	0.0234989877950906	NA	NA	NA
 GO:0034483	heparan sulfate sulfotransferase activity	MF	NA	NA	0.0234989877950906	NA	NA	NA
-GO:0001897	cytolysis by symbiont of host cells	BP	NA	NA	0.0234989877950906	NA	NA	NA
-GO:0019836	hemolysis by symbiont of host erythrocytes	BP	NA	NA	0.0234989877950906	NA	NA	NA
-GO:0044179	hemolysis in other organism	BP	NA	NA	0.0234989877950906	NA	NA	NA
-GO:0051715	cytolysis in other organism	BP	NA	NA	0.0234989877950906	NA	NA	NA
-GO:0051801	cytolysis in other organism involved in symbiotic interaction	BP	NA	NA	0.0236705896439512	NA	NA	NA
-GO:0052331	hemolysis in other organism involved in symbiotic interaction	BP	NA	NA	0.0238782859783913	NA	NA	NA
 GO:0004027	alcohol sulfotransferase activity	MF	NA	NA	0.0240570273180113	NA	NA	NA
 GO:2000353	positive regulation of endothelial cell apoptotic process	BP	NA	NA	0.0242387364591693	NA	NA	NA
 GO:0043250	sodium-dependent organic anion transmembrane transporter activity	MF	NA	NA	0.0256111158086961	NA	NA	NA
 GO:0043251	sodium-dependent organic anion transport	BP	NA	NA	0.0266859144655606	NA	NA	NA
-GO:0051817	modification of morphology or physiology of other organism involved in symbiotic interaction	BP	NA	NA	0.0269556264171688	NA	NA	NA
 GO:0048156	tau protein binding	MF	NA	NA	0.0275789135227841	NA	NA	NA
 GO:0046943	carboxylic acid transmembrane transporter activity	MF	NA	NA	0.0277208461056756	NA	NA	NA
 GO:0002523	leukocyte migration involved in inflammatory response	BP	NA	NA	0.0280160260631874	NA	NA	NA
@@ -249,7 +210,6 @@ GO:0050921	positive regulation of chemotaxis	BP	NA	NA	0.0308359872999905	NA	NA	N
 GO:0003061	positive regulation of the force of heart contraction by norepinephrine	BP	NA	NA	0.0308359872999905	NA	NA	NA
 GO:0004940	beta1-adrenergic receptor activity	MF	NA	NA	0.0310942834276062	NA	NA	NA
 GO:0034164	negative regulation of toll-like receptor 9 signaling pathway	BP	NA	NA	0.0310942834276062	NA	NA	NA
-GO:0044763	single-organism cellular process	BP	NA	NA	0.0310942834276062	NA	NA	NA
 GO:0010759	positive regulation of macrophage chemotaxis	BP	NA	NA	0.0310942834276062	NA	NA	NA
 GO:0035606	peptidyl-cysteine S-trans-nitrosylation	BP	NA	NA	0.0310942834276062	NA	NA	NA
 GO:0044238	primary metabolic process	BP	NA	NA	0.0317562879610909	NA	NA	NA
@@ -262,37 +222,26 @@ GO:0001953	negative regulation of cell-matrix adhesion	BP	NA	NA	0.03251046003946
 GO:0071619	phosphorylation of RNA polymerase II C-terminal domain serine 2 residues	BP	NA	NA	0.0328610764252897	NA	NA	NA
 GO:2001163	regulation of phosphorylation of RNA polymerase II C-terminal domain serine 2 residues	BP	NA	NA	0.0328610764252897	NA	NA	NA
 GO:2001165	positive regulation of phosphorylation of RNA polymerase II C-terminal domain serine 2 residues	BP	NA	NA	0.0329143787615481	NA	NA	NA
-GO:0035821	modification of morphology or physiology of other organism	BP	NA	NA	0.0329143787615481	NA	NA	NA
 GO:0000278	mitotic cell cycle	BP	NA	NA	0.0342226189727092	NA	NA	NA
 GO:0045130	keratan sulfotransferase activity	MF	NA	NA	0.0346823209657652	NA	NA	NA
 GO:0043065	positive regulation of apoptotic process	BP	NA	NA	0.0346823209657652	NA	NA	NA
 GO:0006858	extracellular transport	BP	NA	NA	0.0349814624617799	NA	NA	NA
 GO:0006860	extracellular amino acid transport	BP	NA	NA	0.0351078155483015	NA	NA	NA
 GO:0010468	regulation of gene expression	BP	NA	NA	0.035399506027979	NA	NA	NA
-GO:0071677	positive regulation of mononuclear cell migration	BP	NA	NA	0.0355812320412466	NA	NA	NA
 GO:0006337	nucleosome disassembly	BP	NA	NA	0.0367445609010957	NA	NA	NA
 GO:0032986	protein-DNA complex disassembly	BP	NA	NA	0.0374125784678436	NA	NA	NA
-GO:0031640	killing of cells of other organism	BP	NA	NA	0.0377426136245137	NA	NA	NA
-GO:0044364	disruption of cells of other organism	BP	NA	NA	0.0378146479948492	NA	NA	NA
-GO:0072209	metanephric mesangial cell differentiation	BP	NA	NA	0.0382285778473536	NA	NA	NA
-GO:0072254	metanephric glomerular mesangial cell differentiation	BP	NA	NA	0.0383027619466981	NA	NA	NA
-GO:0072255	metanephric glomerular mesangial cell development	BP	NA	NA	0.0386827591984193	NA	NA	NA
 GO:0072264	metanephric glomerular endothelium development	BP	NA	NA	0.0386827591984193	NA	NA	NA
 GO:0090677	reversible differentiation	BP	NA	NA	0.0386827591984193	NA	NA	NA
 GO:0090678	cell dedifferentiation involved in phenotypic switching	BP	NA	NA	0.0388122221678679	NA	NA	NA
 GO:1900241	positive regulation of phenotypic switching	BP	NA	NA	0.0390462390863223	NA	NA	NA
-GO:1904897	regulation of hepatic stellate cell proliferation	BP	NA	NA	0.0390462390863223	NA	NA	NA
-GO:1904899	positive regulation of hepatic stellate cell proliferation	BP	NA	NA	0.0390994057436915	NA	NA	NA
 GO:1905064	negative regulation of vascular smooth muscle cell differentiation	BP	NA	NA	0.0390994057436915	NA	NA	NA
 GO:1905174	regulation of vascular smooth muscle cell dedifferentiation	BP	NA	NA	0.0390994057436915	NA	NA	NA
 GO:1905176	positive regulation of vascular smooth muscle cell dedifferentiation	BP	NA	NA	0.0391226868004585	NA	NA	NA
-GO:1990922	hepatic stellate cell proliferation	BP	NA	NA	0.0391226868004585	NA	NA	NA
 GO:1990936	vascular smooth muscle cell dedifferentiation	BP	NA	NA	0.0391226868004585	NA	NA	NA
 GO:0051261	protein depolymerization	BP	NA	NA	0.0392667782152516	NA	NA	NA
 GO:1990266	neutrophil migration	BP	NA	NA	0.0392667782152516	NA	NA	NA
 GO:0004175	endopeptidase activity	MF	NA	NA	0.0403527242519291	NA	NA	NA
 GO:0051128	regulation of cellular component organization	BP	NA	NA	0.040432172592864	NA	NA	NA
-GO:0035914	skeletal muscle cell differentiation	BP	NA	NA	0.040432172592864	NA	NA	NA
 GO:0015195	L-threonine transmembrane transporter activity	MF	NA	NA	0.0409168518853058	NA	NA	NA
 GO:0015826	threonine transport	BP	NA	NA	0.0420929304639031	NA	NA	NA
 GO:0034589	hydroxyproline transport	BP	NA	NA	0.0423928482360566	NA	NA	NA
@@ -306,7 +255,6 @@ GO:0070846	Hsp90 deacetylation	BP	NA	NA	0.0445524154538957	NA	NA	NA
 GO:0002504	antigen processing and presentation of peptide or polysaccharide antigen via MHC class II	BP	NA	NA	0.0445524154538957	NA	NA	NA
 GO:0048585	negative regulation of response to stimulus	BP	NA	NA	0.0445524154538957	NA	NA	NA
 GO:0033193	Lsd1/2 complex	CC	NA	NA	0.0445524154538957	NA	NA	NA
-GO:0060217	hemangioblast cell differentiation	BP	NA	NA	0.0454484260096645	NA	NA	NA
 GO:0015631	tubulin binding	MF	NA	NA	0.0456049608887523	NA	NA	NA
 GO:0032480	negative regulation of type I interferon production	BP	NA	NA	0.0456242338770043	NA	NA	NA
 GO:0032648	regulation of interferon-beta production	BP	NA	NA	0.0463268690530304	NA	NA	NA
@@ -315,9 +263,7 @@ GO:0032727	positive regulation of interferon-alpha production	BP	NA	NA	0.0467278
 GO:0043044	ATP-dependent chromatin remodeling	BP	NA	NA	0.046727893725029	NA	NA	NA
 GO:0031663	lipopolysaccharide-mediated signaling pathway	BP	NA	NA	0.046727893725029	NA	NA	NA
 GO:0002684	positive regulation of immune system process	BP	NA	NA	0.046727893725029	NA	NA	NA
-GO:0034117	erythrocyte aggregation	BP	NA	NA	0.0468689944444137	NA	NA	NA
 GO:0034118	regulation of erythrocyte aggregation	BP	NA	NA	0.0468689944444137	NA	NA	NA
-GO:0002044	blood vessel endothelial cell migration involved in intussusceptive angiogenesis	BP	NA	NA	0.0468689944444137	NA	NA	NA
 GO:0038167	epidermal growth factor receptor signaling pathway via positive regulation of NF-kappaB transcription factor activity	BP	NA	NA	0.047392223997531	NA	NA	NA
 GO:0038168	epidermal growth factor receptor signaling pathway via I-kappaB kinase/NF-kappaB cascade	BP	NA	NA	0.047392223997531	NA	NA	NA
 GO:0019222	regulation of metabolic process	BP	NA	NA	0.0480776880666079	NA	NA	NA
@@ -325,6 +271,5 @@ GO:0008746	NAD(P)+ transhydrogenase activity	MF	NA	NA	0.0480776880666079	NA	NA	N
 GO:0008750	NAD(P)+ transhydrogenase (AB-specific) activity	MF	NA	NA	0.0480776880666079	NA	NA	NA
 GO:0016652	oxidoreductase activity, acting on NAD(P)H, NAD(P) as acceptor	MF	NA	NA	0.0481065475987407	NA	NA	NA
 GO:0045903	positive regulation of translational fidelity	BP	NA	NA	0.0482715080601165	NA	NA	NA
-GO:0045766	positive regulation of angiogenesis	BP	NA	NA	0.049552108796464	NA	NA	NA
 GO:0046982	protein heterodimerization activity	MF	NA	NA	0.049552108796464	NA	NA	NA
 GO:0097225	sperm midpiece	CC	NA	NA	0.0496103227642558	NA	NA	NA

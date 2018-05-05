@@ -245,9 +245,3 @@ character(0)
 $`GO:0050865`
 [1] "BMI1"     "IGF1"     "TNFSF13B" "VCAM1"   
 
-$`GO:0050870`
-[1] "BMI1"     "IGF1"     "TNFSF13B" "VCAM1"   
-
-$`GO:0051249`
-[1] "BMI1"     "IGF1"     "TNFSF13B" "VCAM1"   
-

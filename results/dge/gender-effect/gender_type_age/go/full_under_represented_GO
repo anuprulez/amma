@@ -1,0 +1,75 @@
+category	term	ontology	M VS F (SPF, 8w)	M VS F (GF, 8w)	M VS F (SPF, 52w)	M VS F (GF, 52w)	M VS F (SPF, 104w)	M VS F (GF, 104w)
+GO:0050907	detection of chemical stimulus involved in sensory perception	BP	NA	0.0358788360177138	NA	NA	NA	NA
+GO:0044306	neuron projection terminus	CC	NA	0.0439150222869	NA	NA	NA	NA
+GO:0043161	proteasome-mediated ubiquitin-dependent protein catabolic process	BP	NA	0.0423019320455586	NA	NA	NA	NA
+GO:0043679	axon terminus	CC	NA	0.0419233432422767	NA	NA	NA	NA
+GO:0022836	gated channel activity	MF	NA	0.0474860894968964	NA	NA	NA	NA
+GO:0003008	system process	BP	0.038025079680868	0.0200020805257831	NA	NA	NA	NA
+GO:0050877	neurological system process	BP	0.00532191705970129	0.0194780964198466	NA	NA	NA	NA
+GO:0005886	plasma membrane	CC	0.00297255204736665	0.0423019320455586	NA	NA	NA	NA
+GO:0071944	cell periphery	CC	0.00141130731742339	0.0200020805257831	NA	NA	NA	NA
+GO:0004871	signal transducer activity	MF	0.000738767263140585	0.0200020805257831	NA	NA	NA	NA
+GO:0007600	sensory perception	BP	0.000703858593161572	0.0241467223909432	NA	NA	NA	NA
+GO:0016020	membrane	CC	0.000156180226600103	0.0402795555776514	NA	NA	NA	NA
+GO:0006540	glutamate decarboxylation to succinate	BP	NA	0.00679484308900772	NA	NA	NA	NA
+GO:0061547	glycogen synthase activity, transferring glucose-1-phosphate	MF	NA	0.00679484308900772	NA	NA	NA	NA
+GO:0016971	flavin-linked sulfhydryl oxidase activity	MF	NA	0.0105459400669711	NA	NA	NA	NA
+GO:0010360	negative regulation of anion channel activity	BP	NA	0.00739521300506604	NA	NA	NA	NA
+GO:0034365	discoidal high-density lipoprotein particle	CC	NA	0.00357855785855263	NA	NA	NA	NA
+GO:1902218	regulation of intrinsic apoptotic signaling pathway in response to osmotic stress	BP	NA	0.0108630097228186	NA	NA	NA	NA
+GO:1902219	negative regulation of intrinsic apoptotic signaling pathway in response to osmotic stress	BP	NA	0.0108630097228186	NA	NA	NA	NA
+GO:1901611	phosphatidylglycerol binding	MF	NA	0.00263751434697738	NA	NA	NA	NA
+GO:1901612	cardiolipin binding	MF	NA	0.00549957144539719	NA	NA	NA	NA
+GO:0000110	nucleotide-excision repair factor 1 complex	CC	NA	0.00219734778815518	NA	NA	NA	NA
+GO:0045131	pre-mRNA branch point binding	MF	NA	0.0051632094571441	NA	NA	NA	NA
+GO:1902145	regulation of response to cell cycle checkpoint signaling	BP	NA	0.00244190240311889	NA	NA	NA	NA
+GO:1902151	regulation of response to DNA integrity checkpoint signaling	BP	NA	0.00581458312908309	NA	NA	NA	NA
+GO:1902153	regulation of response to DNA damage checkpoint signaling	BP	NA	0.000278530813548426	NA	NA	NA	NA
+GO:1990829	C-rich single-stranded DNA binding	MF	NA	8.72333257793966e-05	NA	NA	NA	NA
+GO:0006055	CMP-N-acetylneuraminate biosynthetic process	BP	NA	6.33833651559983e-05	NA	NA	NA	NA
+GO:0008781	N-acylneuraminate cytidylyltransferase activity	MF	NA	1.06561931222359e-05	NA	NA	NA	NA
+GO:0019862	IgA binding	MF	NA	9.48693350926893e-06	NA	NA	NA	NA
+GO:0000125	PCAF complex	CC	NA	2.02200047163454e-06	NA	NA	NA	NA
+GO:0033342	negative regulation of collagen binding	BP	NA	2.11942751308855e-06	NA	NA	NA	NA
+GO:0006556	S-adenosylmethionine biosynthetic process	BP	NA	1.33507644475439e-06	NA	NA	NA	NA
+GO:0035526	retrograde transport, plasma membrane to Golgi	BP	NA	9.24684404002944e-07	NA	NA	NA	NA
+GO:1990932	5.8S rRNA binding	MF	NA	9.24684404002944e-07	NA	NA	NA	NA
+GO:0033092	positive regulation of immature T cell proliferation in thymus	BP	NA	9.24684404002944e-07	NA	NA	NA	NA
+GO:0045340	mercury ion binding	MF	NA	9.31217453673516e-07	NA	NA	NA	NA
+GO:0036305	ameloblast differentiation	BP	NA	NA	0.0384920779357331	NA	NA	NA
+GO:2000383	regulation of ectoderm development	BP	NA	NA	0.0199844442336923	NA	NA	NA
+GO:2000384	negative regulation of ectoderm development	BP	NA	NA	0.0384920779357331	NA	NA	NA
+GO:0005586	collagen type III trimer	CC	NA	NA	0.0481916315100393	NA	NA	NA
+GO:2000118	regulation of sodium-dependent phosphate transport	BP	NA	NA	0.00162270756594883	NA	NA	NA
+GO:0005944	phosphatidylinositol 3-kinase complex, class IB	CC	NA	NA	0.00154443083962502	NA	NA	NA
+GO:0001405	presequence translocase-associated import motor	CC	NA	NA	0.00141126668729658	NA	NA	NA
+GO:0061090	positive regulation of sequestering of zinc ion	BP	NA	NA	0.00141126668729658	NA	NA	NA
+GO:0003322	pancreatic A cell development	BP	NA	NA	3.34737876428257e-06	NA	NA	NA
+GO:0021502	neural fold elevation formation	BP	NA	NA	1.13295678702377e-06	NA	NA	NA
+GO:0021905	forebrain-midbrain boundary formation	BP	NA	NA	1.04007448962776e-06	NA	NA	NA
+GO:0002314	germinal center B cell differentiation	BP	NA	NA	NA	0.0395690540766898	NA	NA
+GO:0047685	amine sulfotransferase activity	MF	NA	NA	NA	0.0398091012722704	NA	NA
+GO:0016153	urocanate hydratase activity	MF	NA	NA	NA	0.0372032940325761	NA	NA
+GO:0035105	sterol regulatory element binding protein import into nucleus	BP	NA	NA	NA	0.0395690540766898	NA	NA
+GO:1903924	estradiol binding	MF	NA	NA	NA	0.0330780243580848	NA	NA
+GO:0019732	antifungal humoral response	BP	NA	NA	NA	0.0331934774551271	NA	NA
+GO:1901082	positive regulation of relaxation of smooth muscle	BP	NA	NA	NA	0.00605409961176237	NA	NA
+GO:0061181	regulation of chondrocyte development	BP	NA	NA	NA	0.00359336783885394	NA	NA
+GO:0030478	actin cap	CC	NA	NA	NA	0.0113536389805717	NA	NA
+GO:0008525	phosphatidylcholine transporter activity	MF	NA	NA	NA	0.0011084500082466	NA	NA
+GO:0006742	NADP catabolic process	BP	NA	NA	NA	0.00012029132412136	NA	NA
+GO:0071881	adenylate cyclase-inhibiting adrenergic receptor signaling pathway	BP	NA	NA	NA	5.86294025521381e-05	NA	NA
+GO:0071882	phospholipase C-activating adrenergic receptor signaling pathway	BP	NA	NA	NA	1.8394244705278e-05	NA	NA
+GO:0010015	root morphogenesis	BP	NA	NA	NA	1.94786826554769e-05	NA	NA
+GO:0010053	root epidermal cell differentiation	BP	NA	NA	NA	1.6517538920177e-05	NA	NA
+GO:0010054	trichoblast differentiation	BP	NA	NA	NA	8.55920867126956e-06	NA	NA
+GO:0022622	root system development	BP	NA	NA	NA	4.16956829642633e-06	NA	NA
+GO:0007186	G-protein coupled receptor signaling pathway	BP	2.86416145822649e-07	NA	NA	NA	NA	NA
+GO:0072272	proximal/distal pattern formation involved in metanephric nephron development	BP	NA	NA	1.43592199622396e-05	NA	NA	NA
+GO:0045009	chitosome	CC	NA	NA	1.1847244771891e-07	NA	NA	NA
+GO:0016402	pristanoyl-CoA oxidase activity	MF	NA	2.76424741166397e-07	NA	NA	NA	NA
+GO:0021933	radial glia guided migration of cerebellar granule cell	BP	NA	0.00357855785855263	NA	NA	NA	NA
+GO:0000012	single strand break repair	BP	NA	1.36349589469328e-07	NA	NA	NA	NA
+GO:0003072	renal control of peripheral vascular resistance involved in regulation of systemic arterial blood pressure	BP	NA	0.0123408303705181	NA	NA	NA	NA
+GO:0005549	odorant binding	MF	0.00141130731742339	NA	NA	NA	NA	NA
+GO:0010519	negative regulation of phospholipase activity	BP	NA	NA	NA	3.81582600284171e-05	NA	NA

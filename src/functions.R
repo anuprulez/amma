@@ -30,15 +30,18 @@ clean_mat = function(mat){
 }
 
 plot_stat_mat = function(stat_mat){
-    colnames(stat_mat) = c("DEG", "Up-regulated", "Down-regulated")
-    go_mat = expand.grid(x = rownames(stat_mat), y = colnames(stat_mat))
-    colnames(go_mat) = c("comp", "gene")
-    go_mat$value = c(sapply(colnames(stat_mat), function(i) return(stat_mat[,i])))
-    require(ggplot2)
-        p = ggplot(go_mat, aes(factor(comp), factor(gene))) + labs(x = "", y = "") + theme_bw() + theme(axis.text.x = element_text(angle = 90, hjust = 1), axis.title.y = element_text(size = rel(1.8)), panel.border = element_blank(), panel.grid.major = element_blank(), panel.grid.minor = element_blank())
-        p + geom_point(aes(size=value,col=value)) + scale_colour_gradient(low = "blue", high="red")
+    #colnames(stat_mat) = c("DEG", "Up-regulated", "Down-regulated")
+    mat = melt(stat_mat)
+    colnames(mat) = c("comp", "type", "value")
+    mat$comp = factor(mat$comp)
+    mat$type = factor(mat$type)
+    ggplot(mat, aes(x = reorder(comp, desc(comp)), y = reorder(type, desc(type)))) +
+        labs(x = "", y = "") +
+        theme_bw() +
+        theme(axis.text.x = element_text(angle = 90, hjust = 1), axis.title.y = element_text(size = rel(1.8)), panel.border = element_blank(), panel.grid.major = element_blank(), panel.grid.minor = element_blank()) +
+        geom_point(aes(size=value,col=value)) +
+        scale_colour_gradient(low = "blue", high="red")
 }
-
 
 get_interesting_cat = function(wall, data_type, cat_type){
     pvalue_threshold = 0.05
@@ -81,12 +84,11 @@ get_cat_de_genes = function(cat_id, cat2genes, de_genes){
     return(as.character(cat_genes[cat_genes %in% toupper(de_genes)]))
 }
 
-
-extract_cat_de_genes = function(selected_cat, cat, de_genes, cat2genes, file_prefix){
-    cat_de_genes = sapply(selected_cat, function(y) get_cat_de_genes(y, cat2genes, de_genes[[cat]]))
+extract_cat_de_genes = function(selected_cat, cat, sign_fc_deg, cat2genes, file_prefix){
+    de_genes = rownames(sign_fc_deg)[!is.na(sign_fc_deg[,cat])]
+    cat_de_genes = sapply(selected_cat, function(y) get_cat_de_genes(y, cat2genes, de_genes))
     capture.output(cat_de_genes, file = paste(file_prefix, gsub("[(),]", "", gsub(" ", "_", cat)), sep=""))
 }
-
 
 get_interesting_categories = function(deg, interesting_cat){
     l = sapply(colnames(deg), function(x) interesting_cat[which(!is.na(interesting_cat[,x])),"category"])
@@ -114,76 +116,89 @@ extract_diff_expr_genes = function(in_l, dir_path){
     l$deg = sapply(in_l, function(mat) return(mat$padj < 0.05))*1
     rownames(l$deg) = rownames(in_l[[1]])
     l$deg = clean_mat(l$deg)
-    if(length(in_l)>1){
-        deg_names=rownames(l$deg)
-    }else{
-        deg_names=names(l$deg)
-    }
-    # extract the significant differentially more expressed genes
-    l$pos = sapply(in_l, function(mat) return(mat[deg_names, 'log2FoldChange'] > 0))*1
-    l$pos[l$deg == 0] = 0
-    rownames(l$pos) = deg_names
-    l$pos = clean_mat(l$pos)
-    # extract the significant differentially less expressed genes
-    l$neg = sapply(in_l, function(mat) return(mat[deg_names, 'log2FoldChange'] < 0))*1
-    l$neg[l$deg == 0] = 0
-    rownames(l$neg) = deg_names
-    l$neg = clean_mat(l$neg)
+    l$deg = as.data.frame(l$deg)
+    colnames(l$deg) = names(in_l)
+    deg_names=rownames(l$deg)
     # extract the log2FC of the significant differentially expressed genes
     l$fc_deg = sapply(in_l, function(mat) return(mat[deg_names, 'log2FoldChange']))
     rownames(l$fc_deg) = deg_names
     l$fc_deg[l$deg == 0] = NA
     write.table(l$fc_deg, paste(full_dir_path, "fc_deg", sep=""), sep = "\t", quote = FALSE)
-    #system(paste("put -p", name, "-t tabular"), intern=T)
-    ## GO and KEGG analysis                  
-    assayed_genes = rownames(in_l[[1]])
-    # extract the DE genes with abs(FC)>=2
-    if(length(in_l)>1){
-        sign_de_genes = sapply(colnames(l$fc_deg), function(x) names(which(abs(l$fc_deg[,x])>=log2(1.5))))
-        de_genes = sapply(colnames(l$fc_deg), function(x) sum(!is.na(l$fc_deg[,x])))
-    }else{
-        sign_de_genes = list()
-        sign_de_genes[[names(in_l)[1]]] = rownames(l$fc_deg)[which(abs(l$fc_deg)>=log2(1.5))]
-        de_genes = c()
-        de_genes[names(in_l)[1]] = sum(!is.na(l$fc_deg))
-    }
-    print(sapply(sign_de_genes, length)/de_genes)
-    # extract in the full list of genes the DE ones                  
-    gene_vector = sapply(sign_de_genes, function(x) as.integer(assayed_genes%in%x))
-    rownames(gene_vector) = assayed_genes
+    # extract the sign log2FC (> log2(1.5))
+    l$sign_fc_deg = l$fc_deg
+    l$sign_fc_deg[abs(l$sign_fc_deg) < log2(1.5)] = NA
+    l$sign_fc_deg = l$sign_fc_deg[!apply(is.na(l$sign_fc_deg),1,all),]
+    l$sign_fc_deg = as.data.frame(l$sign_fc_deg)
+    colnames(l$sign_fc_deg) = names(in_l)
+    write.table(l$sign_fc_deg, paste(full_dir_path, "sign_fc_deg", sep=""), sep = "\t", quote = FALSE)
+    # extract stats 
+    deg_stat = colSums(!is.na(l$fc_deg), na.rm = TRUE)
+    pos_deg_stat = colSums(l$fc_deg > 0, na.rm = TRUE)
+    neg_deg_stat = colSums(l$fc_deg < 0, na.rm = TRUE)
+    sign_deg_stat = colSums(!is.na(l$sign_fc_deg), na.rm = TRUE)
+    sign_pos_deg_stat = colSums(l$sign_fc_deg > 0, na.rm = TRUE)
+    sign_neg_deg_stat = colSums(l$sign_fc_deg < 0, na.rm = TRUE)
+    l$stat = cbind(deg_stat, pos_deg_stat, neg_deg_stat, sign_deg_stat, sign_pos_deg_stat, sign_neg_deg_stat)
+    colnames(l$stat) = c("All DEG (Wald padj < 0.05)",
+                         "All over-expressed genes (Wald padj < 0.05 & FC > 0)",
+                         "All under-expressed genes (Wald padj < 0.05 & FC < 0)",
+                         "DEG (Wald padj < 0.05 & abs(FC) > 1.5)",
+                         "Over-expressed genes (Wald padj < 0.05 & FC > 1.5)",
+                         "Under-expressed genes (Wald padj < 0.05 & FC < 1.5)")
+    plot_stat_mat(l$stat)
+    ## GO and KEGG analysis
+    # get gene vector                  
+    gene_vector = matrix(0, ncol = length(colnames(l$sign_fc_deg)), nrow = length(rownames(in_l[[1]])))
+    rownames(gene_vector) = rownames(in_l[[1]])
+    colnames(gene_vector) = colnames(l$sign_fc_deg)
+    assayed_genes_in_sign_genes = rownames(gene_vector)[rownames(gene_vector) %in% rownames(l$sign_fc_deg)]
+    gene_vector[assayed_genes_in_sign_genes,] = 1*(!is.na(l$sign_fc_deg[assayed_genes_in_sign_genes,]))
     # fit the probability weighting function
     pwf = lapply(1:dim(gene_vector)[2], function(x) suppressMessages(nullp(gene_vector[,x], 'mm10', 'geneSymbol', plot.fit=F,  bias.data=gene_length)))
     names(pwf) = colnames(gene_vector)
+    ### GO analysis
     # calculate the over and under expressed GO categories among the DE genes
     l$GO_wall = lapply(pwf, function(x) suppressMessages(goseq(x, 'mm10', 'geneSymbol')))
+    # extract interesting pathways/categories and export them
+    l$over_represented_GO = get_interesting_cat(l$GO_wall, "over_represented_pvalue", "GO")
+    write.table(l$over_represented_GO, paste(go_dir_path, "full_over_represented_GO", sep=""), sep = "\t", quote = FALSE, row.names = FALSE)
+    l$under_represented_GO = get_interesting_cat(l$GO_wall, "under_represented_pvalue", "GO")
+    write.table(l$under_represented_GO, paste(go_dir_path, "full_under_represented_GO", sep=""), sep = "\t", quote = FALSE, row.names = FALSE)
+    # exclude GO terms
+    go_term_to_exclude = read.table("../data/go_term_to_exclude.csv", h = F)$V1
+    over_represented_GO_to_keep = !l$over_represented_GO[, "category"] %in% go_term_to_exclude
+    col_names = colnames(l$over_represented_GO)
+    l$over_represented_GO = as.data.frame(l$over_represented_GO[over_represented_GO_to_keep,])
+    colnames(l$over_represented_GO) = col_names                
+    write.table(l$over_represented_GO, paste(go_dir_path, "over_represented_GO", sep=""), sep = "\t", quote = FALSE, row.names = FALSE)
+    col_names = colnames(l$under_represented_GO)
+    under_represented_GO_to_keep = !l$under_represented_GO[, "category"] %in% go_term_to_exclude               
+    l$under_represented_GO = as.data.frame(l$under_represented_GO[under_represented_GO_to_keep,])
+    colnames(l$under_represented_GO) = col_names                    
+    write.table(l$under_represented_GO, paste(go_dir_path, "under_represented_GO", sep=""), sep = "\t", quote = FALSE, row.names = FALSE)
+    # extract list of genes involved in the over and under represented GO
+    full_go_genes = stack(getgo(rownames(l$sign_fc_deg), 'mm10', 'geneSymbol'))
+    over_represented_GO = get_interesting_categories(l$sign_fc_deg, l$over_represented_GO)
+    under_represented_GO = get_interesting_categories(l$sign_fc_deg, l$under_represented_GO)
+    for(x in colnames(l$sign_fc_deg)){
+        extract_cat_de_genes(over_represented_GO[[x]], x, l$sign_fc_deg, full_go_genes, paste(go_dir_path, "over_repr_", sep = ""))
+        extract_cat_de_genes(under_represented_GO[[x]], x, l$sign_fc_deg, full_go_genes, paste(go_dir_path, "under_repr_", sep = ""))
+    }
+    # KEGG analysis                   
     # calculate the over and under expressed KEGG pathways among the DE genes
     l$KEGG_wall = lapply(pwf, function(x) suppressMessages(goseq(x, 'mm10', 'geneSymbol', test.cats="KEGG")))
     # extract interesting pathways/categories and export them
-    l$over_represented_GO = get_interesting_cat(l$GO_wall, "over_represented_pvalue", "GO")
-    write.table(l$over_represented_GO, paste(go_dir_path, "over_represented_GO", sep=""), sep = "\t", quote = FALSE, row.names = FALSE)                
-    l$under_represented_GO = get_interesting_cat(l$GO_wall, "under_represented_pvalue", "GO")
-    write.table(l$under_represented_GO, paste(go_dir_path, "under_represented_GO", sep=""), sep = "\t", quote = FALSE, row.names = FALSE)
     l$over_represented_KEGG = get_interesting_cat(l$KEGG_wall, "over_represented_pvalue", "KEGG")
     write.table(l$over_represented_KEGG, paste(kegg_dir_path, "over_represented_KEGG", sep=""), sep = "\t", quote = FALSE, row.names = FALSE)    
     l$under_represented_KEGG = get_interesting_cat(l$KEGG_wall, "under_represented_pvalue", "KEGG")
-    write.table(l$under_represented_KEGG, paste(kegg_dir_path, "under_represented_KEGG", sep=""), sep = "\t", quote = FALSE, row.names = FALSE)                       
-    # extract list of genes involved in the over and under represented GO
-    l$deg = as.data.frame(l$deg)
-    colnames(l$deg) = names(in_l)
-    full_go_genes = stack(getgo(rownames(l$deg), 'mm10', 'geneSymbol'))
-    over_represented_GO = get_interesting_categories(l$deg, l$over_represented_GO)
-    under_represented_GO = get_interesting_categories(l$deg, l$under_represented_GO)
-    for(x in colnames(l$deg)){
-        extract_cat_de_genes(over_represented_GO[[x]], x, sign_de_genes, full_go_genes, paste(go_dir_path, "over_repr_", sep = ""))
-        extract_cat_de_genes(under_represented_GO[[x]], x, sign_de_genes, full_go_genes, paste(go_dir_path, "under_repr_", sep = ""))
-    }
+    write.table(l$under_represented_KEGG, paste(kegg_dir_path, "under_represented_KEGG", sep=""), sep = "\t", quote = FALSE, row.names = FALSE)
     # extract list of genes involved in the over and under represented KEGG
     full_kegg_genes = stack(getgo(rownames(as.data.frame(l$deg)), 'mm10', 'geneSymbol', fetch.cats="KEGG"))
     over_represented_KEGG = get_interesting_categories(l$deg, l$over_represented_KEGG)
     under_represented_KEGG =  get_interesting_categories(l$deg, l$under_represented_KEGG)
     for(x in colnames(l$deg)){
-        extract_cat_de_genes(over_represented_KEGG[[x]], x, sign_de_genes, full_kegg_genes, paste(kegg_dir_path, "over_repr_", sep = ""))
-        extract_cat_de_genes(under_represented_KEGG[[x]], x, sign_de_genes, full_kegg_genes, paste(kegg_dir_path, "under_repr_", sep = ""))
+        extract_cat_de_genes(over_represented_KEGG[[x]], x, l$sign_fc_deg, full_kegg_genes, paste(kegg_dir_path, "over_repr_", sep = ""))
+        extract_cat_de_genes(under_represented_KEGG[[x]], x, l$sign_fc_deg, full_kegg_genes, paste(kegg_dir_path, "under_repr_", sep = ""))
     }
     return(l)
 }
@@ -220,6 +235,22 @@ plot_heatmap = function(count, genes, samples, annot){
              annotation_col=annot,
              breaks=breaks,
              color=inferno(10))  
+}
+
+plot_fc_heatmap = function(sign_fc_deg, annot){
+    data_vector = unlist(sign_fc_deg)
+    data_vector = data_vector[!is.na(data_vector)]
+    breaks = quantile_breaks(data_vector, n = 11)
+    data = sign_fc_deg
+    data[is.na(data)] = 0
+    pheatmap(data,
+        cluster_rows=T,
+        cluster_cols=F,
+        show_rownames=F,
+        show_colnames=F,
+        annotation_col=annot,
+        breaks=breaks,
+        color=inferno(10))
 }
 
 get_list = function(mapping){
@@ -317,7 +348,6 @@ plot_top_go = function(over_repr_go, under_repr_go, go_wall, ont, top_nb){
         # reformate the terms to have less than 8 words
         mat$term = sapply(strsplit(as.character(mat$term), " "), function(i) paste(i[1:ifelse(length(i)>8,8,length(i))],collapse = " "))
         ## plot                 
-        require(ggplot2)
         ggplot(mat, aes(factor(comparison), factor(term), factor(type)))+
         labs(x = "", y = "")+
         theme(axis.text.x = element_text(angle = 90, hjust = 1), axis.title.y = element_text(size = rel(1.8)))+
@@ -329,13 +359,9 @@ plot_top_go = function(over_repr_go, under_repr_go, go_wall, ont, top_nb){
 
 get_deg_colors = function(comp_deg, comp, connected_gene_colors, module_nb){
     deg_col = connected_gene_colors
-    if(is.matrix(comp_deg$pos)){
-        sign_pos_FC = rownames(comp_deg$pos)[comp_deg$pos[,comp] == 1]
-        sign_neg_FC = rownames(comp_deg$neg)[comp_deg$neg[,comp] == 1]
-    }else{
-        sign_pos_FC = names(comp_deg$pos)[comp_deg$pos == 1]
-        sign_neg_FC = names(comp_deg$neg)[comp_deg$neg == 1]
-    }
+    deg_col = connected_gene_colors
+    sign_pos_FC = rownames(comp_deg$sign_fc_deg)[comp_deg$sign_fc_deg[,comp] > 0]
+    sign_neg_FC = rownames(comp_deg$sign_fc_deg)[comp_deg$sign_fc_deg[,comp] < 0]
     deg_col[which(names(deg_col) %in% sign_pos_FC)] = module_nb + 1
     deg_col[which(names(deg_col) %in% sign_neg_FC)] = module_nb + 2
     return(deg_col)

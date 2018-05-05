@@ -1,6 +1,5 @@
 category	term	ontology	52w VS 8w (SPF)	52w VS 8w (GF)	104w VS 52w (SPF)	104w VS 52w (GF)	104w VS 8w (SPF)	104w VS 8w (GF)
 GO:0004984	olfactory receptor activity	MF	0.0145158818260017	NA	NA	NA	NA	NA
-GO:0007606	sensory perception of chemical stimulus	BP	0.012726610203991	NA	NA	NA	NA	NA
 GO:0007608	sensory perception of smell	BP	0.012726610203991	NA	NA	NA	NA	NA
 GO:0048087	positive regulation of developmental pigmentation	BP	NA	NA	NA	0.00414963959032261	NA	NA
 GO:0016602	CCAAT-binding factor complex	CC	NA	NA	NA	0.00414963959032261	NA	NA

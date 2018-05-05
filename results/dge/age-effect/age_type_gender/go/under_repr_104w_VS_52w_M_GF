@@ -1,15 +1,3 @@
-$`GO:0061373`
-character(0)
-
-$`GO:0030860`
-character(0)
-
-$`GO:0030862`
-character(0)
-
-$`GO:0019075`
-[1] "MVB12B"
-
 $`GO:1904602`
 character(0)
 
@@ -23,12 +11,6 @@ $`GO:1904379`
 character(0)
 
 $`GO:0080144`
-character(0)
-
-$`GO:0072135`
-character(0)
-
-$`GO:0072136`
 character(0)
 
 $`GO:0000224`

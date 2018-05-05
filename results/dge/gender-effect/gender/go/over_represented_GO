@@ -15,7 +15,6 @@ GO:0071103	DNA conformation change	BP	0.000490495486700665
 GO:0065004	protein-DNA complex assembly	BP	0.000580410734730625
 GO:0000788	nuclear nucleosome	CC	0.000599320927658216
 GO:0005694	chromosome	CC	0.00201355086055638
-GO:0002227	innate immune response in mucosa	BP	0.00267149002620816
 GO:0071824	protein-DNA complex subunit organization	BP	0.00295418764954524
 GO:0000784	nuclear chromosome, telomeric region	CC	0.00303234084219015
 GO:0045653	negative regulation of megakaryocyte differentiation	BP	0.00328482319431549

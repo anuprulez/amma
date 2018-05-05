@@ -4,10 +4,8 @@ GO:0022836	gated channel activity	MF	0.0241529251611347	NA	NA
 GO:0005215	transporter activity	MF	0.00352418670518945	NA	NA
 GO:0005887	integral component of plasma membrane	CC	0.00302284554377168	NA	NA
 GO:0031226	intrinsic component of plasma membrane	CC	0.000642392251381753	NA	NA
-GO:0050877	neurological system process	BP	0.000522269450691716	NA	NA
 GO:0044459	plasma membrane part	CC	0.000400006593652156	NA	NA
 GO:0003008	system process	BP	0.000222494781047994	NA	NA
-GO:0007600	sensory perception	BP	5.28474780734269e-05	NA	NA
 GO:0007186	G-protein coupled receptor signaling pathway	BP	4.03722284062438e-06	NA	NA
 GO:0005886	plasma membrane	CC	2.4324757594503e-06	NA	NA
 GO:0071944	cell periphery	CC	9.11815989835053e-07	NA	NA

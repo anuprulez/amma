@@ -606,15 +606,6 @@ $`GO:0050865`
 [13] "NR1D1"    "PRKCZ"    "TBC1D10C" "TFRC"     "TGFB1"    "TNFSF13" 
 [19] "TNFSF13B" "VCAM1"   
 
-$`GO:0050870`
-[1] "CD244"    "FLOT2"    "ITPKB"    "PRKCZ"    "TFRC"     "TGFB1"    "TNFSF13B"
-[8] "VCAM1"   
-
-$`GO:0051249`
- [1] "BCL2"     "CD244"    "CD40"     "CDKN1A"   "DUSP3"    "FLOT2"   
- [7] "GSN"      "H2-AB1"   "IL15RA"   "ITPKB"    "LAG3"     "PRKCZ"   
-[13] "TBC1D10C" "TFRC"     "TGFB1"    "TNFSF13"  "TNFSF13B" "VCAM1"   
-
 $`GO:0009986`
  [1] "ABCA7"   "ACE"     "ANXA5"   "ARSB"    "CCR1"    "CD22"    "CD244"  
  [8] "CD40"    "CLU"     "EMP2"    "EPOR"    "ERP29"   "FCGR4"   "H2-AB1" 
@@ -622,10 +613,6 @@ $`GO:0009986`
 [22] "MRC1"    "NID2"    "NOTCH4"  "PDCD1"   "PLET1"   "PSTPIP1" "PTGFRN" 
 [29] "RAMP1"   "SCARB1"  "SCUBE1"  "SDC3"    "TFRC"    "TGFB1"   "TGFB2"  
 [36] "TNFSF13" "TPBG"    "TRPV4"   "VCAM1"  
-
-$`GO:0050863`
- [1] "CD244"    "DUSP3"    "FLOT2"    "GSN"      "H2-AB1"   "ITPKB"   
- [7] "LAG3"     "PRKCZ"    "TFRC"     "TGFB1"    "TNFSF13B" "VCAM1"   
 
 $`GO:0099080`
  [1] "ACTN1"    "ASPM"     "BIRC5"    "CLIP2"    "DYNLL2"   "ESPN"    
@@ -655,9 +642,6 @@ $`GO:1903037`
  [1] "CD244"    "DUSP3"    "FLOT2"    "GSN"      "H2-AB1"   "ITPKB"   
  [7] "LAG3"     "PRKCZ"    "TFRC"     "TGFB1"    "TNFSF13B" "VCAM1"   
 
-$`GO:0071675`
-[1] "CCR1"   "CMKLR1" "TGFB1"  "TRPV4" 
-
 $`GO:0001816`
  [1] "ADRA2A"  "ARRB1"   "BRCA1"   "CD244"   "CD300LD" "CD40"    "CLU"    
  [8] "CMKLR1"  "FLOT1"   "FN1"     "IL1R2"   "IQGAP1"  "LAG3"    "LPL"    
@@ -686,9 +670,6 @@ $`GO:0045785`
 [13] "PTK2"     "PTK2B"    "S100A10"  "TFRC"     "TGFB1"    "TGFB2"   
 [19] "TGM2"     "TNFSF13B" "VCAM1"   
 
-$`GO:0071677`
-[1] "CCR1"  "TGFB1"
-
 $`GO:1903039`
 [1] "CD244"    "FLOT2"    "ITPKB"    "PRKCZ"    "TFRC"     "TGFB1"    "TNFSF13B"
 [8] "VCAM1"   
@@ -706,11 +687,6 @@ $`GO:0040011`
 
 $`GO:0030595`
 [1] "CCL8"   "CCL9"   "CCR1"   "CMKLR1" "CXCL13" "PADI2"  "PTK2B"  "TRPV4" 
-
-$`GO:0051251`
- [1] "BCL2"     "CD244"    "CD40"     "CDKN1A"   "FLOT2"    "IL15RA"  
- [7] "ITPKB"    "PRKCZ"    "TFRC"     "TGFB1"    "TNFSF13"  "TNFSF13B"
-[13] "VCAM1"   
 
 $`GO:0005856`
  [1] "ABLIM1"   "ACTN1"    "AKAP5"    "ANXA11"   "ASPM"     "BC048403"
