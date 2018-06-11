@@ -318,7 +318,10 @@ get_top_go = function(go, top_nb, ont, comp){
 }
 
 
-plot_top_go = function(over_repr_go, under_repr_go, go_wall, ont, top_nb){
+plot_top_go = function(deg, ont, top_nb){
+    over_repr_go = deg$over_represented_GO
+    under_repr_go = deg$under_represented_GO
+    go_wall = deg$GO_wall
     # extract the top GO for the ontology                                  
     over_repr_top_go = get_top_go(over_repr_go, top_nb, ont, names(go_wall))
     over_repr_top_go$id = rownames(over_repr_top_go)
@@ -346,14 +349,30 @@ plot_top_go = function(over_repr_go, under_repr_go, go_wall, ont, top_nb){
         # add ratios
         mat$ratio = sapply(1:dim(mat)[1], function(i) ratios[mat$id[i], mat$comp[i]])
         # reformate the terms to have less than 8 words
-        mat$term = sapply(strsplit(as.character(mat$term), " "), function(i) paste(i[1:ifelse(length(i)>8,8,length(i))],collapse = " "))
-        ## plot                 
-        ggplot(mat, aes(factor(comparison), factor(term), factor(type)))+
-        labs(x = "", y = "")+
-        theme(axis.text.x = element_text(angle = 90, hjust = 1), axis.title.y = element_text(size = rel(1.8)))+
-        geom_point(aes(size=ratio,col=p_value))+
-        scale_colour_gradient(low = "red", high="blue")+
-        facet_grid(~ type)
+        mat$term = sapply(strsplit(as.character(mat$term), " "), function(i) paste(i[1:ifelse(length(i)>8,8,length(i))],collapse = " "))                
+        ## plot
+        size_scale_lim = c(min(mat$ratio),max(mat$ratio))
+        col_scale_lim = c(min(mat$p_value, na.rm = T),max(mat$p_value, na.rm = T))
+        plot1 <- mat %>%
+          filter(type == "over") %>%
+          ggplot() +
+          geom_point(aes(x = factor(comparison), y = factor(term), size=ratio,col=p_value)) +
+          labs(x = "", y = "Over represented") +
+          theme(axis.text.x = element_blank(), axis.text.y = element_text(size = rel(.75))) +
+          scale_colour_gradient(limits = col_scale_lim, low = "red", high="blue", guide = 'none') +
+          scale_size(limits = size_scale_lim, range=c(0.2,2))
+        plot2 <- mat %>%
+          filter(type == "under") %>%
+          ggplot() +
+          geom_point(aes(x = factor(comparison), y = factor(term), size=ratio,col=p_value)) +
+          labs(x = "", y = "Under represented") +
+          theme(axis.text.x = element_text(angle = 90, hjust = 1), axis.text.y = element_text(size = rel(.75))) +
+          scale_colour_gradient(limits = col_scale_lim, low = "red", high="blue") +
+          scale_size(limits = size_scale_lim, range=c(0.2,2), guide = 'none')
+        grid.newpage()
+        #grid.arrange(arrangeGrob(plot1, plot2, nrow=2), heights=c(4,1))
+        #print(plot_both)
+        grid.draw(rbind(ggplotGrob(plot1), ggplotGrob(plot2), size = "first"))
     }
 }
 

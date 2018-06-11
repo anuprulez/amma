@@ -36,3 +36,5 @@ install.packages("reshape")
 install.packages("plotly")
 
 biocLite("RamiGO")
+
+install.packages("ggfortify")

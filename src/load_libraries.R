@@ -38,6 +38,9 @@ suppressMessages(library(reshape))
 suppressMessages(library(plotly))
 suppressMessages(library(RamiGO))
 
+suppressMessages(library(ggfortify))
+suppressMessages(library(gridExtra))
+
 MF_GO = godata('org.Mm.eg.db', ont="MF")
 CC_GO = godata('org.Mm.eg.db', ont="CC")
 BP_GO = godata('org.Mm.eg.db', ont="BP")
