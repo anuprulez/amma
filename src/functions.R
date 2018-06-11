@@ -250,7 +250,7 @@ plot_fc_heatmap = function(sign_fc_deg, annot){
         show_colnames=F,
         annotation_col=annot,
         breaks=breaks,
-        color=inferno(10))
+        color=rev(brewer.pal(10, "RdBu")))
 }
 
 get_list = function(mapping){
