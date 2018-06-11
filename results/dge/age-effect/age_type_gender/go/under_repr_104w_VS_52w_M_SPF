@@ -1,21 +1,21 @@
-$`GO:0006583`
+$`GO:0008160`
 character(0)
 
-$`GO:0036337`
-[1] "CASP8AP2" "TMBIM1"  
-
-$`GO:0001695`
+$`GO:0060116`
 character(0)
 
-$`GO:0046539`
+$`GO:0004651`
 character(0)
 
-$`GO:0052805`
+$`GO:1904481`
 character(0)
 
-$`GO:0016108`
+$`GO:1904482`
 character(0)
 
-$`GO:0002092`
-[1] "CD63"  "PICK1" "SYK"  
+$`GO:0004556`
+character(0)
+
+$`GO:0002016`
+[1] "CYBA"
 

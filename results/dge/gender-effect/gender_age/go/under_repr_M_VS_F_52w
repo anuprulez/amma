@@ -1,8 +1,14 @@
+$`GO:0046398`
+character(0)
+
 $`GO:2000410`
 character(0)
 
 $`GO:0003061`
 [1] "ADRB1"
+
+$`GO:0004648`
+character(0)
 
 $`GO:0004940`
 [1] "ADRB1"
@@ -37,12 +43,6 @@ character(0)
 $`GO:0002522`
 character(0)
 
-$`GO:2000329`
-character(0)
-
-$`GO:0030692`
-character(0)
-
-$`GO:0018211`
-character(0)
+$`GO:0019186`
+[1] "ESCO1"  "MBOAT1" "MBOAT7"
 

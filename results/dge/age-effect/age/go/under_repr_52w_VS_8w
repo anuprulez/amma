@@ -1,12 +1,1 @@
-$`GO:0007606`
-[1] "GNAT1"   "IGF1"    "ITPR3"   "OLFR110"
-
-$`GO:0006396`
-[1] "CCNB1"  "CELF4"  "MALAT1" "PCBP4" 
-
-$`GO:0007608`
-[1] "IGF1"    "OLFR110"
-
-$`GO:0004984`
-[1] "OLFR110"
-
+list()

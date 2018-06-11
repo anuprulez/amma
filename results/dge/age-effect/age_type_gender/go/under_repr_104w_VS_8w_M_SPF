@@ -1,18 +1,24 @@
-$`GO:0070868`
-[1] "BAZ2A"
-
-$`GO:0070869`
-[1] "BAZ2A"
-
-$`GO:0097549`
-[1] "BAZ2A"
-
-$`GO:0033011`
+$`GO:0021576`
 character(0)
 
-$`GO:0071678`
+$`GO:0021588`
 character(0)
 
-$`GO:0004807`
+$`GO:0021732`
+character(0)
+
+$`GO:0022004`
+character(0)
+
+$`GO:0036520`
+character(0)
+
+$`GO:0033685`
+character(0)
+
+$`GO:0050459`
+character(0)
+
+$`GO:0034045`
 character(0)
 

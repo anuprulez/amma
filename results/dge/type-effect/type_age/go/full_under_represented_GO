@@ -1,12 +1,12 @@
 category	term	ontology	GF VS SPF (8w)	GF VS SPF (52w)	GF VS SPF (104w)
-GO:0019171	3-hydroxyacyl-[acyl-carrier-protein] dehydratase activity	MF	NA	NA	0.015193613827931
-GO:0019172	glyoxalase III activity	MF	NA	NA	0.0146452873345298
-GO:0019176	dihydroneopterin monophosphate phosphatase activity	MF	NA	NA	0.00277344574326101
-GO:0019177	dihydroneopterin triphosphate pyrophosphohydrolase activity	MF	NA	NA	0.00277344574326101
-GO:0019178	NADP phosphatase activity	MF	NA	NA	0.00081739032861021
-GO:0019184	nonribosomal peptide biosynthetic process	BP	NA	NA	0.000353617004814101
-GO:0019186	acyl-CoA N-acyltransferase activity	MF	NA	NA	0.000353617004814101
-GO:0019198	transmembrane receptor protein phosphatase activity	MF	NA	NA	1.58456672112777e-05
-GO:0019200	carbohydrate kinase activity	MF	NA	NA	8.30368748069463e-06
-GO:0042427	serotonin biosynthetic process	BP	NA	NA	0.00110595462986624
-GO:0042840	D-glucuronate catabolic process	BP	NA	NA	1.93301416921923e-07
+GO:0019166	trans-2-enoyl-CoA reductase (NADPH) activity	MF	NA	NA	0.0151936138279921
+GO:0019171	3-hydroxyacyl-[acyl-carrier-protein] dehydratase activity	MF	NA	NA	0.0146452873347033
+GO:0019172	glyoxalase III activity	MF	NA	NA	0.0027734457432735
+GO:0019176	dihydroneopterin monophosphate phosphatase activity	MF	NA	NA	0.0027734457432735
+GO:0019177	dihydroneopterin triphosphate pyrophosphohydrolase activity	MF	NA	NA	0.000817390328616107
+GO:0019178	NADP phosphatase activity	MF	NA	NA	0.000353617004818533
+GO:0019184	nonribosomal peptide biosynthetic process	BP	NA	NA	0.000353617004818533
+GO:0019186	acyl-CoA N-acyltransferase activity	MF	NA	NA	1.58456672113792e-05
+GO:0019198	transmembrane receptor protein phosphatase activity	MF	NA	NA	8.30368748074304e-06
+GO:0042504	tyrosine phosphorylation of Stat4 protein	BP	NA	NA	0.00110595462986624
+GO:0042982	amyloid precursor protein metabolic process	BP	NA	NA	1.93301416924033e-07

@@ -1,19 +1,19 @@
 category	term	ontology	GF VS SPF (F, 8w)	GF VS SPF (M, 8w)	GF VS SPF (F, 52w)	GF VS SPF (M, 52w)	GF VS SPF (F, 104w)	GF VS SPF (M, 104w)
-GO:0016926	protein desumoylation	BP	NA	NA	NA	NA	NA	0.0053542676367359
-GO:0016929	SUMO-specific protease activity	MF	NA	NA	NA	NA	NA	0.00413638813518535
-GO:0016933	extracellular-glycine-gated ion channel activity	MF	NA	NA	NA	NA	NA	0.0053542676367359
-GO:0016934	extracellular-glycine-gated chloride channel activity	MF	NA	NA	NA	NA	NA	0.000565342199656391
-GO:0016935	glycine-gated chloride channel complex	CC	NA	NA	NA	NA	NA	0.000199059216175915
-GO:0016937	short-branched-chain-acyl-CoA dehydrogenase activity	MF	NA	NA	NA	NA	NA	0.000148222167616981
-GO:0016939	kinesin II complex	CC	NA	NA	NA	NA	NA	0.000148222167616981
-GO:0016941	natriuretic peptide receptor activity	MF	NA	NA	NA	NA	NA	1.21774704078662e-05
-GO:0018586	mono-butyltin dioxygenase activity	MF	NA	NA	NA	NA	0.0414398865331338	NA
-GO:0018588	tri-n-butyltin dioxygenase activity	MF	NA	NA	NA	NA	0.0414398865331338	NA
-GO:0018589	di-n-butyltin dioxygenase activity	MF	NA	NA	NA	NA	0.00970102462240681	NA
-GO:0018590	methylsilanetriol hydroxylase activity	MF	NA	NA	NA	NA	0.00496512802174922	NA
-GO:0018591	methyl tertiary butyl ether 3-monooxygenase activity	MF	NA	NA	NA	NA	0.00432087872932263	NA
-GO:0018592	4-nitrocatechol 4-monooxygenase activity	MF	NA	NA	NA	NA	0.00382254018989473	NA
-GO:0018593	4-chlorophenoxyacetate monooxygenase activity	MF	NA	NA	NA	NA	7.36369772119759e-06	NA
-GO:0034751	aryl hydrocarbon receptor complex	CC	NA	NA	NA	NA	2.77620609363125e-06	NA
-GO:0051286	cell tip	CC	NA	NA	NA	NA	NA	0.00128188602499455
-GO:0061303	cornea development in camera-type eye	BP	NA	NA	NA	NA	0.0157518501607673	NA
+GO:0016929	SUMO-specific protease activity	MF	NA	NA	NA	NA	NA	0.0053542676367398
+GO:0016933	extracellular-glycine-gated ion channel activity	MF	NA	NA	NA	NA	NA	0.00413638813517777
+GO:0016934	extracellular-glycine-gated chloride channel activity	MF	NA	NA	NA	NA	NA	0.0053542676367398
+GO:0016935	glycine-gated chloride channel complex	CC	NA	NA	NA	NA	NA	0.000565342199653425
+GO:0016937	short-branched-chain-acyl-CoA dehydrogenase activity	MF	NA	NA	NA	NA	NA	0.000199059216175473
+GO:0016939	kinesin II complex	CC	NA	NA	NA	NA	NA	0.000148222167616582
+GO:0016941	natriuretic peptide receptor activity	MF	NA	NA	NA	NA	NA	0.000148222167616582
+GO:0016942	insulin-like growth factor binding protein complex	CC	NA	NA	NA	NA	NA	1.21774704078406e-05
+GO:0018588	tri-n-butyltin dioxygenase activity	MF	NA	NA	NA	NA	0.0414398865331339	NA
+GO:0018589	di-n-butyltin dioxygenase activity	MF	NA	NA	NA	NA	0.0414398865331339	NA
+GO:0018590	methylsilanetriol hydroxylase activity	MF	NA	NA	NA	NA	0.00970102462240311	NA
+GO:0018591	methyl tertiary butyl ether 3-monooxygenase activity	MF	NA	NA	NA	NA	0.00496512802174934	NA
+GO:0018592	4-nitrocatechol 4-monooxygenase activity	MF	NA	NA	NA	NA	0.00432087872932057	NA
+GO:0018593	4-chlorophenoxyacetate monooxygenase activity	MF	NA	NA	NA	NA	0.00382254018989431	NA
+GO:0018594	tert-butanol 2-monooxygenase activity	MF	NA	NA	NA	NA	7.36369772119759e-06	NA
+GO:0034727	piecemeal microautophagy of nucleus	BP	NA	NA	NA	NA	2.77620609363125e-06	NA
+GO:0051316	attachment of spindle microtubules to kinetochore involved in meiotic chromosome segregation	BP	NA	NA	NA	NA	NA	0.00128188602495724
+GO:0061310	canonical Wnt signaling pathway involved in cardiac neural crest cell differentiation involved in heart development	BP	NA	NA	NA	NA	0.0157518501607673	NA

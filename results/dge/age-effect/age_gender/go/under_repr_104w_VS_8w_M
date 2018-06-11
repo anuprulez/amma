@@ -1,3 +1,9 @@
+$`GO:0032241`
+character(0)
+
+$`GO:0022417`
+[1] "ERO1L" "PRDX4"
+
 $`GO:0030297`
 [1] "ANGPT4"
 
@@ -19,15 +25,9 @@ character(0)
 $`GO:0030581`
 character(0)
 
-$`GO:0051708`
-character(0)
+$`GO:0035024`
+[1] "ABL2"     "ARHGAP35" "DLC1"    
 
-$`GO:0036112`
-character(0)
-
-$`GO:0034987`
-[1] "FGR"    "LGALS3"
-
-$`GO:0043633`
-character(0)
+$`GO:0043666`
+[1] "CMYA5"    "HSP90AB1" "HTT"      "MPRIP"    "NUAK1"    "ROCK2"    "TSC1"    
 

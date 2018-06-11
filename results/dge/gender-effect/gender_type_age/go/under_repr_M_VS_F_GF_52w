@@ -1,30 +1,51 @@
-$`GO:0047685`
+$`GO:0046712`
 character(0)
 
-$`GO:0016153`
+$`GO:0070540`
 character(0)
 
-$`GO:0035105`
-[1] "LMNA"
+$`GO:0035887`
+[1] "SMARCA2"
 
-$`GO:1903924`
+$`GO:0010796`
 character(0)
 
-$`GO:0030478`
-[1] "GSN"
-
-$`GO:0008525`
+$`GO:0051791`
 character(0)
 
-$`GO:0006742`
+$`GO:0002668`
 character(0)
 
-$`GO:0071881`
+$`GO:0060454`
 character(0)
 
-$`GO:0071882`
+$`GO:0010931`
 character(0)
 
-$`GO:0010519`
-[1] "ANGPTL3" "ANXA1"   "BICD1"  
+$`GO:0010932`
+character(0)
+
+$`GO:0010933`
+character(0)
+
+$`GO:0035519`
+character(0)
+
+$`GO:0071664`
+character(0)
+
+$`GO:0070903`
+character(0)
+
+$`GO:0072718`
+[1] "KDM3B"
+
+$`GO:0035359`
+character(0)
+
+$`GO:0009841`
+character(0)
+
+$`GO:0009445`
+[1] "PAOX"
 

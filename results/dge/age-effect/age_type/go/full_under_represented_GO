@@ -2,25 +2,25 @@ category	term	ontology	52w VS 8w (SPF)	52w VS 8w (GF)	104w VS 52w (SPF)	104w VS 
 GO:0004984	olfactory receptor activity	MF	0.0145158818260017	NA	NA	NA	NA	NA
 GO:0007606	sensory perception of chemical stimulus	BP	0.012726610203991	NA	NA	NA	NA	NA
 GO:0007608	sensory perception of smell	BP	0.012726610203991	NA	NA	NA	NA	NA
-GO:0048087	positive regulation of developmental pigmentation	BP	NA	NA	NA	0.00414963959032261	NA	NA
-GO:0016602	CCAAT-binding factor complex	CC	NA	NA	NA	0.00414963959032261	NA	NA
-GO:0002142	stereocilia ankle link complex	CC	NA	NA	NA	0.00143135780389842	NA	NA
-GO:0015864	pyrimidine nucleoside transport	BP	NA	NA	NA	0.00118804153427198	NA	NA
-GO:1901249	regulation of lung goblet cell differentiation	BP	NA	NA	NA	6.33107973102846e-05	NA	NA
-GO:1901250	negative regulation of lung goblet cell differentiation	BP	NA	NA	NA	1.84252773146269e-05	NA	NA
-GO:1903814	regulation of collecting lymphatic vessel constriction	BP	NA	NA	NA	2.00920403341301e-05	NA	NA
-GO:1990183	lymphatic vascular process in circulatory system	BP	NA	NA	NA	1.16080635820529e-05	NA	NA
-GO:1990186	regulation of lymphatic vessel size	BP	NA	NA	NA	1.54108178422314e-05	NA	NA
-GO:0032752	positive regulation of interleukin-3 production	BP	NA	NA	0.00331369481992535	NA	NA	NA
-GO:0010963	regulation of L-arginine import	BP	NA	NA	NA	NA	NA	0.0398959202817637
-GO:0032398	MHC class Ib protein complex	CC	NA	NA	NA	NA	NA	0.00167202890513966
-GO:0032077	positive regulation of deoxyribonuclease activity	BP	NA	NA	NA	NA	NA	0.00167202890513966
-GO:0070545	PeBoW complex	CC	NA	NA	NA	NA	0.00143763120261371	NA
-GO:0031665	negative regulation of lipopolysaccharide-mediated signaling pathway	BP	NA	NA	NA	NA	0.000603272839536472	NA
-GO:0006478	peptidyl-tyrosine sulfation	BP	NA	NA	NA	NA	0.000486611374041795	NA
-GO:0005861	troponin complex	CC	NA	NA	NA	NA	NA	1.56099579080106e-06
-GO:0030898	actin-dependent ATPase activity	MF	NA	NA	NA	0.016259274995749	NA	NA
-GO:0033209	tumor necrosis factor-mediated signaling pathway	BP	NA	NA	NA	NA	0.000273987329303472	NA
+GO:0048087	positive regulation of developmental pigmentation	BP	NA	NA	NA	0.00414963959034411	NA	NA
+GO:0016602	CCAAT-binding factor complex	CC	NA	NA	NA	0.00414963959034411	NA	NA
+GO:0002142	stereocilia ankle link complex	CC	NA	NA	NA	0.00143135780390811	NA	NA
+GO:0015864	pyrimidine nucleoside transport	BP	NA	NA	NA	0.00118804153426222	NA	NA
+GO:1901249	regulation of lung goblet cell differentiation	BP	NA	NA	NA	6.33107973101673e-05	NA	NA
+GO:1901250	negative regulation of lung goblet cell differentiation	BP	NA	NA	NA	1.84252773147702e-05	NA	NA
+GO:1903814	regulation of collecting lymphatic vessel constriction	BP	NA	NA	NA	2.00920403343231e-05	NA	NA
+GO:1990183	lymphatic vascular process in circulatory system	BP	NA	NA	NA	1.16080635821479e-05	NA	NA
+GO:1990186	regulation of lymphatic vessel size	BP	NA	NA	NA	1.54108178423847e-05	NA	NA
+GO:0032752	positive regulation of interleukin-3 production	BP	NA	NA	0.0033136948199272	NA	NA	NA
+GO:0010963	regulation of L-arginine import	BP	NA	NA	NA	NA	NA	0.0398959202817441
+GO:0032398	MHC class Ib protein complex	CC	NA	NA	NA	NA	NA	0.00167202890513858
+GO:0032077	positive regulation of deoxyribonuclease activity	BP	NA	NA	NA	NA	NA	0.00167202890513858
+GO:0070545	PeBoW complex	CC	NA	NA	NA	NA	0.00143763119096124	NA
+GO:0031665	negative regulation of lipopolysaccharide-mediated signaling pathway	BP	NA	NA	NA	NA	0.000603272834304965	NA
+GO:0006478	peptidyl-tyrosine sulfation	BP	NA	NA	NA	NA	0.000486611369346655	NA
+GO:0051958	methotrexate transport	BP	NA	NA	NA	NA	NA	1.56099579079822e-06
+GO:0030828	positive regulation of cGMP biosynthetic process	BP	NA	NA	NA	NA	0.000273987327286029	NA
+GO:0031128	developmental induction	BP	NA	NA	NA	0.016259274995749	NA	NA
 GO:0034660	ncRNA metabolic process	BP	0.0463945444389097	NA	NA	NA	NA	NA
-GO:0072077	renal vesicle morphogenesis	BP	NA	NA	NA	NA	NA	0.00344245304203734
-GO:1901381	positive regulation of potassium ion transmembrane transport	BP	NA	NA	NA	NA	NA	2.26992460608773e-07
+GO:0072048	renal system pattern specification	BP	NA	NA	NA	NA	NA	0.00344245304203734
+GO:1901201	regulation of extracellular matrix assembly	BP	NA	NA	NA	NA	NA	2.26992460608567e-07

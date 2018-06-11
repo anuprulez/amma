@@ -1,23 +1,23 @@
 category	term	ontology	52w VS 8w (F)	52w VS 8w (M)	104w VS 52w (F)	104w VS 52w (M)	104w VS 8w (F)	104w VS 8w (M)
-GO:0003343	septum transversum development	BP	NA	NA	NA	NA	0.00795023424605171	NA
-GO:0032625	interleukin-21 production	BP	NA	NA	NA	NA	0.000172871495982336	NA
-GO:0001888	glucuronyl-galactosyl-proteoglycan 4-alpha-N-acetylglucosaminyltransferase activity	MF	NA	NA	NA	0.0390263838919933	NA	NA
-GO:0033577	protein glycosylation in endoplasmic reticulum	BP	NA	NA	NA	0.00392282738279614	NA	NA
-GO:1902626	assembly of large subunit precursor of preribosome	BP	NA	NA	NA	0.00270690470861184	NA	NA
-GO:0022852	glycine-gated chloride ion channel activity	MF	NA	NA	NA	7.28692436459227e-05	NA	NA
-GO:0030272	5-formyltetrahydrofolate cyclo-ligase activity	MF	NA	NA	NA	3.600399932389e-05	NA	NA
-GO:0030297	transmembrane receptor protein tyrosine kinase activator activity	MF	NA	NA	NA	NA	NA	0.0280406816675964
-GO:0002436	immune complex clearance by monocytes and macrophages	BP	NA	NA	NA	NA	NA	0.00138624384617403
-GO:0090264	regulation of immune complex clearance by monocytes and macrophages	BP	NA	NA	NA	NA	NA	0.00103808874429831
-GO:0090265	positive regulation of immune complex clearance by monocytes and macrophages	BP	NA	NA	NA	NA	NA	0.00471337197686153
-GO:2001184	positive regulation of interleukin-12 secretion	BP	NA	NA	NA	NA	NA	0.000794371549218623
-GO:0090367	negative regulation of mRNA modification	BP	NA	NA	NA	NA	NA	0.000690936973591005
-GO:0030581	symbiont intracellular protein transport in host	BP	NA	NA	NA	NA	NA	2.14181654884874e-05
-GO:0051708	intracellular protein transport in other organism involved in symbiotic interaction	BP	NA	NA	NA	NA	NA	2.14181654884874e-05
-GO:0036112	medium-chain fatty-acyl-CoA metabolic process	BP	NA	NA	NA	NA	NA	2.42587011714448e-06
+GO:0003343	septum transversum development	BP	NA	NA	NA	NA	0.0079502342460553	NA
+GO:0032625	interleukin-21 production	BP	NA	NA	NA	NA	0.000172871495982624	NA
+GO:0001888	glucuronyl-galactosyl-proteoglycan 4-alpha-N-acetylglucosaminyltransferase activity	MF	NA	NA	NA	0.0390263838920059	NA	NA
+GO:0033577	protein glycosylation in endoplasmic reticulum	BP	NA	NA	NA	0.003922827382798	NA	NA
+GO:1902626	assembly of large subunit precursor of preribosome	BP	NA	NA	NA	0.00270690470860666	NA	NA
+GO:0022852	glycine-gated chloride ion channel activity	MF	NA	NA	NA	7.28692436460186e-05	NA	NA
+GO:0030272	5-formyltetrahydrofolate cyclo-ligase activity	MF	NA	NA	NA	3.60039993239442e-05	NA	NA
+GO:0032241	positive regulation of nucleobase-containing compound transport	BP	NA	NA	NA	NA	NA	0.0280406816676254
+GO:0022417	protein maturation by protein folding	BP	NA	NA	NA	NA	NA	0.00138624384617565
+GO:0030297	transmembrane receptor protein tyrosine kinase activator activity	MF	NA	NA	NA	NA	NA	0.00103808874429856
+GO:0002436	immune complex clearance by monocytes and macrophages	BP	NA	NA	NA	NA	NA	0.00471337197688592
+GO:0090264	regulation of immune complex clearance by monocytes and macrophages	BP	NA	NA	NA	NA	NA	0.000794371549222929
+GO:0090265	positive regulation of immune complex clearance by monocytes and macrophages	BP	NA	NA	NA	NA	NA	0.000690936973591034
+GO:2001184	positive regulation of interleukin-12 secretion	BP	NA	NA	NA	NA	NA	2.14181654885104e-05
+GO:0090367	negative regulation of mRNA modification	BP	NA	NA	NA	NA	NA	2.14181654885104e-05
+GO:0030581	symbiont intracellular protein transport in host	BP	NA	NA	NA	NA	NA	2.42587011714639e-06
 GO:0007608	sensory perception of smell	BP	5.383553385506e-06	NA	NA	NA	NA	NA
-GO:0030239	myofibril assembly	BP	NA	NA	NA	6.64612988475079e-07	NA	NA
-GO:0034987	immunoglobulin receptor binding	MF	NA	NA	NA	NA	NA	1.72696955312345e-07
-GO:0043633	polyadenylation-dependent RNA catabolic process	BP	NA	NA	NA	NA	NA	4.16809376243137e-07
+GO:0030011	maintenance of cell polarity	BP	NA	NA	NA	6.64612988475079e-07	NA	NA
+GO:0035024	negative regulation of Rho protein signal transduction	BP	NA	NA	NA	NA	NA	1.72696955312659e-07
+GO:0043666	regulation of phosphoprotein phosphatase activity	BP	NA	NA	NA	NA	NA	4.16809376243137e-07
 GO:0071394	cellular response to testosterone stimulus	BP	NA	NA	NA	NA	0.0329145941347677	NA
-GO:0097255	R2TP complex	CC	NA	NA	NA	NA	2.92699508333319e-07	NA
+GO:0097255	R2TP complex	CC	NA	NA	NA	NA	2.92699508333718e-07	NA

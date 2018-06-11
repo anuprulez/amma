@@ -326,27 +326,33 @@ character(0)
 $`GO:0000125`
 character(0)
 
+$`GO:0006422`
+character(0)
+
+$`GO:1901622`
+character(0)
+
 $`GO:0033342`
 character(0)
 
 $`GO:0006556`
 character(0)
 
-$`GO:0035526`
+$`GO:0047661`
 character(0)
 
-$`GO:1990932`
+$`GO:1902546`
 character(0)
 
-$`GO:0045340`
+$`GO:0003839`
 character(0)
 
-$`GO:0016402`
+$`GO:2000521`
 character(0)
 
-$`GO:0021933`
+$`GO:0048200`
 character(0)
 
-$`GO:0000012`
-character(0)
+$`GO:0002664`
+[1] "ITCH"
 

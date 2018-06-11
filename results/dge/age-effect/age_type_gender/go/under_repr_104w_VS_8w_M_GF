@@ -1,27 +1,36 @@
-$`GO:0031085`
+$`GO:1904529`
 character(0)
 
-$`GO:0008029`
+$`GO:1904616`
 character(0)
 
-$`GO:0019785`
+$`GO:2000631`
 character(0)
 
-$`GO:0034275`
+$`GO:2000632`
 character(0)
 
-$`GO:0034276`
+$`GO:1904263`
 character(0)
 
-$`GO:1901204`
+$`GO:0060926`
 character(0)
 
-$`GO:0032375`
-[1] "EGF"
-
-$`GO:0034790`
+$`GO:0010836`
 character(0)
 
-$`GO:2000251`
+$`GO:0043540`
 character(0)
+
+$`GO:0035378`
+character(0)
+
+$`GO:0032275`
+[1] "TMF1"
+
+$`GO:0034587`
+character(0)
+
+$`GO:2000010`
+[1] "STX3"  "STX4A"
 

@@ -1,4 +1,9 @@
-     category 
-[1,] "PPP2R5E"
-[2,] "SMG1"   
-[3,] "SMG6"   
+     category
+[1,] "EEF1A1"
+[2,] "EIF4A1"
+[3,] "EIF4G1"
+[4,] "GEMIN5"
+[5,] "NUP210"
+[6,] "POM121"
+[7,] "RPP21" 
+[8,] "SUMO2" 

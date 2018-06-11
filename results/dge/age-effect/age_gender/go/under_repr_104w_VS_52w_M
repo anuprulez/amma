@@ -13,6 +13,6 @@ character(0)
 $`GO:0030272`
 character(0)
 
-$`GO:0030239`
-[1] "ANKRD23" "MYH10"  
+$`GO:0030011`
+[1] "ATN1"
 

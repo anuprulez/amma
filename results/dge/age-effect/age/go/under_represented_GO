@@ -1,11 +1,10 @@
 category	term	ontology	52w VS 8w	104w VS 52w	104w VS 8w
-GO:0031514	motile cilium	CC	NA	0.00649228080405067	NA
-GO:0034061	DNA polymerase activity	MF	NA	0.000249541055108046	NA
-GO:0032355	response to estradiol	BP	NA	8.57673265598974e-05	NA
-GO:0007606	sensory perception of chemical stimulus	BP	0.0258039651078792	NA	NA
+GO:0031514	motile cilium	CC	NA	0.00649228080405014	NA
+GO:0034061	DNA polymerase activity	MF	NA	0.000249541055107956	NA
+GO:0032355	response to estradiol	BP	NA	8.57673265597595e-05	NA
 GO:0006396	RNA processing	BP	0.0064913349828282	NA	NA
 GO:0007608	sensory perception of smell	BP	0.0064913349828282	NA	NA
 GO:0004984	olfactory receptor activity	MF	0.00474044245957801	NA	NA
-GO:0070782	phosphatidylserine exposure on apoptotic cell surface	BP	NA	NA	0.0295402087623319
-GO:0006613	cotranslational protein targeting to membrane	BP	NA	NA	0.000347545902121172
-GO:0008889	glycerophosphodiester phosphodiesterase activity	MF	NA	NA	0.0295402087623319
+GO:0070782	phosphatidylserine exposure on apoptotic cell surface	BP	NA	NA	0.029540208761762
+GO:0006089	lactate metabolic process	BP	NA	NA	0.000347545902121172
+GO:0008212	mineralocorticoid metabolic process	BP	NA	NA	0.029540208761762

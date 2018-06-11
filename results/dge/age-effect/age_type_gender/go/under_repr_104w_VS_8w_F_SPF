@@ -1,9 +1,9 @@
-$`GO:0019815`
+$`GO:0021623`
 character(0)
 
-$`GO:0008510`
+$`GO:1904229`
 character(0)
 
-$`GO:0051044`
-[1] "ADAM8" "APOE"  "IL1B"  "TNF"  
+$`GO:0060684`
+character(0)
 

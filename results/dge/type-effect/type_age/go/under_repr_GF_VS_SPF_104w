@@ -1,3 +1,6 @@
+$`GO:0019166`
+character(0)
+
 $`GO:0019171`
 character(0)
 
@@ -22,12 +25,9 @@ $`GO:0019186`
 $`GO:0019198`
 [1] "NT5C"  "SGPP2"
 
-$`GO:0019200`
+$`GO:0042504`
 character(0)
 
-$`GO:0042427`
-character(0)
-
-$`GO:0042840`
-character(0)
+$`GO:0042982`
+[1] "ABCA7" "CLU"  
 

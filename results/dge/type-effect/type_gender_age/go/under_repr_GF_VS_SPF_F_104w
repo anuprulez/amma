@@ -1,6 +1,3 @@
-$`GO:0018586`
-character(0)
-
 $`GO:0018588`
 character(0)
 
@@ -19,6 +16,12 @@ character(0)
 $`GO:0018593`
 character(0)
 
-$`GO:0034751`
+$`GO:0018594`
+character(0)
+
+$`GO:0034727`
+character(0)
+
+$`GO:0061310`
 character(0)
 
