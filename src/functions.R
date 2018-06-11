@@ -142,9 +142,9 @@ extract_diff_expr_genes = function(in_l, dir_path){
     colnames(l$stat) = c("All DEG (Wald padj < 0.05)",
                          "All over-expressed genes (Wald padj < 0.05 & FC > 0)",
                          "All under-expressed genes (Wald padj < 0.05 & FC < 0)",
-                         "DEG (Wald padj < 0.05 & abs(FC) > 1.5)",
-                         "Over-expressed genes (Wald padj < 0.05 & FC > 1.5)",
-                         "Under-expressed genes (Wald padj < 0.05 & FC < 1.5)")
+                         "DEG (Wald padj < 0.05 & abs(FC) >= 1.5)",
+                         "Over-expressed genes (Wald padj < 0.05 & FC >= 1.5)",
+                         "Under-expressed genes (Wald padj < 0.05 & FC <= -1.5)")
     plot_stat_mat(l$stat)
     ## GO and KEGG analysis
     # get gene vector                  
