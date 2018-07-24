@@ -568,3 +568,46 @@ investigate_enrichement = function(set, all_genes){
     res[2,2] = dim(under_represented_KEGG)[1]
     print(res)
 }
+
+
+order_by_min_na = function(data){
+    na_nb = apply(is.na(data), 2, sum)
+    return(data[order(data[,which.min(na_nb)]),])
+}
+
+plot_fc_heatmap_with_modules = function(data, fc_annot, connected_gene_colors){
+    module_nb = length(unique(connected_gene_colors))
+    # get genes per modules and order inside module by log2FC of the comparison with the less NA
+    module_gene_fc_deg = matrix(0, ncol = 0, nrow = 0)
+    for(i in 1:module_nb){
+        genes_in_mod = names(connected_gene_colors)[connected_gene_colors == i & names(connected_gene_colors) %in% rownames(data)]
+        module_gene_fc_deg = rbind(module_gene_fc_deg, order_by_min_na(data[genes_in_mod,]))
+    }
+    # add genes not in modules (also ordered)
+    genes_in_mod_to_keep = rownames(module_gene_fc_deg)
+    genes_not_in_mod = rownames(data)[!rownames(data) %in% genes_in_mod_to_keep]
+    module_gene_fc_deg = rbind(module_gene_fc_deg, order_by_min_na(data[genes_not_in_mod,]))
+    # add annotation
+    annot_row = data.frame(module = as.factor(c(connected_gene_colors[genes_in_mod_to_keep], rep(0, length(genes_not_in_mod)))))
+    rownames(annot_row) = c(genes_in_mod_to_keep, genes_not_in_mod)
+    mod_pal = c('grey', head(pal2, -2))
+    names(mod_pal) = as.factor(0:module_nb)
+    annot_colors = list(
+        module = mod_pal
+    )
+    # get breaks for the colors
+    data_vector = unlist(module_gene_fc_deg)
+    data_vector = data_vector[!is.na(data_vector)]
+    breaks = quantile_breaks(data_vector, n = 11)
+    # plot heatmap
+    pheatmap(module_gene_fc_deg,
+            cluster_rows=F,
+            cluster_cols=F,
+            show_rownames=F,
+            show_colnames=F,
+            annotation_col=annot_col,
+            annotation_row=annot_row,
+            annotation_colors = annot_colors,
+            breaks=breaks,
+            color=rev(brewer.pal(10, "RdBu")))
+}
