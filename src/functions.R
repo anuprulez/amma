@@ -588,10 +588,10 @@ plot_fc_heatmap_with_modules = function(data, fc_annot, connected_gene_colors){
     genes_not_in_mod = rownames(data)[!rownames(data) %in% genes_in_mod_to_keep]
     module_gene_fc_deg = rbind(module_gene_fc_deg, order_by_min_na(data[genes_not_in_mod,]))
     # add annotation
-    annot_row = data.frame(module = as.factor(c(connected_gene_colors[genes_in_mod_to_keep], rep(0, length(genes_not_in_mod)))))
+    annot_row = data.frame(module = as.factor(c(connected_gene_colors[genes_in_mod_to_keep], rep("No module", length(genes_not_in_mod)))))
     rownames(annot_row) = c(genes_in_mod_to_keep, genes_not_in_mod)
-    mod_pal = c('grey', head(pal2, -2))
-    names(mod_pal) = as.factor(0:module_nb)
+    mod_pal = c(head(pal2, -2),'white')
+    names(mod_pal) = as.factor(c(1:module_nb,"No module"))
     annot_colors = list(
         module = mod_pal
     )
@@ -610,4 +610,58 @@ plot_fc_heatmap_with_modules = function(data, fc_annot, connected_gene_colors){
             annotation_colors = annot_colors,
             breaks=breaks,
             color=rev(brewer.pal(10, "RdBu")))
+}
+
+
+order_rows = function(z){
+    # perform hierarchical clustering inside the module to order the genes
+    hc = hclust(dist(z), method = "complete")
+    return(z[hc$order,])
+}
+
+plot_z_score_heatmap_with_modules = function(z_scores, deg, col_order, annot_col, title){
+    # get z_score for the DE genes and correct column order
+    data = z_scores[deg, col_order]
+    # get module nb
+    module_nb = length(unique(connected_gene_colors))
+    # get genes per modules
+    module_gene_scores = matrix(0, ncol = dim(norm_counts)[2], nrow = 0)
+    for(i in 1:module_nb){
+        genes_in_mod = names(connected_gene_colors)[connected_gene_colors == i & names(connected_gene_colors) %in% rownames(data)]
+        # add to all genes after a hierarchical clustering inside the module to order the genes
+        if(length(genes_in_mod) != 0){
+            z = data[genes_in_mod,]
+            if(length(genes_in_mod) < 2){
+                z = as.matrix(t(z))
+                rownames(z) = genes_in_mod
+            }else{
+                z = order_rows(z)
+            }
+            module_gene_scores = rbind(module_gene_scores, z)
+        }
+    }
+    # add genes not in modules (also ordered)
+    genes_in_mod_to_keep = rownames(module_gene_scores)
+    genes_not_in_mod = rownames(data)[!rownames(data) %in% genes_in_mod_to_keep]
+    module_gene_scores = rbind(module_gene_scores, order_rows(data[genes_not_in_mod,]))
+    # add annotation
+    annot_row = data.frame(module = as.factor(c(connected_gene_colors[genes_in_mod_to_keep], rep("No module", length(genes_not_in_mod)))))
+    rownames(annot_row) = c(genes_in_mod_to_keep, genes_not_in_mod)
+    mod_pal = c(head(pal2, -2),'white')
+    names(mod_pal) = as.factor(c(1:module_nb,"No module"))
+    annot_colors = list(
+        module = mod_pal
+    )
+    # plot heatmap
+    pheatmap(module_gene_scores,
+            cluster_rows=F,
+            cluster_cols=F,
+            show_rownames=F,
+            show_colnames=F,
+            annotation_col=annot_col,
+            annotation_row=annot_row,
+            annotation_colors = annot_colors,
+            color=rev(brewer.pal(11, "RdBu")),
+            breaks = seq(-3.5, 3.5, length=11),
+            main = title)
 }
