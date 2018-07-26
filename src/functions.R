@@ -647,8 +647,8 @@ plot_z_score_heatmap_with_modules = function(z_scores, deg, col_order, annot_col
     # add annotation
     annot_row = data.frame(module = as.factor(c(connected_gene_colors[genes_in_mod_to_keep], rep("No module", length(genes_not_in_mod)))))
     rownames(annot_row) = c(genes_in_mod_to_keep, genes_not_in_mod)
-    mod_pal = c(head(pal2, -2),'white')
-    names(mod_pal) = as.factor(c(1:module_nb,"No module"))
+    mod_pal = pal2
+    names(mod_pal) = as.factor(c("No module", paste("ME", 1:module_nb, sep="")))
     annot_colors = list(
         module = mod_pal
     )
@@ -664,4 +664,41 @@ plot_z_score_heatmap_with_modules = function(z_scores, deg, col_order, annot_col
             color=rev(brewer.pal(11, "RdBu")),
             breaks = seq(-3.5, 3.5, length=11),
             main = title)
+}
+
+
+plot_module_groups = function(groups, vertsep){
+    # Calculate correlation
+    moduleTraitCor = cor(MEs, trait, use = "p")
+    moduleTraitPvalue = corPvalueStudent(moduleTraitCor, dim(filtered_norm_counts)[2])
+    # perform hierarchical clustering of the modules
+    hc = hclust(dist(moduleTraitCor), method = "complete")
+    moduleTraitCor = moduleTraitCor[hc$order,]
+    moduleTraitPvalue = moduleTraitPvalue[hc$order,]
+    # Will display correlations and their p-values
+    textMatrix = paste(signif(moduleTraitCor, 2), "\n(",signif(moduleTraitPvalue, 1), ")", sep = "")
+    dim(textMatrix) = dim(moduleTraitCor)
+    # Row cols
+    row_col = paste("ME", pal2, sep="")
+    names(row_col) = paste("ME", names(pal2), sep="")
+    row_col = row_col[match(rownames(moduleTraitCor), names(row_col))]
+    # Row names
+    row_names = sapply(names(row_col), function(x){
+        y = if(x == 'ME0') 'No module' else x 
+        paste(y, " \n(", mod_sizes[x], " genes)", sep = "")})
+    # Plot correlation
+    par(mar = c(6, 8.5, 3, 3))
+    labeledHeatmap(Matrix = moduleTraitCor,
+                    xLabels = colnames(trait),
+                    yLabels = row_col,
+                    ySymbols = row_names,
+                    colorLabels = FALSE,
+                    yColorLabels = TRUE,
+                    colors = rev(brewer.pal(11, "RdBu")),
+                    textMatrix = textMatrix,
+                    setStdMargins = FALSE,
+                    cex.text = 0.5,
+                    cex.lab.y = .75,
+                    zlim = c(-1,1),
+                    verticalSeparator.x = vertsep)
 }
