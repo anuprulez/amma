@@ -1,0 +1,3 @@
+category	over_represented_pvalue	under_represented_pvalue	numDEInCat	numInCat	term	ontology
+GO:0005622	3.85450158599258e-07	0.999999928671704	73	12847	intracellular	CC
+GO:0003779	3.21757730399944e-06	0.99999956127925	11	376	actin binding	MF
