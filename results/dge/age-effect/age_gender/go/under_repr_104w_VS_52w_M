@@ -1,18 +1,30 @@
-$`GO:0001888`
+$`GO:0007529`
 character(0)
 
-$`GO:0033577`
+$`GO:0000225`
 character(0)
 
-$`GO:1902626`
+$`GO:0021686`
 character(0)
 
-$`GO:0022852`
+$`GO:0032912`
 character(0)
 
-$`GO:0030272`
+$`GO:0021506`
 character(0)
 
-$`GO:0030011`
-[1] "ATN1"
+$`GO:0021995`
+character(0)
+
+$`GO:0035844`
+character(0)
+
+$`GO:0060197`
+character(0)
+
+$`GO:0005119`
+character(0)
+
+$`GO:0005839`
+character(0)
 

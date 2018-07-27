@@ -1,8 +1,10 @@
-$`04744`
- [1] "CNGB1"   "GNAT1"   "GNGT1"   "GRK1"    "PDE6A"   "PDE6B"   "PDE6G"  
- [8] "RGS9"    "RHO"     "SLC24A1"
-
-$`04672`
-[1] "CD40"     "CXCL12"   "H2-AA"    "H2-AB1"   "H2-EB1"   "ICOSL"    "TGFB1"   
-[8] "TNFSF13"  "TNFSF13B"
-
+      04744     04672     
+ [1,] "CNGB1"   "CD40"    
+ [2,] "GNAT1"   "CXCL12"  
+ [3,] "GNGT1"   "H2-AA"   
+ [4,] "PDE6A"   "H2-AB1"  
+ [5,] "PDE6B"   "H2-EB1"  
+ [6,] "PDE6G"   "ICOSL"   
+ [7,] "RGS9"    "TGFB1"   
+ [8,] "RHO"     "TNFSF13" 
+ [9,] "SLC24A1" "TNFSF13B"

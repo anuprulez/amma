@@ -619,15 +619,24 @@ order_rows = function(z){
     return(z[hc$order,])
 }
 
+get_genes_in_mod = function(mod_id, connected_gene_colors, gene_subset){
+    # Get the genes in a given module and in the subset of genes
+    return(names(connected_gene_colors)[connected_gene_colors == mod_id & 
+                                        names(connected_gene_colors) %in% gene_subset])
+}
+
+
 plot_z_score_heatmap_with_modules = function(z_scores, deg, col_order, annot_col, title){
+    # Plot the Z-score heatmap with module on the left
+    
     # get z_score for the DE genes and correct column order
     data = z_scores[deg, col_order]
     # get module nb
     module_nb = length(unique(connected_gene_colors))
     # get genes per modules
     module_gene_scores = matrix(0, ncol = dim(norm_counts)[2], nrow = 0)
-    for(i in 1:module_nb){
-        genes_in_mod = names(connected_gene_colors)[connected_gene_colors == i & names(connected_gene_colors) %in% rownames(data)]
+    for(mod_id in unique(connected_gene_colors)){
+        genes_in_mod = get_genes_in_mod(mod_id, connected_gene_colors, rownames(data))
         # add to all genes after a hierarchical clustering inside the module to order the genes
         if(length(genes_in_mod) != 0){
             z = data[genes_in_mod,]
@@ -645,13 +654,9 @@ plot_z_score_heatmap_with_modules = function(z_scores, deg, col_order, annot_col
     genes_not_in_mod = rownames(data)[!rownames(data) %in% genes_in_mod_to_keep]
     module_gene_scores = rbind(module_gene_scores, order_rows(data[genes_not_in_mod,]))
     # add annotation
-    annot_row = data.frame(module = as.factor(c(connected_gene_colors[genes_in_mod_to_keep], rep("No module", length(genes_not_in_mod)))))
+    annot_row = data.frame(module = as.factor(c(paste("ME", connected_gene_colors[genes_in_mod_to_keep], sep=""), 
+                                                rep("No module", length(genes_not_in_mod)))))
     rownames(annot_row) = c(genes_in_mod_to_keep, genes_not_in_mod)
-    mod_pal = pal2
-    names(mod_pal) = as.factor(c("No module", paste("ME", 1:module_nb, sep="")))
-    annot_colors = list(
-        module = mod_pal
-    )
     # plot heatmap
     pheatmap(module_gene_scores,
             cluster_rows=F,
@@ -664,6 +669,26 @@ plot_z_score_heatmap_with_modules = function(z_scores, deg, col_order, annot_col
             color=rev(brewer.pal(11, "RdBu")),
             breaks = seq(-3.5, 3.5, length=11),
             main = title)
+}
+
+
+plot_z_score_heatmap = function(z_scores, de_genes, col_order, annot_col, title, col_for_clust){
+    # get z_score for the DE genes and correct column order
+    data = z_scores[de_genes,]
+    # cluster rows
+    hc = hclust(dist(data[,col_for_clust]), method = "complete")
+    # plot
+    pheatmap(data[hc$order, col_order],
+             cluster_rows=F,
+             cluster_cols=F,
+             show_rownames=F,
+             show_colnames=F,
+             annotation_col=annot_col,
+             annotation_row=NULL,
+             annotation_colors = NULL,
+             color=rev(brewer.pal(11, "RdBu")),
+             breaks = seq(-3.5, 3.5, length=11),
+             main = title)
 }
 
 
@@ -701,4 +726,62 @@ plot_module_groups = function(groups, vertsep){
                     cex.lab.y = .75,
                     zlim = c(-1,1),
                     verticalSeparator.x = vertsep)
+}
+
+plot_top_deg_in_modules = function(fc, comp, connected_gene_colors){
+    gene_subset = rownames(fc)[!is.na(fc[,comp])]
+    # 
+    modules = unique(connected_gene_colors)
+    mod_genes = lapply(modules, function(mod){
+        # get DE genes in module
+        mod_de_gene = get_genes_in_mod(mod, connected_gene_colors, gene_subset)
+        # get FC for the genes
+        mod_fc = fc[mod_de_gene, comp]
+        names(mod_fc) = mod_de_gene
+        mod_fc = sort(mod_fc, decreasing = TRUE)
+        # get most up and down DEG
+        neg_genes = names(tail(mod_fc[mod_fc < 0], n = 10))
+        pos_genes = names(head(mod_fc[mod_fc > 0], n = 10))
+        return(list('pos_genes' = pos_genes, 'neg_genes' = neg_genes, 'max' = max(c(length(pos_genes), length(neg_genes)))))
+    })
+    names(mod_genes) = modules
+    # plot empty plot              
+    div = 2
+    top_neg = 10*1/div
+    top_pos = 2*top_neg + .5
+    top = top_pos + 1
+    w_offset = .5
+    w = 2*length(modules) + w_offset
+    h = top
+    prev_w = 7
+    prev_h = 7
+    options(repr.plot.width=w, repr.plot.height=h)
+    par(mar = c(0,0,0,0))
+    plot(c(0, w), c(0, h), type= "n", axes=FALSE, ann=FALSE)
+    text(w/2, top, paste("Top DE genes in", comp), cex = 2.8, font = 2)
+    text(0, top_neg + .5 + top_neg/2,"FC > 0", srt = 90, cex = 2)
+    text(0, top_neg/2,"FC < 0", srt = 90, cex = 2)                       
+    # parse modules
+    t = sapply(1:length(mod_genes), function(i){
+        mod = names(mod_genes)[i]
+        mod_info = mod_genes[[mod]]
+        # plot rect on the top
+        rect((i-1)*2 + w_offset, top-.8, i*2 + w_offset, top - 1, col = pal2[mod], border = NA)
+        text((i-1)*2 + 1 + w_offset, top-.7, paste("ME", mod, sep = ''), cex = 1.5, adj = c(0.5, 0))
+        # add pos gene names to plot
+        pos_genes = mod_info[['pos_genes']]
+        if(length(pos_genes) > 0){
+            t = sapply(1:length(pos_genes), function(x){
+                text((i-1)*2 + w_offset, top_pos - x/div, pos_genes[x], cex = 1.2, adj = c(0, 0.5), offset = c(1,NA))
+            })
+        }
+        # add neg gene names to plot
+        neg_genes = mod_info[['neg_genes']]
+        if(length(neg_genes) > 0){
+            t = sapply(1:length(neg_genes), function(x){
+                text((i-1)*2 + w_offset, top_neg - x/div, neg_genes[x], cex = 1.2, adj = c(0, 0.5), offset = c(1,NA))
+            })
+        }
+    })
+    options(repr.plot.width=prev_w, repr.plot.height=prev_h)
 }

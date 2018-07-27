@@ -1,23 +1,25 @@
 category	term	ontology	52w VS 8w (F)	52w VS 8w (M)	104w VS 52w (F)	104w VS 52w (M)	104w VS 8w (F)	104w VS 8w (M)
-GO:0003343	septum transversum development	BP	NA	NA	NA	NA	0.0079502342460553	NA
-GO:0032625	interleukin-21 production	BP	NA	NA	NA	NA	0.000172871495982624	NA
-GO:0001888	glucuronyl-galactosyl-proteoglycan 4-alpha-N-acetylglucosaminyltransferase activity	MF	NA	NA	NA	0.0390263838920059	NA	NA
-GO:0033577	protein glycosylation in endoplasmic reticulum	BP	NA	NA	NA	0.003922827382798	NA	NA
-GO:1902626	assembly of large subunit precursor of preribosome	BP	NA	NA	NA	0.00270690470860666	NA	NA
-GO:0022852	glycine-gated chloride ion channel activity	MF	NA	NA	NA	7.28692436460186e-05	NA	NA
-GO:0030272	5-formyltetrahydrofolate cyclo-ligase activity	MF	NA	NA	NA	3.60039993239442e-05	NA	NA
-GO:0032241	positive regulation of nucleobase-containing compound transport	BP	NA	NA	NA	NA	NA	0.0280406816676254
-GO:0022417	protein maturation by protein folding	BP	NA	NA	NA	NA	NA	0.00138624384617565
-GO:0030297	transmembrane receptor protein tyrosine kinase activator activity	MF	NA	NA	NA	NA	NA	0.00103808874429856
-GO:0002436	immune complex clearance by monocytes and macrophages	BP	NA	NA	NA	NA	NA	0.00471337197688592
-GO:0090264	regulation of immune complex clearance by monocytes and macrophages	BP	NA	NA	NA	NA	NA	0.000794371549222929
-GO:0090265	positive regulation of immune complex clearance by monocytes and macrophages	BP	NA	NA	NA	NA	NA	0.000690936973591034
-GO:2001184	positive regulation of interleukin-12 secretion	BP	NA	NA	NA	NA	NA	2.14181654885104e-05
-GO:0090367	negative regulation of mRNA modification	BP	NA	NA	NA	NA	NA	2.14181654885104e-05
-GO:0030581	symbiont intracellular protein transport in host	BP	NA	NA	NA	NA	NA	2.42587011714639e-06
-GO:0007608	sensory perception of smell	BP	5.383553385506e-06	NA	NA	NA	NA	NA
-GO:0030011	maintenance of cell polarity	BP	NA	NA	NA	6.64612988475079e-07	NA	NA
-GO:0035024	negative regulation of Rho protein signal transduction	BP	NA	NA	NA	NA	NA	1.72696955312659e-07
-GO:0043666	regulation of phosphoprotein phosphatase activity	BP	NA	NA	NA	NA	NA	4.16809376243137e-07
-GO:0071394	cellular response to testosterone stimulus	BP	NA	NA	NA	NA	0.0329145941347677	NA
-GO:0097255	R2TP complex	CC	NA	NA	NA	NA	2.92699508333718e-07	NA
+GO:0070965	positive regulation of neutrophil mediated killing of fungus	BP	NA	NA	NA	NA	0.015703301616087	NA
+GO:1900150	regulation of defense response to fungus	BP	NA	NA	NA	NA	0.000766452600016179	NA
+GO:0007529	establishment of synaptic specificity at neuromuscular junction	BP	NA	NA	NA	0.0174775763748377	NA	NA
+GO:0000225	N-acetylglucosaminylphosphatidylinositol deacetylase activity	MF	NA	NA	NA	0.0120713363936487	NA	NA
+GO:0021686	cerebellar granular layer maturation	BP	NA	NA	NA	0.00551847237234075	NA	NA
+GO:0032912	negative regulation of transforming growth factor beta2 production	BP	NA	NA	NA	0.00551847237234075	NA	NA
+GO:0021506	anterior neuropore closure	BP	NA	NA	NA	0.00202279050586598	NA	NA
+GO:0021995	neuropore closure	BP	NA	NA	NA	0.00197087453534686	NA	NA
+GO:0035844	cloaca development	BP	NA	NA	NA	2.75776796290071e-05	NA	NA
+GO:0060197	cloacal septation	BP	NA	NA	NA	1.32618260347157e-05	NA	NA
+GO:0005119	smoothened binding	MF	NA	NA	NA	1.33279321743977e-06	NA	NA
+GO:0050677	positive regulation of urothelial cell proliferation	BP	NA	NA	NA	NA	NA	0.0273501969953407
+GO:0060432	lung pattern specification process	BP	NA	NA	NA	NA	NA	0.0043514060082005
+GO:0060436	bronchiole morphogenesis	BP	NA	NA	NA	NA	NA	0.00263651966473862
+GO:0060495	cell-cell signaling involved in lung development	BP	NA	NA	NA	NA	NA	0.00347349670070612
+GO:0060496	mesenchymal-epithelial cell signaling involved in lung development	BP	NA	NA	NA	NA	NA	0.0048602767811445
+GO:0060661	submandibular salivary gland formation	BP	NA	NA	NA	NA	NA	0.000143519698540373
+GO:0060879	semicircular canal fusion	BP	NA	NA	NA	NA	NA	0.000143519698540373
+GO:0061115	lung proximal/distal axis specification	BP	NA	NA	NA	NA	NA	0.000143519698540373
+GO:0070075	tear secretion	BP	NA	NA	NA	NA	NA	3.18503065036572e-05
+GO:0005839	proteasome core complex	CC	NA	NA	NA	5.85065736562935e-05	NA	NA
+GO:0006047	UDP-N-acetylglucosamine metabolic process	BP	NA	NA	NA	NA	1.43638404506768e-06	NA
+GO:0007608	sensory perception of smell	BP	1.52947006337601e-05	NA	NA	NA	NA	NA
+GO:0045600	positive regulation of fat cell differentiation	BP	NA	NA	NA	NA	NA	4.93851810914558e-07

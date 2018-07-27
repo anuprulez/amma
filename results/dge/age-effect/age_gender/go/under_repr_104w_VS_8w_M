@@ -1,33 +1,30 @@
-$`GO:0032241`
+$`GO:0050677`
 character(0)
 
-$`GO:0022417`
-[1] "ERO1L" "PRDX4"
-
-$`GO:0030297`
-[1] "ANGPT4"
-
-$`GO:0002436`
+$`GO:0060432`
 character(0)
 
-$`GO:0090264`
+$`GO:0060436`
 character(0)
 
-$`GO:0090265`
+$`GO:0060495`
 character(0)
 
-$`GO:2001184`
+$`GO:0060496`
 character(0)
 
-$`GO:0090367`
+$`GO:0060661`
 character(0)
 
-$`GO:0030581`
+$`GO:0060879`
 character(0)
 
-$`GO:0035024`
-[1] "ABL2"     "ARHGAP35" "DLC1"    
+$`GO:0061115`
+character(0)
 
-$`GO:0043666`
-[1] "CMYA5"    "HSP90AB1" "HTT"      "MPRIP"    "NUAK1"    "ROCK2"    "TSC1"    
+$`GO:0070075`
+character(0)
+
+$`GO:0045600`
+[1] "PPARG"   "ZC3H12A" "ZFP36"  
 
