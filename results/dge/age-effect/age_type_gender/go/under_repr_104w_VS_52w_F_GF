@@ -1,9 +1,1 @@
-$`GO:0060606`
-[1] "ST14"
-
-$`GO:0045940`
-[1] "APOE"
-
-$`GO:0006639`
-[1] "APOE"   "GPX1"   "LPL"    "PNPLA2"
-
+named list()

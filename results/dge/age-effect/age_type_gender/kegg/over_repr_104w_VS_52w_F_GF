@@ -1,9 +1,2 @@
-$`04672`
-character(0)
-
-$`04110`
-[1] "CCND3"  "CDKN1A" "SMAD3" 
-
-$`04744`
-[1] "CALM3"
-
+category 
+"CDKN1A" 

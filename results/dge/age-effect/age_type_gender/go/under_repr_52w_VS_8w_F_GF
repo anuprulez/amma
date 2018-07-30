@@ -1,6 +1,1 @@
-$`GO:0030136`
-[1] "LYZ2"  "SGIP1" "VTI1A"
-
-$`GO:0000303`
-[1] "MPO"  "UCP2"
-
+named list()

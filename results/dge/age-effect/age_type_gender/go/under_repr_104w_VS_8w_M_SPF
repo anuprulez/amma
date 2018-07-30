@@ -1,24 +1,27 @@
-$`GO:0021576`
+$`GO:0072588`
 character(0)
 
-$`GO:0021588`
+$`GO:0071881`
 character(0)
 
-$`GO:0021732`
+$`GO:0071882`
 character(0)
 
-$`GO:0022004`
+$`GO:0000320`
+[1] "CCND1"
+
+$`GO:0051977`
 character(0)
 
-$`GO:0036520`
+$`GO:0042706`
 character(0)
 
-$`GO:0033685`
+$`GO:0046552`
 character(0)
 
-$`GO:0050459`
+$`GO:0014736`
 character(0)
 
-$`GO:0034045`
-character(0)
+$`GO:0014896`
+[1] "AKAP1" "KLF15"
 

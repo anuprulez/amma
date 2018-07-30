@@ -1,30 +1,3 @@
-$`GO:0048087`
+$`GO:0003190`
 character(0)
-
-$`GO:0016602`
-character(0)
-
-$`GO:0002142`
-character(0)
-
-$`GO:0015864`
-character(0)
-
-$`GO:1901249`
-character(0)
-
-$`GO:1901250`
-character(0)
-
-$`GO:1903814`
-character(0)
-
-$`GO:1990183`
-character(0)
-
-$`GO:1990186`
-character(0)
-
-$`GO:0031128`
-[1] "HIPK2"
 

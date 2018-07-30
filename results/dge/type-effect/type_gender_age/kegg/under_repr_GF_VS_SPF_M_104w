@@ -1,4 +1,12 @@
-     category 
-[1,] "CSTF3"  
-[2,] "PPP2R5E"
-[3,] "SMG1"   
+      category 
+ [1,] "AKT3"   
+ [2,] "EGF"    
+ [3,] "EIF2AK2"
+ [4,] "IFIT1"  
+ [5,] "IKBKE"  
+ [6,] "LDLR"   
+ [7,] "MAPK8"  
+ [8,] "NFKBIA" 
+ [9,] "OAS1A"  
+[10,] "STAT1"  
+[11,] "TRAF3"  

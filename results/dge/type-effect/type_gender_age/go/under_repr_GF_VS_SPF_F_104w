@@ -1,27 +1,18 @@
-$`GO:0018588`
+$`GO:0015986`
+[1] "ATP6V0A2"
+
+$`GO:0015988`
+[1] "ATP6V0A2"
+
+$`GO:0015991`
+[1] "ATP6V0A2"
+
+$`GO:0015993`
+[1] "ADHFE1"
+
+$`GO:0016004`
 character(0)
 
-$`GO:0018589`
-character(0)
-
-$`GO:0018590`
-character(0)
-
-$`GO:0018591`
-character(0)
-
-$`GO:0018592`
-character(0)
-
-$`GO:0018593`
-character(0)
-
-$`GO:0018594`
-character(0)
-
-$`GO:0034727`
-character(0)
-
-$`GO:0061310`
-character(0)
+$`GO:0071224`
+[1] "TLR2"
 

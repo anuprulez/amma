@@ -783,5 +783,4 @@ plot_top_deg_in_modules = function(fc, comp, connected_gene_colors){
             })
         }
     })
-    options(repr.plot.width=prev_w, repr.plot.height=prev_h)
 }

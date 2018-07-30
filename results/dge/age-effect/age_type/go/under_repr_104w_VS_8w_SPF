@@ -1,12 +1,12 @@
-$`GO:0070545`
+$`GO:1903911`
 character(0)
 
-$`GO:0031665`
-[1] "ACOD1" "LTF"  
+$`GO:0003855`
+character(0)
 
-$`GO:0006478`
-[1] "TPST1"
+$`GO:1900128`
+character(0)
 
-$`GO:0030828`
-[1] "APOE"
+$`GO:0061504`
+character(0)
 

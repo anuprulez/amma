@@ -1,11 +1,9 @@
 category	term	ontology	52w VS 8w	104w VS 52w	104w VS 8w
-GO:0031514	motile cilium	CC	NA	0.00649228080405014	NA
-GO:0034061	DNA polymerase activity	MF	NA	0.000249541055107956	NA
-GO:0032355	response to estradiol	BP	NA	8.57673265597595e-05	NA
-GO:0007606	sensory perception of chemical stimulus	BP	0.0258039651078789	NA	NA
-GO:0006396	RNA processing	BP	0.0064913349828282	NA	NA
-GO:0007608	sensory perception of smell	BP	0.0064913349828282	NA	NA
-GO:0004984	olfactory receptor activity	MF	0.00474044245957801	NA	NA
-GO:0070782	phosphatidylserine exposure on apoptotic cell surface	BP	NA	NA	0.029540208761762
-GO:0006089	lactate metabolic process	BP	NA	NA	0.000347545902121172
-GO:0008212	mineralocorticoid metabolic process	BP	NA	NA	0.029540208761762
+GO:0031974	membrane-enclosed lumen	CC	NA	0.0217967686065464	NA
+GO:0043233	organelle lumen	CC	NA	0.000414648605959637	NA
+GO:0006396	RNA processing	BP	0.0138108301251683	NA	NA
+GO:0007608	sensory perception of smell	BP	0.0145157048562259	NA	NA
+GO:0004984	olfactory receptor activity	MF	0.0107190667712197	NA	NA
+GO:0008457	beta-galactosyl-N-acetylglucosaminylgalactosylglucosyl-ceramide beta-1,3-acetylglucosaminyltransferase activity	MF	NA	8.29087440651017e-05	NA
+GO:0003142	cardiogenic plate morphogenesis	BP	NA	NA	0.0131470936995719
+GO:0001821	histamine secretion	BP	NA	NA	0.000137713594990227

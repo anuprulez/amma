@@ -1,1 +1,31 @@
-list()
+$`GO:0031974`
+ [1] "IFI207"    "ALAS2"     "ANKRD23"   "BHLHE40"   "BRCA2"     "CADPS2"   
+ [7] "CAPG"      "CCND2"     "CDKN1A"    "CLIC4"     "CPEB1"     "CUL7"     
+[13] "E2F1"      "EGR1"      "EZR"       "FNBP4"     "HIST1H1D"  "HIST1H2AE"
+[19] "HIST1H2BE" "HIST1H2BG" "HIST1H3A"  "HIST1H3D"  "HIST1H3E"  "HIST1H4I" 
+[25] "HNRNPDL"   "HPSE"      "HTT"       "ICE2"      "IFI203"    "IFI204"   
+[31] "IGF2R"     "IRF7"      "ITPR1"     "KIF23"     "KLF9"      "KMT2A"    
+[37] "LMNA"      "LRRC45"    "MDC1"      "MDFIC"     "MDN1"      "MED12L"   
+[43] "MICAL3"    "MNDAL"     "MYO10"     "NFAT5"     "OASL1"     "OLR1"     
+[49] "PEAK1"     "PHF21A"    "PNISR"     "PRDM9"     "IFI213"    "IFI209"   
+[55] "RAD9B"     "RNF208"    "RPS19"     "RUNX3"     "SLC14A1"   "SPEN"     
+[61] "SRSF5"     "TAF15"     "TCEA2"     "TCF20"     "TFEC"      "TOX2"     
+[67] "UBR4"      "ZFP174"    "ZFP318"    "ZFP473"    "ZMYM6"     "ZSCAN26"  
+
+$`GO:0043233`
+ [1] "IFI207"    "ALAS2"     "ANKRD23"   "BHLHE40"   "BRCA2"     "CADPS2"   
+ [7] "CAPG"      "CCND2"     "CDKN1A"    "CLIC4"     "CPEB1"     "CUL7"     
+[13] "E2F1"      "EGR1"      "EZR"       "FNBP4"     "HIST1H1D"  "HIST1H2AE"
+[19] "HIST1H2BE" "HIST1H2BG" "HIST1H3A"  "HIST1H3D"  "HIST1H3E"  "HIST1H4I" 
+[25] "HNRNPDL"   "HPSE"      "HTT"       "ICE2"      "IFI203"    "IFI204"   
+[31] "IGF2R"     "IRF7"      "ITPR1"     "KIF23"     "KLF9"      "KMT2A"    
+[37] "LMNA"      "LRRC45"    "MDC1"      "MDFIC"     "MDN1"      "MED12L"   
+[43] "MICAL3"    "MNDAL"     "MYO10"     "NFAT5"     "OASL1"     "OLR1"     
+[49] "PEAK1"     "PHF21A"    "PNISR"     "PRDM9"     "IFI213"    "IFI209"   
+[55] "RAD9B"     "RNF208"    "RPS19"     "RUNX3"     "SLC14A1"   "SPEN"     
+[61] "SRSF5"     "TAF15"     "TCEA2"     "TCF20"     "TFEC"      "TOX2"     
+[67] "UBR4"      "ZFP174"    "ZFP318"    "ZFP473"    "ZMYM6"     "ZSCAN26"  
+
+$`GO:0008457`
+character(0)
+

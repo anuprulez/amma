@@ -1,9 +1,9 @@
-$`04672`
-[1] "CCR9"     "CD40"     "CXCL12"   "H2-AA"    "H2-AB1"   "ICOSL"    "TGFB1"   
-[8] "TNFSF13"  "TNFSF13B"
-
 $`04110`
  [1] "ANAPC13" "BUB1"    "CCNA2"   "CCNB2"   "CDC20"   "CHEK1"   "E2F5"   
  [8] "GADD45G" "MCM2"    "MCM4"    "MCM5"    "MCM6"    "MCM7"    "ORC6"   
-[15] "PKMYT1"  "PLK1"    "TFDP2"   "TGFB1"  
+[15] "PKMYT1"  "PLK1"    "TGFB1"  
+
+$`04672`
+[1] "CD40"     "CXCL12"   "H2-AA"    "H2-AB1"   "ICOSL"    "TGFB1"    "TNFSF13" 
+[8] "TNFSF13B"
 

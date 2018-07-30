@@ -1,54 +1,44 @@
 category	term	ontology	52w VS 8w (F, SPF)	52w VS 8w (F, GF)	52w VS 8w (M, SPF)	52w VS 8w (M, GF)	104w VS 52w (F, SPF)	104w VS 52w (F, GF)	104w VS 52w (M, SPF)	104w VS 52w (M, GF)	104w VS 8w (F, SPF)	104w VS 8w (F, GF)	104w VS 8w (M, SPF)	104w VS 8w (M, GF)
-GO:0060606	tube closure	BP	NA	NA	NA	NA	NA	0.0357412958844926	NA	NA	NA	NA	NA	NA
-GO:0045940	positive regulation of steroid metabolic process	BP	NA	NA	NA	NA	NA	0.0357412958844926	NA	NA	NA	NA	NA	NA
-GO:0030136	clathrin-coated vesicle	CC	NA	0.0329025678864787	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA
-GO:0000303	response to superoxide	BP	NA	0.0315017362675637	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA
-GO:0006639	acylglycerol metabolic process	BP	NA	NA	NA	NA	NA	0.0357412958844926	NA	NA	NA	NA	NA	NA
-GO:0004888	transmembrane signaling receptor activity	MF	0.04541634066028	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA
-GO:0099600	transmembrane receptor activity	MF	0.0350889567638687	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA
-GO:0008160	protein tyrosine phosphatase activator activity	MF	NA	NA	NA	NA	NA	NA	0.00106105847903473	NA	NA	NA	NA	NA
-GO:0060116	vestibular receptor cell morphogenesis	BP	NA	NA	NA	NA	NA	NA	0.000393377440404068	NA	NA	NA	NA	NA
-GO:0004651	polynucleotide 5'-phosphatase activity	MF	NA	NA	NA	NA	NA	NA	0.000259667013826086	NA	NA	NA	NA	NA
-GO:1904481	response to tetrahydrofolate	BP	NA	NA	NA	NA	NA	NA	0.000259667013826086	NA	NA	NA	NA	NA
-GO:1904482	cellular response to tetrahydrofolate	BP	NA	NA	NA	NA	NA	NA	1.96328105548445e-05	NA	NA	NA	NA	NA
-GO:0004556	alpha-amylase activity	MF	NA	NA	NA	NA	NA	NA	1.17921136700404e-06	NA	NA	NA	NA	NA
-GO:0021623	oculomotor nerve formation	BP	NA	NA	NA	NA	NA	NA	NA	NA	0.0170616448299736	NA	NA	NA
-GO:1904229	regulation of succinate dehydrogenase activity	BP	NA	NA	NA	NA	NA	NA	NA	NA	0.012113728941532	NA	NA	NA
-GO:1904529	regulation of actin filament binding	BP	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	0.00563294265135272
-GO:1904616	regulation of actin binding	BP	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	0.00565493288650898
-GO:2000631	regulation of pre-miRNA processing	BP	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	0.00325623902838566
-GO:2000632	negative regulation of pre-miRNA processing	BP	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	0.00253875612882734
-GO:1904263	positive regulation of TORC1 signaling	BP	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	0.000281790723226763
-GO:0060926	cardiac pacemaker cell development	BP	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	0.000486108744234073
-GO:0010836	negative regulation of protein ADP-ribosylation	BP	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	3.25211428962595e-06
-GO:0043540	6-phosphofructo-2-kinase/fructose-2,6-biphosphatase complex	CC	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	3.25211428962595e-06
-GO:0010789	meiotic sister chromatid cohesion involved in meiosis I	BP	NA	NA	NA	NA	NA	NA	NA	0.0382647475039695	NA	NA	NA	NA
-GO:0070975	FHA domain binding	MF	NA	NA	NA	NA	NA	NA	NA	0.0366395372722773	NA	NA	NA	NA
-GO:0014722	regulation of skeletal muscle contraction by calcium ion signaling	BP	NA	NA	NA	NA	NA	NA	NA	0.0366395372722773	NA	NA	NA	NA
-GO:1902304	positive regulation of potassium ion export	BP	NA	NA	NA	NA	NA	NA	NA	0.0199712637273153	NA	NA	NA	NA
-GO:2000259	positive regulation of protein activation cascade	BP	NA	NA	NA	NA	NA	NA	NA	0.048796418578204	NA	NA	NA	NA
-GO:0050859	negative regulation of B cell receptor signaling pathway	BP	NA	NA	NA	NA	NA	NA	NA	0.0206213823270695	NA	NA	NA	NA
-GO:0055073	cadmium ion homeostasis	BP	NA	NA	NA	NA	NA	NA	NA	0.00945916585441582	NA	NA	NA	NA
-GO:0021764	amygdala development	BP	NA	NA	NA	NA	NA	NA	NA	0.00945916585441582	NA	NA	NA	NA
-GO:0015234	thiamine transmembrane transporter activity	MF	NA	NA	NA	NA	NA	NA	NA	0.00945916585441582	NA	NA	NA	NA
-GO:0015403	thiamine uptake transmembrane transporter activity	MF	NA	NA	NA	NA	NA	NA	NA	0.000522911442818066	NA	NA	NA	NA
-GO:0004363	glutathione synthase activity	MF	NA	NA	NA	NA	NA	NA	NA	0.00103837683428642	NA	NA	NA	NA
-GO:0007402	ganglion mother cell fate determination	BP	NA	NA	NA	NA	NA	NA	NA	0.000341700413374641	NA	NA	NA	NA
-GO:0008052	sensory organ boundary specification	BP	NA	NA	NA	NA	NA	NA	NA	0.00119419409243675	NA	NA	NA	NA
-GO:0035378	carbon dioxide transmembrane transport	BP	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	3.78876209568294e-07
-GO:0021576	hindbrain formation	BP	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	0.0148713788950943	NA
-GO:0021588	cerebellum formation	BP	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	0.0106616900700898	NA
-GO:0021732	midbrain-hindbrain boundary maturation	BP	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	0.000841427937830272	NA
-GO:0022004	midbrain-hindbrain boundary maturation during brain development	BP	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	0.00416073106700683	NA
-GO:0036520	astrocyte-dopaminergic neuron signaling	BP	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	0.000185429106769363	NA
-GO:0033685	negative regulation of luteinizing hormone secretion	BP	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	1.27904790295271e-06	NA
-GO:0050459	ethanolamine-phosphate phospho-lyase activity	MF	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	1.27904790295271e-06	NA
-GO:2000078	positive regulation of type B pancreatic cell development	BP	NA	NA	NA	NA	NA	NA	NA	NA	NA	9.25172027634783e-07	NA	NA
-GO:1901963	regulation of cell proliferation involved in outflow tract morphogenesis	BP	NA	NA	NA	NA	NA	NA	NA	0.0171458167288261	NA	NA	NA	NA
-GO:0045658	regulation of neutrophil differentiation	BP	NA	NA	NA	NA	NA	NA	NA	1.72401400149372e-08	NA	NA	NA	NA
-GO:0002016	regulation of blood volume by renin-angiotensin	BP	NA	NA	NA	NA	NA	NA	0.000126619362165896	NA	NA	NA	NA	NA
-GO:0032275	luteinizing hormone secretion	BP	NA	NA	NA	NA	NA	NA	NA	0	NA	NA	NA	2.04672781185531e-06
-GO:0034045	pre-autophagosomal structure membrane	CC	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	3.58954483374436e-07	NA
-GO:0034587	piRNA metabolic process	BP	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	1.66494798865717e-07
-GO:0060684	epithelial-mesenchymal cell signaling	BP	NA	NA	NA	NA	NA	NA	NA	NA	0.00107055997462176	NA	NA	NA
-GO:2000010	positive regulation of protein localization to cell surface	BP	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	0.0012372282490271
+GO:0050577	GDP-L-fucose synthase activity	MF	NA	NA	NA	NA	NA	NA	NA	NA	NA	0.000168223648160689	NA	NA
+GO:0014737	positive regulation of muscle atrophy	BP	NA	NA	NA	NA	NA	NA	NA	NA	1.74734123568647e-05	NA	NA	NA
+GO:0047800	cysteamine dioxygenase activity	MF	NA	NA	NA	NA	NA	NA	0.00544450978605662	NA	NA	NA	NA	NA
+GO:0021730	trigeminal sensory nucleus development	BP	NA	NA	NA	NA	NA	NA	5.15051461896665e-05	NA	NA	NA	NA	NA
+GO:0021740	principal sensory nucleus of trigeminal nerve development	BP	NA	NA	NA	NA	NA	NA	2.47245783106304e-05	NA	NA	NA	NA	NA
+GO:0042253	granulocyte macrophage colony-stimulating factor biosynthetic process	BP	NA	NA	NA	NA	NA	NA	2.00427501527475e-05	NA	NA	NA	NA	NA
+GO:0007522	visceral muscle development	BP	NA	NA	NA	NA	NA	NA	1.25924032317051e-06	NA	NA	NA	NA	NA
+GO:1900390	regulation of iron ion import	BP	NA	NA	NA	NA	NA	NA	NA	0.0178131759275269	NA	NA	NA	NA
+GO:1903989	regulation of ferrous iron import into cell	BP	NA	NA	NA	NA	NA	NA	NA	0.00690228155950057	NA	NA	NA	NA
+GO:1903991	positive regulation of ferrous iron import into cell	BP	NA	NA	NA	NA	NA	NA	NA	0.00687291517295627	NA	NA	NA	NA
+GO:1904432	regulation of ferrous iron binding	BP	NA	NA	NA	NA	NA	NA	NA	0.0117271956872693	NA	NA	NA	NA
+GO:1904434	positive regulation of ferrous iron binding	BP	NA	NA	NA	NA	NA	NA	NA	0.00180922677628911	NA	NA	NA	NA
+GO:1904435	regulation of transferrin receptor binding	BP	NA	NA	NA	NA	NA	NA	NA	0.00157847043343486	NA	NA	NA	NA
+GO:1904437	positive regulation of transferrin receptor binding	BP	NA	NA	NA	NA	NA	NA	NA	0.000614086929796503	NA	NA	NA	NA
+GO:0051030	snRNA transport	BP	NA	NA	NA	NA	NA	NA	NA	0.000340583252960868	NA	NA	NA	NA
+GO:0001792	polymeric immunoglobulin receptor activity	MF	NA	NA	NA	NA	NA	NA	NA	2.64068156700482e-05	NA	NA	NA	NA
+GO:0004915	interleukin-6 receptor activity	MF	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	0.0224073299322434
+GO:0019981	interleukin-6 binding	MF	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	0.00648004534296995
+GO:0042595	behavioral response to starvation	BP	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	0.0179885484352559
+GO:0003408	optic cup formation involved in camera-type eye development	BP	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	0.00291078757366663
+GO:2000211	regulation of glutamate metabolic process	BP	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	0.00248187479896968
+GO:0070425	negative regulation of nucleotide-binding oligomerization domain containing signaling pathway	BP	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	0.00248187479896968
+GO:0070433	negative regulation of nucleotide-binding oligomerization domain containing 2 signaling pathway	BP	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	0.000691809800474784
+GO:0008475	procollagen-lysine 5-dioxygenase activity	MF	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	7.92321960577138e-05
+GO:2000302	positive regulation of synaptic vesicle exocytosis	BP	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	6.71483474477418e-06
+GO:0043091	L-arginine import	BP	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	2.25307130670276e-06
+GO:0090467	arginine import	BP	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	2.25307130670276e-06
+GO:0072588	box H/ACA RNP complex	CC	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	0.00991159105820516	NA
+GO:0071881	adenylate cyclase-inhibiting adrenergic receptor signaling pathway	BP	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	0.00991159105820516	NA
+GO:0071882	phospholipase C-activating adrenergic receptor signaling pathway	BP	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	0.00037540048808945	NA
+GO:0000320	re-entry into mitotic cell cycle	BP	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	0.00328794151310143	NA
+GO:0051977	lysophospholipid transport	BP	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	0.000270647628221935	NA
+GO:0042706	eye photoreceptor cell fate commitment	BP	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	1.08838421943007e-06	NA
+GO:0046552	photoreceptor cell fate commitment	BP	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	1.08838421943007e-06	NA
+GO:0014736	negative regulation of muscle atrophy	BP	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	3.29244080878774e-07	NA
+GO:0034417	bisphosphoglycerate 3-phosphatase activity	MF	NA	NA	NA	NA	NA	NA	0.000368670748744102	NA	NA	NA	NA	NA
+GO:0003044	regulation of systemic arterial blood pressure mediated by a chemical signal	BP	NA	NA	NA	NA	NA	NA	NA	0.000340583252960868	NA	NA	NA	NA
+GO:0004806	triglyceride lipase activity	MF	NA	NA	NA	NA	NA	NA	NA	NA	0.0277275664123313	NA	NA	NA
+GO:0006689	ganglioside catabolic process	BP	NA	NA	NA	NA	NA	NA	NA	NA	1.3196061546179e-07	NA	NA	NA
+GO:0014896	muscle hypertrophy	BP	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	2.88425880298193e-07	NA
+GO:0046137	negative regulation of vitamin metabolic process	BP	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	9.46808871240368e-05
+GO:0048934	peripheral nervous system neuron differentiation	BP	NA	NA	NA	NA	NA	NA	NA	9.91226292576736e-08	NA	NA	NA	NA
+GO:0050121	N-acylglucosamine 2-epimerase activity	MF	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	0.0106575684721975

@@ -1,36 +1,39 @@
-$`GO:1904529`
+$`GO:0004915`
 character(0)
 
-$`GO:1904616`
+$`GO:0019981`
 character(0)
 
-$`GO:2000631`
+$`GO:0042595`
 character(0)
 
-$`GO:2000632`
+$`GO:0003408`
 character(0)
 
-$`GO:1904263`
+$`GO:2000211`
+[1] "APC"
+
+$`GO:0070425`
 character(0)
 
-$`GO:0060926`
+$`GO:0070433`
 character(0)
 
-$`GO:0010836`
+$`GO:0008475`
 character(0)
 
-$`GO:0043540`
+$`GO:2000302`
 character(0)
 
-$`GO:0035378`
+$`GO:0043091`
 character(0)
 
-$`GO:0032275`
-[1] "TMF1"
-
-$`GO:0034587`
+$`GO:0090467`
 character(0)
 
-$`GO:2000010`
-[1] "STX3"  "STX4A"
+$`GO:0046137`
+character(0)
+
+$`GO:0050121`
+character(0)
 
