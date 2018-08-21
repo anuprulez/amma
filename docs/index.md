@@ -62,3 +62,7 @@ Analyses:
 ## Genes confirmed as a core signature for homeostatic microglia
 
 [Genes confirmed as a core signature for homeostatic microglia](homeostatic_core_signature_genes) - [data](https://github.com/bebatut/neuromac_GF_mices/tree/master/results/dge/homeostatic_core_signature_genes/)
+
+## Comparison of GF and SPF 8w Female to GF 8w Female with added microbiota (young or old)
+
+[Comparison of GF and SPF 8w Female to GF 8w Female with added microbiota (young or old)](added_microbiota)
