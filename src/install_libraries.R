@@ -38,3 +38,4 @@ install.packages("plotly")
 biocLite("RamiGO")
 
 install.packages("ggfortify")
+install.packages("sinaplot")

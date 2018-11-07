@@ -692,14 +692,14 @@ plot_z_score_heatmap = function(z_scores, de_genes, col_order, annot_col, title,
 }
 
 
-plot_module_groups = function(groups, vertsep){
+plot_module_groups = function(trait, vertsep){
     # Calculate correlation
     moduleTraitCor = cor(MEs, trait, use = "p")
     moduleTraitPvalue = corPvalueStudent(moduleTraitCor, dim(filtered_norm_counts)[2])
     # perform hierarchical clustering of the modules
-    hc = hclust(dist(moduleTraitCor), method = "complete")
-    moduleTraitCor = moduleTraitCor[hc$order,]
-    moduleTraitPvalue = moduleTraitPvalue[hc$order,]
+    #hc = hclust(dist(moduleTraitCor), method = "complete")
+    #moduleTraitCor = moduleTraitCor[hc$order,]
+    #moduleTraitPvalue = moduleTraitPvalue[hc$order,]
     # Will display correlations and their p-values
     textMatrix = paste(signif(moduleTraitCor, 2), "\n(",signif(moduleTraitPvalue, 1), ")", sep = "")
     dim(textMatrix) = dim(moduleTraitCor)

@@ -40,6 +40,9 @@ suppressMessages(library(RamiGO))
 
 suppressMessages(library(ggfortify))
 suppressMessages(library(gridExtra))
+suppressMessages(library("sva"))
+
+suppressMessages(library(sinaplot))
 
 MF_GO = godata('org.Mm.eg.db', ont="MF")
 CC_GO = godata('org.Mm.eg.db', ont="CC")
