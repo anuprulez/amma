@@ -1,369 +1,416 @@
 category	over_represented_pvalue	under_represented_pvalue	numDEInCat	numInCat	term	ontology
-GO:0043231	9.4902658118791e-65	1	445	9576	intracellular membrane-bounded organelle	CC
-GO:0043227	1.33377954778545e-62	1	467	10679	membrane-bounded organelle	CC
-GO:0043229	6.72671859066265e-61	1	458	10504	intracellular organelle	CC
-GO:0043226	1.3990717819546e-60	1	479	11501	organelle	CC
-GO:0005622	1.48465134170524e-55	1	487	12179	intracellular	CC
-GO:0044424	1.9360671803797e-55	1	485	12077	intracellular part	CC
-GO:0005739	2.30304942588449e-55	1	196	1659	mitochondrion	CC
-GO:0044446	9.74432772217107e-53	1	331	5926	intracellular organelle part	CC
-GO:0044422	3.22204410476344e-52	1	335	6094	organelle part	CC
-GO:0044444	3.9118633435889e-51	1	343	6328	cytoplasmic part	CC
-GO:0005737	7.04292656649776e-51	1	421	9511	cytoplasm	CC
-GO:0044429	8.58730574096873e-50	1	132	713	mitochondrial part	CC
-GO:0032991	5.42414924986315e-45	1	280	4599	macromolecular complex	CC
-GO:0044464	6.9619820931425e-41	1	497	13784	cell part	CC
-GO:0005623	7.85927970692751e-41	1	497	13786	cell	CC
-GO:0005743	3.06451869001334e-40	1	90	379	mitochondrial inner membrane	CC
-GO:0019866	2.41035758527692e-39	1	91	419	organelle inner membrane	CC
-GO:0005740	1.88822523753197e-38	1	103	565	mitochondrial envelope	CC
-GO:0098800	2.75311266904126e-38	1	57	105	inner mitochondrial membrane protein complex	CC
-GO:0044455	2.78710529127142e-38	1	65	165	mitochondrial membrane part	CC
-GO:0031967	3.84624382231654e-38	1	119	905	organelle envelope	CC
-GO:0031975	4.23537440956599e-38	1	119	909	envelope	CC
-GO:0031966	9.89567480932692e-38	1	97	524	mitochondrial membrane	CC
-GO:0098798	2.358512602072e-37	1	62	139	mitochondrial protein complex	CC
-GO:0043234	3.53032732185051e-33	1	214	3827	protein complex	CC
-GO:0031090	2.66125456856569e-31	1	128	1468	organelle membrane	CC
-GO:0070469	3.17502387106231e-30	1	43	71	respiratory chain	CC
-GO:0005746	6.56159017369008e-30	1	41	65	mitochondrial respiratory chain	CC
-GO:0098803	2.08766354394879e-29	1	40	63	respiratory chain complex	CC
-GO:0098796	2.70754750378376e-27	1	93	927	membrane protein complex	CC
-GO:1902494	3.5166474696253e-24	1	91	1046	catalytic complex	CC
-GO:0070013	6.65642322969116e-23	1	169	3057	intracellular organelle lumen	CC
-GO:0031974	7.14693821121087e-23	1	169	3062	membrane-enclosed lumen	CC
-GO:0043233	7.14693821121087e-23	1	169	3062	organelle lumen	CC
-GO:1990204	5.04041804899051e-22	1	35	88	oxidoreductase complex	CC
-GO:0005747	6.86064737692857e-22	1	27	39	mitochondrial respiratory chain complex I	CC
-GO:0030964	6.86064737692857e-22	1	27	39	NADH dehydrogenase complex	CC
-GO:0045271	6.86064737692857e-22	1	27	39	respiratory chain complex I	CC
-GO:0007005	4.13082969771253e-20	1	70	611	mitochondrion organization	BP
-GO:0008152	1.15949084164368e-17	1	342	9217	metabolic process	BP
-GO:0030529	1.34844251110969e-16	1	85	755	intracellular ribonucleoprotein complex	CC
-GO:1990904	1.34844251110969e-16	1	85	755	ribonucleoprotein complex	CC
-GO:0005759	1.59543990911296e-16	1	42	210	mitochondrial matrix	CC
-GO:0055114	5.77375332027088e-16	1	76	836	oxidation-reduction process	BP
-GO:0044237	7.65911887401219e-16	1	309	8386	cellular metabolic process	BP
-GO:0006810	8.27758891465977e-16	1	167	3915	transport	BP
-GO:0044428	1.44274505005039e-15	1	151	3201	nuclear part	CC
-GO:0003723	2.24467138126139e-15	1	101	1523	RNA binding	MF
-GO:0000313	7.60355026873029e-15	1	27	71	organellar ribosome	CC
-GO:0005761	7.60355026873029e-15	1	27	71	mitochondrial ribosome	CC
-GO:0051234	1.09068851933411e-14	1	167	4062	establishment of localization	BP
-GO:0015078	1.67088654831546e-14	1	28	89	hydrogen ion transmembrane transporter activity	MF
-GO:0022900	2.59586131372698e-14	1	22	56	electron transport chain	BP
-GO:0005634	3.59996175578368e-14	1	239	6091	nucleus	CC
-GO:0016491	7.71663189156146e-14	1	67	700	oxidoreductase activity	MF
-GO:0051179	8.18100829026939e-14	1	191	5127	localization	BP
-GO:0071840	1.11782005914871e-13	1	206	5442	cellular component organization or biogenesis	BP
-GO:0009055	2.43950539073912e-13	1	23	70	electron carrier activity	MF
-GO:0022904	6.10240991072567e-13	1	20	51	respiratory electron transport chain	BP
-GO:0008137	7.62168039149646e-13	1	16	25	NADH dehydrogenase (ubiquinone) activity	MF
-GO:0050136	7.62168039149646e-13	1	16	25	NADH dehydrogenase (quinone) activity	MF
-GO:0003954	1.74224842836021e-12	1	16	26	NADH dehydrogenase activity	MF
-GO:0034641	1.91262538803414e-12	1	211	5285	cellular nitrogen compound metabolic process	BP
-GO:0070062	2.26666945188378e-12	1	135	2451	extracellular exosome	CC
-GO:0000502	2.66609519763073e-12	1	21	66	proteasome complex	CC
-GO:1905369	2.66609519763073e-12	1	21	66	endopeptidase complex	CC
-GO:1903561	2.7813325003857e-12	1	135	2465	extracellular vesicle	CC
-GO:0043230	2.86230950734017e-12	1	135	2470	extracellular organelle	CC
-GO:0005840	3.77500070012868e-12	1	43	206	ribosome	CC
-GO:0006807	4.2142053930643e-12	1	219	5591	nitrogen compound metabolic process	BP
-GO:0045333	4.71281778424072e-12	1	26	122	cellular respiration	BP
-GO:0044822	5.03390382578014e-12	1	75	1125	poly(A) RNA binding	MF
-GO:1905368	5.4745366792984e-12	1	22	83	peptidase complex	CC
-GO:0016043	7.26706864226168e-12	1	193	5291	cellular component organization	BP
-GO:0043228	2.03404951248146e-11	1	155	3600	non-membrane-bounded organelle	CC
-GO:0043232	2.03404951248146e-11	1	155	3600	intracellular non-membrane-bounded organelle	CC
-GO:1901564	3.53353886750185e-11	1	106	1715	organonitrogen compound metabolic process	BP
-GO:0044238	4.89154557146308e-11	1	289	8362	primary metabolic process	BP
-GO:1901566	9.98950982511977e-11	1	79	1098	organonitrogen compound biosynthetic process	BP
-GO:0071704	1.22289893006321e-10	1	303	8831	organic substance metabolic process	BP
-GO:0065003	1.44737955907947e-10	1	80	1370	macromolecular complex assembly	BP
-GO:0042775	1.82697555506047e-10	0.999999999986493	16	36	mitochondrial ATP synthesis coupled electron transport	BP
-GO:0042773	2.13024939752328e-10	0.999999999983907	16	37	ATP synthesis coupled electron transport	BP
-GO:0046034	2.16900725874661e-10	0.999999999962944	29	179	ATP metabolic process	BP
-GO:0015980	2.27068880017075e-10	1	28	204	energy derivation by oxidation of organic compounds	BP
-GO:0006996	2.59566787941804e-10	1	125	2883	organelle organization	BP
-GO:0031988	2.61924227038384e-10	1	144	2999	membrane-bounded vesicle	CC
-GO:0009141	2.6271919228964e-10	1	32	222	nucleoside triphosphate metabolic process	BP
-GO:0031981	2.65472049018879e-10	1	118	2753	nuclear lumen	CC
-GO:0032543	3.87855573239819e-10	0.999999999960796	18	58	mitochondrial translation	BP
-GO:0016469	4.02523145476726e-10	0.999999999966822	16	42	proton-transporting two-sector ATPase complex	CC
-GO:0016655	4.51221315988211e-10	0.999999999964961	16	35	oxidoreductase activity, acting on NAD(P)H, quinone or similar compound as acceptor	MF
-GO:1990542	4.74311068216484e-10	0.999999999963496	15	41	mitochondrial transmembrane transport	BP
-GO:0009199	4.7533253369056e-10	1	30	200	ribonucleoside triphosphate metabolic process	BP
-GO:0006396	4.89270456409606e-10	1	54	738	RNA processing	BP
-GO:0009205	5.73163969588688e-10	0.999999999877911	30	197	purine ribonucleoside triphosphate metabolic process	BP
-GO:0044710	5.76456906294619e-10	1	143	3280	single-organism metabolic process	BP
-GO:1902600	7.24176145575921e-10	0.999999999935291	16	49	hydrogen ion transmembrane transport	BP
-GO:0044260	7.42785115397374e-10	1	236	6844	cellular macromolecule metabolic process	BP
-GO:0009987	1.07303728137441e-09	1	421	13023	cellular process	BP
-GO:0009126	1.14191585055739e-09	1	29	204	purine nucleoside monophosphate metabolic process	BP
-GO:0009167	1.14191585055739e-09	1	29	204	purine ribonucleoside monophosphate metabolic process	BP
-GO:0009144	1.15384529475764e-09	1	30	205	purine nucleoside triphosphate metabolic process	BP
-GO:0031982	1.25226612910155e-09	1	149	3298	vesicle	CC
-GO:0006119	1.26565498436614e-09	0.999999999849802	18	57	oxidative phosphorylation	BP
-GO:0009161	1.74102281161756e-09	1	29	207	ribonucleoside monophosphate metabolic process	BP
-GO:0016020	2.49515578157006e-09	1	275	7897	membrane	CC
-GO:0006839	2.96269740965651e-09	0.999999999475826	26	208	mitochondrial transport	BP
-GO:0009123	3.92464144591849e-09	0.99999999924319	29	212	nucleoside monophosphate metabolic process	BP
-GO:0005839	4.75053959583296e-09	0.999999999780804	11	19	proteasome core complex	CC
-GO:0015992	4.79243325165549e-09	0.999999999302168	19	81	proton transport	BP
-GO:0005753	4.8230266219062e-09	0.99999999980159	11	17	mitochondrial proton-transporting ATP synthase complex	CC
-GO:0006818	4.95336051133847e-09	0.99999999927599	19	82	hydrogen transport	BP
-GO:0015077	5.31630164523083e-09	0.999999998970553	28	305	monovalent inorganic cation transmembrane transporter activity	MF
-GO:0046907	6.98694015698607e-09	1	62	1237	intracellular transport	BP
-GO:0006091	8.27821325314122e-09	0.999999998269153	31	279	generation of precursor metabolites and energy	BP
-GO:0045259	9.93188685783058e-09	0.999999999530934	11	18	proton-transporting ATP synthase complex	CC
-GO:0043623	1.00646038856799e-08	0.999999997665711	36	468	cellular protein complex assembly	BP
-GO:0051649	1.229671900165e-08	1	72	1609	establishment of localization in cell	BP
-GO:0034622	1.24448789246056e-08	1	56	790	cellular macromolecular complex assembly	BP
-GO:0004298	1.37591780227859e-08	0.99999999923566	11	21	threonine-type endopeptidase activity	MF
-GO:0070003	1.37591780227859e-08	0.99999999923566	11	21	threonine-type peptidase activity	MF
-GO:0006412	1.53947614971081e-08	1	51	557	translation	BP
-GO:0006518	1.82704994848454e-08	1	57	692	peptide metabolic process	BP
-GO:0006754	2.24841213654674e-08	0.99999999785911	13	42	ATP biosynthetic process	BP
-GO:0044085	2.55499230085876e-08	1	103	2387	cellular component biogenesis	BP
-GO:0043933	2.72041170803468e-08	1	90	1976	macromolecular complex subunit organization	BP
-GO:0022890	2.72056872732665e-08	0.999999992778049	31	454	inorganic cation transmembrane transporter activity	MF
-GO:0046128	3.03081181428346e-08	0.999999992246799	30	251	purine ribonucleoside metabolic process	BP
-GO:1901360	3.04930198018543e-08	1	178	4969	organic cyclic compound metabolic process	BP
-GO:0043043	3.67541333260135e-08	1	51	576	peptide biosynthetic process	BP
-GO:0005654	3.79722686808675e-08	1	80	1996	nucleoplasm	CC
-GO:0044452	3.90445650384292e-08	0.99999999493665	15	69	nucleolar part	CC
-GO:0006461	4.12001509929169e-08	1	62	1138	protein complex assembly	BP
-GO:0070271	4.12001509929169e-08	1	62	1138	protein complex biogenesis	BP
-GO:0097526	4.26102817436224e-08	0.999999997011413	11	26	spliceosomal tri-snRNP complex	CC
-GO:0003676	5.47291094249318e-08	1	128	3266	nucleic acid binding	MF
-GO:0016651	5.62494841088402e-08	0.99999999136351	17	72	oxidoreductase activity, acting on NAD(P)H	MF
-GO:0042278	5.92064752597049e-08	0.999999983774657	30	255	purine nucleoside metabolic process	BP
-GO:0017004	6.44433172612597e-08	0.999999995456057	11	24	cytochrome complex assembly	BP
-GO:0015985	8.36839093346884e-08	0.999999995093871	10	20	energy coupled proton transport, down electrochemical gradient	BP
-GO:0015986	8.36839093346884e-08	0.999999995093871	10	20	ATP synthesis coupled proton transport	BP
-GO:0006725	9.08029935855985e-08	1	171	4826	cellular aromatic compound metabolic process	BP
-GO:0051641	9.52704845122738e-08	1	83	2131	cellular localization	BP
-GO:0044391	1.04700607527499e-07	0.999999970579259	31	155	ribosomal subunit	CC
-GO:0009142	1.11893378757815e-07	0.999999984303619	15	66	nucleoside triphosphate biosynthetic process	BP
-GO:0097525	1.19947573565276e-07	0.999999984807953	14	54	spliceosomal snRNP complex	CC
-GO:0009206	1.20944384823638e-07	0.999999984722487	14	53	purine ribonucleoside triphosphate biosynthetic process	BP
-GO:0006139	1.29578972426196e-07	1	165	4672	nucleobase-containing compound metabolic process	BP
-GO:0009201	1.33839198464652e-07	0.999999982834823	14	55	ribonucleoside triphosphate biosynthetic process	BP
-GO:0010467	1.47435366032078e-07	1	164	4462	gene expression	BP
-GO:0046483	1.51323479627717e-07	1	168	4765	heterocycle metabolic process	BP
-GO:0009145	1.53538852970791e-07	0.999999980140684	14	54	purine nucleoside triphosphate biosynthetic process	BP
-GO:0009119	1.54765444146382e-07	0.999999955529865	30	269	ribonucleoside metabolic process	BP
-GO:0009150	1.57990316564341e-07	0.999999950299588	34	391	purine ribonucleotide metabolic process	BP
-GO:0005730	1.64847882169545e-07	0.999999953876947	45	691	nucleolus	CC
-GO:0071822	1.75374672199905e-07	1	64	1270	protein complex subunit organization	BP
-GO:0003735	2.02825896583289e-07	0.999999940512583	31	174	structural constituent of ribosome	MF
-GO:0030532	2.17488673174663e-07	0.999999970515544	14	60	small nuclear ribonucleoprotein complex	CC
-GO:0008380	2.20467538373308e-07	0.999999935796611	29	326	RNA splicing	BP
-GO:0000377	2.43541200001268e-07	0.999999942831815	22	209	RNA splicing, via transesterification reactions with bulged adenosine as nucleophile	BP
-GO:0000398	2.43541200001268e-07	0.999999942831815	22	209	mRNA splicing, via spliceosome	BP
-GO:0000375	2.47783072279847e-07	0.999999941762027	22	210	RNA splicing, via transesterification reactions	BP
-GO:0009259	2.57334480905506e-07	0.99999991728656	34	399	ribonucleotide metabolic process	BP
-GO:0043021	2.60640285368576e-07	0.999999952820826	17	117	ribonucleoprotein complex binding	MF
-GO:0000315	2.91413011309523e-07	0.999999970022502	12	33	organellar large ribosomal subunit	CC
-GO:0005762	2.91413011309523e-07	0.999999970022502	12	33	mitochondrial large ribosomal subunit	CC
-GO:0006753	3.42146639348426e-07	0.999999878017317	40	519	nucleoside phosphate metabolic process	BP
-GO:0006163	3.64836894042143e-07	0.999999879180628	34	403	purine nucleotide metabolic process	BP
-GO:0043604	3.72632492496296e-07	0.999999888998031	51	640	amide biosynthetic process	BP
-GO:0043603	3.73735223584498e-07	1	57	799	cellular amide metabolic process	BP
-GO:0006397	3.97393694149628e-07	0.999999877434347	30	401	mRNA processing	BP
-GO:0070069	4.09891257506345e-07	0.999999964918626	11	24	cytochrome complex	CC
-GO:0019693	4.25042919449254e-07	0.999999858192258	34	411	ribose phosphate metabolic process	BP
-GO:0008324	4.35373182373698e-07	0.99999986137491	31	534	cation transmembrane transporter activity	MF
-GO:0005681	4.37665709837005e-07	0.999999898287392	21	173	spliceosomal complex	CC
-GO:0009127	4.53096831798624e-07	0.999999939393164	13	62	purine nucleoside monophosphate biosynthetic process	BP
-GO:0009168	4.53096831798624e-07	0.999999939393164	13	62	purine ribonucleoside monophosphate biosynthetic process	BP
-GO:0044267	4.89709327003697e-07	1	144	3911	cellular protein metabolic process	BP
-GO:0009116	5.0297017226018e-07	0.999999844971088	30	283	nucleoside metabolic process	BP
-GO:0043209	5.31106317480081e-07	0.999999874083452	21	206	myelin sheath	CC
-GO:0044769	5.37719320400849e-07	0.999999955382852	10	27	ATPase activity, coupled to transmembrane movement of ions, rotational mechanism	MF
-GO:0000314	5.58167647237278e-07	0.999999948014347	11	27	organellar small ribosomal subunit	CC
-GO:0005763	5.58167647237278e-07	0.999999948014347	11	27	mitochondrial small ribosomal subunit	CC
-GO:0004129	6.8101315197885e-07	0.999999939804989	11	23	cytochrome-c oxidase activity	MF
-GO:0015002	6.8101315197885e-07	0.999999939804989	11	23	heme-copper terminal oxidase activity	MF
-GO:0016676	6.8101315197885e-07	0.999999939804989	11	23	oxidoreductase activity, acting on a heme group of donors, oxygen as acceptor	MF
-GO:0016675	8.11960386822639e-07	0.999999925245024	11	24	oxidoreductase activity, acting on a heme group of donors	MF
-GO:0009156	9.32990701882969e-07	0.99999986582713	13	65	ribonucleoside monophosphate biosynthetic process	BP
-GO:0033036	9.98010672547802e-07	0.999999644916318	93	2537	macromolecule localization	BP
-GO:0033177	1.23886114849257e-06	0.999999911603708	9	20	proton-transporting two-sector ATPase complex, proton-transporting domain	CC
-GO:0009124	1.30775117509945e-06	0.999999804918562	13	68	nucleoside monophosphate biosynthetic process	BP
-GO:0043170	1.41426694970676e-06	0.999999436669487	241	7455	macromolecule metabolic process	BP
-GO:0033108	1.47285395388599e-06	0.999999813943765	12	39	mitochondrial respiratory chain complex assembly	BP
-GO:0016071	1.57580576668716e-06	0.99999945490691	32	493	mRNA metabolic process	BP
-GO:0009117	1.61683741329634e-06	0.999999390239164	38	510	nucleotide metabolic process	BP
-GO:0022857	1.67510466772618e-06	0.999999337303539	41	897	transmembrane transporter activity	MF
-GO:0072521	1.80749589460433e-06	0.999999351384343	34	436	purine-containing compound metabolic process	BP
-GO:0003824	1.86225477932266e-06	0.999999272110622	174	5187	catalytic activity	MF
-GO:1901657	1.94549618193441e-06	0.999999354221119	30	301	glycosyl compound metabolic process	BP
-GO:0055086	2.13749991165328e-06	0.999999162481054	40	564	nucleobase-containing small molecule metabolic process	BP
-GO:0006886	2.15490023366031e-06	0.999999120711449	43	873	intracellular protein transport	BP
-GO:0046540	2.37784719069867e-06	0.999999837645747	8	21	U4/U6 x U5 tri-snRNP complex	CC
-GO:0022892	2.60505881604284e-06	0.99999891706022	44	963	substrate-specific transporter activity	MF
-GO:0022891	2.78449175357544e-06	0.999998907808354	38	812	substrate-specific transmembrane transporter activity	MF
-GO:0015399	3.26778210698908e-06	0.999999445542435	13	114	primary active transmembrane transporter activity	MF
-GO:0015405	3.26778210698908e-06	0.999999445542435	13	114	P-P-bond-hydrolysis-driven transmembrane transporter activity	MF
-GO:0005838	3.27940100271488e-06	0.99999976583033	8	21	proteasome regulatory particle	CC
-GO:1901363	3.46791709211583e-06	0.9999982300795	159	4937	heterocyclic compound binding	MF
-GO:0000276	3.50245173135499e-06	0.999999877891777	7	10	mitochondrial proton-transporting ATP synthase complex, coupling factor F(o)	CC
-GO:0044743	3.53158595976761e-06	0.999999596125168	10	42	intracellular protein transmembrane import	BP
-GO:0009058	3.53975868601497e-06	0.999997987559057	172	4985	biosynthetic process	BP
-GO:0022607	3.70874994930245e-06	0.999998116575983	87	2189	cellular component assembly	BP
-GO:0043248	4.462731967997e-06	0.999999770440879	7	14	proteasome assembly	BP
-GO:0044425	4.65244024453457e-06	0.999997303709219	201	5608	membrane part	CC
-GO:0019637	4.82129937274929e-06	0.999997952236431	47	832	organophosphate metabolic process	BP
-GO:0044421	4.97208394559526e-06	0.999997218776729	145	3333	extracellular region part	CC
-GO:0005215	5.09733210769442e-06	0.99999772765674	49	1118	transporter activity	MF
-GO:0022613	5.25151797687566e-06	0.99999808444764	32	365	ribonucleoprotein complex biogenesis	BP
-GO:0006626	5.39792923404796e-06	0.99999882292112	16	131	protein targeting to mitochondrion	BP
-GO:0042451	5.46820594529092e-06	0.999998980912986	14	80	purine nucleoside biosynthetic process	BP
-GO:0046129	5.46820594529092e-06	0.999998980912986	14	80	purine ribonucleoside biosynthetic process	BP
-GO:1901576	5.86083118302736e-06	0.999996649325368	168	4909	organic substance biosynthetic process	BP
-GO:0051260	6.19822793514198e-06	0.999998315867038	20	263	protein homooligomerization	BP
-GO:0015036	6.84870458348151e-06	0.999999427248513	8	25	disulfide oxidoreductase activity	MF
-GO:0006120	6.87220605844174e-06	0.999999640658349	7	13	mitochondrial electron transport, NADH to ubiquinone	BP
-GO:0045263	7.26921472322475e-06	0.999999673404339	7	11	proton-transporting ATP synthase complex, coupling factor F(o)	CC
-GO:0097159	7.36649548885564e-06	0.999995588464435	160	5004	organic cyclic compound binding	MF
-GO:0006605	7.56466462824636e-06	0.999997204820293	31	556	protein targeting	BP
-GO:0015075	7.9986706103532e-06	0.999996925100441	33	700	ion transmembrane transporter activity	MF
-GO:1990446	8.12910448783231e-06	0.999999792976066	6	8	U1 snRNP binding	MF
-GO:0044249	8.88001719517953e-06	0.999994504193311	165	4818	cellular biosynthetic process	BP
-GO:0015031	8.92093496883262e-06	0.999995519262026	66	1606	protein transport	BP
-GO:0022624	9.70543091397593e-06	0.999999167585111	8	23	proteasome accessory complex	CC
-GO:0065002	9.97317080907125e-06	0.999998686414308	10	48	intracellular protein transmembrane transport	BP
-GO:0071806	1.16030048624045e-05	0.999998439928043	10	49	protein transmembrane transport	BP
-GO:0005783	1.3142963863339e-05	0.999993475272394	61	1413	endoplasmic reticulum	CC
-GO:0034613	1.44408727486687e-05	0.999992890269999	56	1434	cellular protein localization	BP
-GO:0000428	1.45880069051623e-05	0.999996942175728	14	115	DNA-directed RNA polymerase complex	CC
-GO:0055029	1.45880069051623e-05	0.999996942175728	14	115	nuclear DNA-directed RNA polymerase complex	CC
-GO:0030880	1.51679781837048e-05	0.999996805874087	14	117	RNA polymerase complex	CC
-GO:0044271	1.52107337975846e-05	0.999990708966707	139	3951	cellular nitrogen compound biosynthetic process	BP
-GO:0051603	1.52816248006917e-05	0.999994137449024	31	572	proteolysis involved in cellular protein catabolic process	BP
-GO:0005575	1.74813963120583e-05	1	543	17890	cellular_component	CC
-GO:0044451	1.7965910675632e-05	0.999993041462452	31	603	nucleoplasm part	CC
-GO:0070727	1.79878249624686e-05	0.999991073763799	56	1445	cellular macromolecule localization	BP
-GO:0005685	1.98037794260781e-05	0.99999857018798	7	17	U1 snRNP	CC
-GO:0005687	1.98486532057223e-05	0.999999159726289	6	10	U4 snRNP	CC
-GO:0031305	1.98815454743893e-05	0.99999811081186	8	23	integral component of mitochondrial inner membrane	CC
-GO:0001054	2.04737122840467e-05	0.999998986494553	6	12	RNA polymerase I activity	MF
-GO:0072655	2.06031890587304e-05	0.999994955853967	16	143	establishment of protein localization to mitochondrion	BP
-GO:0031304	2.11961002030402e-05	0.999997941680374	8	24	intrinsic component of mitochondrial inner membrane	CC
-GO:0044257	2.19475392848701e-05	0.99999126887367	32	604	cellular protein catabolic process	BP
-GO:0071013	2.25258387781471e-05	0.999995828647261	12	83	catalytic step 2 spliceosome	CC
-GO:0051289	2.34901830004276e-05	0.999996440274454	10	69	protein homotetramerization	BP
-GO:0034660	2.60131109130544e-05	0.999989970754294	30	405	ncRNA metabolic process	BP
-GO:0070585	2.60814305893906e-05	0.999993474835293	16	148	protein localization to mitochondrion	BP
-GO:0019829	2.61828296228463e-05	0.999996031055651	10	60	cation-transporting ATPase activity	MF
-GO:0042455	2.62400840415865e-05	0.999994277050255	14	93	ribonucleoside biosynthetic process	BP
-GO:0042625	2.6616189409955e-05	0.9999959508778	10	61	ATPase coupled ion transmembrane transporter activity	MF
-GO:0070990	2.72467329398107e-05	0.999998776891725	6	10	snRNP binding	MF
-GO:0005736	2.77561954242987e-05	0.999998475343375	6	13	DNA-directed RNA polymerase I complex	CC
-GO:0044265	2.86962729794655e-05	0.999987438082494	38	770	cellular macromolecule catabolic process	BP
-GO:0055085	3.00426372790235e-05	0.99998664564896	39	903	transmembrane transport	BP
-GO:0032592	3.05222382526795e-05	0.999995381688599	10	50	integral component of mitochondrial membrane	CC
-GO:0031301	3.07429441296417e-05	0.999992603696515	15	142	integral component of organelle membrane	CC
-GO:0045454	3.11614694253141e-05	0.999995168776331	10	61	cell redox homeostasis	BP
-GO:0098573	3.18468221739458e-05	0.999995133343345	10	52	intrinsic component of mitochondrial membrane	CC
-GO:0034470	3.18535689723851e-05	0.999988567519505	26	301	ncRNA processing	BP
-GO:0045184	3.28088826824631e-05	0.999982230725185	68	1765	establishment of protein localization	BP
-GO:0008121	3.298240997768e-05	0.99999946717437	5	6	ubiquinol-cytochrome-c reductase activity	MF
-GO:0016681	3.298240997768e-05	0.99999946717437	5	6	oxidoreductase activity, acting on diphenols and related substances as donors, cytochrome as acceptor	MF
-GO:0009163	3.59488110295036e-05	0.999991911061826	14	95	nucleoside biosynthetic process	BP
-GO:0007006	3.78380660339001e-05	0.999992623554074	12	80	mitochondrial membrane organization	BP
-GO:0042626	3.88043192406008e-05	0.999992888038822	11	109	ATPase activity, coupled to transmembrane movement of substances	MF
-GO:0016820	4.05012514173886e-05	0.999992537858331	11	110	hydrolase activity, acting on acid anhydrides, catalyzing transmembrane movement of substances	MF
-GO:1901659	4.35768168585198e-05	0.999989999127761	14	97	glycosyl compound biosynthetic process	BP
-GO:0031300	4.35925173517917e-05	0.999989161698888	15	147	intrinsic component of organelle membrane	CC
-GO:0008104	4.65454620500385e-05	0.99997341164105	78	2238	protein localization	BP
-GO:0016667	4.65888516587816e-05	0.999993426479022	9	47	oxidoreductase activity, acting on a sulfur group of donors	MF
-GO:0033617	4.91592386334334e-05	0.999997313404563	6	11	mitochondrial respiratory chain complex IV assembly	BP
-GO:0097034	4.91592386334334e-05	0.999997313404563	6	11	mitochondrial respiratory chain complex IV biogenesis	BP
-GO:0044281	5.08058612440288e-05	0.999971662223118	71	1545	small molecule metabolic process	BP
-GO:0005682	5.16039657772009e-05	0.999996510076312	6	16	U5 snRNP	CC
-GO:0043492	5.42131050078713e-05	0.999989623332005	11	123	ATPase activity, coupled to movement of substances	MF
-GO:0016679	5.56465637236109e-05	0.999998447456111	5	7	oxidoreductase activity, acting on diphenols and related substances as donors	MF
-GO:0046933	6.03125094818542e-05	0.999996353638545	6	12	proton-transporting ATP synthase activity, rotational mechanism	MF
-GO:0072594	6.07616710560294e-05	0.999976119286475	28	509	establishment of protein localization to organelle	BP
-GO:0022853	6.4244732459619e-05	0.999988824326423	10	87	active ion transmembrane transporter activity	MF
-GO:0015035	6.46675020361299e-05	0.999995257814004	6	18	protein disulfide oxidoreductase activity	MF
-GO:0009152	7.2549260661069e-05	0.999979046992975	17	200	purine ribonucleotide biosynthetic process	BP
-GO:0071011	7.44464596370269e-05	0.999991220557469	8	25	precatalytic spliceosome	CC
-GO:1902582	7.63645839005869e-05	0.999968979581766	29	579	single-organism intracellular transport	BP
-GO:0015988	7.7311282259005e-05	0.999991932827897	7	29	energy coupled proton transmembrane transport, against electrochemical gradient	BP
-GO:0015991	7.7311282259005e-05	0.999991932827897	7	29	ATP hydrolysis coupled proton transport	BP
-GO:0090662	7.7311282259005e-05	0.999991932827897	7	29	ATP hydrolysis coupled transmembrane transport	BP
-GO:0044248	8.54276912023952e-05	0.999954896648035	55	1255	cellular catabolic process	BP
-GO:0005750	9.68049550262869e-05	0.999996266889757	5	8	mitochondrial respiratory chain complex III	CC
-GO:0045275	9.68049550262869e-05	0.999996266889757	5	8	respiratory chain complex III	CC
-GO:0019538	0.000103348622261292	0.999931098084929	149	4377	protein metabolic process	BP
-GO:0090151	0.000105398426581029	0.99999493912933	5	10	establishment of protein localization to mitochondrial membrane	BP
-GO:0009260	0.000109359549621299	0.999967273420017	17	206	ribonucleotide biosynthetic process	BP
-GO:0006164	0.000110725992523865	0.999966824150582	17	207	purine nucleotide biosynthetic process	BP
-GO:0071702	0.000111064447917642	0.99993416630547	80	2273	organic substance transport	BP
-GO:0046390	0.000113390870022064	0.999965946076498	17	209	ribose phosphate biosynthetic process	BP
-GO:0098660	0.000119852041382493	0.999953629021465	25	495	inorganic ion transmembrane transport	BP
-GO:0034715	0.000127250371771229	0.999998061607884	4	5	pICln-Sm protein complex	CC
-GO:0098662	0.000132109983548323	0.999949729105309	24	447	inorganic cation transmembrane transport	BP
-GO:0042175	0.000134618726703121	0.999947672221111	25	422	nuclear outer membrane-endoplasmic reticulum membrane network	CC
-GO:0015935	0.000137207718595968	0.999966160301811	14	64	small ribosomal subunit	CC
-GO:0030163	0.000139956765658227	0.999936622082349	34	720	protein catabolic process	BP
-GO:1902589	0.000148876234562645	0.999917629296574	59	1663	single-organism organelle organization	BP
-GO:0000387	0.000150002353711198	0.999982353941157	7	31	spliceosomal snRNP assembly	BP
-GO:0044802	0.000156056260676331	0.999930706316891	32	705	single-organism membrane organization	BP
-GO:0006122	0.00017035248535038	0.999990908309496	5	10	mitochondrial electron transport, ubiquinol to cytochrome c	BP
-GO:0072522	0.000176530316265374	0.999944915360669	17	212	purine-containing compound biosynthetic process	BP
-GO:0003899	0.000184170229753081	0.99997273609612	8	42	DNA-directed RNA polymerase activity	MF
-GO:1901293	0.000186832978498586	0.99993685814365	19	256	nucleoside phosphate biosynthetic process	BP
-GO:0034062	0.000193044229622422	0.999971140252312	8	43	RNA polymerase activity	MF
-GO:0006364	0.000193901720646578	0.999937320627854	18	169	rRNA processing	BP
-GO:0016072	0.000200278395390123	0.999935001851189	18	174	rRNA metabolic process	BP
-GO:0016591	0.000202163088970972	0.999955631407797	11	93	DNA-directed RNA polymerase II, holoenzyme	CC
-GO:0009057	0.00020619160395493	0.999897307462673	41	942	macromolecule catabolic process	BP
-GO:0046961	0.000213922365492782	0.999979565099935	6	21	proton-transporting ATPase activity, rotational mechanism	MF
-GO:0008541	0.000222898542187346	0.999992824122193	4	7	proteasome regulatory particle, lid subcomplex	CC
-GO:0098655	0.000238874585119241	0.999905253525762	24	471	cation transmembrane transport	BP
-GO:0015934	0.000239814623667647	0.999926530416982	17	93	large ribosomal subunit	CC
-GO:0006403	0.000248164886872672	0.999934473805645	13	159	RNA localization	BP
-GO:0008535	0.00026200313081602	0.999975955041551	6	16	respiratory chain complex IV assembly	BP
-GO:0044711	0.000268605473129729	0.99985709808836	48	1048	single-organism biosynthetic process	BP
-GO:0015672	0.000284687437685649	0.999890982447201	22	398	monovalent inorganic cation transport	BP
-GO:1990234	0.000300961425378616	0.999864926599011	30	680	transferase complex	CC
-GO:0008023	0.00030604543665306	0.999965011488592	6	47	transcription elongation factor complex	CC
-GO:0061024	0.000320270482023604	0.999847945475108	34	790	membrane organization	BP
-GO:0000002	0.000327023027184153	0.999972151942481	5	31	mitochondrial genome maintenance	BP
-GO:0061695	0.000340082719606452	0.999891579553885	16	229	transferase complex, transferring phosphorus-containing groups	CC
-GO:0005758	0.000344165388159823	0.999921750188468	11	64	mitochondrial intermembrane space	CC
-GO:1902578	0.000356180442536642	0.999778316832897	82	2474	single-organism localization	BP
-GO:0008135	0.000388562817804934	0.999923685715392	9	78	translation factor activity, RNA binding	MF
-GO:0033365	0.000397055487930096	0.999813712050979	32	752	protein localization to organelle	BP
-GO:0005789	0.000409321211366987	0.999835291186056	23	405	endoplasmic reticulum membrane	CC
-GO:0051881	0.000421183743821317	0.999927004039283	8	59	regulation of mitochondrial membrane potential	BP
-GO:0010822	0.000422239710276162	0.999889697713883	12	133	positive regulation of mitochondrion organization	BP
-GO:0009165	0.000432654238576377	0.999848242993168	18	250	nucleotide biosynthetic process	BP
-GO:0033043	0.00045253853591928	0.999773576565096	37	929	regulation of organelle organization	BP
-GO:0090407	0.000476219346129938	0.999802136412968	24	418	organophosphate biosynthetic process	BP
-GO:0042776	0.000491781354815315	1	3	3	mitochondrial ATP synthesis coupled proton transport	BP
-GO:0003674	0.000495777785735836	0.999820269721586	532	17587	molecular_function	MF
-GO:0045277	0.00051367734598371	0.999950918202178	6	13	respiratory chain complex IV	CC
-GO:0006457	0.000533702168774516	0.999831842695401	15	155	protein folding	BP
-GO:0005198	0.000534984056588782	0.999729602495876	38	526	structural molecule activity	MF
-GO:1902580	0.000551892600726308	0.999723491708423	36	931	single-organism cellular localization	BP
-GO:0044765	0.000554429539004422	0.999655038231468	76	2271	single-organism transport	BP
-GO:0005744	0.000576755020482683	0.999973191621462	4	8	mitochondrial inner membrane presequence translocase complex	CC
-GO:0051168	0.000581759063340449	0.999852674522685	11	132	nuclear export	BP
-GO:0051259	0.000642965464897309	0.999721400166722	25	465	protein oligomerization	BP
-GO:0017062	0.000664520147890992	0.999967892875455	4	8	respiratory chain complex III assembly	BP
-GO:0034551	0.000664520147890992	0.999967892875455	4	8	mitochondrial respiratory chain complex III assembly	BP
-GO:0097033	0.000664520147890992	0.999967892875455	4	8	mitochondrial respiratory chain complex III biogenesis	BP
-GO:0016887	0.000724152238265669	0.999740306918247	17	400	ATPase activity	MF
-GO:0042254	0.000732297883172999	0.999702273570927	22	248	ribosome biogenesis	BP
-GO:0005686	0.000754705646746467	0.999910336225779	6	19	U2 snRNP	CC
-GO:0022804	0.000761389106357848	0.99974624215913	15	342	active transmembrane transporter activity	MF
-GO:0031970	0.000762699026704197	0.999805965873421	11	77	organelle envelope lumen	CC
-GO:0009056	0.000769317621456708	0.999540111558319	61	1533	catabolic process	BP
-GO:0044432	0.00080211031380376	0.999646694852206	25	484	endoplasmic reticulum part	CC
-GO:0006368	0.000818400541008655	0.999888657301074	6	40	transcription elongation from RNA polymerase II promoter	BP
-GO:0008637	0.000841766551861718	0.999779385131832	11	103	apoptotic mitochondrial changes	BP
+GO:0043231	2.47274313401157e-94	1	755	9557	intracellular membrane-bounded organelle	CC
+GO:0043229	5.74207464360171e-86	1	776	10485	intracellular organelle	CC
+GO:0043227	3.59906964997959e-82	1	782	10657	membrane-bounded organelle	CC
+GO:0044424	1.18167573128506e-77	1	825	12057	intracellular part	CC
+GO:0005622	2.85335693950612e-77	1	828	12159	intracellular	CC
+GO:0043226	2.03344851408815e-76	1	801	11479	organelle	CC
+GO:0044446	5.91772366705836e-74	1	548	5919	intracellular organelle part	CC
+GO:0044422	5.70965846955021e-72	1	553	6087	organelle part	CC
+GO:0005739	1.17149380610218e-65	1	288	1659	mitochondrion	CC
+GO:0032991	1.6690045563061e-64	1	459	4587	macromolecular complex	CC
+GO:0005737	2.95638726044176e-56	1	683	9497	cytoplasm	CC
+GO:0044444	3.56786255306037e-56	1	539	6318	cytoplasmic part	CC
+GO:0044429	1.35921460102385e-54	1	179	713	mitochondrial part	CC
+GO:0044464	5.69056269467943e-52	1	844	13754	cell part	CC
+GO:0005623	6.57414353189249e-52	1	844	13756	cell	CC
+GO:0043234	9.0112043468258e-45	1	350	3816	protein complex	CC
+GO:0005743	4.73155706569393e-41	1	115	379	mitochondrial inner membrane	CC
+GO:0019866	5.85050048368205e-40	1	117	419	organelle inner membrane	CC
+GO:0005740	8.17212982170947e-40	1	136	565	mitochondrial envelope	CC
+GO:0031967	4.43015223754745e-39	1	162	904	organelle envelope	CC
+GO:0031975	5.3138789921394e-39	1	162	908	envelope	CC
+GO:0070013	6.9785871056439e-39	1	297	3053	intracellular organelle lumen	CC
+GO:0031974	8.20648145817623e-39	1	297	3058	membrane-enclosed lumen	CC
+GO:0043233	8.20648145817623e-39	1	297	3058	organelle lumen	CC
+GO:0031966	3.73959732666067e-37	1	125	524	mitochondrial membrane	CC
+GO:0098800	5.91826926201264e-37	1	65	105	inner mitochondrial membrane protein complex	CC
+GO:0098798	6.46588296448397e-37	1	73	139	mitochondrial protein complex	CC
+GO:0044455	1.49748581702114e-36	1	76	165	mitochondrial membrane part	CC
+GO:0031090	1.48977452821993e-31	1	182	1465	organelle membrane	CC
+GO:0005634	2.20534489916695e-30	1	445	6077	nucleus	CC
+GO:0044428	2.43166087629732e-30	1	279	3196	nuclear part	CC
+GO:0003723	8.8491506730642e-29	1	182	1521	RNA binding	MF
+GO:0070469	1.07764356477781e-28	1	48	71	respiratory chain	CC
+GO:0005746	1.12650738890723e-27	1	45	65	mitochondrial respiratory chain	CC
+GO:0044237	1.21221439569482e-27	1	551	8369	cellular metabolic process	BP
+GO:1902494	1.73348481573267e-27	1	135	1046	catalytic complex	CC
+GO:0098803	2.20612566724506e-27	1	44	63	respiratory chain complex	CC
+GO:0008152	2.32595165258938e-27	1	596	9196	metabolic process	BP
+GO:0030529	2.76690601047916e-27	1	138	754	intracellular ribonucleoprotein complex	CC
+GO:1990904	2.76690601047916e-27	1	138	754	ribonucleoprotein complex	CC
+GO:0098796	8.32959821584915e-25	1	123	922	membrane protein complex	CC
+GO:0044822	2.18649547104278e-24	1	140	1123	poly(A) RNA binding	MF
+GO:0034641	3.6526631068424e-24	1	385	5271	cellular nitrogen compound metabolic process	BP
+GO:0007005	2.03539943253398e-23	1	102	610	mitochondrion organization	BP
+GO:0005747	1.16880032793048e-22	1	31	39	mitochondrial respiratory chain complex I	CC
+GO:0030964	1.16880032793048e-22	1	31	39	NADH dehydrogenase complex	CC
+GO:0045271	1.16880032793048e-22	1	31	39	respiratory chain complex I	CC
+GO:0006807	4.24324945139074e-22	1	395	5576	nitrogen compound metabolic process	BP
+GO:0031981	5.12266871059789e-22	1	226	2749	nuclear lumen	CC
+GO:1990204	2.88853132685936e-21	1	41	88	oxidoreductase complex	CC
+GO:0000313	6.12726160703064e-21	1	39	71	organellar ribosome	CC
+GO:0005761	6.12726160703064e-21	1	39	71	mitochondrial ribosome	CC
+GO:0044238	7.25904443340986e-21	1	524	8342	primary metabolic process	BP
+GO:0071704	5.44148722529792e-20	1	547	8810	organic substance metabolic process	BP
+GO:0044260	1.0497481282316e-19	1	435	6828	cellular macromolecule metabolic process	BP
+GO:0005759	2.56494365758693e-18	1	57	210	mitochondrial matrix	CC
+GO:0071840	3.11929636312095e-17	1	348	5437	cellular component organization or biogenesis	BP
+GO:0043228	6.94071123369035e-17	1	267	3598	non-membrane-bounded organelle	CC
+GO:0043232	6.94071123369035e-17	1	267	3598	intracellular non-membrane-bounded organelle	CC
+GO:0006396	9.79507307326606e-17	1	95	736	RNA processing	BP
+GO:0006996	1.28510761823872e-16	1	221	2881	organelle organization	BP
+GO:0006139	7.14690247812629e-16	1	311	4658	nucleobase-containing compound metabolic process	BP
+GO:1901360	8.10995103033542e-16	1	329	4955	organic cyclic compound metabolic process	BP
+GO:0006810	8.26630933739861e-16	1	264	3906	transport	BP
+GO:0006725	9.98025187223333e-16	1	320	4812	cellular aromatic compound metabolic process	BP
+GO:0005654	1.22523127665077e-15	1	153	1992	nucleoplasm	CC
+GO:0003676	1.26144930276926e-15	1	238	3257	nucleic acid binding	MF
+GO:0046483	1.265228240208e-15	1	316	4751	heterocycle metabolic process	BP
+GO:0010467	3.97499234123419e-15	1	303	4448	gene expression	BP
+GO:0045333	5.05088776849063e-15	1	37	122	cellular respiration	BP
+GO:0051234	5.53490769152231e-15	1	267	4053	establishment of localization	BP
+GO:0016043	5.56682554546721e-15	1	328	5286	cellular component organization	BP
+GO:0005840	8.19281092969927e-15	1	60	206	ribosome	CC
+GO:0043170	1.32560055517648e-14	1	448	7434	macromolecule metabolic process	BP
+GO:0009987	3.21727136496052e-14	1	733	12997	cellular process	BP
+GO:0022900	4.11406030335839e-14	1	26	56	electron transport chain	BP
+GO:0008380	4.6131691424781e-14	1	54	325	RNA splicing	BP
+GO:0008137	8.58628860801478e-14	1	19	25	NADH dehydrogenase (ubiquinone) activity	MF
+GO:0050136	8.58628860801478e-14	1	19	25	NADH dehydrogenase (quinone) activity	MF
+GO:0006397	9.15530028469105e-14	1	57	399	mRNA processing	BP
+GO:0051179	1.6609281726224e-13	1	308	5115	localization	BP
+GO:0055114	1.80783198678148e-13	1	102	836	oxidation-reduction process	BP
+GO:0034622	2.79847247337376e-13	1	94	790	cellular macromolecular complex assembly	BP
+GO:0003954	2.80278042223983e-13	1	19	26	NADH dehydrogenase activity	MF
+GO:0006119	3.6255977249566e-13	1	26	57	oxidative phosphorylation	BP
+GO:0022904	3.81074136479519e-13	1	24	51	respiratory electron transport chain	BP
+GO:1905368	5.37444066736214e-13	1	29	83	peptidase complex	CC
+GO:0046034	5.55606777652209e-13	1	42	179	ATP metabolic process	BP
+GO:0044451	7.33631994008711e-13	1	65	602	nucleoplasm part	CC
+GO:0009141	7.42071378598457e-13	1	47	222	nucleoside triphosphate metabolic process	BP
+GO:0000315	8.80604694677825e-13	1	20	33	organellar large ribosomal subunit	CC
+GO:0005762	8.80604694677825e-13	1	20	33	mitochondrial large ribosomal subunit	CC
+GO:0042775	1.02429195592812e-12	1	21	36	mitochondrial ATP synthesis coupled electron transport	BP
+GO:0009205	1.15114935116457e-12	1	44	197	purine ribonucleoside triphosphate metabolic process	BP
+GO:0009144	1.23098308912887e-12	1	45	205	purine nucleoside triphosphate metabolic process	BP
+GO:0009199	1.31652108107929e-12	1	44	200	ribonucleoside triphosphate metabolic process	BP
+GO:0042773	1.4025304697719e-12	1	21	37	ATP synthesis coupled electron transport	BP
+GO:1901564	1.43403336407215e-12	1	164	1712	organonitrogen compound metabolic process	BP
+GO:0033108	1.87804383192216e-12	1	21	39	mitochondrial respiratory chain complex assembly	BP
+GO:0000502	3.02094885319919e-12	1	26	66	proteasome complex	CC
+GO:1905369	3.02094885319919e-12	1	26	66	endopeptidase complex	CC
+GO:0005681	3.17623464772526e-12	1	37	173	spliceosomal complex	CC
+GO:1901363	3.35847075532535e-12	1	297	4927	heterocyclic compound binding	MF
+GO:0016071	3.55881860377213e-12	1	60	491	mRNA metabolic process	BP
+GO:0065003	4.12018570377847e-12	1	124	1367	macromolecular complex assembly	BP
+GO:0015980	4.37811358741103e-12	1	40	204	energy derivation by oxidation of organic compounds	BP
+GO:0046907	5.20813693858723e-12	1	105	1236	intracellular transport	BP
+GO:0051641	7.92980784585211e-12	1	149	2128	cellular localization	BP
+GO:0097159	8.81777422411029e-12	1	299	4994	organic cyclic compound binding	MF
+GO:0009126	1.20945845482714e-11	1	42	204	purine nucleoside monophosphate metabolic process	BP
+GO:0009167	1.20945845482714e-11	1	42	204	purine ribonucleoside monophosphate metabolic process	BP
+GO:0070062	1.22765321713343e-11	1	204	2448	extracellular exosome	CC
+GO:0006518	1.64237679797462e-11	1	90	691	peptide metabolic process	BP
+GO:1903561	1.65647926369718e-11	1	204	2462	extracellular vesicle	CC
+GO:0033036	1.72117947334101e-11	1	171	2533	macromolecule localization	BP
+GO:0043230	1.74966180290783e-11	1	204	2467	extracellular organelle	CC
+GO:0017004	1.81078716497533e-11	1	16	24	cytochrome complex assembly	BP
+GO:0005730	1.84046347078225e-11	1	77	691	nucleolus	CC
+GO:0009161	2.2147348294146e-11	1	42	207	ribonucleoside monophosphate metabolic process	BP
+GO:0003735	2.57410424738938e-11	1	48	174	structural constituent of ribosome	MF
+GO:0043933	3.25614638609891e-11	1	151	1973	macromolecular complex subunit organization	BP
+GO:0016655	4.29249756444042e-11	1	20	35	oxidoreductase activity, acting on NAD(P)H, quinone or similar compound as acceptor	MF
+GO:0009123	5.35054866167239e-11	1	42	212	nucleoside monophosphate metabolic process	BP
+GO:0006412	5.53934769452792e-11	1	78	556	translation	BP
+GO:0090304	6.11639033379976e-11	1	257	4158	nucleic acid metabolic process	BP
+GO:0006091	1.10089769527792e-10	1	46	279	generation of precursor metabolites and energy	BP
+GO:0044085	1.12279475151845e-10	1	172	2384	cellular component biogenesis	BP
+GO:0000377	1.2225718903681e-10	1	36	208	RNA splicing, via transesterification reactions with bulged adenosine as nucleophile	BP
+GO:0000398	1.2225718903681e-10	1	36	208	mRNA splicing, via spliceosome	BP
+GO:0000375	1.27867260469271e-10	1	36	209	RNA splicing, via transesterification reactions	BP
+GO:0042278	1.31116774413243e-10	1	46	255	purine nucleoside metabolic process	BP
+GO:0015078	1.5625930641375e-10	0.999999999975494	29	89	hydrogen ion transmembrane transporter activity	MF
+GO:0005839	1.57994341026664e-10	0.99999999999403	14	19	proteasome core complex	CC
+GO:0044267	1.65396223918196e-10	1	253	3904	cellular protein metabolic process	BP
+GO:0046128	1.69172844230471e-10	1	45	251	purine ribonucleoside metabolic process	BP
+GO:0043043	2.22016799332351e-10	1	78	575	peptide biosynthetic process	BP
+GO:0030532	3.6650499826568e-10	0.999999999956775	21	60	small nuclear ribonucleoprotein complex	CC
+GO:0032543	5.02988695820032e-10	0.999999999937938	22	58	mitochondrial translation	BP
+GO:1990542	6.15570282446091e-10	0.999999999941704	18	41	mitochondrial transmembrane transport	BP
+GO:0043623	6.317282804187e-10	1	54	468	cellular protein complex assembly	BP
+GO:0071011	6.55397795354288e-10	0.999999999959651	15	25	precatalytic spliceosome	CC
+GO:0051649	7.63791043475909e-10	1	117	1607	establishment of localization in cell	BP
+GO:0004298	8.89996598229954e-10	0.999999999954948	14	21	threonine-type endopeptidase activity	MF
+GO:0070003	8.89996598229954e-10	0.999999999954948	14	21	threonine-type peptidase activity	MF
+GO:0097525	9.1398033599263e-10	0.999999999883084	20	54	spliceosomal snRNP complex	CC
+GO:1901566	9.2002863712288e-10	1	112	1097	organonitrogen compound biosynthetic process	BP
+GO:0005753	9.36333172017878e-10	0.999999999966688	13	17	mitochondrial proton-transporting ATP synthase complex	CC
+GO:0044391	1.01821953744459e-09	0.999999999723181	44	155	ribosomal subunit	CC
+GO:0006403	1.05237972001713e-09	0.999999999783635	28	158	RNA localization	BP
+GO:0009116	1.24018194390985e-09	1	47	283	nucleoside metabolic process	BP
+GO:1904872	1.35457989948607e-09	0.999999999962068	10	15	regulation of telomerase RNA localization to Cajal body	BP
+GO:1904874	1.35457989948607e-09	0.999999999962068	10	15	positive regulation of telomerase RNA localization to Cajal body	BP
+GO:0034613	1.35461810886444e-09	1	104	1433	cellular protein localization	BP
+GO:0022613	1.49471432576968e-09	1	54	365	ribonucleoprotein complex biogenesis	BP
+GO:0009119	1.86249367115161e-09	1	45	269	ribonucleoside metabolic process	BP
+GO:0070727	2.02046467136295e-09	1	104	1443	cellular macromolecule localization	BP
+GO:0016491	2.71325753424536e-09	1	83	700	oxidoreductase activity	MF
+GO:0045259	2.74228936156684e-09	0.999999999876201	13	18	proton-transporting ATP synthase complex	CC
+GO:0043603	3.28137894788827e-09	1	90	798	cellular amide metabolic process	BP
+GO:0090670	3.83791629721343e-09	0.999999999866804	10	16	RNA localization to Cajal body	BP
+GO:0090671	3.83791629721343e-09	0.999999999866804	10	16	telomerase RNA localization to Cajal body	BP
+GO:0090672	3.83791629721343e-09	0.999999999866804	10	16	telomerase RNA localization	BP
+GO:0043604	6.25921600097857e-09	1	78	639	amide biosynthetic process	BP
+GO:0016070	7.10706248419867e-09	1	223	3717	RNA metabolic process	BP
+GO:0071013	7.27275085993588e-09	0.999999998774252	21	83	catalytic step 2 spliceosome	CC
+GO:1901657	1.01485630708958e-08	1	47	301	glycosyl compound metabolic process	BP
+GO:0008104	1.0148922983385e-08	1	144	2235	protein localization	BP
+GO:1990234	1.08155058122075e-08	1	60	680	transferase complex	CC
+GO:0009058	1.10452377284328e-08	1	298	4971	biosynthetic process	BP
+GO:0009055	1.43700288231754e-08	0.999999997456858	22	70	electron carrier activity	MF
+GO:0031988	1.55359209728864e-08	1	217	2995	membrane-bounded vesicle	CC
+GO:0022607	1.62037898576193e-08	1	148	2186	cellular component assembly	BP
+GO:0044265	1.92531510929578e-08	1	68	769	cellular macromolecule catabolic process	BP
+GO:0044271	2.03561452173638e-08	1	243	3939	cellular nitrogen compound biosynthetic process	BP
+GO:0044249	2.29174411622068e-08	1	287	4804	cellular biosynthetic process	BP
+GO:0016651	2.66231734466061e-08	0.999999995069563	22	72	oxidoreductase activity, acting on NAD(P)H	MF
+GO:0015985	2.8639293560501e-08	0.999999998211305	12	20	energy coupled proton transport, down electrochemical gradient	BP
+GO:0015986	2.8639293560501e-08	0.999999998211305	12	20	ATP synthesis coupled proton transport	BP
+GO:0006753	2.95553245981682e-08	1	60	518	nucleoside phosphate metabolic process	BP
+GO:0051603	3.59468096304808e-08	1	54	572	proteolysis involved in cellular protein catabolic process	BP
+GO:0097526	3.88789494013036e-08	0.999999996743371	13	26	spliceosomal tri-snRNP complex	CC
+GO:0000428	4.23705303286228e-08	0.999999991031921	23	115	DNA-directed RNA polymerase complex	CC
+GO:0055029	4.23705303286228e-08	0.999999991031921	23	115	nuclear DNA-directed RNA polymerase complex	CC
+GO:0016469	4.32047366297415e-08	0.999999994232328	17	42	proton-transporting two-sector ATPase complex	CC
+GO:0030880	4.71806048582765e-08	0.999999989933282	23	117	RNA polymerase complex	CC
+GO:0006839	4.87136303430057e-08	0.999999986558638	33	208	mitochondrial transport	BP
+GO:0003824	5.53313080027313e-08	1	301	5182	catalytic activity	MF
+GO:1901576	5.55519786033131e-08	1	289	4895	organic substance biosynthetic process	BP
+GO:0031982	6.21011023997808e-08	1	227	3293	vesicle	CC
+GO:0044710	6.75046902986795e-08	1	218	3276	single-organism metabolic process	BP
+GO:0019538	7.70536906624324e-08	1	265	4366	protein metabolic process	BP
+GO:1902600	7.78421892261469e-08	0.999999988605385	17	49	hydrogen ion transmembrane transport	BP
+GO:0009150	8.2571964822557e-08	1	48	390	purine ribonucleotide metabolic process	BP
+GO:0009117	8.93801567801123e-08	1	58	509	nucleotide metabolic process	BP
+GO:0006886	8.99436269216992e-08	1	70	872	intracellular protein transport	BP
+GO:0005488	9.29425015216791e-08	1	594	11346	binding	MF
+GO:0000314	9.40363505411458e-08	0.999999990731138	14	27	organellar small ribosomal subunit	CC
+GO:0005763	9.40363505411458e-08	0.999999990731138	14	27	mitochondrial small ribosomal subunit	CC
+GO:0006163	9.64891498327881e-08	1	49	402	purine nucleotide metabolic process	BP
+GO:0006754	1.04816811409207e-07	0.999999986607059	15	42	ATP biosynthetic process	BP
+GO:0033617	1.10395181323691e-07	0.999999997304972	9	11	mitochondrial respiratory chain complex IV assembly	BP
+GO:0097034	1.10395181323691e-07	0.999999997304972	9	11	mitochondrial respiratory chain complex IV biogenesis	BP
+GO:0044257	1.11664834400065e-07	1	55	604	cellular protein catabolic process	BP
+GO:0015031	1.33974734511193e-07	1	112	1603	protein transport	BP
+GO:0016591	1.39904145161725e-07	0.999999972313577	20	93	DNA-directed RNA polymerase II, holoenzyme	CC
+GO:0009259	1.55580877421979e-07	1	48	398	ribonucleotide metabolic process	BP
+GO:0045184	1.57876915013894e-07	1	119	1762	establishment of protein localization	BP
+GO:0009206	2.08850562457692e-07	0.99999996645348	17	53	purine ribonucleoside triphosphate biosynthetic process	BP
+GO:0044452	2.4554294601724e-07	0.99999995581388	18	69	nucleolar part	CC
+GO:0009201	2.48766440774162e-07	0.999999959177029	17	55	ribonucleoside triphosphate biosynthetic process	BP
+GO:0006461	2.65681780081863e-07	1	90	1135	protein complex assembly	BP
+GO:0070271	2.65681780081863e-07	1	90	1135	protein complex biogenesis	BP
+GO:0009145	2.86205311025431e-07	0.999999952717286	17	54	purine nucleoside triphosphate biosynthetic process	BP
+GO:0019693	4.28221315336724e-07	0.999999874583792	48	410	ribose phosphate metabolic process	BP
+GO:0009142	4.51950874545115e-07	0.999999915663898	18	66	nucleoside triphosphate biosynthetic process	BP
+GO:0034645	4.5341442038258e-07	1	231	3994	cellular macromolecule biosynthetic process	BP
+GO:0005758	4.54009281021385e-07	0.999999911997921	19	64	mitochondrial intermembrane space	CC
+GO:0008637	5.10275684932456e-07	0.999999884496932	21	102	apoptotic mitochondrial changes	BP
+GO:0034470	5.15452001533753e-07	0.999999821763253	42	301	ncRNA processing	BP
+GO:0055086	5.40117572710197e-07	0.99999982878019	60	563	nucleobase-containing small molecule metabolic process	BP
+GO:1903405	5.74481126019796e-07	0.999999990906693	6	8	protein localization to nuclear body	BP
+GO:1904867	5.74481126019796e-07	0.999999990906693	6	8	protein localization to Cajal body	BP
+GO:1904869	5.74481126019796e-07	0.999999990906693	6	8	regulation of protein localization to Cajal body	BP
+GO:1904871	5.74481126019796e-07	0.999999990906693	6	8	positive regulation of protein localization to Cajal body	BP
+GO:1990173	5.74481126019796e-07	0.999999990906693	6	8	protein localization to nucleoplasm	BP
+GO:0033365	6.05664439273313e-07	0.999999806436866	60	751	protein localization to organelle	BP
+GO:0031970	6.07098411683277e-07	0.999999870997053	20	77	organelle envelope lumen	CC
+GO:0006120	6.42756365776757e-07	0.999999970996568	9	13	mitochondrial electron transport, NADH to ubiquinone	BP
+GO:0009057	6.53866060608527e-07	0.999999778923448	74	940	macromolecule catabolic process	BP
+GO:0046540	7.36412098857874e-07	0.999999942904587	10	21	U4/U6 x U5 tri-snRNP complex	CC
+GO:0022618	7.37507744385323e-07	0.999999776344997	29	175	ribonucleoprotein complex assembly	BP
+GO:0034660	1.01712414856648e-06	0.999999617152472	48	405	ncRNA metabolic process	BP
+GO:0071822	1.03360471113175e-06	0.999999628030734	95	1267	protein complex subunit organization	BP
+GO:0065002	1.08974671362158e-06	0.999999835812087	14	48	intracellular protein transmembrane transport	BP
+GO:0071826	1.17772905997455e-06	0.999999632656991	29	184	ribonucleoprotein complex subunit organization	BP
+GO:0072521	1.36406142685654e-06	0.999999439494393	49	435	purine-containing compound metabolic process	BP
+GO:0071806	1.38545869700236e-06	0.999999785877036	14	49	protein transmembrane transport	BP
+GO:0042451	1.55001787348629e-06	0.999999660053891	19	80	purine nucleoside biosynthetic process	BP
+GO:0046129	1.55001787348629e-06	0.999999660053891	19	80	purine ribonucleoside biosynthetic process	BP
+GO:0044743	1.58657256248153e-06	0.99999977629102	13	42	intracellular protein transmembrane import	BP
+GO:0015992	2.14163093630082e-06	0.999999500113134	20	81	proton transport	BP
+GO:0005832	2.17658187467414e-06	0.999999945713158	6	9	chaperonin-containing T-complex	CC
+GO:0000276	2.19343900146178e-06	0.999999931538141	8	10	mitochondrial proton-transporting ATP synthase complex, coupling factor F(o)	CC
+GO:0043209	2.23351990969085e-06	0.999999289229236	28	206	myelin sheath	CC
+GO:0006818	2.24120228439249e-06	0.999999474310888	20	82	hydrogen transport	BP
+GO:0019637	2.43184843387223e-06	0.999998924659844	72	831	organophosphate metabolic process	BP
+GO:0009059	2.49500868576186e-06	0.999998504006507	235	4097	macromolecule biosynthetic process	BP
+GO:0009060	2.50074761864315e-06	0.999999557277075	15	55	aerobic respiration	BP
+GO:0061695	2.78641119009487e-06	0.99999909742572	28	229	transferase complex, transferring phosphorus-containing groups	CC
+GO:0071702	3.08576870101052e-06	0.999998266587778	140	2269	organic substance transport	BP
+GO:0005686	3.22956954933055e-06	0.999999719715994	10	19	U2 snRNP	CC
+GO:0005689	3.23553815075639e-06	0.999999645752932	11	25	U12-type spliceosomal complex	CC
+GO:0006457	3.52937677689841e-06	0.999998918093033	26	155	protein folding	BP
+GO:0015934	3.75356593377202e-06	0.999998907927749	26	93	large ribosomal subunit	CC
+GO:0046933	4.51512655438966e-06	0.999999772632694	8	12	proton-transporting ATP synthase activity, rotational mechanism	MF
+GO:0008535	4.7344450702656e-06	0.999999650430585	9	16	respiratory chain complex IV assembly	BP
+GO:0033177	4.82041138081709e-06	0.999999546650517	10	20	proton-transporting two-sector ATPase complex, proton-transporting domain	CC
+GO:0009127	4.85879388236163e-06	0.999999071298155	15	62	purine nucleoside monophosphate biosynthetic process	BP
+GO:0009168	4.85879388236163e-06	0.999999071298155	15	62	purine ribonucleoside monophosphate biosynthetic process	BP
+GO:0044769	5.16232222749358e-06	0.999999385824211	11	27	ATPase activity, coupled to transmembrane movement of ions, rotational mechanism	MF
+GO:0030163	5.77091429819093e-06	0.999997334877738	58	720	protein catabolic process	BP
+GO:0045263	6.18886082477016e-06	0.999999716793835	8	11	proton-transporting ATP synthase complex, coupling factor F(o)	CC
+GO:0005575	7.09747107002079e-06	1	940	17858	cellular_component	CC
+GO:0033554	7.9505554718337e-06	0.999995528904784	101	1512	cellular response to stress	BP
+GO:0019941	8.00841037438461e-06	0.999996597458708	41	490	modification-dependent protein catabolic process	BP
+GO:0044248	9.21899756595808e-06	0.999994804550143	92	1254	cellular catabolic process	BP
+GO:0009156	1.06821179689035e-05	0.99999779836419	15	65	ribonucleoside monophosphate biosynthetic process	BP
+GO:0006364	1.1319449392678e-05	0.999996104374539	28	169	rRNA processing	BP
+GO:0017062	1.15206081035129e-05	0.999999686327817	6	8	respiratory chain complex III assembly	BP
+GO:0034551	1.15206081035129e-05	0.999999686327817	6	8	mitochondrial respiratory chain complex III assembly	BP
+GO:0097033	1.15206081035129e-05	0.999999686327817	6	8	mitochondrial respiratory chain complex III biogenesis	BP
+GO:0006511	1.17990674289151e-05	0.999994939935248	40	481	ubiquitin-dependent protein catabolic process	BP
+GO:0003674	1.24197158906386e-05	1	925	17556	molecular_function	MF
+GO:0016072	1.25778587601242e-05	0.999995636214584	28	174	rRNA metabolic process	BP
+GO:0042455	1.37311785695108e-05	0.999996403550459	19	93	ribonucleoside biosynthetic process	BP
+GO:0034715	1.37465444570324e-05	1	5	5	pICln-Sm protein complex	CC
+GO:0006605	1.43346413336041e-05	0.999993443582372	46	555	protein targeting	BP
+GO:0043632	1.59639997372919e-05	0.999992982035717	41	497	modification-dependent macromolecule catabolic process	BP
+GO:0009124	1.61844268451168e-05	0.99999651895591	15	68	nucleoside monophosphate biosynthetic process	BP
+GO:0005665	1.63373153186643e-05	0.999998707398882	8	16	DNA-directed RNA polymerase II, core complex	CC
+GO:0006368	1.76395684076294e-05	0.999997572973471	10	40	transcription elongation from RNA polymerase II promoter	BP
+GO:0002199	1.88468074729763e-05	0.999999033134029	6	13	zona pellucida receptor complex	CC
+GO:0070990	1.93938823825754e-05	0.999999104574817	7	10	snRNP binding	MF
+GO:0072594	2.01808627938303e-05	0.99999081535753	44	508	establishment of protein localization to organelle	BP
+GO:0042254	2.06021754380621e-05	0.999991541225887	36	248	ribosome biogenesis	BP
+GO:0005838	2.06771434045571e-05	0.999997822081426	9	21	proteasome regulatory particle	CC
+GO:0009163	2.08990656794195e-05	0.999994337523433	19	95	nucleoside biosynthetic process	BP
+GO:0070069	2.12565292727702e-05	0.99999717631438	11	24	cytochrome complex	CC
+GO:0008565	2.58672600262621e-05	0.999994069430822	15	83	protein transporter activity	MF
+GO:1902582	2.62489153749108e-05	0.999987619518636	46	578	single-organism intracellular transport	BP
+GO:0070585	2.70852083642514e-05	0.999991490904551	22	148	protein localization to mitochondrion	BP
+GO:1901659	2.72978729850104e-05	0.999992436100865	19	97	glycosyl compound biosynthetic process	BP
+GO:0043021	2.76816737002495e-05	0.999992194935466	19	117	ribonucleoprotein complex binding	MF
+GO:0004129	2.87400103941743e-05	0.999996127383299	11	23	cytochrome-c oxidase activity	MF
+GO:0015002	2.87400103941743e-05	0.999996127383299	11	23	heme-copper terminal oxidase activity	MF
+GO:0016676	2.87400103941743e-05	0.999996127383299	11	23	oxidoreductase activity, acting on a heme group of donors, oxygen as acceptor	MF
+GO:0031647	2.91008317248092e-05	0.999990396806735	23	204	regulation of protein stability	BP
+GO:0048193	3.03882359077679e-05	0.999990824706147	20	185	Golgi vesicle transport	BP
+GO:1904851	3.21979281007192e-05	0.999998895417003	5	9	positive regulation of establishment of protein localization to telomere	BP
+GO:0019773	3.25963312523237e-05	0.999998921859162	6	8	proteasome core complex, alpha-subunit complex	CC
+GO:0016675	3.46733198423626e-05	0.999995124456722	11	24	oxidoreductase activity, acting on a heme group of donors	MF
+GO:0051168	3.81403378436557e-05	0.999989281817068	18	132	nuclear export	BP
+GO:0015077	3.94374074289889e-05	0.999984450963707	30	305	monovalent inorganic cation transmembrane transporter activity	MF
+GO:0000932	4.29345668213535e-05	0.999992350280314	11	61	cytoplasmic mRNA processing body	CC
+GO:0006626	4.30049548569119e-05	0.999986937450229	20	131	protein targeting to mitochondrion	BP
+GO:0005783	4.39540879018732e-05	0.999973388505872	95	1411	endoplasmic reticulum	CC
+GO:1901998	4.80201503046248e-05	0.999994295083413	8	35	toxin transport	BP
+GO:0005198	4.88623679638052e-05	0.999974297872332	60	526	structural molecule activity	MF
+GO:0003899	5.14732234295835e-05	0.999991101121933	11	42	DNA-directed RNA polymerase activity	MF
+GO:0034062	5.63590524830818e-05	0.999990114531772	11	43	RNA polymerase activity	MF
+GO:0070203	5.88438705487743e-05	0.99999750604406	5	10	regulation of establishment of protein localization to telomere	BP
+GO:0022624	6.39508648864258e-05	0.99999187629299	9	23	proteasome accessory complex	CC
+GO:0071986	7.05505006509965e-05	0.999998648142196	5	6	Ragulator complex	CC
+GO:0070202	7.21750549708712e-05	0.99999661043856	5	11	regulation of establishment of protein localization to chromosome	BP
+GO:0090151	7.3811890484131e-05	0.999995995798878	6	10	establishment of protein localization to mitochondrial membrane	BP
+GO:1990446	7.98671321274111e-05	0.999996864311775	6	8	U1 snRNP binding	MF
+GO:0006354	8.03185739367596e-05	0.999984772762164	11	56	DNA-templated transcription, elongation	BP
+GO:0031301	8.31434109017263e-05	0.999973324451809	20	142	integral component of organelle membrane	CC
+GO:0015931	8.38607497673944e-05	0.999974731258689	18	148	nucleobase-containing compound transport	BP
+GO:0015399	8.42193131322334e-05	0.999977972946548	15	114	primary active transmembrane transporter activity	MF
+GO:0015405	8.42193131322334e-05	0.999977972946548	15	114	P-P-bond-hydrolysis-driven transmembrane transporter activity	MF
+GO:0000387	8.44107444146807e-05	0.999987906214095	9	31	spliceosomal snRNP assembly	BP
+GO:0044802	8.46318040668539e-05	0.999956271094207	51	705	single-organism membrane organization	BP
+GO:0042273	8.62374658991204e-05	0.999978567461732	15	64	ribosomal large subunit biogenesis	BP
+GO:1904816	9.10771644730269e-05	0.999995500972926	5	11	positive regulation of protein localization to chromosome, telomeric region	BP
+GO:0012505	9.42014239882847e-05	0.999934016582096	179	3262	endomembrane system	CC
+GO:0031305	9.93687606528147e-05	0.999986592098515	9	23	integral component of mitochondrial inner membrane	CC
+GO:0006122	0.000103635465050883	0.999994002568905	6	10	mitochondrial electron transport, ubiquinol to cytochrome c	BP
+GO:0006508	0.000104146939268479	0.999935397862944	94	1354	proteolysis	BP
+GO:0006979	0.000106477062271995	0.999954176298672	32	322	response to oxidative stress	BP
+GO:0015935	0.000107881468401462	0.999969355142538	18	64	small ribosomal subunit	CC
+GO:0043248	0.000108709582211236	0.999990578081414	7	14	proteasome assembly	BP
+GO:0031304	0.000109586868478271	0.999984795074497	9	24	intrinsic component of mitochondrial inner membrane	CC
+GO:0042625	0.000110545434122832	0.999976342139399	12	61	ATPase coupled ion transmembrane transporter activity	MF
+GO:0034709	0.000112714021453872	0.999993371466778	6	10	methylosome	CC
+GO:0004526	0.000115790421367622	0.999992543143844	6	11	ribonuclease P activity	MF
+GO:0031902	0.00011932640468504	0.99998174797144	9	34	late endosome membrane	CC
+GO:0032592	0.00012248411353794	0.999974155440954	12	50	integral component of mitochondrial membrane	CC
+GO:0031300	0.000128174885186161	0.999957405660813	20	147	intrinsic component of organelle membrane	CC
+GO:0036464	0.000130220592252476	0.99996428683602	15	129	cytoplasmic ribonucleoprotein granule	CC
+GO:0098573	0.000133149709870677	0.999971485907445	12	52	intrinsic component of mitochondrial membrane	CC
+GO:0007006	0.00013666107087706	0.99996362770079	15	80	mitochondrial membrane organization	BP
+GO:0072657	0.000138189487949946	0.999940190720657	31	375	protein localization to membrane	BP
+GO:0050657	0.000140538178966841	0.999959467104383	16	125	nucleic acid transport	BP
+GO:0050658	0.000140538178966841	0.999959467104383	16	125	RNA transport	BP
+GO:0000723	0.000159986361489488	0.999962912420796	12	98	telomere maintenance	BP
+GO:0032200	0.000159986361489488	0.999962912420796	12	98	telomere organization	BP
+GO:0051236	0.000164935039640158	0.999951677284095	16	128	establishment of RNA localization	BP
+GO:0006281	0.000167597449988031	0.999923621726106	34	402	DNA repair	BP
+GO:0000470	0.000168304365596427	0.999977511620289	8	25	maturation of LSU-rRNA	BP
+GO:0061024	0.000168377988538343	0.999907963896991	55	790	membrane organization	BP
+GO:1903827	0.000171946689811076	0.999919276305119	36	509	regulation of cellular protein localization	BP
+GO:0022892	0.000173159930524262	0.999902091648105	61	963	substrate-specific transporter activity	MF
+GO:0072655	0.000176039109440948	0.999940138924467	20	143	establishment of protein localization to mitochondrion	BP
+GO:0030150	0.000180684806792452	0.999981669103261	7	16	protein import into mitochondrial matrix	BP
+GO:0033043	0.000181453979174251	0.999897270137073	61	929	regulation of organelle organization	BP
+GO:1902580	0.000181645268585657	0.999897624923118	60	930	single-organism cellular localization	BP
+GO:0006405	0.000184467961913643	0.999960758693667	11	67	RNA export from nucleus	BP
+GO:0045454	0.000186039842157623	0.999957830884162	12	61	cell redox homeostasis	BP
+GO:0008121	0.000189503323077534	0.999995458101495	5	6	ubiquinol-cytochrome-c reductase activity	MF
+GO:0016681	0.000189503323077534	0.999995458101495	5	6	oxidoreductase activity, acting on diphenols and related substances as donors, cytochrome as acceptor	MF
+GO:0044281	0.000193287730170906	0.999873549786727	110	1544	small molecule metabolic process	BP
+GO:0034719	0.000201219628755547	0.999979860668448	7	15	SMN-Sm protein complex	CC
+GO:0005687	0.000207900485175477	0.999986237786941	6	10	U4 snRNP	CC
+GO:0008033	0.000212092246126827	0.999934689499813	17	107	tRNA processing	BP
+GO:0006099	0.000216983511267044	0.99996930933688	8	27	tricarboxylic acid cycle	BP
+GO:0035770	0.000239290794864838	0.999930298027219	15	137	ribonucleoprotein granule	CC
+GO:0001054	0.000257693249445316	0.999979412228339	6	12	RNA polymerase I activity	MF
+GO:0006399	0.000260828912471021	0.999905575429204	21	158	tRNA metabolic process	BP
+GO:1904814	0.00026291423413839	0.999982277165162	5	13	regulation of protein localization to chromosome, telomeric region	BP
+GO:0005744	0.000265775541055329	0.999987130740062	5	8	mitochondrial inner membrane presequence translocase complex	CC
+GO:0044421	0.000270301113097287	0.999800850940136	221	3327	extracellular region part	CC
+GO:0008023	0.000279329868157796	0.99995529307311	8	47	transcription elongation factor complex	CC
+GO:0010257	0.000290697012582981	0.999967162364781	7	17	NADH dehydrogenase complex assembly	BP
+GO:0032981	0.000290697012582981	0.999967162364781	7	17	mitochondrial respiratory chain complex I assembly	BP
+GO:0097031	0.000290697012582981	0.999967162364781	7	17	mitochondrial respiratory chain complex I biogenesis	BP
+GO:0005215	0.000291461125511297	0.999825857112116	69	1118	transporter activity	MF
+GO:0016679	0.000329045032294376	0.999986290927611	5	7	oxidoreductase activity, acting on diphenols and related substances as donors	MF
+GO:0005685	0.00034643955005277	0.999959666157484	7	17	U1 snRNP	CC
+GO:0005736	0.000358453085227603	0.999968008895377	6	13	DNA-directed RNA polymerase I complex	CC
+GO:0070200	0.00038674235669793	0.999970141069194	5	15	establishment of protein localization to telomere	BP
+GO:0022853	0.000423533995991716	0.999891389706344	12	87	active ion transmembrane transporter activity	MF
+GO:0009056	0.00044403267370028	0.999706605428673	101	1531	catabolic process	BP
+GO:0019829	0.000454794800664286	0.999893325792498	11	60	cation-transporting ATPase activity	MF
+GO:0005829	0.000458433553822953	0.999697068720713	101	1415	cytosol	CC
+GO:0042626	0.000458493110256564	0.999872464899741	13	109	ATPase activity, coupled to transmembrane movement of substances	MF
+GO:0051082	0.000459026519007064	0.999883347523523	12	69	unfolded protein binding	MF
+GO:0016197	0.000475048187650237	0.999826900403075	19	211	endosomal transport	BP
+GO:0016820	0.00048446844369156	0.999864369182227	13	110	hydrolase activity, acting on acid anhydrides, catalyzing transmembrane movement of substances	MF
+GO:0022890	0.00053988820565114	0.999739223173177	33	454	inorganic cation transmembrane transporter activity	MF
+GO:0016531	0.000573176948973788	0.999986785054507	4	5	copper chaperone activity	MF
+GO:0016020	0.000580416630260189	0.999543453858604	421	7880	membrane	CC
+GO:0001836	0.000609172916571851	0.999843132453807	12	57	release of cytochrome c from mitochondria	BP
+GO:1901575	0.000621998500730531	0.999588541744356	96	1476	organic substance catabolic process	BP
+GO:0010821	0.000622820261106474	0.999756888708696	21	184	regulation of mitochondrion organization	BP
+GO:0008135	0.000640622639664	0.99982907994889	12	78	translation factor activity, RNA binding	MF
+GO:0034976	0.000646263846839485	0.999752226503366	20	201	response to endoplasmic reticulum stress	BP
+GO:0051028	0.000649607686359822	0.999823435280178	12	101	mRNA transport	BP
+GO:0005682	0.000660621178979711	0.999927277602444	6	16	U5 snRNP	CC
+GO:0033044	0.000706774302252737	0.999781295386767	14	134	regulation of chromosome organization	BP
+GO:0006367	0.000709193321768315	0.999837879099321	10	56	transcription initiation from RNA polymerase II promoter	BP
+GO:0001055	0.000714970117007758	0.999951159076286	5	9	RNA polymerase II activity	MF
+GO:0006413	0.000716155113900618	0.999781424831183	14	101	translational initiation	BP
+GO:0005789	0.000734678442870121	0.999635565730681	34	405	endoplasmic reticulum membrane	CC
+GO:0043492	0.000737736839898993	0.999782579472626	13	123	ATPase activity, coupled to movement of substances	MF
+GO:0005750	0.000740332774943736	0.999954644882062	5	8	mitochondrial respiratory chain complex III	CC
+GO:0045275	0.000740332774943736	0.999954644882062	5	8	respiratory chain complex III	CC
+GO:1902589	0.000745277571439249	0.999506369343615	93	1663	single-organism organelle organization	BP
+GO:0051128	0.000756143991981747	0.999480810009307	112	2169	regulation of cellular component organization	BP
+GO:0015266	0.000787343934486605	0.999940522571749	5	10	protein channel activity	MF
+GO:0044772	0.0008160579036813	0.999641932355532	25	291	mitotic cell cycle phase transition	BP
+GO:0016604	0.000844980533016869	0.999675746104137	19	233	nuclear body	CC
+GO:0006892	0.000894450024890686	0.999850137861583	7	47	post-Golgi vesicle-mediated transport	BP
+GO:0006259	0.000958262206090697	0.999434636903917	55	802	DNA metabolic process	BP
+GO:0005635	0.000964225970484689	0.999549329691635	28	347	nuclear envelope	CC
