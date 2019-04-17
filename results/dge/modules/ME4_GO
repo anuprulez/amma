@@ -1,233 +1,38 @@
 category	over_represented_pvalue	under_represented_pvalue	numDEInCat	numInCat	term	ontology
-GO:0005634	1.45555370601831e-26	1	543	6077	nucleus	CC
-GO:0090304	1.04341245621966e-24	1	410	4158	nucleic acid metabolic process	BP
-GO:0006139	1.10723577583903e-22	1	436	4658	nucleobase-containing compound metabolic process	BP
-GO:0046483	2.45029812583725e-22	1	441	4751	heterocycle metabolic process	BP
-GO:0003676	1.23265187864909e-21	1	329	3257	nucleic acid binding	MF
-GO:0006725	3.34611799798811e-21	1	441	4812	cellular aromatic compound metabolic process	BP
-GO:0034641	2.28197327221845e-20	1	465	5271	cellular nitrogen compound metabolic process	BP
-GO:0016070	2.72807496041688e-20	1	363	3717	RNA metabolic process	BP
-GO:0044428	4.6354273587041e-20	1	319	3196	nuclear part	CC
-GO:1901360	5.22168337560175e-20	1	446	4955	organic cyclic compound metabolic process	BP
-GO:0031981	2.29104104981184e-19	1	284	2749	nuclear lumen	CC
-GO:0005622	1.3047916907857e-18	1	875	12159	intracellular	CC
-GO:0006807	4.72592550679449e-18	1	476	5576	nitrogen compound metabolic process	BP
-GO:0070013	2.88604028713588e-17	1	296	3053	intracellular organelle lumen	CC
-GO:0031974	3.750239941961e-17	1	296	3058	membrane-enclosed lumen	CC
-GO:0043233	3.750239941961e-17	1	296	3058	organelle lumen	CC
-GO:0044424	6.53412298111359e-17	1	863	12057	intracellular part	CC
-GO:0051171	8.38274190896512e-17	1	342	3588	regulation of nitrogen compound metabolic process	BP
-GO:1901363	4.73487541679147e-16	1	432	4927	heterocyclic compound binding	MF
-GO:0010467	8.76719023516106e-16	1	391	4448	gene expression	BP
-GO:0019219	9.44686119847824e-16	1	322	3352	regulation of nucleobase-containing compound metabolic process	BP
-GO:0005654	1.13387789247632e-15	1	216	1992	nucleoplasm	CC
-GO:0097159	2.60124834476543e-15	1	433	4994	organic cyclic compound binding	MF
-GO:0051252	4.65961942817852e-15	1	296	3034	regulation of RNA metabolic process	BP
-GO:0010468	2.08807717287737e-14	1	329	3562	regulation of gene expression	BP
-GO:2000112	2.30490736873663e-14	1	309	3267	regulation of cellular macromolecule biosynthetic process	BP
-GO:0043229	2.34498585606147e-14	1	765	10485	intracellular organelle	CC
-GO:0044271	3.62780161938675e-14	1	350	3939	cellular nitrogen compound biosynthetic process	BP
-GO:0034654	3.74527870124323e-14	1	313	3343	nucleobase-containing compound biosynthetic process	BP
-GO:0018130	8.637855475361e-14	1	315	3395	heterocycle biosynthetic process	BP
-GO:0003677	8.88137906476337e-14	1	202	1892	DNA binding	MF
-GO:0010556	1.03006601482676e-13	1	312	3354	regulation of macromolecule biosynthetic process	BP
-GO:0034645	1.85353963246396e-13	1	353	3994	cellular macromolecule biosynthetic process	BP
-GO:0044446	1.93133072435656e-13	1	474	5919	intracellular organelle part	CC
-GO:0031326	2.37976070503911e-13	1	321	3502	regulation of cellular biosynthetic process	BP
-GO:0032774	2.5621300162191e-13	1	286	3004	RNA biosynthetic process	BP
-GO:0019438	2.71955262885199e-13	1	314	3411	aromatic compound biosynthetic process	BP
-GO:0097659	4.67274127812875e-13	1	284	2990	nucleic acid-templated transcription	BP
-GO:0006325	6.01808880421449e-13	1	89	644	chromatin organization	BP
-GO:0006351	7.0493589961774e-13	1	283	2987	transcription, DNA-templated	BP
-GO:0009059	7.37563733643045e-13	1	357	4097	macromolecule biosynthetic process	BP
-GO:0044422	8.25621656983866e-13	1	482	6087	organelle part	CC
-GO:2001141	1.04323015066283e-12	1	278	2925	regulation of RNA biosynthetic process	BP
-GO:0044260	1.31022638920983e-12	1	537	6828	cellular macromolecule metabolic process	BP
-GO:1903506	1.48427492291439e-12	1	277	2918	regulation of nucleic acid-templated transcription	BP
-GO:0009889	1.58405937254214e-12	1	321	3559	regulation of biosynthetic process	BP
-GO:1901362	1.69421164307634e-12	1	316	3495	organic cyclic compound biosynthetic process	BP
-GO:0006355	2.22545348857598e-12	1	276	2915	regulation of transcription, DNA-templated	BP
-GO:0043228	2.66981197222989e-12	1	316	3598	non-membrane-bounded organelle	CC
-GO:0043232	2.66981197222989e-12	1	316	3598	intracellular non-membrane-bounded organelle	CC
-GO:0003723	7.20442542463814e-12	1	156	1521	RNA binding	MF
-GO:0044451	8.26222930330982e-12	1	84	602	nucleoplasm part	CC
-GO:0043231	1.23411392728936e-11	1	694	9557	intracellular membrane-bounded organelle	CC
-GO:0044249	6.99828384367512e-11	1	393	4804	cellular biosynthetic process	BP
-GO:1901576	1.17676728995839e-10	1	398	4895	organic substance biosynthetic process	BP
-GO:0016569	3.312476564397e-10	1	70	480	chromatin modification	BP
-GO:0044822	5.10082941874447e-10	1	119	1123	poly(A) RNA binding	MF
-GO:0009058	5.3321388796406e-10	1	399	4971	biosynthetic process	BP
-GO:0006974	6.10625553692522e-10	1	81	638	cellular response to DNA damage stimulus	BP
-GO:0006396	1.99067104886777e-09	1	85	736	RNA processing	BP
-GO:0043170	2.05066248743437e-09	1	555	7434	macromolecule metabolic process	BP
-GO:0031323	2.83988281469791e-09	1	394	4881	regulation of cellular metabolic process	BP
-GO:0060255	3.7369922255486e-09	1	391	4863	regulation of macromolecule metabolic process	BP
-GO:0080090	3.91317099248643e-09	1	390	4834	regulation of primary metabolic process	BP
-GO:0005694	5.41777093234505e-09	1	98	885	chromosome	CC
-GO:0016071	2.0675443669167e-08	1	63	491	mRNA metabolic process	BP
-GO:0044237	3.51150599734664e-08	1	603	8369	cellular metabolic process	BP
-GO:0006259	3.78159207361734e-08	1	90	802	DNA metabolic process	BP
-GO:0019222	3.91303024724232e-08	1	406	5191	regulation of metabolic process	BP
-GO:0018205	3.99387173089002e-08	1	45	289	peptidyl-lysine modification	BP
-GO:0043226	4.11097406258879e-08	1	789	11479	organelle	CC
-GO:0051172	5.40658150439356e-08	1	133	1332	negative regulation of nitrogen compound metabolic process	BP
-GO:0044450	6.16897945289378e-08	0.999999984735956	27	128	microtubule organizing center part	CC
-GO:0016570	6.90337450267492e-08	1	54	377	histone modification	BP
-GO:0006281	7.61107185782338e-08	1	54	402	DNA repair	BP
-GO:0006333	9.43836124719182e-08	0.999999977974224	24	135	chromatin assembly or disassembly	BP
-GO:0008170	1.29190125876393e-07	0.999999967500209	26	133	N-methyltransferase activity	MF
-GO:0000785	1.54477809392313e-07	1	56	455	chromatin	CC
-GO:0044238	1.77611220838498e-07	1	597	8342	primary metabolic process	BP
-GO:2000113	2.05201177935467e-07	1	120	1192	negative regulation of cellular macromolecule biosynthetic process	BP
-GO:0031327	2.89230065954661e-07	1	127	1291	negative regulation of cellular biosynthetic process	BP
-GO:0008276	3.02727497371431e-07	0.999999919916704	26	138	protein methyltransferase activity	MF
-GO:0016278	3.29416294804011e-07	0.999999918330442	24	120	lysine N-methyltransferase activity	MF
-GO:0016279	3.29416294804011e-07	0.999999918330442	24	120	protein-lysine N-methyltransferase activity	MF
-GO:0044427	3.33559168310097e-07	1	83	784	chromosomal part	CC
-GO:0009890	5.04055128489902e-07	1	128	1320	negative regulation of biosynthetic process	BP
-GO:0006479	5.67255601330734e-07	0.999999835708385	28	151	protein methylation	BP
-GO:0008213	5.67255601330734e-07	0.999999835708385	28	151	protein alkylation	BP
-GO:0008380	7.27553992135367e-07	0.999999725280081	43	325	RNA splicing	BP
-GO:0045934	7.8967076405816e-07	0.999999706309507	118	1181	negative regulation of nucleobase-containing compound metabolic process	BP
-GO:0016772	8.60799158866346e-07	0.999999692200976	95	867	transferase activity, transferring phosphorus-containing groups	MF
-GO:0010558	1.18565355860154e-06	0.999999554387928	121	1239	negative regulation of macromolecule biosynthetic process	BP
-GO:0016571	1.38789819349477e-06	0.999999625302666	24	120	histone methylation	BP
-GO:0018022	1.42386424290266e-06	0.999999642188085	22	105	peptidyl-lysine methylation	BP
-GO:0016604	1.78822262155917e-06	0.999999349583877	36	233	nuclear body	CC
-GO:0018026	1.7971399647197e-06	0.999999965110091	6	8	peptidyl-lysine monomethylation	BP
-GO:0008757	2.16171115005845e-06	0.999999319829949	28	173	S-adenosylmethionine-dependent methyltransferase activity	MF
-GO:0016607	2.20455412009737e-06	0.999999450668232	21	101	nuclear speck	CC
-GO:0010608	2.42582512367172e-06	0.999999020696561	45	356	posttranscriptional regulation of gene expression	BP
-GO:0006397	2.60086505316089e-06	0.999998983173438	49	399	mRNA processing	BP
-GO:0003682	3.31030434882437e-06	0.999998592360866	62	510	chromatin binding	MF
-GO:0008168	3.75345786156182e-06	0.999998750182877	29	190	methyltransferase activity	MF
-GO:0005488	3.88314840600699e-06	0.999997563804011	776	11346	binding	MF
-GO:0043227	4.46946908627982e-06	0.999997009332164	727	10657	membrane-bounded organelle	CC
-GO:0016741	4.73853412664091e-06	0.999998367119256	30	201	transferase activity, transferring one-carbon groups	MF
-GO:0010629	6.55541273713124e-06	0.999996172358891	125	1343	negative regulation of gene expression	BP
-GO:0000375	7.08967812678649e-06	0.999997497981603	30	209	RNA splicing, via transesterification reactions	BP
-GO:0071704	8.50245065910164e-06	0.999993900527799	615	8810	organic substance metabolic process	BP
-GO:0016423	1.11511729858257e-05	0.999997359230681	17	88	tRNA (guanine) methyltransferase activity	MF
-GO:0008152	1.12261299437001e-05	0.999991813199053	636	9196	metabolic process	BP
-GO:0032259	1.27420696467207e-05	0.999994592421358	40	307	methylation	BP
-GO:0005856	1.39794095639153e-05	0.99999094912033	164	1849	cytoskeleton	CC
-GO:0005814	1.51621216511844e-05	0.999996164332295	18	88	centriole	CC
-GO:0043414	1.57889115144997e-05	0.99999376987605	34	238	macromolecule methylation	BP
-GO:0051253	1.66318722228649e-05	0.999990255759725	103	1056	negative regulation of RNA metabolic process	BP
-GO:0000377	1.74071042105867e-05	0.999993657675076	29	208	RNA splicing, via transesterification reactions with bulged adenosine as nucleophile	BP
-GO:0000398	1.74071042105867e-05	0.999993657675076	29	208	mRNA splicing, via spliceosome	BP
-GO:0004809	1.76801968420558e-05	0.999995877732383	16	82	tRNA (guanine-N2-)-methyltransferase activity	MF
-GO:0006366	1.84710051023517e-05	0.999987988051651	154	1715	transcription from RNA polymerase II promoter	BP
-GO:0018024	1.93787771168051e-05	0.999996744299107	12	42	histone-lysine N-methyltransferase activity	MF
-GO:0044454	1.94543740709681e-05	0.999990550160761	53	485	nuclear chromosome part	CC
-GO:0015630	1.97268897156893e-05	0.999988551948475	97	980	microtubule cytoskeleton	CC
-GO:0016779	1.98591611163246e-05	0.999994339471548	20	118	nucleotidyltransferase activity	MF
-GO:0032991	2.00370562176859e-05	0.999985379593594	338	4587	macromolecular complex	CC
-GO:0006417	2.26986187811331e-05	0.999990423439844	37	300	regulation of translation	BP
-GO:0043933	2.30488325764166e-05	0.999984634284203	167	1973	macromolecular complex subunit organization	BP
-GO:0034968	2.68499813962741e-05	0.99999256223501	19	97	histone lysine methylation	BP
-GO:0043484	2.77081410375158e-05	0.999992242375738	19	106	regulation of RNA splicing	BP
-GO:0009008	2.99756995952481e-05	0.999992670813264	16	84	DNA-methyltransferase activity	MF
-GO:0034248	3.28696401602256e-05	0.999985517030266	39	327	regulation of cellular amide metabolic process	BP
-GO:0005730	3.45455997291941e-05	0.999981158977449	69	691	nucleolus	CC
-GO:0031497	3.63171798136125e-05	0.999990320279277	17	114	chromatin assembly	BP
-GO:0005815	3.73676339282133e-05	0.999980471192112	60	550	microtubule organizing center	CC
-GO:0016273	3.9234306017841e-05	0.999990147978841	16	87	arginine N-methyltransferase activity	MF
-GO:0016274	3.9234306017841e-05	0.999990147978841	16	87	protein-arginine N-methyltransferase activity	MF
-GO:1903507	3.99201183823712e-05	0.999975946141755	97	997	negative regulation of nucleic acid-templated transcription	BP
-GO:0008175	4.3544219278034e-05	0.999988378623051	17	96	tRNA methyltransferase activity	MF
-GO:0006323	4.68357768168185e-05	0.999985080208171	21	154	DNA packaging	BP
-GO:0005813	5.05071243575498e-05	0.999974330686801	53	473	centrosome	CC
-GO:0042054	5.49372712516213e-05	0.999988486313959	13	55	histone methyltransferase activity	MF
-GO:0000228	5.76673833692349e-05	0.99997028415941	54	516	nuclear chromosome	CC
-GO:0070577	5.82372487687116e-05	0.999995264288759	7	15	lysine-acetylated histone binding	MF
-GO:0045892	6.05837281908643e-05	0.999963008351566	96	995	negative regulation of transcription, DNA-templated	BP
-GO:0000179	6.21620534359089e-05	0.999984593878999	15	81	rRNA (adenine-N6,N6-)-dimethyltransferase activity	MF
-GO:0008650	6.21620534359089e-05	0.999984593878999	15	81	rRNA (uridine-2'-O-)-methyltransferase activity	MF
-GO:0008988	6.21620534359089e-05	0.999984593878999	15	81	rRNA (adenine-N6-)-methyltransferase activity	MF
-GO:0009383	6.21620534359089e-05	0.999984593878999	15	81	rRNA (cytosine-C5-)-methyltransferase activity	MF
-GO:0016205	6.21620534359089e-05	0.999984593878999	15	81	selenocysteine methyltransferase activity	MF
-GO:0016433	6.21620534359089e-05	0.999984593878999	15	81	rRNA (adenine) methyltransferase activity	MF
-GO:0016434	6.21620534359089e-05	0.999984593878999	15	81	rRNA (cytosine) methyltransferase activity	MF
-GO:0016435	6.21620534359089e-05	0.999984593878999	15	81	rRNA (guanine) methyltransferase activity	MF
-GO:0018707	6.21620534359089e-05	0.999984593878999	15	81	1-phenanthrol methyltransferase activity	MF
-GO:0019702	6.21620534359089e-05	0.999984593878999	15	81	protein-arginine N5-methyltransferase activity	MF
-GO:0034541	6.21620534359089e-05	0.999984593878999	15	81	dimethylarsinite methyltransferase activity	MF
-GO:0034807	6.21620534359089e-05	0.999984593878999	15	81	4,5-dihydroxybenzo(a)pyrene methyltransferase activity	MF
-GO:0034931	6.21620534359089e-05	0.999984593878999	15	81	1-hydroxypyrene methyltransferase activity	MF
-GO:0034933	6.21620534359089e-05	0.999984593878999	15	81	1-hydroxy-6-methoxypyrene methyltransferase activity	MF
-GO:0043770	6.21620534359089e-05	0.999984593878999	15	81	demethylmenaquinone methyltransferase activity	MF
-GO:0043776	6.21620534359089e-05	0.999984593878999	15	81	cobalt-precorrin-6B C5-methyltransferase activity	MF
-GO:0043777	6.21620534359089e-05	0.999984593878999	15	81	cobalt-precorrin-7 C15-methyltransferase activity	MF
-GO:0043780	6.21620534359089e-05	0.999984593878999	15	81	cobalt-precorrin-5B C1-methyltransferase activity	MF
-GO:0043782	6.21620534359089e-05	0.999984593878999	15	81	cobalt-precorrin-3 C17-methyltransferase activity	MF
-GO:0043791	6.21620534359089e-05	0.999984593878999	15	81	dimethylamine methyltransferase activity	MF
-GO:0043803	6.21620534359089e-05	0.999984593878999	15	81	hydroxyneurosporene-O-methyltransferase activity	MF
-GO:0043827	6.21620534359089e-05	0.999984593878999	15	81	tRNA (adenine-57, 58-N(1)-) methyltransferase activity	MF
-GO:0043833	6.21620534359089e-05	0.999984593878999	15	81	methylamine-specific methylcobalamin:coenzyme M methyltransferase activity	MF
-GO:0043834	6.21620534359089e-05	0.999984593878999	15	81	trimethylamine methyltransferase activity	MF
-GO:0043851	6.21620534359089e-05	0.999984593878999	15	81	methanol-specific methylcobalamin:coenzyme M methyltransferase activity	MF
-GO:0043852	6.21620534359089e-05	0.999984593878999	15	81	monomethylamine methyltransferase activity	MF
-GO:0051994	6.21620534359089e-05	0.999984593878999	15	81	P-methyltransferase activity	MF
-GO:0051995	6.21620534359089e-05	0.999984593878999	15	81	Se-methyltransferase activity	MF
-GO:0052624	6.21620534359089e-05	0.999984593878999	15	81	2-phytyl-1,4-naphthoquinone methyltransferase activity	MF
-GO:0052665	6.21620534359089e-05	0.999984593878999	15	81	tRNA (uracil-2'-O-)-methyltransferase activity	MF
-GO:0052666	6.21620534359089e-05	0.999984593878999	15	81	tRNA (cytosine-2'-O-)-methyltransferase activity	MF
-GO:0052667	6.21620534359089e-05	0.999984593878999	15	81	phosphomethylethanolamine N-methyltransferase activity	MF
-GO:0052735	6.21620534359089e-05	0.999984593878999	15	81	tRNA (cytosine-3-)-methyltransferase activity	MF
-GO:0070677	6.21620534359089e-05	0.999984593878999	15	81	rRNA (cytosine-2'-O-)-methyltransferase activity	MF
-GO:0071424	6.21620534359089e-05	0.999984593878999	15	81	rRNA (cytosine-N4-)-methyltransferase activity	MF
-GO:0080012	6.21620534359089e-05	0.999984593878999	15	81	trihydroxyferuloyl spermidine O-methyltransferase activity	MF
-GO:1902679	6.4509316548968e-05	0.999960442605722	97	1011	negative regulation of RNA biosynthetic process	BP
-GO:0018423	6.96396741794783e-05	0.999982538851917	15	82	protein C-terminal leucine carboxyl O-methyltransferase activity	MF
-GO:0009019	7.0970011424175e-05	0.999982174238283	15	82	tRNA (guanine-N1-)-methyltransferase activity	MF
-GO:0030792	7.11818752450188e-05	0.99998211611126	15	82	methylarsonite methyltransferase activity	MF
-GO:0008649	7.23000129245202e-05	0.999981809067558	15	82	rRNA methyltransferase activity	MF
-GO:0016436	7.23000129245202e-05	0.999981809067558	15	82	rRNA (uridine) methyltransferase activity	MF
-GO:0016426	7.25412010248923e-05	0.999981742777247	15	82	tRNA (adenine) methyltransferase activity	MF
-GO:0016429	7.25412010248923e-05	0.999981742777247	15	82	tRNA (adenine-N1-)-methyltransferase activity	MF
-GO:0008169	7.35498463545826e-05	0.999981465325861	15	82	C-methyltransferase activity	MF
-GO:0008425	7.35498463545826e-05	0.999981465325861	15	82	2-polyprenyl-6-methoxy-1,4-benzoquinone methyltransferase activity	MF
-GO:0030580	7.35498463545826e-05	0.999981465325861	15	82	quinone cofactor methyltransferase activity	MF
-GO:0016458	7.43198875373002e-05	0.999972746750465	25	189	gene silencing	BP
-GO:0000790	7.46001138689466e-05	0.999966954916238	36	300	nuclear chromatin	CC
-GO:0007051	7.54217941347985e-05	0.999978027427666	18	101	spindle organization	BP
-GO:1903311	7.74088293492339e-05	0.999974745956134	21	127	regulation of mRNA metabolic process	BP
-GO:0006338	8.15949072694726e-05	0.999974114820129	20	121	chromatin remodeling	BP
-GO:0042393	8.54723035359294e-05	0.999969231046853	24	168	histone binding	MF
-GO:0016300	8.74681186344187e-05	0.999977576091522	15	83	tRNA (uracil) methyltransferase activity	MF
-GO:0016427	8.76618134787727e-05	0.999977521822376	15	83	tRNA (cytosine) methyltransferase activity	MF
-GO:0016428	8.76618134787727e-05	0.999977521822376	15	83	tRNA (cytosine-5-)-methyltransferase activity	MF
-GO:0006357	8.93533344836583e-05	0.999939684674586	146	1654	regulation of transcription from RNA polymerase II promoter	BP
-GO:0044464	9.2529606440086e-05	0.999933257400885	899	13754	cell part	CC
-GO:0005623	9.4640650525255e-05	0.999931708135522	899	13756	cell	CC
-GO:0008172	9.87645915608668e-05	0.999974336855198	15	85	S-methyltransferase activity	MF
-GO:0003880	9.92361405004922e-05	0.999974230509098	15	84	protein C-terminal carboxyl O-methyltransferase activity	MF
-GO:0040029	0.000109554267573632	0.999957857956145	26	200	regulation of gene expression, epigenetic	BP
-GO:0008173	0.000117064011549618	0.99996583356842	17	103	RNA methyltransferase activity	MF
-GO:0003887	0.000136801070732797	0.999981941441478	8	27	DNA-directed DNA polymerase activity	MF
-GO:0008174	0.000140008082049301	0.9999623727927	15	86	mRNA methyltransferase activity	MF
-GO:0071103	0.000147892659852696	0.999945675904826	23	183	DNA conformation change	BP
-GO:0010340	0.00015518999192472	0.999957843328537	15	87	carboxyl-O-methyltransferase activity	MF
-GO:0051998	0.00015518999192472	0.999957843328537	15	87	protein carboxyl O-methyltransferase activity	MF
-GO:0006260	0.000160830437679428	0.999930766984528	31	241	DNA replication	BP
-GO:0070828	0.000164974634831349	0.999986838075446	6	14	heterochromatin organization	BP
-GO:0070603	0.0001954826895069	0.999949210484669	14	71	SWI/SNF superfamily-type complex	CC
-GO:0051254	0.000199358998170489	0.999867416751378	119	1311	positive regulation of RNA metabolic process	BP
-GO:0035278	0.000213864958898992	0.99998207124488	6	14	miRNA mediated inhibition of translation	BP
-GO:0051276	0.000218527634565324	0.999885223519073	48	468	chromosome organization	BP
-GO:0040033	0.000238529066258144	0.999978962836825	6	15	negative regulation of translation, ncRNA-mediated	BP
-GO:0045974	0.000238529066258144	0.999978962836825	6	15	regulation of translation, ncRNA-mediated	BP
-GO:0045071	0.000271633091842779	0.999952370490405	9	39	negative regulation of viral genome replication	BP
-GO:0034728	0.000303517835337145	0.99990617792083	16	122	nucleosome organization	BP
-GO:0004518	0.000321125346480015	0.999869836670323	25	196	nuclease activity	MF
-GO:0004674	0.000341413867398593	0.999816355467222	49	424	protein serine/threonine kinase activity	MF
-GO:0008171	0.000378321773629689	0.999887350323419	15	94	O-methyltransferase activity	MF
-GO:0016773	0.000406877606631296	0.99975465657828	70	672	phosphotransferase activity, alcohol group as acceptor	MF
-GO:0097539	0.000420901984473976	0.999972430971978	5	10	ciliary transition fiber	CC
-GO:0071824	0.000421632203976294	0.999840528431746	21	177	protein-DNA complex subunit organization	BP
-GO:0043565	0.00048351573686146	0.999688734857423	89	942	sequence-specific DNA binding	MF
-GO:0031324	0.0004923441475104	0.999645011132488	165	2027	negative regulation of cellular metabolic process	BP
-GO:0004672	0.000509263783383408	0.999701498789175	61	567	protein kinase activity	MF
-GO:0018023	0.00052855008873672	0.999899029445873	9	37	peptidyl-lysine trimethylation	BP
-GO:0022402	0.000530617129559517	0.999653823089731	93	1036	cell cycle process	BP
+GO:0003677	5.16512944392235e-10	1	202	1210	DNA binding	MF
+GO:0090304	2.36893596766783e-09	1	410	2972	nucleic acid metabolic process	BP
+GO:0051171	9.60777104329065e-09	1	342	2391	regulation of nitrogen compound metabolic process	BP
+GO:0019219	1.12938110384358e-08	1	322	2222	regulation of nucleobase-containing compound metabolic process	BP
+GO:0051252	1.77060772257926e-08	1	296	2015	regulation of RNA metabolic process	BP
+GO:0016070	5.69356486795184e-08	1	363	2637	RNA metabolic process	BP
+GO:0006139	5.8743813337803e-08	1	436	3297	nucleobase-containing compound metabolic process	BP
+GO:0010468	8.15009116903445e-08	1	329	2327	regulation of gene expression	BP
+GO:0046483	9.08953412747191e-08	1	441	3355	heterocycle metabolic process	BP
+GO:0003676	1.33348303341654e-07	1	329	2391	nucleic acid binding	MF
+GO:0034654	1.74333326046256e-07	1	313	2224	nucleobase-containing compound biosynthetic process	BP
+GO:0006725	1.81559136064648e-07	1	441	3374	cellular aromatic compound metabolic process	BP
+GO:2000112	3.03452275889105e-07	1	309	2189	regulation of cellular macromolecule biosynthetic process	BP
+GO:2001141	3.04015032392721e-07	1	278	1928	regulation of RNA biosynthetic process	BP
+GO:0032774	3.30506824352805e-07	1	286	2001	RNA biosynthetic process	BP
+GO:1903506	3.67982883391635e-07	1	277	1923	regulation of nucleic acid-templated transcription	BP
+GO:0031326	3.92084407753287e-07	1	321	2298	regulation of cellular biosynthetic process	BP
+GO:0018130	3.98619952545638e-07	1	315	2263	heterocycle biosynthetic process	BP
+GO:0097659	4.21127484111655e-07	1	284	1989	nucleic acid-templated transcription	BP
+GO:0006355	4.65225563759515e-07	1	276	1920	regulation of transcription, DNA-templated	BP
+GO:1901360	7.50610993191924e-07	0.999999682879042	446	3444	organic cyclic compound metabolic process	BP
+GO:0006351	9.015680508992e-07	0.999999629075067	283	1986	transcription, DNA-templated	BP
+GO:0019438	9.24162307783186e-07	0.999999616579094	314	2261	aromatic compound biosynthetic process	BP
+GO:0006325	1.10212083627908e-06	0.999999614664301	89	483	chromatin organization	BP
+GO:0044450	1.3181434792472e-06	0.99999963335958	27	90	microtubule organizing center part	CC
+GO:0010556	1.74619674717245e-06	0.999999041003359	312	2240	regulation of macromolecule biosynthetic process	BP
+GO:1901362	4.19501081116692e-06	0.999997265920741	316	2306	organic cyclic compound biosynthetic process	BP
+GO:0009889	4.59833055398718e-06	0.999996995980516	321	2336	regulation of biosynthetic process	BP
+GO:0006333	5.10247511606473e-06	0.999998580317482	24	82	chromatin assembly or disassembly	BP
+GO:0005634	2.61268152131887e-05	0.999980425526598	543	4416	nucleus	CC
+GO:0043565	4.00248849651574e-05	0.999976926441384	89	514	sequence-specific DNA binding	MF
+GO:0044271	4.24404810872505e-05	0.999968599777846	350	2686	cellular nitrogen compound biosynthetic process	BP
+GO:0034641	4.41176542486541e-05	0.999966656558725	465	3739	cellular nitrogen compound metabolic process	BP
+GO:0018026	4.61111125024526e-05	0.999998370523501	6	8	peptidyl-lysine monomethylation	BP
+GO:0005814	6.89860773851524e-05	0.999981322235353	18	60	centriole	CC
+GO:0016569	9.20031434826495e-05	0.999948707557587	70	394	chromatin modification	BP
+GO:0051172	0.000100578559617231	0.999933862136901	133	864	negative regulation of nitrogen compound metabolic process	BP

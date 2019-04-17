@@ -1,170 +1,18 @@
 category	over_represented_pvalue	under_represented_pvalue	numDEInCat	numInCat	term	ontology
-GO:0005634	1.20016148475574e-28	1	773	6077	nucleus	CC
-GO:0090304	7.17003786414679e-22	1	568	4158	nucleic acid metabolic process	BP
-GO:0044428	1.58035031302135e-19	1	445	3196	nuclear part	CC
-GO:0044260	2.93840621297148e-19	1	818	6828	cellular macromolecule metabolic process	BP
-GO:0016070	3.57123091821842e-19	1	512	3717	RNA metabolic process	BP
-GO:0031981	3.13203374918652e-18	1	395	2749	nuclear lumen	CC
-GO:0006139	2.63673659969217e-17	1	590	4658	nucleobase-containing compound metabolic process	BP
-GO:0005654	2.27177971218532e-16	1	313	1992	nucleoplasm	CC
-GO:0046483	3.84259127906842e-16	1	592	4751	heterocycle metabolic process	BP
-GO:0070013	4.24895476442273e-16	1	407	3053	intracellular organelle lumen	CC
-GO:0043170	4.71849270486264e-16	1	852	7434	macromolecule metabolic process	BP
-GO:0031974	6.03974909334052e-16	1	407	3058	membrane-enclosed lumen	CC
-GO:0043233	6.03974909334052e-16	1	407	3058	organelle lumen	CC
-GO:0051252	9.81787523783142e-16	1	436	3034	regulation of RNA metabolic process	BP
-GO:0006725	1.19886879850599e-15	1	595	4812	cellular aromatic compound metabolic process	BP
-GO:0019219	2.50040361010532e-15	1	469	3352	regulation of nucleobase-containing compound metabolic process	BP
-GO:0003676	3.31085082480976e-15	1	434	3257	nucleic acid binding	MF
-GO:0010467	3.3898073518935e-15	1	557	4448	gene expression	BP
-GO:0051171	2.78923045663643e-14	1	487	3588	regulation of nitrogen compound metabolic process	BP
-GO:0034641	7.46751855239705e-14	1	619	5271	cellular nitrogen compound metabolic process	BP
-GO:0010556	8.76108154211799e-14	1	458	3354	regulation of macromolecule biosynthetic process	BP
-GO:2000112	1.13335564989494e-13	1	450	3267	regulation of cellular macromolecule biosynthetic process	BP
-GO:0010468	1.37241896666462e-13	1	480	3562	regulation of gene expression	BP
-GO:1901360	1.43455570436602e-13	1	596	4955	organic cyclic compound metabolic process	BP
-GO:0006351	1.58513378782956e-13	1	419	2987	transcription, DNA-templated	BP
-GO:0032774	1.75840336948113e-13	1	420	3004	RNA biosynthetic process	BP
-GO:0097659	1.77955315065712e-13	1	419	2990	nucleic acid-templated transcription	BP
-GO:2001141	2.41501663112647e-13	1	412	2925	regulation of RNA biosynthetic process	BP
-GO:0006355	3.05220671357335e-13	1	411	2915	regulation of transcription, DNA-templated	BP
-GO:1903506	3.42479838130603e-13	1	411	2918	regulation of nucleic acid-templated transcription	BP
-GO:0044446	2.06192614435259e-12	1	665	5919	intracellular organelle part	CC
-GO:0060255	2.48004216457422e-12	1	603	4863	regulation of macromolecule metabolic process	BP
-GO:0034645	3.06919858328219e-12	1	505	3994	cellular macromolecule biosynthetic process	BP
-GO:0009059	4.58874786752897e-12	1	513	4097	macromolecule biosynthetic process	BP
-GO:0009889	7.30083182131874e-12	1	468	3559	regulation of biosynthetic process	BP
-GO:0044422	1.0525022605507e-11	1	678	6087	organelle part	CC
-GO:0043231	1.18857985733119e-11	1	988	9557	intracellular membrane-bounded organelle	CC
-GO:0034654	1.52373354332988e-11	1	441	3343	nucleobase-containing compound biosynthetic process	BP
-GO:0031326	2.30070228255205e-11	1	460	3502	regulation of cellular biosynthetic process	BP
-GO:0019438	3.12363309272046e-11	1	446	3411	aromatic compound biosynthetic process	BP
-GO:0019787	3.1621562714129e-11	1	88	404	ubiquitin-like protein transferase activity	MF
-GO:1990234	3.22112698850095e-11	1	121	680	transferase complex	CC
-GO:0004842	3.35591969368823e-11	1	86	390	ubiquitin-protein transferase activity	MF
-GO:0006807	3.71032845799912e-11	1	628	5576	nitrogen compound metabolic process	BP
-GO:0018130	4.09988089082981e-11	1	443	3395	heterocycle biosynthetic process	BP
-GO:0080090	6.2856999817791e-11	1	592	4834	regulation of primary metabolic process	BP
-GO:0044238	8.19361199107351e-11	1	887	8342	primary metabolic process	BP
-GO:0031323	8.54551768065608e-11	1	597	4881	regulation of cellular metabolic process	BP
-GO:0070647	1.25491180375663e-10	1	122	678	protein modification by small protein conjugation or removal	BP
-GO:0044237	1.7458423863386e-10	1	886	8369	cellular metabolic process	BP
-GO:0019222	1.91169744933971e-10	1	623	5191	regulation of metabolic process	BP
-GO:1902494	2.31256893869577e-10	1	156	1046	catalytic complex	CC
-GO:0043229	3.02583722136772e-10	1	1073	10485	intracellular organelle	CC
-GO:1901362	3.88470823416896e-10	1	446	3495	organic cyclic compound biosynthetic process	BP
-GO:0016740	4.64571979492366e-10	1	293	2132	transferase activity	MF
-GO:0016071	5.35018020858681e-10	1	87	491	mRNA metabolic process	BP
-GO:0043412	8.6060357514552e-10	1	424	3237	macromolecule modification	BP
-GO:0016881	8.76807400126685e-10	1	61	249	acid-amino acid ligase activity	MF
-GO:0070739	8.88348309154585e-10	1	60	240	protein-glutamic acid ligase activity	MF
-GO:0016569	9.68652909927284e-10	1	100	480	chromatin modification	BP
-GO:0044271	1.14984179186982e-09	1	476	3939	cellular nitrogen compound biosynthetic process	BP
-GO:0008766	1.24609400088649e-09	1	59	236	UDP-N-acetylmuramoylalanyl-D-glutamyl-2,6-diaminopimelate-D-alanyl-D-alanine ligase activity	MF
-GO:0018169	1.24609400088649e-09	1	59	236	ribosomal S6-glutamic acid ligase activity	MF
-GO:0043773	1.24609400088649e-09	1	59	236	coenzyme F420-0 gamma-glutamyl ligase activity	MF
-GO:0043774	1.24609400088649e-09	1	59	236	coenzyme F420-2 alpha-glutamyl ligase activity	MF
-GO:0070735	1.24609400088649e-09	1	59	236	protein-glycine ligase activity	MF
-GO:0070736	1.24609400088649e-09	1	59	236	protein-glycine ligase activity, initiating	MF
-GO:0070737	1.24609400088649e-09	1	59	236	protein-glycine ligase activity, elongating	MF
-GO:0070738	1.24609400088649e-09	1	59	236	tubulin-glycine ligase activity	MF
-GO:0070740	1.81014994118489e-09	1	59	238	tubulin-glutamic acid ligase activity	MF
-GO:0006325	2.08032246208694e-09	1	115	644	chromatin organization	BP
-GO:0044265	6.83496665037177e-09	1	121	769	cellular macromolecule catabolic process	BP
-GO:0006511	8.89292290250142e-09	1	86	481	ubiquitin-dependent protein catabolic process	BP
-GO:0006397	1.14085388951212e-08	1	68	399	mRNA processing	BP
-GO:0044451	1.17085274245238e-08	1	107	602	nucleoplasm part	CC
-GO:0005694	1.24509700426829e-08	1	135	885	chromosome	CC
-GO:0016879	1.248070259208e-08	1	63	281	ligase activity, forming carbon-nitrogen bonds	MF
-GO:0043632	1.32573171632549e-08	1	87	497	modification-dependent macromolecule catabolic process	BP
-GO:0071704	1.49778272807709e-08	1	908	8810	organic substance metabolic process	BP
-GO:1901363	1.52180647745454e-08	1	579	4927	heterocyclic compound binding	MF
-GO:0019941	2.03332888641417e-08	1	86	490	modification-dependent protein catabolic process	BP
-GO:0003677	2.036864631969e-08	1	267	1892	DNA binding	MF
-GO:0016567	2.39505715615576e-08	1	95	531	protein ubiquitination	BP
-GO:0097159	2.51684906000034e-08	1	583	4994	organic cyclic compound binding	MF
-GO:0044424	2.91913940120697e-08	1	1191	12057	intracellular part	CC
-GO:0051603	4.95830518238104e-08	1	93	572	proteolysis involved in cellular protein catabolic process	BP
-GO:0005622	6.15352494769203e-08	1	1197	12159	intracellular	CC
-GO:0008380	7.05311593420107e-08	1	54	325	RNA splicing	BP
-GO:0003723	7.13001423227522e-08	1	188	1521	RNA binding	MF
-GO:0016570	7.61684482662168e-08	1	79	377	histone modification	BP
-GO:0005815	8.44807134391922e-08	1	92	550	microtubule organizing center	CC
-GO:0001071	9.03301718737411e-08	1	161	1007	nucleic acid binding transcription factor activity	MF
-GO:0003700	9.03301718737411e-08	1	161	1007	transcription factor activity, sequence-specific DNA binding	MF
-GO:0032446	1.27865584222738e-07	1	97	570	protein modification by small protein conjugation	BP
-GO:0044257	1.40484682224739e-07	1	95	604	cellular protein catabolic process	BP
-GO:0008152	1.40661915415677e-07	1	928	9196	metabolic process	BP
-GO:0006464	1.47683216571282e-07	1	387	3017	cellular protein modification process	BP
-GO:0036211	1.47683216571282e-07	1	387	3017	protein modification process	BP
-GO:0006396	1.71708445181199e-07	1	98	736	RNA processing	BP
-GO:0007049	1.87136540440108e-07	1	189	1388	cell cycle	BP
-GO:0005813	1.91785027660964e-07	1	80	473	centrosome	CC
-GO:1901576	2.07148032852218e-07	1	547	4895	organic substance biosynthetic process	BP
-GO:0009057	2.69837188791272e-07	1	134	940	macromolecule catabolic process	BP
-GO:0030163	3.81557407631657e-07	1	107	720	protein catabolic process	BP
-GO:0034212	4.18107194359323e-07	0.999999908830647	23	61	peptide N-acetyltransferase activity	MF
-GO:0009058	9.8555913310391e-07	0.999999433123496	550	4971	biosynthetic process	BP
-GO:0044427	1.15312696378453e-06	0.999999572105347	114	784	chromosomal part	CC
-GO:0044249	1.26903582551659e-06	0.999999269654294	535	4804	cellular biosynthetic process	BP
-GO:0019783	1.40610087236623e-06	0.999999591320447	28	100	ubiquitin-like protein-specific protease activity	MF
-GO:1903311	1.78849290453391e-06	0.999999425562457	31	127	regulation of mRNA metabolic process	BP
-GO:0043228	2.34623755963458e-06	0.99999841924678	423	3598	non-membrane-bounded organelle	CC
-GO:0043232	2.34623755963458e-06	0.99999841924678	423	3598	intracellular non-membrane-bounded organelle	CC
-GO:0015630	2.41788948583803e-06	0.99999877112782	145	980	microtubule cytoskeleton	CC
-GO:0036459	2.77771821678892e-06	0.999999228810945	25	87	thiol-dependent ubiquitinyl hydrolase activity	MF
-GO:0101005	2.77771821678892e-06	0.999999228810945	25	87	ubiquitinyl hydrolase activity	MF
-GO:0016874	2.89086543651498e-06	0.999998754503182	68	379	ligase activity	MF
-GO:0051236	3.49496005554893e-06	0.999998836378954	31	128	establishment of RNA localization	BP
-GO:0050684	4.1677620367419e-06	0.99999881954324	24	99	regulation of mRNA processing	BP
-GO:0061733	4.59998024355653e-06	0.999998949720749	20	54	peptide-lysine-N-acetyltransferase activity	MF
-GO:0044822	5.49561739425972e-06	0.9999967202376	143	1123	poly(A) RNA binding	MF
-GO:0006974	7.02525599142163e-06	0.999996156655499	94	638	cellular response to DNA damage stimulus	BP
-GO:0006259	7.69555897052043e-06	0.99999558044206	115	802	DNA metabolic process	BP
-GO:0048024	8.36744609694062e-06	0.999998029180737	18	71	regulation of mRNA splicing, via spliceosome	BP
-GO:0008080	8.83223375527004e-06	0.999997251901649	26	101	N-acetyltransferase activity	MF
-GO:0031248	8.86127258306332e-06	0.999997326045375	25	94	protein acetyltransferase complex	CC
-GO:1902493	8.86127258306332e-06	0.999997326045375	25	94	acetyltransferase complex	CC
-GO:0006281	9.64056725669316e-06	0.999995200953994	66	402	DNA repair	BP
-GO:0051028	1.01473377365636e-05	0.999996815877426	26	101	mRNA transport	BP
-GO:0000377	1.18846585502445e-05	0.999995342415582	35	208	RNA splicing, via transesterification reactions with bulged adenosine as nucleophile	BP
-GO:0000398	1.18846585502445e-05	0.999995342415582	35	208	mRNA splicing, via spliceosome	BP
-GO:0050657	1.22751317404661e-05	0.999995775474204	29	125	nucleic acid transport	BP
-GO:0050658	1.22751317404661e-05	0.999995775474204	29	125	RNA transport	BP
-GO:0000375	1.3213273332468e-05	0.999994792776265	35	209	RNA splicing, via transesterification reactions	BP
-GO:0043933	1.39255149893806e-05	0.999990210221528	250	1973	macromolecular complex subunit organization	BP
-GO:0004402	1.681369541357e-05	0.999995910333856	19	53	histone acetyltransferase activity	MF
-GO:0006403	1.78853687988974e-05	0.999993262264596	32	158	RNA localization	BP
-GO:0043484	1.78918048115804e-05	0.999994526607396	23	106	regulation of RNA splicing	BP
-GO:0004843	2.09202692965651e-05	0.999994144273114	21	74	thiol-dependent ubiquitin-specific protease activity	MF
-GO:0043227	2.09286925656384e-05	0.999983743558229	1042	10657	membrane-bounded organelle	CC
-GO:0070646	3.32935653766684e-05	0.999988106905426	28	120	protein modification by small protein removal	BP
-GO:0002328	3.50990819231281e-05	0.999997951357595	7	11	pro-B cell differentiation	BP
-GO:0016410	4.40525669809411e-05	0.999984644658716	26	113	N-acyltransferase activity	MF
-GO:0000123	4.41155066111987e-05	0.999986377892604	22	84	histone acetyltransferase complex	CC
-GO:0016579	4.96938503967235e-05	0.999983090842735	25	101	protein deubiquitination	BP
-GO:0044267	5.89725333834845e-05	0.999954141139243	437	3904	cellular protein metabolic process	BP
-GO:0022402	6.86552992728893e-05	0.999954605680579	137	1036	cell cycle process	BP
-GO:0016407	8.25040823267041e-05	0.999969944522235	26	117	acetyltransferase activity	MF
-GO:0015931	8.36015157681824e-05	0.999966790717586	30	148	nucleobase-containing compound transport	BP
-GO:0007064	0.000101602590468151	0.999983178905057	11	26	mitotic sister chromatid cohesion	BP
-GO:0042787	0.000101722216780625	0.999958118424725	32	144	protein ubiquitination involved in ubiquitin-dependent protein catabolic process	BP
-GO:0061695	0.000111347674803163	0.999948180525443	40	229	transferase complex, transferring phosphorus-containing groups	CC
-GO:0051168	0.000116470796674027	0.999955352938519	27	132	nuclear export	BP
-GO:0016605	0.000126494376234675	0.999961012160328	20	68	PML body	CC
-GO:0000209	0.000126788590302948	0.999944666436544	35	164	protein polyubiquitination	BP
-GO:0071004	0.000166662985204118	0.999986260101858	6	15	U2-type prespliceosome	CC
-GO:0008270	0.000170845308578353	0.999884749700224	134	939	zinc ion binding	MF
-GO:1902562	0.000173208132707411	0.999963557322251	12	39	H4 histone acetyltransferase complex	CC
-GO:0000785	0.00018733761290767	0.999892010867792	68	455	chromatin	CC
-GO:0000245	0.000190648124101526	0.999959038576263	12	41	spliceosomal complex assembly	BP
-GO:0043226	0.000205945646839227	0.999834678319494	1116	11479	organelle	CC
-GO:0098687	0.000208940169036969	0.999891052441654	49	316	chromosomal region	CC
-GO:0061659	0.000222647799824181	0.99989436256544	39	201	ubiquitin-like protein ligase activity	MF
-GO:0000381	0.000248565879618347	0.9999499690592	11	35	regulation of alternative mRNA splicing, via spliceosome	BP
-GO:0006376	0.000262070521329752	0.999959432091023	9	23	mRNA splice site selection	BP
-GO:0061630	0.000292987353697073	0.99986027274121	38	197	ubiquitin protein ligase activity	MF
-GO:0032869	0.000314912382207736	0.999859293149128	33	150	cellular response to insulin stimulus	BP
-GO:0000380	0.000340849216728275	0.99991539023441	13	47	alternative mRNA splicing, via spliceosome	BP
-GO:0008234	0.000355525083553367	0.999839677492851	32	179	cysteine-type peptidase activity	MF
-GO:2000973	0.000370802382663894	0.999984102874311	5	7	regulation of pro-B cell differentiation	BP
+GO:0001071	2.77407378132717e-07	1	161	566	nucleic acid binding transcription factor activity	MF
+GO:0003700	2.77407378132717e-07	1	161	566	transcription factor activity, sequence-specific DNA binding	MF
+GO:0051252	4.27830215007993e-06	0.999997027477887	436	2015	regulation of RNA metabolic process	BP
+GO:0004842	9.95260397261658e-06	0.999994996315474	86	313	ubiquitin-protein transferase activity	MF
+GO:0019219	1.34065912179559e-05	0.999990001372654	469	2222	regulation of nucleobase-containing compound metabolic process	BP
+GO:0019787	1.57471328231967e-05	0.999991453892024	88	326	ubiquitin-like protein transferase activity	MF
+GO:0070739	1.84636972572623e-05	0.999991113939946	60	195	protein-glutamic acid ligase activity	MF
+GO:0016881	2.50808084748286e-05	0.999987792228111	61	204	acid-amino acid ligase activity	MF
+GO:0008766	3.10897713563631e-05	0.999984812954958	59	193	UDP-N-acetylmuramoylalanyl-D-glutamyl-2,6-diaminopimelate-D-alanyl-D-alanine ligase activity	MF
+GO:0018169	3.10897713563631e-05	0.999984812954958	59	193	ribosomal S6-glutamic acid ligase activity	MF
+GO:0043773	3.10897713563631e-05	0.999984812954958	59	193	coenzyme F420-0 gamma-glutamyl ligase activity	MF
+GO:0043774	3.10897713563631e-05	0.999984812954958	59	193	coenzyme F420-2 alpha-glutamyl ligase activity	MF
+GO:0070735	3.10897713563631e-05	0.999984812954958	59	193	protein-glycine ligase activity	MF
+GO:0070736	3.10897713563631e-05	0.999984812954958	59	193	protein-glycine ligase activity, initiating	MF
+GO:0070737	3.10897713563631e-05	0.999984812954958	59	193	protein-glycine ligase activity, elongating	MF
+GO:0070738	3.10897713563631e-05	0.999984812954958	59	193	tubulin-glycine ligase activity	MF
+GO:0070740	3.30039645963277e-05	0.999983829393369	59	194	tubulin-glutamic acid ligase activity	MF

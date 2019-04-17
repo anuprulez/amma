@@ -22,26 +22,14 @@ get_stats_padj  = function(dge_res) {
     return(v)
 }
 
-clean_mat = function(mat){
-    new_mat = mat
-    new_mat[is.na(new_mat)] = 0
-    new_mat = new_mat[rowSums(new_mat) > 0,]
-    return(new_mat)
+get_results = function(dge, contrast, sign_adj_pvalue = 0.05, sign_fc = 1.5){
+    res = results(dge, contrast=contrast, alpha=0.05, test="Wald")
+    return(as.data.frame(res) %>%
+        rownames_to_column('genes') %>%
+        mutate(sign_padj = padj < sign_adj_pvalue) %>%
+        mutate(sign_padj_and_fc = (padj < sign_adj_pvalue & abs(log2FoldChange) >= log2(sign_fc))))
 }
 
-plot_stat_mat = function(stat_mat){
-    #colnames(stat_mat) = c("DEG", "Up-regulated", "Down-regulated")
-    mat = melt(stat_mat)
-    colnames(mat) = c("comp", "type", "value")
-    mat$comp = factor(mat$comp)
-    mat$type = factor(mat$type)
-    ggplot(mat, aes(x = reorder(comp, desc(comp)), y = reorder(type, desc(type)))) +
-        labs(x = "", y = "") +
-        theme_bw() +
-        theme(axis.text.x = element_text(angle = 90, hjust = 1), axis.title.y = element_text(size = rel(1.8)), panel.border = element_blank(), panel.grid.major = element_blank(), panel.grid.minor = element_blank()) +
-        geom_point(aes(size=value,col=value)) +
-        scale_colour_gradient(low = "blue", high="red")
-}
 
 get_interesting_cat = function(wall, data_type, cat_type){
     pvalue_threshold = 0.05
@@ -90,6 +78,96 @@ extract_cat_de_genes = function(selected_cat, cat, sign_fc_deg, cat2genes, file_
     capture.output(cat_de_genes, file = paste(file_prefix, gsub("[(),]", "", gsub(" ", "_", cat)), sep=""))
 }
 
+extract_DEG_log2FC = function(in_l, dir_path){
+    # create dir if it does not exist
+    full_dir_path = paste("../results/dge/", dir_path, sep="")
+    dir.create(full_dir_path, showWarnings = FALSE)
+    l = list()
+    # extract the log2FC of the genes with significant p-value and significant p-value + FC
+    l$fc_deg = dplyr::data_frame(genes=character())
+    l$sign_fc_deg = dplyr::data_frame(genes=character())
+    for(i in names(in_l)){
+        df = in_l[[i]]
+        fc_deg = df %>%
+            filter(sign_padj) %>%
+            select(c(genes, log2FoldChange)) %>%
+            rename(!!i:= log2FoldChange)
+        l$fc_deg = l$fc_deg %>%
+                full_join(fc_deg, by="genes")
+        sign_fc_deg = df %>%
+            filter(sign_padj_and_fc) %>%
+            select(c(genes, log2FoldChange)) %>%
+            rename(!!i:= log2FoldChange)
+        l$sign_fc_deg = l$sign_fc_deg %>%
+                full_join(sign_fc_deg, by="genes")
+    }
+    write.table(l$fc_deg, paste(full_dir_path, "fc_deg", sep=""), sep = "\t", quote = FALSE)
+    write.table(l$sign_fc_deg, paste(full_dir_path, "sign_fc_deg", sep=""), sep = "\t", quote = FALSE)
+    return(l)
+}
+
+nb_non_na = function(vec) return(sum(!is.na(vec)))
+nb_pos = function(vec) return(sum(!is.na(vec) & vec > 0))
+nb_neg = function(vec) return(sum(!is.na(vec) & vec < 0))
+
+extract_DEG_stats = function(l){
+    l$stat = rbind(
+        "All DEG (Wald padj < 0.05)"=l$fc_deg %>% select(-genes) %>% summarise_all(funs(nb_non_na)),
+        "All over-expressed genes (Wald padj < 0.05 & FC > 0)"=l$fc_deg %>% select(-genes) %>% summarise_all(funs(nb_pos)),
+        "All under-expressed genes (Wald padj < 0.05 & FC < 0)"=l$fc_deg %>% select(-genes) %>% summarise_all(funs(nb_neg)),
+        "DEG (Wald padj < 0.05 & abs(FC) >= 1.5)"=l$sign_fc_deg %>% select(-genes) %>% summarise_all(funs(nb_non_na)),
+        "Over-expressed genes (Wald padj < 0.05 & FC >= 1.5)"=l$sign_fc_deg %>% select(-genes) %>% summarise_all(funs(nb_pos)),
+        "Under-expressed genes (Wald padj < 0.05 & FC <= -1.5)"=l$sign_fc_deg %>% select(-genes) %>% summarise_all(funs(nb_neg)))
+    # plot stat
+    mat = melt(as.data.frame(l$stat %>% rownames_to_column('type')))
+    mat$variable = factor(mat$variable)
+    mat$type = factor(mat$type)
+    g = ggplot(mat, aes(x = reorder(variable, desc(variable)), y = reorder(type, desc(type)))) +
+        labs(x = "", y = "") +
+        theme_bw() +
+        theme(axis.text.x = element_text(angle = 90, hjust = 1), axis.title.y = element_text(size = rel(1.8)), panel.border = element_blank(), panel.grid.major = element_blank(), panel.grid.minor = element_blank()) +
+        geom_point(aes(size=value,col=value)) +
+        scale_colour_gradient(low = "blue", high="red")
+    print(g)
+    return(l)
+}
+
+get_boolean_df_wo_genes = function(df){
+    return(1*as.data.frame(df %>% select(-genes) %>% transmute_all(funs(!is.na(.)))))
+}
+
+plot_sign_DEG_upset = function(l, nsets = 6){
+    upset(get_boolean_df_wo_genes(l$fc_deg), nsets = nsets)
+}
+
+plot_sign_FC_DEG_upset = function(l, nsets = 6){
+    upset(get_boolean_df_wo_genes(l$sign_fc_deg), nsets = nsets)
+}
+
+fit_proba_weighting_function = function(l, gene_length){
+    sign_fc_deg = l$sign_fc_deg
+    # prepare a table with 1 for sign DEG and other 0 otherwise, for all comparisons, with the length of the genes
+    genes = sign_fc_deg %>% pull(genes)
+    gene_length_df = dplyr::data_frame(genes = names(gene_length), gene_length = gene_length)               
+    gene_vector = sign_fc_deg %>% 
+        select(-genes) %>% 
+        transmute_all(funs(1*!is.na(.))) %>% 
+        mutate(genes = genes) %>% 
+        full_join(gene_length_df, by='genes') %>% 
+        replace(., is.na(.), 0) %>% 
+        column_to_rownames(genes)
+    gene_length_vec = gene_vector %>% select(c(genes, gene_length)) %>% deframe()
+    # fit the probability weighting function
+    comp = head(colnames(gene_vector),-2)
+    l$pwf = lapply(
+        comp,
+        function(x){
+            data = gene_vector %>% select(c(genes, !!as.name(x))) %>% deframe()
+            return(suppressMessages(nullp(data, 'mm10', 'geneSymbol', plot.fit=F, bias.data=gene_length_vec))))
+    names(l$pwf) = comp
+    return(l)
+}
+
 get_interesting_categories = function(deg, interesting_cat){
     l = sapply(colnames(deg), function(x) interesting_cat[which(!is.na(interesting_cat[,x])),"category"])
     if(dim(deg)[2]>1){
@@ -103,62 +181,12 @@ get_interesting_categories = function(deg, interesting_cat){
     return(l)
 }
 
-extract_diff_expr_genes = function(in_l, dir_path){
-    # create dir if it does not exist
-    full_dir_path = paste("../results/dge/", dir_path, sep="")
-    dir.create(full_dir_path, showWarnings = FALSE)
-    go_dir_path = paste(full_dir_path, "go/", sep="")
+extract_GO_terms = function(l, dir_path){
+    #### GO analysis
+    go_dir_path = paste("../results/dge/", dir_path, "go/", sep="")
     dir.create(go_dir_path, showWarnings = FALSE)
-    kegg_dir_path = paste(full_dir_path, "kegg/", sep="")
-    dir.create(kegg_dir_path, showWarnings = FALSE)
-    l = list()
-    # extract the significant differentially expressed genes (all, upregulated, downregulated)
-    l$deg = sapply(in_l, function(mat) return(mat$padj < 0.05))*1
-    rownames(l$deg) = rownames(in_l[[1]])
-    l$deg = clean_mat(l$deg)
-    l$deg = as.data.frame(l$deg)
-    colnames(l$deg) = names(in_l)
-    deg_names=rownames(l$deg)
-    # extract the log2FC of the significant differentially expressed genes
-    l$fc_deg = sapply(in_l, function(mat) return(mat[deg_names, 'log2FoldChange']))
-    rownames(l$fc_deg) = deg_names
-    l$fc_deg[l$deg == 0] = NA
-    write.table(l$fc_deg, paste(full_dir_path, "fc_deg", sep=""), sep = "\t", quote = FALSE)
-    # extract the sign log2FC (> log2(1.5))
-    l$sign_fc_deg = l$fc_deg
-    l$sign_fc_deg[abs(l$sign_fc_deg) < log2(1.5)] = NA
-    l$sign_fc_deg = l$sign_fc_deg[!apply(is.na(l$sign_fc_deg),1,all),]
-    l$sign_fc_deg = as.data.frame(l$sign_fc_deg)
-    colnames(l$sign_fc_deg) = names(in_l)
-    write.table(l$sign_fc_deg, paste(full_dir_path, "sign_fc_deg", sep=""), sep = "\t", quote = FALSE)
-    # extract stats 
-    deg_stat = colSums(!is.na(l$fc_deg), na.rm = TRUE)
-    pos_deg_stat = colSums(l$fc_deg > 0, na.rm = TRUE)
-    neg_deg_stat = colSums(l$fc_deg < 0, na.rm = TRUE)
-    sign_deg_stat = colSums(!is.na(l$sign_fc_deg), na.rm = TRUE)
-    sign_pos_deg_stat = colSums(l$sign_fc_deg > 0, na.rm = TRUE)
-    sign_neg_deg_stat = colSums(l$sign_fc_deg < 0, na.rm = TRUE)
-    l$stat = cbind(deg_stat, pos_deg_stat, neg_deg_stat, sign_deg_stat, sign_pos_deg_stat, sign_neg_deg_stat)
-    colnames(l$stat) = c("All DEG (Wald padj < 0.05)",
-                         "All over-expressed genes (Wald padj < 0.05 & FC > 0)",
-                         "All under-expressed genes (Wald padj < 0.05 & FC < 0)",
-                         "DEG (Wald padj < 0.05 & abs(FC) >= 1.5)",
-                         "Over-expressed genes (Wald padj < 0.05 & FC >= 1.5)",
-                         "Under-expressed genes (Wald padj < 0.05 & FC <= -1.5)")
-    plot_stat_mat(l$stat)
-    ## GO and KEGG analysis
-    # get gene vector                  
-    gene_vector = matrix(0, ncol = length(colnames(l$sign_fc_deg)), nrow = length(rownames(in_l[[1]])))
-    rownames(gene_vector) = rownames(in_l[[1]])
-    colnames(gene_vector) = colnames(l$sign_fc_deg)
-    assayed_genes_in_sign_genes = rownames(gene_vector)[rownames(gene_vector) %in% rownames(l$sign_fc_deg)]
-    gene_vector[assayed_genes_in_sign_genes,] = 1*(!is.na(l$sign_fc_deg[assayed_genes_in_sign_genes,]))
-    # fit the probability weighting function
-    pwf = lapply(1:dim(gene_vector)[2], function(x) suppressMessages(nullp(gene_vector[,x], 'mm10', 'geneSymbol', plot.fit=F,  bias.data=gene_length)))
-    names(pwf) = colnames(gene_vector)
-    ### GO analysis
     # calculate the over and under expressed GO categories among the DE genes
-    l$GO_wall = lapply(pwf, function(x) suppressMessages(goseq(x, 'mm10', 'geneSymbol')))
+    l$GO_wall = lapply(l$pwf, function(x) suppressMessages(goseq(x, 'mm10', 'geneSymbol')))
     # extract interesting pathways/categories and export them
     l$over_represented_GO = get_interesting_cat(l$GO_wall, "over_represented_pvalue", "GO")
     write.table(l$over_represented_GO, paste(go_dir_path, "full_over_represented_GO", sep=""), sep = "\t", quote = FALSE, row.names = FALSE)
@@ -184,7 +212,13 @@ extract_diff_expr_genes = function(in_l, dir_path){
         extract_cat_de_genes(over_represented_GO[[x]], x, l$sign_fc_deg, full_go_genes, paste(go_dir_path, "over_repr_", sep = ""))
         extract_cat_de_genes(under_represented_GO[[x]], x, l$sign_fc_deg, full_go_genes, paste(go_dir_path, "under_repr_", sep = ""))
     }
-    # KEGG analysis                   
+    return(l)
+}
+
+extract_KEGG_pathways = function(l, dir_path){
+    # KEGG analysis
+    kegg_dir_path = paste("../results/dge/", dir_path, "kegg/", sep="")
+    dir.create(kegg_dir_path, showWarnings = FALSE)            
     # calculate the over and under expressed KEGG pathways among the DE genes
     l$KEGG_wall = lapply(pwf, function(x) suppressMessages(goseq(x, 'mm10', 'geneSymbol', test.cats="KEGG")))
     # extract interesting pathways/categories and export them
@@ -224,13 +258,13 @@ plot_count_heatmap = function(genes, samples, annot){
     plot_heatmap(norm_counts, genes, samples, annot)
 }
 
-plot_heatmap = function(count, genes, samples, annot){
+plot_heatmap = function(count, genes, samples, annot, show_rownames=FALSE){
     data = count[genes,samples]
     breaks = quantile_breaks(data, n = 11)
     pheatmap(data,
              cluster_rows=F,
              cluster_cols=F,
-             show_rownames=F,
+             show_rownames=show_rownames,
              show_colnames=F,
              annotation_col=annot,
              breaks=breaks,
@@ -258,52 +292,15 @@ get_list = function(mapping){
     return(as.list(mapping[mapped_genes]))
 }
 
-# search on Entrez the correct name
-search_name = function(name){
-    search = entrez_search(db="gene",term=name)
-    names = c()
-    for(id in search$ids){
-        sum = entrez_summary(db="gene", id=id)
-        if(sum$organism$scientificname == 'Mus musculus' & grepl(name,sum$otheraliases)){
-            names = c(names, sum$name)
-        }
-    }
-    return(names)
-}
+# 
+
 
 capFirst = function(s) {
     paste(substring(s, 1, 1), tolower(substring(s, 2)), sep = "")
 }
 
 
-plot_net_with_layout = function(net, colors, pal2, layout, add_legend = TRUE){
-    plot(net, 
-        vertex.label=NA,
-        vertex.size=4,
-        vertex.color=pal2[colors],
-        layout=layout)
-    if(add_legend){
-       module_annot = list()
-        module_annot$"1" = "chromatine/chromosome organization/RNA metabolic process"
-        module_annot$"2" = "response to endoplasmic reticulum stress/transport"
-        module_annot$"3" = "metabolic process (ATP, ribonucleoside)"
-        module_annot$"6" = "metabolic process (primary, cellular)"
-        module_annot$"7" = "immune system"
-        module_annot$"8" = "translation/rRNA"
-        module_annot$"10" = "organelle"
-        module_annot$"11" = "localization"
-        legend(x=-1.5,
-            y=-.9,
-            unlist(module_annot),
-            pch=21,
-            col="#777777",
-            pt.bg=pal2[as.integer(names(module_annot))],
-            pt.cex=2,
-            cex=.8,
-            bty="n",
-            ncol=1) 
-    }
-}
+
 
 get_top_go = function(go, top_nb, ont, comp){
     ont_go = go[go$ontology == ont,c(2,4:dim(go)[2])]
@@ -626,54 +623,36 @@ get_genes_in_mod = function(mod_id, connected_gene_colors, gene_subset){
 }
 
 
-plot_z_score_heatmap_with_modules = function(z_scores, deg, col_order, annot_col, title){
-    # Plot the Z-score heatmap with module on the left
-    
-    # get z_score for the DE genes and correct column order
-    data = z_scores[deg, col_order]
-    # get module nb
-    module_nb = length(unique(connected_gene_colors))
-    # get genes per modules
-    module_gene_scores = matrix(0, ncol = dim(norm_counts)[2], nrow = 0)
-    for(mod_id in unique(connected_gene_colors)){
-        genes_in_mod = get_genes_in_mod(mod_id, connected_gene_colors, rownames(data))
-        # add to all genes after a hierarchical clustering inside the module to order the genes
-        if(length(genes_in_mod) != 0){
-            z = data[genes_in_mod,]
-            if(length(genes_in_mod) < 2){
-                z = as.matrix(t(z))
-                rownames(z) = genes_in_mod
-            }else{
-                z = order_rows(z)
-            }
-            module_gene_scores = rbind(module_gene_scores, z)
-        }
+plot_z_score_heatmap_with_modules = function(z_scores, deg, col_order, annot_col, genes_in_modules, title){
+    data = z_scores
+    deg = deg[deg %in% rownames(data)]
+    # get genes ordered by modules
+    genes_in_mod = c()
+    for(x in names(genes_in_modules)){
+        g_in_mod_id = intersect(genes_in_modules[[x]], deg)
+        new_c = rep(x, length(g_in_mod_id))
+        names(new_c) = g_in_mod_id
+        genes_in_mod = c(genes_in_mod, new_c)
     }
-    # add genes not in modules (also ordered)
-    genes_in_mod_to_keep = rownames(module_gene_scores)
-    genes_not_in_mod = rownames(data)[!rownames(data) %in% genes_in_mod_to_keep]
-    module_gene_scores = rbind(module_gene_scores, order_rows(data[genes_not_in_mod,]))
-    # add annotation
-    annot_row = data.frame(module = as.factor(c(paste("ME", connected_gene_colors[genes_in_mod_to_keep], sep=""), 
-                                                rep("No module", length(genes_not_in_mod)))))
-    rownames(annot_row) = c(genes_in_mod_to_keep, genes_not_in_mod)
+    # order the z-score matrix by genes in genes_in_mod
+    data = data[names(genes_in_mod), col_order]
     # plot heatmap
-    pheatmap(module_gene_scores,
+    pheatmap(data[names(genes_in_mod), col_order],
             cluster_rows=F,
             cluster_cols=F,
             show_rownames=F,
             show_colnames=F,
             annotation_col=annot_col,
-            annotation_row=annot_row,
-            annotation_colors = annot_colors,
+            annotation_row=data.frame( module=genes_in_mod),
+            annotation_colors = list( module = pal2),
             color=rev(brewer.pal(11, "RdBu")),
-            breaks = seq(-3.5, 3.5, length=11),
+            breaks = seq(-3.5, 3.5, length=12),
             main = title)
 }
 
-
 plot_z_score_heatmap = function(z_scores, de_genes, col_order, annot_col, title, col_for_clust){
     # get z_score for the DE genes and correct column order
+    de_genes = de_genes[de_genes %in% rownames(z_scores)]
     data = z_scores[de_genes,]
     # cluster rows
     hc = hclust(dist(data[,col_for_clust]), method = "complete")
@@ -687,71 +666,35 @@ plot_z_score_heatmap = function(z_scores, de_genes, col_order, annot_col, title,
              annotation_row=NULL,
              annotation_colors = NULL,
              color=rev(brewer.pal(11, "RdBu")),
-             breaks = seq(-3.5, 3.5, length=11),
+             breaks = seq(-3.5, 3.5, length=12),
              main = title)
 }
 
 
-plot_module_groups = function(trait, vertsep){
-    # Calculate correlation
-    moduleTraitCor = cor(MEs, trait, use = "p")
-    moduleTraitPvalue = corPvalueStudent(moduleTraitCor, dim(filtered_norm_counts)[2])
-    # perform hierarchical clustering of the modules
-    #hc = hclust(dist(moduleTraitCor), method = "complete")
-    #moduleTraitCor = moduleTraitCor[hc$order,]
-    #moduleTraitPvalue = moduleTraitPvalue[hc$order,]
-    # Will display correlations and their p-values
-    textMatrix = paste(signif(moduleTraitCor, 2), "\n(",signif(moduleTraitPvalue, 1), ")", sep = "")
-    dim(textMatrix) = dim(moduleTraitCor)
-    # Row cols
-    row_col = paste("ME", pal2, sep="")
-    names(row_col) = paste("ME", names(pal2), sep="")
-    row_col = row_col[match(rownames(moduleTraitCor), names(row_col))]
-    # Row names
-    row_names = sapply(names(row_col), function(x){
-        y = if(x == 'ME0') 'No module' else x 
-        paste(y, " \n(", mod_sizes[x], " genes)", sep = "")})
-    # Plot correlation
-    par(mar = c(6, 8.5, 3, 3))
-    labeledHeatmap(Matrix = moduleTraitCor,
-                    xLabels = colnames(trait),
-                    yLabels = row_col,
-                    ySymbols = row_names,
-                    colorLabels = FALSE,
-                    yColorLabels = TRUE,
-                    colors = rev(brewer.pal(11, "RdBu")),
-                    textMatrix = textMatrix,
-                    setStdMargins = FALSE,
-                    cex.text = 0.5,
-                    cex.lab.y = .75,
-                    zlim = c(-1,1),
-                    verticalSeparator.x = vertsep)
-}
-
-plot_top_deg_in_modules = function(fc, comp, connected_gene_colors){
-    gene_subset = rownames(fc)[!is.na(fc[,comp])]
-    # 
-    modules = unique(connected_gene_colors)
-    mod_genes = lapply(modules, function(mod){
-        # get DE genes in module
-        mod_de_gene = get_genes_in_mod(mod, connected_gene_colors, gene_subset)
-        # get FC for the genes
-        mod_fc = fc[mod_de_gene, comp]
-        names(mod_fc) = mod_de_gene
-        mod_fc = sort(mod_fc, decreasing = TRUE)
-        # get most up and down DEG
-        neg_genes = names(tail(mod_fc[mod_fc < 0], n = 10))
-        pos_genes = names(head(mod_fc[mod_fc > 0], n = 10))
+plot_top_deg_in_modules = function(fc, comp, genes_in_modules){
+    fc = fc %>% 
+        filter(!is.na((!!as.name(comp)))) %>%
+        select(c(genes, !!as.name(comp)))
+    mod_genes = lapply(genes_in_modules, function(mod){
+        mod_fc = fc %>%
+            filter(genes %in% mod)
+        neg_genes = mod_fc %>%
+            filter((!!as.name(comp)) < 0) %>%
+            top_n(10, desc(!!as.name(comp))) %>%
+            pull(genes)
+        pos_genes = mod_fc %>%
+            filter((!!as.name(comp)) > 0) %>%
+            top_n(10, !!as.name(comp)) %>%
+            pull(genes)
         return(list('pos_genes' = pos_genes, 'neg_genes' = neg_genes, 'max' = max(c(length(pos_genes), length(neg_genes)))))
     })
-    names(mod_genes) = modules
     # plot empty plot              
     div = 2
     top_neg = 10*1/div
     top_pos = 2*top_neg + .5
     top = top_pos + 1
     w_offset = .5
-    w = 2*length(modules) + w_offset
+    w = 2*length(genes_in_modules) + w_offset
     h = top
     prev_w = 7
     prev_h = 7
@@ -767,7 +710,7 @@ plot_top_deg_in_modules = function(fc, comp, connected_gene_colors){
         mod_info = mod_genes[[mod]]
         # plot rect on the top
         rect((i-1)*2 + w_offset, top-.8, i*2 + w_offset, top - 1, col = pal2[mod], border = NA)
-        text((i-1)*2 + 1 + w_offset, top-.7, paste("ME", mod, sep = ''), cex = 1.5, adj = c(0.5, 0))
+        text((i-1)*2 + 1 + w_offset, top-.7, mod, cex = 1.5, adj = c(0.5, 0))
         # add pos gene names to plot
         pos_genes = mod_info[['pos_genes']]
         if(length(pos_genes) > 0){
