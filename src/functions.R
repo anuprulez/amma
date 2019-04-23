@@ -30,54 +30,6 @@ get_results = function(dge, contrast, sign_adj_pvalue = 0.05, sign_fc = 1.5){
         mutate(sign_padj_and_fc = (padj < sign_adj_pvalue & abs(log2FoldChange) >= log2(sign_fc))))
 }
 
-
-get_interesting_cat = function(wall, data_type, cat_type){
-    pvalue_threshold = 0.05
-    # 
-    adj_pvalues = sapply(wall, function(x) p.adjust(x[,data_type], method="BH"))
-    # extract the categories with a significant p-values (over or under represented pvalue)
-    enriched_cat = which(apply(adj_pvalues <= pvalue_threshold & adj_pvalues > 0, 1, any))
-    # 
-    adj_pvalues[adj_pvalues > pvalue_threshold] = NA
-    # extract the category names for the significant categories and merge them for all the comparisons
-    if(cat_type == "GO"){
-        to_extract = c("category","term","ontology")
-    }else{
-        to_extract = c("category")
-    }
-    cat = wall[[1]][enriched_cat, to_extract]
-    # combine the significant categories for all comparisons
-    adj_pvalues = adj_pvalues[enriched_cat,]
-    if(!is.matrix(adj_pvalues)){
-        if(length(adj_pvalues)==0){
-            full_mat = c()
-        }
-        else if(length(names(wall))==1){
-            full_mat = cbind(cat, adj_pvalues)
-            colnames(full_mat) = c(to_extract, names(wall))
-        }else{
-            full_mat = t(c(cat, adj_pvalues))
-            colnames(full_mat) = c(to_extract, names(wall))
-        }
-    }else{
-        full_mat = cbind(cat, adj_pvalues)
-        colnames(full_mat) = c(to_extract, names(wall)) 
-    }
-    return(full_mat)
-}
-
-
-get_cat_de_genes = function(cat_id, cat2genes, de_genes){
-    cat_genes = cat2genes[cat2genes$values == cat_id, "ind"]
-    return(as.character(cat_genes[cat_genes %in% toupper(de_genes)]))
-}
-
-extract_cat_de_genes = function(selected_cat, cat, sign_fc_deg, cat2genes, file_prefix){
-    de_genes = rownames(sign_fc_deg)[!is.na(sign_fc_deg[,cat])]
-    cat_de_genes = sapply(selected_cat, function(y) get_cat_de_genes(y, cat2genes, de_genes))
-    capture.output(cat_de_genes, file = paste(file_prefix, gsub("[(),]", "", gsub(" ", "_", cat)), sep=""))
-}
-
 extract_DEG_log2FC = function(in_l, dir_path){
     # create dir if it does not exist
     full_dir_path = paste("../results/dge/", dir_path, sep="")
@@ -93,13 +45,13 @@ extract_DEG_log2FC = function(in_l, dir_path){
             select(c(genes, log2FoldChange)) %>%
             rename(!!i:= log2FoldChange)
         l$fc_deg = l$fc_deg %>%
-                full_join(fc_deg, by="genes")
+            full_join(fc_deg, by="genes")
         sign_fc_deg = df %>%
             filter(sign_padj_and_fc) %>%
             select(c(genes, log2FoldChange)) %>%
             rename(!!i:= log2FoldChange)
         l$sign_fc_deg = l$sign_fc_deg %>%
-                full_join(sign_fc_deg, by="genes")
+            full_join(sign_fc_deg, by="genes")
     }
     write.table(l$fc_deg, paste(full_dir_path, "fc_deg", sep=""), sep = "\t", quote = FALSE)
     write.table(l$sign_fc_deg, paste(full_dir_path, "sign_fc_deg", sep=""), sep = "\t", quote = FALSE)
@@ -145,95 +97,112 @@ plot_sign_FC_DEG_upset = function(l, nsets = 6){
 }
 
 fit_proba_weighting_function = function(l, gene_length){
-    sign_fc_deg = l$sign_fc_deg
     # prepare a table with 1 for sign DEG and other 0 otherwise, for all comparisons, with the length of the genes
-    genes = sign_fc_deg %>% pull(genes)
+    genes = l$sign_fc_deg %>% pull(genes)
     gene_length_df = dplyr::data_frame(genes = names(gene_length), gene_length = gene_length)               
-    gene_vector = sign_fc_deg %>% 
+    gene_vector = l$sign_fc_deg %>% 
         select(-genes) %>% 
         transmute_all(funs(1*!is.na(.))) %>% 
         mutate(genes = genes) %>% 
         full_join(gene_length_df, by='genes') %>% 
-        replace(., is.na(.), 0) %>% 
-        column_to_rownames(genes)
+        replace(., is.na(.), 0)
     gene_length_vec = gene_vector %>% select(c(genes, gene_length)) %>% deframe()
     # fit the probability weighting function
     comp = head(colnames(gene_vector),-2)
     l$pwf = lapply(
         comp,
         function(x){
-            data = gene_vector %>% select(c(genes, !!as.name(x))) %>% deframe()
-            return(suppressMessages(nullp(data, 'mm10', 'geneSymbol', plot.fit=F, bias.data=gene_length_vec))))
+            suppressMessages(nullp(
+                gene_vector %>% select(c(genes, !!as.name(x))) %>% deframe(), 
+                'mm10',
+                'geneSymbol',
+                plot.fit=F,
+                bias.data=gene_length_vec))
+            }
+        )
     names(l$pwf) = comp
     return(l)
 }
 
-get_interesting_categories = function(deg, interesting_cat){
-    l = sapply(colnames(deg), function(x) interesting_cat[which(!is.na(interesting_cat[,x])),"category"])
-    if(dim(deg)[2]>1){
-        l = as.list(l)
-    }else{
-        l2 = list(l)
-        l2[[colnames(deg)]] = l
-        l = l2
+extract_cat_de_genes = function(comp, interesting_cat, sign_fc_deg, full_go_genes, file_prefix){
+    cat = interesting_cat %>%
+        filter(!is.na(!!as.name(comp))) %>%
+        pull(category)
+    sign_deg = sign_fc_deg %>%
+        filter(!is.na(!!as.name(comp))) %>%
+        mutate(genes = toupper(genes)) %>%
+        pull(genes)
+    cat_de_genes = full_go_genes %>%
+        filter(values %in% cat) %>%
+        filter(ind %in% sign_deg)
+    write.table(cat_de_genes, paste(file_prefix, gsub("[(),]", "", gsub(" ", "_", comp)), sep=""), sep="\t", quote=FALSE, row.names=FALSE)
+    return(cat_de_genes)
+}
+
+get_significant_cat = function(mat, annot, pvalue_threshold){
+    return(mat %>%
+        mutate_at(vars(-category), funs(replace(., . > pvalue_threshold | . == 0, NA))) %>%
+        filter_at(vars(-category), any_vars(!is.na(.))) %>%                         
+        left_join(annot, by = 'category'))
+}
+
+get_interesting_cat = function(l, cat_type, pvalue_threshold = 0.05){
+    # extract the adjusted p-values and ratios
+    over_p_adjust = dplyr::data_frame(category = character())
+    under_p_adjust = dplyr::data_frame(category = character())
+    ratios = dplyr::data_frame(category = character())
+    for(x in names(l$wall)) {
+        over = dplyr::data_frame(!!x := p.adjust(l$wall[[x]][, "over_represented_pvalue"], method="BH"), 
+                                  category=l$wall[[x]]$category)
+        over_p_adjust = over_p_adjust %>%
+            full_join(over, by = 'category')
+        under = dplyr::data_frame(!!x := p.adjust(l$wall[[x]][, "under_represented_pvalue"], method="BH"), 
+                                  category =l$ wall[[x]]$category)
+        under_p_adjust = under_p_adjust %>%
+            full_join(under, by = 'category')
+        # compute ratio
+        comp_ratio = l$wall[[x]] %>%
+            mutate(!!x := numDEInCat/numInCat) %>%
+            select(c(category, !!as.name(x)))
+        ratios = ratios %>%
+            full_join(comp_ratio, by="category")
     }
-    names(l) = gsub(".category", "", names(l))
+    l$ratios = ratios
+    # extract the categories with a significant p-values (over or under represented pvalue) and add annotation
+    annot = l$wall[[1]] %>% select(if(cat_type == "GO") c("category", "term", "ontology") else c("category"))
+    l$over = get_significant_cat(over_p_adjust, annot, pvalue_threshold)
+    l$under = get_significant_cat(under_p_adjust, annot, pvalue_threshold)                               
     return(l)
 }
 
 extract_GO_terms = function(l, dir_path){
-    #### GO analysis
+    # GO analysis
     go_dir_path = paste("../results/dge/", dir_path, "go/", sep="")
     dir.create(go_dir_path, showWarnings = FALSE)
+    l$GO = list()
     # calculate the over and under expressed GO categories among the DE genes
-    l$GO_wall = lapply(l$pwf, function(x) suppressMessages(goseq(x, 'mm10', 'geneSymbol')))
+    l$GO$wall = lapply(l$pwf, function(x) suppressMessages(goseq(x, 'mm10', 'geneSymbol')))
     # extract interesting pathways/categories and export them
-    l$over_represented_GO = get_interesting_cat(l$GO_wall, "over_represented_pvalue", "GO")
-    write.table(l$over_represented_GO, paste(go_dir_path, "full_over_represented_GO", sep=""), sep = "\t", quote = FALSE, row.names = FALSE)
-    l$under_represented_GO = get_interesting_cat(l$GO_wall, "under_represented_pvalue", "GO")
-    write.table(l$under_represented_GO, paste(go_dir_path, "full_under_represented_GO", sep=""), sep = "\t", quote = FALSE, row.names = FALSE)
+    l$GO = get_interesting_cat(l$GO, "GO")
+    write.table(l$GO$over, paste(go_dir_path, "full_over_represented_GO", sep=""), sep = "\t", quote = FALSE)
+    write.table(l$GO$under, paste(go_dir_path, "full_under_represented_GO", sep=""), sep = "\t", quote = FALSE)
     # exclude GO terms
     go_term_to_exclude = read.table("../data/go_term_to_exclude.csv", h = F)$V1
-    over_represented_GO_to_keep = !l$over_represented_GO[, "category"] %in% go_term_to_exclude
-    col_names = colnames(l$over_represented_GO)
-    l$over_represented_GO = as.data.frame(l$over_represented_GO[over_represented_GO_to_keep,])
-    colnames(l$over_represented_GO) = col_names                
-    write.table(l$over_represented_GO, paste(go_dir_path, "over_represented_GO", sep=""), sep = "\t", quote = FALSE, row.names = FALSE)
-    col_names = colnames(l$under_represented_GO)
-    under_represented_GO_to_keep = !l$under_represented_GO[, "category"] %in% go_term_to_exclude               
-    l$under_represented_GO = as.data.frame(l$under_represented_GO[under_represented_GO_to_keep,])
-    colnames(l$under_represented_GO) = col_names                    
-    write.table(l$under_represented_GO, paste(go_dir_path, "under_represented_GO", sep=""), sep = "\t", quote = FALSE, row.names = FALSE)
+    l$GO$over = l$GO$over %>%
+        filter(!category %in% go_term_to_exclude)
+    write.table(l$over, paste(go_dir_path, "over_represented_GO", sep=""), sep = "\t", quote = FALSE, row.names = FALSE)
+    l$GO$under = l$GO$under %>%
+        filter(!category %in% go_term_to_exclude)
+    write.table(l$GO$under, paste(go_dir_path, "under_represented_GO", sep=""), sep = "\t", quote = FALSE, row.names = FALSE)
     # extract list of genes involved in the over and under represented GO
-    full_go_genes = stack(getgo(rownames(l$sign_fc_deg), 'mm10', 'geneSymbol'))
-    over_represented_GO = get_interesting_categories(l$sign_fc_deg, l$over_represented_GO)
-    under_represented_GO = get_interesting_categories(l$sign_fc_deg, l$under_represented_GO)
-    for(x in colnames(l$sign_fc_deg)){
-        extract_cat_de_genes(over_represented_GO[[x]], x, l$sign_fc_deg, full_go_genes, paste(go_dir_path, "over_repr_", sep = ""))
-        extract_cat_de_genes(under_represented_GO[[x]], x, l$sign_fc_deg, full_go_genes, paste(go_dir_path, "under_repr_", sep = ""))
-    }
-    return(l)
-}
-
-extract_KEGG_pathways = function(l, dir_path){
-    # KEGG analysis
-    kegg_dir_path = paste("../results/dge/", dir_path, "kegg/", sep="")
-    dir.create(kegg_dir_path, showWarnings = FALSE)            
-    # calculate the over and under expressed KEGG pathways among the DE genes
-    l$KEGG_wall = lapply(pwf, function(x) suppressMessages(goseq(x, 'mm10', 'geneSymbol', test.cats="KEGG")))
-    # extract interesting pathways/categories and export them
-    l$over_represented_KEGG = get_interesting_cat(l$KEGG_wall, "over_represented_pvalue", "KEGG")
-    write.table(l$over_represented_KEGG, paste(kegg_dir_path, "over_represented_KEGG", sep=""), sep = "\t", quote = FALSE, row.names = FALSE)    
-    l$under_represented_KEGG = get_interesting_cat(l$KEGG_wall, "under_represented_pvalue", "KEGG")
-    write.table(l$under_represented_KEGG, paste(kegg_dir_path, "under_represented_KEGG", sep=""), sep = "\t", quote = FALSE, row.names = FALSE)
-    # extract list of genes involved in the over and under represented KEGG
-    full_kegg_genes = stack(getgo(rownames(as.data.frame(l$deg)), 'mm10', 'geneSymbol', fetch.cats="KEGG"))
-    over_represented_KEGG = get_interesting_categories(l$deg, l$over_represented_KEGG)
-    under_represented_KEGG =  get_interesting_categories(l$deg, l$under_represented_KEGG)
-    for(x in colnames(l$deg)){
-        extract_cat_de_genes(over_represented_KEGG[[x]], x, l$sign_fc_deg, full_kegg_genes, paste(kegg_dir_path, "over_repr_", sep = ""))
-        extract_cat_de_genes(under_represented_KEGG[[x]], x, l$sign_fc_deg, full_kegg_genes, paste(kegg_dir_path, "under_repr_", sep = ""))
-    }
+    full_go_genes = stack(getgo(l$sign_fc_deg$genes, 'mm10', 'geneSymbol'))
+    lapply(names(l$GO$wall), 
+        function(x) extract_cat_de_genes(x, l$GO$over, l$sign_fc_deg, full_go_genes, paste(go_dir_path, "over_repr_", sep = "")))
+    lapply(names(l$GO$wall), 
+        function(x) extract_cat_de_genes(x, l$GO$under, l$sign_fc_deg, full_go_genes, paste(go_dir_path, "under_repr_", sep = "")))
+    # get list of terms and description
+    l$GO$terms = union(l$GO$over, l$GO$under) %>%
+        select(c(category, term, ontology))
     return(l)
 }
 
@@ -292,85 +261,63 @@ get_list = function(mapping){
     return(as.list(mapping[mapped_genes]))
 }
 
-# 
-
-
 capFirst = function(s) {
     paste(substring(s, 1, 1), tolower(substring(s, 2)), sep = "")
 }
 
-
-
-
-get_top_go = function(go, top_nb, ont, comp){
-    ont_go = go[go$ontology == ont,c(2,4:dim(go)[2])]
-    if(length(ont_go)==0){
-        return(ont_go)
-    }else{
-        # conserve the top 20 for every comparison
-        to_conserve = unique(c(sapply(comp, function(i) return(get_smallest_value_id(ont_go, i, top_nb)))))
-        to_conserve = to_conserve[!is.na(to_conserve)]
-        return(ont_go[to_conserve,])
-    }
+get_top_go = function(mat, full_mat, top_nb, comp){
+    return(mat %>%
+        top_n(top_nb, desc(!!as.name(comp))) %>%
+        select(c(category, !!as.name(comp))) %>%
+        full_join(full_mat, by="category"))
 }
 
-
-plot_top_go = function(deg, ont, top_nb){
-    over_repr_go = deg$over_represented_GO
-    under_repr_go = deg$under_represented_GO
-    go_wall = deg$GO_wall
-    # extract the top GO for the ontology                                  
-    over_repr_top_go = get_top_go(over_repr_go, top_nb, ont, names(go_wall))
-    over_repr_top_go$id = rownames(over_repr_top_go)
-    under_repr_top_go = get_top_go(under_repr_go, top_nb, ont, names(go_wall))
-    under_repr_top_go$id = rownames(under_repr_top_go)
-    if(dim(over_repr_top_go)[1] > 0 || dim(under_repr_top_go)[1] > 0){
-        # extract the ratios of the conserved GO
-        cons_GO = c(over_repr_top_go$id, under_repr_top_go$id)
-        ratios = data.frame(sapply(go_wall, function(x) x[cons_GO,"numDEInCat"]/x[cons_GO,"numInCat"]))
-        rownames(ratios) = cons_GO
-        # create a matrix for the ggplot
-        if(dim(over_repr_top_go)[1] > 0){
-            over_mat = cbind(melt(over_repr_top_go), "over")
-            colnames(over_mat) = c("term", "id", "comparison", "p_value", "type")
-        }else{
-            over_mat = NULL
-        }
-        if(dim(under_repr_top_go)[1] > 0){
-            under_mat = cbind(melt(under_repr_top_go), "under")
-            colnames(under_mat) = c("term", "id", "comparison", "p_value", "type")
-        }else{
-            under_mat = NULL
-        }
-        mat = rbind(over_mat, under_mat)
-        # add ratios
-        mat$ratio = sapply(1:dim(mat)[1], function(i) ratios[mat$id[i], mat$comp[i]])
-        # reformate the terms to have less than 8 words
-        mat$term = sapply(strsplit(as.character(mat$term), " "), function(i) paste(i[1:ifelse(length(i)>8,8,length(i))],collapse = " "))                
-        ## plot
-        size_scale_lim = c(min(mat$ratio),max(mat$ratio))
-        col_scale_lim = c(min(mat$p_value, na.rm = T),max(mat$p_value, na.rm = T))
-        plot1 <- mat %>%
-          filter(type == "over") %>%
-          ggplot() +
-          geom_point(aes(x = factor(comparison), y = factor(term), size=ratio,col=p_value)) +
-          labs(x = "", y = "Over represented") +
-          theme(axis.text.x = element_blank(), axis.text.y = element_text(size = rel(.75))) +
-          scale_colour_gradient(limits = col_scale_lim, low = "red", high="blue", guide = 'none') +
-          scale_size(limits = size_scale_lim, range=c(0.2,2))
-        plot2 <- mat %>%
-          filter(type == "under") %>%
-          ggplot() +
-          geom_point(aes(x = factor(comparison), y = factor(term), size=ratio,col=p_value)) +
-          labs(x = "", y = "Under represented") +
-          theme(axis.text.x = element_text(angle = 90, hjust = 1), axis.text.y = element_text(size = rel(.75))) +
-          scale_colour_gradient(limits = col_scale_lim, low = "red", high="blue") +
-          scale_size(limits = size_scale_lim, range=c(0.2,2), guide = 'none')
-        grid.newpage()
-        #grid.arrange(arrangeGrob(plot1, plot2, nrow=2), heights=c(4,1))
-        #print(plot_both)
-        grid.draw(rbind(ggplotGrob(plot1), ggplotGrob(plot2), size = "first"))
+plot_top_go = function(l, ont, top_nb){
+    l = l$GO
+    # extract the top GO for the ontology
+    over_mat = l$over %>% filter(ontology == ont)
+    under_mat = l$under %>% filter(ontology == ont)
+    over_top_go = dplyr::data_frame(category=character())
+    under_top_go = dplyr::data_frame(category=character())
+    for(comp in names(l$wall)){
+        over_top_go = get_top_go(over_mat, over_top_go, top_nb, comp)
+        under_top_go = get_top_go(under_mat, under_top_go, top_nb, comp)
     }
+    over_top_go = over_top_go %>% mutate(type = "over")
+    under_top_go = under_top_go %>% mutate(type = "under")
+    conserved_go = c(over_top_go$category, under_top_go$category)
+    # get the ratios
+    ratios = melt(as.data.frame(l$ratios %>% filter(category %in% conserved_go))) %>%
+        rename(ratio = value)
+    # format the matrix
+    mat = melt(as.data.frame(bind_rows(over_top_go, under_top_go))) %>%
+        rename(p_value = value) %>%
+        left_join(ratios, by = c("category", "variable")) %>%
+        rename(comparison = variable) %>%
+        left_join(l$terms, by = 'category') %>%
+        mutate(term = factor(term)) %>%
+        mutate(comparison = factor(comparison, levels=names(l$wall)))
+    # plot
+    size_scale_lim = c(min(mat$ratio), max(mat$ratio))
+    col_scale_lim = c(min(mat$p_value, na.rm=T), max(mat$p_value, na.rm=T))
+    plot1 = mat %>%
+      filter(type == "over") %>%
+      ggplot() +
+      geom_point(aes(x=comparison, y=term, size=ratio, col=p_value)) +
+      labs(x = "", y = "Over represented") +
+      theme(axis.text.x = element_text(angle=90, hjust=1), axis.text.y = element_text(size = rel(.75))) +
+      scale_colour_gradient(limits=col_scale_lim, low="red", high="blue", guide='none') +
+      scale_size(limits=size_scale_lim, range=c(0.2,2))
+    plot2 = mat %>%
+      filter(type == "under") %>%
+      ggplot() +
+      geom_point(aes(x=comparison, y=term, size=ratio, col=p_value)) +
+      labs(x = "", y = "Under represented") +
+      theme(axis.text.x = element_blank(), axis.text.y = element_text(size = rel(.75))) +
+      scale_colour_gradient(limits=col_scale_lim, low="red", high="blue") +
+      scale_size(limits=size_scale_lim, range=c(0.2,2), guide='none')
+    grid.newpage()
+    grid.draw(rbind(ggplotGrob(plot1), ggplotGrob(plot2), size = "first"))
 }
 
 get_deg_colors = function(comp_deg, comp, connected_gene_colors, module_nb){
@@ -383,134 +330,98 @@ get_deg_colors = function(comp_deg, comp, connected_gene_colors, module_nb){
     return(deg_col)
 }
 
-get_smallest_value_id = function(matrix, column, nb){
-    return(rownames(matrix)[order(matrix[,column])][1:nb])
+get_col_ramp = function(mat, ont, min_col, max_col){
+    mat = mat %>%
+        filter(ontology==ont) %>%
+        select(-c(category, term, ontology))
+    values = na.omit(unlist(mat))
+    if(length(values) > 0){
+        cuts = cut(values,
+            breaks=exp(log(10)*seq(log10(min(values)), log10(max(values)), len = 100)),
+            include.lowest = TRUE)
+        return(data.frame(values=sort(values), color=colorRampPalette(c(min_col, max_col))(99)[cuts]))
+    }else{
+        return(data.frame(values=numeric(), color=character()))
+    }
 }
 
-get_interesting_GO = function(go, ont){
-    col_nb = dim(go)[2]
-    not_na = !is.na(go[,4:col_nb])
-    if(!is.matrix(not_na)) not_na = t(not_na)
-    return(go[go[,"ontology"] == ont & apply(not_na, 1, any), "category"])
-}
-
-
-create_GO_network = function(deg, ont, ont_go){
-    l = list()
+create_GO_network = function(l, ont, ont_go){
+    net = list()
     # Get GO term for ontology and that are at least once over-represented or under-represented
-    l$interesting_GO = c(get_interesting_GO(deg$over_represented_GO, ont),
-                       get_interesting_GO(deg$under_represented_GO, ont))
+    net$go_terms = l$terms %>%
+        filter(ontology==ont) %>% 
+        pull(category)
     # Get similarity between GO terms
-    l$go_sim = mgoSim(l$interesting_GO, l$interesting_GO, semData=ont_go, measure="Wang", combine=NULL)
+    go_sim = mgoSim(net$go_terms, net$go_terms, semData=ont_go, measure="Wang", combine=NULL)
     # Extract adjency matrix by keeping only the distance > 0.5
-    l$go_sim = (l$go_sim > 0.5)*1
-    # Replace the diagonal values by 0
-    diag(l$go_sim) = 0
+    go_sim = as.data.frame(go_sim) %>%
+        transmute_all(funs((. >0.5)*1))
+    go_sim = as.matrix(go_sim)
+    diag(go_sim) = 0
     # Keep only the GO with at least one connection
     #l$go_sim = l$go_sim[rowSums(l$go_sim)>0,rowSums(l$go_sim)>0]
     # Build the network
-    l$go_net = graph_from_adjacency_matrix(l$go_sim, diag = FALSE, weighted = TRUE, mode="undirected")
-    l$go_net_layout = layout_with_fr(l$go_net)
-    l$go_net_layout_3d = layout_with_fr(l$go_net, dim=3)
-    #plot(l$go_net, 
-    #     vertex.label=NA,
-    #     vertex.size=4,
-    #     layout=l$go_net_layout)
-    # Update list of interesting GO
-    l$interesting_GO = rownames(l$go_sim)
-    # extract over and under represented GO
-    l$over_repr = get_ont_GO(deg$over_represented_GO, ont)
-    l$under_repr = get_ont_GO(deg$under_represented_GO, ont)
-    # 
+    net$go_net = graph_from_adjacency_matrix(go_sim, diag = FALSE, weighted = TRUE, mode="undirected")
+    net$go_net_layout = layout_with_fr(net$go_net)
+    # Extract the colors
+    net$over_repr_colors = get_col_ramp(l$over, ont, "red", "lightpink")
+    net$under_repr_colors = get_col_ramp(l$under, ont, "blue", "lightblue")
+    l[[ont]] = net
     return(l)
 }
 
-
-get_ont_GO = function(go, ont){
-    col_nb = dim(go)[2]
-    val = which(go$ontology == ont)
-    ont_go = go[val, 4:col_nb]
-    if(!is.matrix(ont_go) && !is.data.frame(ont_go)){
-        ont_go = matrix(ont_go, ncol = 1)
-        colnames(ont_go) = colnames(go)[4:col_nb]
-    }
-    rownames(ont_go) = go[val, 1]
-    return(ont_go)
+get_GO_network_col = function(l, ont, comp){
+    over = l$over %>%
+        filter(ontology==ont) %>%
+        filter(!is.na((!!as.name(comp)))) %>%
+        select(c(category,!!as.name(comp))) %>%
+        rename(values=!!as.name(comp)) %>%
+        inner_join(l[[ont]]$over_repr_colors, by='values') %>%
+        select(c(color, category))
+    under = l$under %>%
+        filter(ontology==ont) %>%
+        filter(!is.na((!!as.name(comp)))) %>%
+        select(c(category,!!as.name(comp))) %>%
+        rename(values=!!as.name(comp)) %>%
+        inner_join(l[[ont]]$under_repr_colors, by='values') %>%
+        select(c(color, category))
+    colors = over %>%
+        union(under) %>%
+        union(dplyr::data_frame(color = "white", category = l[[ont]]$go_terms)) %>%
+        mutate(category=factor(category, levels=l[[ont]]$go_terms)) %>%
+        arrange(color)
+    return(colors)
 }
 
-get_col_ramp = function(values, min_col, max_col){
-    if(dim(values)[1] == 0){
-        return(c())
-    }else{
-        all_values = unlist(values)
-        all_values = all_values[!is.na(all_values)]
-        ii = cut(all_values,
-            breaks = exp(log(10)*seq(log10(min(all_values)),log10(0.05),len = 100)),
-            include.lowest = TRUE)
-        colors = cbind(sort(all_values), colorRampPalette(c(min_col, max_col))(99)[ii])
-        return(colors)
-    }
-}
-
-get_GO_network_col = function(net, comp, all_GO = NULL){
-    #
-    over_repr_colors = get_col_ramp(net$over_repr, "red", "lightpink")
-    under_repr_colors = get_col_ramp(net$under_repr, "blue", "lightblue")
+plot_GO_network = function(l, ont, comp){
     # extract under and over represented GO and their value
-    v = which(!is.na(net$over_repr[,comp]))
-    over_repr_GO = net$over_repr[v,comp]
-    names(over_repr_GO) = rownames(net$over_repr)[v]
-    v = which(!is.na(net$under_repr[,comp]))
-    under_repr_GO = net$under_repr[v,comp]
-    names(under_repr_GO) = rownames(net$under_repr)[v]
-    # colors for the nodes
-    col = rep("white", length(net$interesting_GO))
-    names(col) = net$interesting_GO
-    if(length(over_repr_GO) > 0){
-        col[names(over_repr_GO)] = sapply(over_repr_GO, function(i) return(over_repr_colors[which(over_repr_colors[,1] == i)[1],2]))
-    }
-    if(length(under_repr_GO) > 0){
-        col[names(under_repr_GO)] = sapply(under_repr_GO, function(i) return(under_repr_colors[which(under_repr_colors[,1] == i)[1],2]))
-    } 
-    if(!is.null(all_GO)){
-        names(col) = all_GO[net$interesting_GO]
-    }
-    return(col)
-}
-
-
-plot_GO_network = function(net, col){
-    plot(net$go_net, 
+    colors = get_GO_network_col(l, ont, comp)
+    # plots
+    plot(l[[ont]]$go_net, 
          vertex.label=NA,
          vertex.size=4,
-         vertex.color=col,
-         layout=net$go_net_layout)
+         vertex.color=colors$color,
+         layout=l[[ont]]$go_net_layout)
 }
 
-
-plot_interactive_GO_network = function(net, col, go_desc){
-    graphjs(net$go_net,
-            layout=net$go_net_layout_3d,
-            height=500,
-            vertex.size=1,
-            vertex.color=as.vector(col),
-            vertex.shape="sphere",
-            vertex.label=as.vector(go_desc),
-            edge.color="grey")
-}
-
-plot_GO_networks = function(net, comp, full_go_desc, plot_non_interactive = TRUE, plot_interactive = TRUE){
-    # get color based on adjusted p-value
-    col = get_GO_network_col(net, comp, full_go_desc)
-    # get names for the vertext: term for selected GO terms
-    go_desc = full_go_desc[names(col)]
-    # plots
-    if(plot_non_interactive){
-        plot_GO_network(net, col)
-    }
-    if(plot_interactive){
-        plot_interactive_GO_network(net, col, names(col))
-    }
+extract_KEGG_pathways = function(l, dir_path){
+    # KEGG analysis
+    kegg_dir_path = paste("../results/dge/", dir_path, "kegg/", sep="")
+    dir.create(kegg_dir_path, showWarnings = FALSE)
+    l$KEGG = list()  
+    # calculate the over and under expressed KEGG pathways among the DE genes
+    l$KEGG$wall = lapply(l$pwf, function(x) suppressMessages(goseq(x, 'mm10', 'geneSymbol', test.cats="KEGG")))
+    # extract interesting pathways/categories and export them
+    l$KEGG = get_interesting_cat(l$KEGG, "KEGG")
+    write.table(l$KEGG$over, paste(kegg_dir_path, "over_represented_KEGG", sep=""), sep = "\t", quote = FALSE, row.names = FALSE)
+    write.table(l$KEGG$under, paste(kegg_dir_path, "under_represented_KEGG", sep=""), sep = "\t", quote = FALSE, row.names = FALSE)
+    # extract list of genes involved in the over and under represented KEGG
+    full_kegg_genes = stack(getgo(l$sign_fc_deg$genes, 'mm10', 'geneSymbol', fetch.cats="KEGG"))
+    lapply(names(l$KEGG$wall), 
+        function(x) extract_cat_de_genes(x, l$KEGG$over, l$sign_fc_deg, full_kegg_genes, paste(kegg_dir_path, "over_repr_", sep = "")))
+    lapply(names(l$KEGG$wall), 
+        function(x) extract_cat_de_genes(x, l$KEGG$under, l$sign_fc_deg, full_kegg_genes, paste(kegg_dir_path, "under_repr_", sep = "")))
+    return(l)
 }
 
 
