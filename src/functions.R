@@ -22,8 +22,12 @@ get_stats_padj  = function(dge_res) {
     return(v)
 }
 
-get_results = function(dge, contrast, sign_adj_pvalue = 0.05, sign_fc = 1.5){
-    res = results(dge, contrast=contrast, alpha=0.05, test="Wald")
+get_dge_results = function(x, dge, constrasts, sign_adj_pvalue = 0.05, sign_fc = 1.5){
+    contrast = constrasts %>% 
+        filter(Info == x) %>% 
+        select(-c(Info)) %>% 
+        unlist
+    res = results(dge, contrast=as.numeric(contrast), alpha=0.05, test="Wald")
     return(as.data.frame(res) %>%
         rownames_to_column('genes') %>%
         mutate(sign_padj = padj < sign_adj_pvalue) %>%
@@ -175,6 +179,23 @@ get_interesting_cat = function(l, cat_type, pvalue_threshold = 0.05){
     return(l)
 }
 
+get_col_ramp_all_ont = function(mat, min_col, max_col){
+    mat = mat %>%
+        select(-c(category, term, ontology))
+    values = na.omit(unlist(mat))
+    if(length(values) > 0){
+        cuts = cut(values,
+            breaks=exp(log(10)*seq(log10(min(values)), log10(max(values)), len = 100)),
+            include.lowest = TRUE)
+        df = data.frame(values=values, color=colorRampPalette(c(min_col, max_col))(99)[cuts]) %>%
+            rownames_to_column("comparison") %>%
+            mutate(comparison = gsub(")[0-9]+", ")", comparison))
+        return(df)
+    }else{
+        return(data.frame(values=numeric(), color=character(), comparison=character()))
+    }
+}
+
 extract_GO_terms = function(l, dir_path){
     # GO analysis
     go_dir_path = paste("../results/dge/", dir_path, "go/", sep="")
@@ -203,6 +224,10 @@ extract_GO_terms = function(l, dir_path){
     # get list of terms and description
     l$GO$terms = union(l$GO$over, l$GO$under) %>%
         select(c(category, term, ontology))
+    l$GO$cat = l$GO$terms %>% pull(category)
+    # get colors
+    l$GO$over_repr_colors = get_col_ramp_all_ont(l$GO$over, "red", "lightpink")
+    l$GO$under_repr_colors = get_col_ramp_all_ont(l$GO$under, "blue", "lightblue")
     return(l)
 }
 
@@ -345,6 +370,16 @@ get_col_ramp = function(mat, ont, min_col, max_col){
     }
 }
 
+extract_GO_ont = function(l, ont){
+    l[[ont]] = list()
+    l[[ont]]$go_terms = l$terms %>%
+        filter(ontology==ont) %>% 
+        pull(category)
+    l[[ont]]$over_repr_colors = get_col_ramp(l$over, ont, "red", "lightpink")
+    l[[ont]]$under_repr_colors = get_col_ramp(l$under, ont, "blue", "lightblue")
+    return(l)
+}
+
 create_GO_network = function(l, ont, ont_go){
     net = list()
     # Get GO term for ontology and that are at least once over-represented or under-represented
@@ -402,6 +437,30 @@ plot_GO_network = function(l, ont, comp){
          vertex.size=4,
          vertex.color=colors$color,
          layout=l[[ont]]$go_net_layout)
+}
+
+get_GO_network_col_all_ont = function(l, comp){
+    over = l$over %>%
+        filter(!is.na((!!as.name(comp)))) %>%
+        select(c(category,!!as.name(comp))) %>%
+        rename(values=!!as.name(comp)) %>%
+        left_join(l$over_repr_colors %>% filter(comparison == comp) %>% distinct(color, values), by='values') %>%
+        select(c(color, category))
+    under = l$under %>%
+        filter(!is.na((!!as.name(comp)))) %>%
+        select(c(category,!!as.name(comp))) %>%
+        rename(values=!!as.name(comp)) %>%
+        left_join(l$under_repr_colors %>% filter(comparison == comp) %>% distinct(color, values), by='values') %>%
+        select(c(color, category))
+    white = dplyr::data_frame(color = "white", category = l$cat) %>%
+        filter(!category %in% over$category) %>%
+        filter(!category %in% under$category)
+    colors = over %>%
+        union(under) %>%
+        union(white) %>%
+        mutate(category=factor(category, levels=l$cat)) %>%
+        arrange(color)
+    return(colors)
 }
 
 extract_KEGG_pathways = function(l, dir_path){

@@ -32,7 +32,7 @@ suppressMessages(library(htmlwidgets))
 suppressMessages(library(pathview))
 suppressMessages(library(xlsx))
 
-suppressMessages(library(affy))
+#suppressMessages(library(affy))
 suppressMessages(library(limma))
 suppressMessages(library(reshape))
 suppressMessages(library(plotly))
