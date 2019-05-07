@@ -5,7 +5,7 @@ Extraction of number of reads mapped on each annotated genes for each samples
 
 Workflow applied on each dataset:
 
-![Workflow applied on each dataset\label{workflow}](images/workflow.png)
+![Workflow applied on each dataset](images/workflow.png)
 
 ### Quality control and trimming
 
