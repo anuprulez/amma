@@ -66,7 +66,7 @@ nb_non_na = function(vec) return(sum(!is.na(vec)))
 nb_pos = function(vec) return(sum(!is.na(vec) & vec > 0))
 nb_neg = function(vec) return(sum(!is.na(vec) & vec < 0))
 
-extract_DEG_stats = function(l){
+extract_DEG_stats = function(l, dir_path){
     l$stat = rbind(
         "All DEG (Wald padj < 0.05)"=l$fc_deg %>% select(-genes) %>% summarise_all(funs(nb_non_na)),
         "All over-expressed genes (Wald padj < 0.05 & FC > 0)"=l$fc_deg %>% select(-genes) %>% summarise_all(funs(nb_pos)),
@@ -85,6 +85,27 @@ extract_DEG_stats = function(l){
         geom_point(aes(size=value,col=value)) +
         scale_colour_gradient(low = "blue", high="red")
     print(g)
+    # plot barplot of DEGs numbers
+    s = l$stat %>% 
+        rownames_to_column('type') %>%
+        filter(type %in% c("Over-expressed genes (Wald padj < 0.05 & FC >= 1.5)", "Under-expressed genes (Wald padj < 0.05 & FC <= -1.5)")) %>%
+        mutate(type = gsub("genes \\(Wald padj < 0.05 & FC >= 1.5\\)", "", type)) %>%
+        mutate(type = gsub("genes \\(Wald padj < 0.05 & FC <= -1.5\\)", "", type)) %>%
+        mutate(type = gsub("expressed", "regulated", type)) %>%
+        mutate(type = gsub("Over", "Up", type)) %>%
+        mutate(type = gsub("Under", "Down", type)) #%>%
+        #rename_all(funs(gsub("[A-Za-z\\-]+ vs [A-Za-z\\-]+ \\(", "", .))) %>%
+        #rename_all(funs(gsub("\\)", "", .)))
+    m = as.matrix(s %>% select(-c(type)))
+    par(mar=c(10,3,3,3))
+    a = barplot(m, main="", col=c("red", "darkblue"), beside=TRUE, las=1, border="white", axisnames = FALSE)
+    text(a, 0, srt = 60, adj=1.1, xpd = TRUE, labels = rep(colnames(m), each=2), cex=0.65)
+
+    pdf(paste("../results/dge/", dir_path, 'deg_nb.pdf', sep=""))
+    par(mar=c(10,3,3,3))
+    a = barplot(m, main="", col=c("red", "darkblue"), beside=TRUE, las=1, border="white", axisnames = FALSE)
+    text(a, 0, srt = 60, adj=1.1, xpd = TRUE, labels = rep(colnames(m), each=2), cex=0.65)
+    dev.off()
     return(l)
 }
 
