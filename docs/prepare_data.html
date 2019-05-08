@@ -11784,7 +11784,16 @@ div#notebook {
 <li>Extract the metadata</li>
 <li>Export the counts and metadata</li>
 </ul>
+<p><em>Generated from a Jupyter Notebook - <a href="https://github.com/bebatut/neuromac_GF_mices/blob/master/src/prepare_data.ipynb">Sources</a></em></p>
 
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Load">Load<a class="anchor-link" href="#Load">&#182;</a></h1>
 </div>
 </div>
 </div>
@@ -11880,6 +11889,36 @@ Allowing multi-threading with up to 4 threads.
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"> </div>
+
+
+<div class="output_html rendered_html output_subarea ">
+<ol class=list-inline>
+	<li>24421</li>
+	<li>64</li>
+</ol>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Remove-spurious-data">Remove spurious data<a class="anchor-link" href="#Remove-spurious-data">&#182;</a></h1>
+</div>
+</div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
@@ -11943,6 +11982,14 @@ Allowing multi-threading with up to 4 threads.
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Check-and-clean-genes-names">Check and clean genes names<a class="anchor-link" href="#Check-and-clean-genes-names">&#182;</a></h1>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <p>Rename the genes to be sure there is a map with Entrez Gene Identifers:</p>
 <ol>
 <li>Extract mapping between <ul>
@@ -11963,6 +12010,9 @@ Allowing multi-threading with up to 4 threads.
 
 </div>
 </div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 
@@ -12020,6 +12070,14 @@ Allowing multi-threading with up to 4 threads.
 </div>
 </div>
 
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Order-the-data">Order the data<a class="anchor-link" href="#Order-the-data">&#182;</a></h1>
+</div>
+</div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
@@ -12100,6 +12158,14 @@ Allowing multi-threading with up to 4 threads.
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Extract-metadata">Extract metadata<a class="anchor-link" href="#Extract-metadata">&#182;</a></h1>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <p>Extract the description of the samples</p>
 
 </div>
@@ -12166,6 +12232,17 @@ Allowing multi-threading with up to 4 threads.
 <li>104w to Old</li>
 </ul>
 </li>
+<li>Rename the gender<ul>
+<li>F to Female</li>
+<li>M to Male</li>
+</ul>
+</li>
+<li>Rename the factors<ul>
+<li>gender to Sex</li>
+<li>type to Microbiota</li>
+<li>age to Age</li>
+</ul>
+</li>
 </ol>
 
 </div>
@@ -12184,69 +12261,97 @@ Allowing multi-threading with up to 4 threads.
 
 <div class="output_html rendered_html output_subarea ">
 <table>
-<thead><tr><th scope=col>type</th><th scope=col>age</th><th scope=col>gender</th><th scope=col>sample</th><th scope=col>project</th></tr></thead>
+<thead><tr><th scope=col>Microbiote</th><th scope=col>Age</th><th scope=col>Sex</th><th scope=col>Number</th></tr></thead>
 <tbody>
-	<tr><td>GF            </td><td>Old           </td><td>F             </td><td>GF_104w_F_1_2 </td><td>S264          </td></tr>
-	<tr><td>GF            </td><td>Old           </td><td>F             </td><td>GF_104w_F_2_2 </td><td>S264          </td></tr>
-	<tr><td>GF            </td><td>Old           </td><td>F             </td><td>GF_104w_F_3_2 </td><td>S264          </td></tr>
-	<tr><td>GF            </td><td>Old           </td><td>M             </td><td>GF_104w_M_1_2 </td><td>S264          </td></tr>
-	<tr><td>GF            </td><td>Old           </td><td>M             </td><td>GF_104w_M_2_2 </td><td>S264          </td></tr>
-	<tr><td>GF            </td><td>Old           </td><td>M             </td><td>GF_104w_M_3_2 </td><td>S288          </td></tr>
-	<tr><td>GF            </td><td>Old           </td><td>M             </td><td>GF_104w_M_4_2 </td><td>S288          </td></tr>
-	<tr><td>GF            </td><td>Old           </td><td>M             </td><td>GF_104w_M_5_2 </td><td>S288          </td></tr>
-	<tr><td>GF            </td><td>Middle-aged   </td><td>F             </td><td>GF_52w_F_1_2  </td><td>S178          </td></tr>
-	<tr><td>GF            </td><td>Middle-aged   </td><td>F             </td><td>GF_52w_F_2_2  </td><td>S178          </td></tr>
-	<tr><td>GF            </td><td>Middle-aged   </td><td>F             </td><td>GF_52w_F_3_2  </td><td>S178          </td></tr>
-	<tr><td>GF            </td><td>Middle-aged   </td><td>F             </td><td>GF_52w_F_4_2  </td><td>S178          </td></tr>
-	<tr><td>GF            </td><td>Middle-aged   </td><td>F             </td><td>GF_52w_F_5_2  </td><td>S178          </td></tr>
-	<tr><td>GF            </td><td>Middle-aged   </td><td>F             </td><td>GF_52w_F_6_2  </td><td>S178          </td></tr>
-	<tr><td>GF            </td><td>Middle-aged   </td><td>M             </td><td>GF_52w_M_1_2  </td><td>S148          </td></tr>
-	<tr><td>GF            </td><td>Middle-aged   </td><td>M             </td><td>GF_52w_M_2_2  </td><td>S148          </td></tr>
-	<tr><td>GF            </td><td>Middle-aged   </td><td>M             </td><td>GF_52w_M_3_2  </td><td>S148          </td></tr>
-	<tr><td>GF            </td><td>Middle-aged   </td><td>M             </td><td>GF_52w_M_4_2  </td><td>S148          </td></tr>
-	<tr><td>GF            </td><td>Young         </td><td>F             </td><td>GF_8w_F_1_2   </td><td>S225          </td></tr>
-	<tr><td>GF            </td><td>Young         </td><td>F             </td><td>GF_8w_F_2_2   </td><td>S225          </td></tr>
-	<tr><td>GF            </td><td>Young         </td><td>F             </td><td>GF_8w_F_3_2   </td><td>S225          </td></tr>
-	<tr><td>GF            </td><td>Young         </td><td>F             </td><td>GF_8w_F_4_2   </td><td>S225          </td></tr>
-	<tr><td>GF            </td><td>Young         </td><td>F             </td><td>GF_8w_F_5_2   </td><td>S225          </td></tr>
-	<tr><td>GF            </td><td>Young         </td><td>M             </td><td>GF_8w_M_1_2   </td><td>S148          </td></tr>
-	<tr><td>GF            </td><td>Young         </td><td>M             </td><td>GF_8w_M_2_2   </td><td>S148          </td></tr>
-	<tr><td>GF            </td><td>Young         </td><td>M             </td><td>GF_8w_M_3_2   </td><td>S148          </td></tr>
-	<tr><td>GF            </td><td>Young         </td><td>M             </td><td>GF_8w_M_4_2   </td><td>S148          </td></tr>
-	<tr><td>SPF           </td><td>Old           </td><td>F             </td><td>SPF_104w_F_1_2</td><td>S174          </td></tr>
-	<tr><td>SPF           </td><td>Old           </td><td>F             </td><td>SPF_104w_F_2_2</td><td>S174          </td></tr>
-	<tr><td>SPF           </td><td>Old           </td><td>F             </td><td>SPF_104w_F_3_2</td><td>S174          </td></tr>
+	<tr><td>GF         </td><td>Middle-aged</td><td>Female     </td><td> 6         </td></tr>
+	<tr><td>GF         </td><td>Middle-aged</td><td>Male       </td><td> 4         </td></tr>
+	<tr><td>GF         </td><td>Old        </td><td>Female     </td><td> 3         </td></tr>
+	<tr><td>GF         </td><td>Old        </td><td>Male       </td><td> 5         </td></tr>
+	<tr><td>GF         </td><td>Young      </td><td>Female     </td><td> 5         </td></tr>
+	<tr><td>GF         </td><td>Young      </td><td>Male       </td><td> 4         </td></tr>
+	<tr><td>SPF        </td><td>Middle-aged</td><td>Female     </td><td> 6         </td></tr>
+	<tr><td>SPF        </td><td>Middle-aged</td><td>Male       </td><td> 5         </td></tr>
+	<tr><td>SPF        </td><td>Old        </td><td>Female     </td><td> 3         </td></tr>
+	<tr><td>SPF        </td><td>Old        </td><td>Male       </td><td>14         </td></tr>
+	<tr><td>SPF        </td><td>Young      </td><td>Female     </td><td> 3         </td></tr>
+	<tr><td>SPF        </td><td>Young      </td><td>Male       </td><td> 3         </td></tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+
+<div class="output_area">
+
+<div class="prompt"> </div>
+
+
+<div class="output_html rendered_html output_subarea ">
+<table>
+<thead><tr><th scope=col>Microbiote</th><th scope=col>Age</th><th scope=col>Sex</th><th scope=col>sample</th><th scope=col>project</th></tr></thead>
+<tbody>
+	<tr><td>GF            </td><td>Old           </td><td>Female        </td><td>GF_104w_F_1_2 </td><td>S264          </td></tr>
+	<tr><td>GF            </td><td>Old           </td><td>Female        </td><td>GF_104w_F_2_2 </td><td>S264          </td></tr>
+	<tr><td>GF            </td><td>Old           </td><td>Female        </td><td>GF_104w_F_3_2 </td><td>S264          </td></tr>
+	<tr><td>GF            </td><td>Old           </td><td>Male          </td><td>GF_104w_M_1_2 </td><td>S264          </td></tr>
+	<tr><td>GF            </td><td>Old           </td><td>Male          </td><td>GF_104w_M_2_2 </td><td>S264          </td></tr>
+	<tr><td>GF            </td><td>Old           </td><td>Male          </td><td>GF_104w_M_3_2 </td><td>S288          </td></tr>
+	<tr><td>GF            </td><td>Old           </td><td>Male          </td><td>GF_104w_M_4_2 </td><td>S288          </td></tr>
+	<tr><td>GF            </td><td>Old           </td><td>Male          </td><td>GF_104w_M_5_2 </td><td>S288          </td></tr>
+	<tr><td>GF            </td><td>Middle-aged   </td><td>Female        </td><td>GF_52w_F_1_2  </td><td>S178          </td></tr>
+	<tr><td>GF            </td><td>Middle-aged   </td><td>Female        </td><td>GF_52w_F_2_2  </td><td>S178          </td></tr>
+	<tr><td>GF            </td><td>Middle-aged   </td><td>Female        </td><td>GF_52w_F_3_2  </td><td>S178          </td></tr>
+	<tr><td>GF            </td><td>Middle-aged   </td><td>Female        </td><td>GF_52w_F_4_2  </td><td>S178          </td></tr>
+	<tr><td>GF            </td><td>Middle-aged   </td><td>Female        </td><td>GF_52w_F_5_2  </td><td>S178          </td></tr>
+	<tr><td>GF            </td><td>Middle-aged   </td><td>Female        </td><td>GF_52w_F_6_2  </td><td>S178          </td></tr>
+	<tr><td>GF            </td><td>Middle-aged   </td><td>Male          </td><td>GF_52w_M_1_2  </td><td>S148          </td></tr>
+	<tr><td>GF            </td><td>Middle-aged   </td><td>Male          </td><td>GF_52w_M_2_2  </td><td>S148          </td></tr>
+	<tr><td>GF            </td><td>Middle-aged   </td><td>Male          </td><td>GF_52w_M_3_2  </td><td>S148          </td></tr>
+	<tr><td>GF            </td><td>Middle-aged   </td><td>Male          </td><td>GF_52w_M_4_2  </td><td>S148          </td></tr>
+	<tr><td>GF            </td><td>Young         </td><td>Female        </td><td>GF_8w_F_1_2   </td><td>S225          </td></tr>
+	<tr><td>GF            </td><td>Young         </td><td>Female        </td><td>GF_8w_F_2_2   </td><td>S225          </td></tr>
+	<tr><td>GF            </td><td>Young         </td><td>Female        </td><td>GF_8w_F_3_2   </td><td>S225          </td></tr>
+	<tr><td>GF            </td><td>Young         </td><td>Female        </td><td>GF_8w_F_4_2   </td><td>S225          </td></tr>
+	<tr><td>GF            </td><td>Young         </td><td>Female        </td><td>GF_8w_F_5_2   </td><td>S225          </td></tr>
+	<tr><td>GF            </td><td>Young         </td><td>Male          </td><td>GF_8w_M_1_2   </td><td>S148          </td></tr>
+	<tr><td>GF            </td><td>Young         </td><td>Male          </td><td>GF_8w_M_2_2   </td><td>S148          </td></tr>
+	<tr><td>GF            </td><td>Young         </td><td>Male          </td><td>GF_8w_M_3_2   </td><td>S148          </td></tr>
+	<tr><td>GF            </td><td>Young         </td><td>Male          </td><td>GF_8w_M_4_2   </td><td>S148          </td></tr>
+	<tr><td>SPF           </td><td>Old           </td><td>Female        </td><td>SPF_104w_F_1_2</td><td>S174          </td></tr>
+	<tr><td>SPF           </td><td>Old           </td><td>Female        </td><td>SPF_104w_F_2_2</td><td>S174          </td></tr>
+	<tr><td>SPF           </td><td>Old           </td><td>Female        </td><td>SPF_104w_F_3_2</td><td>S174          </td></tr>
 	<tr><td>⋮</td><td>⋮</td><td>⋮</td><td>⋮</td><td>⋮</td></tr>
-	<tr><td>SPF            </td><td>Old            </td><td>M              </td><td>SPF_104w_M_10_2</td><td>S198           </td></tr>
-	<tr><td>SPF            </td><td>Old            </td><td>M              </td><td>SPF_104w_M_11_2</td><td>S198           </td></tr>
-	<tr><td>SPF            </td><td>Old            </td><td>M              </td><td>SPF_104w_M_12_2</td><td>S198           </td></tr>
-	<tr><td>SPF            </td><td>Old            </td><td>M              </td><td>SPF_104w_M_13_2</td><td>S198           </td></tr>
-	<tr><td>SPF            </td><td>Old            </td><td>M              </td><td>SPF_104w_M_14_2</td><td>S198           </td></tr>
-	<tr><td>SPF            </td><td>Old            </td><td>M              </td><td>SPF_104w_M_2_2 </td><td>S174           </td></tr>
-	<tr><td>SPF            </td><td>Old            </td><td>M              </td><td>SPF_104w_M_3_2 </td><td>S174           </td></tr>
-	<tr><td>SPF            </td><td>Old            </td><td>M              </td><td>SPF_104w_M_4_2 </td><td>S174           </td></tr>
-	<tr><td>SPF            </td><td>Old            </td><td>M              </td><td>SPF_104w_M_5_2 </td><td>S198           </td></tr>
-	<tr><td>SPF            </td><td>Old            </td><td>M              </td><td>SPF_104w_M_6_2 </td><td>S198           </td></tr>
-	<tr><td>SPF            </td><td>Old            </td><td>M              </td><td>SPF_104w_M_7_2 </td><td>S198           </td></tr>
-	<tr><td>SPF            </td><td>Old            </td><td>M              </td><td>SPF_104w_M_8_2 </td><td>S198           </td></tr>
-	<tr><td>SPF            </td><td>Old            </td><td>M              </td><td>SPF_104w_M_9_2 </td><td>S198           </td></tr>
-	<tr><td>SPF            </td><td>Middle-aged    </td><td>F              </td><td>SPF_52w_F_1_2  </td><td>S178           </td></tr>
-	<tr><td>SPF            </td><td>Middle-aged    </td><td>F              </td><td>SPF_52w_F_2_2  </td><td>S178           </td></tr>
-	<tr><td>SPF            </td><td>Middle-aged    </td><td>F              </td><td>SPF_52w_F_3_2  </td><td>S178           </td></tr>
-	<tr><td>SPF            </td><td>Middle-aged    </td><td>F              </td><td>SPF_52w_F_4_2  </td><td>S178           </td></tr>
-	<tr><td>SPF            </td><td>Middle-aged    </td><td>F              </td><td>SPF_52w_F_5_2  </td><td>S178           </td></tr>
-	<tr><td>SPF            </td><td>Middle-aged    </td><td>F              </td><td>SPF_52w_F_6_2  </td><td>S178           </td></tr>
-	<tr><td>SPF            </td><td>Middle-aged    </td><td>M              </td><td>SPF_52w_M_1_2  </td><td>S148           </td></tr>
-	<tr><td>SPF            </td><td>Middle-aged    </td><td>M              </td><td>SPF_52w_M_2_2  </td><td>S148           </td></tr>
-	<tr><td>SPF            </td><td>Middle-aged    </td><td>M              </td><td>SPF_52w_M_3_2  </td><td>S148           </td></tr>
-	<tr><td>SPF            </td><td>Middle-aged    </td><td>M              </td><td>SPF_52w_M_4_2  </td><td>S148           </td></tr>
-	<tr><td>SPF            </td><td>Middle-aged    </td><td>M              </td><td>SPF_52w_M_5_2  </td><td>S148           </td></tr>
-	<tr><td>SPF            </td><td>Young          </td><td>F              </td><td>SPF_8w_F_1_2   </td><td>S225           </td></tr>
-	<tr><td>SPF            </td><td>Young          </td><td>F              </td><td>SPF_8w_F_3_2   </td><td>S225           </td></tr>
-	<tr><td>SPF            </td><td>Young          </td><td>F              </td><td>SPF_8w_F_4_2   </td><td>S225           </td></tr>
-	<tr><td>SPF            </td><td>Young          </td><td>M              </td><td>SPF_8w_M_2_2   </td><td>S148           </td></tr>
-	<tr><td>SPF            </td><td>Young          </td><td>M              </td><td>SPF_8w_M_3_2   </td><td>S148           </td></tr>
-	<tr><td>SPF            </td><td>Young          </td><td>M              </td><td>SPF_8w_M_4_2   </td><td>S148           </td></tr>
+	<tr><td>SPF            </td><td>Old            </td><td>Male           </td><td>SPF_104w_M_10_2</td><td>S198           </td></tr>
+	<tr><td>SPF            </td><td>Old            </td><td>Male           </td><td>SPF_104w_M_11_2</td><td>S198           </td></tr>
+	<tr><td>SPF            </td><td>Old            </td><td>Male           </td><td>SPF_104w_M_12_2</td><td>S198           </td></tr>
+	<tr><td>SPF            </td><td>Old            </td><td>Male           </td><td>SPF_104w_M_13_2</td><td>S198           </td></tr>
+	<tr><td>SPF            </td><td>Old            </td><td>Male           </td><td>SPF_104w_M_14_2</td><td>S198           </td></tr>
+	<tr><td>SPF            </td><td>Old            </td><td>Male           </td><td>SPF_104w_M_2_2 </td><td>S174           </td></tr>
+	<tr><td>SPF            </td><td>Old            </td><td>Male           </td><td>SPF_104w_M_3_2 </td><td>S174           </td></tr>
+	<tr><td>SPF            </td><td>Old            </td><td>Male           </td><td>SPF_104w_M_4_2 </td><td>S174           </td></tr>
+	<tr><td>SPF            </td><td>Old            </td><td>Male           </td><td>SPF_104w_M_5_2 </td><td>S198           </td></tr>
+	<tr><td>SPF            </td><td>Old            </td><td>Male           </td><td>SPF_104w_M_6_2 </td><td>S198           </td></tr>
+	<tr><td>SPF            </td><td>Old            </td><td>Male           </td><td>SPF_104w_M_7_2 </td><td>S198           </td></tr>
+	<tr><td>SPF            </td><td>Old            </td><td>Male           </td><td>SPF_104w_M_8_2 </td><td>S198           </td></tr>
+	<tr><td>SPF            </td><td>Old            </td><td>Male           </td><td>SPF_104w_M_9_2 </td><td>S198           </td></tr>
+	<tr><td>SPF            </td><td>Middle-aged    </td><td>Female         </td><td>SPF_52w_F_1_2  </td><td>S178           </td></tr>
+	<tr><td>SPF            </td><td>Middle-aged    </td><td>Female         </td><td>SPF_52w_F_2_2  </td><td>S178           </td></tr>
+	<tr><td>SPF            </td><td>Middle-aged    </td><td>Female         </td><td>SPF_52w_F_3_2  </td><td>S178           </td></tr>
+	<tr><td>SPF            </td><td>Middle-aged    </td><td>Female         </td><td>SPF_52w_F_4_2  </td><td>S178           </td></tr>
+	<tr><td>SPF            </td><td>Middle-aged    </td><td>Female         </td><td>SPF_52w_F_5_2  </td><td>S178           </td></tr>
+	<tr><td>SPF            </td><td>Middle-aged    </td><td>Female         </td><td>SPF_52w_F_6_2  </td><td>S178           </td></tr>
+	<tr><td>SPF            </td><td>Middle-aged    </td><td>Male           </td><td>SPF_52w_M_1_2  </td><td>S148           </td></tr>
+	<tr><td>SPF            </td><td>Middle-aged    </td><td>Male           </td><td>SPF_52w_M_2_2  </td><td>S148           </td></tr>
+	<tr><td>SPF            </td><td>Middle-aged    </td><td>Male           </td><td>SPF_52w_M_3_2  </td><td>S148           </td></tr>
+	<tr><td>SPF            </td><td>Middle-aged    </td><td>Male           </td><td>SPF_52w_M_4_2  </td><td>S148           </td></tr>
+	<tr><td>SPF            </td><td>Middle-aged    </td><td>Male           </td><td>SPF_52w_M_5_2  </td><td>S148           </td></tr>
+	<tr><td>SPF            </td><td>Young          </td><td>Female         </td><td>SPF_8w_F_1_2   </td><td>S225           </td></tr>
+	<tr><td>SPF            </td><td>Young          </td><td>Female         </td><td>SPF_8w_F_3_2   </td><td>S225           </td></tr>
+	<tr><td>SPF            </td><td>Young          </td><td>Female         </td><td>SPF_8w_F_4_2   </td><td>S225           </td></tr>
+	<tr><td>SPF            </td><td>Young          </td><td>Male           </td><td>SPF_8w_M_2_2   </td><td>S148           </td></tr>
+	<tr><td>SPF            </td><td>Young          </td><td>Male           </td><td>SPF_8w_M_3_2   </td><td>S148           </td></tr>
+	<tr><td>SPF            </td><td>Young          </td><td>Male           </td><td>SPF_8w_M_4_2   </td><td>S148           </td></tr>
 </tbody>
 </table>
 
@@ -12259,6 +12364,53 @@ Allowing multi-threading with up to 4 threads.
 
 </div>
 <div class="cell border-box-sizing code_cell rendered">
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Citations">Citations<a class="anchor-link" href="#Citations">&#182;</a></h1>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"> </div>
+
+
+
+<div class="output_text output_subarea ">
+<pre>
+To cite rentrez in publications use:
+
+  Winter, D. J. (2017) rentrez: an R package for the NCBI eUtils API
+  The R Journal 9(2):520-526
+
+A BibTeX entry for LaTeX users is
+
+  @Article{,
+    title = {{rentrez}: an R package for the NCBI eUtils API},
+    author = {David J. Winter},
+    journal = {The R Journal},
+    year = {2017},
+    volume = {9},
+    issue = {2},
+    pages = {520--526},
+  }
+</pre>
+</div>
+
+</div>
+
+</div>
+</div>
 
 </div>
     </div>

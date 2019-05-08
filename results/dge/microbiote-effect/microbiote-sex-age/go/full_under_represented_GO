@@ -1,0 +1,3 @@
+category	GF vs SPF (Female, Young)	GF vs SPF (Male, Young)	GF vs SPF (Female, Middle-aged)	GF vs SPF (Male, Middle-aged)	GF vs SPF (Female, Old)	GF vs SPF (Male, Old)	term	ontology
+1	GO:0098796	NA	NA	NA	NA	0.0367529945751836	NA	membrane protein complex	CC
+2	GO:0004984	NA	NA	NA	NA	0.0367529945751836	0.000310983875215669	olfactory receptor activity	MF
