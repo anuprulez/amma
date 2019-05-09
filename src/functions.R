@@ -282,6 +282,7 @@ plot_heatmap = function(count, genes, samples, annot, show_rownames=FALSE){
              show_rownames=show_rownames,
              show_colnames=F,
              annotation_col=annot,
+             annotation_color=annot_colors,
              breaks=breaks,
              color=inferno(10))  
 }
@@ -298,6 +299,7 @@ plot_fc_heatmap = function(sign_fc_deg, annot){
         show_rownames=F,
         show_colnames=F,
         annotation_col=annot,
+        annotation_color=annot_colors,
         breaks=breaks,
         color=rev(brewer.pal(10, "RdBu")))
 }
@@ -580,9 +582,7 @@ plot_fc_heatmap_with_modules = function(data, fc_annot, connected_gene_colors){
     rownames(annot_row) = c(genes_in_mod_to_keep, genes_not_in_mod)
     mod_pal = c(head(pal2, -2),'white')
     names(mod_pal) = as.factor(c(1:module_nb,"No module"))
-    annot_colors = list(
-        module = mod_pal
-    )
+    annot_colors$module = mod_pal
     # get breaks for the colors
     data_vector = unlist(module_gene_fc_deg)
     data_vector = data_vector[!is.na(data_vector)]
@@ -627,6 +627,7 @@ plot_z_score_heatmap_with_modules = function(z_scores, deg, col_order, annot_col
     }
     # order the z-score matrix by genes in genes_in_mod
     data = data[names(genes_in_mod), col_order]
+    annot_colors$module=pal2
     # plot heatmap
     pheatmap(data[names(genes_in_mod), col_order],
             cluster_rows=F,
@@ -635,7 +636,7 @@ plot_z_score_heatmap_with_modules = function(z_scores, deg, col_order, annot_col
             show_colnames=F,
             annotation_col=annot_col,
             annotation_row=data.frame( module=genes_in_mod),
-            annotation_colors = list( module = pal2),
+            annotation_colors = annot_colors,
             color=rev(brewer.pal(11, "RdBu")),
             breaks = seq(-3.5, 3.5, length=12),
             main = title)
@@ -655,7 +656,7 @@ plot_z_score_heatmap = function(z_scores, de_genes, col_order, annot_col, title,
              show_colnames=F,
              annotation_col=annot_col,
              annotation_row=NULL,
-             annotation_colors = NULL,
+             annotation_colors = annot_colors,
              color=rev(brewer.pal(11, "RdBu")),
              breaks = seq(-3.5, 3.5, length=12),
              main = title)
