@@ -14,9 +14,9 @@ Links
     $ conda env create -f environment.yml
     ```
 
-- Add the API key to [https://galaxy.uni-freiburg.de/](https://galaxy.uni-freiburg.de/) in [`config.yaml`](config.yaml)
+- Add the API key to [https://usegalaxy.eu/](https://usegalaxy.eu/) in [`config.yaml`](config.yaml)
 
-# Usage for the data analyses
+# Run the data analyses
 
 - Launch the `conda` environment
 
@@ -33,7 +33,7 @@ Links
         --output_dir <path to output directory>\
     ```
 
-- Upload the data on [http://galaxy.uni-freiburg.de/](http://galaxy.uni-freiburg.de/) inside an history named "NeuroMac: GF mices - DGE analysis"
+- Upload the data on [http://usegalaxy.eu/](http://usegalaxy.eu/) inside an history named "NeuroMac: GF mices - DGE analysis"
 
     ```
     $ snakemake --snakefile src/prepare_data.py
@@ -69,16 +69,30 @@ Links
     ```
 
     - Run the different notebooks in `src`
+        1. `src/prepare_data.ipynb`
+        2. `src/dge_analysis.ipynb`
+        3. `src/pre-visualization.ipynb`
+        4. DEG analysis
 
-# Usage for the report generation
-
-```
-$ pandoc doc/report.md --latex-engine=xelatex --filter pandoc-citeproc  --toc -o doc/report.pdf
-```
-
-# Generate HTML of the Jupyter Notebooks (for doc)
+# Generate HTML of the Jupyter Notebooks (for `docs` folder)
 
 ```
 $ jupyter nbconvert --template=nbextensions --to=html src/*.ipynb --output-dir docs/
 $ for i in $(find docs/ -path "*.html"); do awk '/jquery.min.js/{ print; print "<script src=\"https://cdnjs.cloudflare.com/ajax/libs/three.js/r79/three.min.js\"></script>"; next }1' $i > tmp; mv tmp $i; done
 ```
+
+# Generate the website locally
+
+- Install [Jekyll](https://jekyllrb.com/docs/installation/)
+- Move to `docs` folder
+
+    ```
+    $ cd docs
+    ```
+
+- Serve the website locally
+
+    ```
+    $ bundle exec jekyll serve
+    ```
+
