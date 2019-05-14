@@ -6,11 +6,15 @@ layout: base
 
 Microglia, the brain resident macrophages, display high plasticity in response to their environment. Aging of the central nervous system (CNS), where microglial physiology is especially disrupted, is a major risk factor for a myriad of neurodegenerative diseases. Therefore, it is crucial to decipher intrinsic and extrinsic factors, like sex and the microbiome, that potentially modulate this process.
 
-Here, we found that microglia follow sex-dependent dynamics in aging. Transcriptomic profiling of microglia in females showed that microglia reach an aging-specific signature faster than males, possibly due to a dysfunction of the DNA-repair machinery. Furthermore, we identified a microglial-aging gene subset that is regulated by the gut microbiota and plays a role in microglia priming. In the absence of the gut microbiome, microglia suffered less severe aging effects by showing less lysosomal dysfunction and oxidative stress. 
+Here, we found that **microglia follow sex-dependent dynamics in aging**. Transcriptomic profiling of microglia in females showed that microglia reach an aging-specific signature faster than males, possibly due to a dysfunction of the DNA-repair machinery. Furthermore, we identified a microglial-aging gene subset that is regulated by the gut microbiota and plays a role in microglia priming. In the absence of the gut microbiome, microglia suffered less severe aging effects by showing less lysosomal dysfunction and oxidative stress.
+
+**On this website, you will find the details of the RNA-seq analysis done to show that the gut microbiome drives sex-biased microglial aging.**
 
 *This work was done by: Omar Mossad, Bérénice Batut, Bahtiyar Yilmaz, Stephanie C. Ganal-Vonarburg, Mercedes Gomez de Agüero, Lara Susann Nabavi, Melanie Mayer, Charlotte Mezö, Nikolaos Dokalis, Daniel Erny, Rolf Backofen, Andrew J. Macpherson, Marco Prinz & Thomas Blank*
 
 ## Data
+
+![Experimental protocol](images/experimental_protocol_schema.png){: width="60%"}
 
 Microglia cells have been extracted from 64 mices given:
 - 2 microbiota states: Conventional (SPF) and Germ free (GF)
@@ -74,7 +78,7 @@ Analysis | Report | Sources | Data & Results
 Microbiota effect, after controlling for age and sex | | [<i class="fab fa-github"></i>]({{ site.github.repository_url }}/tree/master/src/microbiota-effect-general) | [<i class="fas fa-file"></i>]({{ site.github.repository_url }}/tree/master/results/dge/microbiota-effect/microbiota)
 Microbiota effect for both sexes, after controlling for age | | [<i class="fab fa-github"></i>]({{ site.github.repository_url }}/tree/master/src/microbiota-effect-sex) | [<i class="fas fa-file"></i>]({{ site.github.repository_url }}/tree/master/results/dge/microbiota-effect/microbiota_sex)
 Microbiota effect for the 3 ages, after controlling for sex | | [<i class="fab fa-github"></i>]({{ site.github.repository_url }}/tree/master/src/microbiota-effect-age) | [<i class="fas fa-file"></i>]({{ site.github.repository_url }}/tree/master/results/dge/microbiota-effect/microbiota_age)
-Microbiota effect for the 3 ages and both sexes | [<i class="far fa-file-image"></i>]({% link microbiota-effect-age-sex.html %}) | [<i class="fab fa-github"></i>]({{ site.github.repository_url }}/tree/master/src/microbiota-effect-age-sex) | [<i class="fas fa-file"></i>]({{ site.github.repository_url }}/tree/master/results/dge/microbiota-effect/microbiota_sex_age)
+Microbiota effect for the 3 ages and both sexes | [<i class="far fa-file-image"></i>]({% link microbiota-effect-age-sex.html %}) | [<i class="fab fa-github"></i>]({{ site.github.repository_url }}/tree/master/src/microbiota-effect-age-sex.ipynb) | [<i class="fas fa-file"></i>]({{ site.github.repository_url }}/tree/master/results/dge/microbiota-effect/microbiota-sex-age)
 
 ### Effect of the sex (Male vs Female)
 
@@ -83,7 +87,7 @@ Analysis | Report | Sources | Data & Results
 Sex effect, after controlling for age and microbiota | | [<i class="fab fa-github"></i>]({{ site.github.repository_url }}/tree/master/src/sex-effect-general) | [<i class="fas fa-file"></i>]({{ site.github.repository_url }}/tree/master/results/dge/sex-effect/sex)
 Sex effect for both microbiotas, after controlling for age | | [<i class="fab fa-github"></i>]({{ site.github.repository_url }}/tree/master/src/sex-effect-microbiota) | [<i class="fas fa-file"></i>]({{ site.github.repository_url }}/tree/master/results/dge/sex-effect/sex-microbiota)
 Sex effect for the 3 ages, after controlling for microbiota | | [<i class="fab fa-github"></i>]({{ site.github.repository_url }}/tree/master/src/sex-effect-age) | [<i class="fas fa-file"></i>]({{ site.github.repository_url }}/tree/master/results/dge/sex-effect/sex-age)
-Sex effect for the 3 ages and both microbiotas | [<i class="far fa-file-image"></i>]({% link sex-effect-microbiota-age.html %}) | [<i class="fab fa-github"></i>]({{ site.github.repository_url }}/tree/master/src/sex-effect-microbiota-age) | [<i class="fas fa-file"></i>]({{ site.github.repository_url }}/tree/master/results/dge/sex-effect/sex-microbiota-age)
+Sex effect for the 3 ages and both microbiotas | [<i class="far fa-file-image"></i>]({% link sex-effect-microbiota-age.html %}) | [<i class="fab fa-github"></i>]({{ site.github.repository_url }}/tree/master/src/sex-effect-microbiota-age.ipynb) | [<i class="fas fa-file"></i>]({{ site.github.repository_url }}/tree/master/results/dge/sex-effect/sex-microbiota-age)
 
 ### Effect of the ages (Middle-aged vs Young, Old vs Young and Old vs Middle-aged)
 
@@ -92,7 +96,7 @@ Analysis | Report | Sources | Data & Results
 Age effect, after controlling for sex and microbiota | | [<i class="fab fa-github"></i>]({{ site.github.repository_url }}/tree/master/src/age-effect-general) | [<i class="fas fa-file"></i>]({{ site.github.repository_url }}/tree/master/results/dge/age-effect/age)
 Age effect for both microbiotas, after controlling for sex | | [<i class="fab fa-github"></i>]({{ site.github.repository_url }}/tree/master/src/age-effect-microbiota) | [<i class="fas fa-file"></i>]({{ site.github.repository_url }}/tree/master/results/dge/age-effect/age-microbiota)
 Age effect for the both sexes, after controlling for microbiota | | [<i class="fab fa-github"></i>]({{ site.github.repository_url }}/tree/master/src/age-effect-sex) | [<i class="fas fa-file"></i>]({{ site.github.repository_url }}/tree/master/results/dge/age-effect/age-sex)
-Age effect for the both sexes and both microbiotas | [<i class="far fa-file-image"></i>]({% link age-effect-microbiota-sex.html %}) | [<i class="fab fa-github"></i>]({{ site.github.repository_url }}/tree/master/src/age-effect-sex-microbiota) | [<i class="fas fa-file"></i>]({{ site.github.repository_url }}/tree/master/results/dge/age-effect/age-sex-microbiota)
+Age effect for the both sexes and both microbiotas | [<i class="far fa-file-image"></i>]({% link age-effect-microbiota-sex.html %}) | [<i class="fab fa-github"></i>]({{ site.github.repository_url }}/tree/master/src/age-effect-microbiota-sex.ipynb) | [<i class="fas fa-file"></i>]({{ site.github.repository_url }}/tree/master/results/dge/age-effect/age-microbiota-sex)
 
 ## References
 
