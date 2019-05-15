@@ -650,16 +650,16 @@ plot_z_score_heatmap = function(z_scores, de_genes, col_order, annot_col, title,
     hc = hclust(dist(data[,col_for_clust]), method = "complete")
     # plot
     pheatmap(data[hc$order, col_order],
-             cluster_rows=F,
-             cluster_cols=F,
-             show_rownames=F,
-             show_colnames=F,
-             annotation_col=annot_col,
-             annotation_row=NULL,
-             annotation_colors = annot_colors,
-             color=rev(brewer.pal(11, "RdBu")),
-             breaks = seq(-3.5, 3.5, length=12),
-             main = title)
+        cluster_rows=F,
+        cluster_cols=F,
+        show_rownames=F,
+        show_colnames=F,
+        annotation_col=annot_col,
+        annotation_row=NULL,
+        annotation_colors = annot_colors,
+        color=rev(brewer.pal(11, "RdBu")),
+        breaks = seq(-3.5, 3.5, length=12),
+        main = title)
 }
 
 
