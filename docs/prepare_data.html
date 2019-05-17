@@ -11798,6 +11798,16 @@ div#notebook {
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span><span class="kn">source</span><span class="p">(</span><span class="s">&quot;load_libraries.R&quot;</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
 
 <div class="output_wrapper">
 <div class="output">
@@ -11805,7 +11815,8 @@ div#notebook {
 
 <div class="output_area">
 
-<div class="prompt"> </div>
+<div class="prompt"></div>
+
 
 <div class="output_subarea output_stream output_stderr output_text">
 <pre>Warning message in is.na(x[[i]]):
@@ -11816,7 +11827,8 @@ div#notebook {
 
 <div class="output_area">
 
-<div class="prompt"> </div>
+<div class="prompt"></div>
+
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>==========================================================================
@@ -11864,6 +11876,16 @@ Allowing multi-threading with up to 4 threads.
 
 </div>
 <div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span><span class="kn">source</span><span class="p">(</span><span class="s">&quot;functions.R&quot;</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
@@ -11876,6 +11898,17 @@ Allowing multi-threading with up to 4 threads.
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span>gene_length <span class="o">=</span> read.table<span class="p">(</span><span class="s">&quot;../data/gene_length.tabular&quot;</span><span class="p">,</span> h <span class="o">=</span> <span class="bp">F</span><span class="p">,</span> row.names <span class="o">=</span> <span class="m">1</span><span class="p">)</span>
+<span class="kp">save</span><span class="p">(</span>gene_length<span class="p">,</span> file<span class="o">=</span><span class="s">&quot;../results/dge/gene_length.RData&quot;</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
@@ -11888,6 +11921,17 @@ Allowing multi-threading with up to 4 threads.
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span>counts <span class="o">=</span> read.table<span class="p">(</span><span class="s">&quot;../data/counts.tabular&quot;</span><span class="p">,</span> sep<span class="o">=</span><span class="s">&quot;\t&quot;</span><span class="p">,</span> header <span class="o">=</span> <span class="m">1</span><span class="p">,</span> row.names<span class="o">=</span><span class="m">1</span><span class="p">)</span>
+<span class="kp">dim</span><span class="p">(</span>counts<span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
 
 <div class="output_wrapper">
 <div class="output">
@@ -11895,7 +11939,8 @@ Allowing multi-threading with up to 4 threads.
 
 <div class="output_area">
 
-<div class="prompt"> </div>
+<div class="prompt"></div>
+
 
 
 <div class="output_html rendered_html output_subarea ">
@@ -11935,6 +11980,17 @@ Allowing multi-threading with up to 4 threads.
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span>to_remove <span class="o">=</span> <span class="kt">c</span><span class="p">(</span><span class="s">&quot;SPF_8w_F_2_2&quot;</span><span class="p">,</span> <span class="s">&quot;SPF_8w_F_5_2&quot;</span><span class="p">,</span> <span class="s">&quot;SPF_8w_M_1_2&quot;</span><span class="p">)</span>
+counts <span class="o">=</span> counts<span class="p">[,</span><span class="o">!</span><span class="kp">names</span><span class="p">(</span>counts<span class="p">)</span> <span class="o">%in%</span> to_remove<span class="p">]</span>
+</pre></div>
+
+</div>
+</div>
+</div>
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
@@ -11947,6 +12003,18 @@ Allowing multi-threading with up to 4 threads.
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span><span class="kp">nrow</span><span class="p">(</span>counts<span class="p">)</span>
+counts <span class="o">=</span> counts<span class="p">[</span> <span class="kp">rowSums</span><span class="p">(</span>counts<span class="p">)</span> <span class="o">&gt;</span> <span class="m">1</span><span class="p">,</span> <span class="p">]</span>
+<span class="kp">nrow</span><span class="p">(</span>counts<span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
 
 <div class="output_wrapper">
 <div class="output">
@@ -11954,7 +12022,8 @@ Allowing multi-threading with up to 4 threads.
 
 <div class="output_area">
 
-<div class="prompt"> </div>
+<div class="prompt"></div>
+
 
 
 <div class="output_html rendered_html output_subarea ">
@@ -11965,7 +12034,8 @@ Allowing multi-threading with up to 4 threads.
 
 <div class="output_area">
 
-<div class="prompt"> </div>
+<div class="prompt"></div>
+
 
 
 <div class="output_html rendered_html output_subarea ">
@@ -12012,6 +12082,60 @@ Allowing multi-threading with up to 4 threads.
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span><span class="c1"># Extract mapping between Entrez Gene Identifiers and Gene Names (and description) </span>
+eg2name <span class="o">=</span> get_list<span class="p">(</span>org.Mm.egGENENAME<span class="p">)</span>
+<span class="c1"># Extract mapping between Gene Symbols and Entrez Gene Identifiers</span>
+symbol2eg <span class="o">=</span> get_list<span class="p">(</span>org.Mm.egSYMBOL2EG<span class="p">)</span>
+<span class="c1"># Extract mapping between RefSeq and Entrez Gene Identifiers</span>
+refseq2eg <span class="o">=</span> get_list<span class="p">(</span>org.Mm.egREFSEQ2EG<span class="p">)</span>
+<span class="c1"># Extract mapping between Gene Symbols and Gene Names (and description)</span>
+symbol2name <span class="o">=</span> <span class="kp">sapply</span><span class="p">(</span><span class="kp">names</span><span class="p">(</span>symbol2eg<span class="p">),</span> <span class="kr">function</span><span class="p">(</span>x<span class="p">)</span> <span class="kr">return</span><span class="p">(</span>eg2name<span class="p">[</span>symbol2eg<span class="p">[[</span>x<span class="p">]]]))</span>
+<span class="c1"># Extract mapping between Entrez Gene Identifiers and KEGG pathways</span>
+eg2kegg<span class="o">=</span><span class="kp">as.list</span><span class="p">(</span>org.Mm.egPATH<span class="p">)</span>
+<span class="c1"># Get refseq ids for genes</span>
+refseq <span class="o">=</span> <span class="kp">sapply</span><span class="p">(</span><span class="kp">rownames</span><span class="p">(</span>counts<span class="p">),</span> <span class="kr">function</span><span class="p">(</span>x<span class="p">)</span> <span class="kr">return</span><span class="p">(</span>symbol2eg<span class="p">[[</span>x<span class="p">]]))</span> 
+<span class="c1"># Extract names of genes with no RefSeq ids</span>
+to_change <span class="o">=</span> <span class="kp">names</span><span class="p">(</span>refseq<span class="p">[</span><span class="kp">sapply</span><span class="p">(</span>refseq<span class="p">,</span> <span class="kp">is.null</span><span class="p">)])</span>
+<span class="kp">length</span><span class="p">(</span>to_change<span class="p">)</span>
+<span class="c1"># Search on Entrez the correct name</span>
+search_name <span class="o">=</span> <span class="kr">function</span><span class="p">(</span>name<span class="p">){</span>
+    search <span class="o">=</span> entrez_search<span class="p">(</span>db<span class="o">=</span><span class="s">&quot;gene&quot;</span><span class="p">,</span>term<span class="o">=</span>name<span class="p">)</span>
+    names <span class="o">=</span> <span class="kt">c</span><span class="p">()</span>
+    <span class="kr">for</span><span class="p">(</span>id <span class="kr">in</span> <span class="kp">search</span><span class="o">$</span>ids<span class="p">){</span>
+        sum <span class="o">=</span> entrez_summary<span class="p">(</span>db<span class="o">=</span><span class="s">&quot;gene&quot;</span><span class="p">,</span> id<span class="o">=</span>id<span class="p">)</span>
+        <span class="kr">if</span><span class="p">(</span><span class="kp">sum</span><span class="o">$</span>organism<span class="o">$</span>scientificname <span class="o">==</span> <span class="s">&#39;Mus musculus&#39;</span> <span class="o">&amp;</span> <span class="kp">grepl</span><span class="p">(</span>name<span class="p">,</span><span class="kp">sum</span><span class="o">$</span>otheraliases<span class="p">)){</span>
+            names <span class="o">=</span> <span class="kt">c</span><span class="p">(</span><span class="kp">names</span><span class="p">,</span> <span class="kp">sum</span><span class="o">$</span>name<span class="p">)</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+    <span class="kr">return</span><span class="p">(</span><span class="kp">names</span><span class="p">)</span>
+<span class="p">}</span>
+changes <span class="o">=</span> <span class="kp">sapply</span><span class="p">(</span>to_change<span class="p">,</span> search_name<span class="p">)</span>
+<span class="c1"># Clean the new names</span>
+doubled <span class="o">=</span> <span class="kp">sapply</span><span class="p">(</span><span class="kp">names</span><span class="p">(</span>changes<span class="p">),</span> <span class="kr">function</span><span class="p">(</span>x<span class="p">)</span> <span class="kr">return</span><span class="p">(</span><span class="kp">length</span><span class="p">(</span>changes<span class="p">[[</span>x<span class="p">]])</span><span class="o">&gt;</span><span class="m">1</span><span class="p">))</span>
+single <span class="o">=</span> changes<span class="p">[</span><span class="o">!</span>doubled<span class="p">]</span>
+duplicated <span class="o">=</span> single <span class="o">%in%</span> <span class="kp">rownames</span><span class="p">(</span>counts<span class="p">)</span>
+non_duplicated <span class="o">=</span> <span class="kp">single</span><span class="p">[</span><span class="o">!</span><span class="kp">duplicated</span><span class="p">]</span>
+duplicated_2 <span class="o">=</span> <span class="kp">duplicated</span><span class="p">(</span>non_duplicated<span class="p">)</span>
+replacements <span class="o">=</span> non_duplicated<span class="p">[</span><span class="o">!</span>duplicated_2<span class="p">]</span>
+<span class="c1"># Replace the names</span>
+replacements <span class="o">=</span> <span class="kp">unlist</span><span class="p">(</span>replacements<span class="p">)</span>
+new_names <span class="o">=</span> <span class="kp">rownames</span><span class="p">(</span>counts<span class="p">)</span>
+<span class="kp">names</span><span class="p">(</span>new_names<span class="p">)</span> <span class="o">=</span> <span class="kp">rownames</span><span class="p">(</span>counts<span class="p">)</span>
+new_names<span class="p">[</span><span class="kp">names</span><span class="p">(</span>replacements<span class="p">)]</span> <span class="o">=</span> replacements
+<span class="kp">head</span><span class="p">(</span>new_names<span class="p">)</span>
+<span class="kp">rownames</span><span class="p">(</span>counts<span class="p">)</span> <span class="o">=</span> new_names
+<span class="c1"># Check the new number of genes without RefSeq ids</span>
+refseq_check <span class="o">=</span> <span class="kp">sapply</span><span class="p">(</span><span class="kp">rownames</span><span class="p">(</span>counts<span class="p">),</span> <span class="kr">function</span><span class="p">(</span>x<span class="p">)</span> <span class="kr">return</span><span class="p">(</span>symbol2eg<span class="p">[[</span>x<span class="p">]]))</span> 
+<span class="kp">length</span><span class="p">(</span>refseq<span class="p">[</span><span class="kp">sapply</span><span class="p">(</span>refseq_check<span class="p">,</span> <span class="kp">is.null</span><span class="p">)])</span>
+</pre></div>
+
+</div>
+</div>
+</div>
 
 <div class="output_wrapper">
 <div class="output">
@@ -12019,7 +12143,8 @@ Allowing multi-threading with up to 4 threads.
 
 <div class="output_area">
 
-<div class="prompt"> </div>
+<div class="prompt"></div>
+
 
 
 <div class="output_html rendered_html output_subarea ">
@@ -12030,7 +12155,8 @@ Allowing multi-threading with up to 4 threads.
 
 <div class="output_area">
 
-<div class="prompt"> </div>
+<div class="prompt"></div>
+
 
 
 <div class="output_html rendered_html output_subarea ">
@@ -12055,7 +12181,8 @@ Allowing multi-threading with up to 4 threads.
 
 <div class="output_area">
 
-<div class="prompt"> </div>
+<div class="prompt"></div>
+
 
 
 <div class="output_html rendered_html output_subarea ">
@@ -12086,6 +12213,22 @@ Allowing multi-threading with up to 4 threads.
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span><span class="kp">head</span><span class="p">(</span>counts<span class="p">)</span>
+counts <span class="o">=</span> counts <span class="o">%&gt;%</span>
+         rownames_to_column<span class="p">(</span><span class="s">&#39;gene_names&#39;</span><span class="p">)</span> <span class="o">%&gt;%</span>
+         select<span class="p">(</span><span class="kp">sort</span><span class="p">(</span>current_vars<span class="p">()))</span> <span class="o">%&gt;%</span>
+         column_to_rownames<span class="p">(</span><span class="s">&#39;gene_names&#39;</span><span class="p">)</span>
+<span class="kp">head</span><span class="p">(</span>counts<span class="p">)</span>
+<span class="kp">save</span><span class="p">(</span>counts<span class="p">,</span> file<span class="o">=</span><span class="s">&quot;../results/dge/prepared_counts.RData&quot;</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
 
 <div class="output_wrapper">
 <div class="output">
@@ -12093,7 +12236,8 @@ Allowing multi-threading with up to 4 threads.
 
 <div class="output_area">
 
-<div class="prompt"> </div>
+<div class="prompt"></div>
+
 
 
 <div class="output_html rendered_html output_subarea ">
@@ -12115,7 +12259,8 @@ Allowing multi-threading with up to 4 threads.
 
 <div class="output_area">
 
-<div class="prompt"> </div>
+<div class="prompt"></div>
+
 
 
 <div class="output_html rendered_html output_subarea ">
@@ -12149,6 +12294,19 @@ Allowing multi-threading with up to 4 threads.
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span>gene_length <span class="o">=</span> read.table<span class="p">(</span><span class="s">&quot;../data/gene_length.tabular&quot;</span><span class="p">,</span> h <span class="o">=</span> <span class="bp">F</span><span class="p">,</span> row.names <span class="o">=</span> <span class="m">1</span><span class="p">)</span>
+gene_length <span class="o">=</span> gene_length<span class="p">[</span><span class="kp">rownames</span><span class="p">(</span>counts<span class="p">),]</span>
+<span class="kp">names</span><span class="p">(</span>gene_length<span class="p">)</span> <span class="o">=</span> new_names
+<span class="kp">save</span><span class="p">(</span>gene_length<span class="p">,</span> file<span class="o">=</span><span class="s">&quot;../results/dge/gene_length.RData&quot;</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
@@ -12169,6 +12327,24 @@ Allowing multi-threading with up to 4 threads.
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span>file_desc <span class="o">=</span> read.csv<span class="p">(</span><span class="s">&quot;../data/file_description.csv&quot;</span><span class="p">,</span> row.names <span class="o">=</span> <span class="m">1</span><span class="p">)</span> <span class="o">%&gt;%</span>
+            rownames_to_column<span class="p">(</span><span class="s">&#39;sample&#39;</span><span class="p">)</span> <span class="o">%&gt;%</span>
+            slice<span class="p">(</span><span class="m">1</span><span class="o">:</span><span class="p">(</span>n<span class="p">()</span><span class="m">-6</span><span class="p">))</span> <span class="o">%&gt;%</span>
+            mutate<span class="p">(</span>Lane <span class="o">=</span> <span class="kp">gsub</span><span class="p">(</span><span class="s">&quot; &amp; &quot;</span><span class="p">,</span> <span class="s">&quot;_&quot;</span><span class="p">,</span> Lane<span class="p">))</span> <span class="o">%&gt;%</span>
+            mutate<span class="p">(</span>Lane <span class="o">=</span> <span class="kp">gsub</span><span class="p">(</span><span class="s">&quot; &quot;</span><span class="p">,</span> <span class="s">&quot;1&quot;</span><span class="p">,</span> Lane<span class="p">))</span> <span class="o">%&gt;%</span>
+            mutate<span class="p">(</span>Project.id <span class="o">=</span> <span class="kp">gsub</span><span class="p">(</span><span class="s">&quot;Project_&quot;</span><span class="p">,</span> <span class="s">&quot;&quot;</span><span class="p">,</span> Project.id<span class="p">))</span> <span class="o">%&gt;%</span>
+            mutate<span class="p">(</span>Project.id <span class="o">=</span> <span class="kp">gsub</span><span class="p">(</span><span class="s">&quot;148&quot;</span><span class="p">,</span> <span class="s">&quot;S148&quot;</span><span class="p">,</span> Project.id<span class="p">))</span>
+<span class="kp">dim</span><span class="p">(</span>file_desc<span class="p">)</span>
+<span class="kp">head</span><span class="p">(</span>file_desc<span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
 
 <div class="output_wrapper">
 <div class="output">
@@ -12176,7 +12352,8 @@ Allowing multi-threading with up to 4 threads.
 
 <div class="output_area">
 
-<div class="prompt"> </div>
+<div class="prompt"></div>
+
 
 
 <div class="output_html rendered_html output_subarea ">
@@ -12191,7 +12368,8 @@ Allowing multi-threading with up to 4 threads.
 
 <div class="output_area">
 
-<div class="prompt"> </div>
+<div class="prompt"></div>
+
 
 
 <div class="output_html rendered_html output_subarea ">
@@ -12246,6 +12424,41 @@ Allowing multi-threading with up to 4 threads.
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span>metadata <span class="o">=</span> tbl_df<span class="p">(</span><span class="kp">t</span><span class="p">(</span><span class="kp">sapply</span><span class="p">(</span><span class="kp">sapply</span><span class="p">(</span><span class="kp">colnames</span><span class="p">(</span>counts<span class="p">),</span> <span class="kp">strsplit</span><span class="p">,</span> split <span class="o">=</span> <span class="s">&quot;_&quot;</span><span class="p">),</span> <span class="kp">unlist</span><span class="p">)))</span> <span class="o">%&gt;%</span>
+   magrittr<span class="o">::</span>set_colnames<span class="p">(</span><span class="kt">c</span><span class="p">(</span><span class="s">&quot;type&quot;</span><span class="p">,</span> <span class="s">&quot;age&quot;</span><span class="p">,</span> <span class="s">&quot;gender&quot;</span><span class="p">,</span> <span class="s">&quot;replicate&quot;</span><span class="p">,</span> <span class="s">&quot;extra&quot;</span><span class="p">))</span> <span class="o">%&gt;%</span>
+   mutate<span class="p">(</span>sample <span class="o">=</span> <span class="kp">paste</span><span class="p">(</span>type<span class="p">,</span> age<span class="p">,</span> gender<span class="p">,</span> <span class="kp">replicate</span><span class="p">,</span> extra<span class="p">,</span> sep <span class="o">=</span><span class="s">&quot;_&quot;</span><span class="p">))</span> <span class="o">%&gt;%</span>
+   select<span class="p">(</span><span class="o">-</span>extra<span class="p">)</span> <span class="o">%&gt;%</span>
+   mutate<span class="p">(</span>short_name <span class="o">=</span> <span class="kp">paste</span><span class="p">(</span>type<span class="p">,</span> age<span class="p">,</span> gender<span class="p">,</span> <span class="kp">replicate</span><span class="p">,</span> sep <span class="o">=</span><span class="s">&quot;_&quot;</span><span class="p">))</span> <span class="o">%&gt;%</span>
+   select<span class="p">(</span><span class="o">-</span><span class="kp">replicate</span><span class="p">)</span> <span class="o">%&gt;%</span>
+   arrange<span class="p">(</span>short_name<span class="p">)</span> 
+projects <span class="o">=</span> file_desc <span class="o">%&gt;%</span>
+   filter<span class="p">(</span>sample <span class="o">%in%</span> metadata<span class="o">$</span>short_name<span class="p">)</span> <span class="o">%&gt;%</span>
+   arrange<span class="p">(</span><span class="kp">sample</span><span class="p">)</span> <span class="o">%&gt;%</span>
+   pull<span class="p">(</span><span class="s">&quot;Project.id&quot;</span><span class="p">)</span>
+metadata <span class="o">=</span> metadata <span class="o">%&gt;%</span>
+    mutate<span class="p">(</span>project <span class="o">=</span> projects<span class="p">)</span> <span class="o">%&gt;%</span>
+    select<span class="p">(</span><span class="o">-</span>short_name<span class="p">)</span> <span class="o">%&gt;%</span>
+    mutate<span class="p">(</span>age <span class="o">=</span> <span class="kp">gsub</span><span class="p">(</span><span class="s">&quot;104w&quot;</span><span class="p">,</span> <span class="s">&quot;Old&quot;</span><span class="p">,</span> age <span class="p">))</span> <span class="o">%&gt;%</span>
+    mutate<span class="p">(</span>age <span class="o">=</span> <span class="kp">gsub</span><span class="p">(</span><span class="s">&quot;52w&quot;</span><span class="p">,</span> <span class="s">&quot;Middle-aged&quot;</span><span class="p">,</span> age <span class="p">))</span> <span class="o">%&gt;%</span>
+    mutate<span class="p">(</span>age <span class="o">=</span> <span class="kp">gsub</span><span class="p">(</span><span class="s">&quot;8w&quot;</span><span class="p">,</span> <span class="s">&quot;Young&quot;</span><span class="p">,</span> age <span class="p">))</span> <span class="o">%&gt;%</span>
+    mutate<span class="p">(</span>gender <span class="o">=</span> <span class="kp">gsub</span><span class="p">(</span><span class="s">&quot;F&quot;</span><span class="p">,</span> <span class="s">&quot;Female&quot;</span><span class="p">,</span> gender <span class="p">))</span> <span class="o">%&gt;%</span>
+    mutate<span class="p">(</span>gender <span class="o">=</span> <span class="kp">gsub</span><span class="p">(</span><span class="s">&quot;M&quot;</span><span class="p">,</span> <span class="s">&quot;Male&quot;</span><span class="p">,</span> gender<span class="p">))</span> <span class="o">%&gt;%</span>
+    rename<span class="p">(</span>Sex <span class="o">=</span> gender<span class="p">)</span> <span class="o">%&gt;%</span>
+    rename<span class="p">(</span>Microbiota <span class="o">=</span> type<span class="p">)</span> <span class="o">%&gt;%</span>
+    rename<span class="p">(</span>Age <span class="o">=</span> age<span class="p">)</span>
+metadata <span class="o">%&gt;%</span>
+    group_by<span class="p">(</span>Microbiota<span class="p">,</span> Age<span class="p">,</span> Sex<span class="p">)</span>  <span class="o">%&gt;%</span> 
+    summarise<span class="p">(</span>Number <span class="o">=</span> n<span class="p">())</span>
+metadata
+</pre></div>
+
+</div>
+</div>
+</div>
 
 <div class="output_wrapper">
 <div class="output">
@@ -12253,7 +12466,8 @@ Allowing multi-threading with up to 4 threads.
 
 <div class="output_area">
 
-<div class="prompt"> </div>
+<div class="prompt"></div>
+
 
 
 <div class="output_html rendered_html output_subarea ">
@@ -12281,7 +12495,8 @@ Allowing multi-threading with up to 4 threads.
 
 <div class="output_area">
 
-<div class="prompt"> </div>
+<div class="prompt"></div>
+
 
 
 <div class="output_html rendered_html output_subarea ">
@@ -12361,6 +12576,16 @@ Allowing multi-threading with up to 4 threads.
 
 </div>
 <div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[12]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span><span class="kp">save</span><span class="p">(</span>metadata<span class="p">,</span> file<span class="o">=</span><span class="s">&quot;../results/dge/metadata.RData&quot;</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
@@ -12372,6 +12597,16 @@ Allowing multi-threading with up to 4 threads.
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[13]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span>citation<span class="p">(</span><span class="s">&quot;rentrez&quot;</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
 
 <div class="output_wrapper">
 <div class="output">
@@ -12379,7 +12614,8 @@ Allowing multi-threading with up to 4 threads.
 
 <div class="output_area">
 
-<div class="prompt"> </div>
+<div class="prompt"></div>
+
 
 
 
