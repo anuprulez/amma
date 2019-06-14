@@ -4,7 +4,8 @@ description: Differential gene expression analysis in mice for different microbi
 # Social
 email: berenice.batut@gmail.com
 repository: bebatut/amma
-url: http://bebatut.fr/amma/
+url: "http://bebatut.fr/"
+baseurl: "/amma"
 
 plugins:
   - jekyll-seo-tag
