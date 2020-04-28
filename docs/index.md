@@ -64,6 +64,13 @@ The generated normalized counts were **clustered by samples** using hierarchical
 
 A [**Weighted gene co-expression network analysis**](previsualization#Gene-co-expression-analysis) (WGCNA, [Zhang & Horvath, 2005](#references)) was performed on the normalized expression data using the R package WGCNA (1.63, [Langfelder & Horvath, 2008](#references)). For computational efficiency, genes were filtered to keep only those that have at least 10 counts in more than 90% of the samples (10,277 kept genes and 9,417 removed). The soft-thresholding power parameter was set to 6 to obtain a signed hybrid network fulfilling the scale free topology. Co-expression modules were defined using a minimum module size of 65 genes and by merging modules with a module eigengene dissimilarity below 0.35 resulting in 9 modules having sizes between 117 and 1,627 genes. A [**module-trait correlation analysis**](previsualization#Relationship-between-modules-and-samples) was performed between the module eigengene (ME) and the different trait (combination of microbiota, age and sex)by computing the correlation of Pearson between each pair of variables and Student asymptotic p-values for the correlations using the WGCNA package. [**SinaPlot**](previsualization#Sinaplots-of-the-Z-scores-per-groups) ([Sidiropoulos et al, 2018](#references)) of the mean Z-scores of genes in the different MEs were plotted using the sinaplot (1.1.0) package. A [**Gene Ontology (GO) enrichment analysis**](previsualization#Enrichment-analysis-in-modules) of the genes in the different MEs was performed using `goseq` (1.26.0, [Young et al, 2010](#references)), with the genome wide annotation for Mouse `org.Mm.eg.db` (3.4.0) and the Wallenius approximation. The over enriched GO categories were extracted using a 0.05 FDR cutoff ([Benjamini & Hochberg, 1995](#references)). 
 
+Analysis | Report | Sources
+--- | --- | ---
+Prepare the data | [<i class="far fa-file-image"></i>]({{ site.baseurl }}{% link prepare_data.html %}) | [<i class="fab fa-github"></i>]({{ site.github.repository_url }}/tree/master/src/prepare_data.ipynb) 
+Pre-visualization of the normalized count data before differential analysis | [<i class="far fa-file-image"></i>]({{ site.baseurl }}{% link previsualization.html %}) | [<i class="fab fa-github"></i>]({{ site.github.repository_url }}/tree/master/src/previsualization.ipynb)
+Differential expression analysis | [<i class="far fa-file-image"></i>]({{ site.baseurl }}{% link dge_analysis.html %}) | [<i class="fab fa-github"></i>]({{ site.github.repository_url }}/tree/master/src/dge_analysis.ipynb)
+
+
 ### Analyses of the differentially expressed genes given different comparisons
 
 The differential expressed genes were identified and analyzed for different comparisons: microbiota effect (GF vs SPF), sex effect (Male vs Female) and age effect (Middle-aged vs Young, Old vs Young and Old vs Middle-aged). For these comparisons, several aspects were checked: 
@@ -77,27 +84,24 @@ These different analyses were done following the same procedure. Using the DESeq
 
 Analysis | Report | Sources | Data & Results
 --- | --- | --- | ---
-Microbiota effect, after controlling for age and sex | | [<i class="fab fa-github"></i>]({{ site.github.repository_url }}/tree/master/src/microbiota-effect-general) | [<i class="fas fa-file"></i>]({{ site.github.repository_url }}/tree/master/results/dge/microbiota-effect/microbiota)
-Microbiota effect for both sexes, after controlling for age | | [<i class="fab fa-github"></i>]({{ site.github.repository_url }}/tree/master/src/microbiota-effect-sex) | [<i class="fas fa-file"></i>]({{ site.github.repository_url }}/tree/master/results/dge/microbiota-effect/microbiota_sex)
-Microbiota effect for the 3 ages, after controlling for sex | | [<i class="fab fa-github"></i>]({{ site.github.repository_url }}/tree/master/src/microbiota-effect-age) | [<i class="fas fa-file"></i>]({{ site.github.repository_url }}/tree/master/results/dge/microbiota-effect/microbiota_age)
+Microbiota effect for both sexes, after controlling for age | [<i class="far fa-file-image"></i>]({{ site.baseurl }}{% link microbiota-effect-sex.html %}) | [<i class="fab fa-github"></i>]({{ site.github.repository_url }}/tree/master/src/microbiota-effect-sex.ipynb) | [<i class="fas fa-file"></i>]({{ site.github.repository_url }}/tree/master/results/dge/microbiota-effect/microbiota-sex)
+Microbiota effect for the 3 ages, after controlling for sex | [<i class="far fa-file-image"></i>]({{ site.baseurl }}{% link microbiota-effect-age.html %}) | [<i class="fab fa-github"></i>]({{ site.github.repository_url }}/tree/master/src/microbiota-effect-age.ipynb) | [<i class="fas fa-file"></i>]({{ site.github.repository_url }}/tree/master/results/dge/microbiota-effect/microbiota-age)
 Microbiota effect for the 3 ages and both sexes | [<i class="far fa-file-image"></i>]({{ site.baseurl }}{% link microbiota-effect-age-sex.html %}) | [<i class="fab fa-github"></i>]({{ site.github.repository_url }}/tree/master/src/microbiota-effect-age-sex.ipynb) | [<i class="fas fa-file"></i>]({{ site.github.repository_url }}/tree/master/results/dge/microbiota-effect/microbiota-sex-age)
 
 #### Effect of the sex (Male vs Female)
 
 Analysis | Report | Sources | Data & Results
 --- | --- | --- | ---
-Sex effect, after controlling for age and microbiota | | [<i class="fab fa-github"></i>]({{ site.github.repository_url }}/tree/master/src/sex-effect-general) | [<i class="fas fa-file"></i>]({{ site.github.repository_url }}/tree/master/results/dge/sex-effect/sex)
-Sex effect for both microbiotas, after controlling for age | | [<i class="fab fa-github"></i>]({{ site.github.repository_url }}/tree/master/src/sex-effect-microbiota) | [<i class="fas fa-file"></i>]({{ site.github.repository_url }}/tree/master/results/dge/sex-effect/sex-microbiota)
-Sex effect for the 3 ages, after controlling for microbiota | | [<i class="fab fa-github"></i>]({{ site.github.repository_url }}/tree/master/src/sex-effect-age) | [<i class="fas fa-file"></i>]({{ site.github.repository_url }}/tree/master/results/dge/sex-effect/sex-age)
+Sex effect for both microbiotas, after controlling for age | [<i class="far fa-file-image"></i>]({{ site.baseurl }}{% link sex-effect-microbiota.html %}) | [<i class="fab fa-github"></i>]({{ site.github.repository_url }}/tree/master/src/sex-effect-microbiota.ipynb) | [<i class="fas fa-file"></i>]({{ site.github.repository_url }}/tree/master/results/dge/sex-effect/sex-microbiota)
+Sex effect for the 3 ages, after controlling for microbiota | [<i class="far fa-file-image"></i>]({{ site.baseurl }}{% link sex-effect-age.html %}) | [<i class="fab fa-github"></i>]({{ site.github.repository_url }}/tree/master/src/sex-effect-age.ipynb) | [<i class="fas fa-file"></i>]({{ site.github.repository_url }}/tree/master/results/dge/sex-effect/sex-age)
 Sex effect for the 3 ages and both microbiotas | [<i class="far fa-file-image"></i>]({{ site.baseurl }}{% link sex-effect-microbiota-age.html %}) | [<i class="fab fa-github"></i>]({{ site.github.repository_url }}/tree/master/src/sex-effect-microbiota-age.ipynb) | [<i class="fas fa-file"></i>]({{ site.github.repository_url }}/tree/master/results/dge/sex-effect/sex-microbiota-age)
 
 #### Effect of the ages (Middle-aged vs Young, Old vs Young and Old vs Middle-aged)
 
 Analysis | Report | Sources | Data & Results
 --- | --- | --- | ---
-Age effect, after controlling for sex and microbiota | | [<i class="fab fa-github"></i>]({{ site.github.repository_url }}/tree/master/src/age-effect-general) | [<i class="fas fa-file"></i>]({{ site.github.repository_url }}/tree/master/results/dge/age-effect/age)
-Age effect for both microbiotas, after controlling for sex | | [<i class="fab fa-github"></i>]({{ site.github.repository_url }}/tree/master/src/age-effect-microbiota) | [<i class="fas fa-file"></i>]({{ site.github.repository_url }}/tree/master/results/dge/age-effect/age-microbiota)
-Age effect for the both sexes, after controlling for microbiota | | [<i class="fab fa-github"></i>]({{ site.github.repository_url }}/tree/master/src/age-effect-sex) | [<i class="fas fa-file"></i>]({{ site.github.repository_url }}/tree/master/results/dge/age-effect/age-sex)
+Age effect for both microbiotas, after controlling for sex | [<i class="far fa-file-image"></i>]({{ site.baseurl }}{% link age-effect-microbiota.html %}) | [<i class="fab fa-github"></i>]({{ site.github.repository_url }}/tree/master/src/age-effect-microbiota.ipynb) | [<i class="fas fa-file"></i>]({{ site.github.repository_url }}/tree/master/results/dge/age-effect/age-microbiota)
+Age effect for the both sexes, after controlling for microbiota | [<i class="far fa-file-image"></i>]({{ site.baseurl }}{% link age-effect-sex.html %}) | [<i class="fab fa-github"></i>]({{ site.github.repository_url }}/tree/master/src/age-effect-sex.ipynb) | [<i class="fas fa-file"></i>]({{ site.github.repository_url }}/tree/master/results/dge/age-effect/age-sex)
 Age effect for the both sexes and both microbiotas | [<i class="far fa-file-image"></i>]({{ site.baseurl }}{% link age-effect-microbiota-sex.html %}) | [<i class="fab fa-github"></i>]({{ site.github.repository_url }}/tree/master/src/age-effect-microbiota-sex.ipynb) | [<i class="fas fa-file"></i>]({{ site.github.repository_url }}/tree/master/results/dge/age-effect/age-microbiota-sex)
 
 ### Some postvisualizations
