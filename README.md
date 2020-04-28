@@ -1,30 +1,30 @@
-NeuroMac data analysis
-======================
+Atlas of Microglia-Microbiota in Aging (AMMA)
+=============================================
 
-Links
-- [Notebook](https://monod.lelab.tailordev.fr/b57db1ec-cc35-47d6-8767-9140d0390bdc#THcB4zTs+1L1Hq9S26HTlJ0IZCjjlCzcnakq7mBGpJo=)
-- [Raw data structure](https://docs.google.com/spreadsheets/d/1DL8pEVj5cvGflPIiaSPRXy-dMk2S7CxmnIk6Ubta2xs/edit#gid=0)
+Microglia, the brain resident macrophages, display high plasticity in response to their environment. Aging of the central nervous system (CNS), where microglial physiology is especially disrupted, is a major risk factor for a myriad of neurodegenerative diseases. Therefore, it is crucial to decipher intrinsic and extrinsic factors, like sex and the microbiome, that potentially modulate this process.
+
+Using transcriptomics, we found that **microglia follow sex-dependent dynamics in aging**. This repository 
 
 # Requirements
 
-- conda
+- [conda](https://docs.conda.io/en/latest/miniconda.html)
 - Creation of the `conda` environment with all the requirements
 
     ```
     $ conda env create -f environment.yml
     ```
 
-- Add the API key to [https://usegalaxy.eu/](https://usegalaxy.eu/) in [`config.yaml`](config.yaml)
-
-# Run the data analyses
-
 - Launch the `conda` environment
 
     ```
-    $ source activate neuromac
+    $ conda activate amma
     ```
 
-- Copy and rename the files
+# Run the data analyses
+
+## Prepare files from the sequencing facility
+
+1. Rename the files from the sequencing facility to follow a certain naming convention
 
     ```
     $ python src/copy_rename_raw_files.py \
@@ -33,18 +33,20 @@ Links
         --output_dir <path to output directory>\
     ```
 
-- Upload the data on [http://usegalaxy.eu/](http://usegalaxy.eu/) inside an history named "NeuroMac: GF mices - DGE analysis"
+2. Upload the data on Galaxy inside a data library.
+3. Update the details in [`config.yaml`](config.yaml), specially the API key
+4. Prepare the history in Galaxy (import the files from the data library, merge the files sequenced on 2 different lanes (for Project_S178 and Project_S225) and move the input files into collections)
 
     ```
-    $ snakemake --snakefile src/prepare_data.py
+    $ python src/prepare_data.py
     ```
 
-    You can change the name of the history in [`config.yaml`](config.yaml)
+## From sequences to gene counts (inside Galaxy)
 
-- Launch workflow to extract gene counts
+5. Launch Galaxy workflow to extract gene counts
 
     ```
-    $ snakemake --snakefile src/extract_gene_counts.py
+    $ python src/extract_gene_counts.py
     ```
 
     The worklow do:
@@ -53,32 +55,30 @@ Links
     3. Mapping using STAR
     4. Gene counting using FeatureCounts
 
-    The workflow is applied on each dataset (organized into data collection)
+The workflow is applied on each dataset (organized into data collection). It can take a while.
 
-- Do the DGE analyses
-    - Launch R and install the libraries
+Once it is finished, please download the generated count table in `data` as well as the gene length file.
 
-    ```
-    $ source("src/install_libraries.R") 
-    ```
+## Differentially Expression Analysis (locally using Jupyter Notebooks)
 
-    - Launch Jupyter
+1. Launch Jupyter
 
     ```
     $ jupyter notebook
     ```
 
-    - Run the different notebooks in `src`
-        1. `src/prepare_data.ipynb`
-        2. `src/dge_analysis.ipynb`
-        3. `src/pre-visualization.ipynb`
-        4. DEG analysis
+2. Move to `src` in Jupyter
+3. Prepare the differential expression analysis
+    1. Open `src/prepare_data.ipynb` and execute all cells
+    2. Open `src/dge_analysis.ipynb` and execute all cells
+    3. Open `src/pre-visualization.ipynb` and execute all cells
+4. Analyze the differentially expressed genes given different comparisons
+    1.  DEG analysis
 
 # Generate HTML of the Jupyter Notebooks (for `docs` folder)
 
 ```
 $ jupyter nbconvert --template=nbextensions --to=html src/*.ipynb --output-dir docs/
-$ for i in $(find docs/ -path "*.html"); do awk '/jquery.min.js/{ print; print "<script src=\"https://cdnjs.cloudflare.com/ajax/libs/three.js/r79/three.min.js\"></script>"; next }1' $i > tmp; mv tmp $i; done
 ```
 
 # Generate the website locally
@@ -88,6 +88,12 @@ $ for i in $(find docs/ -path "*.html"); do awk '/jquery.min.js/{ print; print "
 
     ```
     $ cd docs
+    ```
+    
+- Install the plugins for Jekyll (only once)
+
+    ```
+    $ bundle install
     ```
 
 - Serve the website locally
