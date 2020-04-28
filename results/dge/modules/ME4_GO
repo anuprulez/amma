@@ -1,38 +1,69 @@
 category	over_represented_pvalue	under_represented_pvalue	numDEInCat	numInCat	term	ontology
-GO:0003677	5.16512944392235e-10	1	202	1210	DNA binding	MF
-GO:0090304	2.36893596766783e-09	1	410	2972	nucleic acid metabolic process	BP
-GO:0051171	9.60777104329065e-09	1	342	2391	regulation of nitrogen compound metabolic process	BP
-GO:0019219	1.12938110384358e-08	1	322	2222	regulation of nucleobase-containing compound metabolic process	BP
-GO:0051252	1.77060772257926e-08	1	296	2015	regulation of RNA metabolic process	BP
-GO:0016070	5.69356486795184e-08	1	363	2637	RNA metabolic process	BP
-GO:0006139	5.8743813337803e-08	1	436	3297	nucleobase-containing compound metabolic process	BP
-GO:0010468	8.15009116903445e-08	1	329	2327	regulation of gene expression	BP
-GO:0046483	9.08953412747191e-08	1	441	3355	heterocycle metabolic process	BP
-GO:0003676	1.33348303341654e-07	1	329	2391	nucleic acid binding	MF
-GO:0034654	1.74333326046256e-07	1	313	2224	nucleobase-containing compound biosynthetic process	BP
-GO:0006725	1.81559136064648e-07	1	441	3374	cellular aromatic compound metabolic process	BP
-GO:2000112	3.03452275889105e-07	1	309	2189	regulation of cellular macromolecule biosynthetic process	BP
-GO:2001141	3.04015032392721e-07	1	278	1928	regulation of RNA biosynthetic process	BP
-GO:0032774	3.30506824352805e-07	1	286	2001	RNA biosynthetic process	BP
-GO:1903506	3.67982883391635e-07	1	277	1923	regulation of nucleic acid-templated transcription	BP
-GO:0031326	3.92084407753287e-07	1	321	2298	regulation of cellular biosynthetic process	BP
-GO:0018130	3.98619952545638e-07	1	315	2263	heterocycle biosynthetic process	BP
-GO:0097659	4.21127484111655e-07	1	284	1989	nucleic acid-templated transcription	BP
-GO:0006355	4.65225563759515e-07	1	276	1920	regulation of transcription, DNA-templated	BP
-GO:1901360	7.50610993191924e-07	0.999999682879042	446	3444	organic cyclic compound metabolic process	BP
-GO:0006351	9.015680508992e-07	0.999999629075067	283	1986	transcription, DNA-templated	BP
-GO:0019438	9.24162307783186e-07	0.999999616579094	314	2261	aromatic compound biosynthetic process	BP
-GO:0006325	1.10212083627908e-06	0.999999614664301	89	483	chromatin organization	BP
-GO:0044450	1.3181434792472e-06	0.99999963335958	27	90	microtubule organizing center part	CC
-GO:0010556	1.74619674717245e-06	0.999999041003359	312	2240	regulation of macromolecule biosynthetic process	BP
-GO:1901362	4.19501081116692e-06	0.999997265920741	316	2306	organic cyclic compound biosynthetic process	BP
-GO:0009889	4.59833055398718e-06	0.999996995980516	321	2336	regulation of biosynthetic process	BP
-GO:0006333	5.10247511606473e-06	0.999998580317482	24	82	chromatin assembly or disassembly	BP
-GO:0005634	2.61268152131887e-05	0.999980425526598	543	4416	nucleus	CC
-GO:0043565	4.00248849651574e-05	0.999976926441384	89	514	sequence-specific DNA binding	MF
-GO:0044271	4.24404810872505e-05	0.999968599777846	350	2686	cellular nitrogen compound biosynthetic process	BP
-GO:0034641	4.41176542486541e-05	0.999966656558725	465	3739	cellular nitrogen compound metabolic process	BP
-GO:0018026	4.61111125024526e-05	0.999998370523501	6	8	peptidyl-lysine monomethylation	BP
-GO:0005814	6.89860773851524e-05	0.999981322235353	18	60	centriole	CC
-GO:0016569	9.20031434826495e-05	0.999948707557587	70	394	chromatin modification	BP
-GO:0051172	0.000100578559617231	0.999933862136901	133	864	negative regulation of nitrogen compound metabolic process	BP
+GO:0090304	6.37164539777513e-11	1	396	2827	nucleic acid metabolic process	BP
+GO:0003677	9.21292096813159e-11	1	201	1224	DNA binding	MF
+GO:0003676	3.80047778544798e-10	1	300	2048	nucleic acid binding	MF
+GO:0051252	1.29479793743889e-09	1	274	1851	regulation of RNA metabolic process	BP
+GO:0019219	2.7285834485348e-09	1	298	2064	regulation of nucleobase-containing compound metabolic process	BP
+GO:0016070	8.3923088307423e-09	1	342	2465	RNA metabolic process	BP
+GO:0097659	8.14446419386583e-08	1	252	1750	nucleic acid-templated transcription	BP
+GO:1903506	1.03358857585961e-07	1	242	1671	regulation of nucleic acid-templated transcription	BP
+GO:0006351	1.24538176177598e-07	1	250	1742	transcription, DNA-templated	BP
+GO:0006139	1.32708861995989e-07	1	415	3171	nucleobase-containing compound metabolic process	BP
+GO:0032774	1.38469149428378e-07	1	252	1761	RNA biosynthetic process	BP
+GO:2001141	1.44494175047747e-07	1	242	1678	regulation of RNA biosynthetic process	BP
+GO:0006355	1.5830178869344e-07	1	240	1663	regulation of transcription, DNA-templated	BP
+GO:0010468	2.33442065632859e-07	1	311	2268	regulation of gene expression	BP
+GO:0046483	2.64007706653041e-07	1	421	3243	heterocycle metabolic process	BP
+GO:2000112	3.31189296277009e-07	1	278	1997	regulation of cellular macromolecule biosynthetic process	BP
+GO:0044451	5.45928282616284e-07	1	132	823	nucleoplasm part	CC
+GO:0045934	6.2609695943886e-07	1	138	869	negative regulation of nucleobase-containing compound metabolic process	BP
+GO:0010556	1.11321494278907e-06	0.999999541265896	283	2056	regulation of macromolecule biosynthetic process	BP
+GO:0006325	1.36065920660001e-06	0.999999521848976	89	505	chromatin organization	BP
+GO:0001067	1.4691393205615e-06	0.999999481781941	90	511	regulatory region nucleic acid binding	MF
+GO:0006725	1.68203783560239e-06	0.999999060047529	420	3263	cellular aromatic compound metabolic process	BP
+GO:0044212	1.9336772780137e-06	0.999999315871087	89	507	transcription regulatory region DNA binding	MF
+GO:0005634	2.80587971296214e-06	0.999998231496348	558	4519	nucleus	CC
+GO:1901363	3.71817222997227e-06	0.999997537607815	411	3193	heterocyclic compound binding	MF
+GO:0044450	4.02114983091618e-06	0.999998724805128	29	110	microtubule organizing center part	CC
+GO:0031326	4.37099388415226e-06	0.999997174014717	290	2138	regulation of cellular biosynthetic process	BP
+GO:0003700	5.25919294932987e-06	0.999997379049211	82	464	DNA-binding transcription factor activity	MF
+GO:0016604	5.65024298467846e-06	0.999997117221852	89	520	nuclear body	CC
+GO:1901360	6.09797988552014e-06	0.99999579784783	426	3345	organic cyclic compound metabolic process	BP
+GO:2000113	6.17416921171123e-06	0.999996396384509	134	859	negative regulation of cellular macromolecule biosynthetic process	BP
+GO:0031327	6.72616804995854e-06	0.999996029938827	141	916	negative regulation of cellular biosynthetic process	BP
+GO:0051253	7.17866574966231e-06	0.999995867420366	123	777	negative regulation of RNA metabolic process	BP
+GO:0097159	7.61866699122437e-06	0.999994636625602	413	3228	organic cyclic compound binding	MF
+GO:0010558	8.37427147921758e-06	0.999995068721177	136	880	negative regulation of macromolecule biosynthetic process	BP
+GO:0034654	8.94774791416864e-06	0.99999389036501	277	2046	nucleobase-containing compound biosynthetic process	BP
+GO:0006366	9.67670541650228e-06	0.99999388311661	174	1187	transcription by RNA polymerase II	BP
+GO:1902679	9.8439390284627e-06	0.9999943834262	114	712	negative regulation of RNA biosynthetic process	BP
+GO:1903507	9.8439390284627e-06	0.9999943834262	114	712	negative regulation of nucleic acid-templated transcription	BP
+GO:0010629	1.00132150559625e-05	0.999993766047567	158	1057	negative regulation of gene expression	BP
+GO:0009890	1.10398045508476e-05	0.999993234529411	143	940	negative regulation of biosynthetic process	BP
+GO:0005856	1.40317953744146e-05	0.999990899932751	177	1221	cytoskeleton	CC
+GO:0006357	1.45869642443048e-05	0.999990622542003	167	1137	regulation of transcription by RNA polymerase II	BP
+GO:0140110	1.80930461778261e-05	0.999989086233512	117	745	transcription regulator activity	MF
+GO:0009889	1.98639576301064e-05	0.999985920588259	291	2182	regulation of biosynthetic process	BP
+GO:0045892	2.1682527524224e-05	0.999986989700412	112	708	negative regulation of transcription, DNA-templated	BP
+GO:0000976	2.5498521677602e-05	0.999986163618267	75	432	transcription regulatory region sequence-specific DNA binding	MF
+GO:0051276	2.68336536078741e-05	0.999983653146318	117	756	chromosome organization	BP
+GO:0018130	2.99576449195352e-05	0.999978601545987	279	2093	heterocycle biosynthetic process	BP
+GO:0051254	3.4652765302937e-05	0.999977597326928	143	962	positive regulation of RNA metabolic process	BP
+GO:0019438	3.74585904065454e-05	0.999973052224013	278	2090	aromatic compound biosynthetic process	BP
+GO:0045893	3.94327710381842e-05	0.999974914306781	133	885	positive regulation of transcription, DNA-templated	BP
+GO:0016278	4.6573383349823e-05	0.999989725137412	15	45	lysine N-methyltransferase activity	MF
+GO:0016279	4.6573383349823e-05	0.999989725137412	15	45	protein-lysine N-methyltransferase activity	MF
+GO:1903508	4.66598501885038e-05	0.999970042580396	133	888	positive regulation of nucleic acid-templated transcription	BP
+GO:1902680	4.91283682092964e-05	0.999968417845717	133	889	positive regulation of RNA biosynthetic process	BP
+GO:0018022	6.90666306551848e-05	0.999977325211143	23	90	peptidyl-lysine methylation	BP
+GO:0043565	7.38255069929648e-05	0.999955667177994	93	581	sequence-specific DNA binding	MF
+GO:0005654	8.42643114716637e-05	0.999938583811854	261	1968	nucleoplasm	CC
+GO:0045935	8.72585686931486e-05	0.999940977226701	158	1103	positive regulation of nucleobase-containing compound metabolic process	BP
+GO:0018026	9.3936907636853e-05	0.999995300264864	6	9	peptidyl-lysine monomethylation	BP
+GO:0008276	0.00010938674534273	0.999967488493735	19	70	protein methyltransferase activity	MF
+GO:1901362	0.000112177622967381	0.999917146228591	281	2147	organic cyclic compound biosynthetic process	BP
+GO:0018205	0.000120566400990256	0.999939551869635	49	265	peptidyl-lysine modification	BP
+GO:0003682	0.000126570157564188	0.999929558504853	66	386	chromatin binding	MF
+GO:0006479	0.000150485663254714	0.99993971390343	29	132	protein methylation	BP
+GO:0008213	0.000150485663254714	0.99993971390343	29	132	protein alkylation	BP
+GO:0010467	0.000153195308826146	0.999882969647134	379	3019	gene expression	BP

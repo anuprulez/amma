@@ -1,1 +1,2 @@
 category	over_represented_pvalue	under_represented_pvalue	numDEInCat	numInCat	term	ontology
+GO:0140101	1.29353693095192e-06	0.999999524077888	51	106	catalytic activity, acting on a tRNA	MF

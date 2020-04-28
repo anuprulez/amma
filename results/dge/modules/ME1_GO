@@ -1,18 +1,30 @@
 category	over_represented_pvalue	under_represented_pvalue	numDEInCat	numInCat	term	ontology
-GO:0001071	2.77407378132717e-07	1	161	566	nucleic acid binding transcription factor activity	MF
-GO:0003700	2.77407378132717e-07	1	161	566	transcription factor activity, sequence-specific DNA binding	MF
-GO:0051252	4.27830215007993e-06	0.999997027477887	436	2015	regulation of RNA metabolic process	BP
-GO:0004842	9.95260397261658e-06	0.999994996315474	86	313	ubiquitin-protein transferase activity	MF
-GO:0019219	1.34065912179559e-05	0.999990001372654	469	2222	regulation of nucleobase-containing compound metabolic process	BP
-GO:0019787	1.57471328231967e-05	0.999991453892024	88	326	ubiquitin-like protein transferase activity	MF
-GO:0070739	1.84636972572623e-05	0.999991113939946	60	195	protein-glutamic acid ligase activity	MF
-GO:0016881	2.50808084748286e-05	0.999987792228111	61	204	acid-amino acid ligase activity	MF
-GO:0008766	3.10897713563631e-05	0.999984812954958	59	193	UDP-N-acetylmuramoylalanyl-D-glutamyl-2,6-diaminopimelate-D-alanyl-D-alanine ligase activity	MF
-GO:0018169	3.10897713563631e-05	0.999984812954958	59	193	ribosomal S6-glutamic acid ligase activity	MF
-GO:0043773	3.10897713563631e-05	0.999984812954958	59	193	coenzyme F420-0 gamma-glutamyl ligase activity	MF
-GO:0043774	3.10897713563631e-05	0.999984812954958	59	193	coenzyme F420-2 alpha-glutamyl ligase activity	MF
-GO:0070735	3.10897713563631e-05	0.999984812954958	59	193	protein-glycine ligase activity	MF
-GO:0070736	3.10897713563631e-05	0.999984812954958	59	193	protein-glycine ligase activity, initiating	MF
-GO:0070737	3.10897713563631e-05	0.999984812954958	59	193	protein-glycine ligase activity, elongating	MF
-GO:0070738	3.10897713563631e-05	0.999984812954958	59	193	tubulin-glycine ligase activity	MF
-GO:0070740	3.30039645963277e-05	0.999983829393369	59	194	tubulin-glutamic acid ligase activity	MF
+GO:0005634	2.49009795136308e-12	1	818	4519	nucleus	CC
+GO:0003677	3.84079737024794e-10	1	278	1224	DNA binding	MF
+GO:0003676	5.43249138755666e-09	1	406	2048	nucleic acid binding	MF
+GO:0051252	2.9435675494136e-08	1	375	1851	regulation of RNA metabolic process	BP
+GO:0019219	8.772034451183e-08	1	407	2064	regulation of nucleobase-containing compound metabolic process	BP
+GO:0003700	2.23454698648625e-06	0.999998929155922	117	464	DNA-binding transcription factor activity	MF
+GO:0010468	4.00574910337096e-06	0.999997216746412	435	2268	regulation of gene expression	BP
+GO:2001141	4.55212594665177e-06	0.999996906449663	334	1678	regulation of RNA biosynthetic process	BP
+GO:0006357	4.72533477205792e-06	0.999997003101684	239	1137	regulation of transcription by RNA polymerase II	BP
+GO:0006325	4.73034624557565e-06	0.999997461861667	118	505	chromatin organization	BP
+GO:0060255	4.93332449965629e-06	0.999996426011588	578	3164	regulation of macromolecule metabolic process	BP
+GO:0006366	5.80062085002603e-06	0.999996184208087	246	1187	transcription by RNA polymerase II	BP
+GO:0006355	6.2100164996087e-06	0.999995767696028	331	1663	regulation of transcription, DNA-templated	BP
+GO:1903506	6.39091182167121e-06	0.999995641442107	332	1671	regulation of nucleic acid-templated transcription	BP
+GO:0032774	1.1355636236343e-05	0.999991904998429	344	1761	RNA biosynthetic process	BP
+GO:0010556	1.24045915823283e-05	0.999990947166727	394	2056	regulation of macromolecule biosynthetic process	BP
+GO:2000112	1.25953018525e-05	0.999990826386229	385	1997	regulation of cellular macromolecule biosynthetic process	BP
+GO:0051276	1.57701462011607e-05	0.99998997024648	159	756	chromosome organization	BP
+GO:0006351	1.61719929017339e-05	0.99998825419958	340	1742	transcription, DNA-templated	BP
+GO:0097659	1.65873883599658e-05	0.999987944023711	341	1750	nucleic acid-templated transcription	BP
+GO:0016569	2.10706785806644e-05	0.999988543426294	84	341	covalent chromatin modification	BP
+GO:0044451	2.42266363260707e-05	0.999984079433621	173	823	nucleoplasm part	CC
+GO:0005654	2.73472728452594e-05	0.999979726400257	367	1968	nucleoplasm	CC
+GO:0016570	2.76746994775788e-05	0.999984936513655	82	331	histone modification	BP
+GO:0051171	3.0367433549508e-05	0.999976586641728	549	3032	regulation of nitrogen compound metabolic process	BP
+GO:0004842	3.08175468403047e-05	0.999983570183105	76	296	ubiquitin-protein transferase activity	MF
+GO:0090304	4.7927242565935e-05	0.99996287340261	505	2827	nucleic acid metabolic process	BP
+GO:0080090	5.86365516124999e-05	0.999954116455267	560	3115	regulation of primary metabolic process	BP
+GO:0019787	6.76325907436674e-05	0.999962137179617	78	313	ubiquitin-like protein transferase activity	MF
