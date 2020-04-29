@@ -75,11 +75,13 @@ Once it is finished, please download the generated count table in `data` as well
 4. Analyze the differentially expressed genes given different comparisons
     1.  DEG analysis
 
-# Generate HTML of the Jupyter Notebooks (for `docs` folder)
+# Generate HTML reports of the Jupyter Notebooks
 
 ```
-$ jupyter nbconvert --template=nbextensions --to=html src/*.ipynb --output-dir docs/
+$ jupyter nbconvert --to=html src/*.ipynb --output-dir docs/
 ```
+
+These reports are stored in the `docs` folder and are linked on the website.
 
 # Generate the website locally
 
