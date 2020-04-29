@@ -6,6 +6,3 @@ email: berenice.batut@gmail.com
 repository: bebatut/amma
 url: "http://bebatut.fr/"
 baseurl: "/amma"
-
-plugins:
-  - jekyll-seo-tag
