@@ -1,8 +1,6 @@
 #!/usr/bin/env python
 
 import yaml
-
-
 from bioblend.galaxy import GalaxyInstance
 
 from interact_galaxy import *
@@ -12,7 +10,7 @@ if __name__ == '__main__':
     Apply the worklow to extract the gene counts on the data collection
     '''
     # Get config
-    with 'config.yaml'.open() as config_f:
+    with open('config.yaml', 'r') as config_f:
         config = yaml.safe_load(config_f)
     # Connect to Galaxy and retrieve the history
     gi = GalaxyInstance(config["galaxy_url"], config["api_key"])
@@ -23,7 +21,7 @@ if __name__ == '__main__':
     # Get the workflow id or import it if it is not there
     wf_id = get_wf_id(config["workflow_names"]["extract_gene_counts"], gi)
     if wf_id != '':
-        wf_id = gi.workflows.import_workflow_from_local_path("src/Galaxy-Workflow-NeuroMac__DGE.ga")['id']
+        wf_id = gi.workflows.import_workflow_from_local_path("src/from_sequences_to_counts.ga")['id']
     out.write("Got workflow id\n")
     # Launch the workflow
     annotation_id = get_annotation_id(config["annotation_name"], hist, gi)

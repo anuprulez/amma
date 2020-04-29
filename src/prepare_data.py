@@ -10,7 +10,8 @@ if __name__ == '__main__':
     into collections
     '''
     # Get config
-    config = 
+    with open('config.yaml', 'r') as config_f:
+        config = yaml.safe_load(config_f)
     # Connect to Galaxy and retrieve the history
     gi = GalaxyInstance(config["galaxy_url"], config["api_key"])
     hist = get_hist(gi, config["hist_name"])
