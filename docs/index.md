@@ -67,8 +67,8 @@ A [**Weighted gene co-expression network analysis**](previsualization#Gene-co-ex
 Analysis | Report | Sources
 --- | --- | ---
 Prepare the data | [<i class="far fa-file-image"></i>]({{ site.baseurl }}{% link prepare_data.html %}) | [<i class="fab fa-github"></i>]({{ site.github.repository_url }}/tree/master/src/prepare_data.ipynb) 
-Pre-visualization of the normalized count data before differential analysis | [<i class="far fa-file-image"></i>]({{ site.baseurl }}{% link previsualization.html %}) | [<i class="fab fa-github"></i>]({{ site.github.repository_url }}/tree/master/src/previsualization.ipynb)
 Differential expression analysis | [<i class="far fa-file-image"></i>]({{ site.baseurl }}{% link dge_analysis.html %}) | [<i class="fab fa-github"></i>]({{ site.github.repository_url }}/tree/master/src/dge_analysis.ipynb)
+Pre-visualization of the normalized count data | [<i class="far fa-file-image"></i>]({{ site.baseurl }}{% link previsualization.html %}) | [<i class="fab fa-github"></i>]({{ site.github.repository_url }}/tree/master/src/previsualization.ipynb)
 
 
 ### Analyses of the differentially expressed genes given different comparisons
